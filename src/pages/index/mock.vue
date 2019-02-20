@@ -47,10 +47,10 @@ import mock from '../../../mock/mock.js';
 		 activated(){
 			 console.log('params++2',this.$route.params);
        //开发环境模拟本地数据
-        this.$http.get('http://192.168.0.112:8080/api/seller').then((response) => {
+        this.$http.get('http://localhost:8080/api/seller').then((response) => {
               console.log(response);
         })
-        this.$http.get('http://192.168.0.112:8080/api/goods').then((response) => {
+        this.$http.get('http://localhost:8080/api/goods').then((response) => {
               console.log(response);
         })
         //mock模拟本地数据

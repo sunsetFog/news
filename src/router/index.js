@@ -36,6 +36,7 @@ import Base64 from '../pages/index/base64.vue';
 import Route from '../pages/index/router.vue';
 import Params from '../pages/index/route/params.vue';
 
+
 import jiaoshikebiao from '../components/items/jiaoshikebiao';
 import youjianxiang from '../components/items/youjianxiang';
 import fayoujian from '../components/items/fayoujian';
@@ -95,6 +96,7 @@ export default new Router({
  {path: '/route',component: Route,name: 'Route',meta:{title: '路由传参',foot: true}},
  {path: '/params/:id/:status',component: Params,name: 'Params',meta:{title: '路由跳转',foot: true}},
  {path: '/params/:id/:supplier',component: Params,name: 'ParamsOther',meta:{title: '复用性跳转',foot: true}},
+
     {path: '/jiaoshikebiao',component: jiaoshikebiao,name: '教室课表',meta:{title: '教师课表',foot: true}},
     {path: '/youjianxiang',component: youjianxiang,name: '邮件箱',meta:{title: '邮件箱',foot: true}},
     {path: '/fayoujian',component: fayoujian,name: '发邮件',meta:{title: '发邮件',foot: true}},
