@@ -35,27 +35,30 @@ import Es6 from '../pages/index/es6.vue';
 import Base64 from '../pages/index/base64.vue';
 import Route from '../pages/index/router.vue';
 import Params from '../pages/index/route/params.vue';
+import Rem from '../pages/index/rem.vue';
 
 
-import jiaoshikebiao from '../components/items/jiaoshikebiao';
-import youjianxiang from '../components/items/youjianxiang';
-import fayoujian from '../components/items/fayoujian';
-import bumenshezhi from '../components/items/bumenshezhi';
-import changdishezhi from '../components/items/changdishezhi';
-import jiaoshiguanli from '../components/items/jiaoshiguanli';
-import zongwubaoxiu from '../components/items/zongwubaoxiu';
-import gerendangan from '../components/items/gerendangan';
-import jiaoyujiaoxue from '../components/items/jiaoyujiaoxue';
-import fangjian from '../components/items/fangjian';
-import banjitoupiao from '../components/items/banjitoupiao';
-import banjishiji from '../components/items/banjishiji';
-import banjikebiao from '../components/items/banjikebiao';
-import kanmeitu from '../components/items/kanmeitu';
-import lianxiren from '../components/items/lianxiren';
-import chengji from '../components/items/chengji';
-import jibenxinxi from '../components/items/jibenxinxi';
-import jiangxian from '../components/items/jiangxian';
-import hebin from '../components/items/hebin';
+
+
+// import jiaoshikebiao from '../components/items/jiaoshikebiao';
+// import youjianxiang from '../components/items/youjianxiang';
+// import fayoujian from '../components/items/fayoujian';
+// import bumenshezhi from '../components/items/bumenshezhi';
+// import changdishezhi from '../components/items/changdishezhi';
+// import jiaoshiguanli from '../components/items/jiaoshiguanli';
+// import zongwubaoxiu from '../components/items/zongwubaoxiu';
+// import gerendangan from '../components/items/gerendangan';
+// import jiaoyujiaoxue from '../components/items/jiaoyujiaoxue';
+// import fangjian from '../components/items/fangjian';
+// import banjitoupiao from '../components/items/banjitoupiao';
+// import banjishiji from '../components/items/banjishiji';
+// import banjikebiao from '../components/items/banjikebiao';
+// import kanmeitu from '../components/items/kanmeitu';
+// import lianxiren from '../components/items/lianxiren';
+// import chengji from '../components/items/chengji';
+// import jibenxinxi from '../components/items/jibenxinxi';
+// import jiangxian from '../components/items/jiangxian';
+// import hebin from '../components/items/hebin';
 
 
 Vue.use(Router)
@@ -96,26 +99,31 @@ export default new Router({
  {path: '/route',component: Route,name: 'Route',meta:{title: '路由传参',foot: true}},
  {path: '/params/:id/:status',component: Params,name: 'Params',meta:{title: '路由跳转',foot: true}},
  {path: '/params/:id/:supplier',component: Params,name: 'ParamsOther',meta:{title: '复用性跳转',foot: true}},
+ {path: '/rem',component: Rem,name: 'Rem',meta:{title: 'px转rem',foot: false,crux: false}},
 
-    {path: '/jiaoshikebiao',component: jiaoshikebiao,name: '教室课表',meta:{title: '教师课表',foot: true}},
-    {path: '/youjianxiang',component: youjianxiang,name: '邮件箱',meta:{title: '邮件箱',foot: true}},
-    {path: '/fayoujian',component: fayoujian,name: '发邮件',meta:{title: '发邮件',foot: true}},
-    {path: '/bumenshezhi',component: bumenshezhi,name: '部门设置',meta:{title: '部门设置',foot: true}},
-    {path: '/changdishezhi',component: changdishezhi,name: '场地设置',meta:{title: '场地设置',foot: true}},
-    {path: '/jiaoshiguanli',component: jiaoshiguanli,name: '教室管理',meta:{title: '教室管理',foot: true}},
-		{path: '/zongwubaoxiu',component: zongwubaoxiu,name: '总务报修',meta:{title: '总务报修',foot: true}},
-		{path: '/gerendangan',component: gerendangan,name: '个人档案',meta:{title: '个人档案',foot: true}},
-		{path: '/jiaoyujiaoxue',component: jiaoyujiaoxue,name: '教育教学',meta:{title: '教育教学',foot: true}},
-		{path: '/fangjian',component: fangjian,name: '房间',meta:{title: '房间',foot: true}},
-		{path: '/banjitoupiao',component: banjitoupiao,name: '班级投票',meta:{title: '班级投票',foot: true}},
-		{path: '/banjishiji',component: banjishiji,name: '班级事迹',meta:{title: '班级事迹',foot: true}},
-		{path: '/banjikebiao',component: banjikebiao,name: '班级课表',meta:{title: '班级课表',foot: true}},
-		{path: '/kanmeitu',component: kanmeitu,name: '轮播图',meta:{title: '轮播图',foot: true}},
-		{path: '/lianxiren',component: lianxiren,name: '联系人',meta:{title: '联系人',foot: true}},
-		{path: '/chengji',component: chengji,name: '成绩',meta:{title: '成绩',foot: true}},
-		{path: '/jibenxinxi',component: jibenxinxi,name: '基本信息',meta:{title: '基本信息',foot: true}},
-		{path: '/jiangxian',component: jiangxian,name: '奖项',meta:{title: '奖项',foot: true}},
-		{path: '/hebin',component: hebin},
+
+
+
+
+    // {path: '/jiaoshikebiao',component: jiaoshikebiao,name: '教室课表',meta:{title: '教师课表',foot: true}},
+    // {path: '/youjianxiang',component: youjianxiang,name: '邮件箱',meta:{title: '邮件箱',foot: true}},
+    // {path: '/fayoujian',component: fayoujian,name: '发邮件',meta:{title: '发邮件',foot: true}},
+    // {path: '/bumenshezhi',component: bumenshezhi,name: '部门设置',meta:{title: '部门设置',foot: true}},
+    // {path: '/changdishezhi',component: changdishezhi,name: '场地设置',meta:{title: '场地设置',foot: true}},
+    // {path: '/jiaoshiguanli',component: jiaoshiguanli,name: '教室管理',meta:{title: '教室管理',foot: true}},
+		// {path: '/zongwubaoxiu',component: zongwubaoxiu,name: '总务报修',meta:{title: '总务报修',foot: true}},
+		// {path: '/gerendangan',component: gerendangan,name: '个人档案',meta:{title: '个人档案',foot: true}},
+		// {path: '/jiaoyujiaoxue',component: jiaoyujiaoxue,name: '教育教学',meta:{title: '教育教学',foot: true}},
+		// {path: '/fangjian',component: fangjian,name: '房间',meta:{title: '房间',foot: true}},
+		// {path: '/banjitoupiao',component: banjitoupiao,name: '班级投票',meta:{title: '班级投票',foot: true}},
+		// {path: '/banjishiji',component: banjishiji,name: '班级事迹',meta:{title: '班级事迹',foot: true}},
+		// {path: '/banjikebiao',component: banjikebiao,name: '班级课表',meta:{title: '班级课表',foot: true}},
+		// {path: '/kanmeitu',component: kanmeitu,name: '轮播图',meta:{title: '轮播图',foot: true}},
+		// {path: '/lianxiren',component: lianxiren,name: '联系人',meta:{title: '联系人',foot: true}},
+		// {path: '/chengji',component: chengji,name: '成绩',meta:{title: '成绩',foot: true}},
+		// {path: '/jibenxinxi',component: jibenxinxi,name: '基本信息',meta:{title: '基本信息',foot: true}},
+		// {path: '/jiangxian',component: jiangxian,name: '奖项',meta:{title: '奖项',foot: true}},
+		// {path: '/hebin',component: hebin},
   ]
 })
 

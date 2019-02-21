@@ -5,7 +5,7 @@
 <!-- 路由视图的用法:路由跳转只在视图内 -->
     <el-container>
     <el-header>
-        <span v-for="(item,index) in collectionList" v-if="index<8">
+        <span v-for="(item,index) in collectionList" v-if="index<=8">
           <router-link :to="{path:item.path}">
           <el-button style="width:90px;margin-right: 5px;">{{ item.label }}</el-button>
           </router-link>
@@ -75,6 +75,7 @@ export default {
         {label: '子组件',path: '/children'},
         {label: '父组件',path: '/parent'},
         {label: '公用方法',path: '/public'},
+        {label: 'rem',path: '/rem'},
         {label: 'class',path: '/class'},
         {label: 'watch监听',path: '/watch'},
         {label: 'computed',path: '/computed'},
