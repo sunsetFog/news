@@ -78,9 +78,9 @@ import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 router.beforeEach((to, from, next) => {
   if (to.path == '/login') {
-      sessionStorage.removeItem('game');
+      sessionStorage.removeItem('token');
     }
-  let user = sessionStorage.getItem('game');
+  let user = sessionStorage.getItem('token');
   if (!user && to.path != '/login') {
       next({path: '/login'})
     } else {

@@ -125,6 +125,7 @@
                             this.formInline.user = '';
                             this.formInline.password = '';
                             this.$router.push({name: 'Mock',params:{id: 20}});
+                            sessionStorage.setItem("token",'用户HK-869');
                             this.$Message.success('Success!');
                         }else{
                             this.$Message.error('信息错误!');
