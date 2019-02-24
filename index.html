@@ -13,7 +13,9 @@
   <title>夕阳红雾</title>
 
   <!-- 以750px为基准设计尺寸自动适配 -->
-  <!-- 既是ps调375px的设计图，测量的值除16就等rem---(64px/16=4rem) -->
+  <!-- 既是ps调375px的设计图，测量的值除10就等rem---(64px/10=6.4rem) -->
+  <!-- 注意-注意:谷歌浏览器最小字体为12像素，但手机上没限制
+  因此，想用10字体像素，得谷歌设置-自定义字体为10以下 -->
   <script type="text/javascript">
     (function (doc, win) {
        var docEl = doc.documentElement,
@@ -21,7 +23,8 @@
          recalc = function () {
            var clientWidth = docEl.clientWidth; 
            if (!clientWidth) return;
-           docEl.style.fontSize = 16 * (clientWidth / 375) + 'px';//其中“16”根据你设置的html的font-size属性值做适当的变化
+           docEl.style.fontSize = 10 * (clientWidth / 375) + 'px';//其中“10”根据你设置的html的font-size属性值做适当的变化
+           //docEl.style.fontSize = 16 * (clientWidth / 375) + 'px';//其中“16”根据你设置的html的font-size属性值做适当的变化
          };
  
        if (!doc.addEventListener) return;
