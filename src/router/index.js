@@ -36,6 +36,7 @@ import Base64 from '../pages/index/base64.vue';
 import Route from '../pages/index/router.vue';
 import Params from '../pages/index/route/params.vue';
 import Rem from '../pages/index/rem.vue';
+import BackToTop from '../pages/effect/backToTop.vue';
 
 
 
@@ -100,6 +101,7 @@ export default new Router({
  {path: '/params/:id/:status',component: Params,name: 'Params',meta:{title: '路由跳转',foot: true}},
  {path: '/params/:id/:supplier',component: Params,name: 'ParamsOther',meta:{title: '复用性跳转',foot: true}},
  {path: '/rem',component: Rem,name: 'Rem',meta:{title: 'px转rem',foot: false,crux: false}},
+ {path: '/backtotop',component: BackToTop,name: 'backTopTop',meta:{title: '返回顶部',foot: false,crux: false}},
 
 
 
