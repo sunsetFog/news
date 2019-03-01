@@ -38,6 +38,7 @@ import Params from '../pages/index/route/params.vue';
 import Rem from '../pages/index/rem.vue';
 import BackToTop from '../pages/effect/backToTop.vue';
 import ArticlePage from '../pages/effect/articlePage.vue';
+import LoadMore from '../pages/effect/loadmore.vue';
 
 
 
@@ -104,6 +105,7 @@ export default new Router({
  {path: '/rem',component: Rem,name: 'Rem',meta:{title: 'px转rem',foot: false,crux: false}},
  {path: '/backtotop',component: BackToTop,name: 'backTopTop',meta:{title: '返回顶部',foot: false,crux: false}},
  {path: '/page',component: ArticlePage,name: 'ArticlePage',meta:{title: '分页封装',foot: false,crux: false}},
+ {path: '/loadmore',component: LoadMore,name: 'LoadMore',meta:{title: '下拉加载',foot: false,crux: false}},
 
 
 
