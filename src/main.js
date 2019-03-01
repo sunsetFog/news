@@ -33,6 +33,9 @@ import axios from 'axios';
 axios.defaults.withCredentials=true;//让ajax携带cookie,就这一行代码就ok了
 Vue.prototype.$axios = axios;
 
+//全局引入公用组件，建立子父组件关系(分页组件)
+import Pagination from './pages/effect/Pagination.vue';
+Vue.component('Pagination', Pagination);
 
 //引入muse-ui组件
 import MuseUI from 'muse-ui'
