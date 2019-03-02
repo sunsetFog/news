@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="main_app">
     <section v-show="stick">
 <!-- element-ui/container容器布局 -->
 <!-- 路由视图的用法:路由跳转只在视图内 -->
@@ -170,14 +170,17 @@ export default {
 }
 </script>
 
-<style scoped>
-
-</style>
-
-<style>
+<style lang="less" rel="stylesheet/less">
 /* 多文件全局css，类级别最高,可覆盖类名作用 */
+// 但是要有样式嵌套，不然影响全局
 @import 'assets/app.css';
-@import 'assets/index.css';
+@import 'assets/index.less';
+#main_app{
+  .contain{
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
 
   .el-header, .el-footer {
     background-color: #B3C0D1;
@@ -212,5 +215,6 @@ export default {
   .el-container:nth-child(7) .el-aside {
     -line-height: 320px;
   }
-  
+ 
+}
 </style>

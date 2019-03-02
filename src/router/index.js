@@ -1,7 +1,5 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import HelloWorld from '@/components/hello';
-
 
 import Login from '../pages/login/login.vue';
 import Main from '../pages/main/main.vue';
@@ -39,6 +37,8 @@ import Rem from '../pages/index/rem.vue';
 import BackToTop from '../pages/effect/backToTop.vue';
 import ArticlePage from '../pages/effect/articlePage.vue';
 import LoadMore from '../pages/effect/loadmore.vue';
+import Upload from '../pages/effect/upload.vue';
+import Upload1 from '../pages/effect/upload1.vue';
 
 
 
@@ -69,8 +69,6 @@ Vue.use(Router)
 export default new Router({
   mode: 'history',//vue 路径去掉#
   routes: [
-    // {path: '/',component: HelloWorld,redirect: '/#'},
-    {path: '/text',name: 'HelloWorld',component: HelloWorld},
     {path: '/login',component: Login,name: 'Login',meta:{title: '用户登陆',foot: false,crux: false}},
     {path: '/',component: Main,name: 'Main',meta:{title: '主角',foot: false,crux: false}},
  {
@@ -106,6 +104,8 @@ export default new Router({
  {path: '/backtotop',component: BackToTop,name: 'backTopTop',meta:{title: '返回顶部',foot: false,crux: false}},
  {path: '/page',component: ArticlePage,name: 'ArticlePage',meta:{title: '分页封装',foot: false,crux: false}},
  {path: '/loadmore',component: LoadMore,name: 'LoadMore',meta:{title: '下拉加载',foot: false,crux: false}},
+ {path: '/upload',component: Upload,name: 'Upload',meta:{title: '上传图片列表',foot: false,crux: false}},
+ {path: '/upload1',component: Upload1,name: 'Upload1',meta:{title: '单个上传图片',foot: false,crux: false}},
 
 
 
