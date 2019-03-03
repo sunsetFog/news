@@ -19,7 +19,12 @@ Vue.use(MintUI);
 //引入ydui
 import YDUI from 'vue-ydui';
 import 'vue-ydui/dist/ydui.rem.css';
+import 'vue-ydui/dist/ydui.px.css';
+import 'vue-ydui/dist/ydui.base.css';
 Vue.use(YDUI);
+
+import {CitySelect} from 'vue-ydui/dist/lib.rem/cityselect';
+Vue.component(CitySelect.name, CitySelect);
 
 //引入vue-resource得不能用$http
 //vue模拟本地数据接口
