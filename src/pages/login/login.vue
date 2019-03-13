@@ -25,7 +25,7 @@
                     </div>
                     <div style="padding-left: 35px;">
                         <FormItem>
-                        <Button type="primary" @click="handleSubmit('formInline')" style="width: 240px;">登录</Button>
+                        <Button type="primary" @click.prevent="handleSubmit('formInline')" style="width: 240px;">登录</Button>
                         </FormItem>
                     </div>
                     

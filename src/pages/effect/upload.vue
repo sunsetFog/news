@@ -3,13 +3,14 @@
 <!-- 在app.vue引入了index.less样式，看upload_function -->
     <section id="upload_function" style="padding: 3rem 0rem 0rem 3rem;box-sizing: border-box;">
             <div style="text-align: left;">
-				<el-upload class="upload-demo" :data="{'attach':'upload'}" :on-change="handleChange" :action="uploadUrl" :on-remove="handleAptiRemove" :file-list="fileList1" list-type="picture-card" :before-upload="beforeUpload" :on-success="handleAptiSuccess">
+				<el-upload class="upload-demo" name="upload" :data="{'attach':'upload'}" :on-change="handleChange" :action="uploadUrl" :on-remove="handleAptiRemove" :file-list="fileList1" list-type="picture-card" :before-upload="beforeUpload" :on-success="handleAptiSuccess">
 					<div style="width: 100%;height: 100%;background: rgba(45,45,45,0);position: relative;">
                         <i class="el-icon-plus"></i>
                         <div style="width: 100%;height: 100%;background: rgba(45,45,45,0);position: absolute;left: 0rem;top:0rem;z-index: 2;" @click.stop="occlusion()" v-if="upNumMax>=3"></div>
 					</div>
 				</el-upload>
 			</div> 
+			<!-- name="upload"，这是后台绑定的字段，必须有 -->
             <!-- 以上:data="{'attach':'upload'}"是指传值给后台，要遍历必须传，不遍历传也没事       -->
     </section>
 </template>
