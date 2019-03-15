@@ -4,40 +4,58 @@
 <!-- element-ui/container容器布局 -->
 <!-- 路由视图的用法:路由跳转只在视图内 -->
     <el-container>
-    <el-header>
-        <span v-for="(item,index) in collectionList" v-if="index<=8">
-          <router-link :to="{path:item.path}">
-          <el-button style="width:90px;margin-right: 5px;">{{ item.label }}</el-button>
-          </router-link>
-        </span>
-
-    </el-header>
-    <el-container>
-        <el-aside width="200px">
-
-          <div v-for="(item,index) in collectionList" v-if="index>8">
+      <el-header>
+          <span v-for="(item,index) in collectionList" v-if="index<=-8">
             <router-link :to="{path:item.path}">
-            <el-button style="width:110px;margin:10px;">{{ item.label }}</el-button>
+            <el-button style="width:90px;margin-right: 5px;">{{ item.label }}</el-button>
             </router-link>
-          </div>
+          </span>
+      </el-header>
+          <el-container>
+              <el-aside width="200px">
+                <!-- <div v-for="(item,index) in collectionList" v-if="index>8">
+                  <router-link :to="{path:item.path}">
+                  <el-button style="width:110px;margin:10px;">{{ item.label }}</el-button>
+                  </router-link>
+                </div> -->
+    <el-menu
+      router
+      default-active="2"
+      class="el-menu-vertical-demo"
+      @open="handleOpen"
+      @close="handleClose">
+
+      <el-submenu index="1" key="1">
+        <template slot="title">
+          <i class="el-icon-location"></i>
+          <span>导航一</span>
+        </template>
+        <template v-for="(item,index) in collectionList">
+            <el-menu-item :index="item.path">{{item.label}}</el-menu-item>
+        </template>
+        <!-- <el-submenu :index="item.key" v-for="(item,index) in collectionList" :key="item.key">
+          <template slot="title">{{item.label}}</template>
+          <el-menu-item :index="item.path">{{item.label}}</el-menu-item>
+        </el-submenu> -->
+      </el-submenu>
+    </el-menu>
 
 
-        </el-aside>
-        <el-main>
-      
 
 
-          <div class='contain'>
-            <!-- <keep-alive>包含<router-view>实现页面缓存，加速页面加载， -->
-            <keep-alive><!--缓存的页面-->
-              <router-view v-if="!$route.meta.keepAlive"></router-view>    <!-- 路由视图 -->
-            </keep-alive>
-            <router-view v-if="$route.meta.keepAlive"></router-view><!--不缓存的页面-->
-          </div>
 
+              </el-aside>
 
-        </el-main>
-    </el-container>
+              <el-main>
+                <div class='contain'>
+                  <!-- <keep-alive>包含<router-view>实现页面缓存，加速页面加载， -->
+                  <keep-alive><!--缓存的页面-->
+                    <router-view v-if="!$route.meta.keepAlive"></router-view>    <!-- 路由视图 -->
+                  </keep-alive>
+                  <router-view v-if="$route.meta.keepAlive"></router-view><!--不缓存的页面-->
+                </div>
+              </el-main>
+          </el-container>
     </el-container>
 
   </section>
@@ -67,27 +85,27 @@ export default {
   data (){
     return {
       collectionList: [
-        {label: '路由',path:'/subroute'},
-        {label: '组件遍历',path:'/ergodic'},
-        {label: 'vuex',path: '/vuex'},
-        {label: 'canvas',path: '/canvas'},
-        {label: 'echart',path: '/echarts'},
-        {label: '子组件',path: '/children'},
-        {label: '父组件',path: '/parent'},
-        {label: '公用方法',path: '/public'},
-        {label: 'rem',path: '/rem'},
-        {label: 'class',path: '/class'},
-        {label: 'watch监听',path: '/watch'},
-        {label: 'computed',path: '/computed'},
-        {label: 'ref',path: '/refs'},
-        {label: 'filter',path: '/filters'},
-        {label: '元素',path: '/element'},
-        {label: 'mock',path: '/mock'},
-        {label: 'transition',path: '/transition'},
-        {label: '引用',path: '/quote'},
-        {label: 'es6',path: '/es6'},
-        {label: 'base解密',path: '/base64'},
-        {label: '路由传参',path: '/route'},
+        {key:'1-1',label: '路由',path:'/subroute'},
+        {key:'1-2',label: '组件遍历',path:'/ergodic'},
+        {key:'1-3',label: 'vuex',path: '/vuex'},
+        {key:'1-4',label: 'canvas',path: '/canvas'},
+        {key:'1-5',label: 'echart',path: '/echarts'},
+        {key:'1-6',label: '子组件',path: '/children'},
+        {key:'1-7',label: '父组件',path: '/parent'},
+        {key:'1-8',label: '公用方法',path: '/public'},
+        {key:'1-9',label: 'rem',path: '/rem'},
+        {key:'1-10',label: 'class',path: '/class'},
+        {key:'1-11',label: 'watch监听',path: '/watch'},
+        {key:'1-12',label: 'computed',path: '/computed'},
+        {key:'1-13',label: 'ref',path: '/refs'},
+        {key:'1-14',label: 'filter',path: '/filters'},
+        {key:'1-15',label: '元素',path: '/element'},
+        {key:'1-16',label: 'mock',path: '/mock'},
+        {key:'1-17',label: 'transition',path: '/transition'},
+        {key:'1-18',label: '引用',path: '/quote'},
+        {key:'1-19',label: 'es6',path: '/es6'},
+        {key:'1-20',label: 'base解密',path: '/base64'},
+        {key:'1-21',label: '路由传参',path: '/route'},
       ],
       foot: false,
       stick: false,
@@ -165,6 +183,12 @@ export default {
     //简单的删除cookies
       deleteCookies: function (name) {
         this.set(name, '', -1);
+      },
+      handleOpen(key, keyPath) {
+        console.log(key, keyPath);
+      },
+      handleClose(key, keyPath) {
+        console.log(key, keyPath);
       }
   }
 }
@@ -194,11 +218,13 @@ export default {
     color: #333;
     text-align: center;
     -line-height: 200px;
+    min-height: 800px;
   }
   
   .el-main {
     background-color: #E9EEF3;
     color: #333;
+    min-height: 800px;
     -text-align: center;
     -line-height: 160px;
   }
