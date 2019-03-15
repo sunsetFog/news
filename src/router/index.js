@@ -40,6 +40,7 @@ import LoadMore from '../pages/effect/loadmore.vue';
 import Upload from '../pages/effect/upload.vue';
 import Upload1 from '../pages/effect/upload1.vue';
 import Address from '../pages/effect/address.vue';
+import Copy from '../pages/effect/copy.vue';
 
 
 
@@ -107,7 +108,8 @@ export default new Router({
  {path: '/loadmore',component: LoadMore,name: 'LoadMore',meta:{title: '下拉加载',foot: false,crux: false}},
  {path: '/upload',component: Upload,name: 'Upload',meta:{title: '上传图片列表',foot: false,crux: false}},
  {path: '/upload1',component: Upload1,name: 'Upload1',meta:{title: '单个上传图片',foot: false,crux: false}},
- {path: '/address',component: Address,name: 'Address',meta:{title: '地址管理',foot: false,crux: false}}
+ {path: '/address',component: Address,name: 'Address',meta:{title: '地址管理',foot: false,crux: false}},
+ {path: '/copy',component: Copy,name: 'Copy',meta:{title: '复制',foot: false,crux: false}}
 
 
 

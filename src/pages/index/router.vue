@@ -15,7 +15,8 @@ export default {
     },
     methods: {
         jump(){
-            this.$router.push({name: 'Params',params: {id: 100,status: true}});
+            this.$router.push({path: 'Params?id=100&status=true'});//建议用这个，没刷新问题
+            // this.$router.push({name: 'Params',params: {id: 100,status: true}});
         },
         multiplexing(){
             this.$router.push({name: 'ParamsOther',params: {id: 999,supplier: 'supplier'}})
