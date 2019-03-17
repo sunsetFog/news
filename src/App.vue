@@ -5,42 +5,39 @@
 <!-- 路由视图的用法:路由跳转只在视图内 -->
     <el-container>
       <el-header>
-          <span v-for="(item,index) in collectionList" v-if="index<=-8">
+        <div style="font-size: 32px;letter-spacing:5px;">夕阳红雾</div>
+          <!-- <span v-for="(item,index) in collectionList[0].effect" v-if="index<=-8">
             <router-link :to="{path:item.path}">
             <el-button style="width:90px;margin-right: 5px;">{{ item.label }}</el-button>
             </router-link>
-          </span>
+          </span> -->
       </el-header>
           <el-container>
               <el-aside width="200px">
-                <!-- <div v-for="(item,index) in collectionList" v-if="index>8">
+                <!-- <div v-for="(item,index) in collectionList[0].effect" v-if="index>8">
                   <router-link :to="{path:item.path}">
                   <el-button style="width:110px;margin:10px;">{{ item.label }}</el-button>
                   </router-link>
                 </div> -->
-    <el-menu
-      router
-      default-active="2"
-      class="el-menu-vertical-demo"
-      @open="handleOpen"
-      @close="handleClose">
 
-      <el-submenu index="1" key="1">
-        <template slot="title">
-          <i class="el-icon-location"></i>
-          <span>导航一</span>
-        </template>
-        <template v-for="(item,index) in collectionList">
-            <el-menu-item :index="item.path">{{item.label}}</el-menu-item>
-        </template>
-        <!-- <el-submenu :index="item.key" v-for="(item,index) in collectionList" :key="item.key">
-          <template slot="title">{{item.label}}</template>
-          <el-menu-item :index="item.path">{{item.label}}</el-menu-item>
-        </el-submenu> -->
-      </el-submenu>
-    </el-menu>
+                <el-menu
+                  router
+                  default-active="2"
+                  class="el-menu-vertical-demo"
+                  @open="handleOpen"
+                  @close="handleClose">
 
-
+                  <el-submenu :index="item.key" :key="item.key" v-for="(item,index) in collectionList">
+                    <template slot="title">
+                      <i :class="item.icon"></i>
+                      <span>{{item.title}}</span>
+                    </template>
+                    <section v-for="(term,index) in item.effect">
+                        <el-menu-item :index="term.path">{{term.label}}</el-menu-item>
+                    </section>
+                  </el-submenu>
+                </el-menu>
+                <!-- router与index是配置路由链接 -->
 
 
 
@@ -84,28 +81,38 @@ export default {
   name: 'App',
   data (){
     return {
-      collectionList: [
-        {key:'1-1',label: '路由',path:'/subroute'},
-        {key:'1-2',label: '组件遍历',path:'/ergodic'},
-        {key:'1-3',label: 'vuex',path: '/vuex'},
-        {key:'1-4',label: 'canvas',path: '/canvas'},
-        {key:'1-5',label: 'echart',path: '/echarts'},
-        {key:'1-6',label: '子组件',path: '/children'},
-        {key:'1-7',label: '父组件',path: '/parent'},
-        {key:'1-8',label: '公用方法',path: '/public'},
-        {key:'1-9',label: 'rem',path: '/rem'},
-        {key:'1-10',label: 'class',path: '/class'},
-        {key:'1-11',label: 'watch监听',path: '/watch'},
-        {key:'1-12',label: 'computed',path: '/computed'},
-        {key:'1-13',label: 'ref',path: '/refs'},
-        {key:'1-14',label: 'filter',path: '/filters'},
-        {key:'1-15',label: '元素',path: '/element'},
-        {key:'1-16',label: 'mock',path: '/mock'},
-        {key:'1-17',label: 'transition',path: '/transition'},
-        {key:'1-18',label: '引用',path: '/quote'},
-        {key:'1-19',label: 'es6',path: '/es6'},
-        {key:'1-20',label: 'base解密',path: '/base64'},
-        {key:'1-21',label: '路由传参',path: '/route'},
+      collectionList: [{key: '1',title: '知识点',icon: 'el-icon-star-off',effect:[
+          {key:'1-1',label: '路由',path:'/subroute'},
+          {key:'1-2',label: '组件遍历',path:'/ergodic'},
+          {key:'1-3',label: 'vuex',path: '/vuex'},
+          {key:'1-4',label: 'canvas',path: '/canvas'},
+          {key:'1-5',label: 'echart',path: '/echarts'},
+          {key:'1-6',label: '子组件',path: '/children'},
+          {key:'1-7',label: '父组件',path: '/parent'},
+          {key:'1-8',label: '公用方法',path: '/public'},
+          {key:'1-9',label: 'rem',path: '/rem'},
+          {key:'1-10',label: 'class',path: '/class'},
+          {key:'1-11',label: 'watch监听',path: '/watch'},
+          {key:'1-12',label: 'computed',path: '/computed'},
+          {key:'1-13',label: 'ref',path: '/refs'},
+          {key:'1-14',label: 'filter',path: '/filters'},
+          {key:'1-15',label: '元素',path: '/element'},
+          {key:'1-16',label: 'mock',path: '/mock'},
+          {key:'1-17',label: 'transition',path: '/transition'},
+          {key:'1-18',label: '引用',path: '/quote'},
+          {key:'1-19',label: 'es6',path: '/es6'},
+          {key:'1-20',label: 'base解密',path: '/base64'},
+          {key:'1-21',label: '路由传参',path: '/route'},
+        ]},
+        {key: '2',title: '效果集',icon: 'el-icon-refresh',effect: [
+          {key: '2-1',label: '返回顶部',path: '/backtotop'},
+          {key: '2-2',label: '分页封装',path: '/page'},
+          {key: '2-3',label: '下拉加载',path: '/loadmore'},
+          {key: '2-4',label: '上传图片列表',path: '/upload'},
+          {key: '2-5',label: '单个上传图片',path: '/upload1'},
+          {key: '2-6',label: '地址管理',path: '/address'},
+          {key: '2-7',label: '复制',path: '/copy'}
+        ]}
       ],
       foot: false,
       stick: false,
@@ -202,7 +209,6 @@ export default {
 #main_app{
   .contain{
     width: 100%;
-    box-sizing: border-box;
     overflow: hidden;
   }
 
@@ -217,30 +223,22 @@ export default {
     background-color: #D3DCE6;
     color: #333;
     text-align: center;
-    -line-height: 200px;
     min-height: 800px;
+    padding-bottom: 50px;
+    box-sizing: border-box;
   }
   
   .el-main {
     background-color: #E9EEF3;
     color: #333;
     min-height: 800px;
-    -text-align: center;
-    -line-height: 160px;
+    padding-bottom: 50px;
+    box-sizing: border-box;
   }
   
   body > .el-container {
     margin-bottom: 40px;
   }
-  
-  .el-container:nth-child(5) .el-aside,
-  .el-container:nth-child(6) .el-aside {
-    -line-height: 260px;
-  }
-  
-  .el-container:nth-child(7) .el-aside {
-    -line-height: 320px;
-  }
- 
+   
 }
 </style>
