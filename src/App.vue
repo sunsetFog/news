@@ -111,7 +111,8 @@ export default {
           {key: '2-4',label: '上传图片列表',path: '/upload'},
           {key: '2-5',label: '单个上传图片',path: '/upload1'},
           {key: '2-6',label: '地址管理',path: '/address'},
-          {key: '2-7',label: '复制',path: '/copy'}
+          {key: '2-7',label: '复制',path: '/copy'},
+          {key: '2-8',label: '签到',path: '/date'}
         ]}
       ],
       foot: false,
