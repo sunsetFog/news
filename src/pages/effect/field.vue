@@ -7,7 +7,13 @@
                     <div class="wonderful_article_left">{{item.name}}</div>
                     <div class="wonderful_article_right" @click="modify(index)">{{item.setting}}</div>
                 </div>
-                <div class="modify_content" v-if="item.setting != '设置'">修改内容</div>
+                <div class="modify_content" v-if="item.setting != '设置'">
+                    修改内容-
+                    <div class="praise">
+                        <span>好评:</span>
+                        <button style="margin:5px 0px 0px 10px;" v-for="(term,status) in bright_list" :class="{'active_praise': term.active}" @click="praise(status)">{{term.name}}</button>
+                    </div>
+                </div>
             </section>
         </div>
     </section>
@@ -17,7 +23,8 @@
 export default {
     data(){
         return{
-            article_list: []
+            article_list: [],
+            bright_list:[{id:1,name:'优美',active: false},{id:2,name:'精彩',active:false},{id:3,name:'脱俗',active:false}]
         }
     },
     created(){
@@ -27,14 +34,15 @@ export default {
         getJson(){
             //后台返回的数据
             var response = [
-                {id: 1,sign: '1-1',name: '数据一'},
-                {id: 2,sign: '1-2',name: '数据二'},
-                {id: 3,sign: '1-3',name: '数据三'}
+                {id: 1,sign: '1-1',name: '数据一',bright:[0,2]},
+                {id: 2,sign: '1-2',name: '数据二',bright:[0,1]},
+                {id: 3,sign: '1-3',name: '数据三',bright:[1,2]}
             ]
             //前端往里添加字段
             for(var i=0;i<response.length;i++){
                 response[i].active_color = true;
                 response[i].setting = '设置';
+                response[i].praise = false;
             }
             this.article_list = response;
             console.log('文章',this.article_list);
@@ -48,6 +56,23 @@ export default {
             }
             this.article_list[index].setting = '保存';
             this.article_list[index].active_color = false;
+            //初始化好评
+            for(var h=0;h<this.bright_list.length;h++){
+                this.bright_list[h].active = false;
+            }
+            // this.article_list[index].bright是后台记录高亮的下标，这字段得与后台整合
+            for(var k=0;k<this.article_list[index].bright.length;k++){
+                this.bright_list[this.article_list[index].bright[k]].active = true;
+            }
+        },
+        //好评选择
+        praise(index){
+            if(this.bright_list[index].active==true){
+                this.bright_list[index].active = false;
+            }else{
+                this.bright_list[index].active = true;
+            }
+            //保存是给这下标，后台保存
         }
     }
 }
@@ -85,6 +110,20 @@ export default {
             padding: 5px 20px 0px 20px;
             box-sizing: border-box;
             border-bottom: 1px solid #ebeef5;
+            .praise{
+                .active_praise{
+                    background: #a0cfff;
+                    color: white;
+                }
+                button{
+                    width: 60px;
+                    height: 25px;
+                    border: none;
+                    outline: none;
+                    border: 1px solid #ebeef5;
+                    border-radius: 4px;
+                }
+            }
         }
     }
 </style>
