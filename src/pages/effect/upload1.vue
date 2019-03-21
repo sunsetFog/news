@@ -12,7 +12,8 @@
                     <i v-else class="el-icon-plus avatar-uploader-icon"></i>
             </el-upload>
             <!-- name="upload"，这是后台绑定的字段，必须有 -->
-            <!-- 不需要写请求头，在action里加后台接口url -->
+            <!-- 不需要写请求头，在action里加后台接口url 
+            下载文件也不需要写请求头,只用window.open("api/download?id="+拼接的参数);-->
 		</div>       
     </section>
 </template>
