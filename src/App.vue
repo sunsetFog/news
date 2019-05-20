@@ -25,16 +25,35 @@
                   default-active="2"
                   class="el-menu-vertical-demo"
                   @open="handleOpen"
-                  @close="handleClose">
+                  @close="handleClose"
+                  background-color="#545c64"
+                  text-color="#fff"
+                  active-text-color="#ffd04b">
 
                   <el-submenu :index="item.key" :key="item.key" v-for="(item,index) in collectionList">
                     <template slot="title">
                       <i :class="item.icon"></i>
-                      <span>{{item.title}}</span>
+                      <span>{{item.label}}</span>
                     </template>
+
                     <section v-for="(term,index) in item.effect">
-                        <el-menu-item :index="term.path">{{term.label}}</el-menu-item>
+                      <!-- 三级的 -->
+                      <div v-if="term.effect.length!=0">
+                        <el-submenu :index="term.key">
+                          <template slot="title"><i class="el-icon-star-on"></i>{{term.label}}</template>
+                          <div v-for="(val,index) in term.effect">
+                            <el-menu-item :index="val.path"><i class="el-icon-document"></i>{{val.label}}</el-menu-item>
+                          </div>
+                        </el-submenu>
+                      </div>
+                      <!-- 二级的 -->
+                      <div v-else>
+                          <el-menu-item :index="term.path"><i class="el-icon-document"></i>{{term.label}}</el-menu-item>
+                      </div>
+
                     </section>
+
+                    
                   </el-submenu>
                 </el-menu>
                 <!-- router与index是配置路由链接 -->
@@ -81,39 +100,39 @@ export default {
   name: 'App',
   data (){
     return {
-      collectionList: [{key: '1',title: '知识点',icon: 'el-icon-star-off',effect:[
-          {key:'1-1',label: '路由',path:'/subroute'},
-          {key:'1-2',label: '组件遍历',path:'/ergodic'},
-          {key:'1-3',label: 'vuex',path: '/vuex'},
-          {key:'1-4',label: 'canvas',path: '/canvas'},
-          {key:'1-5',label: 'echart',path: '/echarts'},
-          {key:'1-6',label: '子组件',path: '/children'},
-          {key:'1-7',label: '父组件',path: '/parent'},
-          {key:'1-8',label: '公用方法',path: '/public'},
-          {key:'1-9',label: 'rem',path: '/rem'},
-          {key:'1-10',label: 'class',path: '/class'},
-          {key:'1-11',label: 'watch监听',path: '/watch'},
-          {key:'1-12',label: 'computed',path: '/computed'},
-          {key:'1-13',label: 'ref',path: '/refs'},
-          {key:'1-14',label: 'filter',path: '/filters'},
-          {key:'1-15',label: '元素',path: '/element'},
-          {key:'1-16',label: 'mock',path: '/mock'},
-          {key:'1-17',label: 'transition',path: '/transition'},
-          {key:'1-18',label: '引用',path: '/quote'},
-          {key:'1-19',label: 'es6',path: '/es6'},
-          {key:'1-20',label: 'base解密',path: '/base64'},
-          {key:'1-21',label: '路由传参',path: '/route'},
+      collectionList: [{key: '1',label: '知识点',icon: 'el-icon-star-off',effect:[
+          {key:'1-1',label: '路由',path:'/subroute',effect:[{key:'3-1',label: '路由',path:'/subroute'},]},
+          {key:'1-2',label: '组件遍历',path:'/ergodic',effect:[]},
+          {key:'1-3',label: 'vuex',path: '/vuex',effect:[]},
+          {key:'1-4',label: 'canvas',path: '/canvas',effect:[]},
+          {key:'1-5',label: 'echart',path: '/echarts',effect:[]},
+          {key:'1-6',label: '子组件',path: '/children',effect:[]},
+          {key:'1-7',label: '父组件',path: '/parent',effect:[]},
+          {key:'1-8',label: '公用方法',path: '/public',effect:[]},
+          {key:'1-9',label: 'rem',path: '/rem',effect:[]},
+          {key:'1-10',label: 'class',path: '/class',effect:[]},
+          {key:'1-11',label: 'watch监听',path: '/watch',effect:[]},
+          {key:'1-12',label: 'computed',path: '/computed',effect:[]},
+          {key:'1-13',label: 'ref',path: '/refs',effect:[]},
+          {key:'1-14',label: 'filter',path: '/filters',effect:[]},
+          {key:'1-15',label: '元素',path: '/element',effect:[]},
+          {key:'1-16',label: 'mock',path: '/mock',effect:[]},
+          {key:'1-17',label: 'transition',path: '/transition',effect:[]},
+          {key:'1-18',label: '引用',path: '/quote',effect:[]},
+          {key:'1-19',label: 'es6',path: '/es6',effect:[]},
+          {key:'1-20',label: 'base解密',path: '/base64',effect:[]},
+          {key:'1-21',label: '路由传参',path: '/route',effect:[]},
         ]},
-        {key: '2',title: '效果集',icon: 'el-icon-refresh',effect: [
-          {key: '2-1',label: '返回顶部',path: '/backtotop'},
-          {key: '2-2',label: '分页封装',path: '/page'},
-          {key: '2-3',label: '下拉加载',path: '/loadmore'},
-          {key: '2-4',label: '上传图片列表',path: '/upload'},
-          {key: '2-5',label: '单个上传图片',path: '/upload1'},
-          {key: '2-6',label: '地址管理',path: '/address'},
-          {key: '2-7',label: '复制',path: '/copy'},
-          {key: '2-8',label: '签到',path: '/date'},
-          {key: '2-9',label: '字段变量',path: '/field'}
+        {key: '2',label: '效果集',icon: 'el-icon-refresh',effect: [
+          {key: '2-1',label: '返回顶部',path: '/backtotop',effect:[]},
+          {key: '2-2',label: '分页封装',path: '/page',effect:[]},
+          {key: '2-3',label: '下拉加载',path: '/loadmore',effect:[]},
+          {key: '2-4',label: '上传图片列表',path: '/upload',effect:[]},
+          {key: '2-5',label: '单个上传图片',path: '/upload1',effect:[]},
+          {key: '2-6',label: '地址管理',path: '/address',effect:[]},
+          {key: '2-7',label: '复制',path: '/copy',effect:[]},
+          {key: '2-8',label: '签到',path: '/date',effect:[]},
+          {key: '2-9',label: '字段变量',path: '/field',effect:[]}
         ]}
       ],
       foot: false,
@@ -133,7 +152,7 @@ export default {
         }else{
           this.stick = true;
         }
-        console.log('监听路由变化',to,from,this.stick);
+        //console.log('监听路由变化',to,from);
       }
   },
   created(){
@@ -144,26 +163,26 @@ export default {
       }else{
           this.stick = true;
       }
-    console.log('route路由参数',this.$route.meta.foot,this.$route.params,this.$route.meta.title,this.$route.meta.crux);//获取路由参数
+    //console.log('route路由参数',this.$route);//获取路由参数
     //全局接口，必定运行的,很适合用cookie,localStorage,session或vuex传值，避免跳链接,没设置,就获取为undefine的
     this.$http.post('http://localhost:8080/api/home').then((response) => {
-        console.log('home++api',response);
+        //console.log('home++api',response);
         // vue-浏览器缓存
         window.localStorage.setItem('game',response.body.data.game);
         window.localStorage.setItem('stimulate',response.body.data.stimulate);
         this.transmit = window.localStorage.getItem('game');
         sessionStorage.setItem("game",'王者荣耀');
         this.transmit = sessionStorage.getItem("name");  
-        console.log('原型prototype',this.$teacher());
+        //console.log('原型prototype',this.$teacher());
 
         //vue-cookies的使用
         //https://www.jianshu.com/p/535b53989b39
         // https://www.npmjs.com/package/vue-cookies
         this.$cookies.set("token","GH1.1.1689020474.1484362313","10h");
-        console.log('获取vue-cookies',this.$cookies.get("token"));
+        //console.log('获取vue-cookies',this.$cookies.get("token"));
         //原生cookies的使用
         this.setCookies("easy","cool",3);
-        console.log("简单型获取cookies",this.getCookies("easy"))
+        //console.log("简单型获取cookies",this.getCookies("easy"))
 
       // localStorage.clear()    //清除所有本地缓存
       // sessionStorage.clear()  //清除当前会话所有缓存
@@ -174,7 +193,7 @@ export default {
         //在线编码http://tool.chinaz.com/tools/unicode.aspx
         let stars = "";
         stars = decodeURI('\u5915\u9633\u7ea2');
-        console.log('编码',stars);
+        //console.log('编码',stars);
 		})
   },
   methods:{
@@ -208,6 +227,7 @@ export default {
 // 但是要有样式嵌套，不然影响全局
 @import 'assets/app.css';
 @import 'assets/index.less';
+// 样式span:nth-of-type(1)虽然好用,但对子集span都有影响,注意使用就行
 #main_app{
   .contain{
     width: 100%;

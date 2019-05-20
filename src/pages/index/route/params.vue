@@ -12,6 +12,7 @@ export default {
         }
     },
     activated(){
+        //打印this.$route,参数都在这里
         console.log('route++params',this.$route.params);
         //使用
         console.log(this.$route.params.id);

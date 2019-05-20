@@ -16,7 +16,10 @@
 				count: 600
 			}
 		},
-		computed:{
+		created(){
+			console.log('computed方法创建在data里',this.holy);
+		},
+		computed:{//1.有缓存作用  2.监听改变才触发  3.创建在data里,不是方法调用
 			reverse:function(){
 				return this.datas.split('').reverse().join('')
 			},

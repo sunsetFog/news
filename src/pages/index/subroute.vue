@@ -1,4 +1,5 @@
 <template>
+    <!-- vue必用 -->
     <section style="margin-left: 20px;margin-top: 20px;">
         <div class='router_frame'>
           <ul v-for='val in listData'>
@@ -7,7 +8,8 @@
             </router-link>
           </ul>
        </div>
-        <div style="width: 300px;height: 200px;border: 1px solid green;">
+        <div style="width: 100%;height: 600px;border: 1px solid green;padding: 20px;box-sizing: border-box;">
+          <!-- router-view和建路由的children才行,  而app.vue里不用children建路由,因为他是全局文件-->
           <router-view></router-view>
         </div> 
     </section>

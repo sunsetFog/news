@@ -16,6 +16,8 @@ const mutations={
 		state.count+=n
 	},
 	submitMatations(state,params){
+		//vuex的刷新数据丢失问题,用session或localstorage,判断navigation存在就commit提交mutation
+		sessionStorage.setItem('navigation',params.id);
 		state.id = params.id;
 		state.city = params.city;
 	}
@@ -30,6 +32,7 @@ const getters = {
 //action调用mutation方法
 const actions = {
 	mutation(res){
+		console.log('dispatch',res);
 		res.commit('submitMatations',{id: 6,city: '茂名'})
 	}
 }

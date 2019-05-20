@@ -76,15 +76,18 @@ export default new Router({
     {path: '/',component: Main,name: 'Main',meta:{title: '主角',foot: false,crux: false}},
  {
    path: '/subroute',component: Subroute,redirect: '/subroute/nail',name: 'Subroute',meta:{title: '甲',foot: true},
-   children:[
-     {path: 'nail',component: Nail,name: 'Nail',meta:{title: '甲',foot: true}},
-     {path: 'other',component: Other,name: 'Other',meta:{title: '其他',foot: false}},
-     {path: '/',redirect: '/subroute/nail'}
+   children:[//必用知识点,children
+     {path: 'nail',component: Nail,name: 'Nail',meta:{title: '必学',foot: true}},
+     {path: 'other',component: Other,name: 'Other',meta:{title: '必会',foot: false}},
+     {path: '/',redirect: '/subroute/nail'}//默认指向路径
    ]
  },
- {path: '/ergodic',component: Ergodic,name: 'Ergodic',meta:{title: '组件遍历',foot: false}},
- {path: '/vuex',component: Vuex,name: 'Vuex',meta:{title: 'vuex',foot: false}},
- {path: '/canvas',component: Canvas,name: 'Canvas',meta:{title: '画布',foot: true}},
+ //重点:路由参数解决刷新丢失问题
+ // 1.meta是路由参数,却不在path路径上,可以打印this或者打印this.$route看,用this.$route.meta获取
+ // 2.路由传参,在路径上
+ {path: '/ergodic',component: Ergodic,name: 'Ergodic',meta:{title: '组件遍历',foot: false,navigation: 0}},//1.title标题 2.foot组件显示 3.重点:navigation是导航栏高亮刷新问题
+ {path: '/vuex',component: Vuex,name: 'Vuex',meta:{title: 'vuex',foot: false,navigation: 1}},
+ {path: '/canvas',component: Canvas,name: 'Canvas',meta:{title: '画布',foot: true,navigation: 2}},
  {path: '/echarts',component: Echarts,name: 'Echarts',meta:{title: '图表',foot: true}},
  {path: '/children',component: Children,name: 'Children',meta:{title: '子组件',foot: true}},
  {path: '/parent',component: Parent,name: 'Parent',meta:{title: '父组件',foot: true}},

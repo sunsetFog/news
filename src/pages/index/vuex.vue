@@ -28,6 +28,7 @@
 			...mapActions(['mutation']),//actions引入方法
 			submit(){
 				this.$store.commit('submitMatations',{id: 5,city: '广州'});//调用mutation方法，并传递数据
+				// this.$store.dispatch('mutation');//调用action
 				console.log(this.$store.state.id,this.$store.state.city);
 			},
 			getJson(){
