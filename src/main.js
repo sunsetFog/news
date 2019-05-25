@@ -36,7 +36,9 @@ import axios from 'axios';
 //vue发送post请求时如何携带cookie
 //https://blog.csdn.net/liuxin_1991/article/details/81531321?utm_source=blogxgwz1
 axios.defaults.withCredentials=true;//让ajax携带cookie,就这一行代码就ok了
-Vue.prototype.$axios = axios;
+import request from './api/http.js';
+// Vue.prototype.$axios = axios;
+Vue.prototype.$axios = request;
 
 //全局引入公用组件，建立子父组件关系(分页组件)
 import Pagination from './pages/effect/Pagination.vue';
@@ -53,6 +55,10 @@ Vue.use(MuseUI)
 import Toast from './vuex/store.js'
 Vue.prototype.$store =Toast
 
+//全局变量
+Vue.prototype.$domain = 'http://10.0.1.111:8080';
+
+//全局方法
 Vue.prototype.$teacher = function(){
   return 'vue原型简单方法';
 }
@@ -75,6 +81,16 @@ Vue.prototype.$regular = regular;
 import VueCookies from 'vue-cookies'
 Vue.use(VueCookies)
 
+// 图片懒加载
+// npm install vue-lazyload --save-dev
+import VueLazyload from 'vue-lazyload'
+// Vue.use(VueLazyload)
+Vue.use(VueLazyload, {
+  preLoad: 1.3,
+  error: '../../../static/1.png',
+  loading: '../../../static/2.png',
+  attempt: 1
+})
 
 
 // vue-router中使用router.beforeEach来判断用户的是否登录再决定跳转到登录页面

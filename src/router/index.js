@@ -43,6 +43,8 @@ import Address from '../pages/effect/address.vue';
 import Copy from '../pages/effect/copy.vue';
 import MemberDate from '../pages/effect/member_date.vue';
 import Field from '../pages/effect/field.vue';
+import Video from '../pages/effect/video.vue';
+import Lazy from '../pages/effect/lazy.vue';
 
 
 
@@ -115,7 +117,9 @@ export default new Router({
  {path: '/address',component: Address,name: 'Address',meta:{title: '地址管理',foot: false,crux: false}},
  {path: '/copy',component: Copy,name: 'Copy',meta:{title: '复制',foot: false,crux: false}},
  {path: '/date',component: MemberDate,name: 'MemberDate',meta:{title: '日期',foot: false,crux: false}},
- {path: '/field',component: Field,name: 'Field',meta:{title: '字段变量',foot: false,crux: false}}
+ {path: '/field',component: Field,name: 'Field',meta:{title: '字段变量',foot: false,crux: false}},
+ {path: '/video',component: Video,name: 'Video',meta:{title: 'mp4',foot: false,crux: false}},
+ {path: '/lazy',component: Lazy,name: 'Lazy',meta:{title: '懒加载',foot: false,crux: false}},
 
 
 

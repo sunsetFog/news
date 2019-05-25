@@ -1,6 +1,6 @@
 <template>
     <section>
-        main
+        项目大厅
     </section>
 </template>
 
@@ -12,8 +12,10 @@ export default {
         }
     },
     //创建前，跳回登陆界面
-    mounted(){
-        this.$router.push({name:'Login',params:{id: 'grame'}});
+    beforeCreate(){
+        if(!sessionStorage.getItem('token')){
+            this.$router.push({path:'/login'});
+        }
     },
 }
 </script>

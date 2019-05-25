@@ -26,8 +26,8 @@
                   class="el-menu-vertical-demo"
                   @open="handleOpen"
                   @close="handleClose"
-                  background-color="#545c64"
-                  text-color="#fff"
+                  background-color="#101823"
+                  text-color="#f8faff"
                   active-text-color="#ffd04b">
 
                   <el-submenu :index="item.key" :key="item.key" v-for="(item,index) in collectionList">
@@ -165,7 +165,8 @@ export default {
       }
     //console.log('route路由参数',this.$route);//获取路由参数
     //全局接口，必定运行的,很适合用cookie,localStorage,session或vuex传值，避免跳链接,没设置,就获取为undefine的
-    this.$http.post('http://localhost:8080/api/home').then((response) => {
+    sessionStorage.setItem("token",'HK-778');//token是登录页面存储的
+    this.$http.post('http://localhost:8080/api/home').then((response) => {//本地接口不能存header值
         //console.log('home++api',response);
         // vue-浏览器缓存
         window.localStorage.setItem('game',response.body.data.game);
@@ -194,6 +195,7 @@ export default {
         let stars = "";
         stars = decodeURI('\u5915\u9633\u7ea2');
         //console.log('编码',stars);
+        this.purpleHttp();
 		})
   },
   methods:{
@@ -217,6 +219,18 @@ export default {
       },
       handleClose(key, keyPath) {
         console.log(key, keyPath);
+      },
+      purpleHttp(){
+        //这个是配置axios的请求方式，上面没配置过的
+          this.$axios({
+            url: 'http://10.1.101.120/backend/account/checklogin',
+            methods: 'post',
+            data: {username: "gggg", password: "1234567890"}
+          }).then((res) => {
+              console.log('H-token',res);
+          }).catch((err)=>{
+              console.log('error',err);
+          })
       }
   }
 }

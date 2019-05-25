@@ -42,10 +42,8 @@ import mock from '../../../mock/mock.js';
 			this.getData();
 		},
 		 mounted(){
-			 console.log('params++1',this.$route.params);
 		 },
 		 activated(){
-			 console.log('params++2',this.$route.params);
        //开发环境模拟本地数据
         this.$http.get('http://localhost:8080/api/seller').then((response) => {
               console.log(response);

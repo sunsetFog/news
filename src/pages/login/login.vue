@@ -58,6 +58,9 @@
                 }
             }
         },
+        created(){
+            sessionStorage.removeItem('token');//登录页把token删除
+        },
         activated(){
             this.formInline.user = '';
             this.formInline.password = '';
@@ -124,8 +127,8 @@
                         if(this.formInline.user == game&&this.formInline.password == stimulate){
                             this.formInline.user = '';
                             this.formInline.password = '';
-                            this.$router.push({name: 'Mock',params:{id: 20}});
-                            sessionStorage.setItem("token",'用户HK-869');
+                            this.$router.push({path: '/echarts'});
+                            sessionStorage.setItem("token",'HK-869');
                             this.$Message.success('Success!');
                         }else{
                             this.$Message.error('信息错误!');
