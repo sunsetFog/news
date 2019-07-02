@@ -195,7 +195,6 @@ export default {
         let stars = "";
         stars = decodeURI('\u5915\u9633\u7ea2');
         //console.log('编码',stars);
-        this.purpleHttp();
 		})
   },
   methods:{

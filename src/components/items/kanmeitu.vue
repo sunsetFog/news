@@ -57,7 +57,7 @@
                lun_bo_width: '',
                timer: '',
                lun_bo_load: [],
-               lun_bo_arr:["../../../static/1.png","../../../static/2.png","../../../static/3.png","../../../static/4.png","../../../static/5.png","../../../static/6.png"],
+               lun_bo_arr:["../../../static/comic/theme1.png","../../../static/comic/theme2.png","../../../static/comic/theme3.png","../../../static/comic/theme4.png","../../../static/comic/theme1.png","../../../static/comic/theme2.png"],
                lun_bo_circular: [{label:'1',active: false},{label:'2',active: false},{label:'3',active: false},{label:'4',active: false},{label:'5',active: false},{label:'6',active: false}],
 			}
 		},

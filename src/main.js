@@ -87,8 +87,8 @@ import VueLazyload from 'vue-lazyload'
 // Vue.use(VueLazyload)
 Vue.use(VueLazyload, {
   preLoad: 1.3,
-  error: '../../../static/1.png',
-  loading: '../../../static/2.png',
+  error: '../../../static/comic/theme1.png',
+  loading: '../../../static/comic/theme2.png',
   attempt: 1
 })
 

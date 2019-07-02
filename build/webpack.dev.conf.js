@@ -25,8 +25,7 @@ const portfinder = require('portfinder');
 //模拟本地数据    链接https://blog.csdn.net/qq_36543956/article/details/79712263
 const express = require('express')
 const app = express()
-var homeApi = require('../mock/app.json')
-var sellerApi = require('../mock/data.json')   //加载本地数据文件
+var homeApi = require('../mock/app.json')//加载本地数据文件
 var goodsApi = require('../mock/stars.json')
 var apiRoutes = express.Router()
 app.use('/api', apiRoutes)
@@ -48,19 +47,13 @@ const devWebpackConfig = merge(baseWebpackConfig, {
 
   // these devServer options should be customized in /config/index.js
   devServer: {
-    //setting sun 
+    //设置本地接口，只能获取
     before(app) {
       app.post('/api/home', (req, res) => {
         res.json({
           result: 1,
           data: homeApi.data
-        })
-      }),
-      app.get('/api/seller', (req, res) => {
-        res.json({
-          result: 1,
-          data: sellerApi.data
-        })//接口返回json数据，上面配置的数据seller就赋值给data请求后调用
+        })//接口返回json数据，上面配置的数据homeApi就赋值给data请求后调用
       }),
       app.get('/api/goods', (req, res) => {
         res.json({

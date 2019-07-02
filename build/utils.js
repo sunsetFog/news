@@ -79,7 +79,20 @@ exports.cssLoaders = function (options) {
   return {
     css: generateLoaders(),// css对应 vue-style-loader 和 css-loader
     postcss: generateLoaders(),// postcss对应 vue-style-loader 和 css-loader
-    less: generateLoaders('less'),// less对应 vue-style-loader 和 less-loader
+
+    //vue全局使用less样式文件
+    // https://www.jianshu.com/p/2b1cd98c3062
+    //安装npm install sass-resources-loader --save-dev
+    // less: generateLoaders('less'),// less对应 vue-style-loader 和 less-loader
+    less: generateLoaders('less').concat({
+      loader: 'sass-resources-loader',
+      options: {
+        resources: path.resolve(__dirname, '../src/assets/styles/common.less')
+      }
+    }),
+
+
+
     sass: generateLoaders('sass', { indentedSyntax: true }), // sass对应 vue-style-loader 和 sass-loader
     scss: generateLoaders('sass'),// scss对应 vue-style-loader 和 sass-loader
     stylus: generateLoaders('stylus'),// stylus对应 vue-style-loader 和 stylus-loader

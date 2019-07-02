@@ -58,7 +58,7 @@
 				<div class="active_photo_header">
 					<div class="active_photo_header_left">
 						<dl class="active_photo_dl">
-							<dt><img class="head_portrait" src="../../../static/a1.jpg"/></dt>
+							<dt><img class="head_portrait" src="../../../static/comic/theme1.jpg"/></dt>
 							<dd>蒋老师</dd>
 							<dd>{{record_time}}</dd>
 						</dl>
@@ -137,13 +137,13 @@
 <script>
 	var things = [
 		{id: 1,date_day: '10.21',date_year: '2018',main_title: '大家的校运会',subtitle: '齐心协作,勇攀高峰',icon_color: '',activity_content: '同学们军训展示',
-		sowing_map: ["../../../static/1.png","../../../static/2.png","../../../static/3.png","../../../static/4.png","../../../static/5.png","../../../static/6.png"],
+		sowing_map: ["../../../static/comic/theme1.png","../../../static/comic/theme2.png","../../../static/comic/theme3.png","../../../static/comic/theme4.png","../../../static/comic/theme1.png","../../../static/comic/theme2.png"],
 		uploading_file: ['app.vue','yes.vue']},
 		{id: 2,date_day: '10.21',date_year: '2018',main_title: '大家的校运会',subtitle: '齐心协作,勇攀高峰',icon_color: '',activity_content: '同学们校运会展示',
 		sowing_map: [],
 		uploading_file: ['app.vue','yes.vue','yahoo.vue']},
 		{id: 3,date_day: '10.21',date_year: '2018',main_title: '大家的校运会',subtitle: '齐心协作,勇攀高峰',icon_color: '',activity_content: '同学们春游展示',
-		sowing_map: ["../../../static/1.png","../../../static/2.png","../../../static/3.png","../../../static/4.png","../../../static/5.png","../../../static/2.png","../../../static/4.png","../../../static/2.png","../../../static/3.png","../../../static/4.png","../../../static/6.png"],
+		sowing_map: ["../../../static/comic/theme1.png","../../../static/comic/theme2.png","../../../static/comic/theme3.png","../../../static/comic/theme4.png","../../../static/comic/theme1.png","../../../static/comic/theme2.png","../../../static/comic/theme4.png","../../../static/comic/theme2.png","../../../static/comic/theme3.png","../../../static/comic/theme4.png","../../../static/comic/theme3.png"],
 		uploading_file: ['app.vue','yes.vue','yahoo.vue','bin.vue']},
 	]
 	import photo from './kanmeitu.vue';
@@ -361,7 +361,7 @@
 				if(suffix_name != 'jpg' && suffix_name != 'png'){
 					this.uploading_file_data.push(file.name);
 				}else{
-					this.lun_bo_load.push('../../../static/'+file.name);
+					this.lun_bo_load.push('../../../static/comic/'+file.name);
 				}
 			},
 		}

@@ -27,7 +27,7 @@ import mock from '../../../mock/mock.js';
 	export default{
 		data(){
 			return{
-				imgUrl: '../../../static/a1.jpg',
+				imgUrl: '../../../static/comic/theme3.png',
 
 				list: [],
 				obj: {  //将添加的数据存到obj对象中
@@ -44,10 +44,7 @@ import mock from '../../../mock/mock.js';
 		 mounted(){
 		 },
 		 activated(){
-       //开发环境模拟本地数据
-        this.$http.get('http://localhost:8080/api/seller').then((response) => {
-              console.log(response);
-        })
+       //开发环境模拟本地数据    请查看build/webpack.dev.conf.js
         this.$http.get('http://localhost:8080/api/goods').then((response) => {
               console.log(response);
         })
