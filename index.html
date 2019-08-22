@@ -15,7 +15,11 @@
   <!-- 以750px为基准设计尺寸自动适配 -->
   <!-- 既是ps调375px的设计图，测量的值除10就等rem---(64px/10=6.4rem) -->
   <!-- 注意-注意:谷歌浏览器最小字体为12像素，但手机上没限制
-  因此，想用10字体像素，得谷歌设置-自定义字体为10以下 -->
+  因此，想用10字体像素，得谷歌设置-自定义字体为10以下 
+    但是使用自动转换，得配置16字体 
+    自动转换px为rem
+    https://www.cnblogs.com/wangqiao170/p/8652505.html
+-->
   <script type="text/javascript">
     (function (doc, win) {
        var docEl = doc.documentElement,
@@ -23,8 +27,7 @@
          recalc = function () {
            var clientWidth = docEl.clientWidth; 
            if (!clientWidth) return;
-           docEl.style.fontSize = 10 * (clientWidth / 375) + 'px';//其中“10”根据你设置的html的font-size属性值做适当的变化
-           //docEl.style.fontSize = 16 * (clientWidth / 375) + 'px';//其中“16”根据你设置的html的font-size属性值做适当的变化
+           docEl.style.fontSize = 16 * (clientWidth / 375) + 'px';//其中“16”根据你设置的html的font-size属性值做适当的变化
          };
  
        if (!doc.addEventListener) return;

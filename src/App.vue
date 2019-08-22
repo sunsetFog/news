@@ -155,7 +155,7 @@ export default {
         //console.log('监听路由变化',to,from);
       }
   },
-  created(){
+  created(){//加载创建数据-不能操作dom
     document.title = this.$route.meta.title;
     this.foot = this.$route.meta.foot;
      if(this.$route.meta.crux != undefined){
@@ -196,6 +196,9 @@ export default {
         stars = decodeURI('\u5915\u9633\u7ea2');
         //console.log('编码',stars);
 		})
+  },
+  mounted(){//挂在前-操作dom
+    
   },
   methods:{
     //简单的设置cookies
