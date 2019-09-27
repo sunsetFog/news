@@ -1,0 +1,1025 @@
+{
+	"groups": [
+		{
+			"keys": "light_ske_json,light_tex_json,light_tex_png,Goldicon_ske_json,Goldicon_tex_json,Goldicon_tex_png,coin2_ske_json,coin2_tex_json,coin2_tex_png,sun_png,dice_1_ske_json,dice_1_tex_json,dice_1_tex_png,dice_2_ske_json,dice_2_tex_json,dice_2_tex_png,dice_3_ske_json,dice_3_tex_json,dice_3_tex_png,dice_4_ske_json,dice_4_tex_json,dice_4_tex_png,dice_5_ske_json,dice_5_tex_json,dice_5_tex_png,dice_6_ske_json,dice_6_tex_json,dice_6_tex_png,skeleton_1_1_ske_json,skeleton_1_1_tex_json,skeleton_1_1_tex_png,skeleton_1_ske_json,skeleton_1_tex_json,skeleton_1_tex_png,skeleton_2_1_ske_json,skeleton_2_1_tex_json,skeleton_2_1_tex_png,skeleton_2_ske_json,skeleton_2_tex_json,skeleton_2_tex_png,skeleton_3_1_ske_json,skeleton_3_1_tex_json,skeleton_3_1_tex_png,skeleton_3_ske_json,skeleton_3_tex_json,skeleton_3_tex_png,skeleton_4_1_ske_json,skeleton_4_1_tex_json,skeleton_4_1_tex_png,skeleton_4_ske_json,skeleton_4_tex_json,skeleton_4_tex_png,skeleton_5_1_ske_json,skeleton_5_1_tex_json,skeleton_5_1_tex_png,skeleton_5_ske_json,skeleton_5_tex_json,skeleton_5_tex_png,skeleton_6_1_ske_json,skeleton_6_1_tex_json,skeleton_6_1_tex_png,skeleton_6_ske_json,skeleton_6_tex_json,skeleton_6_tex_png,skeleton_7_1_ske_json,skeleton_7_1_tex_json,skeleton_7_1_tex_png,skeleton_7_ske_json,skeleton_7_tex_json,skeleton_7_tex_png,skeleton_8_1_ske_json,skeleton_8_1_tex_json,skeleton_8_1_tex_png,skeleton_8_ske_json,skeleton_8_tex_json,skeleton_8_tex_png,skeleton_9_1_ske_json,skeleton_9_1_tex_json,skeleton_9_1_tex_png,skeleton_9_ske_json,skeleton_9_tex_json,skeleton_9_tex_png,sweep_ske_json,sweep_tex_json,sweep_tex_png,reward0_png,reward1_png,reward2_png,reward3_png,rewardBack_png,setWin_ske_json,setWin_tex_json,setWin_tex_png,shzAniFlag_ske_json,shzAniFlag_tex_json,shzAniFlag_tex_png,goStart_ske_json,goStart_tex_json,goStart_tex_png,startClick_ske_json,startClick_tex_json,startClick_tex_png,specific_ske_json,specific_tex_json,specific_tex_png,boxlight2_ske_json,boxlight2_tex_json,boxlight2_tex_png,boxlight_ske_json,boxlight_tex_json,boxlight_tex_png,shuihu_fx_roundlightb_1_png,xianlight1_ske_json,xianlight1_tex_json,xianlight1_tex_png,xianlight2_ske_json,xianlight2_tex_json,xianlight2_tex_png,xianlight3_ske_json,xianlight3_tex_json,xianlight3_tex_png,xianlight4_ske_json,xianlight4_tex_json,xianlight4_tex_png,xianlight5_ske_json,xianlight5_tex_json,xianlight5_tex_png,xianlight6_ske_json,xianlight6_tex_json,xianlight6_tex_png,xianlight7_ske_json,xianlight7_tex_json,xianlight7_tex_png,xianlight8_ske_json,xianlight8_tex_json,xianlight8_tex_png,xianlight9_ske_json,xianlight9_tex_json,xianlight9_tex_png,shuihu_ui_line1_png,shuihu_ui_line2_png,shuihu_ui_line3_png,shuihu_ui_line4_png,shuihu_ui_line5_png,shuihu_ui_line6_png,shuihu_ui_line7_png,shuihu_ui_line8_png,shuihu_ui_line9_png,shuihu_jieshuan01_fnt,shuihu_ui_jiesuan02_fnt,shz_times_fnt,shz_mary_json,shz_menu_json,shz_popup_json,shz_shake_json,shz_table_json,proto_shz_json,res_shz_json,thm_shz_json",
+			"name": "shz"
+		}
+	],
+	"resources": [
+		{
+			"name": "light_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/chongzhidiguang/light_ske.json"
+		},
+		{
+			"name": "light_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/chongzhidiguang/light_tex.json"
+		},
+		{
+			"name": "light_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/chongzhidiguang/light_tex.png"
+		},
+		{
+			"name": "Goldicon_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/coin/Goldicon_ske.json"
+		},
+		{
+			"name": "Goldicon_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/coin/Goldicon_tex.json"
+		},
+		{
+			"name": "Goldicon_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/dragonbone/coin/Goldicon_tex.png"
+		},
+		{
+			"name": "coin2_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/coin2/coin2_ske.json"
+		},
+		{
+			"name": "coin2_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/coin2/coin2_tex.json"
+		},
+		{
+			"name": "coin2_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/dragonbone/coin2/coin2_tex.png"
+		},
+		{
+			"name": "sun_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/dragonbone/iesuanguang/sun.png"
+		},
+		{
+			"name": "dice_1_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shakedice/dice-1/dice_1_ske.json"
+		},
+		{
+			"name": "dice_1_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shakedice/dice-1/dice_1_tex.json"
+		},
+		{
+			"name": "dice_1_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/dragonbone/shakedice/dice-1/dice_1_tex.png"
+		},
+		{
+			"name": "dice_2_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shakedice/dice-2/dice_2_ske.json"
+		},
+		{
+			"name": "dice_2_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shakedice/dice-2/dice_2_tex.json"
+		},
+		{
+			"name": "dice_2_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/dragonbone/shakedice/dice-2/dice_2_tex.png"
+		},
+		{
+			"name": "dice_3_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shakedice/dice-3/dice_3_ske.json"
+		},
+		{
+			"name": "dice_3_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shakedice/dice-3/dice_3_tex.json"
+		},
+		{
+			"name": "dice_3_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/dragonbone/shakedice/dice-3/dice_3_tex.png"
+		},
+		{
+			"name": "dice_4_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shakedice/dice-4/dice_4_ske.json"
+		},
+		{
+			"name": "dice_4_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shakedice/dice-4/dice_4_tex.json"
+		},
+		{
+			"name": "dice_4_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/dragonbone/shakedice/dice-4/dice_4_tex.png"
+		},
+		{
+			"name": "dice_5_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shakedice/dice-5/dice_5_ske.json"
+		},
+		{
+			"name": "dice_5_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shakedice/dice-5/dice_5_tex.json"
+		},
+		{
+			"name": "dice_5_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/dragonbone/shakedice/dice-5/dice_5_tex.png"
+		},
+		{
+			"name": "dice_6_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shakedice/dice-6/dice_6_ske.json"
+		},
+		{
+			"name": "dice_6_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shakedice/dice-6/dice_6_tex.json"
+		},
+		{
+			"name": "dice_6_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/dragonbone/shakedice/dice-6/dice_6_tex.png"
+		},
+		{
+			"name": "skeleton_1_1_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an01/skeleton_1_1_ske.json"
+		},
+		{
+			"name": "skeleton_1_1_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an01/skeleton_1_1_tex.json"
+		},
+		{
+			"name": "skeleton_1_1_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an01/skeleton_1_1_tex.png"
+		},
+		{
+			"name": "skeleton_1_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an01/skeleton_1_ske.json"
+		},
+		{
+			"name": "skeleton_1_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an01/skeleton_1_tex.json"
+		},
+		{
+			"name": "skeleton_1_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an01/skeleton_1_tex.png"
+		},
+		{
+			"name": "skeleton_2_1_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an02/skeleton_2_1_ske.json"
+		},
+		{
+			"name": "skeleton_2_1_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an02/skeleton_2_1_tex.json"
+		},
+		{
+			"name": "skeleton_2_1_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an02/skeleton_2_1_tex.png"
+		},
+		{
+			"name": "skeleton_2_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an02/skeleton_2_ske.json"
+		},
+		{
+			"name": "skeleton_2_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an02/skeleton_2_tex.json"
+		},
+		{
+			"name": "skeleton_2_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an02/skeleton_2_tex.png"
+		},
+		{
+			"name": "skeleton_3_1_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an03/skeleton_3_1_ske.json"
+		},
+		{
+			"name": "skeleton_3_1_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an03/skeleton_3_1_tex.json"
+		},
+		{
+			"name": "skeleton_3_1_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an03/skeleton_3_1_tex.png"
+		},
+		{
+			"name": "skeleton_3_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an03/skeleton_3_ske.json"
+		},
+		{
+			"name": "skeleton_3_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an03/skeleton_3_tex.json"
+		},
+		{
+			"name": "skeleton_3_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an03/skeleton_3_tex.png"
+		},
+		{
+			"name": "skeleton_4_1_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an04/skeleton_4_1_ske.json"
+		},
+		{
+			"name": "skeleton_4_1_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an04/skeleton_4_1_tex.json"
+		},
+		{
+			"name": "skeleton_4_1_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an04/skeleton_4_1_tex.png"
+		},
+		{
+			"name": "skeleton_4_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an04/skeleton_4_ske.json"
+		},
+		{
+			"name": "skeleton_4_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an04/skeleton_4_tex.json"
+		},
+		{
+			"name": "skeleton_4_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an04/skeleton_4_tex.png"
+		},
+		{
+			"name": "skeleton_5_1_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an05/skeleton_5_1_ske.json"
+		},
+		{
+			"name": "skeleton_5_1_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an05/skeleton_5_1_tex.json"
+		},
+		{
+			"name": "skeleton_5_1_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an05/skeleton_5_1_tex.png"
+		},
+		{
+			"name": "skeleton_5_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an05/skeleton_5_ske.json"
+		},
+		{
+			"name": "skeleton_5_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an05/skeleton_5_tex.json"
+		},
+		{
+			"name": "skeleton_5_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an05/skeleton_5_tex.png"
+		},
+		{
+			"name": "skeleton_6_1_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an06/skeleton_6_1_ske.json"
+		},
+		{
+			"name": "skeleton_6_1_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an06/skeleton_6_1_tex.json"
+		},
+		{
+			"name": "skeleton_6_1_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an06/skeleton_6_1_tex.png"
+		},
+		{
+			"name": "skeleton_6_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an06/skeleton_6_ske.json"
+		},
+		{
+			"name": "skeleton_6_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an06/skeleton_6_tex.json"
+		},
+		{
+			"name": "skeleton_6_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an06/skeleton_6_tex.png"
+		},
+		{
+			"name": "skeleton_7_1_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an07/skeleton_7_1_ske.json"
+		},
+		{
+			"name": "skeleton_7_1_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an07/skeleton_7_1_tex.json"
+		},
+		{
+			"name": "skeleton_7_1_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an07/skeleton_7_1_tex.png"
+		},
+		{
+			"name": "skeleton_7_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an07/skeleton_7_ske.json"
+		},
+		{
+			"name": "skeleton_7_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an07/skeleton_7_tex.json"
+		},
+		{
+			"name": "skeleton_7_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an07/skeleton_7_tex.png"
+		},
+		{
+			"name": "skeleton_8_1_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an08/skeleton_8_1_ske.json"
+		},
+		{
+			"name": "skeleton_8_1_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an08/skeleton_8_1_tex.json"
+		},
+		{
+			"name": "skeleton_8_1_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an08/skeleton_8_1_tex.png"
+		},
+		{
+			"name": "skeleton_8_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an08/skeleton_8_ske.json"
+		},
+		{
+			"name": "skeleton_8_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an08/skeleton_8_tex.json"
+		},
+		{
+			"name": "skeleton_8_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an08/skeleton_8_tex.png"
+		},
+		{
+			"name": "skeleton_9_1_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an09/skeleton_9_1_ske.json"
+		},
+		{
+			"name": "skeleton_9_1_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an09/skeleton_9_1_tex.json"
+		},
+		{
+			"name": "skeleton_9_1_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an09/skeleton_9_1_tex.png"
+		},
+		{
+			"name": "skeleton_9_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an09/skeleton_9_ske.json"
+		},
+		{
+			"name": "skeleton_9_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an09/skeleton_9_tex.json"
+		},
+		{
+			"name": "skeleton_9_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/dragonbone/shuihu_an09/skeleton_9_tex.png"
+		},
+		{
+			"name": "sweep_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/saoguang/sweep_ske.json"
+		},
+		{
+			"name": "sweep_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/saoguang/sweep_tex.json"
+		},
+		{
+			"name": "sweep_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/saoguang/sweep_tex.png"
+		},
+		{
+			"name": "reward0_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/settlement/reward0.png"
+		},
+		{
+			"name": "reward1_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/settlement/reward1.png"
+		},
+		{
+			"name": "reward2_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/settlement/reward2.png"
+		},
+		{
+			"name": "reward3_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/settlement/reward3.png"
+		},
+		{
+			"name": "rewardBack_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/settlement/rewardBack.png"
+		},
+		{
+			"name": "setWin_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/settlement/setWin_ske.json"
+		},
+		{
+			"name": "setWin_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/settlement/setWin_tex.json"
+		},
+		{
+			"name": "setWin_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/settlement/setWin_tex.png"
+		},
+		{
+			"name": "shzAniFlag_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/shz_ani_flag/shzAniFlag_ske.json"
+		},
+		{
+			"name": "shzAniFlag_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/shz_ani_flag/shzAniFlag_tex.json"
+		},
+		{
+			"name": "shzAniFlag_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/shz_ani_flag/shzAniFlag_tex.png"
+		},
+		{
+			"name": "goStart_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/start/goStart_ske.json"
+		},
+		{
+			"name": "goStart_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/start/goStart_tex.json"
+		},
+		{
+			"name": "goStart_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/start/goStart_tex.png"
+		},
+		{
+			"name": "startClick_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/start/startClick_ske.json"
+		},
+		{
+			"name": "startClick_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/start/startClick_tex.json"
+		},
+		{
+			"name": "startClick_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/start/startClick_tex.png"
+		},
+		{
+			"name": "specific_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/times/specific_ske.json"
+		},
+		{
+			"name": "specific_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/times/specific_tex.json"
+		},
+		{
+			"name": "specific_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/times/specific_tex.png"
+		},
+		{
+			"name": "boxlight2_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/xulie/boxfx/boxlight2_ske.json"
+		},
+		{
+			"name": "boxlight2_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/xulie/boxfx/boxlight2_tex.json"
+		},
+		{
+			"name": "boxlight2_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/xulie/boxfx/boxlight2_tex.png"
+		},
+		{
+			"name": "boxlight_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/xulie/boxfx/boxlight_ske.json"
+		},
+		{
+			"name": "boxlight_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/xulie/boxfx/boxlight_tex.json"
+		},
+		{
+			"name": "boxlight_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/xulie/boxfx/boxlight_tex.png"
+		},
+		{
+			"name": "shuihu_fx_roundlightb_1_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/xulie/boxfx/shuihu_fx_roundlightb_1.png"
+		},
+		{
+			"name": "xianlight1_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/xulie/linefx/light1/xianlight1_ske.json"
+		},
+		{
+			"name": "xianlight1_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/xulie/linefx/light1/xianlight1_tex.json"
+		},
+		{
+			"name": "xianlight1_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/xulie/linefx/light1/xianlight1_tex.png"
+		},
+		{
+			"name": "xianlight2_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/xulie/linefx/light2/xianlight2_ske.json"
+		},
+		{
+			"name": "xianlight2_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/xulie/linefx/light2/xianlight2_tex.json"
+		},
+		{
+			"name": "xianlight2_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/xulie/linefx/light2/xianlight2_tex.png"
+		},
+		{
+			"name": "xianlight3_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/xulie/linefx/light3/xianlight3_ske.json"
+		},
+		{
+			"name": "xianlight3_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/xulie/linefx/light3/xianlight3_tex.json"
+		},
+		{
+			"name": "xianlight3_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/xulie/linefx/light3/xianlight3_tex.png"
+		},
+		{
+			"name": "xianlight4_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/xulie/linefx/light4/xianlight4_ske.json"
+		},
+		{
+			"name": "xianlight4_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/xulie/linefx/light4/xianlight4_tex.json"
+		},
+		{
+			"name": "xianlight4_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/xulie/linefx/light4/xianlight4_tex.png"
+		},
+		{
+			"name": "xianlight5_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/xulie/linefx/light5/xianlight5_ske.json"
+		},
+		{
+			"name": "xianlight5_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/xulie/linefx/light5/xianlight5_tex.json"
+		},
+		{
+			"name": "xianlight5_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/xulie/linefx/light5/xianlight5_tex.png"
+		},
+		{
+			"name": "xianlight6_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/xulie/linefx/light6/xianlight6_ske.json"
+		},
+		{
+			"name": "xianlight6_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/xulie/linefx/light6/xianlight6_tex.json"
+		},
+		{
+			"name": "xianlight6_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/xulie/linefx/light6/xianlight6_tex.png"
+		},
+		{
+			"name": "xianlight7_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/xulie/linefx/light7/xianlight7_ske.json"
+		},
+		{
+			"name": "xianlight7_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/xulie/linefx/light7/xianlight7_tex.json"
+		},
+		{
+			"name": "xianlight7_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/xulie/linefx/light7/xianlight7_tex.png"
+		},
+		{
+			"name": "xianlight8_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/xulie/linefx/light8/xianlight8_ske.json"
+		},
+		{
+			"name": "xianlight8_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/xulie/linefx/light8/xianlight8_tex.json"
+		},
+		{
+			"name": "xianlight8_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/xulie/linefx/light8/xianlight8_tex.png"
+		},
+		{
+			"name": "xianlight9_ske_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/xulie/linefx/light9/xianlight9_ske.json"
+		},
+		{
+			"name": "xianlight9_tex_json",
+			"type": "json",
+			"url": "games/shz/assets/animation/xulie/linefx/light9/xianlight9_tex.json"
+		},
+		{
+			"name": "xianlight9_tex_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/xulie/linefx/light9/xianlight9_tex.png"
+		},
+		{
+			"name": "shuihu_ui_line1_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/xulie/linefx/lightOline/shuihu_ui_line1.png"
+		},
+		{
+			"name": "shuihu_ui_line2_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/xulie/linefx/lightOline/shuihu_ui_line2.png"
+		},
+		{
+			"name": "shuihu_ui_line3_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/xulie/linefx/lightOline/shuihu_ui_line3.png"
+		},
+		{
+			"name": "shuihu_ui_line4_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/xulie/linefx/lightOline/shuihu_ui_line4.png"
+		},
+		{
+			"name": "shuihu_ui_line5_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/xulie/linefx/lightOline/shuihu_ui_line5.png"
+		},
+		{
+			"name": "shuihu_ui_line6_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/xulie/linefx/lightOline/shuihu_ui_line6.png"
+		},
+		{
+			"name": "shuihu_ui_line7_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/xulie/linefx/lightOline/shuihu_ui_line7.png"
+		},
+		{
+			"name": "shuihu_ui_line8_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/xulie/linefx/lightOline/shuihu_ui_line8.png"
+		},
+		{
+			"name": "shuihu_ui_line9_png",
+			"type": "image",
+			"url": "games/shz/assets/animation/xulie/linefx/lightOline/shuihu_ui_line9.png"
+		},
+		{
+			"name": "shuihu_jieshuan01_fnt",
+			"type": "font",
+			"url": "games/shz/assets/font/shuihu_jieshuan01.fnt"
+		},
+		{
+			"name": "shuihu_ui_jiesuan02_fnt",
+			"type": "font",
+			"url": "games/shz/assets/font/shuihu_ui_jiesuan02.fnt"
+		},
+		{
+			"name": "shz_times_fnt",
+			"type": "font",
+			"url": "games/shz/assets/font/shz_times.fnt"
+		},
+		{
+			"name": "shz_mary_json",
+			"subkeys": "shuihu_ui_caijin,shuihu_ui_liangguang,shuihu_ui_object03,shuihu_ui_object04,shuihu_ui_tck,shuihu_ui_text24,shz_mary_highLight",
+			"type": "sheet",
+			"url": "games/shz/assets/shz_atlas/mary/shz_mary.json"
+		},
+		{
+			"name": "shz_menu_json",
+			"subkeys": "shuihu_ui_Leaderboard,shuihu_ui_newset,shuihu_ui_Recharge,shuihu_ui_back,shuihu_ui_button01,shuihu_ui_button01_1,shuihu_ui_button01_1_1,shuihu_ui_button02,shuihu_ui_button02_1,shuihu_ui_button02_1_1,shuihu_ui_button03,shuihu_ui_button03_1,shuihu_ui_button03_1_1,shuihu_ui_button04,shuihu_ui_button04_1,shuihu_ui_button04_1_1,shuihu_ui_button05,shuihu_ui_button06,shuihu_ui_button06_1,shuihu_ui_button07,shuihu_ui_button07_1,shuihu_ui_button08,shuihu_ui_button09,shuihu_ui_button10,shuihu_ui_button11,shuihu_ui_button11_1,shuihu_ui_button11_1_1,shuihu_ui_button12,shuihu_ui_button12_1,shuihu_ui_button12_1_1,shuihu_ui_button15,shuihu_ui_button15_1,shuihu_ui_buttonfram,shuihu_ui_down,shuihu_ui_object00,shuihu_ui_object01,shuihu_ui_object02,shuihu_ui_people,shuihu_ui_personaldata,shuihu_ui_pophlep,shuihu_ui_poprecord,shuihu_ui_popsetting,shuihu_ui_setting,shuihu_ui_text03,shuihu_ui_text04,shuihu_ui_text05,shuihu_ui_text06,shuihu_ui_text07,shuihu_ui_text08,shuihu_ui_text09",
+			"type": "sheet",
+			"url": "games/shz/assets/shz_atlas/menu/shz_menu.json"
+		},
+		{
+			"name": "shz_popup_json",
+			"subkeys": "bjl_ui_jin,bjl_ui_tong,bjl_ui_yin,shuihu_ui_toolbar2,shuihu_ui_popwindow4,shuihu_ui_popwindow5,shuihu_ui_bar,shuihu_ui_bouns,shuihu_ui_button16,shuihu_ui_button17,shuihu_ui_button18,shuihu_ui_button19,shuihu_ui_check,shuihu_ui_checkbackground,shuihu_ui_circle,shuihu_ui_close,shuihu_ui_left,shuihu_ui_left2,shuihu_ui_moneybackground,shuihu_ui_music,shuihu_ui_musicmute,shuihu_ui_popwindow,shuihu_ui_popwindow2,shuihu_ui_popwindow3,shuihu_ui_power,shuihu_ui_right,shuihu_ui_right2,shuihu_ui_rule01,shuihu_ui_rule02,shuihu_ui_rule03,shuihu_ui_rule04,shuihu_ui_text10,shuihu_ui_text11,shuihu_ui_text12,shuihu_ui_text13,shuihu_ui_text26,shuihu_ui_text27,shuihu_ui_toolbar,shuihu_ui_volume,shuihu_ui_volumemute,shuihu_ui_win",
+			"type": "sheet",
+			"url": "games/shz/assets/shz_atlas/popup/shz_popup.json"
+		},
+		{
+			"name": "shz_shake_json",
+			"subkeys": "per1,shuihu_ui_bg,shuihu_ui_button13,shuihu_ui_button13_1,shuihu_ui_button13_1_1,shuihu_ui_button14,shuihu_ui_button14_1,shuihu_ui_button14_1_1,shuihu_ui_text25,shz_opt_bg,shz_shake_betLight,shz_shake_bg,shz_shake_dice_1,shz_shake_dice_2,shz_shake_dice_3,shz_shake_dice_4,shz_shake_dice_5,shz_shake_dice_6,shz_shake_gold,shz_shake_his_0,shz_shake_his_1,shz_shake_his_2,shz_shake_plate_1_1,shz_shake_plate_1_2,shz_shake_plate_1_3,shz_shake_plate_1_4,shz_shake_plate_1_5,shz_shake_plate_1_6,shz_shake_plate_2_2,shz_shake_plate_2_3,shz_shake_plate_2_4,shz_shake_plate_2_5,shz_shake_plate_2_6,shz_shake_plate_3_3,shz_shake_plate_3_4,shz_shake_plate_3_5,shz_shake_plate_3_6,shz_shake_plate_4_4,shz_shake_plate_4_5,shz_shake_plate_4_6,shz_shake_plate_5_5,shz_shake_plate_5_6,shz_shake_plate_6_6",
+			"type": "sheet",
+			"url": "games/shz/assets/shz_atlas/shake/shz_shake.json"
+		},
+		{
+			"name": "shz_table_json",
+			"subkeys": "common_ui_black,shuihu_fx_roundlightb_1,shuihu_ui_background,shuihu_ui_light1,shuihu_ui_light2,shuihu_ui_light3,shuihu_ui_light4,shuihu_ui_light5,shuihu_ui_light6,shuihu_ui_light7,shuihu_ui_light8,shuihu_ui_light9,shuihu_ui_line1,shuihu_ui_line2,shuihu_ui_line3,shuihu_ui_line4,shuihu_ui_line5,shuihu_ui_line6,shuihu_ui_line7,shuihu_ui_line8,shuihu_ui_line9,shuihu_ui_railing,shuihu_ui_result_1,shuihu_ui_result_1_1,shuihu_ui_result_1_1_1,shuihu_ui_result_2,shuihu_ui_result_2_1,shuihu_ui_result_2_1_1,shuihu_ui_result_3,shuihu_ui_result_3_1,shuihu_ui_result_3_1_1,shuihu_ui_result_4,shuihu_ui_result_4_1,shuihu_ui_result_4_1_1,shuihu_ui_result_5,shuihu_ui_result_5_1,shuihu_ui_result_5_1_1,shuihu_ui_result_6,shuihu_ui_result_6_1,shuihu_ui_result_6_1_1,shuihu_ui_result_7,shuihu_ui_result_7_1,shuihu_ui_result_7_1_1,shuihu_ui_result_8,shuihu_ui_result_8_1,shuihu_ui_result_8_1_1,shuihu_ui_result_9,shuihu_ui_result_9_1,shuihu_ui_result_9_1_1,ui_headBox,ui_headImg_9",
+			"type": "sheet",
+			"url": "games/shz/assets/shz_atlas/table/shz_table.json"
+		},
+		{
+			"name": "proto_shz_json",
+			"type": "json",
+			"url": "games/shz/config/proto_shz.json"
+		},
+		{
+			"name": "res_shz_json",
+			"type": "json",
+			"url": "games/shz/config/res_shz.json"
+		},
+		{
+			"name": "thm_shz_json",
+			"type": "json",
+			"url": "games/shz/config/thm_shz.json"
+		},
+		{
+			"name": "10dian_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/BiBei/10dian.mp3"
+		},
+		{
+			"name": "11dian_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/BiBei/11dian.mp3"
+		},
+		{
+			"name": "12dian_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/BiBei/12dian.mp3"
+		},
+		{
+			"name": "2dian_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/BiBei/2dian.mp3"
+		},
+		{
+			"name": "3dian_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/BiBei/3dian.mp3"
+		},
+		{
+			"name": "4dian_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/BiBei/4dian.mp3"
+		},
+		{
+			"name": "5dian_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/BiBei/5dian.mp3"
+		},
+		{
+			"name": "6dian_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/BiBei/6dian.mp3"
+		},
+		{
+			"name": "7dian_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/BiBei/7dian.mp3"
+		},
+		{
+			"name": "8dian_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/BiBei/8dian.mp3"
+		},
+		{
+			"name": "9dian_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/BiBei/9dian.mp3"
+		},
+		{
+			"name": "bgm3_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/BiBei/bgm3.mp3"
+		},
+		{
+			"name": "lingdang_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/BiBei/lingdang.mp3"
+		},
+		{
+			"name": "shzXiazhu1_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/BiBei/shzXiazhu1.mp3"
+		},
+		{
+			"name": "shzXiazhu2_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/BiBei/shzXiazhu2.mp3"
+		},
+		{
+			"name": "wanjiashu_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/BiBei/wanjiashu.mp3"
+		},
+		{
+			"name": "wanjiaying_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/BiBei/wanjiaying.mp3"
+		},
+		{
+			"name": "yaoshaizi_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/BiBei/yaoshaizi.mp3"
+		},
+		{
+			"name": "bgm2_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/CaiJin/bgm2.mp3"
+		},
+		{
+			"name": "ding_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/CaiJin/ding.mp3"
+		},
+		{
+			"name": "ding2_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/CaiJin/ding2.mp3"
+		},
+		{
+			"name": "jinbi_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/CaiJin/jinbi.mp3"
+		},
+		{
+			"name": "meijiang_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/CaiJin/meijiang.mp3"
+		},
+		{
+			"name": "zhongjiang_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/CaiJin/zhongjiang.mp3"
+		},
+		{
+			"name": "anniu_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/ChangGui/anniu.mp3"
+		},
+		{
+			"name": "bgm1_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/ChangGui/bgm1.mp3"
+		},
+		{
+			"name": "dao_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/ChangGui/dao.mp3"
+		},
+		{
+			"name": "defen1_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/ChangGui/defen1.mp3"
+		},
+		{
+			"name": "defen2_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/ChangGui/defen2.mp3"
+		},
+		{
+			"name": "fu_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/ChangGui/fu.mp3"
+		},
+		{
+			"name": "gundong_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/ChangGui/gundong.mp3"
+		},
+		{
+			"name": "linchong_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/ChangGui/linchong.mp3"
+		},
+		{
+			"name": "luzhisheng_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/ChangGui/luzhisheng.mp3"
+		},
+		{
+			"name": "qiang_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/ChangGui/qiang.mp3"
+		},
+		{
+			"name": "qieye_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/ChangGui/qieye.mp3"
+		},
+		{
+			"name": "shuihuzhuan_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/ChangGui/shuihuzhuan.mp3"
+		},
+		{
+			"name": "songjiang_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/ChangGui/songjiang.mp3"
+		},
+		{
+			"name": "tingzhi_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/ChangGui/tingzhi.mp3"
+		},
+		{
+			"name": "titianxingdao_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/ChangGui/titianxingdao.mp3"
+		},
+		{
+			"name": "winsound_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/ChangGui/winsound.mp3"
+		},
+		{
+			"name": "xian_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/ChangGui/xian.mp3"
+		},
+		{
+			"name": "zhanshi_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/ChangGui/zhanshi.mp3"
+		},
+		{
+			"name": "zhongyitang_mp3",
+			"type": "sound",
+			"url": "games/shz/assets/shzSounds/ChangGui/zhongyitang.mp3"
+		}
+	]
+}

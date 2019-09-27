@@ -1,0 +1,344 @@
+{
+	"groups": [
+		{
+			"keys": "light_ske_json,light_tex_json,light_tex_png,fruit_halo_png,fruit_ske_json,fruit_tex_json,fruit_tex_png,money_linght_ske_json,money_linght_tex_json,money_linght_tex_png,bet_1_ske_json,bet_1_tex_json,bet_1_tex_png,sweep_ske_json,sweep_tex_json,sweep_tex_png,spot_ske_json,spot_tex_json,spot_tex_png,star_png,star_0_ske_json,star_0_tex_json,star_0_tex_png,star_1_ske_json,star_1_tex_json,star_1_tex_png,bet_0_ske_json,bet_0_tex_json,bet_0_tex_png,bjl_common_json,public_number_fnt,public_number2_fnt,special_num_fnt,xysgj_font1_fnt,xysgj_font2_fnt,xysgj_font3_fnt,sgj_menu_json,sgj_popup_json,sgj_table_json,proto_sgj_json,res_sgj_json,thm_sgj_json",
+			"name": "sgj"
+		}
+	],
+	"resources": [
+		{
+			"name": "light_ske_json",
+			"type": "json",
+			"url": "games/sgj/assets/bone/chongzhidiguang/light_ske.json"
+		},
+		{
+			"name": "light_tex_json",
+			"type": "json",
+			"url": "games/sgj/assets/bone/chongzhidiguang/light_tex.json"
+		},
+		{
+			"name": "light_tex_png",
+			"type": "image",
+			"url": "games/sgj/assets/bone/chongzhidiguang/light_tex.png"
+		},
+		{
+			"name": "fruit_halo_png",
+			"type": "image",
+			"url": "games/sgj/assets/bone/fruit/fruit_halo.png"
+		},
+		{
+			"name": "fruit_ske_json",
+			"type": "json",
+			"url": "games/sgj/assets/bone/fruit/fruit_ske.json"
+		},
+		{
+			"name": "fruit_tex_json",
+			"type": "json",
+			"url": "games/sgj/assets/bone/fruit/fruit_tex.json"
+		},
+		{
+			"name": "fruit_tex_png",
+			"type": "image",
+			"url": "games/sgj/assets/bone/fruit/fruit_tex.png"
+		},
+		{
+			"name": "money_linght_ske_json",
+			"type": "json",
+			"url": "games/sgj/assets/bone/moneyLight/money_linght_ske.json"
+		},
+		{
+			"name": "money_linght_tex_json",
+			"type": "json",
+			"url": "games/sgj/assets/bone/moneyLight/money_linght_tex.json"
+		},
+		{
+			"name": "money_linght_tex_png",
+			"type": "image",
+			"url": "games/sgj/assets/bone/moneyLight/money_linght_tex.png"
+		},
+		{
+			"name": "bet_1_ske_json",
+			"type": "json",
+			"url": "games/sgj/assets/bone/overBet/bet_1_ske.json"
+		},
+		{
+			"name": "bet_1_tex_json",
+			"type": "json",
+			"url": "games/sgj/assets/bone/overBet/bet_1_tex.json"
+		},
+		{
+			"name": "bet_1_tex_png",
+			"type": "image",
+			"url": "games/sgj/assets/bone/overBet/bet_1_tex.png"
+		},
+		{
+			"name": "sweep_ske_json",
+			"type": "json",
+			"url": "games/sgj/assets/bone/saoguang/sweep_ske.json"
+		},
+		{
+			"name": "sweep_tex_json",
+			"type": "json",
+			"url": "games/sgj/assets/bone/saoguang/sweep_tex.json"
+		},
+		{
+			"name": "sweep_tex_png",
+			"type": "image",
+			"url": "games/sgj/assets/bone/saoguang/sweep_tex.png"
+		},
+		{
+			"name": "spot_ske_json",
+			"type": "json",
+			"url": "games/sgj/assets/bone/spot/spot_ske.json"
+		},
+		{
+			"name": "spot_tex_json",
+			"type": "json",
+			"url": "games/sgj/assets/bone/spot/spot_tex.json"
+		},
+		{
+			"name": "spot_tex_png",
+			"type": "image",
+			"url": "games/sgj/assets/bone/spot/spot_tex.png"
+		},
+		{
+			"name": "star_png",
+			"type": "image",
+			"url": "games/sgj/assets/bone/star/star.png"
+		},
+		{
+			"name": "star_0_ske_json",
+			"type": "json",
+			"url": "games/sgj/assets/bone/star/star_0_ske.json"
+		},
+		{
+			"name": "star_0_tex_json",
+			"type": "json",
+			"url": "games/sgj/assets/bone/star/star_0_tex.json"
+		},
+		{
+			"name": "star_0_tex_png",
+			"type": "image",
+			"url": "games/sgj/assets/bone/star/star_0_tex.png"
+		},
+		{
+			"name": "star_1_ske_json",
+			"type": "json",
+			"url": "games/sgj/assets/bone/starAdd/star_1_ske.json"
+		},
+		{
+			"name": "star_1_tex_json",
+			"type": "json",
+			"url": "games/sgj/assets/bone/starAdd/star_1_tex.json"
+		},
+		{
+			"name": "star_1_tex_png",
+			"type": "image",
+			"url": "games/sgj/assets/bone/starAdd/star_1_tex.png"
+		},
+		{
+			"name": "bet_0_ske_json",
+			"type": "json",
+			"url": "games/sgj/assets/bone/startBet/bet_0_ske.json"
+		},
+		{
+			"name": "bet_0_tex_json",
+			"type": "json",
+			"url": "games/sgj/assets/bone/startBet/bet_0_tex.json"
+		},
+		{
+			"name": "bet_0_tex_png",
+			"type": "image",
+			"url": "games/sgj/assets/bone/startBet/bet_0_tex.png"
+		},
+		{
+			"name": "bjl_common_json",
+			"subkeys": "common_ui_beishukuang,common_ui_bq1,common_ui_bq2,common_ui_bzbutton,common_ui_cftzbutton,common_ui_cx,common_ui_fhbutton,common_ui_g1,common_ui_g10,common_ui_g100,common_ui_g1000,common_ui_gsh,common_ui_hdbutton,common_ui_heidi,common_ui_hong,common_ui_huang,common_ui_jiamabutton,common_ui_jiamatanchu,common_ui_lan,common_ui_lv,common_ui_m1,common_ui_m2,common_ui_mandi,common_ui_qr,common_ui_sh,common_ui_shenhao1,common_ui_shenhao2,common_ui_shenhao3,common_ui_shensuanzi,common_ui_szbutton,common_ui_tswjdk,common_ui_xialadi,common_ui_ytzdk,common_ui_zdqrg,common_ui_zdqrk,common_ui_zhezhao,common_ui_zjbutton,common_ui_zuoshangziji",
+			"type": "sheet",
+			"url": "games/sgj/assets/num/bjl_common.json"
+		},
+		{
+			"name": "public_number_fnt",
+			"type": "font",
+			"url": "games/sgj/assets/num/public_number.fnt"
+		},
+		{
+			"name": "public_number2_fnt",
+			"type": "font",
+			"url": "games/sgj/assets/num/public_number2.fnt"
+		},
+		{
+			"name": "special_num_fnt",
+			"type": "font",
+			"url": "games/sgj/assets/num/special_num.fnt"
+		},
+		{
+			"name": "xysgj_font1_fnt",
+			"type": "font",
+			"url": "games/sgj/assets/num/xysgj_font1.fnt"
+		},
+		{
+			"name": "xysgj_font2_fnt",
+			"type": "font",
+			"url": "games/sgj/assets/num/xysgj_font2.fnt"
+		},
+		{
+			"name": "xysgj_font3_fnt",
+			"type": "font",
+			"url": "games/sgj/assets/num/xysgj_font3.fnt"
+		},
+		{
+			"name": "sgj_menu_json",
+			"subkeys": "xysgj_ui_shezhi,xysgj_ui_caidan2,xysgj_ui_caidan3,xysgj_ui_bangzhu,xysgj_ui_caidan,xysgj_ui_chongzhi,xysgj_ui_fanhuianniu,xysgj_ui_kaijiangjilu,xysgj_ui_kaijiangjilu2,xysgj_ui_kaijiangjilu3,xysgj_ui_kaijiangjilu4,xysgj_ui_luck,xysgj_ui_new,xysgj_ui_paihangbang,xysgj_ui_train,xysgj_ui_zhanji",
+			"type": "sheet",
+			"url": "games/sgj/assets/sgj_atlas/menu/sgj_menu.json"
+		},
+		{
+			"name": "sgj_popup_json",
+			"subkeys": "bjl_ui_jin,bjl_ui_tong,bjl_ui_yin,xysgj_ui_gunlun2,xysgj_ui_paihangbang4,fruit_0,fruit_1,fruit_10,fruit_11,fruit_12,fruit_13,fruit_14,fruit_15,fruit_2,fruit_3,fruit_4,fruit_5,fruit_6,fruit_7,fruit_8,fruit_9,xysgj_ui_bangzhu2,xysgj_ui_bangzhu3,xysgj_ui_bangzhu4,xysgj_ui_bangzhu5,xysgj_ui_gou,xysgj_ui_gunlun,xysgj_ui_icon0,xysgj_ui_icon1,xysgj_ui_icon10,xysgj_ui_icon11,xysgj_ui_icon12,xysgj_ui_icon13,xysgj_ui_icon14,xysgj_ui_icon15,xysgj_ui_icon2,xysgj_ui_icon3,xysgj_ui_icon4,xysgj_ui_icon5,xysgj_ui_icon6,xysgj_ui_icon7,xysgj_ui_icon8,xysgj_ui_icon9,xysgj_ui_jiesuankuang,xysgj_ui_jindutiao1,xysgj_ui_jindutiao2,xysgj_ui_jindutiao3,xysgj_ui_paihangbang2,xysgj_ui_paihangbang3,xysgj_ui_shengyin1,xysgj_ui_shengyin2,xysgj_ui_shengyin3,xysgj_ui_shengyin4,xysgj_ui_shezhi2,xysgj_ui_shezhi3,xysgj_ui_texiao,xysgj_ui_texiao2,xysgj_ui_x,xysgj_ui_yuebuzu1,xysgj_ui_yuebuzu2,xysgj_ui_yuebuzu3,xysgj_ui_zhanji2",
+			"type": "sheet",
+			"url": "games/sgj/assets/sgj_atlas/popup/sgj_popup.json"
+		},
+		{
+			"name": "sgj_table_json",
+			"subkeys": "bjl_ui_jb,xysgj_ui_chexiaotouzhu,xysgj_ui_chexiaotouzhu2,xysgj_ui_chexiaotouzhu3,xysgj_ui_dengdaijieshu1,xysgj_ui_dengdaijieshu10,xysgj_ui_dengdaijieshu2,xysgj_ui_dengdaijieshu3,xysgj_ui_dengdaijieshu4,xysgj_ui_dengdaijieshu5,xysgj_ui_dengdaijieshu6,xysgj_ui_dengdaijieshu7,xysgj_ui_dengdaijieshu8,xysgj_ui_dengdaijieshu9,xysgj_ui_ditu,xysgj_ui_ditu2,xysgj_ui_ditu3,xysgj_ui_dizhu,xysgj_ui_dizhu2,xysgj_ui_dizhux1,xysgj_ui_hengtiao,xysgj_ui_jianglibeilv,xysgj_ui_jianglikuang,xysgj_ui_kaishixiazhu,xysgj_ui_mengban,xysgj_ui_paodengguangquan,xysgj_ui_paodengkuang,xysgj_ui_paodengtuan,xysgj_ui_teshuwanjia,xysgj_ui_teshuwanjia2,xysgj_ui_teshuwanjia22,xysgj_ui_teshuwanjia3,xysgj_ui_teshuwanjia33,xysgj_ui_teshuwanjia333,xysgj_ui_tingzhitouzhu,xysgj_ui_touzhuanniu1,xysgj_ui_touzhuanniu1mengban,xysgj_ui_touzhuanniu1xia,xysgj_ui_touzhuanniu2,xysgj_ui_touzhuanniu2mengban,xysgj_ui_touzhuanniu2xia,xysgj_ui_touzhuanniu3,xysgj_ui_touzhuanniu3mengban,xysgj_ui_touzhuanniu3xia,xysgj_ui_touzhuanniu4,xysgj_ui_touzhuanniu4mengban,xysgj_ui_touzhuanniu4xia,xysgj_ui_touzhuanniu5,xysgj_ui_touzhuanniu5mengban,xysgj_ui_touzhuanniu5xia,xysgj_ui_touzhuanniu6,xysgj_ui_touzhuanniu6mengban,xysgj_ui_touzhuanniu6xia,xysgj_ui_touzhuanniu7,xysgj_ui_touzhuanniu7mengban,xysgj_ui_touzhuanniu7xia,xysgj_ui_touzhuanniu8,xysgj_ui_touzhuanniu8mengban,xysgj_ui_touzhuanniu8xia,xysgj_ui_touzhudaojishi,xysgj_ui_touzhuguangquan,xysgj_ui_touzhukuang,xysgj_ui_waiweicaideng1,xysgj_ui_waiweicaideng2,xysgj_ui_waiweicaideng3,xysgj_ui_waiweicaideng4,xysgj_ui_wanjianicheng,xysgj_ui_wanjiatouxiang,xysgj_ui_wanjiatouzhu,xysgj_ui_wanjiazichan,xysgj_ui_xiazhubiaoji,xysgj_ui_xuya,xysgj_ui_xuya2,xysgj_ui_xuya3,xysgj_ui_zhongyangcaideng1,xysgj_ui_zhongyangcaideng2,xysgj_ui_zhongyangditu",
+			"type": "sheet",
+			"url": "games/sgj/assets/sgj_atlas/table/sgj_table.json"
+		},
+		{
+			"name": "proto_sgj_json",
+			"type": "json",
+			"url": "games/sgj/config/proto_sgj.json"
+		},
+		{
+			"name": "res_sgj_json",
+			"type": "json",
+			"url": "games/sgj/config/res_sgj.json"
+		},
+		{
+			"name": "thm_sgj_json",
+			"type": "json",
+			"url": "games/sgj/config/thm_sgj.json"
+		},
+		{
+			"name": "SGJanniu_mp3",
+			"type": "sound",
+			"url": "games/sgj/sgjSounds/SGJanniu.mp3"
+		},
+		{
+			"name": "SGJbgm_mp3",
+			"type": "sound",
+			"url": "games/sgj/sgjSounds/SGJbgm.mp3"
+		},
+		{
+			"name": "SGJdaojishi_mp3",
+			"type": "sound",
+			"url": "games/sgj/sgjSounds/SGJdaojishi.mp3"
+		},
+		{
+			"name": "SGJdefen_mp3",
+			"type": "sound",
+			"url": "games/sgj/sgjSounds/SGJdefen.mp3"
+		},
+		{
+			"name": "SGJduokai1_mp3",
+			"type": "sound",
+			"url": "games/sgj/sgjSounds/SGJduokai1.mp3"
+		},
+		{
+			"name": "SGJduokai2_mp3",
+			"type": "sound",
+			"url": "games/sgj/sgjSounds/SGJduokai2.mp3"
+		},
+		{
+			"name": "SGJduokai3_mp3",
+			"type": "sound",
+			"url": "games/sgj/sgjSounds/SGJduokai3.mp3"
+		},
+		{
+			"name": "SGJduokaichufa_mp3",
+			"type": "sound",
+			"url": "games/sgj/sgjSounds/SGJduokaichufa.mp3"
+		},
+		{
+			"name": "SGJduokaikaitu_mp3",
+			"type": "sound",
+			"url": "games/sgj/sgjSounds/SGJduokaikaitu.mp3"
+		},
+		{
+			"name": "SGJgaosu_mp3",
+			"type": "sound",
+			"url": "games/sgj/sgjSounds/SGJgaosu.mp3"
+		},
+		{
+			"name": "SGJhuochechufa_mp3",
+			"type": "sound",
+			"url": "games/sgj/sgjSounds/SGJhuochechufa.mp3"
+		},
+		{
+			"name": "SGJhuochezengjia_mp3",
+			"type": "sound",
+			"url": "games/sgj/sgjSounds/SGJhuochezengjia.mp3"
+		},
+		{
+			"name": "SGJhuochezhuandong_mp3",
+			"type": "sound",
+			"url": "games/sgj/sgjSounds/SGJhuochezhuandong.mp3"
+		},
+		{
+			"name": "SGJjiansu_mp3",
+			"type": "sound",
+			"url": "games/sgj/sgjSounds/SGJjiansu.mp3"
+		},
+		{
+			"name": "SGJluckchufa_mp3",
+			"type": "sound",
+			"url": "games/sgj/sgjSounds/SGJluckchufa.mp3"
+		},
+		{
+			"name": "SGJqidong_mp3",
+			"type": "sound",
+			"url": "games/sgj/sgjSounds/SGJqidong.mp3"
+		},
+		{
+			"name": "SGJxiazhu1_mp3",
+			"type": "sound",
+			"url": "games/sgj/sgjSounds/SGJxiazhu1.mp3"
+		},
+		{
+			"name": "SGJxiazhu2_mp3",
+			"type": "sound",
+			"url": "games/sgj/sgjSounds/SGJxiazhu2.mp3"
+		},
+		{
+			"name": "SGJxiazhu3_mp3",
+			"type": "sound",
+			"url": "games/sgj/sgjSounds/SGJxiazhu3.mp3"
+		},
+		{
+			"name": "SGJxiazhu4_mp3",
+			"type": "sound",
+			"url": "games/sgj/sgjSounds/SGJxiazhu4.mp3"
+		},
+		{
+			"name": "SGJxiazhu5_mp3",
+			"type": "sound",
+			"url": "games/sgj/sgjSounds/SGJxiazhu5.mp3"
+		},
+		{
+			"name": "SGJxiazhu6_mp3",
+			"type": "sound",
+			"url": "games/sgj/sgjSounds/SGJxiazhu6.mp3"
+		},
+		{
+			"name": "SGJxiazhu7_mp3",
+			"type": "sound",
+			"url": "games/sgj/sgjSounds/SGJxiazhu7.mp3"
+		},
+		{
+			"name": "SGJxiazhu8_mp3",
+			"type": "sound",
+			"url": "games/sgj/sgjSounds/SGJxiazhu8.mp3"
+		}
+	]
+}

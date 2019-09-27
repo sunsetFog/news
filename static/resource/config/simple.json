@@ -1,0 +1,129 @@
+{
+    "10001": "hqtpb.auth.CsAuthHeartbeatReq",
+    "10002": "hqtpb.auth.ScAuthHeartbeatRes",
+
+    "10003": "hqtpb.auth.CsAuthLoginReq",
+    "10004": "hqtpb.auth.ScAuthLoginRes",
+
+    "10051": "hqtpb.common.ScCommonErrorNotify",
+    "10052": "hqtpb.common.ScCommonSyncBalanceNotify",
+
+    "10101": "hqtpb.world.ScWorldMarqueeNotify",
+    "10102": "hqtpb.world.CsWorldEnterSceneReq",
+    "10103": "hqtpb.world.ScWorldEnterSceneRes",
+
+    "10104": "hqtpb.world.CsWorldLeaveSceneReq",
+    "10105" :"hqtpb.world.ScWorldLeaveSceneRes",
+
+    "10106": "hqtpb.world.CsWorldReturnSceneReq",
+    "10107" :"hqtpb.world.ScWorldReturnSceneRes",
+
+    "10108": "hqtpb.world.CsWorldEnterTableReq",
+    "10109" :"hqtpb.world.ScWorldEnterTableRes",
+
+    "10110": "hqtpb.world.CsWorldWebLoginReq",
+    "10111": "hqtpb.world.ScWorldWebLoginRes",
+    
+    "10112": "hqtpb.world.CsWorldRegisterMemberReq",
+    "10113": "hqtpb.world.ScWorldRegisterMemberRes",
+
+    "10114": "hqtpb.world.CsWorldGenerateCaptchaReq",
+    "10115": "hqtpb.world.ScWorldGenerateCaptchaRes",
+    
+    "10116": "hqtpb.world.CsWorldResetLoginpwdReq",
+    "10117": "hqtpb.world.ScWorldResetLoginpwdRes",
+
+    "10118": "hqtpb.world.CsWorldRechargeTypeReq",
+    "10119": "hqtpb.world.ScWorldRechargeTypeRes",
+
+    "10120": "hqtpb.world.CsWorldRechargeReq",
+    "10121": "hqtpb.world.ScWorldRechargeRes",
+
+    "10122": "hqtpb.world.CsWorldDrawoutReq",
+    "10123": "hqtpb.world.ScWorldDrawoutRes",
+
+    "10124": "hqtpb.world.CsWorldIntoSafeboxReq",
+    "10125": "hqtpb.world.ScWorldIntoSafeboxRes",
+
+    "10126": "hqtpb.world.CsWorldFromSafeboxReq",
+    "10127": "hqtpb.world.ScWorldFromSafeboxRes",
+
+    "10128": "hqtpb.world.CsWorldNoticeListReq",
+    "10129": "hqtpb.world.ScWorldNoticeListRes",
+
+    "10130": "hqtpb.world.CsWorldNoticeReq",
+    "10131": "hqtpb.world.ScWorldNoticeRes",
+
+    "10132": "hqtpb.world.CsWorldDeleteNoticeReq",
+    "10133": "hqtpb.world.ScWorldDeleteNoticeRes",
+
+    "10134": "hqtpb.world.CsWorldMailListReq",
+    "10135": "hqtpb.world.ScWorldMailListRes",
+
+    "10136": "hqtpb.world.CsWorldSingleMailReq",
+    "10137": "hqtpb.world.ScWorldSingleMailRes",
+  
+    "10138": "hqtpb.world.CsWorldDeleteMailReq",
+    "10139": "hqtpb.world.ScWorldDeleteMailRes",
+    
+    "10140": "hqtpb.world.CsWorldActivityListReq",
+    "10141": "hqtpb.world.ScWorldActivityListRes",
+    
+    "10142": "hqtpb.world.CsWorldSingleActivityReq",
+    "10143": "hqtpb.world.ScWorldSingleActivityRes",
+
+    "10144": "hqtpb.world.CsWorldWebLogoutReq",
+    "10145": "hqtpb.world.ScWorldWebLogoutRes",
+
+    "10146": "hqtpb.world.CsWorldRoleSettingReq",
+    "10147": "hqtpb.world.ScWorldRoleSettingRes",
+
+    "10148": "hqtpb.world.CsWorldLeaveTableReq",
+    "10149": "hqtpb.world.ScWorldLeaveTableRes",
+
+    "10150": "hqtpb.world.ScWorldRechargeNotify",
+
+    "10151": "hqtpb.world.CsWorldRechargeListReq",
+    "10152": "hqtpb.world.ScWorldRechargeListRes",
+
+    "10153": "hqtpb.world.CsWorldModifyMoneyPwdReq",
+    "10154": "hqtpb.world.ScWorldModifyMoneyPwdRes",
+
+    "10155":"hqtpb.world.CsWorldBindBankCardReq",
+    "10156":"hqtpb.world.ScWorldBindBankCardRes",
+
+    "10157": "hqtpb.world.CsWorldBindBankListReq",
+    "10158": "hqtpb.world.ScWorldBindBankListRes",
+
+
+
+    "10159": "hqtpb.world.CsWorldUserEventNotify",
+
+    "10160":"hqtpb.world.CsWorldFastGrabRedEnvelopeReq",
+    "10161":"hqtpb.world.ScWorldFastGrabRedEnvelopeRes",
+    "10162":"hqtpb.world.CsWorldShowRedEnvelopeReq",
+    "10163":"hqtpb.world.ScWorldShowRedEnvelopeRes",
+    "10164":"hqtpb.world.CsWorldLayMineReq",
+    "10165":"hqtpb.world.ScWorldLayMineRes",
+    "10166":"hqtpb.world.ScWorldNewRedEnvelopeNotify",
+    "10167":"hqtpb.world.CsWorldGrabRedEnvelopeReq",
+    "10168":"hqtpb.world.ScWorldGrabRedEnvelopeRes",
+    "10169":"hqtpb.world.CsWorldRedEnvelopeIncomeReq",
+    "10170":"hqtpb.world.ScWorldRedEnvelopeIncomeRes",
+    "10171":"hqtpb.world.CsWorldRecvIncomeReq",
+    "10172":"hqtpb.world.ScWorldRecvIncomeRes",
+    "10173":"hqtpb.world.CsWorldSeeDetailsReq",
+    "10174":"hqtpb.world.ScWorldSeeDetailsRes",
+    "10175":"hqtpb.world.ScWorldExpiredRedEnvelopeNotify",
+
+    "10176":"hqtpb.world.CsWorldAgentBackgroundReq",
+    "10177":"hqtpb.world.ScWorldAgentBackgroundRes",
+
+    "10178":"hqtpb.world.CsWorldUnbindBankReq",
+    "10179":"hqtpb.world.ScWorldUnbindBankRes",
+
+    "10180":"hqtpb.world.CsWorldCustomerServiceReq",
+    "10181":"hqtpb.world.ScWorldCustomerServiceRes"
+
+
+}

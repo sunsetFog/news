@@ -1,0 +1,23 @@
+{
+	"initial": [
+		"./static/js/egret.min_e70fa1ee.js",
+		"./static/js/egret.web.min_e835c5d0.js",
+		"./static/js/eui.min_e8f47f49.js",
+		"./static/js/assetsmanager.min_77c2fdfe.js",
+		"./static/js/tween.min_6c5a88f9.js",
+		"./static/js/dragonBones.min_6252b9c4.js",
+		"./static/js/socket.min_8b4cb752.js",
+		"./static/js/game.min_8c120525.js",
+		"./static/js/promise.min_83a6a5d.js",
+		"./static/js/particle.min_d717ba80.js",
+		"./static/js/mouse.min_c171ee8c.js",
+		"./static/js/jszip.min_650922d1.js"
+	],
+	"game": [
+		"./static/js/api.min_c5483bc1.js",
+		"./static/js/protobuf-library.min_97b4e2f5.js",
+		"./static/js/protobuf-bundles.min_8912214e.js",
+		"./static/js/default.thm_4ef27ad6.js",
+		"./static/js/main.min_35bb53cf.js"
+	]
+}

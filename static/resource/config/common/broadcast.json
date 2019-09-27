@@ -1,0 +1,258 @@
+{
+	"data_101" : {
+		"priority" : 1,
+		"effect_lv" : 1,
+		"play_times" : 1,
+		"speed" : 200,
+		"content" : "赌侠<font color='#23f0fd' size='26'> * </font>赢得<font color='#fe0b0b' size='26'> * </font>奖金，大吉大利 今晚吃鸡!"
+	},
+
+	"data_102" : {
+		"priority" : 2,
+		"effect_lv" : 2,
+		"play_times" : 1,
+		"speed" : 150,
+		"content" : "赌神<font color='#23f0fd' size='26'> * </font>鸿运当头，在<font color='#ffe400' size='26'> * </font>赢得<font color='#fe0b0b' size='26'> * </font>奖金，大吉大利 今晚吃鸡!"
+	},
+
+	"data_103" : {
+		"priority" : 3,
+		"effect_lv" : 3,
+		"play_times" : 2,
+		"speed" : 100,
+		"content" : "赌圣<font color='#23f0fd' size='26'> * </font>出手不凡，在<font color='#ffe400' size='26'> * </font>赢得<font color='#fe0b0b' size='26'> * </font>奖金，大吉大利 今晚吃鸡!"
+	},
+
+	"data_201" : {
+		"priority" : 1,
+		"effect_lv" : 1,
+		"play_times" : 1,
+		"speed" : 200,
+		"content" : "赌侠<font color='#23f0fd' size='26'> * </font>赢得<font color='#fe0b0b' size='26'> * </font>奖金，大吉大利 今晚吃鸡!"
+	},
+
+	"data_202" : {
+		"priority" : 2,
+		"effect_lv" : 2,
+		"play_times" : 1,
+		"speed" : 150,
+		"content" : "赌神<font color='#23f0fd' size='26'> * </font>鸿运当头，在<font color='#ffe400' size='26'> * </font>赢得<font color='#fe0b0b' size='26'> * </font>奖金，大吉大利 今晚吃鸡!"
+	},
+
+	"data_203" : {
+		"priority" : 3,
+		"effect_lv" : 3,
+		"play_times" : 2,
+		"speed" : 100,
+		"content" : "赌圣<font color='#23f0fd' size='26'> * </font>出手不凡，在<font color='#ffe400' size='26'> * </font>赢得<font color='#fe0b0b' size='26'> * </font>奖金，大吉大利 今晚吃鸡!"
+	},
+
+	"data_301" : {
+		"priority" : 1,
+		"effect_lv" : 1,
+		"play_times" : 1,
+		"speed" : 200,
+		"content" : "赌侠<font color='#23f0fd' size='26'> * </font>赢得<font color='#fe0b0b' size='26'> * </font>奖金，大吉大利 今晚吃鸡!"
+	},
+
+	"data_302" : {
+		"priority" : 3,
+		"effect_lv" : 3,
+		"play_times" : 2,
+		"speed" : 100,
+		"content" : "赌圣<font color='#23f0fd' size='26'> * </font>出手不凡，在<font color='#ffe400' size='26'> * </font>赢得<font color='#fe0b0b' size='26'> * </font>奖金，大吉大利 今晚吃鸡!"
+	},
+
+	"data_401" : {
+		"priority" : 1,
+		"effect_lv" : 1,
+		"play_times" : 1,
+		"speed" : 200,
+		"content" : "赌侠<font color='#23f0fd' size='26'> * </font>技艺超群打出春天牌型，赢得<font color='#fe0b0b' size='26'> * </font>奖金!"
+	},
+
+	"data_402" : {
+		"priority" : 2,
+		"effect_lv" : 2,
+		"play_times" : 1,
+		"speed" : 150,
+		"content" : "赌神<font color='#23f0fd' size='26'> * </font>鸿运当头，赢得<font color='#fe0b0b' size='26'> * </font>倍底分共<font color='#fe0b0b' size='26'> * </font>奖金!"
+	},
+
+	"data_403" : {
+		"priority" : 1,
+		"effect_lv" : 1,
+		"play_times" : 1,
+		"speed" : 200,
+		"content" : "赌侠<font color='#23f0fd' size='26'> * </font>技艺超群打出春天牌型，赢得<font color='#fe0b0b' size='26'> * </font>奖金!"
+	},
+
+	"data_404" : {
+		"priority" : 2,
+		"effect_lv" : 2,
+		"play_times" : 1,
+		"speed" : 150,
+		"content" : "赌神<font color='#23f0fd' size='26'> * </font>鸿运当头，赢得<font color='#fe0b0b' size='26'> * </font>倍底分共<font color='#fe0b0b' size='26'> * </font>奖金!"
+	},
+
+	"data_405" : {
+		"priority" : 2,
+		"effect_lv" : 2,
+		"play_times" : 1,
+		"speed" : 150,
+		"content" : "赌圣<font color='#23f0fd' size='26'> * </font>技艺超群打出春天牌型，赢得<font color='#fe0b0b' size='26'> * </font>奖金!"
+	},
+
+	"data_406" : {
+		"priority" : 3,
+		"effect_lv" : 3,
+		"play_times" : 2,
+		"speed" : 100,
+		"content" : "赌神<font color='#23f0fd' size='26'> * </font>鸿运当头，赢得<font color='#fe0b0b' size='26'> * </font>倍底分共<font color='#fe0b0b' size='26'> * </font>奖金!"
+	},
+
+	"data_501" : {
+		"priority" : 1,
+		"effect_lv" : 1,
+		"play_times" : 1,
+		"speed" : 200,
+		"content" : "赌侠<font color='#23f0fd' size='26'> * </font>开出<font color='#fe0b0b' size='26'> * 倍</font>大奖，赢得<font color='#fe0b0b' size='26'> * </font>奖金，大吉大利 今晚吃鸡!"
+	},
+
+	"data_502" : {
+		"priority" : 1,
+		"effect_lv" : 1,
+		"play_times" : 1,
+		"speed" : 200,
+		"content" : "赌侠<font color='#23f0fd' size='26'> * </font>开出<font color='#fe0b0b' size='26'> * 倍彩金</font>大奖，赢得<font color='#fe0b0b' size='26'> * </font>奖金，大吉大利 今晚吃鸡!"
+	},
+
+	"data_503" : {
+		"priority" : 1,
+		"effect_lv" : 1,
+		"play_times" : 1,
+		"speed" : 200,
+		"content" : "赌侠<font color='#23f0fd' size='26'> * </font>开出<font color='#fe0b0b' size='26'> * 倍全盘</font>大奖，赢得<font color='#fe0b0b' size='26'> * </font>奖金，大吉大利 今晚吃鸡!"
+	},
+
+	"data_504" : {
+		"priority" : 1,
+		"effect_lv" : 1,
+		"play_times" : 1,
+		"speed" : 200,
+		"content" : "赌侠<font color='#23f0fd' size='26'> * </font>比倍<font color='#fe0b0b' size='26'> * 连胜</font>，赢得<font color='#fe0b0b' size='26'> * </font>奖金，大吉大利 今晚吃鸡!"
+	},
+
+	"data_505" : {
+		"priority" : 2,
+		"effect_lv" : 2,
+		"play_times" : 1,
+		"speed" : 150,
+		"content" : "赌神<font color='#23f0fd' size='26'> * </font>鸿运当头，开出<font color='#fe0b0b' size='26'> * 倍</font>大奖，赢得<font color='#fe0b0b' size='26'> * </font>奖金，大吉大利 今晚吃鸡!"
+	},
+
+	"data_506" : {
+		"priority" : 2,
+		"effect_lv" : 2,
+		"play_times" : 1,
+		"speed" : 150,
+		"content" : "赌神<font color='#23f0fd' size='26'> * </font>鸿运当头，开出<font color='#fe0b0b' size='26'> * 倍彩金</font>大奖，赢得<font color='#fe0b0b' size='26'> * </font>奖金，大吉大利 今晚吃鸡!"
+	},
+
+	"data_507" : {
+		"priority" : 2,
+		"effect_lv" : 2,
+		"play_times" : 1,
+		"speed" : 150,
+		"content" : "赌神<font color='#23f0fd' size='26'> * </font>鸿运当头，开出<font color='#fe0b0b' size='26'> * 倍全盘</font>大奖，赢得<font color='#fe0b0b' size='26'> * </font>奖金，大吉大利 今晚吃鸡!"
+	},
+
+	"data_508" : {
+		"priority" : 2,
+		"effect_lv" : 2,
+		"play_times" : 1,
+		"speed" : 150,
+		"content" : "赌神<font color='#23f0fd' size='26'> * </font>鸿运当头，比倍<font color='#fe0b0b' size='26'> * 连胜</font>，赢得<font color='#fe0b0b' size='26'> * </font>奖金，大吉大利 今晚吃鸡!"
+	},
+
+	"data_509" : {
+		"priority" : 3,
+		"effect_lv" : 3,
+		"play_times" : 2,
+		"speed" : 100,
+		"content" : "赌圣<font color='#23f0fd' size='26'> * </font>出手不凡，在<font color='#ffe400' size='26'> * </font>中开出<font color='#fe0b0b' size='26'> * 倍</font>大奖，赢得<font color='#fe0b0b' size='26'> * </font>奖金，大吉大利 今晚吃鸡!"
+	},
+
+	"data_510" : {
+		"priority" : 3,
+		"effect_lv" : 3,
+		"play_times" : 2,
+		"speed" : 100,
+		"content" : "赌圣<font color='#23f0fd' size='26'> * </font>出手不凡，在<font color='#ffe400' size='26'> * </font>中开出<font color='#fe0b0b' size='26'> * 倍彩金</font>大奖，赢得<font color='#fe0b0b' size='26'> * </font>奖金，大吉大利 今晚吃鸡!"
+	},
+
+	"data_511" : {
+		"priority" : 3,
+		"effect_lv" : 3,
+		"play_times" : 2,
+		"speed" : 100,
+		"content" : "赌圣<font color='#23f0fd' size='26'> * </font>出手不凡，在<font color='#ffe400' size='26'> * </font>中开出<font color='#fe0b0b' size='26'> * 倍全盘</font>大奖，赢得<font color='#fe0b0b' size='26'> * </font>奖金，大吉大利 今晚吃鸡!"
+	},
+
+	"data_512" : {
+		"priority" : 3,
+		"effect_lv" : 3,
+		"play_times" : 2,
+		"speed" : 100,
+		"content" : "赌圣<font color='#23f0fd' size='26'> * </font>出手不凡，在<font color='#ffe400' size='26'> * </font>中比倍<font color='#fe0b0b' size='26'> * 连胜</font>，赢得<font color='#fe0b0b' size='26'> * </font>奖金，大吉大利 今晚吃鸡!"
+	},
+
+	"data_601" : {
+		"priority" : 1,
+		"effect_lv" : 1,
+		"play_times" : 1,
+		"speed" : 200,
+		"content" : "赌侠<font color='#23f0fd' size='26'> * </font>赢得<font color='#fe0b0b' size='26'> * </font>奖金，大吉大利 今晚吃鸡!"
+	},
+
+	"data_602" : {
+		"priority" : 2,
+		"effect_lv" : 2,
+		"play_times" : 1,
+		"speed" : 150,
+		"content" : "赌神<font color='#23f0fd' size='26'> * </font>鸿运当头，在<font color='#ffe400' size='26'> * </font>中赢得<font color='#fe0b0b' size='26'> * </font>奖金，大吉大利 今晚吃鸡!"
+	},
+
+	"data_603" : {
+		"priority" : 3,
+		"effect_lv" : 3,
+		"play_times" : 2,
+		"speed" : 100,
+		"content" : "赌圣<font color='#23f0fd' size='26'> * </font>出手不凡，在<font color='#ffe400' size='26'> * </font>中赢得<font color='#fe0b0b' size='26'> * </font>奖金，大吉大利 今晚吃鸡!"
+	},
+
+	"data_701" : {
+		"priority" : 1,
+		"effect_lv" : 1,
+		"play_times" : 1,
+		"speed" : 200,
+		"content" : "赌侠<font color='#23f0fd' size='26'> * </font>赢得<font color='#fe0b0b' size='26'> * </font>奖金，大吉大利 今晚吃鸡!"
+	},
+
+	"data_702" : {
+		"priority" : 2,
+		"effect_lv" : 2,
+		"play_times" : 1,
+		"speed" : 150,
+		"content" : "赌神<font color='#23f0fd' size='26'> * </font>鸿运当头，赢得<font color='#fe0b0b' size='26'> * </font>奖金，大吉大利 今晚吃鸡!"
+	},
+
+	"data_703" : {
+		"priority" : 3,
+		"effect_lv" : 3,
+		"play_times" : 2,
+		"speed" : 100,
+		"content" : "赌圣<font color='#23f0fd' size='26'> * </font>出手不凡，在<font color='#ffe400' size='26'> * </font>中赢得<font color='#fe0b0b' size='26'> * </font>奖金，大吉大利 今晚吃鸡!"
+	}
+
+}

@@ -1,0 +1,168 @@
+{
+    "frameRate": 30,
+    "name": "loading",
+    "version": "5.5",
+    "compatibleVersion": "5.5",
+    "armature": [
+        {
+            "type": "Armature",
+            "frameRate": 30,
+            "name": "Armature",
+            "aabb": {
+                "x": -50,
+                "y": -50,
+                "width": 100,
+                "height": 100
+            },
+            "bone": [
+                {
+                    "name": "root"
+                },
+                {
+                    "inheritScale": false,
+                    "name": "Layer1",
+                    "parent": "root",
+                    "transform": {
+                        "y": -0.5
+                    }
+                },
+                {
+                    "inheritScale": false,
+                    "name": "Layer2",
+                    "parent": "root",
+                    "transform": {
+                        "x": 0.1,
+                        "y": -1.75
+                    }
+                }
+            ],
+            "slot": [
+                {
+                    "name": "Layer1",
+                    "parent": "Layer1"
+                },
+                {
+                    "name": "Layer2",
+                    "parent": "Layer2"
+                }
+            ],
+            "skin": [
+                {
+                    "slot": [
+                        {
+                            "name": "Layer2",
+                            "display": [
+                                {
+                                    "name": "Spades",
+                                    "transform": {
+                                        "y": 1
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Layer1",
+                            "display": [
+                                {
+                                    "name": "Circle",
+                                    "transform": {
+                                        "y": 0.5
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "animation": [
+                {
+                    "duration": 29,
+                    "playTimes": 11,
+                    "name": "1",
+                    "bone": [
+                        {
+                            "name": "Layer1",
+                            "translateFrame": [
+                                {
+                                    "duration": 29,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 0,
+                                    "x": -0.1,
+                                    "y": 0.05
+                                }
+                            ],
+                            "rotateFrame": [
+                                {
+                                    "duration": 29,
+                                    "tweenEasing": 0,
+                                    "clockwise": 1
+                                },
+                                {
+                                    "duration": 0,
+                                    "rotate": -12.01
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Layer2",
+                            "scaleFrame": [
+                                {
+                                    "duration": 14,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 2,
+                                    "tweenEasing": 0,
+                                    "x": 0.02
+                                },
+                                {
+                                    "duration": 13,
+                                    "tweenEasing": 0,
+                                    "x": 0.02
+                                },
+                                {
+                                    "duration": 0
+                                }
+                            ]
+                        }
+                    ],
+                    "slot": [
+                        {
+                            "name": "Layer2",
+                            "colorFrame": [
+                                {
+                                    "duration": 14,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 2,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "aM": 27
+                                    }
+                                },
+                                {
+                                    "duration": 13,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "aM": 27
+                                    }
+                                },
+                                {
+                                    "duration": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "defaultActions": [
+                {
+                    "gotoAndPlay": "1"
+                }
+            ]
+        }
+    ]
+}

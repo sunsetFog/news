@@ -1,0 +1,24 @@
+{
+    "10000" : "platform.CsLogin",
+    "10001" : "platform.ScLoginReturn",
+    "10002" : "platform.CsLogout",
+
+    "10003" : "platform.CsHeart",
+    "10004" : "platform.ScHeart",
+
+    "10005" : "platform.ScKickOut",
+
+    "10007" : "platform.CsChangeInfo",
+    "10008" : "platform.ScChangeInfoRet",
+    "10009" : "platform.ScNotifyChangeInfo",
+
+    "10011" : "platform.CsChangeTable",
+    "10012" : "platform.ScChangeTableRet",
+
+    "10014" : "platform.ScBroadcastMessage",
+
+    "10016" : "platform.ScSetting",
+
+    "10018" : "platform.ScSurvey",
+    "10019" : "platform.CsDenySurvey"
+}

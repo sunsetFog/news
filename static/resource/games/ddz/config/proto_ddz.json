@@ -1,0 +1,19 @@
+{
+    "11001": "hqtpb.landlord.ScLandlordBottomScoreNotify",
+    "11002": "hqtpb.landlord.ScLandlordStateNotify",
+    "11003": "hqtpb.landlord.ScLandlordSeatInfoNotify",
+    "11004": "hqtpb.landlord.ScLandlordSeatingNotify",
+    "11005": "hqtpb.landlord.CsLandlordActionReq",
+    "11006": "hqtpb.landlord.ScLandlordActionRes",
+    "11007": "hqtpb.landlord.ScLandlordActionNotify",
+    "11008": "hqtpb.landlord.ScLandlordHandCardNotify",
+    "11009": "hqtpb.landlord.ScLandlordMultipleInfoNotify",
+    "11010": "hqtpb.landlord.ScLandlordBottomCardNotify",
+    "11011": "hqtpb.landlord.CsLandlordDiscardReq",
+    "11012": "hqtpb.landlord.ScLandlordDiscardRes",
+    "11013": "hqtpb.landlord.ScLandlordDiscardNotify",
+    "11014": "hqtpb.landlord.ScLandlordDiscardRecordNotify",
+    "11015": "hqtpb.landlord.ScLandlordExchangeNotify",
+    "11018": "hqtpb.landlord.CsLandlordCombatRecordReq",
+    "11019": "hqtpb.landlord.ScLandlordCombatRecordRes"
+}

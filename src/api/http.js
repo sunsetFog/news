@@ -27,7 +27,7 @@ service.interceptors.request.use(config => {
 // respone拦截器
 service.interceptors.response.use(
   response => {
-    console.log('Hk-拦截器',response);//根据状态修改
+    //console.log('Hk-拦截器',response);//根据状态修改
     if (!response.data) {
       return Promise.reject(response)
     } else {

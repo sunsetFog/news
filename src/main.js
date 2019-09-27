@@ -1,133 +1,117 @@
+// The Vue build version to load with the `import` command
+// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-//引入路由功能
-import VueRouter from 'vue-router'
-Vue.use(VueRouter);
-
-//引入iview组件(不支持移动端)
 import iView from 'iview'
 import 'iview/dist/styles/iview.css'
+import router from './router'
+import axios from 'axios';
+Vue.prototype.$axios = axios;
+import globalMeans from './public/index.js';
+Vue.prototype.$means = globalMeans;
+import 'babel-polyfill'
+Vue.config.productionTip = false
+// es6Promise .polyfill();
 Vue.use(iView);
-//引入element-ui
+
+import overall from '../static/capital/overall.json'
+let domain;
+if (process.env.NODE_ENV === 'development') {
+    domain = overall.development;
+} else {
+    domain = location.protocol + '//' + window.location.host;
+}
+Vue.prototype.$domain = domain;
+//console.log('domain',domain);
+
+
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
-//使用mint-ui
-import MintUI from 'mint-ui'
-import 'mint-ui/lib/style.css'
-Vue.use(MintUI);
-//引入ydui
-import YDUI from 'vue-ydui';
-import 'vue-ydui/dist/ydui.rem.css';
-import 'vue-ydui/dist/ydui.px.css';
-import 'vue-ydui/dist/ydui.base.css';
-Vue.use(YDUI);
 
-import {CitySelect} from 'vue-ydui/dist/lib.rem/cityselect';
-Vue.component(CitySelect.name, CitySelect);
+import '../static/capital/flexible';
 
-//引入vue-resource得不能用$http
-//vue模拟本地数据接口
-import VueResource from 'vue-resource'
-Vue.use(VueResource)
+import store from './vuex/vuex.js';
+// Vue.prototype.$store = store;
 
-//用vue axios
-import axios from 'axios';
-//vue发送post请求时如何携带cookie
-//https://blog.csdn.net/liuxin_1991/article/details/81531321?utm_source=blogxgwz1
-axios.defaults.withCredentials=true;//让ajax携带cookie,就这一行代码就ok了
-import request from './api/http.js';
-// Vue.prototype.$axios = axios;
-Vue.prototype.$axios = request;
-
-//全局引入公用组件，建立子父组件关系(分页组件)
-import Pagination from './pages/effect/Pagination.vue';
-Vue.component('Pagination', Pagination);
-
-//引入muse-ui组件
-import MuseUI from 'muse-ui'
-import 'muse-ui/dist/muse-ui.css'
-Vue.use(MuseUI)
-
-
-//vue的原型
-//公用调用式：赋值原型给vue,就能用$toast.state.hobby的数据读取用法
-import Toast from './vuex/store.js'
-Vue.prototype.$store =Toast
-
-//全局变量
-Vue.prototype.$domain = 'http://10.0.1.111:8080';
-
-//全局方法
-Vue.prototype.$teacher = function(){
-  return 'vue原型简单方法';
-}
-//公用方法
-import fancy from './common/index.js';
-Vue.prototype.$fancy = fancy;
-import regular from './common/regular';
-Vue.prototype.$regular = regular;
-
-//  这里建路由，一般不这么做
-//创建router实例
-// let router = new VueRouter({
-//   mode: 'history',
-//   routes: [
-//     ]
-// });
-
+// https://www.cnblogs.com/zhaojunhao/p/9622299.html
+//md5加密-type是字符串
+import md5 from 'js-md5';
+Vue.prototype.$md5 = md5;
 
 // 使用vue-cookies
 import VueCookies from 'vue-cookies'
 Vue.use(VueCookies)
 
-// 图片懒加载
-// npm install vue-lazyload --save-dev
-import VueLazyload from 'vue-lazyload'
-// Vue.use(VueLazyload)
-Vue.use(VueLazyload, {
-  preLoad: 1.3,
-  error: '../../../static/comic/theme1.png',
-  loading: '../../../static/comic/theme2.png',
-  attempt: 1
-})
+import apiHttp from './api/http.js';
+Vue.prototype.$apihttp = apiHttp;
+
+import recharge from './components/recharge.vue';
+import withdrawal from './components/withdrawal.vue';
+import manageBank from './components/manageBank.vue';
+import addBank from './components/addBank.vue';
+import manageAlipay from './components/manageAlipay.vue';
+import addAlipay from './components/addAlipay.vue';
+import withdrawalPassword from './components/withdrawalPassword.vue';
+import know from './components/know.vue';
+import mail from './components/mail.vue';
+import notice from './components/notice.vue';
+import pagination from './components/pagination.vue';
+import consult from './components/consult.vue';
+import loginPassword from './components/loginPassword.vue';
+import gameTheme from './components/game_theme.vue';
+import safeDeposit from './components/safeDeposit.vue';
+import portrait from './components/portrait.vue';
+import rechargeRecord from './components/rechargeRecord.vue';
+Vue.component('recharge',recharge);
+Vue.component('withdrawal',withdrawal);
+Vue.component('manageBank',manageBank);
+Vue.component('addBank',addBank);
+Vue.component('manageAlipay',manageAlipay);
+Vue.component('addAlipay',addAlipay);
+Vue.component('withdrawalPassword',withdrawalPassword);
+Vue.component('know',know);
+Vue.component('mail',mail);
+Vue.component('notice',notice);
+Vue.component('pagination',pagination);
+Vue.component('consult',consult);
+Vue.component('loginPassword',loginPassword);
+Vue.component('gameTheme',gameTheme);
+Vue.component('safeDeposit',safeDeposit);
+Vue.component('portrait',portrait);
+Vue.component('rechargeRecord',rechargeRecord);
 
 
-// vue-router中使用router.beforeEach来判断用户的是否登录再决定跳转到登录页面
-//在vue项目中使用Nprogress.js进度条
-//希望每次页面载入的时候，浏览器顶部有载入动画
-//https://blog.csdn.net/qq_35844177/article/details/70171054
-import router from './router'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 router.beforeEach((to, from, next) => {
-  if (to.path == '/login') {
-      sessionStorage.removeItem('token');
+    document.title = to.meta.title;
+    let routeScreen = ['/login','/neutralgear'];
+    if (to.path == '/login') {
+        sessionStorage.removeItem('token');
+    }else if(routeScreen.indexOf(to.path)==-1&&from.path == '/'){
+        sessionStorage.setItem('save_path',to.path);
+        next({path: '/neutralgear'});
     }
-  let user = sessionStorage.getItem('token');
-  if (!user && to.path != '/login') {
-      next({path: '/login'})
+
+    let user = sessionStorage.getItem('token');
+    let beforeRouterArr = ['/login','/register','/line'];
+    if (!user && beforeRouterArr.indexOf(to.path)==-1) {
+        next({path: '/login'});
     } else {
-      NProgress.start();
-      next()
+        NProgress.start();
+        next()
     }
 }); 
 router.afterEach(transition => {
   NProgress.done();
 });
 
-
-
-//阻止启动生产消息
-//https://blog.csdn.net/losedguest/article/details/86569293
-//为true时控制台多一行See more tips
-Vue.config.productionTip = false
-
-//创建和挂载根实例。
-//new一个vue实例,挂载在index文件的id
+/* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
-  template: '<app/>'
+  template: '<App/>'
 })

@@ -1,0 +1,30 @@
+{
+	"skins": {
+		"eui.FishScroller": "resource/games/fishjoy/eui_skins/FishScrollerSkin.exml",
+		"eui.FishVScrollBar":"resource/games/fishjoy/eui_skins/FishVScrollBarSkin.exml"
+	},
+	"autoGenerateExmlsList": true,
+	"exmls": [
+		"resource/games/fishjoy/skins/component/BgUI.exml",
+		"resource/games/fishjoy/eui_skins/FishVScrollBarSkin.exml",
+		"resource/games/fishjoy/eui_skins/FishScrollerSkin.exml",
+		"resource/games/fishjoy/skins/ChangeCannonSkin.exml",
+		"resource/games/fishjoy/skins/component/ChangeCannonItemSkin.exml",
+		"resource/games/fishjoy/skins/component/ChatBubbleSkin.exml",
+		"resource/games/fishjoy/skins/component/FishMusicSlider.exml",
+		"resource/games/fishjoy/skins/component/FishSoundSlider.exml",
+		"resource/games/fishjoy/skins/component/GameResourceSkin.exml",
+		"resource/games/fishjoy/skins/component/GuideItemSkin.exml",
+		"resource/games/fishjoy/skins/component/HSliderSkin.exml",
+		"resource/games/fishjoy/skins/component/ResourceSkin.exml",
+		"resource/games/fishjoy/skins/player/FishPlayerSkin1.exml",
+		"resource/games/fishjoy/skins/player/FishPlayerSkin2.exml",
+		"resource/games/fishjoy/skins/player/FishPlayerSkin3.exml",
+		"resource/games/fishjoy/skins/player/FishPlayerSkin4.exml",
+		"resource/games/fishjoy/skins/FishJoyGameSkin.exml",
+		"resource/games/fishjoy/skins/GuideSkin.exml",
+		"resource/games/fishjoy/skins/RoomChooseSkin.exml",
+		"resource/games/fishjoy/skins/SettingSkin.exml",
+		"resource/games/public/skins/Prompt.exml"
+	]
+}

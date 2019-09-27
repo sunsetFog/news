@@ -1,0 +1,2154 @@
+{
+	"groups": [
+		{
+			"keys": "fish_gun1_tex_png,fish_gun2_tex_png,fish_gun3_tex_png,fish_gun4_tex_png,fish_gun5_tex_png,fish_gun6_tex_png,fish_gun7_tex_png,fish_gun8_tex_png,fish_gun1_ske_json,fish_gun1_tex_json,fish_gun2_ske_json,fish_gun2_tex_json,fish_gun3_ske_json,fish_gun3_tex_json,fish_gun4_ske_json,fish_gun4_tex_json,fish_gun5_ske_json,fish_gun5_tex_json,fish_gun6_ske_json,fish_gun6_tex_json,fish_gun7_ske_json,fish_gun7_tex_json,fish_gun8_ske_json,fish_gun8_tex_json,fishjoy_cannon_json,gold_effect_tex_png,gold_effect_ske_json,gold_effect_tex_json,fishguide_json,fishjoy_font_1_fnt,fishjoy_font_2_fnt,fish_net6_tex_png,fish_net1_ske_json,fish_net1_tex_json,fish_net2_ske_json,fish_net2_tex_json,fish_net3_ske_json,fish_net3_tex_json,fish_net4_ske_json,fish_net4_tex_json,fish_net5_ske_json,fish_net5_tex_json,fish_net6_ske_json,fish_net6_tex_json,fish_net1_tex_png,fish_net2_tex_png,fish_net3_tex_png,fish_net4_tex_png,fish_net5_tex_png,thm_fishjoy_json,proto_fishjoy_json,fish_path8031_json,fish_path8032_json,fish_path8033_json,fish_path8034_json,fish_path8035_json,fish_path8036_json,fish_path8037_json,fish_path8038_json,fish_path8039_json,fish_path8040_json,fish_path8041_json,fish_path8042_json,fish_path8001_json,fish_path8002_json,fish_path8003_json,fish_path8004_json,fish_path8005_json,fish_path8006_json,fish_path8007_json,fish_path8008_json,fish_path8009_json,fish_path8010_json,fish_path8011_json,fish_path8012_json,fish_path8013_json,fish_path8014_json,fish_path8015_json,fish_path8016_json,fish_path8017_json,fish_path8018_json,fish_path8019_json,fish_path8020_json,fish_path8021_json,fish_path8022_json,fish_path8023_json,fish_path8024_json,fish_path8025_json,fish_path8026_json,fish_path8027_json,fish_path8028_json,fish_path8029_json,fish_path8030_json,textPack_fishjoy_json,fish_json,fish_2014_ske_json,fish_2014_tex_json,fish_3001_ske_json,fish_3001_tex_json,fish_3002_ske_json,fish_3002_tex_json,fish_3003_ske_json,fish_3003_tex_json,fish_3004_ske_json,fish_3004_tex_json,fish_3005_ske_json,fish_3005_tex_json,fish_3006_ske_json,fish_3006_tex_json,fish_3007_ske_json,fish_3007_tex_json,fish_3008_ske_json,fish_3008_tex_json,fish_3009_ske_json,fish_3009_tex_json,fish_4001_ske_json,fish_4001_tex_json,fish_4002_ske_json,fish_4002_tex_json,fish_4003_ske_json,fish_4003_tex_json,fish_4004_ske_json,fish_4004_tex_json,fish_5001_ske_json,fish_5001_tex_json,fish_5002_ske_json,fish_5002_tex_json,fish_5003_ske_json,fish_5003_tex_json,fish_2001_tex_png,fish_2002_tex_png,fish_2003_tex_png,fish_2004_tex_png,fish_2005_tex_png,fish_2006_tex_png,fish_2007_tex_png,fish_2008_tex_png,fish_2009_tex_png,fish_2010_tex_png,fish_2011_tex_png,fish_2012_tex_png,fish_2013_tex_png,fish_2014_tex_png,fish_3001_tex_png,fish_3002_tex_png,fish_3003_tex_png,fish_3004_tex_png,fish_3005_tex_png,fish_3006_tex_png,fish_3007_tex_png,fish_3008_tex_png,fish_3009_tex_png,fish_4001_tex_png,fish_4002_tex_png,fish_4003_tex_png,fish_4004_tex_png,fish_5001_tex_png,fish_5002_tex_png,fish_5003_tex_png,fish_2001_ske_json,fish_2001_tex_json,fish_2002_ske_json,fish_2002_tex_json,fish_2003_ske_json,fish_2003_tex_json,fish_2004_ske_json,fish_2004_tex_json,fish_2005_ske_json,fish_2005_tex_json,fish_2006_ske_json,fish_2006_tex_json,fish_2007_ske_json,fish_2007_tex_json,fish_2008_ske_json,fish_2008_tex_json,fish_2009_ske_json,fish_2009_tex_json,fish_2010_ske_json,fish_2010_tex_json,fish_2011_ske_json,fish_2011_tex_json,fish_2012_ske_json,fish_2012_tex_json,fish_2013_ske_json,fish_2013_tex_json,fishjoy_choose_bg_jpg,fishTidePath_json,fish_path8043_json,fish_path8044_json,fish_path8045_json,fish_path8046_json,fish_path8047_json,fish_path8048_json,fish_path8049_json,fish_path8050_json,fish_path8051_json,fish_path8052_json,fish_path8053_json,fish_path8054_json,fish_path8055_json,fish_path8056_json,fish_path8057_json,fish_path8058_json,fish_path8059_json,fish_path8060_json,fish_path8061_json,fish_path8062_json,fish_path8063_json,fish_path8064_json,fish_path8065_json,fish_path8066_json,fish_path8067_json,fish_path8068_json,fish_path8069_json,fish_path8070_json,fish_path8071_json,fish_path8072_json,fish_path8073_json,fish_path8074_json,fish_path8075_json,fish_path8076_json,fish_path8077_json,fish_path8078_json,fish_path8079_json,fish_path8080_json,fish_tide10001_json,fish_tide10002_json,fish_tide10003_json,fish_tide10004_json,fish_tide10005_json,tide_wave_ske_json,tide_wave_tex_json,tide_wave_tex_png,fish_bulb_json,fish_bulb_png,part_fish_lobby_json,part_fish_lobby_png,grabfish_ui_text01_png,gun_config_json,grabfish_ui_gameHelpss_png,fish_big_boom_tex_png,fish_big_boom_ske_json,fish_big_boom_tex_json,goldSpecial_ske_json,goldSpecial_tex_json,goldSpecial_tex_png,shui0018_jpg,shui0001_jpg,shui0002_jpg,shui0003_jpg,shui0004_jpg,shui0005_jpg,shui0006_jpg,shui0007_jpg,shui0008_jpg,shui0009_jpg,shui0010_jpg,shui0011_jpg,shui0012_jpg,shui0013_jpg,shui0014_jpg,shui0015_jpg,shui0016_jpg,shui0017_jpg,bulb1_json,bulb1_png,shui0027_jpg,shui0019_jpg,shui0020_jpg,shui0021_jpg,shui0022_jpg,shui0023_jpg,shui0024_jpg,shui0025_jpg,shui0026_jpg,fishUI_buyu_bg1_jpg,fishUI_buyu_bg2_jpg,fishUI_buyu_bg3_jpg,fishUI_buyu_bg4_jpg,fishUI_buyu_bg5_jpg,fishUI_buyu_bg6_jpg,Backgrounds_json,fishjoy_baoji_fnt,transPartical_json,transPartical_png,fish_4005_ske_json,fish_4005_tex_json,fish_4005_tex_png,arm_effect_tex_json,arm_effect_tex_png,arm_effect_ske_json,fishHit_effect_tex_png,fishHit_effect_ske_json,fishHit_effect_tex_json,fish_newBoom_ske_json,fish_newBoom_tex_json,fish_newBoom_tex_png,shadow_4002_tex_json,shadow_4003_ske_json,shadow_4003_tex_json,shadow_4004_ske_json,shadow_4004_tex_json,shadow_4005_ske_json,shadow_4005_tex_json,shadow_5001_ske_json,shadow_5001_tex_json,shadow_5002_ske_json,shadow_5002_tex_json,shadow_5003_ske_json,shadow_5003_tex_json,shadow_2001_tex_png,shadow_2002_tex_png,shadow_2003_tex_png,shadow_2004_tex_png,shadow_2005_tex_png,shadow_2006_tex_png,shadow_2007_tex_png,shadow_2008_tex_png,shadow_2009_tex_png,shadow_2010_tex_png,shadow_2011_tex_png,shadow_2012_tex_png,shadow_2013_tex_png,shadow_2014_tex_png,shadow_3001_tex_png,shadow_3002_tex_png,shadow_3003_tex_png,shadow_3004_tex_png,shadow_3005_tex_png,shadow_3006_tex_png,shadow_3007_tex_png,shadow_3008_tex_png,shadow_3009_tex_png,shadow_4001_tex_png,shadow_4002_tex_png,shadow_4003_tex_png,shadow_4004_tex_png,shadow_4005_tex_png,shadow_5001_tex_png,shadow_5002_tex_png,shadow_5003_tex_png,shadow_2001_ske_json,shadow_2001_tex_json,shadow_2002_ske_json,shadow_2002_tex_json,shadow_2003_ske_json,shadow_2003_tex_json,shadow_2004_ske_json,shadow_2004_tex_json,shadow_2005_ske_json,shadow_2005_tex_json,shadow_2006_ske_json,shadow_2006_tex_json,shadow_2007_ske_json,shadow_2007_tex_json,shadow_2008_ske_json,shadow_2008_tex_json,shadow_2009_ske_json,shadow_2009_tex_json,shadow_2010_ske_json,shadow_2010_tex_json,shadow_2011_ske_json,shadow_2011_tex_json,shadow_2012_ske_json,shadow_2012_tex_json,shadow_2013_ske_json,shadow_2013_tex_json,shadow_2014_ske_json,shadow_2014_tex_json,shadow_3001_ske_json,shadow_3001_tex_json,shadow_3002_ske_json,shadow_3002_tex_json,shadow_3003_ske_json,shadow_3003_tex_json,shadow_3004_ske_json,shadow_3004_tex_json,shadow_3005_ske_json,shadow_3005_tex_json,shadow_3006_ske_json,shadow_3006_tex_json,shadow_3007_ske_json,shadow_3007_tex_json,shadow_3008_ske_json,shadow_3008_tex_json,shadow_3009_ske_json,shadow_3009_tex_json,shadow_4001_ske_json,shadow_4001_tex_json,shadow_4002_ske_json,fish_net7_ske_json,fish_net7_tex_json,fish_net7_tex_png,fish_net8_ske_json,fish_net8_tex_json,fish_net8_tex_png",
+			"name": "fishjoy"
+		},
+		{
+			"keys": "RoomChoose_json,fishjoy_choose_bg_jpg,thm_fishjoy_json,proto_fishjoy_json,fishTidePath_json,part_fish_lobby_json,part_fish_lobby_png,ui_common_json",
+			"name": "fishjoy_room"
+		}
+	],
+	"resources": [
+		{
+			"name": "fishjoy_choose_bg_jpg",
+			"type": "image",
+			"url": "games/fishjoy/assets/scene/fishjoy_choose_bg.jpg"
+		},
+		{
+			"name": "BackSE_mp3",
+			"type": "sound",
+			"url": "games/fishjoy/assets/sound/BackSE.mp3"
+		},
+		{
+			"name": "BubbleME_mp3",
+			"type": "sound",
+			"url": "games/fishjoy/assets/sound/BubbleME.mp3"
+		},
+		{
+			"name": "ButtonSE_mp3",
+			"type": "sound",
+			"url": "games/fishjoy/assets/sound/ButtonSE.mp3"
+		},
+		{
+			"name": "CannonSE_mp3",
+			"type": "sound",
+			"url": "games/fishjoy/assets/sound/CannonSE.mp3"
+		},
+		{
+			"name": "CaptureSE_mp3",
+			"type": "sound",
+			"url": "games/fishjoy/assets/sound/CaptureSE.mp3"
+		},
+		{
+			"name": "CheerSE_mp3",
+			"type": "sound",
+			"url": "games/fishjoy/assets/sound/CheerSE.mp3"
+		},
+		{
+			"name": "CionSE_mp3",
+			"type": "sound",
+			"url": "games/fishjoy/assets/sound/CionSE.mp3"
+		},
+		{
+			"name": "FisheryBGM_mp3",
+			"type": "sound",
+			"url": "games/fishjoy/assets/sound/FisheryBGM.mp3"
+		},
+		{
+			"name": "PlusSE_mp3",
+			"type": "sound",
+			"url": "games/fishjoy/assets/sound/PlusSE.mp3"
+		},
+		{
+			"name": "SeaME_mp3",
+			"type": "sound",
+			"url": "games/fishjoy/assets/sound/SeaME.mp3"
+		},
+		{
+			"name": "SwitchSE_mp3",
+			"type": "sound",
+			"url": "games/fishjoy/assets/sound/SwitchSE.mp3"
+		},
+		{
+			"name": "fishjoy_cannon_json",
+			"subkeys": "grabfish_ui_bulet1,grabfish_ui_bulet2,grabfish_ui_bulet3,grabfish_ui_bulet4,grabfish_ui_bulet5,grabfish_ui_bulet6,grabfish_ui_bulet7,grabfish_ui_bulet8,grabfish_ui_bulet9,grabfish_ui_gun1,grabfish_ui_gun2,grabfish_ui_gun3,grabfish_ui_gun4,grabfish_ui_gun5,grabfish_ui_gun6,grabfish_ui_gun7,grabfish_ui_gun8",
+			"type": "sheet",
+			"url": "games/fishjoy/assets/cannon/fishjoy_cannon.json"
+		},
+		{
+			"name": "fish_gun1_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/cannon/fish_gun1_ske.json"
+		},
+		{
+			"name": "fish_gun1_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/cannon/fish_gun1_tex.json"
+		},
+		{
+			"name": "fish_gun1_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/cannon/fish_gun1_tex.png"
+		},
+		{
+			"name": "fish_gun2_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/cannon/fish_gun2_ske.json"
+		},
+		{
+			"name": "fish_gun2_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/cannon/fish_gun2_tex.json"
+		},
+		{
+			"name": "fish_gun2_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/cannon/fish_gun2_tex.png"
+		},
+		{
+			"name": "fish_gun3_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/cannon/fish_gun3_ske.json"
+		},
+		{
+			"name": "fish_gun3_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/cannon/fish_gun3_tex.json"
+		},
+		{
+			"name": "fish_gun3_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/cannon/fish_gun3_tex.png"
+		},
+		{
+			"name": "fish_gun4_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/cannon/fish_gun4_ske.json"
+		},
+		{
+			"name": "fish_gun4_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/cannon/fish_gun4_tex.json"
+		},
+		{
+			"name": "fish_gun4_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/cannon/fish_gun4_tex.png"
+		},
+		{
+			"name": "fish_gun5_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/cannon/fish_gun5_ske.json"
+		},
+		{
+			"name": "fish_gun5_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/cannon/fish_gun5_tex.json"
+		},
+		{
+			"name": "fish_gun5_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/cannon/fish_gun5_tex.png"
+		},
+		{
+			"name": "fish_gun6_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/cannon/fish_gun6_ske.json"
+		},
+		{
+			"name": "fish_gun6_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/cannon/fish_gun6_tex.json"
+		},
+		{
+			"name": "fish_gun6_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/cannon/fish_gun6_tex.png"
+		},
+		{
+			"name": "fish_gun7_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/cannon/fish_gun7_ske.json"
+		},
+		{
+			"name": "fish_gun7_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/cannon/fish_gun7_tex.json"
+		},
+		{
+			"name": "fish_gun7_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/cannon/fish_gun7_tex.png"
+		},
+		{
+			"name": "fish_gun8_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/cannon/fish_gun8_ske.json"
+		},
+		{
+			"name": "fish_gun8_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/cannon/fish_gun8_tex.json"
+		},
+		{
+			"name": "fish_gun8_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/cannon/fish_gun8_tex.png"
+		},
+		{
+			"name": "ui_chat_json",
+			"subkeys": "grabfish_ui_chaofeng,grabfish_ui_chatarea,grabfish_ui_chatback2,grabfish_ui_chatbutten,grabfish_ui_jihuo,grabfish_ui_mobai,grabfish_ui_wode,grabfish_ui_xianmu",
+			"type": "sheet",
+			"url": "games/fishjoy/assets/chat/ui_chat.json"
+		},
+		{
+			"name": "RoomChoose_json",
+			"subkeys": "grabfish_ui_Bangzhu,grabfish_ui_chooseback,grabfish_ui_choosedown,grabfish_ui_choosehelp,grabfish_ui_choosename,grabfish_ui_choosetop,grabfish_ui_fuhao,grabfish_ui_guibing,grabfish_ui_helptext,grabfish_ui_numberbg,grabfish_ui_xinshou,icon_pub",
+			"type": "sheet",
+			"url": "games/fishjoy/assets/common/RoomChoose.json"
+		},
+		{
+			"name": "ui_common_json",
+			"subkeys": "grabfish_ui_addmoney,grabfish_ui_arm,grabfish_ui_basement,grabfish_ui_blackbanner,grabfish_ui_borad,grabfish_ui_button01,grabfish_ui_button02,grabfish_ui_button03,grabfish_ui_button04,grabfish_ui_calibutten,grabfish_ui_changebutten,grabfish_ui_changegunback,grabfish_ui_changeword,grabfish_ui_choicegunback,grabfish_ui_choicegunlock,grabfish_ui_choicelight,grabfish_ui_close,grabfish_ui_effectoff,grabfish_ui_effecton,grabfish_ui_equiped,grabfish_ui_gameHelp,grabfish_ui_goldicon,grabfish_ui_gunadd1,grabfish_ui_gunadd2,grabfish_ui_gunadd3,grabfish_ui_gunreduce1,grabfish_ui_gunreduce2,grabfish_ui_gunreduce3,grabfish_ui_lineback,grabfish_ui_lineback2,grabfish_ui_linebutten,grabfish_ui_locked,grabfish_ui_manubutten,grabfish_ui_manubutten2,grabfish_ui_max,grabfish_ui_menuditu,grabfish_ui_menuditu01,grabfish_ui_min,grabfish_ui_music,grabfish_ui_musicclose,grabfish_ui_nameblank,grabfish_ui_quitbutten,grabfish_ui_setball,grabfish_ui_setbannerback,grabfish_ui_setbannerfront,grabfish_ui_setbutten,grabfish_ui_setword,grabfish_ui_texiao,grabfish_ui_tujianbutten,grabfish_ui_tujianword,grabfish_ui_unequiped,grabfish_ui_volume,grabfish_ui_volume_mute",
+			"type": "sheet",
+			"url": "games/fishjoy/assets/common/ui_common.json"
+		},
+		{
+			"name": "gold_effect_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/effect/gold_effect_ske.json"
+		},
+		{
+			"name": "gold_effect_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/effect/gold_effect_tex.json"
+		},
+		{
+			"name": "gold_effect_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/effect/gold_effect_tex.png"
+		},
+		{
+			"name": "fishguide_json",
+			"subkeys": "fishUI_01,fishUI_02,fishUI_03,fishUI_04,fishUI_05,fishUI_06,fishUI_07,fishUI_08,fishUI_09,fishUI_10,fishUI_11,fishUI_12,fishUI_13,fishUI_14,fishUI_15,fishUI_16,fishUI_17,fishUI_18,fishUI_19,fishUI_20,fishUI_21,fishUI_22,fishUI_23,fishUI_24,fishUI_25,fishUI_26,fishUI_27,fishUI_28,fishUI_29,fishUI_30,fishUI_31",
+			"type": "sheet",
+			"url": "games/fishjoy/assets/fish/fishguide.json"
+		},
+		{
+			"name": "fishjoy_font_1_fnt",
+			"type": "font",
+			"url": "games/fishjoy/assets/font/fishjoy_font_1.fnt"
+		},
+		{
+			"name": "fishjoy_font_2_fnt",
+			"type": "font",
+			"url": "games/fishjoy/assets/font/fishjoy_font_2.fnt"
+		},
+		{
+			"name": "fish_net1_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/net/fish_net1_ske.json"
+		},
+		{
+			"name": "fish_net1_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/net/fish_net1_tex.json"
+		},
+		{
+			"name": "fish_net1_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/net/fish_net1_tex.png"
+		},
+		{
+			"name": "fish_net2_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/net/fish_net2_ske.json"
+		},
+		{
+			"name": "fish_net2_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/net/fish_net2_tex.json"
+		},
+		{
+			"name": "fish_net2_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/net/fish_net2_tex.png"
+		},
+		{
+			"name": "fish_net3_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/net/fish_net3_ske.json"
+		},
+		{
+			"name": "fish_net3_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/net/fish_net3_tex.json"
+		},
+		{
+			"name": "fish_net3_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/net/fish_net3_tex.png"
+		},
+		{
+			"name": "fish_net4_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/net/fish_net4_ske.json"
+		},
+		{
+			"name": "fish_net4_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/net/fish_net4_tex.json"
+		},
+		{
+			"name": "fish_net4_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/net/fish_net4_tex.png"
+		},
+		{
+			"name": "fish_net5_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/net/fish_net5_ske.json"
+		},
+		{
+			"name": "fish_net5_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/net/fish_net5_tex.json"
+		},
+		{
+			"name": "fish_net5_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/net/fish_net5_tex.png"
+		},
+		{
+			"name": "fish_net6_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/net/fish_net6_ske.json"
+		},
+		{
+			"name": "fish_net6_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/net/fish_net6_tex.json"
+		},
+		{
+			"name": "fish_net6_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/net/fish_net6_tex.png"
+		},
+		{
+			"name": "thm_fishjoy_json",
+			"type": "json",
+			"url": "games/fishjoy/config/thm_fishjoy.json"
+		},
+		{
+			"name": "proto_fishjoy_json",
+			"type": "json",
+			"url": "games/fishjoy/config/proto_fishjoy.json"
+		},
+		{
+			"name": "fish_path8031_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8031.json"
+		},
+		{
+			"name": "fish_path8032_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8032.json"
+		},
+		{
+			"name": "fish_path8033_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8033.json"
+		},
+		{
+			"name": "fish_path8034_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8034.json"
+		},
+		{
+			"name": "fish_path8035_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8035.json"
+		},
+		{
+			"name": "fish_path8036_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8036.json"
+		},
+		{
+			"name": "fish_path8037_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8037.json"
+		},
+		{
+			"name": "fish_path8038_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8038.json"
+		},
+		{
+			"name": "fish_path8039_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8039.json"
+		},
+		{
+			"name": "fish_path8040_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8040.json"
+		},
+		{
+			"name": "fish_path8041_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8041.json"
+		},
+		{
+			"name": "fish_path8042_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8042.json"
+		},
+		{
+			"name": "fish_path8001_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8001.json"
+		},
+		{
+			"name": "fish_path8002_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8002.json"
+		},
+		{
+			"name": "fish_path8003_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8003.json"
+		},
+		{
+			"name": "fish_path8004_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8004.json"
+		},
+		{
+			"name": "fish_path8005_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8005.json"
+		},
+		{
+			"name": "fish_path8006_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8006.json"
+		},
+		{
+			"name": "fish_path8007_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8007.json"
+		},
+		{
+			"name": "fish_path8008_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8008.json"
+		},
+		{
+			"name": "fish_path8009_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8009.json"
+		},
+		{
+			"name": "fish_path8010_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8010.json"
+		},
+		{
+			"name": "fish_path8011_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8011.json"
+		},
+		{
+			"name": "fish_path8012_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8012.json"
+		},
+		{
+			"name": "fish_path8013_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8013.json"
+		},
+		{
+			"name": "fish_path8014_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8014.json"
+		},
+		{
+			"name": "fish_path8015_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8015.json"
+		},
+		{
+			"name": "fish_path8016_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8016.json"
+		},
+		{
+			"name": "fish_path8017_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8017.json"
+		},
+		{
+			"name": "fish_path8018_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8018.json"
+		},
+		{
+			"name": "fish_path8019_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8019.json"
+		},
+		{
+			"name": "fish_path8020_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8020.json"
+		},
+		{
+			"name": "fish_path8021_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8021.json"
+		},
+		{
+			"name": "fish_path8022_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8022.json"
+		},
+		{
+			"name": "fish_path8023_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8023.json"
+		},
+		{
+			"name": "fish_path8024_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8024.json"
+		},
+		{
+			"name": "fish_path8025_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8025.json"
+		},
+		{
+			"name": "fish_path8026_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8026.json"
+		},
+		{
+			"name": "fish_path8027_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8027.json"
+		},
+		{
+			"name": "fish_path8028_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8028.json"
+		},
+		{
+			"name": "fish_path8029_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8029.json"
+		},
+		{
+			"name": "fish_path8030_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8030.json"
+		},
+		{
+			"name": "textPack_fishjoy_json",
+			"type": "json",
+			"url": "games/fishjoy/config/textPack_fishjoy.json"
+		},
+		{
+			"name": "fish_json",
+			"type": "json",
+			"url": "games/fishjoy/config/fish.json"
+		},
+		{
+			"name": "fish_2014_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_2014_ske.json"
+		},
+		{
+			"name": "fish_2014_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_2014_tex.json"
+		},
+		{
+			"name": "fish_3001_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_3001_ske.json"
+		},
+		{
+			"name": "fish_3001_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_3001_tex.json"
+		},
+		{
+			"name": "fish_3002_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_3002_ske.json"
+		},
+		{
+			"name": "fish_3002_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_3002_tex.json"
+		},
+		{
+			"name": "fish_3003_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_3003_ske.json"
+		},
+		{
+			"name": "fish_3003_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_3003_tex.json"
+		},
+		{
+			"name": "fish_3004_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_3004_ske.json"
+		},
+		{
+			"name": "fish_3004_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_3004_tex.json"
+		},
+		{
+			"name": "fish_3005_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_3005_ske.json"
+		},
+		{
+			"name": "fish_3005_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_3005_tex.json"
+		},
+		{
+			"name": "fish_3006_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_3006_ske.json"
+		},
+		{
+			"name": "fish_3006_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_3006_tex.json"
+		},
+		{
+			"name": "fish_3007_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_3007_ske.json"
+		},
+		{
+			"name": "fish_3007_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_3007_tex.json"
+		},
+		{
+			"name": "fish_3008_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_3008_ske.json"
+		},
+		{
+			"name": "fish_3008_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_3008_tex.json"
+		},
+		{
+			"name": "fish_3009_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_3009_ske.json"
+		},
+		{
+			"name": "fish_3009_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_3009_tex.json"
+		},
+		{
+			"name": "fish_4001_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_4001_ske.json"
+		},
+		{
+			"name": "fish_4001_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_4001_tex.json"
+		},
+		{
+			"name": "fish_4002_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_4002_ske.json"
+		},
+		{
+			"name": "fish_4002_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_4002_tex.json"
+		},
+		{
+			"name": "fish_4003_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_4003_ske.json"
+		},
+		{
+			"name": "fish_4003_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_4003_tex.json"
+		},
+		{
+			"name": "fish_4004_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_4004_ske.json"
+		},
+		{
+			"name": "fish_4004_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_4004_tex.json"
+		},
+		{
+			"name": "fish_5001_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_5001_ske.json"
+		},
+		{
+			"name": "fish_5001_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_5001_tex.json"
+		},
+		{
+			"name": "fish_5002_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_5002_ske.json"
+		},
+		{
+			"name": "fish_5002_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_5002_tex.json"
+		},
+		{
+			"name": "fish_5003_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_5003_ske.json"
+		},
+		{
+			"name": "fish_5003_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_5003_tex.json"
+		},
+		{
+			"name": "fish_2001_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fish/fish_2001_tex.png"
+		},
+		{
+			"name": "fish_2002_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fish/fish_2002_tex.png"
+		},
+		{
+			"name": "fish_2003_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fish/fish_2003_tex.png"
+		},
+		{
+			"name": "fish_2004_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fish/fish_2004_tex.png"
+		},
+		{
+			"name": "fish_2005_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fish/fish_2005_tex.png"
+		},
+		{
+			"name": "fish_2006_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fish/fish_2006_tex.png"
+		},
+		{
+			"name": "fish_2007_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fish/fish_2007_tex.png"
+		},
+		{
+			"name": "fish_2008_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fish/fish_2008_tex.png"
+		},
+		{
+			"name": "fish_2009_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fish/fish_2009_tex.png"
+		},
+		{
+			"name": "fish_2010_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fish/fish_2010_tex.png"
+		},
+		{
+			"name": "fish_2011_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fish/fish_2011_tex.png"
+		},
+		{
+			"name": "fish_2012_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fish/fish_2012_tex.png"
+		},
+		{
+			"name": "fish_2013_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fish/fish_2013_tex.png"
+		},
+		{
+			"name": "fish_2014_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fish/fish_2014_tex.png"
+		},
+		{
+			"name": "fish_3001_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fish/fish_3001_tex.png"
+		},
+		{
+			"name": "fish_3002_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fish/fish_3002_tex.png"
+		},
+		{
+			"name": "fish_3003_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fish/fish_3003_tex.png"
+		},
+		{
+			"name": "fish_3004_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fish/fish_3004_tex.png"
+		},
+		{
+			"name": "fish_3005_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fish/fish_3005_tex.png"
+		},
+		{
+			"name": "fish_3006_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fish/fish_3006_tex.png"
+		},
+		{
+			"name": "fish_3007_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fish/fish_3007_tex.png"
+		},
+		{
+			"name": "fish_3008_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fish/fish_3008_tex.png"
+		},
+		{
+			"name": "fish_3009_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fish/fish_3009_tex.png"
+		},
+		{
+			"name": "fish_4001_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fish/fish_4001_tex.png"
+		},
+		{
+			"name": "fish_4002_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fish/fish_4002_tex.png"
+		},
+		{
+			"name": "fish_4003_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fish/fish_4003_tex.png"
+		},
+		{
+			"name": "fish_4004_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fish/fish_4004_tex.png"
+		},
+		{
+			"name": "fish_5001_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fish/fish_5001_tex.png"
+		},
+		{
+			"name": "fish_5002_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fish/fish_5002_tex.png"
+		},
+		{
+			"name": "fish_5003_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fish/fish_5003_tex.png"
+		},
+		{
+			"name": "fish_2001_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_2001_ske.json"
+		},
+		{
+			"name": "fish_2001_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_2001_tex.json"
+		},
+		{
+			"name": "fish_2002_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_2002_ske.json"
+		},
+		{
+			"name": "fish_2002_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_2002_tex.json"
+		},
+		{
+			"name": "fish_2003_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_2003_ske.json"
+		},
+		{
+			"name": "fish_2003_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_2003_tex.json"
+		},
+		{
+			"name": "fish_2004_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_2004_ske.json"
+		},
+		{
+			"name": "fish_2004_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_2004_tex.json"
+		},
+		{
+			"name": "fish_2005_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_2005_ske.json"
+		},
+		{
+			"name": "fish_2005_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_2005_tex.json"
+		},
+		{
+			"name": "fish_2006_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_2006_ske.json"
+		},
+		{
+			"name": "fish_2006_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_2006_tex.json"
+		},
+		{
+			"name": "fish_2007_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_2007_ske.json"
+		},
+		{
+			"name": "fish_2007_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_2007_tex.json"
+		},
+		{
+			"name": "fish_2008_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_2008_ske.json"
+		},
+		{
+			"name": "fish_2008_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_2008_tex.json"
+		},
+		{
+			"name": "fish_2009_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_2009_ske.json"
+		},
+		{
+			"name": "fish_2009_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_2009_tex.json"
+		},
+		{
+			"name": "fish_2010_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_2010_ske.json"
+		},
+		{
+			"name": "fish_2010_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_2010_tex.json"
+		},
+		{
+			"name": "fish_2011_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_2011_ske.json"
+		},
+		{
+			"name": "fish_2011_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_2011_tex.json"
+		},
+		{
+			"name": "fish_2012_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_2012_ske.json"
+		},
+		{
+			"name": "fish_2012_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_2012_tex.json"
+		},
+		{
+			"name": "fish_2013_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_2013_ske.json"
+		},
+		{
+			"name": "fish_2013_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_2013_tex.json"
+		},
+		{
+			"name": "fishTidePath_json",
+			"type": "json",
+			"url": "games/fishjoy/config/fishTidePath.json"
+		},
+		{
+			"name": "fish_path8043_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8043.json"
+		},
+		{
+			"name": "fish_path8044_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8044.json"
+		},
+		{
+			"name": "fish_path8045_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8045.json"
+		},
+		{
+			"name": "fish_path8046_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8046.json"
+		},
+		{
+			"name": "fish_path8047_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8047.json"
+		},
+		{
+			"name": "fish_path8048_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8048.json"
+		},
+		{
+			"name": "fish_path8049_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8049.json"
+		},
+		{
+			"name": "fish_path8050_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8050.json"
+		},
+		{
+			"name": "fish_path8051_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8051.json"
+		},
+		{
+			"name": "fish_path8052_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8052.json"
+		},
+		{
+			"name": "fish_path8053_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8053.json"
+		},
+		{
+			"name": "fish_path8054_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8054.json"
+		},
+		{
+			"name": "fish_path8055_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8055.json"
+		},
+		{
+			"name": "fish_path8056_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8056.json"
+		},
+		{
+			"name": "fish_path8057_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8057.json"
+		},
+		{
+			"name": "fish_path8058_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8058.json"
+		},
+		{
+			"name": "fish_path8059_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8059.json"
+		},
+		{
+			"name": "fish_path8060_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8060.json"
+		},
+		{
+			"name": "fish_path8061_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8061.json"
+		},
+		{
+			"name": "fish_path8062_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8062.json"
+		},
+		{
+			"name": "fish_path8063_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8063.json"
+		},
+		{
+			"name": "fish_path8064_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8064.json"
+		},
+		{
+			"name": "fish_path8065_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8065.json"
+		},
+		{
+			"name": "fish_path8066_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8066.json"
+		},
+		{
+			"name": "fish_path8067_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8067.json"
+		},
+		{
+			"name": "fish_path8068_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8068.json"
+		},
+		{
+			"name": "fish_path8069_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8069.json"
+		},
+		{
+			"name": "fish_path8070_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8070.json"
+		},
+		{
+			"name": "fish_path8071_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8071.json"
+		},
+		{
+			"name": "fish_path8072_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8072.json"
+		},
+		{
+			"name": "fish_path8073_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8073.json"
+		},
+		{
+			"name": "fish_path8074_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8074.json"
+		},
+		{
+			"name": "fish_path8075_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8075.json"
+		},
+		{
+			"name": "fish_path8076_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8076.json"
+		},
+		{
+			"name": "fish_path8077_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8077.json"
+		},
+		{
+			"name": "fish_path8078_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8078.json"
+		},
+		{
+			"name": "fish_path8079_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8079.json"
+		},
+		{
+			"name": "fish_path8080_json",
+			"type": "json",
+			"url": "games/fishjoy/path/fish_path8080.json"
+		},
+		{
+			"name": "fish_tide10001_json",
+			"type": "json",
+			"url": "games/fishjoy/tide/fish_tide10001.json"
+		},
+		{
+			"name": "fish_tide10002_json",
+			"type": "json",
+			"url": "games/fishjoy/tide/fish_tide10002.json"
+		},
+		{
+			"name": "fish_tide10003_json",
+			"type": "json",
+			"url": "games/fishjoy/tide/fish_tide10003.json"
+		},
+		{
+			"name": "fish_tide10004_json",
+			"type": "json",
+			"url": "games/fishjoy/tide/fish_tide10004.json"
+		},
+		{
+			"name": "fish_tide10005_json",
+			"type": "json",
+			"url": "games/fishjoy/tide/fish_tide10005.json"
+		},
+		{
+			"name": "tide_wave_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/ani/tide_wave_ske.json"
+		},
+		{
+			"name": "tide_wave_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/ani/tide_wave_tex.json"
+		},
+		{
+			"name": "tide_wave_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/ani/tide_wave_tex.png"
+		},
+		{
+			"name": "fish_bulb_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/partcile/fish_bulb.json"
+		},
+		{
+			"name": "fish_bulb_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/partcile/fish_bulb.png"
+		},
+		{
+			"name": "part_fish_lobby_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/partcile/part_fish_lobby.json"
+		},
+		{
+			"name": "part_fish_lobby_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/partcile/part_fish_lobby.png"
+		},
+		{
+			"name": "grabfish_ui_text01_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/common/grabfish_ui_text01.png"
+		},
+		{
+			"name": "gun_config_json",
+			"type": "json",
+			"url": "games/fishjoy/config/gun_config.json"
+		},
+		{
+			"name": "grabfish_ui_gameHelpss_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/common/grabfish_ui_gameHelpss.png"
+		},
+		{
+			"name": "fish_big_boom_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/ani/fish_big_boom_tex.png"
+		},
+		{
+			"name": "fish_big_boom_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/ani/fish_big_boom_ske.json"
+		},
+		{
+			"name": "fish_big_boom_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/ani/fish_big_boom_tex.json"
+		},
+		{
+			"name": "goldSpecial_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/ani/goldSpecial_ske.json"
+		},
+		{
+			"name": "goldSpecial_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/ani/goldSpecial_tex.json"
+		},
+		{
+			"name": "goldSpecial_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/ani/goldSpecial_tex.png"
+		},
+		{
+			"name": "shui0018_jpg",
+			"type": "image",
+			"url": "games/fishjoy/assets/MC/water/shui0018.jpg"
+		},
+		{
+			"name": "shui0001_jpg",
+			"type": "image",
+			"url": "games/fishjoy/assets/MC/water/shui0001.jpg"
+		},
+		{
+			"name": "shui0002_jpg",
+			"type": "image",
+			"url": "games/fishjoy/assets/MC/water/shui0002.jpg"
+		},
+		{
+			"name": "shui0003_jpg",
+			"type": "image",
+			"url": "games/fishjoy/assets/MC/water/shui0003.jpg"
+		},
+		{
+			"name": "shui0004_jpg",
+			"type": "image",
+			"url": "games/fishjoy/assets/MC/water/shui0004.jpg"
+		},
+		{
+			"name": "shui0005_jpg",
+			"type": "image",
+			"url": "games/fishjoy/assets/MC/water/shui0005.jpg"
+		},
+		{
+			"name": "shui0006_jpg",
+			"type": "image",
+			"url": "games/fishjoy/assets/MC/water/shui0006.jpg"
+		},
+		{
+			"name": "shui0007_jpg",
+			"type": "image",
+			"url": "games/fishjoy/assets/MC/water/shui0007.jpg"
+		},
+		{
+			"name": "shui0008_jpg",
+			"type": "image",
+			"url": "games/fishjoy/assets/MC/water/shui0008.jpg"
+		},
+		{
+			"name": "shui0009_jpg",
+			"type": "image",
+			"url": "games/fishjoy/assets/MC/water/shui0009.jpg"
+		},
+		{
+			"name": "shui0010_jpg",
+			"type": "image",
+			"url": "games/fishjoy/assets/MC/water/shui0010.jpg"
+		},
+		{
+			"name": "shui0011_jpg",
+			"type": "image",
+			"url": "games/fishjoy/assets/MC/water/shui0011.jpg"
+		},
+		{
+			"name": "shui0012_jpg",
+			"type": "image",
+			"url": "games/fishjoy/assets/MC/water/shui0012.jpg"
+		},
+		{
+			"name": "shui0013_jpg",
+			"type": "image",
+			"url": "games/fishjoy/assets/MC/water/shui0013.jpg"
+		},
+		{
+			"name": "shui0014_jpg",
+			"type": "image",
+			"url": "games/fishjoy/assets/MC/water/shui0014.jpg"
+		},
+		{
+			"name": "shui0015_jpg",
+			"type": "image",
+			"url": "games/fishjoy/assets/MC/water/shui0015.jpg"
+		},
+		{
+			"name": "shui0016_jpg",
+			"type": "image",
+			"url": "games/fishjoy/assets/MC/water/shui0016.jpg"
+		},
+		{
+			"name": "shui0017_jpg",
+			"type": "image",
+			"url": "games/fishjoy/assets/MC/water/shui0017.jpg"
+		},
+		{
+			"name": "bulb1_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/partcile/bulb1.json"
+		},
+		{
+			"name": "bulb1_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/partcile/bulb1.png"
+		},
+		{
+			"name": "shui0027_jpg",
+			"type": "image",
+			"url": "games/fishjoy/assets/MC/water/shui0027.jpg"
+		},
+		{
+			"name": "shui0019_jpg",
+			"type": "image",
+			"url": "games/fishjoy/assets/MC/water/shui0019.jpg"
+		},
+		{
+			"name": "shui0020_jpg",
+			"type": "image",
+			"url": "games/fishjoy/assets/MC/water/shui0020.jpg"
+		},
+		{
+			"name": "shui0021_jpg",
+			"type": "image",
+			"url": "games/fishjoy/assets/MC/water/shui0021.jpg"
+		},
+		{
+			"name": "shui0022_jpg",
+			"type": "image",
+			"url": "games/fishjoy/assets/MC/water/shui0022.jpg"
+		},
+		{
+			"name": "shui0023_jpg",
+			"type": "image",
+			"url": "games/fishjoy/assets/MC/water/shui0023.jpg"
+		},
+		{
+			"name": "shui0024_jpg",
+			"type": "image",
+			"url": "games/fishjoy/assets/MC/water/shui0024.jpg"
+		},
+		{
+			"name": "shui0025_jpg",
+			"type": "image",
+			"url": "games/fishjoy/assets/MC/water/shui0025.jpg"
+		},
+		{
+			"name": "shui0026_jpg",
+			"type": "image",
+			"url": "games/fishjoy/assets/MC/water/shui0026.jpg"
+		},
+		{
+			"name": "fishUI_buyu_bg1_jpg",
+			"type": "image",
+			"url": "games/fishjoy/assets/scene/fishUI_buyu_bg1.jpg"
+		},
+		{
+			"name": "fishUI_buyu_bg2_jpg",
+			"type": "image",
+			"url": "games/fishjoy/assets/scene/fishUI_buyu_bg2.jpg"
+		},
+		{
+			"name": "fishUI_buyu_bg3_jpg",
+			"type": "image",
+			"url": "games/fishjoy/assets/scene/fishUI_buyu_bg3.jpg"
+		},
+		{
+			"name": "fishUI_buyu_bg4_jpg",
+			"type": "image",
+			"url": "games/fishjoy/assets/scene/fishUI_buyu_bg4.jpg"
+		},
+		{
+			"name": "fishUI_buyu_bg5_jpg",
+			"type": "image",
+			"url": "games/fishjoy/assets/scene/fishUI_buyu_bg5.jpg"
+		},
+		{
+			"url": "games/fishjoy/assets/scene/fishUI_buyu_bg6.jpg",
+			"type": "image",
+			"name": "fishUI_buyu_bg6_jpg"
+		},
+		{
+			"name": "Backgrounds_json",
+			"type": "json",
+			"url": "games/fishjoy/config/Backgrounds.json"
+		},
+		{
+			"name": "fishjoy_baoji_fnt",
+			"type": "font",
+			"url": "games/fishjoy/assets/font/fishjoy_baoji.fnt"
+		},
+		{
+			"name": "transPartical_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/partcile/transPartical.json"
+		},
+		{
+			"name": "transPartical_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/partcile/transPartical.png"
+		},
+		{
+			"name": "fish_4005_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_4005_ske.json"
+		},
+		{
+			"name": "fish_4005_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fish/fish_4005_tex.json"
+		},
+		{
+			"name": "fish_4005_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fish/fish_4005_tex.png"
+		},
+		{
+			"name": "arm_effect_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/ani/arm_effect_tex.json"
+		},
+		{
+			"name": "arm_effect_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/ani/arm_effect_tex.png"
+		},
+		{
+			"name": "arm_effect_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/ani/arm_effect_ske.json"
+		},
+		{
+			"name": "fishHit_effect_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/ani/fishHit_effect_tex.png"
+		},
+		{
+			"name": "fishHit_effect_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/ani/fishHit_effect_ske.json"
+		},
+		{
+			"name": "fishHit_effect_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/ani/fishHit_effect_tex.json"
+		},
+		{
+			"name": "fish_newBoom_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/ani/fish_newBoom_ske.json"
+		},
+		{
+			"name": "fish_newBoom_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/ani/fish_newBoom_tex.json"
+		},
+		{
+			"name": "fish_newBoom_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/ani/fish_newBoom_tex.png"
+		},
+		{
+			"name": "WaveSE_mp3",
+			"type": "sound",
+			"url": "games/fishjoy/assets/sound/WaveSE.mp3"
+		},
+		{
+			"name": "CaptureSE1_mp3",
+			"type": "sound",
+			"url": "games/fishjoy/assets/sound/CaptureSE1.mp3"
+		},
+		{
+			"name": "CaptureSE2_mp3",
+			"type": "sound",
+			"url": "games/fishjoy/assets/sound/CaptureSE2.mp3"
+		},
+		{
+			"name": "CaptureSE3_mp3",
+			"type": "sound",
+			"url": "games/fishjoy/assets/sound/CaptureSE3.mp3"
+		},
+		{
+			"name": "EnterSE_mp3",
+			"type": "sound",
+			"url": "games/fishjoy/assets/sound/EnterSE.mp3"
+		},
+		{
+			"name": "FisheryBGM1_mp3",
+			"type": "sound",
+			"url": "games/fishjoy/assets/sound/FisheryBGM1.mp3"
+		},
+		{
+			"name": "FisheryBGM2_mp3",
+			"type": "sound",
+			"url": "games/fishjoy/assets/sound/FisheryBGM2.mp3"
+		},
+		{
+			"name": "FisheryBGM3_mp3",
+			"type": "sound",
+			"url": "games/fishjoy/assets/sound/FisheryBGM3.mp3"
+		},
+		{
+			"name": "HallBGM_mp3",
+			"type": "sound",
+			"url": "games/fishjoy/assets/sound/HallBGM.mp3"
+		},
+		{
+			"name": "HitSE_mp3",
+			"type": "sound",
+			"url": "games/fishjoy/assets/sound/HitSE.mp3"
+		},
+		{
+			"name": "TideBGM1_mp3",
+			"type": "sound",
+			"url": "games/fishjoy/assets/sound/TideBGM1.mp3"
+		},
+		{
+			"name": "TideBGM2_mp3",
+			"type": "sound",
+			"url": "games/fishjoy/assets/sound/TideBGM2.mp3"
+		},
+		{
+			"name": "shadow_4002_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_4002_tex.json"
+		},
+		{
+			"name": "shadow_4003_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_4003_ske.json"
+		},
+		{
+			"name": "shadow_4003_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_4003_tex.json"
+		},
+		{
+			"name": "shadow_4004_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_4004_ske.json"
+		},
+		{
+			"name": "shadow_4004_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_4004_tex.json"
+		},
+		{
+			"name": "shadow_4005_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_4005_ske.json"
+		},
+		{
+			"name": "shadow_4005_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_4005_tex.json"
+		},
+		{
+			"name": "shadow_5001_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_5001_ske.json"
+		},
+		{
+			"name": "shadow_5001_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_5001_tex.json"
+		},
+		{
+			"name": "shadow_5002_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_5002_ske.json"
+		},
+		{
+			"name": "shadow_5002_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_5002_tex.json"
+		},
+		{
+			"name": "shadow_5003_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_5003_ske.json"
+		},
+		{
+			"name": "shadow_5003_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_5003_tex.json"
+		},
+		{
+			"name": "shadow_2001_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2001_tex.png"
+		},
+		{
+			"name": "shadow_2002_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2002_tex.png"
+		},
+		{
+			"name": "shadow_2003_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2003_tex.png"
+		},
+		{
+			"name": "shadow_2004_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2004_tex.png"
+		},
+		{
+			"name": "shadow_2005_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2005_tex.png"
+		},
+		{
+			"name": "shadow_2006_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2006_tex.png"
+		},
+		{
+			"name": "shadow_2007_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2007_tex.png"
+		},
+		{
+			"name": "shadow_2008_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2008_tex.png"
+		},
+		{
+			"name": "shadow_2009_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2009_tex.png"
+		},
+		{
+			"name": "shadow_2010_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2010_tex.png"
+		},
+		{
+			"name": "shadow_2011_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2011_tex.png"
+		},
+		{
+			"name": "shadow_2012_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2012_tex.png"
+		},
+		{
+			"name": "shadow_2013_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2013_tex.png"
+		},
+		{
+			"name": "shadow_2014_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2014_tex.png"
+		},
+		{
+			"name": "shadow_3001_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fishshadow/shadow_3001_tex.png"
+		},
+		{
+			"name": "shadow_3002_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fishshadow/shadow_3002_tex.png"
+		},
+		{
+			"name": "shadow_3003_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fishshadow/shadow_3003_tex.png"
+		},
+		{
+			"name": "shadow_3004_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fishshadow/shadow_3004_tex.png"
+		},
+		{
+			"name": "shadow_3005_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fishshadow/shadow_3005_tex.png"
+		},
+		{
+			"name": "shadow_3006_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fishshadow/shadow_3006_tex.png"
+		},
+		{
+			"name": "shadow_3007_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fishshadow/shadow_3007_tex.png"
+		},
+		{
+			"name": "shadow_3008_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fishshadow/shadow_3008_tex.png"
+		},
+		{
+			"name": "shadow_3009_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fishshadow/shadow_3009_tex.png"
+		},
+		{
+			"name": "shadow_4001_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fishshadow/shadow_4001_tex.png"
+		},
+		{
+			"name": "shadow_4002_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fishshadow/shadow_4002_tex.png"
+		},
+		{
+			"name": "shadow_4003_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fishshadow/shadow_4003_tex.png"
+		},
+		{
+			"name": "shadow_4004_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fishshadow/shadow_4004_tex.png"
+		},
+		{
+			"name": "shadow_4005_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fishshadow/shadow_4005_tex.png"
+		},
+		{
+			"name": "shadow_5001_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fishshadow/shadow_5001_tex.png"
+		},
+		{
+			"name": "shadow_5002_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fishshadow/shadow_5002_tex.png"
+		},
+		{
+			"name": "shadow_5003_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/fishshadow/shadow_5003_tex.png"
+		},
+		{
+			"name": "shadow_2001_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2001_ske.json"
+		},
+		{
+			"name": "shadow_2001_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2001_tex.json"
+		},
+		{
+			"name": "shadow_2002_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2002_ske.json"
+		},
+		{
+			"name": "shadow_2002_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2002_tex.json"
+		},
+		{
+			"name": "shadow_2003_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2003_ske.json"
+		},
+		{
+			"name": "shadow_2003_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2003_tex.json"
+		},
+		{
+			"name": "shadow_2004_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2004_ske.json"
+		},
+		{
+			"name": "shadow_2004_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2004_tex.json"
+		},
+		{
+			"name": "shadow_2005_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2005_ske.json"
+		},
+		{
+			"name": "shadow_2005_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2005_tex.json"
+		},
+		{
+			"name": "shadow_2006_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2006_ske.json"
+		},
+		{
+			"name": "shadow_2006_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2006_tex.json"
+		},
+		{
+			"name": "shadow_2007_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2007_ske.json"
+		},
+		{
+			"name": "shadow_2007_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2007_tex.json"
+		},
+		{
+			"name": "shadow_2008_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2008_ske.json"
+		},
+		{
+			"name": "shadow_2008_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2008_tex.json"
+		},
+		{
+			"name": "shadow_2009_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2009_ske.json"
+		},
+		{
+			"name": "shadow_2009_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2009_tex.json"
+		},
+		{
+			"name": "shadow_2010_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2010_ske.json"
+		},
+		{
+			"name": "shadow_2010_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2010_tex.json"
+		},
+		{
+			"name": "shadow_2011_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2011_ske.json"
+		},
+		{
+			"name": "shadow_2011_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2011_tex.json"
+		},
+		{
+			"name": "shadow_2012_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2012_ske.json"
+		},
+		{
+			"name": "shadow_2012_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2012_tex.json"
+		},
+		{
+			"name": "shadow_2013_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2013_ske.json"
+		},
+		{
+			"name": "shadow_2013_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2013_tex.json"
+		},
+		{
+			"name": "shadow_2014_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2014_ske.json"
+		},
+		{
+			"name": "shadow_2014_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_2014_tex.json"
+		},
+		{
+			"name": "shadow_3001_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_3001_ske.json"
+		},
+		{
+			"name": "shadow_3001_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_3001_tex.json"
+		},
+		{
+			"name": "shadow_3002_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_3002_ske.json"
+		},
+		{
+			"name": "shadow_3002_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_3002_tex.json"
+		},
+		{
+			"name": "shadow_3003_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_3003_ske.json"
+		},
+		{
+			"name": "shadow_3003_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_3003_tex.json"
+		},
+		{
+			"name": "shadow_3004_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_3004_ske.json"
+		},
+		{
+			"name": "shadow_3004_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_3004_tex.json"
+		},
+		{
+			"name": "shadow_3005_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_3005_ske.json"
+		},
+		{
+			"name": "shadow_3005_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_3005_tex.json"
+		},
+		{
+			"name": "shadow_3006_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_3006_ske.json"
+		},
+		{
+			"name": "shadow_3006_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_3006_tex.json"
+		},
+		{
+			"name": "shadow_3007_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_3007_ske.json"
+		},
+		{
+			"name": "shadow_3007_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_3007_tex.json"
+		},
+		{
+			"name": "shadow_3008_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_3008_ske.json"
+		},
+		{
+			"name": "shadow_3008_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_3008_tex.json"
+		},
+		{
+			"name": "shadow_3009_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_3009_ske.json"
+		},
+		{
+			"name": "shadow_3009_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_3009_tex.json"
+		},
+		{
+			"name": "shadow_4001_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_4001_ske.json"
+		},
+		{
+			"name": "shadow_4001_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_4001_tex.json"
+		},
+		{
+			"name": "shadow_4002_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/fishshadow/shadow_4002_ske.json"
+		},
+		{
+			"name": "fish_net7_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/net/fish_net7_ske.json"
+		},
+		{
+			"name": "fish_net7_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/net/fish_net7_tex.json"
+		},
+		{
+			"name": "fish_net7_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/net/fish_net7_tex.png"
+		},
+		{
+			"name": "fish_net8_ske_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/net/fish_net8_ske.json"
+		},
+		{
+			"name": "fish_net8_tex_json",
+			"type": "json",
+			"url": "games/fishjoy/assets/net/fish_net8_tex.json"
+		},
+		{
+			"name": "fish_net8_tex_png",
+			"type": "image",
+			"url": "games/fishjoy/assets/net/fish_net8_tex.png"
+		},
+		{
+			"name": "hall_ui_button1_png",
+			"type": "image",
+			"url": "games/public/assets/newImg/hall_ui_button1.png"
+		},
+		{
+			"name": "hall_ui_button2_png",
+			"type": "image",
+			"url": "games/public/assets/newImg/hall_ui_button2.png"
+		},
+		{
+			"name": "hall_ui_no_png",
+			"type": "image",
+			"url": "games/public/assets/newImg/hall_ui_no.png"
+		},
+		{
+			"name": "hall_ui_s_png",
+			"type": "image",
+			"url": "games/public/assets/newImg/hall_ui_s.png"
+		},
+		{
+			"name": "hall_ui_yes_png",
+			"type": "image",
+			"url": "games/public/assets/newImg/hall_ui_yes.png"
+		}
+	]
+}

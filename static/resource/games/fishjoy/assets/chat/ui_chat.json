@@ -1,0 +1,9 @@
+{"file":"ui_chat.png","frames":{
+"grabfish_ui_chatbutten":{"x":179,"y":71,"w":69,"h":67,"offX":0,"offY":0,"sourceW":69,"sourceH":67},
+"grabfish_ui_chaofeng":{"x":46,"y":80,"w":42,"h":30,"offX":14,"offY":21,"sourceW":69,"sourceH":68},
+"grabfish_ui_chatarea":{"x":1,"y":1,"w":176,"h":77,"offX":0,"offY":0,"sourceW":176,"sourceH":77},
+"grabfish_ui_chatback2":{"x":179,"y":1,"w":69,"h":68,"offX":0,"offY":0,"sourceW":69,"sourceH":68},
+"grabfish_ui_xianmu":{"x":90,"y":80,"w":42,"h":29,"offX":14,"offY":20,"sourceW":69,"sourceH":68},
+"grabfish_ui_jihuo":{"x":134,"y":80,"w":29,"h":30,"offX":20,"offY":19,"sourceW":69,"sourceH":68},
+"grabfish_ui_mobai":{"x":90,"y":111,"w":28,"h":30,"offX":21,"offY":19,"sourceW":69,"sourceH":68},
+"grabfish_ui_wode":{"x":1,"y":80,"w":43,"h":30,"offX":13,"offY":20,"sourceW":69,"sourceH":68}}}

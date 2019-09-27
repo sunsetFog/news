@@ -1,0 +1,3152 @@
+{
+    "frameRate": 60,
+    "name": "CardBone_6",
+    "version": "5.5",
+    "compatibleVersion": "5.5",
+    "armature": [
+        {
+            "type": "Armature",
+            "frameRate": 60,
+            "name": "Armature",
+            "aabb": {
+                "x": -710.29,
+                "y": -116.07,
+                "width": 1269.69,
+                "height": 177.27
+            },
+            "bone": [
+                {
+                    "name": "root"
+                },
+                {
+                    "name": "yan_10",
+                    "parent": "root",
+                    "transform": {
+                        "x": -75.85,
+                        "y": -20.15,
+                        "scX": 1.08,
+                        "scY": 1.14
+                    }
+                },
+                {
+                    "name": "yan_0",
+                    "parent": "root",
+                    "transform": {
+                        "x": -483.1,
+                        "y": -34.3,
+                        "scX": 1.65,
+                        "scY": 1.74
+                    }
+                },
+                {
+                    "name": "yan_1",
+                    "parent": "root",
+                    "transform": {
+                        "x": -492.6,
+                        "y": 9.7,
+                        "scX": 1.27,
+                        "scY": 1.34
+                    }
+                },
+                {
+                    "name": "yan_2",
+                    "parent": "root",
+                    "transform": {
+                        "x": -273.6,
+                        "y": -17.5,
+                        "scX": 0.67,
+                        "scY": 0.71
+                    }
+                },
+                {
+                    "name": "yan_3",
+                    "parent": "root",
+                    "transform": {
+                        "x": -192.6,
+                        "y": -19.3,
+                        "scX": 0.67,
+                        "scY": 0.71
+                    }
+                },
+                {
+                    "name": "yan_4",
+                    "parent": "root",
+                    "transform": {
+                        "x": 35.3,
+                        "y": -19.5,
+                        "scX": 1.28,
+                        "scY": 1.36
+                    }
+                },
+                {
+                    "name": "yan_5",
+                    "parent": "root",
+                    "transform": {
+                        "x": 87.1,
+                        "y": -19.25,
+                        "scX": 0.59,
+                        "scY": 0.63
+                    }
+                },
+                {
+                    "name": "yan_6",
+                    "parent": "root",
+                    "transform": {
+                        "x": 182.8,
+                        "y": -17.5,
+                        "scX": 0.63,
+                        "scY": 0.67
+                    }
+                },
+                {
+                    "name": "yan_7",
+                    "parent": "root",
+                    "transform": {
+                        "x": 274.85,
+                        "y": -17.5,
+                        "scX": 0.52,
+                        "scY": 0.55
+                    }
+                },
+                {
+                    "name": "yan_8",
+                    "parent": "root",
+                    "transform": {
+                        "x": 508.4,
+                        "y": -15.6,
+                        "scX": 0.67,
+                        "scY": 0.7
+                    }
+                },
+                {
+                    "name": "hongyan",
+                    "parent": "root",
+                    "transform": {
+                        "x": -478.7,
+                        "y": -22.15,
+                        "scX": 1.13,
+                        "scY": 1.13
+                    }
+                },
+                {
+                    "name": "hongyan_0",
+                    "parent": "root",
+                    "transform": {
+                        "x": -91.5,
+                        "y": -14.35
+                    }
+                },
+                {
+                    "name": "hongyan_1",
+                    "parent": "root",
+                    "transform": {
+                        "x": 114.55,
+                        "y": -22.1
+                    }
+                },
+                {
+                    "name": "hongyan_2",
+                    "parent": "root",
+                    "transform": {
+                        "x": 163,
+                        "y": -18.55,
+                        "skX": 179.05,
+                        "skY": 179.05,
+                        "scX": -1
+                    }
+                },
+                {
+                    "name": "hongyan_3",
+                    "parent": "root",
+                    "transform": {
+                        "x": 216.95,
+                        "y": -15.25,
+                        "skX": -169.28,
+                        "skY": -169.28,
+                        "scX": -0.76,
+                        "scY": 0.76
+                    }
+                },
+                {
+                    "name": "yan_9",
+                    "parent": "root",
+                    "transform": {
+                        "x": -464.3,
+                        "y": -19.1,
+                        "scX": 0.86,
+                        "scY": 0.9
+                    }
+                },
+                {
+                    "name": "yan",
+                    "parent": "root",
+                    "transform": {
+                        "x": -549.35,
+                        "y": -15.1,
+                        "scX": 0.86,
+                        "scY": 0.9
+                    }
+                },
+                {
+                    "name": "yan_11",
+                    "parent": "root",
+                    "transform": {
+                        "x": -13.15,
+                        "y": -20.35,
+                        "scX": 0.87,
+                        "scY": 0.92
+                    }
+                },
+                {
+                    "name": "yan_12",
+                    "parent": "root",
+                    "transform": {
+                        "x": 370.55,
+                        "y": -20.15,
+                        "scX": 0.97,
+                        "scY": 1.02
+                    }
+                },
+                {
+                    "name": "pian",
+                    "parent": "root",
+                    "transform": {
+                        "x": -181.6,
+                        "y": -24.9,
+                        "scX": -3.1,
+                        "scY": 2.08
+                    }
+                },
+                {
+                    "name": "feiji",
+                    "parent": "root",
+                    "transform": {
+                        "x": -484.8,
+                        "y": -44.1,
+                        "skX": -1.96,
+                        "skY": -1.96
+                    }
+                },
+                {
+                    "name": "huo",
+                    "parent": "root",
+                    "transform": {
+                        "x": -640.05,
+                        "y": -6.95,
+                        "scX": 0.64,
+                        "scY": 1.82
+                    }
+                },
+                {
+                    "name": "hongyan_4",
+                    "parent": "root",
+                    "transform": {
+                        "x": -517.45,
+                        "y": -25.1,
+                        "scX": 1.16,
+                        "scY": 1.16
+                    }
+                },
+                {
+                    "name": "dian",
+                    "parent": "root",
+                    "transform": {
+                        "x": -540.95,
+                        "y": -32.25,
+                        "skX": 11.24,
+                        "skY": 11.24
+                    }
+                },
+                {
+                    "name": "dian_0",
+                    "parent": "root",
+                    "transform": {
+                        "x": -543.3,
+                        "y": 4.65,
+                        "skX": 166.01,
+                        "skY": 170.98,
+                        "scX": -1.24,
+                        "scY": 1.01
+                    }
+                },
+                {
+                    "name": "dian_1",
+                    "parent": "root",
+                    "transform": {
+                        "x": -293.1,
+                        "y": -18.05
+                    }
+                },
+                {
+                    "name": "dian_2",
+                    "parent": "root",
+                    "transform": {
+                        "x": -57.15,
+                        "y": -15.55,
+                        "skX": 180,
+                        "skY": 180,
+                        "scX": -1
+                    }
+                },
+                {
+                    "name": "dian_3",
+                    "parent": "root",
+                    "transform": {
+                        "x": 87,
+                        "y": -16.15,
+                        "skX": -168.53,
+                        "skY": -168.53,
+                        "scX": -1
+                    }
+                },
+                {
+                    "name": "dian_4",
+                    "parent": "root",
+                    "transform": {
+                        "x": 133.95,
+                        "y": -14.1,
+                        "skX": -168.53,
+                        "skY": -168.53,
+                        "scX": -1
+                    }
+                },
+                {
+                    "name": "dian_5",
+                    "parent": "root",
+                    "transform": {
+                        "x": 215.05,
+                        "y": -16.15,
+                        "skX": -168.53,
+                        "skY": -168.53,
+                        "scX": -1
+                    }
+                },
+                {
+                    "name": "dian_6",
+                    "parent": "root",
+                    "transform": {
+                        "x": -304.7,
+                        "y": -61.4,
+                        "skX": 175.99,
+                        "skY": -179.03,
+                        "scX": -10.75,
+                        "scY": 0.26
+                    }
+                },
+                {
+                    "name": "dian_7",
+                    "parent": "root",
+                    "transform": {
+                        "x": -251.55,
+                        "y": 2.5,
+                        "skX": 174.99,
+                        "skY": 179.97,
+                        "scX": -9.86,
+                        "scY": 0.24
+                    }
+                },
+                {
+                    "name": "dian_8",
+                    "parent": "root",
+                    "transform": {
+                        "x": -147.65,
+                        "y": -35.3,
+                        "skX": 171.09,
+                        "skY": 179.98,
+                        "scX": -9.16,
+                        "scY": 0.12
+                    }
+                }
+            ],
+            "slot": [
+                {
+                    "name": "yan",
+                    "parent": "yan"
+                },
+                {
+                    "name": "yan_0",
+                    "parent": "yan_0"
+                },
+                {
+                    "name": "yan_1",
+                    "parent": "yan_1"
+                },
+                {
+                    "name": "yan_2",
+                    "parent": "yan_2"
+                },
+                {
+                    "name": "yan_3",
+                    "parent": "yan_3"
+                },
+                {
+                    "name": "yan_4",
+                    "parent": "yan_4"
+                },
+                {
+                    "name": "yan_5",
+                    "parent": "yan_5"
+                },
+                {
+                    "name": "yan_6",
+                    "parent": "yan_6"
+                },
+                {
+                    "name": "yan_7",
+                    "parent": "yan_7"
+                },
+                {
+                    "name": "yan_8",
+                    "parent": "yan_8"
+                },
+                {
+                    "name": "hongyan",
+                    "parent": "hongyan"
+                },
+                {
+                    "name": "hongyan_0",
+                    "parent": "hongyan_0"
+                },
+                {
+                    "name": "hongyan_1",
+                    "parent": "hongyan_1"
+                },
+                {
+                    "name": "hongyan_2",
+                    "parent": "hongyan_2"
+                },
+                {
+                    "name": "hongyan_3",
+                    "parent": "hongyan_3"
+                },
+                {
+                    "name": "yan_9",
+                    "parent": "yan_9"
+                },
+                {
+                    "name": "yan_10",
+                    "parent": "yan_10"
+                },
+                {
+                    "name": "yan_11",
+                    "parent": "yan_11"
+                },
+                {
+                    "name": "yan_12",
+                    "parent": "yan_12"
+                },
+                {
+                    "blendMode": "add",
+                    "name": "pian",
+                    "parent": "pian"
+                },
+                {
+                    "name": "feiji",
+                    "parent": "feiji"
+                },
+                {
+                    "name": "huo",
+                    "parent": "huo"
+                },
+                {
+                    "name": "hongyan_4",
+                    "parent": "hongyan_4"
+                },
+                {
+                    "blendMode": "add",
+                    "name": "dian",
+                    "parent": "dian"
+                },
+                {
+                    "blendMode": "add",
+                    "name": "dian_0",
+                    "parent": "dian_0"
+                },
+                {
+                    "blendMode": "add",
+                    "name": "dian_1",
+                    "parent": "dian_1"
+                },
+                {
+                    "blendMode": "add",
+                    "name": "dian_2",
+                    "parent": "dian_2"
+                },
+                {
+                    "blendMode": "add",
+                    "name": "dian_3",
+                    "parent": "dian_3"
+                },
+                {
+                    "blendMode": "add",
+                    "name": "dian_4",
+                    "parent": "dian_4"
+                },
+                {
+                    "blendMode": "add",
+                    "name": "dian_5",
+                    "parent": "dian_5"
+                },
+                {
+                    "blendMode": "add",
+                    "name": "dian_6",
+                    "parent": "dian_6"
+                },
+                {
+                    "blendMode": "add",
+                    "name": "dian_7",
+                    "parent": "dian_7"
+                },
+                {
+                    "blendMode": "add",
+                    "name": "dian_8",
+                    "parent": "dian_8"
+                }
+            ],
+            "skin": [
+                {
+                    "slot": [
+                        {
+                            "name": "yan_9",
+                            "display": [
+                                {
+                                    "name": "yan"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan_7",
+                            "display": [
+                                {
+                                    "name": "yan"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan",
+                            "display": [
+                                {
+                                    "name": "yan"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "dian_5",
+                            "display": [
+                                {
+                                    "name": "dian"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "hongyan_4",
+                            "display": [
+                                {
+                                    "name": "hongyan"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "pian",
+                            "display": [
+                                {
+                                    "name": "pian",
+                                    "transform": {
+                                        "x": 1.5,
+                                        "y": 2
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "hongyan_1",
+                            "display": [
+                                {
+                                    "name": "hongyan"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "dian_8",
+                            "display": [
+                                {
+                                    "name": "dian"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan_4",
+                            "display": [
+                                {
+                                    "name": "yan"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "dian_2",
+                            "display": [
+                                {
+                                    "name": "dian"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan_10",
+                            "display": [
+                                {
+                                    "name": "yan"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan_8",
+                            "display": [
+                                {
+                                    "name": "yan"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan_0",
+                            "display": [
+                                {
+                                    "name": "yan"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "dian_6",
+                            "display": [
+                                {
+                                    "name": "dian"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "dian",
+                            "display": [
+                                {
+                                    "name": "dian"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "feiji",
+                            "display": [
+                                {
+                                    "name": "feiji",
+                                    "transform": {
+                                        "x": 0.55,
+                                        "y": 0.05
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "hongyan_2",
+                            "display": [
+                                {
+                                    "name": "hongyan"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan_5",
+                            "display": [
+                                {
+                                    "name": "yan"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "dian_3",
+                            "display": [
+                                {
+                                    "name": "dian"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan_11",
+                            "display": [
+                                {
+                                    "name": "yan"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "hongyan",
+                            "display": [
+                                {
+                                    "name": "hongyan"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan_1",
+                            "display": [
+                                {
+                                    "name": "yan"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "dian_7",
+                            "display": [
+                                {
+                                    "name": "dian"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "dian_0",
+                            "display": [
+                                {
+                                    "name": "dian"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "huo",
+                            "display": [
+                                {
+                                    "name": "huo-1",
+                                    "transform": {
+                                        "x": 9,
+                                        "y": -3.5
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "hongyan_3",
+                            "display": [
+                                {
+                                    "name": "hongyan"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan_6",
+                            "display": [
+                                {
+                                    "name": "yan"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "dian_4",
+                            "display": [
+                                {
+                                    "name": "dian"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan_12",
+                            "display": [
+                                {
+                                    "name": "yan"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "hongyan_0",
+                            "display": [
+                                {
+                                    "name": "hongyan"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan_2",
+                            "display": [
+                                {
+                                    "name": "yan"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan_3",
+                            "display": [
+                                {
+                                    "name": "yan"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "dian_1",
+                            "display": [
+                                {
+                                    "name": "dian"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "animation": [
+                {
+                    "duration": 66,
+                    "fadeInTime": 0.3,
+                    "name": "newAnimation",
+                    "bone": [
+                        {
+                            "name": "yan",
+                            "translateFrame": [
+                                {
+                                    "duration": 2,
+                                    "x": 549.35,
+                                    "y": 15.1
+                                },
+                                {
+                                    "duration": 5,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 22,
+                                    "tweenEasing": 0,
+                                    "x": -40.35,
+                                    "y": -0.2
+                                },
+                                {
+                                    "duration": 37,
+                                    "x": -57.55,
+                                    "y": -0.9
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 2,
+                                    "x": 1.16,
+                                    "y": 1.11
+                                },
+                                {
+                                    "duration": 5,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 22,
+                                    "tweenEasing": 0,
+                                    "x": 1.06,
+                                    "y": 1.07
+                                },
+                                {
+                                    "duration": 37,
+                                    "x": 1.24,
+                                    "y": 1.26
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan_0",
+                            "translateFrame": [
+                                {
+                                    "duration": 2,
+                                    "x": 483.1,
+                                    "y": 34.3
+                                },
+                                {
+                                    "duration": 5,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 22,
+                                    "tweenEasing": 0,
+                                    "x": -40.65,
+                                    "y": -0.4
+                                },
+                                {
+                                    "duration": 37,
+                                    "x": -80.95,
+                                    "y": -1.7
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 2,
+                                    "x": 0.61,
+                                    "y": 0.57
+                                },
+                                {
+                                    "duration": 5,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 22,
+                                    "tweenEasing": 0,
+                                    "x": 1.05,
+                                    "y": 1.06
+                                },
+                                {
+                                    "duration": 37,
+                                    "x": 1.25,
+                                    "y": 1.25
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan_1",
+                            "translateFrame": [
+                                {
+                                    "duration": 2,
+                                    "x": 492.6,
+                                    "y": -9.7
+                                },
+                                {
+                                    "duration": 5,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 22,
+                                    "tweenEasing": 0,
+                                    "x": -40.5,
+                                    "y": -0.3
+                                },
+                                {
+                                    "duration": 37,
+                                    "x": -52.3,
+                                    "y": -1.35
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 2,
+                                    "x": 0.79,
+                                    "y": 0.75
+                                },
+                                {
+                                    "duration": 5,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 22,
+                                    "tweenEasing": 0,
+                                    "x": 1.06,
+                                    "y": 1.06
+                                },
+                                {
+                                    "duration": 37,
+                                    "x": 1.25,
+                                    "y": 1.25
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan_2",
+                            "translateFrame": [
+                                {
+                                    "duration": 7,
+                                    "x": 273.6,
+                                    "y": 17.5
+                                },
+                                {
+                                    "duration": 24,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 35,
+                                    "x": -23.2,
+                                    "y": -0.7
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 7,
+                                    "x": 1.49,
+                                    "y": 1.41
+                                },
+                                {
+                                    "duration": 24,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 35,
+                                    "x": 1.25,
+                                    "y": 1.25
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan_3",
+                            "translateFrame": [
+                                {
+                                    "duration": 13,
+                                    "x": 192.6,
+                                    "y": 19.3
+                                },
+                                {
+                                    "duration": 24,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 29,
+                                    "x": -7.2,
+                                    "y": -0.7
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 13,
+                                    "x": 1.49,
+                                    "y": 1.41
+                                },
+                                {
+                                    "duration": 24,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 29,
+                                    "x": 1.25,
+                                    "y": 1.25
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan_4",
+                            "translateFrame": [
+                                {
+                                    "duration": 22,
+                                    "x": -35.3,
+                                    "y": 19.5
+                                },
+                                {
+                                    "duration": 24,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 20,
+                                    "x": -12.3,
+                                    "y": -1.35
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 22,
+                                    "x": 0.78,
+                                    "y": 0.74
+                                },
+                                {
+                                    "duration": 24,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 20,
+                                    "x": 1.26,
+                                    "y": 1.25
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan_5",
+                            "translateFrame": [
+                                {
+                                    "duration": 24,
+                                    "x": -87.1,
+                                    "y": 19.25
+                                },
+                                {
+                                    "duration": 24,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 18,
+                                    "x": -29.8,
+                                    "y": -0.6
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 24,
+                                    "x": 1.69,
+                                    "y": 1.59
+                                },
+                                {
+                                    "duration": 24,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 18,
+                                    "x": 1.27,
+                                    "y": 1.25
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan_6",
+                            "translateFrame": [
+                                {
+                                    "duration": 28,
+                                    "x": -182.8,
+                                    "y": 17.5
+                                },
+                                {
+                                    "duration": 24,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 14,
+                                    "x": -35.15,
+                                    "y": -0.65
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 28,
+                                    "x": 1.59,
+                                    "y": 1.49
+                                },
+                                {
+                                    "duration": 24,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 14,
+                                    "x": 1.25,
+                                    "y": 1.25
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan_7",
+                            "translateFrame": [
+                                {
+                                    "duration": 32,
+                                    "x": -274.85,
+                                    "y": 17.5
+                                },
+                                {
+                                    "duration": 24,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 10,
+                                    "x": -9.15,
+                                    "y": -0.65
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 32,
+                                    "x": 1.92,
+                                    "y": 1.82
+                                },
+                                {
+                                    "duration": 24,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 10,
+                                    "x": 1.52,
+                                    "y": 1.53
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan_8",
+                            "translateFrame": [
+                                {
+                                    "duration": 42,
+                                    "x": -508.4,
+                                    "y": 15.6
+                                },
+                                {
+                                    "duration": 24,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 0,
+                                    "x": -15.55,
+                                    "y": -0.85
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 42,
+                                    "x": 1.49,
+                                    "y": 1.43
+                                },
+                                {
+                                    "duration": 24,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 0,
+                                    "x": 1.6,
+                                    "y": 1.61
+                                }
+                            ]
+                        },
+                        {
+                            "name": "hongyan",
+                            "translateFrame": [
+                                {
+                                    "duration": 3,
+                                    "x": 478.7,
+                                    "y": 22.15
+                                },
+                                {
+                                    "duration": 5,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 5,
+                                    "x": 478.7,
+                                    "y": 22.15
+                                },
+                                {
+                                    "duration": 17,
+                                    "tweenEasing": 0,
+                                    "x": 280.15,
+                                    "y": 5.15
+                                },
+                                {
+                                    "duration": 36,
+                                    "x": 258.15,
+                                    "y": -3.85
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 3,
+                                    "x": 0.89,
+                                    "y": 0.89
+                                },
+                                {
+                                    "duration": 5,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 5,
+                                    "x": 0.89,
+                                    "y": 0.89
+                                },
+                                {
+                                    "duration": 17,
+                                    "tweenEasing": 0,
+                                    "x": 0.89,
+                                    "y": 0.89
+                                },
+                                {
+                                    "duration": 36,
+                                    "x": 0.96,
+                                    "y": 0.96
+                                }
+                            ]
+                        },
+                        {
+                            "name": "hongyan_0",
+                            "translateFrame": [
+                                {
+                                    "duration": 17,
+                                    "x": 91.5,
+                                    "y": 14.35
+                                },
+                                {
+                                    "duration": 17,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 32,
+                                    "x": -22,
+                                    "y": -9
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 17
+                                },
+                                {
+                                    "duration": 17,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 32,
+                                    "x": 1.09,
+                                    "y": 1.09
+                                }
+                            ]
+                        },
+                        {
+                            "name": "hongyan_1",
+                            "translateFrame": [
+                                {
+                                    "duration": 26,
+                                    "x": -114.55,
+                                    "y": 22.1
+                                },
+                                {
+                                    "duration": 17,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 23,
+                                    "x": -30,
+                                    "y": -9
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 26
+                                },
+                                {
+                                    "duration": 17,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 23,
+                                    "x": 1.09,
+                                    "y": 1.09
+                                }
+                            ]
+                        },
+                        {
+                            "name": "hongyan_2",
+                            "translateFrame": [
+                                {
+                                    "duration": 28,
+                                    "x": -163,
+                                    "y": 18.55
+                                },
+                                {
+                                    "duration": 17,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 21,
+                                    "x": -25.85,
+                                    "y": 9.3
+                                }
+                            ],
+                            "rotateFrame": [
+                                {
+                                    "duration": 28,
+                                    "rotate": -179.05
+                                },
+                                {
+                                    "duration": 38
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 28,
+                                    "x": -1
+                                },
+                                {
+                                    "duration": 17,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 21,
+                                    "x": 1.09,
+                                    "y": 1.09
+                                }
+                            ]
+                        },
+                        {
+                            "name": "hongyan_3",
+                            "translateFrame": [
+                                {
+                                    "duration": 30,
+                                    "x": -216.95,
+                                    "y": 15.25
+                                },
+                                {
+                                    "duration": 17,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 19,
+                                    "x": -24.25,
+                                    "y": 3.95
+                                }
+                            ],
+                            "rotateFrame": [
+                                {
+                                    "duration": 30,
+                                    "rotate": 169.28
+                                },
+                                {
+                                    "duration": 36
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 30,
+                                    "x": -1.32,
+                                    "y": 1.32
+                                },
+                                {
+                                    "duration": 17,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 19,
+                                    "x": 1.09,
+                                    "y": 1.09
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan_9",
+                            "translateFrame": [
+                                {
+                                    "duration": 2,
+                                    "x": 464.3,
+                                    "y": 19.1
+                                },
+                                {
+                                    "duration": 24,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 40,
+                                    "x": -1.55,
+                                    "y": -0.9
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 2,
+                                    "x": 1.16,
+                                    "y": 1.11
+                                },
+                                {
+                                    "duration": 24,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 40,
+                                    "x": 1.24,
+                                    "y": 1.26
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan_10",
+                            "translateFrame": [
+                                {
+                                    "duration": 18,
+                                    "x": 75.85,
+                                    "y": 20.15
+                                },
+                                {
+                                    "duration": 24,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 24,
+                                    "x": -7.9,
+                                    "y": -1.15
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 18,
+                                    "x": 0.93,
+                                    "y": 0.88
+                                },
+                                {
+                                    "duration": 24,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 24,
+                                    "x": 1.25,
+                                    "y": 1.25
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan_11",
+                            "translateFrame": [
+                                {
+                                    "duration": 20,
+                                    "x": 13.15,
+                                    "y": 20.35
+                                },
+                                {
+                                    "duration": 24,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 22,
+                                    "x": -7.55,
+                                    "y": -0.95
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 20,
+                                    "x": 1.15,
+                                    "y": 1.09
+                                },
+                                {
+                                    "duration": 24,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 22,
+                                    "x": 1.26,
+                                    "y": 1.26
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan_12",
+                            "translateFrame": [
+                                {
+                                    "duration": 36,
+                                    "x": -370.55,
+                                    "y": 20.15
+                                },
+                                {
+                                    "duration": 24,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 6,
+                                    "x": -11.75,
+                                    "y": -1
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 36,
+                                    "x": 1.03,
+                                    "y": 0.98
+                                },
+                                {
+                                    "duration": 24,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 6,
+                                    "x": 1.25,
+                                    "y": 1.25
+                                }
+                            ]
+                        },
+                        {
+                            "name": "pian",
+                            "translateFrame": [
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 62,
+                                    "x": 140
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 62,
+                                    "x": 1.76,
+                                    "y": 1.54
+                                }
+                            ]
+                        },
+                        {
+                            "name": "feiji",
+                            "translateFrame": [
+                                {
+                                    "duration": 18,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 34,
+                                    "tweenEasing": 0,
+                                    "x": 553.75,
+                                    "y": 2.8
+                                },
+                                {
+                                    "x": 1376.3,
+                                    "y": 6
+                                },
+                                {
+                                    "duration": 13,
+                                    "x": 484.8,
+                                    "y": 44.1
+                                }
+                            ],
+                            "rotateFrame": [
+                                {
+                                    "duration": 18,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 34,
+                                    "tweenEasing": 0,
+                                    "rotate": 0.16
+                                },
+                                {},
+                                {
+                                    "duration": 13,
+                                    "rotate": 1.96
+                                }
+                            ]
+                        },
+                        {
+                            "name": "huo",
+                            "translateFrame": [
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 14,
+                                    "tweenEasing": 0,
+                                    "x": 59.6,
+                                    "y": -2.5
+                                },
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0,
+                                    "x": 518.05,
+                                    "y": 1
+                                },
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0,
+                                    "x": 634.2,
+                                    "y": 1.05
+                                },
+                                {
+                                    "duration": 5,
+                                    "tweenEasing": 0,
+                                    "x": 738.35,
+                                    "y": 1.1
+                                },
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0,
+                                    "x": 850.5,
+                                    "y": 1.1
+                                },
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0,
+                                    "x": 958.65,
+                                    "y": 3.15
+                                },
+                                {
+                                    "duration": 13,
+                                    "tweenEasing": 0,
+                                    "x": 1042.8,
+                                    "y": 1.2
+                                },
+                                {
+                                    "x": 1355.25,
+                                    "y": 1.3
+                                },
+                                {
+                                    "duration": 13,
+                                    "x": 640.05,
+                                    "y": 6.95
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 14,
+                                    "tweenEasing": 0,
+                                    "x": 2.88,
+                                    "y": 0.77
+                                },
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0,
+                                    "x": 2.22,
+                                    "y": 0.55
+                                },
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0,
+                                    "x": 1.56,
+                                    "y": 0.45
+                                },
+                                {
+                                    "duration": 5,
+                                    "tweenEasing": 0,
+                                    "x": 1.36,
+                                    "y": 0.54
+                                },
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0,
+                                    "x": 1.56,
+                                    "y": 0.6
+                                },
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0,
+                                    "x": 1.27,
+                                    "y": 0.37
+                                },
+                                {
+                                    "duration": 13,
+                                    "tweenEasing": 0,
+                                    "x": 1.56,
+                                    "y": 0.59
+                                },
+                                {
+                                    "duration": 14,
+                                    "x": 1.56,
+                                    "y": 0.55
+                                }
+                            ]
+                        },
+                        {
+                            "name": "hongyan_4",
+                            "translateFrame": [
+                                {
+                                    "duration": 8,
+                                    "x": 517.45,
+                                    "y": 25.1
+                                },
+                                {
+                                    "duration": 15,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 43,
+                                    "x": -27,
+                                    "y": -7.2
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 8,
+                                    "x": 0.86,
+                                    "y": 0.86
+                                },
+                                {
+                                    "duration": 15,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 43,
+                                    "x": 1.06,
+                                    "y": 1.06
+                                }
+                            ]
+                        },
+                        {
+                            "name": "dian",
+                            "translateFrame": [
+                                {
+                                    "duration": 2,
+                                    "x": 540.95,
+                                    "y": 32.25
+                                },
+                                {
+                                    "duration": 9,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 55,
+                                    "x": -67.9,
+                                    "y": -22.7
+                                }
+                            ],
+                            "rotateFrame": [
+                                {
+                                    "duration": 2,
+                                    "rotate": -11.24
+                                },
+                                {
+                                    "duration": 64
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 2
+                                },
+                                {
+                                    "duration": 9,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 55,
+                                    "x": 0.19,
+                                    "y": 0.19
+                                }
+                            ]
+                        },
+                        {
+                            "name": "dian_0",
+                            "translateFrame": [
+                                {
+                                    "duration": 2,
+                                    "x": 543.3,
+                                    "y": -4.65
+                                },
+                                {
+                                    "duration": 9,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 55,
+                                    "x": -85.1,
+                                    "y": 22.7
+                                }
+                            ],
+                            "rotateFrame": [
+                                {
+                                    "duration": 2,
+                                    "rotate": -170.98
+                                },
+                                {
+                                    "duration": 64
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 2,
+                                    "x": -0.81,
+                                    "y": 0.99
+                                },
+                                {
+                                    "duration": 9,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 55,
+                                    "x": 0.19,
+                                    "y": 0.19
+                                }
+                            ]
+                        },
+                        {
+                            "name": "dian_1",
+                            "translateFrame": [
+                                {
+                                    "duration": 9,
+                                    "x": 293.1,
+                                    "y": 18.05
+                                },
+                                {
+                                    "duration": 9,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 48,
+                                    "x": -71.05,
+                                    "y": -9
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 9
+                                },
+                                {
+                                    "duration": 9,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 48,
+                                    "x": 0.19,
+                                    "y": 0.19
+                                }
+                            ]
+                        },
+                        {
+                            "name": "dian_2",
+                            "translateFrame": [
+                                {
+                                    "duration": 18,
+                                    "x": 57.15,
+                                    "y": 15.55
+                                },
+                                {
+                                    "duration": 9,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 39,
+                                    "x": -71.05,
+                                    "y": 9
+                                }
+                            ],
+                            "rotateFrame": [
+                                {
+                                    "duration": 18,
+                                    "rotate": 180
+                                },
+                                {
+                                    "duration": 48
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 18,
+                                    "x": -1
+                                },
+                                {
+                                    "duration": 9,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 39,
+                                    "x": 0.19,
+                                    "y": 0.19
+                                }
+                            ]
+                        },
+                        {
+                            "name": "dian_3",
+                            "translateFrame": [
+                                {
+                                    "duration": 24,
+                                    "x": -87,
+                                    "y": 16.15
+                                },
+                                {
+                                    "duration": 9,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 33,
+                                    "x": -71.45,
+                                    "y": -5.25
+                                }
+                            ],
+                            "rotateFrame": [
+                                {
+                                    "duration": 24,
+                                    "rotate": 168.53
+                                },
+                                {
+                                    "duration": 42
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 24,
+                                    "x": -1
+                                },
+                                {
+                                    "duration": 9,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 33,
+                                    "x": 0.19,
+                                    "y": 0.19
+                                }
+                            ]
+                        },
+                        {
+                            "name": "dian_4",
+                            "translateFrame": [
+                                {
+                                    "duration": 26,
+                                    "x": -133.95,
+                                    "y": 14.1
+                                },
+                                {
+                                    "duration": 9,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "x": -45.45,
+                                    "y": 0.75
+                                },
+                                {
+                                    "duration": 30,
+                                    "x": -71.45,
+                                    "y": -5.25
+                                }
+                            ],
+                            "rotateFrame": [
+                                {
+                                    "duration": 26,
+                                    "rotate": 168.53
+                                },
+                                {
+                                    "duration": 40
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 26,
+                                    "x": -1
+                                },
+                                {
+                                    "duration": 9,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 31,
+                                    "x": 0.19,
+                                    "y": 0.19
+                                }
+                            ]
+                        },
+                        {
+                            "name": "dian_5",
+                            "translateFrame": [
+                                {
+                                    "duration": 29,
+                                    "x": -215.05,
+                                    "y": 16.15
+                                },
+                                {
+                                    "duration": 9,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "x": -75.45,
+                                    "y": 14.75
+                                },
+                                {
+                                    "duration": 27,
+                                    "x": -71.45,
+                                    "y": -5.25
+                                }
+                            ],
+                            "rotateFrame": [
+                                {
+                                    "duration": 29,
+                                    "rotate": 168.53
+                                },
+                                {
+                                    "duration": 37
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 29,
+                                    "x": -1
+                                },
+                                {
+                                    "duration": 9,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 28,
+                                    "x": 0.19,
+                                    "y": 0.19
+                                }
+                            ]
+                        },
+                        {
+                            "name": "dian_6",
+                            "translateFrame": [
+                                {
+                                    "duration": 2,
+                                    "x": 304.7,
+                                    "y": 61.4
+                                },
+                                {
+                                    "duration": 3,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 9,
+                                    "tweenEasing": 0,
+                                    "x": -49.6,
+                                    "y": -3.5
+                                },
+                                {
+                                    "duration": 3,
+                                    "tweenEasing": 0,
+                                    "x": -263.6,
+                                    "y": -4.5
+                                },
+                                {
+                                    "duration": 49,
+                                    "x": -265.6,
+                                    "y": -4.5
+                                }
+                            ],
+                            "rotateFrame": [
+                                {
+                                    "duration": 2,
+                                    "rotate": 179.03
+                                },
+                                {
+                                    "duration": 64
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 2,
+                                    "x": -0.09,
+                                    "y": 3.85
+                                },
+                                {
+                                    "duration": 3,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 9,
+                                    "tweenEasing": 0,
+                                    "x": 1.32,
+                                    "y": 1.69
+                                },
+                                {
+                                    "duration": 52,
+                                    "x": 0.42,
+                                    "y": 0.42
+                                }
+                            ]
+                        },
+                        {
+                            "name": "dian_7",
+                            "translateFrame": [
+                                {
+                                    "duration": 4,
+                                    "x": 251.55,
+                                    "y": -2.5
+                                },
+                                {
+                                    "duration": 3,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 9,
+                                    "tweenEasing": 0,
+                                    "x": -88.55,
+                                    "y": -2.45
+                                },
+                                {
+                                    "duration": 3,
+                                    "tweenEasing": 0,
+                                    "x": -252.7,
+                                    "y": 0.05
+                                },
+                                {
+                                    "duration": 47,
+                                    "x": -273.7,
+                                    "y": 0.05
+                                }
+                            ],
+                            "rotateFrame": [
+                                {
+                                    "duration": 4,
+                                    "rotate": -179.97
+                                },
+                                {
+                                    "duration": 62
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 4,
+                                    "x": -0.1,
+                                    "y": 4.17
+                                },
+                                {
+                                    "duration": 3,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 9,
+                                    "tweenEasing": 0,
+                                    "x": 1.32,
+                                    "y": 1.71
+                                },
+                                {
+                                    "duration": 50,
+                                    "x": 0.42,
+                                    "y": 0.46
+                                }
+                            ]
+                        },
+                        {
+                            "name": "dian_8",
+                            "translateFrame": [
+                                {
+                                    "duration": 6,
+                                    "x": 147.65,
+                                    "y": 35.3
+                                },
+                                {
+                                    "duration": 3,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 9,
+                                    "tweenEasing": 0,
+                                    "x": -82.3,
+                                    "y": -1.25
+                                },
+                                {
+                                    "duration": 3,
+                                    "tweenEasing": 0,
+                                    "x": -234.6,
+                                    "y": 0.05
+                                },
+                                {
+                                    "duration": 45,
+                                    "x": -254.6,
+                                    "y": 0.05
+                                }
+                            ],
+                            "rotateFrame": [
+                                {
+                                    "duration": 6,
+                                    "rotate": -179.98
+                                },
+                                {
+                                    "duration": 60
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 6,
+                                    "x": -0.11,
+                                    "y": 8.33
+                                },
+                                {
+                                    "duration": 3,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 9,
+                                    "tweenEasing": 0,
+                                    "x": 1.33,
+                                    "y": 1.75
+                                },
+                                {
+                                    "duration": 48,
+                                    "x": 0.42,
+                                    "y": 0.5
+                                }
+                            ]
+                        }
+                    ],
+                    "slot": [
+                        {
+                            "name": "yan",
+                            "displayFrame": [
+                                {
+                                    "duration": 2,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 64
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 2
+                                },
+                                {
+                                    "duration": 5,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 22,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "aM": 77
+                                    }
+                                },
+                                {
+                                    "duration": 37,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan_0",
+                            "displayFrame": [
+                                {
+                                    "duration": 2,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 64
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 2
+                                },
+                                {
+                                    "duration": 5,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 22,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "aM": 77
+                                    }
+                                },
+                                {
+                                    "duration": 37,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan_1",
+                            "displayFrame": [
+                                {
+                                    "duration": 2,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 64
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 2
+                                },
+                                {
+                                    "duration": 5,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 22,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "aM": 77
+                                    }
+                                },
+                                {
+                                    "duration": 37,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan_2",
+                            "displayFrame": [
+                                {
+                                    "duration": 7,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 59
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 7
+                                },
+                                {
+                                    "duration": 24,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 35,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan_3",
+                            "displayFrame": [
+                                {
+                                    "duration": 13,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 53
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 13
+                                },
+                                {
+                                    "duration": 24,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 29,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan_4",
+                            "displayFrame": [
+                                {
+                                    "duration": 22,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 44
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 22
+                                },
+                                {
+                                    "duration": 24,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 20,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan_5",
+                            "displayFrame": [
+                                {
+                                    "duration": 24,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 42
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 24
+                                },
+                                {
+                                    "duration": 24,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 18,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan_6",
+                            "displayFrame": [
+                                {
+                                    "duration": 28,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 38
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 28
+                                },
+                                {
+                                    "duration": 24,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 14,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan_7",
+                            "displayFrame": [
+                                {
+                                    "duration": 32,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 34
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 32
+                                },
+                                {
+                                    "duration": 24,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 10,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan_8",
+                            "displayFrame": [
+                                {
+                                    "duration": 42,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 24
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 42
+                                },
+                                {
+                                    "duration": 24,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 0,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "hongyan",
+                            "displayFrame": [
+                                {
+                                    "duration": 3,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 5
+                                },
+                                {
+                                    "duration": 5,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 53
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 13
+                                },
+                                {
+                                    "duration": 17,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 36,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "hongyan_0",
+                            "displayFrame": [
+                                {
+                                    "duration": 17,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 49
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 17
+                                },
+                                {
+                                    "duration": 17,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 32,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "hongyan_1",
+                            "displayFrame": [
+                                {
+                                    "duration": 26,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 40
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 26
+                                },
+                                {
+                                    "duration": 17,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 23,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "hongyan_2",
+                            "displayFrame": [
+                                {
+                                    "duration": 28,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 38
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 28
+                                },
+                                {
+                                    "duration": 17,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 21,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "hongyan_3",
+                            "displayFrame": [
+                                {
+                                    "duration": 30,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 36
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 30
+                                },
+                                {
+                                    "duration": 17,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 19,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan_9",
+                            "displayFrame": [
+                                {
+                                    "duration": 2,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 64
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 2
+                                },
+                                {
+                                    "duration": 24,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 40,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan_10",
+                            "displayFrame": [
+                                {
+                                    "duration": 18,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 48
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 18
+                                },
+                                {
+                                    "duration": 24,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 24,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan_11",
+                            "displayFrame": [
+                                {
+                                    "duration": 20,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 46
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 20
+                                },
+                                {
+                                    "duration": 24,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 22,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "yan_12",
+                            "displayFrame": [
+                                {
+                                    "duration": 36,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 30
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 36
+                                },
+                                {
+                                    "duration": 24,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 6,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "pian",
+                            "colorFrame": [
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 22,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 40,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "feiji",
+                            "displayFrame": [
+                                {
+                                    "duration": 53
+                                },
+                                {
+                                    "duration": 13,
+                                    "value": -1
+                                }
+                            ]
+                        },
+                        {
+                            "name": "huo",
+                            "displayFrame": [
+                                {
+                                    "duration": 53
+                                },
+                                {
+                                    "duration": 13,
+                                    "value": -1
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 18,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "aM": 32
+                                    }
+                                },
+                                {
+                                    "duration": 5,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "aM": 32
+                                    }
+                                },
+                                {
+                                    "duration": 13,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 13
+                                }
+                            ]
+                        },
+                        {
+                            "name": "hongyan_4",
+                            "displayFrame": [
+                                {
+                                    "duration": 8,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 58
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 8
+                                },
+                                {
+                                    "duration": 15,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "aM": 71
+                                    }
+                                },
+                                {
+                                    "duration": 43,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "dian",
+                            "displayFrame": [
+                                {
+                                    "duration": 2,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 64
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 11
+                                },
+                                {},
+                                {
+                                    "duration": 54,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "dian_0",
+                            "displayFrame": [
+                                {
+                                    "duration": 2,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 64
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 11
+                                },
+                                {},
+                                {
+                                    "duration": 54,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "dian_1",
+                            "displayFrame": [
+                                {
+                                    "duration": 9,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 57
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 18
+                                },
+                                {},
+                                {
+                                    "duration": 47,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "dian_2",
+                            "displayFrame": [
+                                {
+                                    "duration": 18,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 48
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 27
+                                },
+                                {},
+                                {
+                                    "duration": 38,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "dian_3",
+                            "displayFrame": [
+                                {
+                                    "duration": 24,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 42
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 24
+                                },
+                                {
+                                    "duration": 9,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 33,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "dian_4",
+                            "displayFrame": [
+                                {
+                                    "duration": 26,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 40
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 26
+                                },
+                                {
+                                    "duration": 9,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 31,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "dian_5",
+                            "displayFrame": [
+                                {
+                                    "duration": 29,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 37
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 38
+                                },
+                                {},
+                                {
+                                    "duration": 27,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "dian_6",
+                            "displayFrame": [
+                                {
+                                    "duration": 2,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 64
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 14
+                                },
+                                {
+                                    "duration": 3,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 49,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "dian_7",
+                            "displayFrame": [
+                                {
+                                    "duration": 4,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 62
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 16
+                                },
+                                {
+                                    "duration": 3,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 47,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "dian_8",
+                            "displayFrame": [
+                                {
+                                    "duration": 6,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 60
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 18
+                                },
+                                {
+                                    "duration": 3,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 45,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "defaultActions": [
+                {
+                    "gotoAndPlay": "newAnimation"
+                }
+            ]
+        }
+    ]
+}

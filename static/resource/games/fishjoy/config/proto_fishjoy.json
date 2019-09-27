@@ -1,0 +1,22 @@
+{
+
+    "11201":"hqtpb.fish.ScFishPlayerEnterNotify",
+    "11202":"hqtpb.fish.ScFishPlayerLeaveNotify",
+    "11203":"hqtpb.fish.CsFishPlayerReadyReq",
+    "11204":"hqtpb.fish.ScFishDistributeNotify",
+    "11205":"hqtpb.fish.CsFishPlayerFireReq",
+    "11206":"hqtpb.fish.ScFishFireNotify",
+    "11207":"hqtpb.fish.ScFishGameStatusNotify",
+    "11208":"hqtpb.fish.CsFishCollidedNotify",
+    "11209":"hqtpb.fish.ScFishDeadFishesNotify",
+    "11210":"hqtpb.fish.ScFishSwitchSceneNotify",
+    "11211":"hqtpb.fish.CsFishChangeGunReq",
+    "11212":"hqtpb.fish.ScFishChangeGunNotify",
+    "11213":"hqtpb.fish.ScFishBossComingNotify",
+    "11214":"hqtpb.fish.CsFishChatReq",
+    "11215":"hqtpb.fish.ScFishChatNotify",
+    "11216":"hqtpb.fish.ScFishOffsetGroupNotify"
+
+    
+
+}

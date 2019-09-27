@@ -1,0 +1,641 @@
+{
+	"groups": [
+		{
+			"keys": "mask_png,ui_headImg_json,hall_bg_jpg,login_bg1_jpg,font_fnt,load_Reel_png,ui_login_json,common_ui_titleback_png,crown_fnt,ui_common1_json,broadcast_json,hall_ui_htdl_png,hall_ui_hydl_png,circle_png,redPacket_json,hongbao-donghua_2_ske_json,hongbao-donghua_2_tex_json,hongbao-donghua_2_tex_png,eff_pmd_2_ske_json,eff_pmd_2_tex_json,eff_pmd_2_tex_png,eff_pmd_3_ske_json,eff_pmd_3_tex_json,eff_pmd_3_tex_png,jiantou_ske_json,jiantou_tex_json,jiantou_tex_png,baijiele_ske_json,baijiele_tex_json,baijiele_tex_png,brnn_ske_json,brnn_tex_json,brnn_tex_png,doudizhuda_ske_json,doudizhuda_tex_json,doudizhuda_tex_png,buyudaren_ske_json,buyudaren_tex_json,buyudaren_tex_png,hhdz_ske_json,hhdz_tex_json,hhdz_tex_png,shuiguji_ske_json,shuiguji_tex_json,shuiguji_tex_png,longhudou_ske_json,longhudou_tex_json,longhudou_tex_png,shuihuzhuan_ske_json,shuihuzhuan_tex_json,shuihuzhuan_tex_png,rabbitgirl_ske_json,rabbitgirl_tex_json,rabbitgirl_tex_png,RechargeAnim_ske_json,RechargeAnim_tex_json,RechargeAnim_tex_png,lobby_bg_json,lobby_bg_png,hall_ui_huadong_png,entry_ermj_tex_png,entry_ermj_ske_json,entry_ermj_tex_json,entry_zjh_ske_json,entry_zjh_tex_json,entry_zjh_tex_png,hall_ui_jyrz_png,gold_tex_png,gold_ske_json,gold_tex_json,entry_hongbao_ske_json,entry_hongbao_tex_json,entry_hongbao_tex_png",
+			"name": "preload"
+		},
+		{
+			"keys": "ui_login_json,login_bg1_jpg,fz_fz,easy_loading_ske_json,easy_loading_tex_json,easy_loading_tex_png,loading2_ske_json,loading2_tex_json,loading2_tex_png,logging_png",
+			"name": "preload_loading"
+		}
+	],
+	"resources": [
+		{
+			"url": "common/assets/mask.png",
+			"type": "image",
+			"name": "mask_png"
+		},
+		{
+			"url": "assets/common/ui_headImg.json",
+			"type": "sheet",
+			"name": "ui_headImg_json",
+			"subkeys": "ui_headBox_1,ui_headBox_10,ui_headBox_11,ui_headBox_12,ui_headBox_2,ui_headBox_3,ui_headBox_4,ui_headBox_5,ui_headBox_6,ui_headBox_7,ui_headBox_8,ui_headBox_9,ui_headImg_1,ui_headImg_10,ui_headImg_11,ui_headImg_12,ui_headImg_2,ui_headImg_3,ui_headImg_4,ui_headImg_5,ui_headImg_6,ui_headImg_7,ui_headImg_8,ui_headImg_9"
+		},
+		{
+			"url": "assets/common/ui_login.json",
+			"type": "sheet",
+			"name": "ui_login_json",
+			"subkeys": "login_down,login_forget,login_listBg,login_listItem,login_loginBtn,login_memberBtn,login_progressBar,login_progressBg,login_progressItem,login_register,login_turnBackBtn,login_visitBtn"
+		},
+		{
+			"url": "assets/hall_bg.jpg",
+			"type": "image",
+			"name": "hall_bg_jpg"
+		},
+		{
+			"url": "assets/login_bg1.jpg",
+			"type": "image",
+			"name": "login_bg1_jpg"
+		},
+		{
+			"url": "assets/login_bg2.jpg",
+			"type": "image",
+			"name": "login_bg2_jpg"
+		},
+		{
+			"url": "eui_assets/Button/button_down.png",
+			"type": "image",
+			"name": "button_down_png"
+		},
+		{
+			"url": "eui_assets/Button/button_up.png",
+			"type": "image",
+			"name": "button_up_png"
+		},
+		{
+			"url": "eui_assets/CheckBox/checkbox_select_disabled.png",
+			"type": "image",
+			"name": "checkbox_select_disabled_png"
+		},
+		{
+			"url": "eui_assets/CheckBox/checkbox_select_down.png",
+			"type": "image",
+			"name": "checkbox_select_down_png"
+		},
+		{
+			"url": "eui_assets/CheckBox/checkbox_select_up.png",
+			"type": "image",
+			"name": "checkbox_select_up_png"
+		},
+		{
+			"url": "eui_assets/CheckBox/checkbox_unselect.png",
+			"type": "image",
+			"name": "checkbox_unselect_png"
+		},
+		{
+			"url": "eui_assets/ItemRenderer/selected.png",
+			"type": "image",
+			"name": "selected_png"
+		},
+		{
+			"url": "eui_assets/Panel/border.png",
+			"type": "image",
+			"name": "border_png"
+		},
+		{
+			"url": "eui_assets/Panel/header.png",
+			"type": "image",
+			"name": "header_png"
+		},
+		{
+			"url": "eui_assets/ProgressBar/thumb_pb.png",
+			"type": "image",
+			"name": "thumb_pb_png"
+		},
+		{
+			"url": "eui_assets/ProgressBar/track_pb.png",
+			"type": "image",
+			"name": "track_pb_png"
+		},
+		{
+			"url": "eui_assets/RadioButton/radiobutton_select_disabled.png",
+			"type": "image",
+			"name": "radiobutton_select_disabled_png"
+		},
+		{
+			"url": "eui_assets/RadioButton/radiobutton_select_down.png",
+			"type": "image",
+			"name": "radiobutton_select_down_png"
+		},
+		{
+			"url": "eui_assets/RadioButton/radiobutton_select_up.png",
+			"type": "image",
+			"name": "radiobutton_select_up_png"
+		},
+		{
+			"url": "eui_assets/RadioButton/radiobutton_unselect.png",
+			"type": "image",
+			"name": "radiobutton_unselect_png"
+		},
+		{
+			"url": "eui_assets/ScrollBar/roundthumb.png",
+			"type": "image",
+			"name": "roundthumb_png"
+		},
+		{
+			"url": "eui_assets/ScrollBar/track_sb.png",
+			"type": "image",
+			"name": "track_sb_png"
+		},
+		{
+			"url": "eui_assets/Slider/thumb.png",
+			"type": "image",
+			"name": "thumb_png"
+		},
+		{
+			"url": "eui_assets/Slider/track.png",
+			"type": "image",
+			"name": "track_png"
+		},
+		{
+			"url": "eui_assets/Slider/tracklight.png",
+			"type": "image",
+			"name": "tracklight_png"
+		},
+		{
+			"url": "eui_assets/ToggleSwitch/handle.png",
+			"type": "image",
+			"name": "handle_png"
+		},
+		{
+			"url": "eui_assets/ToggleSwitch/off.png",
+			"type": "image",
+			"name": "off_png"
+		},
+		{
+			"url": "eui_assets/ToggleSwitch/on.png",
+			"type": "image",
+			"name": "on_png"
+		},
+		{
+			"url": "assets/common/ui_common1.json",
+			"type": "sheet",
+			"name": "ui_common1_json",
+			"subkeys": "common_button_close,common_button_purple,common_button_rectangle,common_button_yellow,common_cancel,common_confirm,common_inputBg,common_progress,common_progress_bg,common_prompt_bg1,common_prompt_bg2,common_prompt_bg3,common_prompt_bg4,common_sign,common_tabBtn_nor,common_tabBtn_sel"
+		},
+		{
+			"url": "assets/common/ui_mainView.json",
+			"type": "sheet",
+			"name": "ui_mainView_json",
+			"subkeys": "common_delete,customerService_addImg,customerService_bg,customerService_online_nor,customerService_online_sel,customerService_question_nor,customerService_question_sel,customerService_replyMsg_bg,customerService_selfMsg_bg,customerService_send,customerService_sendBtn,customerService_title,hall_ui_activity,hall_ui_activity_shadow,hall_ui_bank,hall_ui_bank_shadow,hall_ui_broadcast,hall_ui_broadcastBg,hall_ui_customerService,hall_ui_exchange,hall_ui_exchange_shadow,hall_ui_mail,hall_ui_message,hall_ui_message_shadow,hall_ui_notice,hall_ui_recharge,hall_ui_setting,hall_ui_setting_shadow,hall_ui_share,hall_ui_share_shadow,hall_ui_topBg,mail_title,notice_title,userInfo_money_bg"
+		},
+		{
+			"url": "assets/common/ui_secondView.json",
+			"type": "sheet",
+			"name": "ui_secondView_json",
+			"subkeys": "activity_cash,activity_favorble,activity_itemBg,activity_lottery,activity_title,bankTab_save_nor,bankTab_save_sel,bankTab_take_nor,bankTab_take_sel,bank_btn_nor,bank_btn_sel,bank_clean,bank_delete,bank_max,bank_numBtn_nor,bank_numBtn_sel,bank_num_0,bank_num_1,bank_num_2,bank_num_3,bank_num_4,bank_num_5,bank_num_6,bank_num_7,bank_num_8,bank_num_9,bank_progress_bar,bank_progress_bg,bank_progress_handle,bank_savein,bank_takeout,bank_title,exchange_add,exchange_addBankcard,exchange_addBankcard_title,exchange_alipay_nor,exchange_alipay_sel,exchange_bankcard_nor,exchange_bankcard_sel,exchange_bindAlipay,exchange_bindAlipay_title,exchange_changeAlipay,exchange_confirmAdd,exchange_confirmBind,exchange_delete,exchange_dropBtn,exchange_exchange,exchange_managerBankcard,exchange_managerBankcard_title,exchange_reduce,exchange_request_confirm,exchange_title,messageTab_annouce_nor,messageTab_annouce_sel,messageTab_mail_nor,messageTab_mail_sel,message_check,message_checked,message_delete,message_frame,message_item_bg,message_mail_iconClose,message_mail_iconOpen,message_title,rechargeTab_alipay1_nor,rechargeTab_alipay_nor,rechargeTab_alipay_sel,rechargeTab_bankUnity_nor,rechargeTab_bankUnity_sel,rechargeTab_record,rechargeTab_wechat2bankcard_nor,rechargeTab_wechat2bankcard_sel,recharge_100,recharge_1000,recharge_1500,recharge_300,recharge_3000,recharge_500,recharge_5000,recharge_9999,recharge_clean,recharge_confirm,recharge_copy,recharge_inputBg,recharge_inputBg2,recharge_leftbg,recharge_line,recharge_numBg,recharge_recordTitle,recharge_sBg,recharge_sTitleBg,recharge_sTitle_alipay1,recharge_sTitle_alipay2,recharge_sTitle_bankUnity,recharge_sTitle_wechat2bankcard,recharge_select,recharge_title,share_copy,share_title,userInfo_changeHeadBoxTab_nor,userInfo_changeHeadBoxTab_sel,userInfo_changeHeadImgTab_nor,userInfo_changeHeadImgTab_sel,userInfo_copyID,userInfo_dropBg,userInfo_listButton,userInfo_lock,userInfo_mainBg,userInfo_save,userInfo_saveName,userInfo_sex_man,userInfo_sex_woman,userInfo_sign,userInfo_tab_nor,userInfo_tab_sel,userInfo_title,userInfo_vip0,userInfo_vip1,userInfo_vip10,userInfo_vip2,userInfo_vip3,userInfo_vip4,userInfo_vip5,userInfo_vip6,userInfo_vip7,userInfo_vip8,userInfo_vip9,userInfo_vipLight,userInfo_vipSign"
+		},
+		{
+			"url": "assets/common/ui_setting.json",
+			"type": "sheet",
+			"name": "ui_setting_json",
+			"subkeys": "comfirmChange,get_verification,settingTab_exit_nor,settingTab_exit_sel,settingTab_music_nor,settingTab_music_sel,settingTab_password_nor,settingTab_password_sel,settingTab_register_nor,settingTab_register_sel,settingTab_switchAccoun_nor,settingTab_switchAccoun_sel,setting_changeOne,setting_confirmRegist,setting_music_gou,setting_music_gouBg,setting_music_off,setting_music_on,setting_nRegister,setting_nRegister_title,setting_resetMoneyPassword,setting_resetMoneyPassword_title,setting_resetPassword,setting_resetPassword_title,setting_sRegister,setting_sRegister_title,setting_thumb,setting_title,setting_voice_off,setting_voice_on"
+		},
+		{
+			"url": "sound/click.mp3",
+			"type": "sound",
+			"name": "click_mp3"
+		},
+		{
+			"url": "lobby/font/font.fnt",
+			"type": "font",
+			"name": "font_fnt"
+		},
+		{
+			"url": "sound/lobby_bg.mp3",
+			"type": "sound",
+			"name": "lobby_bg_mp3"
+		},
+		{
+			"url": "common/loading/load_Reel.png",
+			"type": "image",
+			"name": "load_Reel_png"
+		},
+		{
+			"url": "assets/game/icon_download_gg.png",
+			"type": "image",
+			"name": "icon_download_gg_png"
+		},
+		{
+			"url": "common/assets/common_ui_titleback.png",
+			"type": "image",
+			"name": "common_ui_titleback_png"
+		},
+		{
+			"url": "assets/common/broadcast/hall_ui_horn.png",
+			"type": "image",
+			"name": "hall_ui_horn_png"
+		},
+		{
+			"url": "assets/common/broadcast/hall_ui_padzz.png",
+			"type": "image",
+			"name": "hall_ui_padzz_png"
+		},
+		{
+			"url": "config/common/broadcast.json",
+			"type": "json",
+			"name": "broadcast_json"
+		},
+		{
+			"url": "assets/particle/demo/particle_demo.png",
+			"type": "image",
+			"name": "particle_demo_png"
+		},
+		{
+			"url": "assets/particle/demo/particle_demo.json",
+			"type": "json",
+			"name": "particle_demo_json"
+		},
+		{
+			"url": "assets/particle/bulb/bulb.png",
+			"type": "image",
+			"name": "bulb_png"
+		},
+		{
+			"url": "assets/particle/bulb/bulb.json",
+			"type": "json",
+			"name": "bulb_json"
+		},
+		{
+			"url": "lobby/font/crown.fnt",
+			"type": "font",
+			"name": "crown_fnt"
+		},
+		{
+			"url": "common/loading/EasyLoadingSkin.exml",
+			"type": "bin",
+			"name": "EasyLoadingSkin_exml"
+		},
+		{
+			"url": "assets/common/stuff/hall_ui_htdl.png",
+			"type": "image",
+			"name": "hall_ui_htdl_png"
+		},
+		{
+			"url": "assets/common/stuff/hall_ui_hydl.png",
+			"type": "image",
+			"name": "hall_ui_hydl_png"
+		},
+		{
+			"url": "assets/circle.png",
+			"type": "image",
+			"name": "circle_png"
+		},
+		{
+			"url": "config/fz.fz",
+			"type": "bin",
+			"name": "fz_fz"
+		},
+		{
+			"url": "assets/redPacket/ani/hongbao-donghua_2_ske.json",
+			"type": "json",
+			"name": "hongbao-donghua_2_ske_json"
+		},
+		{
+			"url": "assets/redPacket/ani/hongbao-donghua_2_tex.json",
+			"type": "json",
+			"name": "hongbao-donghua_2_tex_json"
+		},
+		{
+			"url": "assets/redPacket/ani/hongbao-donghua_2_tex.png",
+			"type": "image",
+			"name": "hongbao-donghua_2_tex_png"
+		},
+		{
+			"url": "assets/redPacket/redPacket.json",
+			"type": "sheet",
+			"name": "redPacket_json",
+			"subkeys": "hongbaosaolei_guize_ditu,hongbaosaolei_guize_icon,hongbaosaolei_hongbao_ditu,hongbaosaolei_hongbao_gouxuan1,hongbaosaolei_hongbao_gouxuan3,hongbaosaolei_hongbao_hongbao,hongbaosaolei_hongbao_hongbao2,hongbaosaolei_hongbao_hongbao3,hongbaosaolei_hongbao_qumailei,hongbaosaolei_hongbao_zhuangtai1,hongbaosaolei_hongbao_zhuangtai2,hongbaosaolei_hongbao_zhuangtai3,hongbaosaolei_hongbao_zhuangtai4,hongbaosaolei_hongbao_zhuangtai5,hongbaosaolei_lingqu_ditu1,hongbaosaolei_lingqu_ditu2,hongbaosaolei_lingqu_icon,hongbaosaolei_qipao,hongbaosaolei_qumailei_anniu0,hongbaosaolei_qumailei_anniu1,hongbaosaolei_qumailei_anniu2,hongbaosaolei_qumailei_anniu3,hongbaosaolei_qumailei_anniu4,hongbaosaolei_qumailei_anniu5,hongbaosaolei_qumailei_anniu6,hongbaosaolei_qumailei_anniu7,hongbaosaolei_qumailei_anniu8,hongbaosaolei_qumailei_anniu9,hongbaosaolei_qumailei_ditu,hongbaosaolei_qumailei_hongbao,hongbaosaolei_qumailei_icon,hongbaosaolei_qumailei_jiantou1,hongbaosaolei_qumailei_jiantou2,hongbaosaolei_qumailei_jindutiao1,hongbaosaolei_qumailei_jindutiao2,hongbaosaolei_qumailei_jindutiao3,hongbaosaolei_x,hongbaosaolei_xiangqing_ditu"
+		},
+		{
+			"url": "assets/game/hall_dianjigengx.png",
+			"type": "image",
+			"name": "hall_dianjigengx_png"
+		},
+		{
+			"url": "assets/game/hall_dianjixiaz.png",
+			"type": "image",
+			"name": "hall_dianjixiaz_png"
+		},
+		{
+			"url": "assets/game/hall_tbjdt2.png",
+			"type": "image",
+			"name": "hall_tbjdt2_png"
+		},
+		{
+			"url": "assets/game/hall_tbjdtbk.png",
+			"type": "image",
+			"name": "hall_tbjdtbk_png"
+		},
+		{
+			"url": "assets/game/hall_tbjdtlight.png",
+			"type": "image",
+			"name": "hall_tbjdtlight_png"
+		},
+		{
+			"url": "assets/animation/Recharge/RechargeAnim_tex.png",
+			"type": "image",
+			"name": "RechargeAnim_tex_png"
+		},
+		{
+			"url": "assets/animation/effPmd2/eff_pmd_2_tex.png",
+			"type": "image",
+			"name": "eff_pmd_2_tex_png"
+		},
+		{
+			"url": "assets/animation/effPmd3/eff_pmd_3_tex.png",
+			"type": "image",
+			"name": "eff_pmd_3_tex_png"
+		},
+		{
+			"url": "assets/animation/entry_arrow/jiantou_tex.png",
+			"type": "image",
+			"name": "jiantou_tex_png"
+		},
+		{
+			"url": "assets/animation/entry_bjl/baijiele_tex.png",
+			"type": "image",
+			"name": "baijiele_tex_png"
+		},
+		{
+			"url": "assets/animation/entry_brnn/brnn_tex.png",
+			"type": "image",
+			"name": "brnn_tex_png"
+		},
+		{
+			"url": "assets/animation/entry_ddz_b/doudizhuda_tex.png",
+			"type": "image",
+			"name": "doudizhuda_tex_png"
+		},
+		{
+			"url": "assets/animation/entry_fish_b/buyudaren_tex.png",
+			"type": "image",
+			"name": "buyudaren_tex_png"
+		},
+		{
+			"url": "assets/animation/entry_hhdz/hhdz_tex.png",
+			"type": "image",
+			"name": "hhdz_tex_png"
+		},
+		{
+			"url": "assets/animation/entry_lgj/shuiguji_tex.png",
+			"type": "image",
+			"name": "shuiguji_tex_png"
+		},
+		{
+			"url": "assets/animation/entry_lhd/longhudou_tex.png",
+			"type": "image",
+			"name": "longhudou_tex_png"
+		},
+		{
+			"url": "assets/animation/entry_shz/shuihuzhuan_tex.png",
+			"type": "image",
+			"name": "shuihuzhuan_tex_png"
+		},
+		{
+			"url": "assets/animation/loading/loading2_tex.png",
+			"type": "image",
+			"name": "loading2_tex_png"
+		},
+		{
+			"url": "assets/animation/loading2/easy_loading_tex.png",
+			"type": "image",
+			"name": "easy_loading_tex_png"
+		},
+		{
+			"url": "assets/animation/rabbigirl/rabbitgirl_tex.png",
+			"type": "image",
+			"name": "rabbitgirl_tex_png"
+		},
+		{
+			"url": "assets/animation/Recharge/RechargeAnim_ske.json",
+			"type": "json",
+			"name": "RechargeAnim_ske_json"
+		},
+		{
+			"url": "assets/animation/Recharge/RechargeAnim_tex.json",
+			"type": "json",
+			"name": "RechargeAnim_tex_json"
+		},
+		{
+			"url": "assets/animation/effPmd2/eff_pmd_2_tex.json",
+			"type": "json",
+			"name": "eff_pmd_2_tex_json"
+		},
+		{
+			"url": "assets/animation/effPmd3/eff_pmd_3_tex.json",
+			"type": "json",
+			"name": "eff_pmd_3_tex_json"
+		},
+		{
+			"url": "assets/animation/effPmd3/eff_pmd_3_ske.json",
+			"type": "json",
+			"name": "eff_pmd_3_ske_json"
+		},
+		{
+			"url": "assets/animation/entry_arrow/jiantou_ske.json",
+			"type": "json",
+			"name": "jiantou_ske_json"
+		},
+		{
+			"url": "assets/animation/entry_arrow/jiantou_tex.json",
+			"type": "json",
+			"name": "jiantou_tex_json"
+		},
+		{
+			"url": "assets/animation/entry_bjl/baijiele_ske.json",
+			"type": "json",
+			"name": "baijiele_ske_json"
+		},
+		{
+			"url": "assets/animation/entry_bjl/baijiele_tex.json",
+			"type": "json",
+			"name": "baijiele_tex_json"
+		},
+		{
+			"url": "assets/animation/entry_brnn/brnn_ske.json",
+			"type": "json",
+			"name": "brnn_ske_json"
+		},
+		{
+			"url": "assets/animation/entry_brnn/brnn_tex.json",
+			"type": "json",
+			"name": "brnn_tex_json"
+		},
+		{
+			"url": "assets/animation/entry_ddz_b/doudizhuda_ske.json",
+			"type": "json",
+			"name": "doudizhuda_ske_json"
+		},
+		{
+			"url": "assets/animation/entry_ddz_b/doudizhuda_tex.json",
+			"type": "json",
+			"name": "doudizhuda_tex_json"
+		},
+		{
+			"url": "assets/animation/entry_fish_b/buyudaren_ske.json",
+			"type": "json",
+			"name": "buyudaren_ske_json"
+		},
+		{
+			"url": "assets/animation/entry_fish_b/buyudaren_tex.json",
+			"type": "json",
+			"name": "buyudaren_tex_json"
+		},
+		{
+			"url": "assets/animation/entry_hhdz/hhdz_tex.json",
+			"type": "json",
+			"name": "hhdz_tex_json"
+		},
+		{
+			"url": "assets/animation/entry_hhdz/hhdz_ske.json",
+			"type": "json",
+			"name": "hhdz_ske_json"
+		},
+		{
+			"url": "assets/animation/entry_lgj/shuiguji_ske.json",
+			"type": "json",
+			"name": "shuiguji_ske_json"
+		},
+		{
+			"url": "assets/animation/entry_lgj/shuiguji_tex.json",
+			"type": "json",
+			"name": "shuiguji_tex_json"
+		},
+		{
+			"url": "assets/animation/entry_lhd/longhudou_ske.json",
+			"type": "json",
+			"name": "longhudou_ske_json"
+		},
+		{
+			"url": "assets/animation/entry_lhd/longhudou_tex.json",
+			"type": "json",
+			"name": "longhudou_tex_json"
+		},
+		{
+			"url": "assets/animation/entry_shz/shuihuzhuan_ske.json",
+			"type": "json",
+			"name": "shuihuzhuan_ske_json"
+		},
+		{
+			"url": "assets/animation/loading/loading2_ske.json",
+			"type": "json",
+			"name": "loading2_ske_json"
+		},
+		{
+			"url": "assets/animation/loading/loading2_tex.json",
+			"type": "json",
+			"name": "loading2_tex_json"
+		},
+		{
+			"url": "assets/animation/loading2/easy_loading_ske.json",
+			"type": "json",
+			"name": "easy_loading_ske_json"
+		},
+		{
+			"url": "assets/animation/entry_shz/shuihuzhuan_tex.json",
+			"type": "json",
+			"name": "shuihuzhuan_tex_json"
+		},
+		{
+			"url": "assets/animation/loading2/easy_loading_tex.json",
+			"type": "json",
+			"name": "easy_loading_tex_json"
+		},
+		{
+			"url": "assets/animation/rabbigirl/rabbitgirl_ske.json",
+			"type": "json",
+			"name": "rabbitgirl_ske_json"
+		},
+		{
+			"url": "assets/animation/rabbigirl/rabbitgirl_tex.json",
+			"type": "json",
+			"name": "rabbitgirl_tex_json"
+		},
+		{
+			"url": "assets/animation/effPmd2/eff_pmd_2_ske.json",
+			"type": "json",
+			"name": "eff_pmd_2_ske_json"
+		},
+		{
+			"url": "assets/particle/lobby_bg/lobby_bg.png",
+			"type": "image",
+			"name": "lobby_bg_png"
+		},
+		{
+			"url": "assets/particle/lobby_bg/lobby_bg.json",
+			"type": "json",
+			"name": "lobby_bg_json"
+		},
+		{
+			"url": "assets/logging.png",
+			"type": "image",
+			"name": "logging_png"
+		},
+		{
+			"url": "assets/hall_ui_huadong.png",
+			"type": "image",
+			"name": "hall_ui_huadong_png"
+		},
+		{
+			"url": "assets/animation/entry_ermj/entry_ermj_tex.png",
+			"type": "image",
+			"name": "entry_ermj_tex_png"
+		},
+		{
+			"url": "assets/animation/entry_ermj/entry_ermj_ske.json",
+			"type": "json",
+			"name": "entry_ermj_ske_json"
+		},
+		{
+			"url": "assets/animation/entry_ermj/entry_ermj_tex.json",
+			"type": "json",
+			"name": "entry_ermj_tex_json"
+		},
+		{
+			"url": "assets/animation/entry_zjh/entry_zjh_tex.png",
+			"type": "image",
+			"name": "entry_zjh_tex_png"
+		},
+		{
+			"url": "assets/animation/entry_zjh/entry_zjh_tex.json",
+			"type": "json",
+			"name": "entry_zjh_tex_json"
+		},
+		{
+			"url": "assets/animation/entry_zjh/entry_zjh_ske.json",
+			"type": "json",
+			"name": "entry_zjh_ske_json"
+		},
+		{
+			"url": "assets/common/stuff/hall_ui_jyrz.png",
+			"type": "image",
+			"name": "hall_ui_jyrz_png"
+		},
+		{
+			"url": "assets/redPacket/ani/gold_tex.png",
+			"type": "image",
+			"name": "gold_tex_png"
+		},
+		{
+			"url": "assets/redPacket/ani/gold_ske.json",
+			"type": "json",
+			"name": "gold_ske_json"
+		},
+		{
+			"url": "assets/redPacket/ani/gold_tex.json",
+			"type": "json",
+			"name": "gold_tex_json"
+		},
+		{
+			"url": "assets/animation/entry_hongbao/entry_hongbao_tex.png",
+			"type": "image",
+			"name": "entry_hongbao_tex_png"
+		},
+		{
+			"url": "assets/animation/entry_hongbao/entry_hongbao_ske.json",
+			"type": "json",
+			"name": "entry_hongbao_ske_json"
+		},
+		{
+			"url": "assets/animation/entry_hongbao/entry_hongbao_tex.json",
+			"type": "json",
+			"name": "entry_hongbao_tex_json"
+		},
+		{
+			"url": "assets/common/stuff/hall_ui_Upgrademember.png",
+			"type": "image",
+			"name": "hall_ui_Upgrademember_png"
+		}
+	]
+}

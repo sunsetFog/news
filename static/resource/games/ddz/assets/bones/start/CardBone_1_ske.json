@@ -1,0 +1,1815 @@
+{
+    "frameRate": 24,
+    "name": "CardBone_1",
+    "version": "5.5",
+    "compatibleVersion": "5.5",
+    "armature": [
+        {
+            "type": "Armature",
+            "frameRate": 24,
+            "name": "Armature",
+            "aabb": {
+                "x": -1034.95,
+                "y": -56,
+                "width": 1132.45,
+                "height": 112
+            },
+            "bone": [
+                {
+                    "name": "root"
+                },
+                {
+                    "inheritScale": false,
+                    "name": "图层 8",
+                    "parent": "root",
+                    "transform": {
+                        "x": -69.85,
+                        "y": -39.75,
+                        "skX": 118.96,
+                        "skY": 180,
+                        "scX": -7.13,
+                        "scY": 0.69
+                    }
+                },
+                {
+                    "inheritScale": false,
+                    "name": "图层 14",
+                    "parent": "root",
+                    "transform": {
+                        "x": -171.65,
+                        "y": -9.45,
+                        "skX": -10.05,
+                        "scX": 4.98,
+                        "scY": 0.21
+                    }
+                },
+                {
+                    "inheritScale": false,
+                    "name": "图层 13",
+                    "parent": "root",
+                    "transform": {
+                        "x": -282.1,
+                        "y": -39.75,
+                        "skX": 103.98,
+                        "skY": 180,
+                        "scX": -7.13,
+                        "scY": 1.38
+                    }
+                },
+                {
+                    "inheritScale": false,
+                    "name": "图层 12",
+                    "parent": "root",
+                    "transform": {
+                        "x": -196.6,
+                        "y": 35.65,
+                        "skX": -10.06,
+                        "scX": 7.79,
+                        "scY": 0.34
+                    }
+                },
+                {
+                    "inheritScale": false,
+                    "name": "图层 11",
+                    "parent": "root",
+                    "transform": {
+                        "x": -225.35,
+                        "y": 36.7,
+                        "skX": -10.06,
+                        "scX": 8.18,
+                        "scY": 0.34
+                    }
+                },
+                {
+                    "inheritScale": false,
+                    "name": "图层 10",
+                    "parent": "root",
+                    "transform": {
+                        "x": -234.05,
+                        "y": 20.65,
+                        "skX": -10.07,
+                        "scX": 8.38,
+                        "scY": 0.28
+                    }
+                },
+                {
+                    "inheritScale": false,
+                    "name": "图层 9",
+                    "parent": "root",
+                    "transform": {
+                        "x": -292,
+                        "y": -19.75,
+                        "skX": -10.06,
+                        "scX": 6.31,
+                        "scY": 0.34
+                    }
+                },
+                {
+                    "inheritScale": false,
+                    "name": "图层 15",
+                    "parent": "root",
+                    "transform": {
+                        "x": -797.95
+                    }
+                },
+                {
+                    "inheritScale": false,
+                    "name": "图层 7",
+                    "parent": "root",
+                    "transform": {
+                        "x": -170.9,
+                        "y": 35.65,
+                        "skX": 63.79,
+                        "scX": 7.79,
+                        "scY": 0.75
+                    }
+                },
+                {
+                    "inheritScale": false,
+                    "name": "图层 6",
+                    "parent": "root",
+                    "transform": {
+                        "x": -182.3,
+                        "y": 20.65,
+                        "skX": 63.79,
+                        "scX": 8.38,
+                        "scY": 0.63
+                    }
+                },
+                {
+                    "inheritScale": false,
+                    "name": "图层 5",
+                    "parent": "root",
+                    "transform": {
+                        "x": -160.9,
+                        "y": -32.75,
+                        "skX": 63.79,
+                        "scX": 6.31,
+                        "scY": 0.75
+                    }
+                },
+                {
+                    "inheritScale": false,
+                    "name": "元件 4",
+                    "parent": "root",
+                    "transform": {
+                        "x": -94.65
+                    }
+                },
+                {
+                    "inheritScale": false,
+                    "name": "元件 5",
+                    "parent": "root",
+                    "transform": {
+                        "x": -39.65,
+                        "y": -0.1
+                    }
+                },
+                {
+                    "inheritScale": false,
+                    "name": "元件 6",
+                    "parent": "root",
+                    "transform": {
+                        "x": 16.25
+                    }
+                },
+                {
+                    "inheritScale": false,
+                    "name": "元件 7",
+                    "parent": "root",
+                    "transform": {
+                        "x": 71.35
+                    }
+                }
+            ],
+            "slot": [
+                {
+                    "name": "图层 15",
+                    "parent": "图层 15"
+                },
+                {
+                    "name": "图层 14",
+                    "parent": "图层 14"
+                },
+                {
+                    "name": "图层 13",
+                    "parent": "图层 13"
+                },
+                {
+                    "name": "图层 12",
+                    "parent": "图层 12"
+                },
+                {
+                    "name": "图层 11",
+                    "parent": "图层 11"
+                },
+                {
+                    "name": "图层 10",
+                    "parent": "图层 10"
+                },
+                {
+                    "name": "图层 9",
+                    "parent": "图层 9"
+                },
+                {
+                    "name": "图层 8",
+                    "parent": "图层 8"
+                },
+                {
+                    "name": "图层 7",
+                    "parent": "图层 7"
+                },
+                {
+                    "name": "图层 6",
+                    "parent": "图层 6"
+                },
+                {
+                    "name": "图层 5",
+                    "parent": "图层 5"
+                },
+                {
+                    "name": "元件 4",
+                    "parent": "元件 4"
+                },
+                {
+                    "name": "元件 5",
+                    "parent": "元件 5"
+                },
+                {
+                    "name": "元件 6",
+                    "parent": "元件 6"
+                },
+                {
+                    "name": "元件 7",
+                    "parent": "元件 7"
+                }
+            ],
+            "skin": [
+                {
+                    "slot": [
+                        {
+                            "name": "元件 6",
+                            "display": [
+                                {
+                                    "name": "0/you",
+                                    "transform": {
+                                        "x": -0.25,
+                                        "y": 1
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "元件 5",
+                            "display": [
+                                {
+                                    "name": "0/shi",
+                                    "transform": {
+                                        "x": -3.25,
+                                        "y": 1
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "图层 6",
+                            "display": [
+                                {
+                                    "name": "0/point",
+                                    "transform": {
+                                        "x": -0.15,
+                                        "y": -0.2
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "元件 7",
+                            "display": [
+                                {
+                                    "name": "0/xi",
+                                    "transform": {
+                                        "x": -0.85,
+                                        "y": 1
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "图层 5",
+                            "display": [
+                                {
+                                    "name": "0/point",
+                                    "transform": {
+                                        "x": -0.15,
+                                        "y": -0.25
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "图层 7",
+                            "display": [
+                                {
+                                    "name": "0/point",
+                                    "transform": {
+                                        "x": -0.15,
+                                        "y": -0.25
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "图层 9",
+                            "display": [
+                                {
+                                    "name": "0/point",
+                                    "transform": {
+                                        "x": -0.15,
+                                        "y": -0.2
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "图层 15",
+                            "display": [
+                                {
+                                    "name": "mohu"
+                                },
+                                {
+                                    "name": "0/bg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "元件 4",
+                            "display": [
+                                {
+                                    "name": "0/kai",
+                                    "transform": {
+                                        "x": -1.15,
+                                        "y": 1
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "图层 14",
+                            "display": [
+                                {
+                                    "name": "0/point",
+                                    "transform": {
+                                        "x": -0.25,
+                                        "y": 0.1
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "图层 12",
+                            "display": [
+                                {
+                                    "name": "0/point",
+                                    "transform": {
+                                        "x": -0.15,
+                                        "y": -0.25
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "图层 11",
+                            "display": [
+                                {
+                                    "name": "0/point",
+                                    "transform": {
+                                        "x": -0.15,
+                                        "y": -0.25
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "图层 13",
+                            "display": [
+                                {
+                                    "name": "0/point",
+                                    "transform": {
+                                        "x": -0.2,
+                                        "y": 0.1
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "图层 8",
+                            "display": [
+                                {
+                                    "name": "0/point",
+                                    "transform": {
+                                        "x": -0.1,
+                                        "y": 0.1
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "图层 10",
+                            "display": [
+                                {
+                                    "name": "0/point",
+                                    "transform": {
+                                        "x": -0.15,
+                                        "y": -0.2
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "animation": [
+                {
+                    "duration": 41,
+                    "playTimes": 6,
+                    "name": "newAnimation",
+                    "bone": [
+                        {
+                            "name": "图层 15",
+                            "translateFrame": [
+                                {
+                                    "duration": 9,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 21,
+                                    "tweenEasing": 0,
+                                    "x": 792.95
+                                },
+                                {
+                                    "tweenEasing": 0,
+                                    "x": 821.6
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0,
+                                    "x": 822.95
+                                },
+                                {
+                                    "duration": 0,
+                                    "x": 1595.9
+                                }
+                            ]
+                        },
+                        {
+                            "name": "图层 14",
+                            "translateFrame": [
+                                {
+                                    "duration": 15,
+                                    "x": 171.65,
+                                    "y": 9.45
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0,
+                                    "x": 109.15
+                                },
+                                {
+                                    "x": 229.3
+                                },
+                                {
+                                    "duration": 11,
+                                    "x": 171.65,
+                                    "y": 9.45
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 15,
+                                    "x": 0.2,
+                                    "y": 4.76
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0,
+                                    "x": 2.13
+                                },
+                                {},
+                                {
+                                    "duration": 11,
+                                    "x": 0.2,
+                                    "y": 4.76
+                                }
+                            ]
+                        },
+                        {
+                            "name": "图层 13",
+                            "translateFrame": [
+                                {
+                                    "duration": 13,
+                                    "x": 282.1,
+                                    "y": 39.75
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0,
+                                    "x": 156.55
+                                },
+                                {
+                                    "x": 328.6
+                                },
+                                {
+                                    "duration": 14,
+                                    "x": 282.1,
+                                    "y": 39.75
+                                }
+                            ],
+                            "rotateFrame": [
+                                {
+                                    "duration": 13,
+                                    "rotate": 180
+                                },
+                                {
+                                    "duration": 13,
+                                    "tweenEasing": 0
+                                },
+                                {},
+                                {
+                                    "duration": 14,
+                                    "rotate": 180
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 13,
+                                    "x": -0.14,
+                                    "y": 0.72
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0,
+                                    "x": 2.13
+                                },
+                                {},
+                                {
+                                    "duration": 14,
+                                    "x": -0.14,
+                                    "y": 0.72
+                                }
+                            ]
+                        },
+                        {
+                            "name": "图层 12",
+                            "translateFrame": [
+                                {
+                                    "duration": 11,
+                                    "x": 196.6,
+                                    "y": -35.65
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0,
+                                    "x": 171.05
+                                },
+                                {
+                                    "x": 359
+                                },
+                                {
+                                    "duration": 15,
+                                    "x": 196.6,
+                                    "y": -35.65
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 11,
+                                    "x": 0.13,
+                                    "y": 2.94
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0,
+                                    "x": 2.13
+                                },
+                                {},
+                                {
+                                    "duration": 15,
+                                    "x": 0.13,
+                                    "y": 2.94
+                                }
+                            ]
+                        },
+                        {
+                            "name": "图层 11",
+                            "translateFrame": [
+                                {
+                                    "duration": 9,
+                                    "x": 225.35,
+                                    "y": -36.7
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0,
+                                    "x": 179.25
+                                },
+                                {
+                                    "x": 376.8
+                                },
+                                {
+                                    "duration": 17,
+                                    "x": 225.35,
+                                    "y": -36.7
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 9,
+                                    "x": 0.12,
+                                    "y": 2.94
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0,
+                                    "x": 2.13
+                                },
+                                {},
+                                {
+                                    "duration": 17,
+                                    "x": 0.12,
+                                    "y": 2.94
+                                }
+                            ]
+                        },
+                        {
+                            "name": "图层 10",
+                            "translateFrame": [
+                                {
+                                    "duration": 7,
+                                    "x": 234.05,
+                                    "y": -20.65
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0,
+                                    "x": 183.9
+                                },
+                                {
+                                    "x": 386.1
+                                },
+                                {
+                                    "duration": 19,
+                                    "x": 234.05,
+                                    "y": -20.65
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 7,
+                                    "x": 0.12,
+                                    "y": 3.57
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0,
+                                    "x": 2.13
+                                },
+                                {},
+                                {
+                                    "duration": 19,
+                                    "x": 0.12,
+                                    "y": 3.57
+                                }
+                            ]
+                        },
+                        {
+                            "name": "图层 9",
+                            "translateFrame": [
+                                {
+                                    "duration": 4,
+                                    "x": 292,
+                                    "y": 19.75
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0,
+                                    "x": 138.5
+                                },
+                                {
+                                    "x": 290.85
+                                },
+                                {
+                                    "duration": 22,
+                                    "x": 292,
+                                    "y": 19.75
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 4,
+                                    "x": 0.16,
+                                    "y": 2.94
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0,
+                                    "x": 2.13
+                                },
+                                {},
+                                {
+                                    "duration": 22,
+                                    "x": 0.16,
+                                    "y": 2.94
+                                }
+                            ]
+                        },
+                        {
+                            "name": "图层 8",
+                            "translateFrame": [
+                                {
+                                    "duration": 19,
+                                    "x": 69.85,
+                                    "y": 39.75
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0,
+                                    "x": 156.45
+                                },
+                                {
+                                    "x": 328.6
+                                },
+                                {
+                                    "duration": 8,
+                                    "x": 69.85,
+                                    "y": 39.75
+                                }
+                            ],
+                            "rotateFrame": [
+                                {
+                                    "duration": 19,
+                                    "rotate": 180
+                                },
+                                {
+                                    "duration": 13,
+                                    "tweenEasing": 0
+                                },
+                                {},
+                                {
+                                    "duration": 8,
+                                    "rotate": 180
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 19,
+                                    "x": -0.14,
+                                    "y": 1.45
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0,
+                                    "x": 2.13
+                                },
+                                {},
+                                {
+                                    "duration": 8,
+                                    "x": -0.14,
+                                    "y": 1.45
+                                }
+                            ]
+                        },
+                        {
+                            "name": "图层 7",
+                            "translateFrame": [
+                                {
+                                    "duration": 17,
+                                    "x": 170.9,
+                                    "y": -35.65
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0,
+                                    "x": 171
+                                },
+                                {
+                                    "x": 359.05
+                                },
+                                {
+                                    "duration": 9,
+                                    "x": 170.9,
+                                    "y": -35.65
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 17,
+                                    "x": 0.13,
+                                    "y": 1.33
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0,
+                                    "x": 2.13
+                                },
+                                {},
+                                {
+                                    "duration": 9,
+                                    "x": 0.13,
+                                    "y": 1.33
+                                }
+                            ]
+                        },
+                        {
+                            "name": "图层 6",
+                            "translateFrame": [
+                                {
+                                    "duration": 13,
+                                    "x": 182.3,
+                                    "y": -20.65
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0,
+                                    "x": 183.9
+                                },
+                                {
+                                    "x": 386.1
+                                },
+                                {
+                                    "duration": 13,
+                                    "x": 182.3,
+                                    "y": -20.65
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 13,
+                                    "x": 0.12,
+                                    "y": 1.59
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0,
+                                    "x": 2.13
+                                },
+                                {},
+                                {
+                                    "duration": 13,
+                                    "x": 0.12,
+                                    "y": 1.59
+                                }
+                            ]
+                        },
+                        {
+                            "name": "图层 5",
+                            "translateFrame": [
+                                {
+                                    "duration": 10,
+                                    "x": 160.9,
+                                    "y": 32.75
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0,
+                                    "x": 138.5
+                                },
+                                {
+                                    "x": 290.85
+                                },
+                                {
+                                    "duration": 16,
+                                    "x": 160.9,
+                                    "y": 32.75
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 10,
+                                    "x": 0.16,
+                                    "y": 1.33
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0,
+                                    "x": 2.13
+                                },
+                                {},
+                                {
+                                    "duration": 16,
+                                    "x": 0.16,
+                                    "y": 1.33
+                                }
+                            ]
+                        },
+                        {
+                            "name": "元件 4",
+                            "translateFrame": [
+                                {
+                                    "duration": 9,
+                                    "x": 94.65
+                                },
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 5,
+                                    "tweenEasing": 0,
+                                    "x": 1.15
+                                },
+                                {
+                                    "duration": 12,
+                                    "tweenEasing": 0,
+                                    "x": 2.55
+                                },
+                                {
+                                    "x": 6
+                                },
+                                {
+                                    "duration": 10,
+                                    "x": 94.65
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 9
+                                },
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 5,
+                                    "tweenEasing": 0,
+                                    "x": 1.3,
+                                    "y": 1.3
+                                },
+                                {
+                                    "duration": 23
+                                }
+                            ]
+                        },
+                        {
+                            "name": "元件 5",
+                            "translateFrame": [
+                                {
+                                    "duration": 9,
+                                    "x": 39.65,
+                                    "y": 0.1
+                                },
+                                {
+                                    "duration": 2,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0,
+                                    "x": 0.55
+                                },
+                                {
+                                    "duration": 5,
+                                    "tweenEasing": 0,
+                                    "x": 1.7
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0,
+                                    "x": 3.15
+                                },
+                                {
+                                    "x": 6
+                                },
+                                {
+                                    "duration": 10,
+                                    "x": 39.65,
+                                    "y": 0.1
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 11
+                                },
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 5,
+                                    "tweenEasing": 0,
+                                    "x": 1.3,
+                                    "y": 1.3
+                                },
+                                {
+                                    "duration": 21
+                                }
+                            ]
+                        },
+                        {
+                            "name": "元件 6",
+                            "translateFrame": [
+                                {
+                                    "duration": 9,
+                                    "x": -16.25
+                                },
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0,
+                                    "x": 1.15
+                                },
+                                {
+                                    "duration": 5,
+                                    "tweenEasing": 0,
+                                    "x": 2.3
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0,
+                                    "x": 3.7
+                                },
+                                {
+                                    "x": 6
+                                },
+                                {
+                                    "duration": 10,
+                                    "x": -16.25
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 13
+                                },
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 5,
+                                    "tweenEasing": 0,
+                                    "x": 1.3,
+                                    "y": 1.3
+                                },
+                                {
+                                    "duration": 19
+                                }
+                            ]
+                        },
+                        {
+                            "name": "元件 7",
+                            "translateFrame": [
+                                {
+                                    "duration": 9,
+                                    "x": -71.35
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0,
+                                    "x": 1.7
+                                },
+                                {
+                                    "duration": 5,
+                                    "tweenEasing": 0,
+                                    "x": 2.85
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0,
+                                    "x": 4.3
+                                },
+                                {
+                                    "x": 6
+                                },
+                                {
+                                    "duration": 10,
+                                    "x": -71.35
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 15
+                                },
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 5,
+                                    "tweenEasing": 0,
+                                    "x": 1.3,
+                                    "y": 1.3
+                                },
+                                {
+                                    "duration": 17
+                                }
+                            ]
+                        }
+                    ],
+                    "slot": [
+                        {
+                            "name": "图层 15",
+                            "displayFrame": [
+                                {
+                                    "duration": 9
+                                },
+                                {
+                                    "duration": 22,
+                                    "value": 1
+                                },
+                                {
+                                    "duration": 10
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 9,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "aM": 68
+                                    }
+                                },
+                                {
+                                    "duration": 21,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "aM": 68,
+                                        "bM": 0,
+                                        "rO": 200,
+                                        "gO": 200
+                                    }
+                                },
+                                {
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "aM": 68,
+                                        "bM": 0,
+                                        "rO": 200,
+                                        "gO": 200
+                                    }
+                                },
+                                {
+                                    "duration": 10,
+                                    "value": {
+                                        "aM": 68
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "图层 14",
+                            "displayFrame": [
+                                {
+                                    "duration": 15,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 15
+                                },
+                                {
+                                    "duration": 11,
+                                    "value": -1
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 15
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 11
+                                }
+                            ]
+                        },
+                        {
+                            "name": "图层 13",
+                            "displayFrame": [
+                                {
+                                    "duration": 13,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 14
+                                },
+                                {
+                                    "duration": 14,
+                                    "value": -1
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 13
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 14
+                                }
+                            ]
+                        },
+                        {
+                            "name": "图层 12",
+                            "displayFrame": [
+                                {
+                                    "duration": 11,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 15
+                                },
+                                {
+                                    "duration": 15,
+                                    "value": -1
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 11
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 15
+                                }
+                            ]
+                        },
+                        {
+                            "name": "图层 11",
+                            "displayFrame": [
+                                {
+                                    "duration": 9,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 15
+                                },
+                                {
+                                    "duration": 17,
+                                    "value": -1
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 9
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 17
+                                }
+                            ]
+                        },
+                        {
+                            "name": "图层 10",
+                            "displayFrame": [
+                                {
+                                    "duration": 7,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 15
+                                },
+                                {
+                                    "duration": 19,
+                                    "value": -1
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 7
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 19
+                                }
+                            ]
+                        },
+                        {
+                            "name": "图层 9",
+                            "displayFrame": [
+                                {
+                                    "duration": 4,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 15
+                                },
+                                {
+                                    "duration": 22,
+                                    "value": -1
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 4
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 22
+                                }
+                            ]
+                        },
+                        {
+                            "name": "图层 8",
+                            "displayFrame": [
+                                {
+                                    "duration": 19,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 14
+                                },
+                                {
+                                    "duration": 8,
+                                    "value": -1
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 19
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 8
+                                }
+                            ]
+                        },
+                        {
+                            "name": "图层 7",
+                            "displayFrame": [
+                                {
+                                    "duration": 17,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 15
+                                },
+                                {
+                                    "duration": 9,
+                                    "value": -1
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 17
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 9
+                                }
+                            ]
+                        },
+                        {
+                            "name": "图层 6",
+                            "displayFrame": [
+                                {
+                                    "duration": 13,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 15
+                                },
+                                {
+                                    "duration": 13,
+                                    "value": -1
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 13
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 13
+                                }
+                            ]
+                        },
+                        {
+                            "name": "图层 5",
+                            "displayFrame": [
+                                {
+                                    "duration": 10,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 15
+                                },
+                                {
+                                    "duration": 16,
+                                    "value": -1
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 10
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 16
+                                }
+                            ]
+                        },
+                        {
+                            "name": "元件 4",
+                            "displayFrame": [
+                                {
+                                    "duration": 9,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 22
+                                },
+                                {
+                                    "duration": 10,
+                                    "value": -1
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 9
+                                },
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 5,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "rM": 0,
+                                        "gM": 0,
+                                        "bM": 0,
+                                        "rO": 255,
+                                        "gO": 255,
+                                        "bO": 255
+                                    }
+                                },
+                                {
+                                    "duration": 23
+                                }
+                            ]
+                        },
+                        {
+                            "name": "元件 5",
+                            "displayFrame": [
+                                {
+                                    "duration": 9,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 22
+                                },
+                                {
+                                    "duration": 10,
+                                    "value": -1
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 11
+                                },
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 5,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "rM": 0,
+                                        "gM": 0,
+                                        "bM": 0,
+                                        "rO": 255,
+                                        "gO": 255,
+                                        "bO": 255
+                                    }
+                                },
+                                {
+                                    "duration": 21
+                                }
+                            ]
+                        },
+                        {
+                            "name": "元件 6",
+                            "displayFrame": [
+                                {
+                                    "duration": 9,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 22
+                                },
+                                {
+                                    "duration": 10,
+                                    "value": -1
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 13
+                                },
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 5,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "rM": 0,
+                                        "gM": 0,
+                                        "bM": 0,
+                                        "rO": 255,
+                                        "gO": 255,
+                                        "bO": 255
+                                    }
+                                },
+                                {
+                                    "duration": 19
+                                }
+                            ]
+                        },
+                        {
+                            "name": "元件 7",
+                            "displayFrame": [
+                                {
+                                    "duration": 9,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 22
+                                },
+                                {
+                                    "duration": 10,
+                                    "value": -1
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 15
+                                },
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 5,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "rM": 0,
+                                        "gM": 0,
+                                        "bM": 0,
+                                        "rO": 255,
+                                        "gO": 255,
+                                        "bO": 255
+                                    }
+                                },
+                                {
+                                    "duration": 17
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "defaultActions": [
+                {
+                    "gotoAndPlay": "newAnimation"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,2503 @@
+{
+    "frameRate": 60,
+    "name": "CardBone_4",
+    "version": "5.5",
+    "compatibleVersion": "5.5",
+    "armature": [
+        {
+            "type": "Armature",
+            "frameRate": 60,
+            "name": "Armature",
+            "aabb": {
+                "x": -150.6,
+                "y": -98.15,
+                "width": 578.55,
+                "height": 178
+            },
+            "bone": [
+                {
+                    "name": "root"
+                },
+                {
+                    "name": "lizi_3",
+                    "parent": "root",
+                    "transform": {
+                        "x": -73.75,
+                        "y": -7.3,
+                        "skX": -15.33,
+                        "skY": -15.44,
+                        "scX": -0.51,
+                        "scY": 0.48
+                    }
+                },
+                {
+                    "name": "liandui",
+                    "parent": "root",
+                    "transform": {
+                        "x": 177,
+                        "y": -4
+                    }
+                },
+                {
+                    "name": "lizi",
+                    "parent": "root",
+                    "transform": {
+                        "x": -1.05,
+                        "y": 13.6,
+                        "skX": -19.57,
+                        "skY": -19.23,
+                        "scX": -0.68,
+                        "scY": 0.68
+                    }
+                },
+                {
+                    "name": "lizi_0",
+                    "parent": "root",
+                    "transform": {
+                        "x": -73.7,
+                        "y": -13.3,
+                        "skX": -162.47,
+                        "skY": -162.81,
+                        "scX": 0.6,
+                        "scY": 0.6
+                    }
+                },
+                {
+                    "name": "lizi_1",
+                    "parent": "root",
+                    "transform": {
+                        "x": -3.8,
+                        "y": -13.65,
+                        "skX": -138.02,
+                        "skY": -140.28,
+                        "scX": 0.75,
+                        "scY": 0.74
+                    }
+                },
+                {
+                    "name": "lizi_2",
+                    "parent": "root",
+                    "transform": {
+                        "x": -76.7,
+                        "y": -16.85,
+                        "skX": -161.19,
+                        "skY": -161.07,
+                        "scX": 0.51,
+                        "scY": 0.48
+                    }
+                },
+                {
+                    "name": "pian",
+                    "parent": "root",
+                    "transform": {
+                        "x": 268.45,
+                        "y": -4
+                    }
+                },
+                {
+                    "name": "lizi_4",
+                    "parent": "root",
+                    "transform": {
+                        "x": -89.15,
+                        "y": -2,
+                        "skX": -131.47,
+                        "skY": -136.86,
+                        "scX": 0.68,
+                        "scY": 0.66
+                    }
+                },
+                {
+                    "name": "lizi_5",
+                    "parent": "root",
+                    "transform": {
+                        "x": -90.15,
+                        "y": -11,
+                        "skX": -131.47,
+                        "skY": -136.86,
+                        "scX": 0.68,
+                        "scY": 0.66
+                    }
+                },
+                {
+                    "name": "lizi_6",
+                    "parent": "root",
+                    "transform": {
+                        "x": -88.15,
+                        "y": 2,
+                        "skX": -131.47,
+                        "skY": -136.86,
+                        "scX": 0.68,
+                        "scY": 0.66
+                    }
+                },
+                {
+                    "name": "tou",
+                    "parent": "root",
+                    "transform": {
+                        "x": 55.95,
+                        "y": -9,
+                        "scX": 1.57,
+                        "scY": 1.02
+                    }
+                },
+                {
+                    "name": "quan",
+                    "parent": "root",
+                    "transform": {
+                        "x": -61.6,
+                        "y": -9.15,
+                        "scX": 0.14,
+                        "scY": 0.52
+                    }
+                }
+            ],
+            "slot": [
+                {
+                    "blendMode": "add",
+                    "name": "pian",
+                    "parent": "pian"
+                },
+                {
+                    "name": "liandui",
+                    "parent": "liandui"
+                },
+                {
+                    "blendMode": "add",
+                    "name": "lizi",
+                    "parent": "lizi"
+                },
+                {
+                    "blendMode": "add",
+                    "name": "lizi_0",
+                    "parent": "lizi_0"
+                },
+                {
+                    "blendMode": "add",
+                    "name": "lizi_1",
+                    "parent": "lizi_1"
+                },
+                {
+                    "blendMode": "add",
+                    "name": "lizi_2",
+                    "parent": "lizi_2"
+                },
+                {
+                    "blendMode": "add",
+                    "name": "lizi_3",
+                    "parent": "lizi_3"
+                },
+                {
+                    "blendMode": "add",
+                    "name": "lizi_4",
+                    "parent": "lizi_4"
+                },
+                {
+                    "blendMode": "add",
+                    "name": "lizi_5",
+                    "parent": "lizi_5"
+                },
+                {
+                    "blendMode": "add",
+                    "name": "lizi_6",
+                    "parent": "lizi_6"
+                },
+                {
+                    "blendMode": "add",
+                    "name": "tou",
+                    "parent": "tou"
+                },
+                {
+                    "blendMode": "add",
+                    "name": "quan",
+                    "parent": "quan"
+                }
+            ],
+            "skin": [
+                {
+                    "slot": [
+                        {
+                            "name": "lizi_0",
+                            "display": [
+                                {
+                                    "name": "lizi_01"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "tou",
+                            "display": [
+                                {
+                                    "name": "tou",
+                                    "transform": {
+                                        "x": 2,
+                                        "y": 2
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "liandui",
+                            "display": [
+                                {
+                                    "name": "liandui"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi_5",
+                            "display": [
+                                {
+                                    "name": "lizi_01"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi_3",
+                            "display": [
+                                {
+                                    "name": "lizi_01"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi_1",
+                            "display": [
+                                {
+                                    "name": "lizi_01"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "quan",
+                            "display": [
+                                {
+                                    "name": "yuan02"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi",
+                            "display": [
+                                {
+                                    "name": "lizi_01"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi_6",
+                            "display": [
+                                {
+                                    "name": "lizi_01"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "pian",
+                            "display": [
+                                {
+                                    "name": "pian",
+                                    "transform": {
+                                        "x": 1.5,
+                                        "y": 2
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi_4",
+                            "display": [
+                                {
+                                    "name": "lizi_01"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi_2",
+                            "display": [
+                                {
+                                    "name": "lizi_01"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "animation": [
+                {
+                    "duration": 41,
+                    "fadeInTime": 0.3,
+                    "name": "newAnimation",
+                    "bone": [
+                        {
+                            "name": "pian",
+                            "translateFrame": [
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 5,
+                                    "tweenEasing": 0,
+                                    "x": -188,
+                                    "y": -5
+                                },
+                                {
+                                    "duration": 11,
+                                    "tweenEasing": 0,
+                                    "x": -205,
+                                    "y": -5
+                                },
+                                {
+                                    "duration": 19,
+                                    "x": -227,
+                                    "y": -5
+                                }
+                            ]
+                        },
+                        {
+                            "name": "liandui",
+                            "translateFrame": [
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 20,
+                                    "tweenEasing": 0,
+                                    "x": -190,
+                                    "y": -6
+                                },
+                                {
+                                    "duration": 15,
+                                    "tweenEasing": 0,
+                                    "x": -219,
+                                    "y": -6
+                                },
+                                {
+                                    "duration": 0,
+                                    "x": -227,
+                                    "y": -6
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi",
+                            "translateFrame": [
+                                {
+                                    "duration": 4,
+                                    "x": 1.05,
+                                    "y": -13.6
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0,
+                                    "x": 63.5,
+                                    "y": 18.15
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0,
+                                    "x": 115.35,
+                                    "y": 11.9
+                                },
+                                {
+                                    "duration": 15,
+                                    "x": 123.3,
+                                    "y": 10.8
+                                }
+                            ],
+                            "rotateFrame": [
+                                {
+                                    "duration": 4,
+                                    "rotate": 19.23
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 23,
+                                    "rotate": -158.77
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 4,
+                                    "x": -1.47,
+                                    "y": 1.47
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0,
+                                    "x": 1.38,
+                                    "y": 1.38
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0,
+                                    "x": 0.53,
+                                    "y": 0.53
+                                },
+                                {
+                                    "duration": 15,
+                                    "x": 0.24,
+                                    "y": 0.24
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi_0",
+                            "translateFrame": [
+                                {
+                                    "duration": 5,
+                                    "x": 73.7,
+                                    "y": 13.3
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0,
+                                    "x": 56.75,
+                                    "y": -7.05
+                                },
+                                {
+                                    "duration": 9,
+                                    "tweenEasing": 0,
+                                    "x": 114.2,
+                                    "y": -15.1
+                                },
+                                {
+                                    "duration": 13,
+                                    "x": 129.15,
+                                    "y": -20.25
+                                }
+                            ],
+                            "rotateFrame": [
+                                {
+                                    "duration": 5,
+                                    "rotate": 162.81
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 22,
+                                    "rotate": 158.77
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 5,
+                                    "x": 1.67,
+                                    "y": 1.67
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0,
+                                    "x": 1.37,
+                                    "y": 1.37
+                                },
+                                {
+                                    "duration": 9,
+                                    "tweenEasing": 0,
+                                    "x": 0.52,
+                                    "y": 0.52
+                                },
+                                {
+                                    "duration": 13,
+                                    "x": 0.23,
+                                    "y": 0.23
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi_1",
+                            "translateFrame": [
+                                {
+                                    "duration": 6,
+                                    "x": 3.8,
+                                    "y": 13.65
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0,
+                                    "x": 72.55,
+                                    "y": 7.05
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0,
+                                    "x": 131.3,
+                                    "y": 1.45
+                                },
+                                {
+                                    "duration": 11,
+                                    "x": 152.5,
+                                    "y": -0.3
+                                }
+                            ],
+                            "rotateFrame": [
+                                {
+                                    "duration": 6,
+                                    "rotate": 140.28
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 21,
+                                    "rotate": 159.29
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 6,
+                                    "x": 1.33,
+                                    "y": 1.35
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0,
+                                    "x": 1.37,
+                                    "y": 1.36
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0,
+                                    "x": 0.52,
+                                    "y": 0.51
+                                },
+                                {
+                                    "duration": 11,
+                                    "x": 0.23,
+                                    "y": 0.23
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi_2",
+                            "translateFrame": [
+                                {
+                                    "duration": 8,
+                                    "x": 76.7,
+                                    "y": 16.85
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0,
+                                    "x": 46.55,
+                                    "y": -12.4
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0,
+                                    "x": 82.05,
+                                    "y": -42.65
+                                },
+                                {
+                                    "duration": 9,
+                                    "x": 88.75,
+                                    "y": -48.75
+                                }
+                            ],
+                            "rotateFrame": [
+                                {
+                                    "duration": 8,
+                                    "rotate": 161.07
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 19,
+                                    "rotate": 159.75
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 8,
+                                    "x": 1.96,
+                                    "y": 2.08
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0,
+                                    "x": 1.37,
+                                    "y": 1.38
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0,
+                                    "x": 0.51,
+                                    "y": 0.52
+                                },
+                                {
+                                    "duration": 9,
+                                    "x": 0.24,
+                                    "y": 0.23
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi_3",
+                            "translateFrame": [
+                                {
+                                    "duration": 10,
+                                    "x": 73.75,
+                                    "y": 7.3
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0,
+                                    "x": 45.75,
+                                    "y": 15.15
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0,
+                                    "x": 79.3,
+                                    "y": 47.5
+                                },
+                                {
+                                    "duration": 7,
+                                    "x": 85.6,
+                                    "y": 54
+                                }
+                            ],
+                            "rotateFrame": [
+                                {
+                                    "duration": 10,
+                                    "rotate": 15.44
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 17,
+                                    "rotate": -159.76
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 10,
+                                    "x": -1.96,
+                                    "y": 2.08
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0,
+                                    "x": 1.37,
+                                    "y": 1.38
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0,
+                                    "x": 0.51,
+                                    "y": 0.52
+                                },
+                                {
+                                    "duration": 7,
+                                    "x": 0.24,
+                                    "y": 0.23
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi_4",
+                            "translateFrame": [
+                                {
+                                    "duration": 12,
+                                    "x": 89.15,
+                                    "y": 2
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0,
+                                    "x": 66.45,
+                                    "y": 11.95
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0,
+                                    "x": 134.2,
+                                    "y": 15.25
+                                },
+                                {
+                                    "duration": 5,
+                                    "x": 163.95,
+                                    "y": 19.8
+                                }
+                            ],
+                            "rotateFrame": [
+                                {
+                                    "duration": 12,
+                                    "rotate": 136.86
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 15,
+                                    "rotate": 159.88
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 12,
+                                    "x": 1.47,
+                                    "y": 1.52
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0,
+                                    "x": 1.37,
+                                    "y": 1.38
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0,
+                                    "x": 0.53,
+                                    "y": 0.52
+                                },
+                                {
+                                    "duration": 5,
+                                    "x": 0.24,
+                                    "y": 0.23
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi_5",
+                            "translateFrame": [
+                                {
+                                    "duration": 13,
+                                    "x": 90.15,
+                                    "y": 11
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0,
+                                    "x": 20.45,
+                                    "y": -21.55
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0,
+                                    "x": 50.2,
+                                    "y": -16.75
+                                },
+                                {
+                                    "duration": 5,
+                                    "x": 93.95,
+                                    "y": -3.25
+                                }
+                            ],
+                            "rotateFrame": [
+                                {
+                                    "duration": 13,
+                                    "rotate": 136.86
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 15,
+                                    "rotate": 159.88
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 13,
+                                    "x": 1.47,
+                                    "y": 1.52
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0,
+                                    "x": 1.03,
+                                    "y": 1.03
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0,
+                                    "x": 0.53,
+                                    "y": 0.52
+                                },
+                                {
+                                    "duration": 5,
+                                    "x": 0.24,
+                                    "y": 0.23
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi_6",
+                            "translateFrame": [
+                                {
+                                    "duration": 14,
+                                    "x": 88.15,
+                                    "y": -2
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 12,
+                                    "tweenEasing": 0,
+                                    "x": 22,
+                                    "y": 2
+                                },
+                                {
+                                    "duration": 9,
+                                    "x": 40,
+                                    "y": 3.25
+                                }
+                            ],
+                            "rotateFrame": [
+                                {
+                                    "duration": 14,
+                                    "rotate": 136.86
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 12,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 9,
+                                    "rotate": 85.46
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 14,
+                                    "x": 1.47,
+                                    "y": 1.52
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 12,
+                                    "tweenEasing": 0,
+                                    "x": 0.76,
+                                    "y": 0.77
+                                },
+                                {
+                                    "duration": 9,
+                                    "x": 0.43,
+                                    "y": 0.42
+                                }
+                            ]
+                        },
+                        {
+                            "name": "tou",
+                            "translateFrame": [
+                                {
+                                    "duration": 4,
+                                    "x": -55.95,
+                                    "y": 9
+                                },
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0,
+                                    "x": -88.25,
+                                    "y": -2
+                                },
+                                {
+                                    "duration": 27,
+                                    "x": -109.25,
+                                    "y": -2
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 4,
+                                    "x": 0.64,
+                                    "y": 0.98
+                                },
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0,
+                                    "x": 0.67,
+                                    "y": 0.64
+                                },
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0,
+                                    "x": 0.67,
+                                    "y": 0.36
+                                },
+                                {
+                                    "duration": 23,
+                                    "x": 0.67,
+                                    "y": 0.07
+                                }
+                            ]
+                        },
+                        {
+                            "name": "quan",
+                            "translateFrame": [
+                                {
+                                    "duration": 4,
+                                    "x": 61.6,
+                                    "y": 9.15
+                                },
+                                {
+                                    "duration": 9,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 28,
+                                    "x": 41.6
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 4,
+                                    "x": 7.14,
+                                    "y": 1.92
+                                },
+                                {
+                                    "duration": 9,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 28,
+                                    "x": 1.5,
+                                    "y": 1.48
+                                }
+                            ]
+                        }
+                    ],
+                    "slot": [
+                        {
+                            "name": "pian",
+                            "colorFrame": [
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 5,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 11,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "aM": 35
+                                    }
+                                },
+                                {
+                                    "duration": 19,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "liandui",
+                            "colorFrame": [
+                                {
+                                    "duration": 26,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 15,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 0,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi",
+                            "displayFrame": [
+                                {
+                                    "duration": 4,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 37
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 18
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 15,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi_0",
+                            "displayFrame": [
+                                {
+                                    "duration": 5,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 36
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 19
+                                },
+                                {
+                                    "duration": 9,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 13,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi_1",
+                            "displayFrame": [
+                                {
+                                    "duration": 6,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 35
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 20
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 11,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi_2",
+                            "displayFrame": [
+                                {
+                                    "duration": 8,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 33
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 22
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 9,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi_3",
+                            "displayFrame": [
+                                {
+                                    "duration": 10,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 31
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 24
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 7,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi_4",
+                            "displayFrame": [
+                                {
+                                    "duration": 12,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 29
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 26
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 5,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi_5",
+                            "displayFrame": [
+                                {
+                                    "duration": 13,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 28
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 26
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 5,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi_6",
+                            "displayFrame": [
+                                {
+                                    "duration": 14,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 27
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 20
+                                },
+                                {
+                                    "duration": 12,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 9,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "tou",
+                            "displayFrame": [
+                                {
+                                    "duration": 4,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 37
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 8
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "aM": 9
+                                    }
+                                },
+                                {
+                                    "duration": 23,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "quan",
+                            "displayFrame": [
+                                {
+                                    "duration": 4,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 37
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 4
+                                },
+                                {
+                                    "duration": 9,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 28,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "duration": 41,
+                    "fadeInTime": 0.3,
+                    "name": "effect_Left",
+                    "bone": [
+                        {
+                            "name": "pian",
+                            "translateFrame": [
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 5,
+                                    "tweenEasing": 0,
+                                    "x": -188,
+                                    "y": -5
+                                },
+                                {
+                                    "duration": 11,
+                                    "tweenEasing": 0,
+                                    "x": -205,
+                                    "y": -5
+                                },
+                                {
+                                    "duration": 19,
+                                    "x": -227,
+                                    "y": -5
+                                }
+                            ]
+                        },
+                        {
+                            "name": "liandui",
+                            "translateFrame": [
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 20,
+                                    "tweenEasing": 0,
+                                    "x": -190,
+                                    "y": -6
+                                },
+                                {
+                                    "duration": 15,
+                                    "tweenEasing": 0,
+                                    "x": -219,
+                                    "y": -6
+                                },
+                                {
+                                    "duration": 0,
+                                    "x": -227,
+                                    "y": -6
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 41,
+                                    "x": -1
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi",
+                            "translateFrame": [
+                                {
+                                    "duration": 4,
+                                    "x": 1.05,
+                                    "y": -13.6
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0,
+                                    "x": 63.5,
+                                    "y": 18.15
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0,
+                                    "x": 115.35,
+                                    "y": 11.9
+                                },
+                                {
+                                    "duration": 15,
+                                    "x": 123.3,
+                                    "y": 10.8
+                                }
+                            ],
+                            "rotateFrame": [
+                                {
+                                    "duration": 4,
+                                    "rotate": 19.23
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 23,
+                                    "rotate": -158.77
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 4,
+                                    "x": -1.47,
+                                    "y": 1.47
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0,
+                                    "x": 1.38,
+                                    "y": 1.38
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0,
+                                    "x": 0.53,
+                                    "y": 0.53
+                                },
+                                {
+                                    "duration": 15,
+                                    "x": 0.24,
+                                    "y": 0.24
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi_0",
+                            "translateFrame": [
+                                {
+                                    "duration": 5,
+                                    "x": 73.7,
+                                    "y": 13.3
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0,
+                                    "x": 56.75,
+                                    "y": -7.05
+                                },
+                                {
+                                    "duration": 9,
+                                    "tweenEasing": 0,
+                                    "x": 114.2,
+                                    "y": -15.1
+                                },
+                                {
+                                    "duration": 13,
+                                    "x": 129.15,
+                                    "y": -20.25
+                                }
+                            ],
+                            "rotateFrame": [
+                                {
+                                    "duration": 5,
+                                    "rotate": 162.81
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 22,
+                                    "rotate": 158.77
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 5,
+                                    "x": 1.67,
+                                    "y": 1.67
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0,
+                                    "x": 1.37,
+                                    "y": 1.37
+                                },
+                                {
+                                    "duration": 9,
+                                    "tweenEasing": 0,
+                                    "x": 0.52,
+                                    "y": 0.52
+                                },
+                                {
+                                    "duration": 13,
+                                    "x": 0.23,
+                                    "y": 0.23
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi_1",
+                            "translateFrame": [
+                                {
+                                    "duration": 6,
+                                    "x": 3.8,
+                                    "y": 13.65
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0,
+                                    "x": 72.55,
+                                    "y": 7.05
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0,
+                                    "x": 131.3,
+                                    "y": 1.45
+                                },
+                                {
+                                    "duration": 11,
+                                    "x": 152.5,
+                                    "y": -0.3
+                                }
+                            ],
+                            "rotateFrame": [
+                                {
+                                    "duration": 6,
+                                    "rotate": 140.28
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 21,
+                                    "rotate": 159.29
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 6,
+                                    "x": 1.33,
+                                    "y": 1.35
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0,
+                                    "x": 1.37,
+                                    "y": 1.36
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0,
+                                    "x": 0.52,
+                                    "y": 0.51
+                                },
+                                {
+                                    "duration": 11,
+                                    "x": 0.23,
+                                    "y": 0.23
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi_2",
+                            "translateFrame": [
+                                {
+                                    "duration": 8,
+                                    "x": 76.7,
+                                    "y": 16.85
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0,
+                                    "x": 46.55,
+                                    "y": -12.4
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0,
+                                    "x": 82.05,
+                                    "y": -42.65
+                                },
+                                {
+                                    "duration": 9,
+                                    "x": 88.75,
+                                    "y": -48.75
+                                }
+                            ],
+                            "rotateFrame": [
+                                {
+                                    "duration": 8,
+                                    "rotate": 161.07
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 19,
+                                    "rotate": 159.75
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 8,
+                                    "x": 1.96,
+                                    "y": 2.08
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0,
+                                    "x": 1.37,
+                                    "y": 1.38
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0,
+                                    "x": 0.51,
+                                    "y": 0.52
+                                },
+                                {
+                                    "duration": 9,
+                                    "x": 0.24,
+                                    "y": 0.23
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi_3",
+                            "translateFrame": [
+                                {
+                                    "duration": 10,
+                                    "x": 73.75,
+                                    "y": 7.3
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0,
+                                    "x": 45.75,
+                                    "y": 15.15
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0,
+                                    "x": 79.3,
+                                    "y": 47.5
+                                },
+                                {
+                                    "duration": 7,
+                                    "x": 85.6,
+                                    "y": 54
+                                }
+                            ],
+                            "rotateFrame": [
+                                {
+                                    "duration": 10,
+                                    "rotate": 15.44
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 17,
+                                    "rotate": -159.76
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 10,
+                                    "x": -1.96,
+                                    "y": 2.08
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0,
+                                    "x": 1.37,
+                                    "y": 1.38
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0,
+                                    "x": 0.51,
+                                    "y": 0.52
+                                },
+                                {
+                                    "duration": 7,
+                                    "x": 0.24,
+                                    "y": 0.23
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi_4",
+                            "translateFrame": [
+                                {
+                                    "duration": 12,
+                                    "x": 89.15,
+                                    "y": 2
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0,
+                                    "x": 66.45,
+                                    "y": 11.95
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0,
+                                    "x": 134.2,
+                                    "y": 15.25
+                                },
+                                {
+                                    "duration": 5,
+                                    "x": 163.95,
+                                    "y": 19.8
+                                }
+                            ],
+                            "rotateFrame": [
+                                {
+                                    "duration": 12,
+                                    "rotate": 136.86
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 15,
+                                    "rotate": 159.88
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 12,
+                                    "x": 1.47,
+                                    "y": 1.52
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0,
+                                    "x": 1.37,
+                                    "y": 1.38
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0,
+                                    "x": 0.53,
+                                    "y": 0.52
+                                },
+                                {
+                                    "duration": 5,
+                                    "x": 0.24,
+                                    "y": 0.23
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi_5",
+                            "translateFrame": [
+                                {
+                                    "duration": 13,
+                                    "x": 90.15,
+                                    "y": 11
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0,
+                                    "x": 20.45,
+                                    "y": -21.55
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0,
+                                    "x": 50.2,
+                                    "y": -16.75
+                                },
+                                {
+                                    "duration": 5,
+                                    "x": 93.95,
+                                    "y": -3.25
+                                }
+                            ],
+                            "rotateFrame": [
+                                {
+                                    "duration": 13,
+                                    "rotate": 136.86
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 15,
+                                    "rotate": 159.88
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 13,
+                                    "x": 1.47,
+                                    "y": 1.52
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0,
+                                    "x": 1.03,
+                                    "y": 1.03
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0,
+                                    "x": 0.53,
+                                    "y": 0.52
+                                },
+                                {
+                                    "duration": 5,
+                                    "x": 0.24,
+                                    "y": 0.23
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi_6",
+                            "translateFrame": [
+                                {
+                                    "duration": 14,
+                                    "x": 88.15,
+                                    "y": -2
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 12,
+                                    "tweenEasing": 0,
+                                    "x": 22,
+                                    "y": 2
+                                },
+                                {
+                                    "duration": 9,
+                                    "x": 40,
+                                    "y": 3.25
+                                }
+                            ],
+                            "rotateFrame": [
+                                {
+                                    "duration": 14,
+                                    "rotate": 136.86
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 12,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 9,
+                                    "rotate": 85.46
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 14,
+                                    "x": 1.47,
+                                    "y": 1.52
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 12,
+                                    "tweenEasing": 0,
+                                    "x": 0.76,
+                                    "y": 0.77
+                                },
+                                {
+                                    "duration": 9,
+                                    "x": 0.43,
+                                    "y": 0.42
+                                }
+                            ]
+                        },
+                        {
+                            "name": "tou",
+                            "translateFrame": [
+                                {
+                                    "duration": 4,
+                                    "x": -55.95,
+                                    "y": 9
+                                },
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0,
+                                    "x": -88.25,
+                                    "y": -2
+                                },
+                                {
+                                    "duration": 27,
+                                    "x": -109.25,
+                                    "y": -2
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 4,
+                                    "x": 0.64,
+                                    "y": 0.98
+                                },
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0,
+                                    "x": 0.67,
+                                    "y": 0.64
+                                },
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0,
+                                    "x": 0.67,
+                                    "y": 0.36
+                                },
+                                {
+                                    "duration": 23,
+                                    "x": 0.67,
+                                    "y": 0.07
+                                }
+                            ]
+                        },
+                        {
+                            "name": "quan",
+                            "translateFrame": [
+                                {
+                                    "duration": 4,
+                                    "x": 61.6,
+                                    "y": 9.15
+                                },
+                                {
+                                    "duration": 9,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 28,
+                                    "x": 41.6
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 4,
+                                    "x": 7.14,
+                                    "y": 1.92
+                                },
+                                {
+                                    "duration": 9,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 28,
+                                    "x": 1.5,
+                                    "y": 1.48
+                                }
+                            ]
+                        },
+                        {
+                            "name": "root",
+                            "rotateFrame": [
+                                {
+                                    "duration": 41,
+                                    "rotate": 0.18
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 41,
+                                    "x": -1
+                                }
+                            ]
+                        }
+                    ],
+                    "slot": [
+                        {
+                            "name": "pian",
+                            "colorFrame": [
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 5,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 11,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "aM": 35
+                                    }
+                                },
+                                {
+                                    "duration": 19,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "liandui",
+                            "colorFrame": [
+                                {
+                                    "duration": 26,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 15,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 0,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi",
+                            "displayFrame": [
+                                {
+                                    "duration": 4,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 37
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 18
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 15,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi_0",
+                            "displayFrame": [
+                                {
+                                    "duration": 5,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 36
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 19
+                                },
+                                {
+                                    "duration": 9,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 13,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi_1",
+                            "displayFrame": [
+                                {
+                                    "duration": 6,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 35
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 20
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 11,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi_2",
+                            "displayFrame": [
+                                {
+                                    "duration": 8,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 33
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 22
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 9,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi_3",
+                            "displayFrame": [
+                                {
+                                    "duration": 10,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 31
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 24
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 7,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi_4",
+                            "displayFrame": [
+                                {
+                                    "duration": 12,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 29
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 26
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 5,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi_5",
+                            "displayFrame": [
+                                {
+                                    "duration": 13,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 28
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 26
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 5,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "lizi_6",
+                            "displayFrame": [
+                                {
+                                    "duration": 14,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 27
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 20
+                                },
+                                {
+                                    "duration": 12,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 9,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "tou",
+                            "displayFrame": [
+                                {
+                                    "duration": 4,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 37
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 8
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "aM": 9
+                                    }
+                                },
+                                {
+                                    "duration": 23,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "quan",
+                            "displayFrame": [
+                                {
+                                    "duration": 4,
+                                    "value": -1
+                                },
+                                {
+                                    "duration": 37
+                                }
+                            ],
+                            "colorFrame": [
+                                {
+                                    "duration": 4
+                                },
+                                {
+                                    "duration": 9,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 28,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "defaultActions": [
+                {
+                    "gotoAndPlay": "newAnimation"
+                }
+            ]
+        }
+    ]
+}

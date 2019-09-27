@@ -1,0 +1,1 @@
+{"width":256,"height":256,"name":"fish_gun9","imagePath":"fish_gun9_tex.png","SubTexture":[{"width":58,"y":100,"height":76,"name":"muzzle","x":143},{"width":140,"y":1,"height":117,"name":"cannon","x":1},{"frameHeight":116,"y":1,"frameWidth":115,"frameX":-17,"width":82,"frameY":-9,"height":97,"name":"fire","x":143}]}

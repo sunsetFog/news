@@ -1,0 +1,281 @@
+{
+	"data_2001" : {
+		"FishValue" : 200,
+		"FishCollide" : "12,0,11|-9,0,11",
+		"MaxCapture" : 2,
+		"GoldCoins" : 1,
+		"FishUI" : "fishUI_01",
+		"SpeedCoefficient" : 20000
+	},
+
+	"data_2002" : {
+		"FishValue" : 300,
+		"FishCollide" : "0,0,24",
+		"MaxCapture" : 2,
+		"GoldCoins" : 1,
+		"FishUI" : "fishUI_02",
+		"SpeedCoefficient" : 18000
+	},
+
+	"data_2003" : {
+		"FishValue" : 400,
+		"FishCollide" : "8,0,15|-11,0,6",
+		"MaxCapture" : 2,
+		"GoldCoins" : 1,
+		"FishUI" : "fishUI_03",
+		"SpeedCoefficient" : 20000
+	},
+
+	"data_2004" : {
+		"FishValue" : 500,
+		"FishCollide" : "10,0,15|-11,0,9",
+		"MaxCapture" : 2,
+		"GoldCoins" : 1,
+		"FishUI" : "fishUI_04",
+		"SpeedCoefficient" : 20000
+	},
+
+	"data_2005" : {
+		"FishValue" : 600,
+		"FishCollide" : "11,0,13|-9,0,9",
+		"MaxCapture" : 2,
+		"GoldCoins" : 1,
+		"FishUI" : "fishUI_05",
+		"SpeedCoefficient" : 20000
+	},
+
+	"data_2006" : {
+		"FishValue" : 800,
+		"FishCollide" : "5,0,16|-13,0,5",
+		"MaxCapture" : 1,
+		"GoldCoins" : 1,
+		"FishUI" : "fishUI_06",
+		"SpeedCoefficient" : 20000
+	},
+
+	"data_2007" : {
+		"FishValue" : 1000,
+		"FishCollide" : "7,0,15|-11,0,8",
+		"MaxCapture" : 1,
+		"GoldCoins" : 1,
+		"FishUI" : "fishUI_07",
+		"SpeedCoefficient" : 20000
+	},
+
+	"data_2008" : {
+		"FishValue" : 1200,
+		"FishCollide" : "8,0,9|-9,0,9|18,-9,6|18,9,6",
+		"MaxCapture" : 1,
+		"GoldCoins" : 2,
+		"FishUI" : "fishUI_08",
+		"SpeedCoefficient" : 20000
+	},
+
+	"data_2009" : {
+		"FishValue" : 1400,
+		"FishCollide" : "-1,4,17|20,3,6|28,3,6|-23,9,7|-11,-10,7|-21,-15,5",
+		"MaxCapture" : 1,
+		"GoldCoins" : 2,
+		"FishUI" : "fishUI_09",
+		"SpeedCoefficient" : 20000
+	},
+
+	"data_2010" : {
+		"FishValue" : 1700,
+		"FishCollide" : "5,-13,13|-9,3,11|-4,19,8",
+		"MaxCapture" : 1,
+		"GoldCoins" : 2,
+		"FishUI" : "fishUI_10",
+		"SpeedCoefficient" : 18000
+	},
+
+	"data_2011" : {
+		"FishValue" : 2000,
+		"FishCollide" : "19,0,13|-2,0,12|-21,0,12",
+		"MaxCapture" : 1,
+		"GoldCoins" : 2,
+		"FishUI" : "fishUI_11",
+		"SpeedCoefficient" : 18000
+	},
+
+	"data_2012" : {
+		"FishValue" : 2500,
+		"FishCollide" : "13,0,17|-17,0,17",
+		"MaxCapture" : 1,
+		"GoldCoins" : 2,
+		"FishUI" : "fishUI_12",
+		"SpeedCoefficient" : 18000
+	},
+
+	"data_2013" : {
+		"FishValue" : 3000,
+		"FishCollide" : "7,0,14|-16,0,10|8,-15,10|8,15,10",
+		"MaxCapture" : 1,
+		"GoldCoins" : 2,
+		"FishUI" : "fishUI_13",
+		"SpeedCoefficient" : 18000
+	},
+
+	"data_2014" : {
+		"FishValue" : 4000,
+		"FishCollide" : "10,-1,24|-19,9,14",
+		"MaxCapture" : 1,
+		"GoldCoins" : 3,
+		"FishUI" : "fishUI_14",
+		"SpeedCoefficient" : 18000
+	},
+
+	"data_3001" : {
+		"FishValue" : 5000,
+		"FishCollide" : "26,0,20|0,0,12|-17,0,8|-32,0,10|13,-20,8|13,20,8",
+		"MaxCapture" : 1,
+		"GoldCoins" : 3,
+		"FishUI" : "fishUI_15",
+		"SpeedCoefficient" : 16000
+	},
+
+	"data_3002" : {
+		"FishValue" : 6500,
+		"FishCollide" : "28,0,14|-9,0,24|0,-26,11|0,26,11|-32,-15,7|-32,15,7",
+		"MaxCapture" : 1,
+		"GoldCoins" : 4,
+		"FishUI" : "fishUI_16",
+		"SpeedCoefficient" : 16000
+	},
+
+	"data_3003" : {
+		"FishValue" : 8000,
+		"FishCollide" : "-2,0,27|-42,0,21|-18,-30,11|-18,27,11|34,0,11|61,0,18",
+		"MaxCapture" : 1,
+		"GoldCoins" : 4,
+		"FishUI" : "fishUI_17",
+		"SpeedCoefficient" : 16000
+	},
+
+	"data_3004" : {
+		"FishValue" : 10000,
+		"FishCollide" : "52,11,24|8,10,24|-29,11,18|-55,11,12|33,-19,18",
+		"MaxCapture" : 1,
+		"GoldCoins" : 5,
+		"FishUI" : "fishUI_18",
+		"SpeedCoefficient" : 16000
+	},
+
+	"data_3005" : {
+		"FishValue" : 12000,
+		"FishCollide" : "34,-19,24|34,19,24|6,0,15|-17,0,10|-38,0,14",
+		"MaxCapture" : 1,
+		"GoldCoins" : 5,
+		"FishUI" : "fishUI_19",
+		"SpeedCoefficient" : 16000
+	},
+
+	"data_3006" : {
+		"FishValue" : 14000,
+		"FishCollide" : "22,0,17|45,0,7|58,0,7|7,-19,9|7,19,9|-9,0,12|-28,0,10|-45,0,10",
+		"MaxCapture" : 1,
+		"GoldCoins" : 6,
+		"FishUI" : "fishUI_20",
+		"SpeedCoefficient" : 16000
+	},
+
+	"data_3007" : {
+		"FishValue" : 17000,
+		"FishCollide" : "15,0,19|45,0,14|66,-2,10|81,-2,8|-7,-21,15|-7,21,15|-26,0,12|-48,0,15|-69,0,10",
+		"MaxCapture" : 1,
+		"GoldCoins" : 6,
+		"FishUI" : "fishUI_21",
+		"SpeedCoefficient" : 16000
+	},
+
+	"data_3008" : {
+		"FishValue" : 20000,
+		"FishCollide" : "40,-18,32|40,18,32|7,0,15|-15,0,10|-35,0,13|-63,0,17",
+		"MaxCapture" : 1,
+		"GoldCoins" : 7,
+		"FishUI" : "fishUI_22",
+		"SpeedCoefficient" : 14000
+	},
+
+	"data_3009" : {
+		"FishValue" : 25000,
+		"FishCollide" : "52,0,35|0,0,22|24,-36,15|24,36,15|-39,0,38",
+		"MaxCapture" : 1,
+		"GoldCoins" : 7,
+		"FishUI" : "fishUI_23",
+		"SpeedCoefficient" : 14000
+	},
+
+	"data_4001" : {
+		"FishValue" : 30000,
+		"FishCollide" : "102,0,25|49,0,37|-10,0,30|10,39,20|10,-39,20|-53,0,17|-83,0,17",
+		"MaxCapture" : 1,
+		"GoldCoins" : 8,
+		"FishUI" : "fishUI_24",
+		"SpeedCoefficient" : 14000
+	},
+
+	"data_4002" : {
+		"FishValue" : 35000,
+		"FishCollide" : "87,0,22|103,-35,20|103,36,20|43,0,25|42,-33,12|42,33,12|5,0,18|-24,0,15|-51,0,15|-78,0,15",
+		"MaxCapture" : 1,
+		"GoldCoins" : 9,
+		"FishUI" : "fishUI_25",
+		"SpeedCoefficient" : 14000
+	},
+
+	"data_4003" : {
+		"FishValue" : 40000,
+		"FishCollide" : "87,0,41|22,0,28|50,-41,15|50,40,15|-25,0,21|-64,0,21|-100,0,21",
+		"MaxCapture" : 1,
+		"GoldCoins" : 10,
+		"FishUI" : "fishUI_26",
+		"SpeedCoefficient" : 14000
+	},
+
+	"data_4004" : {
+		"FishValue" : 50000,
+		"FishCollide" : "84,-15,30|132,-9,20|24,-12,32|-26,-1,22|30,29,13|-27,28,13|-62,-3,15|-90,-8,15|-117,-13,15",
+		"MaxCapture" : 1,
+		"GoldCoins" : 11,
+		"FishUI" : "fishUI_27",
+		"SpeedCoefficient" : 12000
+	},
+
+	"data_4005" : {
+		"FishValue" : 60000,
+		"FishCollide" : "5,-60,50|5,5,50|-39,63,55|46,63,55|3,90,50",
+		"MaxCapture" : 1,
+		"GoldCoins" : 12,
+		"FishUI" : "fishUI_31",
+		"SpeedCoefficient" : 10000
+	},
+
+	"data_5001" : {
+		"FishValue" : 70000,
+		"FishCollide" : "86,-1,42|151,-3,24|12,-1,45|0,-53,22|0,44,22|-54,-1,22|-100,-1,25",
+		"MaxCapture" : 1,
+		"GoldCoins" : 13,
+		"FishUI" : "fishUI_28",
+		"SpeedCoefficient" : 12000
+	},
+
+	"data_5002" : {
+		"FishValue" : 80000,
+		"FishCollide" : "223,0,28|169,0,28|115,0,28|59,0,30|14,0,17|-18,0,17|-50,0,17|-105,0,40|-154,-30,20|-149,37,20|69,27,32|69,-23,32",
+		"MaxCapture" : 1,
+		"GoldCoins" : 14,
+		"FishUI" : "fishUI_29",
+		"SpeedCoefficient" : 10000
+	},
+
+	"data_5003" : {
+		"FishValue" : 100000,
+		"FishCollide" : "188,2,56|82,16,56|-26,12,56|-134,6,56|-190,2,40",
+		"MaxCapture" : 1,
+		"GoldCoins" : 15,
+		"FishUI" : "fishUI_30",
+		"SpeedCoefficient" : 10000
+	}
+
+}

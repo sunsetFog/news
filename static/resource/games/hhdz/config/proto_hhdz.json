@@ -1,0 +1,22 @@
+{
+    "10402": "hqtpb.royalwar.ScRoyalwarOnlineCountNotify",
+    "10403": "hqtpb.royalwar.ScRoyalwarIssueNotify",
+    "10404": "hqtpb.royalwar.ScRoyalwarStateNotify",
+    "10405": "hqtpb.royalwar.ScRoyalwarLimitNotify",
+    "10406": "hqtpb.royalwar.CsRoyalwarBetReq",
+    "10407": "hqtpb.royalwar.ScRoyalwarBetRes",
+    "10408": "hqtpb.royalwar.ScRoyalwarPlayerBetInfoNotify",
+    "10409": "hqtpb.royalwar.ScRoyalwarGameBetInfoNotify",
+    "10410": "hqtpb.royalwar.ScRoyalwarGameResultNotify",
+    "10411": "hqtpb.royalwar.ScRoyalwarExchangeNotify",
+    "10412": "hqtpb.royalwar.ScRoyalwarChartNotify",
+    "10415": "hqtpb.royalwar.CsRoyalwarRankingListReq",
+    "10416": "hqtpb.royalwar.ScRoyalwarRankingListRes",
+    "10419": "hqtpb.royalwar.ScRoyalwarSpecialPlayerNotify",
+    "10420": "hqtpb.royalwar.ScRoyalwarBetActionNotify",
+    "10421": "hqtpb.royalwar.CsRoyalwarChipsRecordReq",
+    "10422": "hqtpb.royalwar.ScRoyalwarChipsRecordNotify",
+    "10425": "hqtpb.royalwar.CsRoyalwarRemainingTimeReq",
+    "10426": "hqtpb.royalwar.ScRoyalwarRemainingTimeRes",
+    "10427": "hqtpb.royalwar.ScRoyalwarHitRateRes"
+}

@@ -1,282 +1,243 @@
 <template>
-  <section id="main_app">
-    <section v-show="stick">
-<!-- element-ui/container容器布局 -->
-<!-- 路由视图的用法:路由跳转只在视图内 -->
-    <el-container>
-      <el-header>
-        <div style="font-size: 32px;letter-spacing:5px;">夕阳红雾</div>
-          <!-- <span v-for="(item,index) in collectionList[0].effect" v-if="index<=-8">
-            <router-link :to="{path:item.path}">
-            <el-button style="width:90px;margin-right: 5px;">{{ item.label }}</el-button>
-            </router-link>
-          </span> -->
-      </el-header>
-          <el-container>
-              <el-aside width="200px">
-                <!-- <div v-for="(item,index) in collectionList[0].effect" v-if="index>8">
-                  <router-link :to="{path:item.path}">
-                  <el-button style="width:110px;margin:10px;">{{ item.label }}</el-button>
-                  </router-link>
-                </div> -->
-
-                <el-menu
-                  router
-                  default-active="2"
-                  class="el-menu-vertical-demo"
-                  @open="handleOpen"
-                  @close="handleClose"
-                  background-color="#101823"
-                  text-color="#f8faff"
-                  active-text-color="#ffd04b">
-
-                  <el-submenu :index="item.key" :key="item.key" v-for="(item,index) in collectionList">
-                    <template slot="title">
-                      <i :class="item.icon"></i>
-                      <span>{{item.label}}</span>
-                    </template>
-
-                    <section v-for="(term,index) in item.effect">
-                      <!-- 三级的 -->
-                      <div v-if="term.effect.length!=0">
-                        <el-submenu :index="term.key">
-                          <template slot="title"><i class="el-icon-star-on"></i>{{term.label}}</template>
-                          <div v-for="(val,index) in term.effect">
-                            <el-menu-item :index="val.path"><i class="el-icon-document"></i>{{val.label}}</el-menu-item>
-                          </div>
-                        </el-submenu>
-                      </div>
-                      <!-- 二级的 -->
-                      <div v-else>
-                          <el-menu-item :index="term.path"><i class="el-icon-document"></i>{{term.label}}</el-menu-item>
-                      </div>
-
-                    </section>
-
-                    
-                  </el-submenu>
-                </el-menu>
-                <!-- router与index是配置路由链接 -->
-
-
-
-              </el-aside>
-
-              <el-main>
-                <div class='contain'>
-                  <!-- <keep-alive>包含<router-view>实现页面缓存，加速页面加载， -->
-                  <keep-alive><!--缓存的页面-->
-                    <router-view v-if="!$route.meta.keepAlive"></router-view>    <!-- 路由视图 -->
-                  </keep-alive>
-                  <router-view v-if="$route.meta.keepAlive"></router-view><!--不缓存的页面-->
-                </div>
-              </el-main>
-          </el-container>
-    </el-container>
-
-  </section>
-<!-- Vue2.0页面缓存和不缓存的方法，以及watch监听会遇到的问题 -->
-<!-- 从缓存页面跳转到不缓存页面，或者从不缓存页面跳转到缓存页面的时候，会发现watch是不能监听路由的，
-是因为缓存和不缓存页面分别在不同的div里面，一个div里面是不可能监听到另一个div的路由的，
-所有需要把监听的路由都加上缓存（在路由添加 meta: { keepAlive: true }），路由在缓存页面之间进行跳转的时候，就可以通过监听路由来进行判断数据是否需要更新。 -->
-    <div class='contain' v-show="!stick">
-      <!-- <keep-alive>包含<router-view>实现页面缓存，加速页面加载， -->
-      <keep-alive><!--缓存的页面-->
-        <router-view v-if="!$route.meta.keepAlive"></router-view>    <!-- 路由视图 -->
-      </keep-alive>
-      <router-view v-if="$route.meta.keepAlive"></router-view><!--不缓存的页面-->
+  <div id="app">
+    <router-view></router-view>
+    <game-theme ref="subject" :subject="false" v-show="subject" @interaction="setMove"></game-theme>
+    <div class="advertisement" v-show="notice_active">
+      <div class="message_tips">
+        <span v-show="play_info" class="laba_quality">
+          <img src="../static/dream/home/laba.png">
+        </span>
+        <span v-show="play_info" class="word_quality">最新广告&nbsp;:</span>
+        <div class="flash_quality" v-show="play_info">
+          <div v-html="timer_content" class="move_left" :style="{width:timer_width+'px'}"></div>
+        </div>
+      </div>
     </div>
-
-
-
-    <!-- 当引入keep-alive的时候，页面第一次进入，钩子的触发顺序created-> mounted-> activated，退出时触发deactivated.
-      当再次进入（前进或者后退）时，只触发activated。 -->
-    <Button v-if="foot" style="width: 100%;position: fixed;bottom: 0px;left: 0px;" type="warning">foot导航栏</Button>
-  </section>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'App',
-  data (){
+  name: "App",
+  data() {
     return {
-      collectionList: [{key: '1',label: '知识点',icon: 'el-icon-star-off',effect:[
-          {key:'1-1',label: '路由',path:'/subroute',effect:[{key:'3-1',label: '路由',path:'/subroute'},]},
-          {key:'1-2',label: '组件遍历',path:'/ergodic',effect:[]},
-          {key:'1-3',label: 'vuex',path: '/vuex',effect:[]},
-          {key:'1-4',label: 'canvas',path: '/canvas',effect:[]},
-          {key:'1-5',label: 'echart',path: '/echarts',effect:[]},
-          {key:'1-6',label: '子组件',path: '/children',effect:[]},
-          {key:'1-7',label: '父组件',path: '/parent',effect:[]},
-          {key:'1-8',label: '公用方法',path: '/public',effect:[]},
-          {key:'1-9',label: 'rem',path: '/rem',effect:[]},
-          {key:'1-10',label: 'class',path: '/class',effect:[]},
-          {key:'1-11',label: 'watch监听',path: '/watch',effect:[]},
-          {key:'1-12',label: 'computed',path: '/computed',effect:[]},
-          {key:'1-13',label: 'ref',path: '/refs',effect:[]},
-          {key:'1-14',label: 'filter',path: '/filters',effect:[]},
-          {key:'1-15',label: '元素',path: '/element',effect:[]},
-          {key:'1-16',label: 'mock',path: '/mock',effect:[]},
-          {key:'1-17',label: 'transition',path: '/transition',effect:[]},
-          {key:'1-18',label: '引用',path: '/quote',effect:[]},
-          {key:'1-19',label: 'es6',path: '/es6',effect:[]},
-          {key:'1-20',label: 'base解密',path: '/base64',effect:[]},
-          {key:'1-21',label: '路由传参',path: '/route',effect:[]},
-        ]},
-        {key: '2',label: '效果集',icon: 'el-icon-refresh',effect: [
-          {key: '2-1',label: '返回顶部',path: '/backtotop',effect:[]},
-          {key: '2-2',label: '分页封装',path: '/page',effect:[]},
-          {key: '2-3',label: '下拉加载',path: '/loadmore',effect:[]},
-          {key: '2-4',label: '上传图片列表',path: '/upload',effect:[]},
-          {key: '2-5',label: '单个上传图片',path: '/upload1',effect:[]},
-          {key: '2-6',label: '地址管理',path: '/address',effect:[]},
-          {key: '2-7',label: '复制',path: '/copy',effect:[]},
-          {key: '2-8',label: '签到',path: '/date',effect:[]},
-          {key: '2-9',label: '字段变量',path: '/field',effect:[]}
-        ]}
-      ],
-      foot: false,
-      stick: false,
-      transmit: ''
-    }
+      subject: true,
+      notice_active: false,
+      play_info: false,
+      timer: null,
+      timer_width: 0,
+      timer_content: "",
+      timer_list: []
+    };
   },
   watch: {
-    //监听路由变化
-      $route(to,from){
-        if(to.meta.title){
-          document.title = to.meta.title;
-        }
-        this.foot = to.meta.foot;
-        if(to.meta.crux != undefined){
-          this.stick = to.meta.crux;
-        }else{
-          this.stick = true;
-        }
-        //console.log('监听路由变化',to,from);
+    $route(to, from) {
+      if (to.path == "/neutralgear") {
+        this.subject = false;
+      } else {
+        this.subject = true;
+        this.$refs.subject.changeMeans();
       }
-  },
-  created(){//加载创建数据-不能操作dom
-    document.title = this.$route.meta.title;
-    this.foot = this.$route.meta.foot;
-     if(this.$route.meta.crux != undefined){
-          this.stick = this.$route.meta.crux;
-      }else{
-          this.stick = true;
+      if (to.path == "/home") {
+        this.notice_active = true;
+      } else {
+        this.notice_active = false;
       }
-    //console.log('route路由参数',this.$route);//获取路由参数
-    //全局接口，必定运行的,很适合用cookie,localStorage,session或vuex传值，避免跳链接,没设置,就获取为undefine的
-    sessionStorage.setItem("token",'HK-778');//token是登录页面存储的
-    this.$http.post('http://localhost:8080/api/home').then((response) => {//本地接口不能存header值
-        //console.log('home++api',response);
-        // vue-浏览器缓存
-        window.localStorage.setItem('game',response.body.data.game);
-        window.localStorage.setItem('stimulate',response.body.data.stimulate);
-        this.transmit = window.localStorage.getItem('game');
-        sessionStorage.setItem("game",'王者荣耀');
-        this.transmit = sessionStorage.getItem("name");  
-        //console.log('原型prototype',this.$teacher());
-
-        //vue-cookies的使用
-        //https://www.jianshu.com/p/535b53989b39
-        // https://www.npmjs.com/package/vue-cookies
-        this.$cookies.set("token","GH1.1.1689020474.1484362313","10h");
-        //console.log('获取vue-cookies',this.$cookies.get("token"));
-        //原生cookies的使用
-        this.setCookies("easy","cool",3);
-        //console.log("简单型获取cookies",this.getCookies("easy"))
-
-      // localStorage.clear()    //清除所有本地缓存
-      // sessionStorage.clear()  //清除当前会话所有缓存
-      // sessionStorage.removeItem('username') //清除指定缓存
-
-
-        // unicode编码    后台编码encode(),前端解码decodeURI('string')
-        //在线编码http://tool.chinaz.com/tools/unicode.aspx
-        let stars = "";
-        stars = decodeURI('\u5915\u9633\u7ea2');
-        //console.log('编码',stars);
-		})
-  },
-  mounted(){//挂在前-操作dom
-    
-  },
-  methods:{
-    //简单的设置cookies
-      setCookies: function (name, value, days) {
-        var d = new Date;
-        d.setTime(d.getTime() + 24*60*60*1000*days);
-        window.document.cookie = name + "=" + value + ";path=/;expires=" + d.toGMTString();
-      },
-    //简单的获取cookies
-      getCookies: function (name) {
-        var v = window.document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
-        return v ? v[2] : null;
-      },
-    //简单的删除cookies
-      deleteCookies: function (name) {
-        this.set(name, '', -1);
-      },
-      handleOpen(key, keyPath) {
-        console.log(key, keyPath);
-      },
-      handleClose(key, keyPath) {
-        console.log(key, keyPath);
-      },
-      purpleHttp(){
-        //这个是配置axios的请求方式，上面没配置过的
-          this.$axios({
-            url: 'http://10.1.101.120/backend/account/checklogin',
-            methods: 'post',
-            data: {username: "gggg", password: "1234567890"}
-          }).then((res) => {
-              console.log('H-token',res);
-          }).catch((err)=>{
-              console.log('error',err);
-          })
+      // console.log('watch~~~',to,from);
+      if (to.path == "/game") {
+        purpleMagic(3);
+        window.dispatchEvent(new Event("resize"));
+      } else {
+        purpleMagic(2);
       }
+
+      if (from.path == "/register") {
+        //console.log('退出注册');
+        let that = this;
+        that.$means.amateur_register_exit();
+        // that.$means.amateur_exit(function(){});
+        // that.$means.amateur_exit_scene(function(value){});
+      }
+    },
+    timer_list(cur, old) {
+      // console.log('current&&',this.timer,this.timer_list.length);
+      if (this.timer == null && this.timer_list.length != 0) {
+        // console.log('start')
+        this.play_info = true;
+        this.timer_content = this.timer_list[0];
+        this.timer = setInterval(this.timerMeans1, 200);
+      }
+    }
+  },
+  methods: {
+    timerMeans1() {
+      if (this.timer_width > 1500) {
+        this.clearTimer();
+        this.timer_list.shift();
+        // console.log('stop111',this.timer);
+      } else {
+        this.timer_width += 30;
+        // console.log('width##',this.timer_width);
+      }
+    },
+    clearTimer() {
+      clearInterval(this.timer);
+      this.timer = null;
+      this.timer_width = 0;
+      this.play_info = false;
+    },
+    setMove(value) {
+      // if(!value){
+      //     var value = "赌侠<font color='#23f0fd' size='26'> testN28 </font>赢得<font color='#ffe400' size='26'> 253.4 </font>奖金，大吉大利 今晚吃鸡!";
+      // }
+      var that = this;
+      value = value.replace(" size='26'", "");
+      value = value.replace(" size='26'", "");
+      value = value.replace(" size='26'", "");
+      that.timer_list.push(value);
+    }
   }
-}
+};
 </script>
 
-<style lang="less" rel="stylesheet/less">
-/* 多文件全局css，类级别最高,可覆盖类名作用 */
-// 但是要有样式嵌套，不然影响全局
-@import 'assets/app.css';
-@import 'assets/index.less';
-// 样式span:nth-of-type(1)虽然好用,但对子集span都有影响,注意使用就行
-#main_app{
-  .contain{
-    width: 100%;
-    overflow: hidden;
-  }
 
-  .el-header, .el-footer {
-    background-color: #B3C0D1;
-    color: #333;
-    text-align: center;
-    line-height: 60px;
+<style lang="less">
+@import '../static/study/index.less';
+@import "./assets/app.less";
+#app {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.advertisement {
+  width: 100%;
+  height: 35px;
+  .mixin_image(url("../static/dream/home/gonggaotiao.png"));
+  position: absolute;
+  left: 0px;
+  top: 653px;
+  .message_tips {
+    width: 1200px;
+    height: 35px;
+    margin: 0 auto;
+    position: relative;
+    .laba_quality {
+      .mixin_span(25px, 35px, none, auto, center);
+      margin-right: 16px;
+      line-height: 0px;
+      padding-top: 5px;
+      box-sizing: border-box;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      img {
+        .mixin_img(25px, 25px);
+      }
+    }
+    .word_quality {
+      .mixin_span(auto, 35px, none, @color_tone1, left);
+      position: absolute;
+      top: 0px;
+      left: 41px;
+    }
+    .flash_quality {
+      .mixin_span(1000px, 35px, none, @color_white, left);
+      position: absolute;
+      top: 0px;
+      left: 131px;
+      overflow: hidden;
+      .move_left {
+        width: 0px;
+        height: 35px;
+        float: right;
+        text-indent: 1px;
+        text-align: left;
+        overflow: hidden;
+      }
+    }
   }
-  
-  .el-aside {
-    background-color: #D3DCE6;
-    color: #333;
-    text-align: center;
-    min-height: 800px;
-    padding-bottom: 50px;
-    box-sizing: border-box;
-  }
-  
-  .el-main {
-    background-color: #E9EEF3;
-    color: #333;
-    min-height: 800px;
-    padding-bottom: 50px;
-    box-sizing: border-box;
-  }
-  
-  body > .el-container {
-    margin-bottom: 40px;
-  }
-   
+}
+
+/*公共样式--开始*/
+html,
+body,
+div,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dt,
+dd,
+ol,
+form,
+input,
+textarea,
+th,
+td,
+select {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  min-height: 100%;
+  height: 100% !important;
+}
+
+body {
+  font-family: "Microsoft YaHei" !important;
+  font-size: 14px !important;
+  color: #333 !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+img {
+  border: none;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+  color: #232323;
+}
+
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+input,
+textarea,
+button {
+  outline: none;
+  border: none;
+}
+
+textarea {
+  resize: none;
+  overflow: auto;
 }
 </style>

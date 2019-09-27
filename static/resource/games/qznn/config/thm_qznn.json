@@ -1,0 +1,9 @@
+{
+	"skins": {
+	},
+	"autoGenerateExmlsList": true,
+	"exmls": [
+		"resource/games/qznn/skins/GameSkin.exml",
+		"resource/games/qznn/skins/QznnRoomSkin.exml"
+	]
+}
