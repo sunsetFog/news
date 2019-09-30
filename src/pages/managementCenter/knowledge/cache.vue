@@ -1,6 +1,6 @@
 <template>
     <section id="cache">
-
+<!-- 浏览器缓存 -->
     </section>
 </template>
 

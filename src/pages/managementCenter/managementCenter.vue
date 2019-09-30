@@ -5,6 +5,7 @@
         <div class="manage_content">
             <router-view v-if="!manage_state"></router-view>
             <div class="manage_content_left" v-if="manage_state">
+                <el-scrollbar>
                     <el-menu
                     :router="true"
                     :default-active="$route.path"
@@ -55,7 +56,7 @@
                     </el-submenu>
                     </el-menu>       
             
-            
+                </el-scrollbar>
             </div>
             <div class="manage_content_right" v-if="manage_state">
                 <router-view></router-view>
@@ -106,7 +107,8 @@ export default{
                 {key: '2-2-6',label: '上传图片列表',path: '/upload',icon: '../../../static/dream/center/qipai.png',effect:[]},
                 {key: '2-2-7',label: '单个上传图片',path: '/upload1',icon: '../../../static/dream/center/qipai.png',effect:[]},
                 {key: '2-2-8',label: '懒加载',path: '/lazy',icon: '../../../static/dream/center/qipai.png',effect:[]},
-                {key: '2-2-9',label: '签到',path: '/memberdate',icon: '../../../static/dream/center/qipai.png',effect:[]},
+                {key: '2-2-9',label: '视频',path: '/video',icon: '../../../static/dream/center/qipai.png',effect:[]},
+                {key: '2-2-10',label: '文本编辑器',path: '/editor',icon: '../../../static/dream/center/qipai.png',effect:[]},
                 ]}
             ],
         }
@@ -149,9 +151,10 @@ export default{
             padding: 45px 43px 0px 43px;
             box-sizing: border-box;
             .manage_content_left{
-                .mixin_float(230px,600px,left);
+                .mixin_float(230px,auto,left);
                 background: #513663;
                 margin-right: 40px;
+                min-height: 1130px;
                 .icon_url_margin{
                     .mixin_img(20px,20px);
                     margin-right: 11px;

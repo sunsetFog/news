@@ -1,9 +1,10 @@
 <template>
-    <!-- vue-cli脚手架 
-    vue h5即是html5: 
+<!-- vue-cli脚手架 
+vue h5即是html5: 
     1.<!DOCTYPE html>声明，这样浏览器才能获知文档类型
     2.<meta charset="utf-8">“utf-8”是一种字符编码，使浏览器做“翻译”工作
-    app.vue:  
+
+app.vue:  
     1.<router-view>路由视图
     2.<keep-alive><router-view></router-view></keep-alive>实现页面缓存，加速页面加载
     当引入keep-alive的时候，页面第一次进入，钩子的触发顺序created-> mounted-> activated，退出时触发deactivated.
@@ -11,7 +12,9 @@
     3.多文件全局css，类级别最高,可覆盖类名作用,但是要有样式嵌套，不然影响全局
     @import 'assets/index.less';
     样式span:nth-of-type(1)虽然好用,但对子集span都有影响,注意使用就行
-    main.js
+    4.//全局接口
+
+main.js
     1.vue的原型
     Vue.prototype.$axios = axios;
     Vue.prototype.$domain = 'vue原型变量';
@@ -56,7 +59,8 @@
     npm install px2rem-loader --save-dev
     import '../static/capital/flexible.js';//加载js，并540改document.body.clientWidth
     配置build/utils.js，加入px2rem-loader
-    router/index.js
+
+router/index.js
     1.export default new Router({
         mode: 'history',//vue 路径去掉#
     2.//引入路由的三种引入方式
@@ -64,7 +68,19 @@
         //@代表'/src'
         //import Twelve from '@/components/miss/twelve';
         //优化好
-        //const Twelve = resolve => require(['@/pages/index/twelve'],resolve); -->
+        //const Twelve = resolve => require(['@/pages/index/twelve'],resolve);
+        //component: resolve => require(['../components/page/Login.vue'], resolve)
+    3.  //重点:路由参数解决刷新丢失问题
+        // 1.meta是路由参数,却不在path路径上,可以打印this或者打印this.$route看,用this.$route.meta获取
+        // 2.路由传参,在路径上
+    4.使用children: []
+        路由跳转在这个children域内，包括$router.push跳转，要是children域内找不到就找parent域内
+        parent用watch监听子域路由变化
+
+请看build/utils.js配置
+    //vue全局使用less样式文件
+    // https://www.jianshu.com/p/2b1cd98c3062
+    //安装npm install sass-resources-loader --save-dev -->
     <section id="lifeCycle">生命周期</section>
 </template>
 

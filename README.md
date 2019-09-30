@@ -45,3 +45,4 @@ npm install node-sass sass-loader -D
 安装:
 npm install echarts --save
 npm install mockjs --save
+npm install vueditor --save

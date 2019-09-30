@@ -25,9 +25,8 @@ service.interceptors.request.use(config => {
 })
 
 // respone拦截器
-service.interceptors.response.use(
-  response => {
-    //console.log('Hk-拦截器',response);//根据状态修改
+service.interceptors.response.use(response => {
+    //console.log('Hk-拦截器',response);//根据后台状态修改
     if (!response.data) {
       return Promise.reject(response)
     } else {
@@ -43,42 +42,20 @@ service.interceptors.response.use(
           })
           return Promise.reject(response)
         } else if ([1002].indexOf(code) > -1) {
-          Message({
-            message: '无权限',
-            type: 'error',
-            duration: 3 * 1000
-          })
+          Message({message: '无权限',type: 'error',duration: 3000})
           return Promise.reject(response)
         } else {
-          if (response.data.message) {
-            Message({
-              message: response.data.message,
-              type: 'error',
-              duration: 3 * 1000
-            })
-          }
+          Message({message: response.data.message,type: 'error',duration: 3000})
           return Promise.reject(response)
         }
       } else {
-        if (response.data.message) {
-          Message({
-            message: response.data.message,
-            type: 'success',
-            duration: 3 * 1000
-          })
-        }
+        Message({message: response.data.message,type: 'success',duration: 3000})
         return response.data
       }
     }
-  },
-  error => {
-    Message({
-      message: error.message,
-      type: 'error',
-      duration: 5 * 1000
-    })
+},error => {
+    Message({message: error.message,type: 'error',duration: 5000})
     return Promise.reject(error)
-  }
-)
+})
 
 export default service

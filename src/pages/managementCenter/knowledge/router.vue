@@ -1,6 +1,12 @@
 <template>
     <section id="router">
         <!-- https://segmentfault.com/a/1190000012393587 -->
+        <el-button>
+            <router-link to="/crux?id=888&status=false">
+                路由router-link
+            </router-link>
+        </el-button>
+        
         <el-button type="primary" @click="jump()">路由跳转</el-button>
     </section>    
 </template>

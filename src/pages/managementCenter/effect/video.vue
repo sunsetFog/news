@@ -1,12 +1,12 @@
 <template>
-    <section>
+    <section id="video">
         <div class="video_dialog" v-show="play_active">
             <div class="video_header">
                 <i class="el-icon-close" @click="closeAudio()"></i>
             </div>
             <div class="video_body">
                 <video id="video_girl" controls width="100%" autoplay>
-                    <source src="../../../static/video/58244a10da66c5401.mp4" type="video/mp4"> 您的浏览器不支持Video标签。
+                    <source src="../../../../static/study/video/58244a10da66c5401.mp4" type="video/mp4">
                 </video>
             </div>
         </div>
@@ -29,6 +29,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
+#video{
     .video_dialog{
         width: 600px;
         margin: 100px auto;
@@ -51,5 +52,6 @@ export default {
             }
         }
     }
+}
 </style>
 

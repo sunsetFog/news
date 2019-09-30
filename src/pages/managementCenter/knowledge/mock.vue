@@ -38,11 +38,8 @@ import mock from '../../../../static/study/mock.js';
 		},
 		 methods:{
        getJson(){
-          //开发环境模拟本地数据    请查看build/webpack.dev.conf.js
-          this.$axios.get('http://localhost:8080/api/goods').then((response) => {
-                console.log(response);
-          })
-          //mock模拟本地数据
+          //1.开发环境模拟本地数据    请查看see/build/webpack.dev.conf.js  这没有实用性，删除了
+          //2.mock模拟本地数据
           this.$axios.post('http://text.com').then(function(res){
               console.log('moon',res);
           });

@@ -48,7 +48,8 @@ export default new Router({
             { path: '/upload', name: 'upload', meta: { title: '管理中心'}, component: resolve => require(['@/pages/managementCenter/effect/upload.vue'], resolve) },
             { path: '/upload1', name: 'upload1', meta: { title: '管理中心'}, component: resolve => require(['@/pages/managementCenter/effect/upload1.vue'], resolve) },
             { path: '/lazy', name: 'lazy', meta: { title: '管理中心'}, component: resolve => require(['@/pages/managementCenter/effect/lazy.vue'], resolve) },
-            { path: '/memberdate', name: 'memberdate', meta: { title: '管理中心'}, component: resolve => require(['@/pages/managementCenter/effect/member_date.vue'], resolve) },
+            { path: '/video', name: 'video', meta: { title: '管理中心'}, component: resolve => require(['@/pages/managementCenter/effect/video.vue'], resolve) },
+            { path: '/editor', name: 'editor', meta: { title: '管理中心'}, component: resolve => require(['@/pages/managementCenter/effect/editor.vue'], resolve) },
             { path: '/', redirect: '/crux' }
           ]
         },
