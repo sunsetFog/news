@@ -1,4 +1,4 @@
-// wabpack生产环境配置
+// wabpack生产环境配置-----生产环境指的是打包后
 'use strict'
 // 下面是引入nodejs的路径模块
 const path = require('path');

@@ -63,6 +63,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     new HtmlWebpackPlugin({
       filename: config.build.index,
       template: 'index.html',
+      favicon: path.resolve('static/dream/favicon.ico'), // 浏览器title的ico图标
       inject: true,
       minify: {
         removeComments: true,

@@ -24,6 +24,7 @@
     "nprogress": "^0.2.0",
     "vue": "^2.5.2",
     "vue-cookies": "^1.5.13",
+    "vue-qr": "^2.1.0",
     "vue-router": "^3.0.1",
     "vueditor": "^0.3.1"
   },

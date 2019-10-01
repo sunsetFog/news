@@ -80,7 +80,11 @@ router/index.js
 请看build/utils.js配置
     //vue全局使用less样式文件
     // https://www.jianshu.com/p/2b1cd98c3062
-    //安装npm install sass-resources-loader --save-dev -->
+    //安装npm install sass-resources-loader --save-dev
+浏览器title的图标
+    https://www.cnblogs.com/softwarefang/p/9405537.html
+    favicon.ico在线制作
+    http://www.faviconico.org/favicon -->
     <section id="lifeCycle">生命周期</section>
 </template>
 

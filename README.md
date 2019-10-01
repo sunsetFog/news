@@ -46,3 +46,4 @@ npm install node-sass sass-loader -D
 npm install echarts --save
 npm install mockjs --save
 npm install vueditor --save
+npm install vue-qr --save
