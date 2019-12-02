@@ -38,6 +38,8 @@ consult.vue两个web
 localhost:1314
 flexible.js
 
+main.js
+
 删了
 npm install node-sass sass-loader -D
 
@@ -47,3 +49,4 @@ npm install echarts --save
 npm install mockjs --save
 npm install vueditor --save
 npm install vue-qr --save
+npm install vue-cookies --save

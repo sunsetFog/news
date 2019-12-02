@@ -91,6 +91,10 @@ export default {
         },
         sureModify(){
             var that = this;
+            if(that.new_password.length!=6){
+                that.$message.error('请输入六位数字的密码！');
+                return;
+            }
             if(that.regist_tel==true){
                 if(that.new_password==''){
                     that.$message.error('请输入新密码！');

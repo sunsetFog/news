@@ -302,11 +302,12 @@ export default {
           var sex = "女";
         }
         let json = {
-          enterurl: window.location.host + this.$route.path,
-          userId: this.player_info.uid, //用户id
+          enterurl: window.location.host + this.$route.path,//当前网址
+          userId: this.player_info.mShowUid, //用户id
           loginname: this.player_info.loginame, //登录名
           grade: this.player_info.vip, //用户等级
-          name: this.player_info.nickname, //用户名称
+          // name: this.player_info.nickname, //用户名称
+          name: this.player_info.mShowUid, //用户id
           gender: sex, //性别
           mobileNo: "", //手机号
           memo: "备注信息", //备注信息
@@ -354,8 +355,12 @@ export default {
           json.key;
         // console.log('hash',json.hashCode);
         //console.log("url$$$", infoValue);
+        // window.open(
+        //   "https://chat32.live800.com/live800/chatClient/chatbox.jsp?companyID=12698&enterurl=&codeType=custom&info=" +
+        //     encodeURIComponent(infoValue)
+        // );
         window.open(
-          "https://chat32.live800.com/live800/chatClient/chatbox.jsp?companyID=12698&enterurl=&codeType=custom&info=" +
+            "https://nine.mdihi.com/chat/chatClient/chatbox.jsp?companyID=365033539&configID=2306&jid=4095904748&s=1&enterurl=&codeType=custom&info=" +
             encodeURIComponent(infoValue)
         );
         // window.open("https://chat32.live800.com/live800/chatClient/chatbox.jsp?companyID=12698&enterurl=&codeType=custom&info=userId%3D440297033%26loginname%3Dtest28%26name%3DtestN28%26timestamp%3D1563358352994%26key%3Dlive800Key&s=1");
@@ -428,10 +433,16 @@ export default {
       );
     },
     lineMeans(index) {
-      this.$means.judgeToken();
-      if (index == 2 && this.$means.judgeToken() != false) {
-        this.$router.push({ path: "/line" });
-      }
+      this.$message.success("敬请期待！");
+      // this.$means.judgeToken();
+      // if (index == 2 && this.$means.judgeToken() != false) {
+      //   this.$message.success("敬请期待！");
+      //   // this.$router.push({ path: "/line" });
+      // }else if (index == 1 && this.$means.judgeToken() != false) {
+      //   this.$router.push({ path: "/download" });
+      // }else{
+      //   this.$message.success("敬请期待！");
+      // }
     }
   },
   beforeCreate() {
@@ -499,7 +510,6 @@ export default {
     }
   }
 
-  text-align: left;
   .header_info {
     width: 100%;
     height: 50px;

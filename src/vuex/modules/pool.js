@@ -8,9 +8,9 @@ const pool = {
 				isPwdSeted: true,//是否设置资金密码
 				isRegistBytel: false,//是否邮箱电话注册
 				loginame: "test78",//登陆账号
-				mAgentId: 7,
+				mAgentId: 7,//代理id
 				mIsAgent: true,//代理
-				mShowUid: 464506321,
+				mShowUid: 464506321,//我的id
 				money: 947824808,//当前金币数
 				nickname: "testN78",//玩家昵称
 				safe_money: 31000000,//当前保险箱金币数
@@ -20,9 +20,9 @@ const pool = {
 				vip: 5//vip等级
 			},
 			email_list: [//邮件
-				{created_at: "7/24/2019, 10:55:10 AM",id: 93479,is_readed: false,title: "未抢完红包返还"},
-				{created_at: "7/15/2019, 5:46:45 PM",id: 71030,is_readed: false,title: "未抢完红包返还"},
-				{created_at: "7/15/2019, 5:47:20 PM",id: 71035,is_readed: true,title: "未抢完红包返还"}
+				{created_at: "1569996291",id: 93479,is_readed: false,title: "埋雷返还"},
+				{created_at: "1569996291",id: 71030,is_readed: false,title: "未抢完红包返还"},
+				{created_at: "1569996280",id: 71035,is_readed: true,title: "未抢完红包返还"}
 			],
 			email_single: {content: "您发放的扫雷红包返还金额<24.72>,请尽快前往领取!",created_at: "1566463944",id: 2046740,title: "未抢完红包返还",unread_msg_count: 2},
 			notice_list: [//公告

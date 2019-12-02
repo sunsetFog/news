@@ -1,0 +1,1178 @@
+{
+    "frameRate": 24,
+    "name": "hhdz_bet_0",
+    "version": "5.5",
+    "compatibleVersion": "5.5",
+    "armature": [
+        {
+            "type": "Armature",
+            "frameRate": 24,
+            "name": "Armature",
+            "aabb": {
+                "x": -560,
+                "y": -170,
+                "width": 1120,
+                "height": 285
+            },
+            "bone": [
+                {
+                    "name": "root"
+                },
+                {
+                    "length": 48,
+                    "name": "国王",
+                    "parent": "root",
+                    "transform": {
+                        "x": -231.15,
+                        "y": -34.1,
+                        "skX": 140.1944,
+                        "skY": 140.1944
+                    }
+                },
+                {
+                    "length": 51,
+                    "name": "皇后",
+                    "parent": "root",
+                    "transform": {
+                        "x": 254.4,
+                        "y": -4.65,
+                        "skX": -52.9299,
+                        "skY": -52.9299
+                    }
+                },
+                {
+                    "length": 78,
+                    "name": "红速闪",
+                    "parent": "root",
+                    "transform": {
+                        "x": 514.5507,
+                        "y": 21.9163,
+                        "skX": -159.7643,
+                        "skY": -159.7643
+                    }
+                },
+                {
+                    "length": 68,
+                    "name": "蓝速闪",
+                    "parent": "root",
+                    "transform": {
+                        "x": -476.25,
+                        "y": 17.85,
+                        "skX": -29.75,
+                        "skY": -29.75
+                    }
+                },
+                {
+                    "length": 108,
+                    "name": "蓝底",
+                    "parent": "root",
+                    "transform": {
+                        "x": -331.7047,
+                        "y": -61.6349,
+                        "skX": -3.1023,
+                        "skY": -3.1023
+                    }
+                },
+                {
+                    "length": 86,
+                    "name": "红底",
+                    "parent": "root",
+                    "transform": {
+                        "x": 402.9805,
+                        "y": -78.0483,
+                        "skX": -179.7227,
+                        "skY": -179.7227
+                    }
+                },
+                {
+                    "length": 54,
+                    "name": "vs光",
+                    "parent": "root",
+                    "transform": {
+                        "x": 2.9078,
+                        "y": 2.9114,
+                        "skX": -75.4636,
+                        "skY": -75.4636
+                    }
+                },
+                {
+                    "length": 78,
+                    "name": "vs",
+                    "parent": "root",
+                    "transform": {
+                        "x": 0.0984,
+                        "y": 8.4336,
+                        "skX": 112.6199,
+                        "skY": 112.6199
+                    }
+                },
+                {
+                    "length": 49,
+                    "name": "星星",
+                    "parent": "root",
+                    "transform": {
+                        "x": 142.85,
+                        "y": -78.05,
+                        "skX": -46.9324,
+                        "skY": -46.9324
+                    }
+                },
+                {
+                    "length": 39,
+                    "name": "星星2",
+                    "parent": "root",
+                    "transform": {
+                        "x": -153.7,
+                        "y": 46.85,
+                        "skX": -127.5243,
+                        "skY": -127.5243
+                    }
+                },
+                {
+                    "length": 42,
+                    "name": "皇后阴影",
+                    "parent": "root",
+                    "transform": {
+                        "x": 271,
+                        "y": 50.5,
+                        "skX": -145.1899,
+                        "skY": -145.1899
+                    }
+                },
+                {
+                    "length": 54,
+                    "name": "国王阴影",
+                    "parent": "root",
+                    "transform": {
+                        "x": -253.5,
+                        "y": 33,
+                        "skX": -29.7449,
+                        "skY": -29.7449
+                    }
+                },
+                {
+                    "length": 54,
+                    "name": "国王虚影",
+                    "parent": "root",
+                    "transform": {
+                        "x": -253.5,
+                        "y": 33,
+                        "skX": -29.7449,
+                        "skY": -29.7449
+                    }
+                },
+                {
+                    "length": 42,
+                    "name": "皇后虚影",
+                    "parent": "root",
+                    "transform": {
+                        "x": 271,
+                        "y": 50.5,
+                        "skX": -145.1899,
+                        "skY": -145.1899
+                    }
+                },
+                {
+                    "length": 40,
+                    "name": "光",
+                    "parent": "root",
+                    "transform": {
+                        "x": 1.2,
+                        "y": 7.15,
+                        "skX": -126.5267,
+                        "skY": -126.5267
+                    }
+                },
+                {
+                    "length": 63,
+                    "name": "v",
+                    "parent": "vs",
+                    "transform": {
+                        "x": 2.026,
+                        "y": 19.2499,
+                        "skX": 117.3374,
+                        "skY": 117.3374
+                    }
+                },
+                {
+                    "length": 59,
+                    "name": "s",
+                    "parent": "vs",
+                    "transform": {
+                        "x": -13.9316,
+                        "y": -23.9886,
+                        "skX": -166.6387,
+                        "skY": -166.6387
+                    }
+                }
+            ],
+            "slot": [
+                {
+                    "name": "蓝底",
+                    "parent": "蓝底"
+                },
+                {
+                    "name": "蓝速闪",
+                    "parent": "蓝速闪"
+                },
+                {
+                    "name": "红底",
+                    "parent": "红底"
+                },
+                {
+                    "name": "红速闪",
+                    "parent": "红速闪"
+                },
+                {
+                    "name": "国王虚影",
+                    "parent": "国王虚影"
+                },
+                {
+                    "name": "国王阴影",
+                    "parent": "国王阴影"
+                },
+                {
+                    "name": "国王",
+                    "parent": "国王"
+                },
+                {
+                    "name": "皇后虚影",
+                    "parent": "皇后虚影"
+                },
+                {
+                    "name": "皇后阴影",
+                    "parent": "皇后阴影"
+                },
+                {
+                    "name": "皇后",
+                    "parent": "皇后"
+                },
+                {
+                    "name": "v",
+                    "parent": "v"
+                },
+                {
+                    "name": "s",
+                    "parent": "s"
+                },
+                {
+                    "name": "s光",
+                    "parent": "vs光"
+                },
+                {
+                    "name": "v光",
+                    "parent": "vs光"
+                },
+                {
+                    "name": "星星",
+                    "parent": "星星"
+                },
+                {
+                    "name": "星星2",
+                    "parent": "星星2"
+                },
+                {
+                    "name": "光",
+                    "parent": "光"
+                }
+            ],
+            "skin": [
+                {
+                    "slot": [
+                        {
+                            "name": "v",
+                            "display": [
+                                {
+                                    "name": "v",
+                                    "transform": {
+                                        "x": 24.79,
+                                        "y": -28.87,
+                                        "skX": 130.04,
+                                        "skY": 130.04
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "红速闪",
+                            "display": [
+                                {
+                                    "name": "红速闪",
+                                    "transform": {
+                                        "x": 197.41,
+                                        "y": -51.54,
+                                        "skX": 159.76,
+                                        "skY": 159.76
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "s光",
+                            "display": [
+                                {
+                                    "name": "s光",
+                                    "transform": {
+                                        "x": 12.95,
+                                        "y": 46.32,
+                                        "skX": 75.46,
+                                        "skY": 75.46
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "国王阴影",
+                            "display": [
+                                {
+                                    "name": "国王阴影",
+                                    "transform": {
+                                        "x": 32.62,
+                                        "y": -51.04,
+                                        "skX": 29.74,
+                                        "skY": 29.74
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "星星",
+                            "display": [
+                                {
+                                    "name": "星星",
+                                    "transform": {
+                                        "x": 4.39,
+                                        "y": 8.43,
+                                        "skX": 46.93,
+                                        "skY": 46.93
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "皇后虚影",
+                            "display": [
+                                {
+                                    "name": "皇后虚影",
+                                    "transform": {
+                                        "x": 53.43,
+                                        "y": 58.46,
+                                        "skX": 145.19,
+                                        "skY": 145.19
+                                    },
+                                    "path": "皇后阴影"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "光",
+                            "display": [
+                                {
+                                    "name": "光",
+                                    "transform": {
+                                        "x": 7.06,
+                                        "y": 19.29,
+                                        "skX": 126.53,
+                                        "skY": 126.53,
+                                        "scX": 1.171,
+                                        "scY": 1.171
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "皇后",
+                            "display": [
+                                {
+                                    "name": "皇后",
+                                    "transform": {
+                                        "x": 19.6,
+                                        "y": -12.8,
+                                        "skX": 52.93,
+                                        "skY": 52.93
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "红底",
+                            "display": [
+                                {
+                                    "name": "红底",
+                                    "transform": {
+                                        "x": 130.59,
+                                        "y": -80.68,
+                                        "skX": 179.72,
+                                        "skY": 179.72
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "s",
+                            "display": [
+                                {
+                                    "name": "s",
+                                    "transform": {
+                                        "x": 15.72,
+                                        "y": 16.89,
+                                        "skX": 54.02,
+                                        "skY": 54.02
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "国王虚影",
+                            "display": [
+                                {
+                                    "name": "国王虚影",
+                                    "transform": {
+                                        "x": 32.62,
+                                        "y": -51.04,
+                                        "skX": 29.74,
+                                        "skY": 29.74
+                                    },
+                                    "path": "国王阴影"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "v光",
+                            "display": [
+                                {
+                                    "name": "v光",
+                                    "transform": {
+                                        "x": -14.51,
+                                        "y": -57.61,
+                                        "skX": 75.46,
+                                        "skY": 75.46
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "国王",
+                            "display": [
+                                {
+                                    "name": "国王",
+                                    "transform": {
+                                        "x": 18.71,
+                                        "y": 7,
+                                        "skX": -140.19,
+                                        "skY": -140.19
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "星星2",
+                            "display": [
+                                {
+                                    "name": "星星2",
+                                    "transform": {
+                                        "x": -6.55,
+                                        "y": 0.9,
+                                        "skX": 127.52,
+                                        "skY": 127.52
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "皇后阴影",
+                            "display": [
+                                {
+                                    "name": "皇后阴影",
+                                    "transform": {
+                                        "x": 53.43,
+                                        "y": 58.46,
+                                        "skX": 145.19,
+                                        "skY": 145.19
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "蓝底",
+                            "display": [
+                                {
+                                    "name": "蓝底",
+                                    "transform": {
+                                        "x": 56.75,
+                                        "y": 65.3,
+                                        "skX": 3.1,
+                                        "skY": 3.1
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "蓝速闪",
+                            "display": [
+                                {
+                                    "name": "蓝速闪",
+                                    "transform": {
+                                        "x": 132.11,
+                                        "y": 55.52,
+                                        "skX": 29.75,
+                                        "skY": 29.75
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "animation": [
+                {
+                    "duration": 30,
+                    "playTimes": 0,
+                    "name": "play",
+                    "bone": [
+                        {
+                            "name": "红速闪",
+                            "translateFrame": [
+                                {
+                                    "duration": 7
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0,
+                                    "x": 582.35
+                                },
+                                {
+                                    "duration": 13
+                                }
+                            ]
+                        },
+                        {
+                            "name": "蓝速闪",
+                            "translateFrame": [
+                                {
+                                    "duration": 7
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0,
+                                    "x": -582.78
+                                },
+                                {
+                                    "duration": 13
+                                }
+                            ]
+                        },
+                        {
+                            "name": "蓝底",
+                            "translateFrame": [
+                                {
+                                    "duration": 12,
+                                    "tweenEasing": 0,
+                                    "x": -582.78
+                                },
+                                {
+                                    "duration": 18
+                                }
+                            ]
+                        },
+                        {
+                            "name": "红底",
+                            "translateFrame": [
+                                {
+                                    "duration": 12,
+                                    "tweenEasing": 0,
+                                    "x": 582.35
+                                },
+                                {
+                                    "duration": 18
+                                }
+                            ]
+                        },
+                        {
+                            "name": "vs光",
+                            "scaleFrame": [
+                                {
+                                    "duration": 18
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 2,
+                                    "x": 1.4,
+                                    "y": 1.4
+                                }
+                            ]
+                        },
+                        {
+                            "name": "vs",
+                            "scaleFrame": [
+                                {
+                                    "duration": 8
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0,
+                                    "x": 1.8,
+                                    "y": 1.8
+                                },
+                                {
+                                    "duration": 12,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 0,
+                                    "x": 1.1,
+                                    "y": 1.1
+                                }
+                            ]
+                        },
+                        {
+                            "name": "星星",
+                            "scaleFrame": [
+                                {
+                                    "duration": 22
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0,
+                                    "x": 0.01,
+                                    "y": 0.01
+                                },
+                                {
+                                    "duration": 0,
+                                    "x": 1.6,
+                                    "y": 1.6
+                                }
+                            ]
+                        },
+                        {
+                            "name": "星星2",
+                            "scaleFrame": [
+                                {
+                                    "duration": 24
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0,
+                                    "x": 0.01,
+                                    "y": 0.01
+                                },
+                                {
+                                    "duration": 0,
+                                    "x": 1.5,
+                                    "y": 1.5
+                                }
+                            ]
+                        },
+                        {
+                            "name": "v",
+                            "translateFrame": [
+                                {
+                                    "duration": 8
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0,
+                                    "x": 13.41,
+                                    "y": 32.18
+                                },
+                                {
+                                    "duration": 16,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 0,
+                                    "x": 14.6,
+                                    "y": 35.05
+                                }
+                            ]
+                        },
+                        {
+                            "name": "国王阴影",
+                            "translateFrame": [
+                                {
+                                    "duration": 17,
+                                    "tweenEasing": 0,
+                                    "x": -756.87
+                                },
+                                {
+                                    "duration": 13
+                                }
+                            ]
+                        },
+                        {
+                            "name": "s",
+                            "translateFrame": [
+                                {
+                                    "duration": 8
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0,
+                                    "x": -13.41,
+                                    "y": -32.18
+                                },
+                                {
+                                    "duration": 16,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 0,
+                                    "x": -14.6,
+                                    "y": -35.05
+                                }
+                            ]
+                        },
+                        {
+                            "name": "皇后阴影",
+                            "translateFrame": [
+                                {
+                                    "duration": 17,
+                                    "tweenEasing": 0,
+                                    "x": 763.47
+                                },
+                                {
+                                    "duration": 13
+                                }
+                            ]
+                        },
+                        {
+                            "name": "国王虚影",
+                            "translateFrame": [
+                                {
+                                    "duration": 5,
+                                    "x": -756.87
+                                },
+                                {
+                                    "duration": 13,
+                                    "tweenEasing": 0,
+                                    "x": -756.87
+                                },
+                                {
+                                    "duration": 12
+                                }
+                            ]
+                        },
+                        {
+                            "name": "皇后虚影",
+                            "translateFrame": [
+                                {
+                                    "duration": 5,
+                                    "x": 763.47
+                                },
+                                {
+                                    "duration": 13,
+                                    "tweenEasing": 0,
+                                    "x": 763.47
+                                },
+                                {
+                                    "duration": 12
+                                }
+                            ]
+                        },
+                        {
+                            "name": "光",
+                            "rotateFrame": [
+                                {
+                                    "duration": 17
+                                },
+                                {
+                                    "duration": 13,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 0,
+                                    "rotate": 126.53
+                                }
+                            ],
+                            "scaleFrame": [
+                                {
+                                    "duration": 17
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0,
+                                    "x": 1.8,
+                                    "y": 1.8
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0,
+                                    "x": 0.5,
+                                    "y": 0.5
+                                },
+                                {
+                                    "duration": 0
+                                }
+                            ]
+                        }
+                    ],
+                    "slot": [
+                        {
+                            "name": "蓝速闪",
+                            "colorFrame": [
+                                {
+                                    "duration": 7,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 13
+                                }
+                            ]
+                        },
+                        {
+                            "name": "红速闪",
+                            "colorFrame": [
+                                {
+                                    "duration": 7,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 13
+                                }
+                            ]
+                        },
+                        {
+                            "name": "国王阴影",
+                            "colorFrame": [
+                                {
+                                    "duration": 17,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 3,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "aM": 70
+                                    }
+                                },
+                                {
+                                    "duration": 10,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "国王",
+                            "colorFrame": [
+                                {
+                                    "duration": 18,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "aM": 30
+                                    }
+                                },
+                                {
+                                    "duration": 4
+                                }
+                            ]
+                        },
+                        {
+                            "name": "皇后阴影",
+                            "colorFrame": [
+                                {
+                                    "duration": 17,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 4,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "aM": 70
+                                    }
+                                },
+                                {
+                                    "duration": 9,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "皇后",
+                            "colorFrame": [
+                                {
+                                    "duration": 18,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "aM": 30
+                                    }
+                                },
+                                {
+                                    "duration": 4
+                                }
+                            ]
+                        },
+                        {
+                            "name": "v",
+                            "colorFrame": [
+                                {
+                                    "duration": 8,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 10
+                                },
+                                {
+                                    "duration": 12,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 0
+                                }
+                            ]
+                        },
+                        {
+                            "name": "s",
+                            "colorFrame": [
+                                {
+                                    "duration": 8,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 10
+                                },
+                                {
+                                    "duration": 12,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 0
+                                }
+                            ]
+                        },
+                        {
+                            "name": "s光",
+                            "colorFrame": [
+                                {
+                                    "duration": 18,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 2,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "v光",
+                            "colorFrame": [
+                                {
+                                    "duration": 18,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 10,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 2,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "星星",
+                            "colorFrame": [
+                                {
+                                    "duration": 22,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 8,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 0,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "星星2",
+                            "colorFrame": [
+                                {
+                                    "duration": 24,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 0,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "光",
+                            "colorFrame": [
+                                {
+                                    "duration": 17,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 7,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "aM": 80
+                                    }
+                                },
+                                {
+                                    "duration": 6,
+                                    "tweenEasing": 0
+                                },
+                                {
+                                    "duration": 0,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "国王虚影",
+                            "colorFrame": [
+                                {
+                                    "duration": 5,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 13,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "aM": 80
+                                    }
+                                },
+                                {
+                                    "duration": 12,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "皇后虚影",
+                            "colorFrame": [
+                                {
+                                    "duration": 5,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                },
+                                {
+                                    "duration": 13,
+                                    "tweenEasing": 0,
+                                    "value": {
+                                        "aM": 80
+                                    }
+                                },
+                                {
+                                    "duration": 12,
+                                    "value": {
+                                        "aM": 0
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "zOrder": {
+                        "frame": [
+                            {
+                                "duration": 30,
+                                "zOrder": [
+                                    6,
+                                    6,
+                                    9,
+                                    4
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ],
+            "defaultActions": [
+                {
+                    "gotoAndPlay": "play"
+                }
+            ]
+        }
+    ]
+}

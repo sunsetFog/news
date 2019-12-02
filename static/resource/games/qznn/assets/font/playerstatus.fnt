@@ -1,0 +1,14 @@
+{"file":"playerstatus.png","frames":{
+"0":{"x":41,"y":51,"w":18,"h":23,"offX":0,"offY":0,"sourceW":18,"sourceH":23},
+"1":{"x":20,"y":100,"w":14,"h":22,"offX":0,"offY":0,"sourceW":14,"sourceH":22},
+"2":{"x":1,"y":50,"w":18,"h":23,"offX":0,"offY":0,"sourceW":18,"sourceH":23},
+"3":{"x":46,"y":26,"w":17,"h":23,"offX":0,"offY":0,"sourceW":17,"sourceH":23},
+"4":{"x":21,"y":76,"w":18,"h":22,"offX":0,"offY":0,"sourceW":18,"sourceH":22},
+"5":{"x":21,"y":51,"w":18,"h":23,"offX":0,"offY":0,"sourceW":18,"sourceH":23},
+"6":{"x":26,"y":26,"w":18,"h":23,"offX":0,"offY":0,"sourceW":18,"sourceH":23},
+"7":{"x":41,"y":76,"w":18,"h":22,"offX":0,"offY":0,"sourceW":18,"sourceH":22},
+"8":{"x":1,"y":100,"w":17,"h":23,"offX":0,"offY":0,"sourceW":17,"sourceH":23},
+"9":{"x":1,"y":75,"w":18,"h":23,"offX":0,"offY":0,"sourceW":18,"sourceH":23},
+"下":{"x":1,"y":26,"w":23,"h":22,"offX":0,"offY":0,"sourceW":23,"sourceH":22},
+"倍":{"x":1,"y":1,"w":24,"h":23,"offX":0,"offY":0,"sourceW":24,"sourceH":23},
+"注":{"x":27,"y":1,"w":24,"h":23,"offX":0,"offY":0,"sourceW":24,"sourceH":23}}}

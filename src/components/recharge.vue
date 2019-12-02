@@ -27,10 +27,10 @@
                 </div>
                 <div class="recharge_money">
                     <span>充值金额:</span>
-                    <input type="text" v-model.trim="money" maxlength="20" placeholder="请输入充值金额，最低100元"/>
+                    <input type="text" v-model.trim="money" maxlength="20" placeholder="请按充值范围输入您的充值金额"/>
                     <img src="../../static/dream/recharge/xiaochu.png" @click="money = ''"/>
                 </div>
-                <div class="recharge_range">充值范围100-10000元,比例为1:1</div>
+                <div class="recharge_range">充值范围{{min_limit}}-{{max_limit}}元,比例为1:1</div>
                 <div class="money_example">
                     <ul>
                         <li v-for="(item,index) in money_list" :style="{padding: item.padding}" @mousedown="moneyDown(index)" @mouseup="moneyUp(index)">
@@ -76,7 +76,9 @@ export default {
             ],
             first_index: null,
             second_index: null,
-            no_have: false
+            no_have: false,
+            min_limit: 100,
+            max_limit: 10000
         }
     },
     watch: {
@@ -86,9 +88,9 @@ export default {
                    this.$message.error('请输入正整数！');
                 }
                 this.money = this.money.replace(/[^\d]/g, '');
-            }else if(cur>10000){
-                this.$message.error('充值范围100-10000元！');
-                this.money = 10000;
+            }else if(cur>this.max_limit){
+                this.$message.error('请按充值范围输入您的充值金额！');
+                this.money = this.max_limit;
             }
         }
     },
@@ -145,6 +147,14 @@ export default {
             }else{
                 this.no_have = false;
             }
+            if(this.payment_list.length!=0){
+                this.min_limit = this.payment_list[0].min_limit;
+                this.max_limit = this.payment_list[0].max_limit;
+            }else{
+                this.min_limit = 100;
+                this.max_limit = 10000;
+            }
+            
         },
         modeMeans(index){
             this.second_index = index;
@@ -170,11 +180,11 @@ export default {
             if(that.money == ''){
                 that.$message.error('请输入充值金额！');
                 return;
-            }else if(that.money<100||that.money>10000){
-                that.$message.error('充值范围100-10000元！');
-                return;
             }else if(that.second_index == null){
                 that.$message.error('请选择充值渠道！');
+            }else if(that.money<that.min_limit||that.money>that.max_limit){
+                that.$message.error('请按充值范围输入您的充值金额！');
+                return;
             }else{
                 // console.log('充值json',that.money,that.payment_list[that.second_index].id,that.payment_list[that.second_index].pay_code,that.pay_types[that.first_index].id);
                 that.$means.amateur_recharge_url(that.money,that.payment_list[that.second_index].id,that.payment_list[that.second_index].pay_code,that.pay_types[that.first_index].id,function(res){

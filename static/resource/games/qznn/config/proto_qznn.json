@@ -1,24 +1,18 @@
 {
-    "10000" : "platform.CsLogin",
-    "10001" : "platform.ScLoginReturn",
-    "10002" : "platform.CsLogout",
+   "12001": "hqtpb.qzniuniu.ScQzniuniuCellScoreNotify", 
+   "12002": "hqtpb.qzniuniu.CsQzniuniuRemainingTimeReq",
+   "12003": "hqtpb.qzniuniu.ScQzniuniuRemainingTimeRes",
+   "12004": "hqtpb.qzniuniu.ScQzniuniuStateNotify",
+   "12005": "hqtpb.qzniuniu.ScQzniuniuSeatInfoNotify",
+   "12006": "hqtpb.qzniuniu.ScQzniuniuSeatingNotify",
+   "12007": "hqtpb.qzniuniu.CsQzniuniuActionReq",
+   "12008": "hqtpb.qzniuniu.ScQzniuniuActionRes",
+   "12009": "hqtpb.qzniuniu.ScQzniuniuActionNotify",
+   "12010": "hqtpb.qzniuniu.ScQzniuniuSendCardNotify",
+   "12011": "hqtpb.qzniuniu.ScQzniuniuCallBankerNotify",
+   "12012": "hqtpb.qzniuniu.ScQzniuniuAddScoreNotify",
+   "12013": "hqtpb.qzniuniu.ScQzniuniuExchangeNotify",
+   "12014": "hqtpb.qzniuniu.CsQzniuniuCombatRecordReq",
+   "12015": "hqtpb.qzniuniu.ScQzniuniuCombatRecordRes"
 
-    "10003" : "platform.CsHeart",
-    "10004" : "platform.ScHeart",
-
-    "10005" : "platform.ScKickOut",
-
-    "10007" : "platform.CsChangeInfo",
-    "10008" : "platform.ScChangeInfoRet",
-    "10009" : "platform.ScNotifyChangeInfo",
-
-    "10011" : "platform.CsChangeTable",
-    "10012" : "platform.ScChangeTableRet",
-
-    "10014" : "platform.ScBroadcastMessage",
-
-    "10016" : "platform.ScSetting",
-
-    "10018" : "platform.ScSurvey",
-    "10019" : "platform.CsDenySurvey"
 }

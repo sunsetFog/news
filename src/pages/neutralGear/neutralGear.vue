@@ -15,7 +15,6 @@ export default {
     data(){
         return{
             percentage: 0,
-            customColor: '#409eff',
             timerKey: '',
             radius: {top_right: '0px',bottom_right: '0px'}
         }
@@ -31,13 +30,15 @@ export default {
         this.radius.top_right = '0px';
         this.radius.bottom_right = '0px';
         this.timerKey = setInterval(this.timerMeans,200);
-        flashGameplayer();
+        if(refreshWeb.state==''){
+            flashGameplayer();
+        }
     },
     methods:{
         timerMeans(){
             if(this.percentage>=83.7){
                 clearInterval(this.timerKey);
-                this.variableGear()
+                this.variableGear();
             }else{
                 this.percentage+=9.3;
             }
@@ -76,7 +77,6 @@ export default {
         width: 860px;
         height: 46px;
         .mixin_image(url('../../../static/dream/portrait/kuang.png'));
-        // background: blue;
         overflow: hidden;
         border-radius: 20px;
         padding: 5px 0px 0px 6px;
@@ -89,7 +89,6 @@ export default {
             height: 35px;
             display: inline-block;
             .mixin_image(url('../../../static/dream/portrait/jindus.png'));
-            // background: blueviolet;
             float: left;
             overflow: hidden;
             border-top-right-radius: 15px;

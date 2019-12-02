@@ -55,7 +55,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'index.html',
-      favicon: path.resolve('static/dream/favicon.ico'), // 浏览器title的ico图标
+      favicon: path.resolve('static/favicon.ico'), // 浏览器title的ico图标
       inject: true
     }),
     // copy custom static assets

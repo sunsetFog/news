@@ -1,0 +1,14 @@
+{
+    "WebVer": "1.3.0",
+    "IsDebug": false,
+    "IsTest": false,
+    "IsSimulate": false,
+    "HttpSerever": "",
+    "SocketServerNative": "QmdLYmpsVFluWk9iVXg0UVZoamJXeElXbXhLU0dOMVl6TmtNemw1VERaTk0yUT1Ibg==",
+    "SocketServer": "ws://www.predyfqp1.com/g",
+    "ResoureServerUrlNative": "",
+    "ResoureServerUrl": "",
+    "ProtoConfig": "simple_config",
+    "ErrorConfig": "error_config",
+    "Games": "gamecfg"
+}

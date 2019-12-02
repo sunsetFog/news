@@ -13,11 +13,11 @@
             </div>
             <div class="write_old" v-if="!regist_tel">
                 <label>旧密码:</label>
-                <input type="password" maxlength="20" v-model.trim="old_password" placeholder="请填写旧密码"/>
+                <input type="password" maxlength="12" v-model.trim="old_password" placeholder="请填写旧密码"/>
             </div>
             <div class="write_new">
                 <label>新密码:</label>
-                <input type="password" maxlength="20" v-model.trim="new_password" placeholder="请输入新密码"/>
+                <input type="password" maxlength="12" v-model.trim="new_password" placeholder="请输入新密码"/>
             </div>
             <div class="write_code" v-if="regist_tel">
                 <label>验证码:</label>
@@ -89,6 +89,9 @@ export default {
                 }else if(that.verify_code ==''){
                     that.$message.error('请输入验证码！');
                     return;
+                }else if(that.new_password.length<6){
+                    that.$message.error('请输入6~16个字符的密码！');
+                    return;
                 }
                 that.$means.amateur_resetLoginPass_tel(that.account,that.new_password,that.verify_code,function(res){
                     that.rechargeActive = false;
@@ -107,6 +110,9 @@ export default {
                     return;
                 }else if(that.new_password==''){
                     that.$message.error('请输入新密码！');
+                    return;
+                }else if(that.new_password.length<6){
+                    that.$message.error('请输入6~16个字符的密码！');
                     return;
                 }
                 that.$means.amateur_resetLoginPass_noTel(that.account,that.new_password,that.old_password,function(res){

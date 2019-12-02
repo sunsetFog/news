@@ -44,6 +44,16 @@ const comic = {
             return false;
         }
     },
+    //不能输入特殊字符
+    validatSpecial(str){
+        const reg = new RegExp("[\\+,\\/,\\\\,\\?,\\？,\\%,\\#,\\&,\\=,\\(,\\),\\（,\\）,\\{,\\},\\',\\\",\\<,\\>,\\@,\\!,\\！,\\$,\\.,\\，,\\、,\\:,\\：,\\;,\\；,\\￥,\\*,\\~,\\`,\\-,\\——,\\_,\\^,\\“,\\”,\\‘,\\’,\\……,\\【,\\】,\\[,\\],\\,]", "gm");
+        if(reg.test(str)){
+            Message.error('不能输入特殊字符！');
+            return {state: true,value: str.replace(reg, "")};
+        }else{
+            return {state: false,value: ''};
+        }
+    },
     //判断是否微信浏览器
     is_weixn(){  
         var ua = navigator.userAgent.toLowerCase();  

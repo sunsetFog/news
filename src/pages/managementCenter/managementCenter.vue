@@ -54,9 +54,10 @@
                         </section>
 
                     </el-submenu>
-                    </el-menu>       
-            
+                    </el-menu>
+                           
                 </el-scrollbar>
+            
             </div>
             <div class="manage_content_right" v-if="manage_state">
                 <router-view></router-view>
@@ -97,9 +98,8 @@ export default{
                 {key:'1-2-19',label: '缓存',path: '/cache',icon: '../../../static/dream/center/caiwu.png',effect:[]},
                 {key:'1-2-20',label: 'axios配置',path: '/axios',icon: '../../../static/dream/center/caiwu.png',effect:[]}
                 ]},
-
                 {key: '2',label: '效果集',path: '',icon: '../../../static/dream/center/qipai.png',effect: [
-                {key: '2-2-1',label: '下载',path: '/download',icon: '../../../static/dream/center/qipai.png',effect:[]},
+                {key: '2-2-1',label: '下载',path: '/download_ex',icon: '../../../static/dream/center/qipai.png',effect:[]},
                 {key: '2-2-2',label: 'copy复制',path: '/copy',icon: '../../../static/dream/center/qipai.png',effect:[]},
                 {key: '2-2-3',label: '字段变量',path: '/field',icon: '../../../static/dream/center/qipai.png',effect:[]},
                 {key: '2-2-4',label: '返回顶部',path: '/backtotop',icon: '../../../static/dream/center/qipai.png',effect:[]},
@@ -156,6 +156,7 @@ export default{
                 background: #513663;
                 margin-right: 40px;
                 min-height: 1130px;
+                text-align: left;
                 .icon_url_margin{
                     .mixin_img(20px,20px);
                     margin-right: 11px;

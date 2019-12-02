@@ -123,7 +123,31 @@
     "10179":"hqtpb.world.ScWorldUnbindBankRes",
 
     "10180":"hqtpb.world.CsWorldCustomerServiceReq",
-    "10181":"hqtpb.world.ScWorldCustomerServiceRes"
+    "10181":"hqtpb.world.ScWorldCustomerServiceRes",
+	
+	"10182":"hqtpb.world.ScWorldClientStatisticsRes",
 
+    "10183":"hqtpb.world.CsBillBoardCarouselReq",
+    "10184":"hqtpb.world.ScBillBoardCarouselRes",
 
+    "10185":"hqtpb.world.ScWorldAGCheckBalanceReq",
+    "10186":"hqtpb.world.ScWorldAGCheckBalanceRes",
+
+    "10187":"hqtpb.world.ScWorldAGDepositeReq",
+    "10188":"hqtpb.world.ScWorldAGDepositeRes",
+
+    "10189":"hqtpb.world.ScWorldAGWithdrawlReq",
+    "10190":"hqtpb.world.ScWorldAGWithdrawlRes",
+
+    "10191":"hqtpb.world.ScWorldAGLoginReq",
+    "10192":"hqtpb.world.ScWorldAGLoginRes",
+
+    "10193":"hqtpb.world.ScWorldAGGameReq",
+    "10194":"hqtpb.world.ScWorldAGGameRes",
+
+    "10195": "hqtpb.world.CsWorldGameListReq",
+    "10196": "hqtpb.world.ScWorldGameListRes",
+      
+    "10197":"hqtpb.world.CsWorldUserInfoReq",
+    "10198":"hqtpb.world.ScWorldUserInfoRes"
 }

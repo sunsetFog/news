@@ -21,7 +21,7 @@ const player = {
     },
     actions: {
         getPlayerInfo({state,commit,dispatch},response){
-            console.log('player',response);
+            //console.log('player',response);
             state.userInfo = response;
             sessionStorage.setItem('token',response.token);
         }

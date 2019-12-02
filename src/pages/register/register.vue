@@ -13,11 +13,11 @@
                     </div>
                   <label>账号</label>
                   <div class="grows">
-                      <input type="text" placeholder="请输入手机号" v-model.trim="account_number" maxlength="20"/>
+                      <input type="text" placeholder="请输入正确的手机号" v-model.trim="account_number" maxlength="12"/>
                   </div>
                   <label>手机验证码</label>
                   <div class="grows">
-                      <input type="text" placeholder="请输入手机验证码" v-model.trim="verify_code" maxlength="10"/>
+                      <input type="text" placeholder="请填写验证码" v-model.trim="verify_code" maxlength="10"/>
                   </div>
                   <div class="verify">
                       <button v-if="verify_active">{{verify_time}}s</button>
@@ -25,10 +25,10 @@
                   </div>
                   <label>密码</label>
                   <div class="grows">
-                      <input type="password" placeholder="请输入账号密码" v-model.trim="old_password" maxlength="12"/>
+                      <input type="password" placeholder="请输入6-12位的密码" v-model.trim="old_password" maxlength="12"/>
                   </div>
                   <div class="grows">
-                      <input type="password" placeholder="请再次输入账号密码" v-model.trim="new_password" maxlength="12"/>
+                      <input type="password" placeholder="请再次输入6-12位的密码" v-model.trim="new_password" maxlength="12"/>
                   </div>
                   <div class="submit" @click="nowRegister">立即注册</div>
               </div>
@@ -65,6 +65,14 @@ export default{
         }
     },
     watch: {
+        account_number(cur,old){
+            if(/[^\d]/g.test(cur)){
+                if(this.account_number.match(/[^\d]/g)!=null){
+                   this.$message.error('请输入纯数字！');
+                }
+                this.account_number = cur.replace(/[^\d]/g, '');
+            }
+        },
         old_password(cur,old){
             if(/[^A-z0-9]/.test(cur)){
                 this.$message.error('不能输入特殊字符！');
@@ -99,6 +107,9 @@ export default{
             }else if(that.old_password!=that.new_password){
                 that.$message.error('请输入两个密码一致的密码！');
                 return;
+            }else if(that.new_password.length<6){
+                that.$message.error('请输入6~12个字符的密码！');
+                return;
             }
             that.$means.amateur_register(that.account_number,that.new_password,that.verify_code,function(res){
                 that.$router.push({path: '/login'});
@@ -131,6 +142,9 @@ export default{
                 return;
             }else if(that.old_password!=that.new_password){
                 that.$message.error('请输入两个密码一致的密码！');
+                return;
+            }else if(that.new_password.length<6){
+                that.$message.error('请输入6~16个字符的密码！');
                 return;
             }
             let json = {

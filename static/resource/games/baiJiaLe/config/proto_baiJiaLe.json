@@ -41,6 +41,9 @@
     "10238": "hqtpb.baccarat.ScBaccaratBallNotify",
     
     "10239": "hqtpb.baccarat.CsBaccaratIssueHistoryReq",
-    "10240": "hqtpb.baccarat.ScBaccaratIssueHistoryRes"
+    "10240": "hqtpb.baccarat.ScBaccaratIssueHistoryRes",
+
+    "10241": "hqtpb.baccarat.CsBaccaratRemainingTimeReq",
+    "10242": "hqtpb.baccarat.ScBaccaratRemainingTimeRes"
 
 }

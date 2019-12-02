@@ -40,7 +40,7 @@ export default new Router({
             { path: '/mock', name: 'mock', meta: { title: '管理中心'}, component: resolve => require(['@/pages/managementCenter/knowledge/mock.vue'], resolve) },
             { path: '/cache', name: 'cache', meta: { title: '管理中心'}, component: resolve => require(['@/pages/managementCenter/knowledge/cache.vue'], resolve) },
             { path: '/axios', name: 'axios', meta: { title: '管理中心'}, component: resolve => require(['@/pages/managementCenter/knowledge/axios.vue'], resolve) },
-            { path: '/download', name: 'download', meta: { title: '管理中心'}, component: resolve => require(['@/pages/managementCenter/effect/download.vue'], resolve) },
+            { path: '/download_ex', name: 'download_ex', meta: { title: '管理中心'}, component: resolve => require(['@/pages/managementCenter/effect/download.vue'], resolve) },
             { path: '/copy', name: 'copy', meta: { title: '管理中心'}, component: resolve => require(['@/pages/managementCenter/effect/copy.vue'], resolve) },
             { path: '/field', name: 'field', meta: { title: '管理中心'}, component: resolve => require(['@/pages/managementCenter/effect/field.vue'], resolve) },
             { path: '/backtotop', name: 'backtotop', meta: { title: '管理中心'}, component: resolve => require(['@/pages/managementCenter/effect/backToTop.vue'], resolve) },
@@ -61,6 +61,7 @@ export default new Router({
     { path: '/line', name: 'Line', meta: { title: '线路检测'}, component: resolve => require(['@/pages/login/line'], resolve) },
     { path: '/register', name: 'Register', meta: { title: '注册'}, component: resolve => require(['@/pages/register/register'], resolve) },
     { path: '/game', name: 'game', meta: { title: '首页'}, component: resolve => require(['@/pages/game/game.vue'], resolve) },
-    { path: '/neutralgear', name: 'neutralGear', meta: { title: '加载中'}, component: resolve => require(['@/pages/neutralGear/neutralGear'], resolve) }
+    { path: '/neutralgear', name: 'neutralGear', meta: { title: '加载中'}, component: resolve => require(['@/pages/neutralGear/neutralGear'], resolve) },
+    { path: '/download', name: 'download', meta: { title: '下载中心'}, component: resolve => require(['@/pages/download/download'], resolve) }
   ]
 })

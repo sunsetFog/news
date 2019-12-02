@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "mask_png,ui_headImg_json,hall_bg_jpg,login_bg1_jpg,font_fnt,load_Reel_png,ui_login_json,common_ui_titleback_png,crown_fnt,ui_common1_json,broadcast_json,hall_ui_htdl_png,hall_ui_hydl_png,circle_png,redPacket_json,hongbao-donghua_2_ske_json,hongbao-donghua_2_tex_json,hongbao-donghua_2_tex_png,eff_pmd_2_ske_json,eff_pmd_2_tex_json,eff_pmd_2_tex_png,eff_pmd_3_ske_json,eff_pmd_3_tex_json,eff_pmd_3_tex_png,jiantou_ske_json,jiantou_tex_json,jiantou_tex_png,baijiele_ske_json,baijiele_tex_json,baijiele_tex_png,brnn_ske_json,brnn_tex_json,brnn_tex_png,doudizhuda_ske_json,doudizhuda_tex_json,doudizhuda_tex_png,buyudaren_ske_json,buyudaren_tex_json,buyudaren_tex_png,hhdz_ske_json,hhdz_tex_json,hhdz_tex_png,shuiguji_ske_json,shuiguji_tex_json,shuiguji_tex_png,longhudou_ske_json,longhudou_tex_json,longhudou_tex_png,shuihuzhuan_ske_json,shuihuzhuan_tex_json,shuihuzhuan_tex_png,rabbitgirl_ske_json,rabbitgirl_tex_json,rabbitgirl_tex_png,RechargeAnim_ske_json,RechargeAnim_tex_json,RechargeAnim_tex_png,lobby_bg_json,lobby_bg_png,hall_ui_huadong_png,entry_ermj_tex_png,entry_ermj_ske_json,entry_ermj_tex_json,entry_zjh_ske_json,entry_zjh_tex_json,entry_zjh_tex_png,hall_ui_jyrz_png,gold_tex_png,gold_ske_json,gold_tex_json,entry_hongbao_ske_json,entry_hongbao_tex_json,entry_hongbao_tex_png",
+			"keys": "mask_png,ui_headImg_json,hall_bg_jpg,login_bg1_jpg,font_fnt,load_Reel_png,ui_login_json,common_ui_titleback_png,crown_fnt,ui_common1_json,broadcast_json,hall_ui_htdl_png,hall_ui_hydl_png,circle_png,redPacket_json,hongbao-donghua_2_ske_json,hongbao-donghua_2_tex_json,hongbao-donghua_2_tex_png,eff_pmd_2_ske_json,eff_pmd_2_tex_json,eff_pmd_2_tex_png,eff_pmd_3_ske_json,eff_pmd_3_tex_json,eff_pmd_3_tex_png,jiantou_ske_json,jiantou_tex_json,jiantou_tex_png,baijiele_ske_json,baijiele_tex_json,baijiele_tex_png,brnn_ske_json,brnn_tex_json,brnn_tex_png,doudizhuda_ske_json,doudizhuda_tex_json,doudizhuda_tex_png,buyudaren_ske_json,buyudaren_tex_json,buyudaren_tex_png,hhdz_ske_json,hhdz_tex_json,hhdz_tex_png,shuiguji_ske_json,shuiguji_tex_json,shuiguji_tex_png,longhudou_ske_json,longhudou_tex_json,longhudou_tex_png,shuihuzhuan_ske_json,shuihuzhuan_tex_json,shuihuzhuan_tex_png,rabbitgirl_ske_json,rabbitgirl_tex_json,rabbitgirl_tex_png,RechargeAnim_ske_json,RechargeAnim_tex_json,RechargeAnim_tex_png,lobby_bg_json,lobby_bg_png,hall_ui_huadong_png,entry_ermj_tex_png,entry_ermj_ske_json,entry_ermj_tex_json,entry_zjh_ske_json,entry_zjh_tex_json,entry_zjh_tex_png,hall_ui_jyrz_png,gold_tex_png,gold_ske_json,gold_tex_json,entry_hongbao_ske_json,entry_hongbao_tex_json,entry_hongbao_tex_png,fkdn_tex_png,fkdn_ske_json,fkdn_tex_json,lobby_lock_png,UpToMemberAnim_tex_png,UpToMemberAnim_ske_json,UpToMemberAnim_tex_json,dl_icon_h5_png,dl_icon_master_png,entry_cpnn_tex_png,entry_cpnn_ske_json,entry_cpnn_tex_json,AgButton_tex_png,entry_ag_tex_png,AgButton_ske_json,entry_ag_ske_json,AgButton_tex_json,entry_ag_tex_json,lobby_ad_json,entry_qznn_ske_json,entry_qznn_tex_json,entry_qznn_tex_png",
 			"name": "preload"
 		},
 		{
@@ -636,6 +636,157 @@
 			"url": "assets/common/stuff/hall_ui_Upgrademember.png",
 			"type": "image",
 			"name": "hall_ui_Upgrademember_png"
+		},
+		{
+			"url": "assets/animation/entry_fkdn/fkdn_tex.png",
+			"type": "image",
+			"name": "fkdn_tex_png"
+		},
+		{
+			"url": "assets/animation/entry_fkdn/fkdn_ske.json",
+			"type": "json",
+			"name": "fkdn_ske_json"
+		},
+		{
+			"url": "assets/animation/entry_fkdn/fkdn_tex.json",
+			"type": "json",
+			"name": "fkdn_tex_json"
+		},
+		{
+			"url": "assets/lobby_lock.png",
+			"type": "image",
+			"name": "lobby_lock_png"
+		},
+		{
+			"url": "assets/animation/UpToMember/UpToMemberAnim_tex.png",
+			"type": "image",
+			"name": "UpToMemberAnim_tex_png"
+		},
+		{
+			"url": "assets/animation/UpToMember/UpToMemberAnim_ske.json",
+			"type": "json",
+			"name": "UpToMemberAnim_ske_json"
+		},
+		{
+			"url": "assets/animation/UpToMember/UpToMemberAnim_tex.json",
+			"type": "json",
+			"name": "UpToMemberAnim_tex_json"
+		},
+		{
+			"url": "assets/icon/dl_icon_h5.png",
+			"type": "image",
+			"name": "dl_icon_h5_png"
+		},
+		{
+			"url": "assets/icon/dl_icon_master.png",
+			"type": "image",
+			"name": "dl_icon_master_png"
+		},
+		{
+			"url": "assets/common/hall_ui_closestaff.png",
+			"type": "image",
+			"name": "hall_ui_closestaff_png"
+		},
+		{
+			"url": "assets/common/hall_ui_contact.png",
+			"type": "image",
+			"name": "hall_ui_contact_png"
+		},
+		{
+			"url": "assets/common/ad/lobby_ad.json",
+			"type": "sheet",
+			"name": "lobby_ad_json",
+			"subkeys": "hall_ui_adbasemap,hall_ui_arrow,hall_ui_mark1,hall_ui_mark2,hull_ui_adbg"
+		},
+		{
+			"url": "assets/animation/entry_cpnn/entry_cpnn_tex.png",
+			"type": "image",
+			"name": "entry_cpnn_tex_png"
+		},
+		{
+			"url": "assets/animation/entry_cpnn/entry_cpnn_ske.json",
+			"type": "json",
+			"name": "entry_cpnn_ske_json"
+		},
+		{
+			"url": "assets/animation/entry_cpnn/entry_cpnn_tex.json",
+			"type": "json",
+			"name": "entry_cpnn_tex_json"
+		},
+		{
+			"url": "assets/animation/Ag/AgButton_tex.png",
+			"type": "image",
+			"name": "AgButton_tex_png"
+		},
+		{
+			"url": "assets/animation/Ag/entry_ag_tex.png",
+			"type": "image",
+			"name": "entry_ag_tex_png"
+		},
+		{
+			"url": "assets/animation/Ag/AgButton_ske.json",
+			"type": "json",
+			"name": "AgButton_ske_json"
+		},
+		{
+			"url": "assets/animation/Ag/entry_ag_ske.json",
+			"type": "json",
+			"name": "entry_ag_ske_json"
+		},
+		{
+			"url": "assets/animation/Ag/AgButton_tex.json",
+			"type": "json",
+			"name": "AgButton_tex_json"
+		},
+		{
+			"url": "assets/animation/Ag/entry_ag_tex.json",
+			"type": "json",
+			"name": "entry_ag_tex_json"
+		},
+		{
+			"url": "assets/AGgame/AGBG.jpg",
+			"type": "image",
+			"name": "AGBG_jpg"
+		},
+		{
+			"url": "assets/AGgame/AGgameword.png",
+			"type": "image",
+			"name": "AGgameword_png"
+		},
+		{
+			"url": "assets/AGgame/hall_ui_Confirmtransfer.png",
+			"type": "image",
+			"name": "hall_ui_Confirmtransfer_png"
+		},
+		{
+			"url": "assets/AGgame/hall_ui_agwords.png",
+			"type": "image",
+			"name": "hall_ui_agwords_png"
+		},
+		{
+			"url": "assets/AGgame/hall_ui_background.png",
+			"type": "image",
+			"name": "hall_ui_background_png"
+		},
+		{
+			"url": "assets/AGgame/hall_ui_change.png",
+			"type": "image",
+			"name": "hall_ui_change_png"
+		},
+		{
+			"url": "assets/animation/entry_qznn/entry_qznn_tex.png",
+			"type": "image",
+			"name": "entry_qznn_tex_png"
+		},
+		{
+			"url": "assets/animation/entry_qznn/entry_qznn_ske.json",
+			"type": "json",
+			"name": "entry_qznn_ske_json"
+		},
+		{
+			"url": "assets/animation/entry_qznn/entry_qznn_tex.json",
+			"type": "json",
+			"name": "entry_qznn_tex_json"
 		}
 	]
 }

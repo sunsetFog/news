@@ -96,12 +96,12 @@ export default{
         return{
             nickname_state: false,
             archives_list: [
-                {theme: '登陆密码',explain: '6-16个字符',modify: '修改登录密码',url: '../../../static/dream/center/denglu.png'},
+                {theme: '登陆密码',explain: '6-12个字符',modify: '修改登录密码',url: '../../../static/dream/center/denglu.png'},
                 // {theme: '绑定银行卡',explain: '最多可绑定5张银行卡',modify: '绑定银行卡',url: '../../../static/dream/center/yinhangka.png'},
-                {theme: '提款密码',explain: '6-16个字符',modify: '设置提款密码',url: '../../../static/dream/center/tikuanmima.png'},
-                {theme: '邮件',explain: '条未读',modify: '查看站内信',url: '../../../static/dream/center/zhanneixin.png'},
+                {theme: '提款密码',explain: '6个数字密码',modify: '设置提款密码',url: '../../../static/dream/center/tikuanmima.png'},
+                {theme: '邮件',explain: '条未读',modify: '查看邮件',url: '../../../static/dream/center/zhanneixin.png'},
                 // {theme: '密保设定',explain: '用于找回密码',modify: '修改密保设定',url: '../../../static/dream/center/baomi.png'},
-                {theme: '公告',explain: '请随时关注最新广告',modify: '查看广告',url: '../../../static/dream/center/xinxi.png'},
+                {theme: '公告',explain: '请随时关注最新公告',modify: '查看公告',url: '../../../static/dream/center/xinxi.png'},
                 {theme: '保险箱',explain: '用于存入和取出资金',modify: '查看保险箱',url: '../../../static/dream/center/baoxianxiang.png'}
             ],
             pet_name: '',
@@ -398,7 +398,6 @@ export default{
                             color: @color_blueviolet;
                             vertical-align: middle;
                             float: left;
-                            margin-top: 1px;
                         }
                     }
                     .sex_select{
@@ -411,7 +410,6 @@ export default{
                             font-size: 12px;
                             float: right;
                             margin-left: 10px;
-                            margin-top: 1px;
                             padding: 0px 8px 0px 8px;
                             box-sizing: border-box;
                         }
@@ -423,7 +421,6 @@ export default{
                             border: 1px solid @color_blueviolet;
                             font-size: 12px;
                             float: right;
-                            margin-top: 1px;
                             padding: 0px 8px 0px 8px;
                             box-sizing: border-box;
                         }

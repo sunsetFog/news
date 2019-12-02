@@ -7,7 +7,7 @@
         <span v-show="play_info" class="laba_quality">
           <img src="../static/dream/home/laba.png">
         </span>
-        <span v-show="play_info" class="word_quality">最新广告&nbsp;:</span>
+        <span v-show="play_info" class="word_quality">最新公告&nbsp;:</span>
         <div class="flash_quality" v-show="play_info">
           <div v-html="timer_content" class="move_left" :style="{width:timer_width+'px'}"></div>
         </div>
@@ -88,12 +88,13 @@ export default {
     },
     setMove(value) {
       // if(!value){
-      //     var value = "赌侠<font color='#23f0fd' size='26'> testN28 </font>赢得<font color='#ffe400' size='26'> 253.4 </font>奖金，大吉大利 今晚吃鸡!";
+      //     var value = "赌圣<font color='#23f0fd' size='26'> 机器人1273 </font>出手不凡，在<font color='#ffe400' size='26'> 龙虎斗彩票场 </font>赢得<font color='#fe0b0b' size='26'> 16711.5 </font>奖金，大吉大利 今晚吃鸡!";
       // }
       var that = this;
       value = value.replace(" size='26'", "");
       value = value.replace(" size='26'", "");
       value = value.replace(" size='26'", "");
+      value = value.replace("#fe0b0b", "#070707");
       that.timer_list.push(value);
     }
   }
@@ -102,7 +103,6 @@ export default {
 
 
 <style lang="less">
-@import '../static/study/index.less';
 @import "./assets/app.less";
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;

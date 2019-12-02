@@ -1,0 +1,18 @@
+{
+    "WebVer": "v1.1.0",
+    "IsDecrypt": false,
+    "IsDebug": false,
+    "IsTest": false,
+    "IsSimulate": false,
+    "HttpSerever": "",
+    "SocketServerNative": "",
+    "SocketServerOutnet": "",
+    "SocketServer": "QmdLUFdNeVRIUTVNbGwxWTBobE5IQXpZM2hWYWt3elpETmtkamhwVDNwT00yUT1Ibg==",
+    "ResoureServerUrlNative": "",
+    "ResoureServerUrlOutnet": "",
+    "ResoureServerUrl": "",
+    "ProtoConfig": "simple_config",
+    "ErrorConfig": "error_config",
+    "Games": "gamecfg",
+    "TestIpList":[]
+}

@@ -31,14 +31,14 @@
 		"backGArt" : "fishUI_buyu_bg5_jpg",
 		"bulbGArt" : "bulb1",
 		"bulbNumber" : 2,
-		"bulbPosition" : "633,201|1192,351"
+		"bulbPosition" : "431,464|1192,351"
 	},
 
 	"data_506" : {
 		"backGArt" : "fishUI_buyu_bg6_jpg",
 		"bulbGArt" : "bulb1",
 		"bulbNumber" : 2,
-		"bulbPosition" : "431,464|1157,600"
+		"bulbPosition" : "633,201|1330,584"
 	}
 
 }

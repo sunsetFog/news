@@ -5,7 +5,7 @@
 			"name": "lhd_room"
 		},
 		{
-			"keys": "proto_lhd_json,lhd_table_json,lld_effect_json,lhd_help_json,lhd_beilv_fnt,common_ui_black_png,wash_ske_json,wash_tex_json,wash_tex_png,bet_0_ske_json,bet_0_tex_json,bet_0_tex_png,bet_1_ske_json,bet_1_tex_json,bet_1_tex_png,light_ske_json,light_tex_json,light_tex_png,sweep_ske_json,sweep_tex_json,sweep_tex_png,money_linght_ske_json,money_linght_tex_json,money_linght_tex_png,spot_ske_json,spot_tex_json,spot_tex_png,ui_set_json,shijianbiao_fnt,common_ui_clock_png,thm_lhd_json,diimage_png,common_ui_tiaomabutton_png,common_ui_tiaomabutton2_png,common_ui_jiamabutton_png,common_ui_jiamabutton2_png,common_ui_cftzbutton_png,common_ui_cftzbutton2_png,common_ui_cftzzhezao_png,common_ui_qrtzcm_png,common_ui_qrtzcm2_png,common_ui_qrtzzhezao_png,zidclose_png,zidopen_png,common_ui_cxzhezao_png,pulsUp_png,common_ui_zdqrz_png,common_ui_chipchange_png,bjl_ui_qd_png,bjl_ui_qx_png,common_ui_0_png,common_ui_1_png,common_ui_2_png,common_ui_3_png,common_ui_4_png,common_ui_5_png,common_ui_6_png,common_ui_7_png,common_ui_8_png,common_ui_9_png,common_ui_10_png,common_ui_g0_png,common_ui_g1_png,common_ui_g2_png,common_ui_g3_png,common_ui_g4_png,common_ui_g5_png,common_ui_g6_png,common_ui_g7_png,common_ui_g8_png,common_ui_g9_png,common_ui_g10_png,common_ui_cp0_png,common_ui_cp1_png,common_ui_cp10_png,common_ui_cp2_png,common_ui_cp3_png,common_ui_cp4_png,common_ui_cp5_png,common_ui_cp6_png,common_ui_cp7_png,common_ui_cp8_png,common_ui_cp9_png,common_ui_qhgzk_png,common_ui_t100000_png,choumaziti_fnt,special_num_fnt,common_ui_cx_png,common_ui_cx2_png,common_ui_leg1_png,common_ui_leg2_png,common_ui_pula_png,common_ui_volce1_png,common_ui_volce2_png,common_ui_volume1_png,common_ui_volume2_png,common_ui_huanzhuok_png,common_ui_cpdpzban_png,common_ui_cpkjjl_png,common_ui_cppzban_png,common_ui_cphead_png,star_png,star_0_ske_json,star_0_tex_json,star_0_tex_png,star_1_ske_json,star_1_tex_json,star_1_tex_png,table_ske_json,table_tex_json,table_tex_png,bjl_common_json,ui_common_popup_json,ui_popup_json,public_number_fnt,public_number2_fnt,hall_ui_s_png,hall_ui_button1_png,hall_ui_button2_png,hall_ui_no_png,hall_ui_yes_png,common_ui_cptime_png,caipiaotime_fnt,brnn_ui_kaijaing_png,common_ui_progressbar_png,common_ui_progressbarth_png,common_ui_gundongtiao_png",
+			"keys": "proto_lhd_json,lhd_table_json,lld_effect_json,lhd_help_json,lhd_beilv_fnt,common_ui_black_png,wash_ske_json,wash_tex_json,wash_tex_png,lhd_bet_0_ske_json,lhd_bet_0_tex_json,lhd_bet_0_tex_png,bet_1_ske_json,bet_1_tex_json,bet_1_tex_png,light_ske_json,light_tex_json,light_tex_png,sweep_ske_json,sweep_tex_json,sweep_tex_png,money_linght_ske_json,money_linght_tex_json,money_linght_tex_png,spot_ske_json,spot_tex_json,spot_tex_png,ui_set_json,shijianbiao_fnt,common_ui_clock_png,thm_lhd_json,diimage_png,common_ui_tiaomabutton_png,common_ui_tiaomabutton2_png,common_ui_jiamabutton_png,common_ui_jiamabutton2_png,common_ui_cftzbutton_png,common_ui_cftzbutton2_png,common_ui_cftzzhezao_png,common_ui_qrtzcm_png,common_ui_qrtzcm2_png,common_ui_qrtzzhezao_png,zidclose_png,zidopen_png,common_ui_cxzhezao_png,pulsUp_png,common_ui_zdqrz_png,common_ui_chipchange_png,bjl_ui_qd_png,bjl_ui_qx_png,common_ui_0_png,common_ui_1_png,common_ui_2_png,common_ui_3_png,common_ui_4_png,common_ui_5_png,common_ui_6_png,common_ui_7_png,common_ui_8_png,common_ui_9_png,common_ui_10_png,common_ui_g0_png,common_ui_g1_png,common_ui_g2_png,common_ui_g3_png,common_ui_g4_png,common_ui_g5_png,common_ui_g6_png,common_ui_g7_png,common_ui_g8_png,common_ui_g9_png,common_ui_g10_png,common_ui_cp0_png,common_ui_cp1_png,common_ui_cp10_png,common_ui_cp2_png,common_ui_cp3_png,common_ui_cp4_png,common_ui_cp5_png,common_ui_cp6_png,common_ui_cp7_png,common_ui_cp8_png,common_ui_cp9_png,common_ui_qhgzk_png,common_ui_t100000_png,choumaziti_fnt,special_num_fnt,common_ui_cx_png,common_ui_cx2_png,common_ui_leg1_png,common_ui_leg2_png,common_ui_pula_png,common_ui_volce1_png,common_ui_volce2_png,common_ui_volume1_png,common_ui_volume2_png,common_ui_huanzhuok_png,common_ui_cpdpzban_png,common_ui_cpkjjl_png,common_ui_cppzban_png,common_ui_cphead_png,star_png,star_0_ske_json,star_0_tex_json,star_0_tex_png,star_1_ske_json,star_1_tex_json,star_1_tex_png,table_ske_json,table_tex_json,table_tex_png,bjl_common_json,ui_common_popup_json,ui_popup_json,public_number_fnt,public_number2_fnt,hall_ui_s_png,hall_ui_button1_png,hall_ui_button2_png,hall_ui_no_png,hall_ui_yes_png,common_ui_cptime_png,caipiaotime_fnt,brnn_ui_kaijaing_png,common_ui_progressbar_png,common_ui_progressbarth_png,common_ui_gundongtiao_png",
 			"name": "lhd"
 		}
 	],
@@ -90,19 +90,19 @@
 			"name": "wash_tex_png"
 		},
 		{
-			"name": "bet_0_ske_json",
+			"name": "lhd_bet_0_ske_json",
 			"type": "json",
-			"url": "games/public/assets/bone/startBet/bet_0_ske.json"
+			"url": "games/lhd/assets/bone/startBet/lhd_bet_0_ske.json"
 		},
 		{
-			"name": "bet_0_tex_json",
+			"name": "lhd_bet_0_tex_json",
 			"type": "json",
-			"url": "games/public/assets/bone/startBet/bet_0_tex.json"
+			"url": "games/lhd/assets/bone/startBet/lhd_bet_0_tex.json"
 		},
 		{
-			"name": "bet_0_tex_png",
+			"name": "lhd_bet_0_tex_png",
 			"type": "image",
-			"url": "games/public/assets/bone/startBet/bet_0_tex.png"
+			"url": "games/lhd/assets/bone/startBet/lhd_bet_0_tex.png"
 		},
 		{
 			"url": "games/public/assets/bone/overBet/bet_1_ske.json",

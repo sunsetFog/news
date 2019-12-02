@@ -9,15 +9,15 @@
         <div class="varieties_content">
             <div class="account_name">
                 <label>开户姓名:</label>
-                <input type="text" maxlength="25" v-model.trim="account_name" placeholder="请输入开户人姓名"/>
+                <input type="text" maxlength="10" v-model.trim="account_name" placeholder="请输入开户人姓名"/>
             </div>
             <div class="card_number">
                 <label>银行卡号:</label>
-                <input type="text" maxlength="25" v-model.trim="card_number" placeholder="请输入银行卡号"/>
+                <input type="text" maxlength="19" v-model.trim="card_number" placeholder="请输入银行卡号"/>
             </div>
             <div class="opening_bank">
                 <label>开户行:</label>
-                <input type="text" maxlength="50" v-model.trim="opening_bank" placeholder="请输入开户行"/>
+                <input type="text" maxlength="12" v-model.trim="opening_bank" placeholder="请输入开户行"/>
             </div>
             <div class="line_example"></div>
             <div class="confirm_add">
@@ -41,6 +41,28 @@ export default {
             card_number: '',
             opening_bank: ''
         }
+    },
+    watch: {
+        account_name(cur,old){
+            let validat = this.$means.validatSpecial(cur);
+            if(validat.state){
+                this.account_name = validat.value;
+            }
+        },
+        opening_bank(cur,old){
+            let validat = this.$means.validatSpecial(cur);
+            if(validat.state){
+                this.opening_bank = validat.value;
+            }
+        },
+        card_number(cur,old){
+            if(/[^\d]/g.test(cur)){
+                if(this.card_number.match(/[^\d]/g)!=null){
+                   this.$message.error('请输入19位数字的银行卡号！');
+                }
+                this.card_number = cur.replace(/[^\d]/g, '');
+            }
+        },
     },
     methods:{
         changeMeans(){

@@ -1,5 +1,5 @@
 {
-    "WebVer": "v1.5.1",
+    "WebVer": "v1.2.8",
     "IsDecrypt": false,
     "IsDebug": true,
     "IsTest": false,
@@ -23,7 +23,6 @@
         "ws://10.1.101.151:12001&&10.1.101.151",
         "ws://10.1.101.181:12001&&10.1.101.181",
         "ws://www.predyfqp1.com/g&&PRE1",
-        "ws://www.dyfqp1.com/g&&PRE2",
-        "ws://www.51szxxw.com/g&&OL"
+        "ws://www.6435j8.cn/g&&OL"
     ]
 }

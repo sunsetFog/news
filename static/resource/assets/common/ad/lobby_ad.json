@@ -1,0 +1,6 @@
+{"file":"lobby_ad.png","frames":{
+"hall_ui_adbasemap":{"x":316,"y":102,"w":168,"h":24,"offX":0,"offY":0,"sourceW":168,"sourceH":24},
+"hall_ui_arrow":{"x":316,"y":2,"w":70,"h":96,"offX":0,"offY":0,"sourceW":70,"sourceH":96},
+"hall_ui_mark1":{"x":488,"y":26,"w":20,"h":20,"offX":0,"offY":0,"sourceW":20,"sourceH":20},
+"hall_ui_mark2":{"x":488,"y":2,"w":20,"h":20,"offX":0,"offY":0,"sourceW":20,"sourceH":20},
+"hull_ui_adbg":{"x":2,"y":2,"w":310,"h":185,"offX":0,"offY":0,"sourceW":310,"sourceH":185}}}

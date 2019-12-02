@@ -40,7 +40,7 @@
                     </div>
                     <button class="admin_account" @click="manageMeans(1)">管理银行卡</button>
                 </div>
-                <div class="account_number" v-show="withdrawal_types[1].active">
+                <!-- <div class="account_number" v-show="withdrawal_types[1].active">
                     <label>支付宝账号:</label>
                     <div class="user_account">
                         <el-select v-model="alipay_card" placeholder="请选择支付宝" size="mini">
@@ -53,7 +53,7 @@
                         </el-select>
                     </div>
                     <button class="admin_account" @click="manageMeans(2)">管理支付宝</button>
-                </div>
+                </div> -->
                 <div class="line_bottom"></div>
                 <div class="payment_button">
                     <button @click="exchange()">确认兑换</button>
@@ -75,7 +75,7 @@ export default {
             rechargeActive: false,
             withdrawal_types: [
                 {name: '提款到银行卡',active: true},
-                {name: '提款到支付宝',active: false}
+                // {name: '提款到支付宝',active: false}
             ],
             bank_list: [],
             bank_card: '',
@@ -161,7 +161,10 @@ export default {
             }
                 //console.log('amount',that.withdrawal_amount*10000);
                 that.$means.amateur_drawout(that.withdrawal_amount*10000,card,function(res){
-                    //console.log('success$$',res);
+                    // console.log('success$$998888',res);
+                    that.money_total = res.balance/10000;
+                    that.money_total = that.money_total.toFixed(2);
+                    that.$means.amateur_getPlayer('money').setMoney(res.balance);
                     that.$parent.hostMeans('know',that.withdrawal_amount);
                 })
 

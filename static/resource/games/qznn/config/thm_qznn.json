@@ -1,9 +1,30 @@
 {
-	"skins": {
-	},
+	"skins": {},
 	"autoGenerateExmlsList": true,
 	"exmls": [
+		"resource/games/public/skins/VScrollerSkin.exml",
+		"resource/games/public/skins/ScrollerSkin.exml",
+		"resource/games/qznn/components/QznnRoomIcon.exml",
+		"resource/games/qznn/components/QznnHelpItem.exml",
+		"resource/games/public/skins/chipBtn.exml",
+		"resource/games/public/skins/Hslider.exml",
+		"resource/games/public/skins/MusicSlider.exml",
+		"resource/games/public/skins/GameSet.exml",
+		"resource/games/qznn/components/ClosePoput.exml",
+		"resource/games/qznn/components/qznnGoldCoin.exml",
+		"resource/games/qznn/components/VScrollerBar.exml",
+		"resource/games/qznn/components/ScrollerBar.exml",
+		"resource/games/qznn/components/PlayerMessage.exml",
+		"resource/games/qznn/components/CardView.exml",
+		"resource/games/qznn/components/MenuView.exml",
+		"resource/games/qznn/components/TypeBox.exml",
+		"resource/games/qznn/components/Timer.exml",
+		"resource/games/qznn/components/Help.exml",
+		"resource/games/qznn/components/Record.exml",
+		"resource/games/qznn/components/RecordItem.exml",
+		"resource/games/qznn/components/QznnBones.exml",
+		"resource/games/qznn/skins/Room.exml",
 		"resource/games/qznn/skins/GameSkin.exml",
-		"resource/games/qznn/skins/QznnRoomSkin.exml"
+		"resource/games/qznn/skins/PopSkin.exml"
 	]
 }

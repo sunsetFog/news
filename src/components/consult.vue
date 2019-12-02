@@ -43,9 +43,10 @@ export default {
                 that.interface.delete = 'amateur_get_message_dele';
             }
             that.goods_id = value;
-            that.rechargeActive = true;
             //console.log('id@@',value);
             that.$means[that.interface.single](value,function(res){
+                that.consult_data.content = '';
+                that.rechargeActive = true;
                 //console.log('success',res);
                 if(res.content.indexOf('span')!=-1){
                     let money = res.content.split(':');
