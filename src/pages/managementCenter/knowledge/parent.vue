@@ -7,7 +7,7 @@
 			{{design}}
 		</div>
 		<!-- v-bind:缩写为:  其中article和purple为子过来的绑定值-->
-		<nice :article='design' @purple='get'></nice>
+		<nice :article='design' @purple='get' ref="rainbow"></nice>
 	</div>
 </template>
 
@@ -20,10 +20,16 @@
 				design:'父组件数据',
 			}
 		},
+		mounted(){
+			this.$refs.rainbow.praise('参数');//调用子组件方法
+		},
 		methods:{
 			get(message){
 				// message是子传的参数
 				this.design=message;
+			},
+			initial(value){
+				console.log('调用子组件方法---',value);
 			}
 		},
 		

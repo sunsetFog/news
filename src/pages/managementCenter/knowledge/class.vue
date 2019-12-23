@@ -2,18 +2,19 @@
 <section id="class">
 	<!-- v-bind等于: -->
 	<!-- 属性绑定class -->
-	<div :class="{active:isActive}">vue class</div>
+	<div :class="{'grows':isActive}">vue class</div>
 	<div v-bind:class="classObject">vue classObject</div>
 	<div v-bind:class="[arrClass1,arrClass2]">vue arrClass</div>
 	<!--数组与对象写法-->
-	<div v-bind:class="[{ active: isActive }, arrClass1]">lljj</div>
+	<div v-bind:class="[{ 'grows': isActive }, arrClass1]">lljj</div>
+	
 	<!--属性绑定style-->
 	<div v-bind:style="{ color: styleColor, fontSize: styleSize}">vue style</div>
 	<div v-bind:style="styleObject">vue styleObject</div>
 	<div v-bind:style="[styleWing,styleLose]">vue arrStyle</div>
 	<!-- a链接 -->
 	<a :href="link">百度链接</a>
-	<a href="/images/myw3schoolimage.jpg" download="w3logo">vue下载</a>	
+
 	<!-- 根据后台返回不同的类 -->
 	<div>
 		<ul v-for="item in payData">
@@ -68,6 +69,9 @@
 
 <style lang="less" scoped>
 #class{
+	.grows{
+		color: white;
+	}
 	.returnClassA{
 		width: 100px;
 		height: 40px;

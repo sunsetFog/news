@@ -51,6 +51,7 @@ export default new Router({
             { path: '/video', name: 'video', meta: { title: '管理中心'}, component: resolve => require(['@/pages/managementCenter/effect/video.vue'], resolve) },
             { path: '/editor', name: 'editor', meta: { title: '管理中心'}, component: resolve => require(['@/pages/managementCenter/effect/editor.vue'], resolve) },
             { path: '/vueqr', name: 'vueqr', meta: { title: '管理中心'}, component: resolve => require(['@/pages/managementCenter/effect/vueqr.vue'], resolve) },
+            { path: '/listener', name: 'listener', meta: { title: '管理中心'}, component: resolve => require(['@/pages/managementCenter/effect/listener.vue'], resolve) },
             { path: '/', redirect: '/crux' }
           ]
         },

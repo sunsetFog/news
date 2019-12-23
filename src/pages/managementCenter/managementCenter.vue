@@ -110,6 +110,7 @@ export default{
                 {key: '2-2-9',label: '视频',path: '/video',icon: '../../../static/dream/center/qipai.png',effect:[]},
                 {key: '2-2-10',label: '文本编辑器',path: '/editor',icon: '../../../static/dream/center/qipai.png',effect:[]},
                 {key: '2-2-11',label: '二维码',path: '/vueqr',icon: '../../../static/dream/center/qipai.png',effect:[]},
+                {key: '2-2-12',label: '浏览器监听',path: '/listener',icon: '../../../static/dream/center/qipai.png',effect:[]},
                 ]}
             ],
         }
