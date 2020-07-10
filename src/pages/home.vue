@@ -31,6 +31,7 @@
             v-model.trim="password_number"
             placeholder="密码"
             maxlength="12"
+            autocomplete="new-password"
             @keyup.enter="signIn"
           >
           <button class="sign_in" @click="signIn"></button>
@@ -167,7 +168,7 @@ export default {
     };
   },
   created() {
-    this.sailKey(this.$route.path);
+    this.sailKey(this.$route.meta.key);
   },
   mounted() {
     var that = this;
@@ -184,7 +185,7 @@ export default {
   watch: {
     $route(to, from) {
       this.tabEmptyActive();
-      this.sailKey(to.path);
+      this.sailKey(to.meta.key);
       if (to.path == "/game") {
         this.fixed_state = false;
       } else {
@@ -200,11 +201,9 @@ export default {
   },
   methods: {
     sailKey(value) {
-      this.tabs_bar.forEach((item, index, array) => {
-        if (item.path == value) {
-          item.active = true;
-        }
-      });
+      if(value!=404){
+        this.tabs_bar[value].active = true;
+      }
     },
     coverMeans() {
       let cover = document.body.clientHeight - 50;
@@ -420,14 +419,13 @@ export default {
         window.location.host,
         function() {
           that.$store.dispatch("getPlayerInfo", that.$means.amateur_getPlayer());
-          if (localStorage.getItem("account")) {
-            localStorage.setItem("account", that.account_number);
-            localStorage.setItem("password", that.password_number);
+          if(that.$cookies.get("account")){
+            that.$cookies.set("account",that.account_number,"1m");
+            that.$cookies.set("password",that.password_number,"1m");
           }
           sessionStorage.setItem("account_number", that.account_number);
           sessionStorage.setItem("password_number", that.password_number);
           that.safeActive = false;
-          that.$router.push({ path: "/home" });
           that.cover_active = false;
         }
       );

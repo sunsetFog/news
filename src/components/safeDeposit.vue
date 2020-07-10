@@ -223,8 +223,8 @@ export default {
             }
         }
         .safe_content{
-            .mixin_float(943px,620px,right);
-            padding: 75px 45px 0px 45px;
+            .mixin_float(84%,620px,right);
+            padding: 75px 40px 0px 40px;
             box-sizing: border-box;
             .account_balance,.amount_deposited,.input_deposit{
                 width: 100%;

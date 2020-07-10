@@ -244,8 +244,8 @@ export default {
             }
         }
         .payment_content{
-            .mixin_float(908px,620px,right);
-            padding: 0px 45px 0px 25px;
+            .mixin_float(82%,620px,right);
+            padding: 0px 35px 0px 25px;
             box-sizing: border-box;
             .payment_methods{
                 width: 100%;
@@ -349,13 +349,13 @@ export default {
                 span{
                     .mixin_span(155px,20px,@color_tone20,@color_white,left);
                     position: absolute;
-                    left: -215px;
+                    left: -222px;
                     top: -41px;
                 }
                 button{
                     .mixin_button(155px,65px,@color_darkgray,@color_white);
                     position: absolute;
-                    left: -215px;
+                    left: -222px;
                     top: -21px;
                 }
             }

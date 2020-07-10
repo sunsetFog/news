@@ -13,19 +13,20 @@ export default {
             roll_ios: true
         }
     },
-    mounted(){
+    mounted(){//在dom操作的生命周期里添加监听
         window.addEventListener("resize", this.renderResize, false);
         window.addEventListener("scroll", this.handleScroll);
+        this.keyboard();
     },
-    beforeDestroy:function(){
+    beforeDestroy:function(){//在销毁的生命周期里删除监听
         window.removeEventListener("resize", this.renderResize, false);
         window.removeEventListener("scroll", this.handleScroll);
     },
     methods: {
-        renderResize(){
+        renderResize(){//1.
             console.log('监听浏览器窗口大小变化');
         },
-        handleScroll(){
+        handleScroll(){//2.
             console.log('监听滚动变化');
             var big_box_scroll = document.getElementById('app');
             // console.log('app++999',big_box_scroll)
@@ -38,6 +39,16 @@ export default {
                 this.roll_ios = false;
                 // console.log('0000000000')
             }
+        },
+        keyboard(){//3.监听电脑键盘
+            let that = this;
+            document.onkeypress = function(e) {
+                var keycode = document.all ? event.keyCode : e.which;
+                console.log('keycode',keycode);
+                if (keycode == 13) {//13是键盘Enter键
+                        
+                }
+            };
         },
         gundongweizhi(){
             var big_box = document.getElementById('app');

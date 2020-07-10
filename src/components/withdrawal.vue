@@ -221,7 +221,7 @@ export default {
             }
         }
         .payment_content{
-            .mixin_float(943px,620px,right);
+            .mixin_float(84%,620px,right);
             padding: 75px 45px 0px 45px;
             box-sizing: border-box;
             .current_balance,.withdrawal_amount_s,.account_number{

@@ -153,8 +153,8 @@ export default {
             }
         }
         .record_right{
-            .mixin_float(943px,620px,right);
-            padding: 30px 80px 0px 90px;
+            .mixin_float(84%,620px,right);
+            padding: 30px 75px 0px 85px;
             box-sizing: border-box;
             .record_example{
                 width: 100%;

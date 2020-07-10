@@ -95,8 +95,8 @@ export default {
                 }
                 that.$means.amateur_resetLoginPass_tel(that.account,that.new_password,that.verify_code,function(res){
                     that.rechargeActive = false;
-                    if (localStorage.getItem("account")) {
-                        localStorage.setItem("password",that.new_password);
+                    if(that.$cookies.get("account")){
+                        that.$cookies.set("password",that.new_password,"1m");
                     }
                     sessionStorage.setItem('password_number',that.new_password);
                     that.$message.success('登陆密码修改成功！');
@@ -117,8 +117,8 @@ export default {
                 }
                 that.$means.amateur_resetLoginPass_noTel(that.account,that.new_password,that.old_password,function(res){
                     that.rechargeActive = false;
-                    if (localStorage.getItem("account")) {
-                        localStorage.setItem("password",that.new_password);
+                    if(that.$cookies.get("account")){
+                        that.$cookies.set("password",that.new_password,"1m");
                     }
                     sessionStorage.setItem('password_number',that.new_password);
                     that.$message.success('登陆密码修改成功！');

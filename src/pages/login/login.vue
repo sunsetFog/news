@@ -15,7 +15,10 @@
                         </div>
                         <div class="password_enter">
                             <span>密码:</span>
-                            <input :type="eyeType" maxlength="12" v-model.trim="password_number" placeholder="请输入登陆密码"></input>
+                            <!-- autocomplete="new-password"禁止浏览器自动填充到表单 
+                            在登录页的时候浏览器记住了密码，如果去到新建用户页则 username 和 password 会被自动填充上去
+                            -->
+                            <input :type="eyeType" maxlength="12" v-model.trim="password_number" placeholder="请输入登陆密码" autocomplete="new-password"></input>
                             <div @click="eyeMeans">
                                 <img v-if="eyeType=='text'" class="zhengyan" src="../../../static/dream/login/zhengyan.png"/>
                                 <img v-else class="biyan" src="../../../static/dream/login/biyan.png"/>
@@ -68,9 +71,9 @@ export default{
         }else{
             this.$means.amateur_exit(function(){});
         }
-        if(localStorage.getItem('account')){
-            this.account_number = localStorage.getItem('account');
-            this.password_number = localStorage.getItem('password');
+        if(this.$cookies.get("account")){
+            this.account_number = this.$cookies.get("account");
+            this.password_number = this.$cookies.get("password");
             this.remember_checked = true;
         }else{
             this.account_number = '';
@@ -146,11 +149,11 @@ export default{
                     that.$means.amateur_login(that.account_number,that.password_number,window.location.host,function() { 
                         that.$store.dispatch('getPlayerInfo',that.$means.amateur_getPlayer());
                         if(that.remember_checked==true){
-                            localStorage.setItem('account',that.account_number);
-                            localStorage.setItem('password',that.password_number);
+                            that.$cookies.set("account",that.account_number,"1m");
+                            that.$cookies.set("password",that.password_number,"1m");
                         }else{
-                            localStorage.removeItem('account');
-                            localStorage.removeItem('password');
+                            that.$cookies.remove("account");
+                            that.$cookies.remove("password");
                         }
                         sessionStorage.setItem('account_number',that.account_number);
                         sessionStorage.setItem('password_number',that.password_number);
@@ -266,7 +269,7 @@ export default{
                     border-radius: 4px;
                     border: 1px solid #b1923f;
                     span{
-                        .mixin_span(85px,50px,none,@color_label,left);
+                        .mixin_span(20%,50px,none,@color_label,left);
                         font-size: 24px;
                         float: left;
                         font-weight: 600;
@@ -274,7 +277,7 @@ export default{
                         box-sizing: border-box;
                     }
                     input{
-                        .mixin_input(250px,48px);
+                        .mixin_input(260px,48px);
                         background: none;
                         float: left;
                         color: @color_label;
@@ -301,7 +304,7 @@ export default{
                 }
                 .account{
                     input{
-                        width: 330px;
+                        width: 80%;
                     }
                 }
                 .password_enter{

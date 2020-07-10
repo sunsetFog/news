@@ -19,11 +19,14 @@ export default {
       }
     };
   },
+  //1. 不支持缓存,数据改变而触发 2.watch支持异步
+  //用法: watch监听数据，用于监听输入框或路由变化
   watch: {
-	$route(to, from) {//监听路由变化
+    $route(to, from) {//监听路由变化
 
-	},
-    example0(curVal, oldVal) {//watch监听数据，用于监听输入框或路由变化
+    },
+    //推荐使用
+    example0(curVal, oldVal) {//第一个参数是最新的值；第二个参数是输入之前的值
       console.log(curVal, oldVal, typeof curVal);
     },
     example1: "revive", //值可以为methods的方法名

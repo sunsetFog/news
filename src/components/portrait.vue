@@ -178,6 +178,7 @@ export default {
             .user_info{
                 .mixin_div(100%,140px,none,@color_white,left);
                 position: relative;
+                cursor: pointer;
                 img:nth-of-type(1){
                     .mixin_img(80px,80px);
                     position: absolute;
@@ -223,8 +224,8 @@ export default {
             }
         }
         .picture_content{
-            .mixin_float(943px,620px,right);
-            padding: 30px 140px 0px 170px;
+            .mixin_float(84%,620px,right);
+            padding: 30px 120px 0px 150px;
             box-sizing: border-box;
             .head_example{
                 width: 100%;
@@ -234,6 +235,7 @@ export default {
                         .mixin_li(138px,138px);
                         margin: 0px 20px 0px 0px;
                         position: relative;
+                        cursor: pointer;
                         img:nth-of-type(1){
                             .mixin_img(80px,80px);
                             position: absolute;
@@ -257,6 +259,7 @@ export default {
                         .mixin_li(138px,138px);
                         margin: 0px 20px 0px 0px;
                         position: relative;
+                        cursor: pointer;
                         img:nth-of-type(1){
                             .mixin_img(100%,100%);
                             position: absolute;
