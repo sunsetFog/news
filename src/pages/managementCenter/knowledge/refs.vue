@@ -31,6 +31,9 @@ import moon from './quote/children';
 				this.$refs.play.son = "ref改变子组件数据";
 				//触动子组件方法
 				this.$refs.play.secret();//常用
+			},
+			initial(value){
+				
 			}
 		},
 	}

@@ -6,7 +6,7 @@
 
 <script>
 //npm install mockjs --save
-import mock from "../../../../static/study/breezy/mock.js";
+// import mock from "../../../../static/study/breezy/mock.js";
 export default {
   data() {
     return {
@@ -15,28 +15,55 @@ export default {
   },
   created() {
     // this.getJson();
-    // this.is_delete();
+    this.is_delete();
+    // this.http2();
   },
   methods: {
     is_delete(){
 
-        let json = {goods_id: 3};
-        this.$axios.post("plugin.store-cashier.frontend.store.goods.destroy-goods",json).then(function(res) {
-            console.log("delete++=", res);
-        }).catch((err)=>{
-            console.error('error',err);
-        })
+            let that = this;
+            that.$axios({
+                url: 'plugin.store-cashier.frontend.store.goods.destroy-goods',
+                method: 'get',
+                data: {goods_id: 2}
+            }).then((res) => {
+                console.log('what==hht',res);
+            }).catch((err)=>{
+                console.log('error',err);
+            })
+
+
+        // let json = {
+				// 	goods_id: 2
+				// };
+        // this.$axios.get("plugin.store-cashier.frontend.store.goods.destroy-goods",json).then(function(res) {
+        //     console.log("delete++=", res);
+        // }).catch((err)=>{
+        //     console.error('error',err);
+        // })
       
+    },
+    http2(){
+            let that = this;
+            that.$axios({
+                url: '/user/login',
+                method: 'get',
+                data: {username: "admin", password: "123456"}
+            }).then((res) => {
+                console.log('H-token',res);
+            }).catch((err)=>{
+                console.log('error',err);
+            })
     },
     getJson() {
       //1.开发环境模拟本地数据    请查看see/build/webpack.dev.conf.js  这没有实用性，删除了
       //2.mock模拟本地数据
       //查找全部
-      this.$axios.post('plugin.store-cashier.frontend.store.goods.get-goods-list').then(function(res){
-          console.log('moon++=',res);
-      }).catch((err)=>{
-          console.error('error',err);
-      })
+      // this.$axios.post('plugin.store-cashier.frontend.store.goods.get-goods-list').then(function(res){
+      //     console.log('moon++=',res);
+      // }).catch((err)=>{
+      //     console.error('error',err);
+      // })
 
       //查找单条
       // let json = {

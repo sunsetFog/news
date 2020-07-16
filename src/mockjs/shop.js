@@ -6,13 +6,15 @@
 // https://blog.csdn.net/yw00yw/article/details/81328126
 
 
-//npm install mockjs --save
-//import mock from "../../../../static/study/mock.js";  放在vue文件里
-//npm install axios --save
-// 在main.js加入
-// import axios from 'axios';
-// Vue.prototype.$axios = axios;
+//学习生成随机数据就行
+// http://mockjs.com/examples.html
 
+// 前端关于自己模拟接口做测试
+// https://blog.csdn.net/w_s_x_b/article/details/92613421
+// https://www.mocky.io/  这是接口模拟工具  https://designer.mocky.io
+
+
+//npm install mockjs --save
 import Mock from 'mockjs';
 
 var store =  {
@@ -65,104 +67,78 @@ var store =  {
 
 
 
-//查询该全部数据
-Mock.mock("plugin.store-cashier.frontend.store.goods.get-goods-list","post",store);
+
 //查询该单条数据
 let is_single = function(options){
-    let rtype = options.type.toLowerCase(); //获取请求的类型并转换为小写
     let only = [];
-    switch (rtype) {
-        case 'get':
-            return {result: "请求方式错误"}
-        case 'post':
-            let id = parseInt(JSON.parse(options.body).goods_id); // 获取请求的id，将options.body转换为JSON对象
-            for(let i=0;i<store.list.length;i++){
-                if(store.list[i].id==id){
-                    only = store.list[i];
-                }
-            }
-            if(only.length!=0){
-                return only
-            }else{
-                return {result: "传参错误"}
-            }
-        default:
-            break;
+    let id = parseInt(JSON.parse(options.body).goods_id); // 获取请求的id，将options.body转换为JSON对象
+    for(let i=0;i<store.list.length;i++){
+        if(store.list[i].id==id){
+            only = store.list[i];
+        }
+    }
+    if(only.length!=0){
+        return only
+    }else{
+        return {result: 400,message: '传参错误'}
     }
     
 }
-Mock.mock("plugin.store-cashier.frontend.store.goods.get-goods-detail",/get|post/i,is_single);
+
 
 
 // 数据的删除操作
 let is_delete = function(options){
-    let rtype = options.type.toLowerCase(); //获取请求的类型并转换为小写
-    switch (rtype) {
-        case 'get':
-            return {result: "请求方式错误"}
-        case 'post':
-            let id = parseInt(JSON.parse(options.body).goods_id); // 获取请求的id，将options.body转换为JSON对象
-            let save_length = store.list.length;
-            store.list = store.list.filter(function(val) {
-                return val.id != id;  // 过滤掉前台传过来的id对应的相应数据，并重新返回
-            });
-            if(save_length.length!=store.list.length){
-                store.count = store.count - 1;
-                return {result: 1}
-            }else{
-                return {result: "传参错误"}
-            }
-        default:
-            break;
+    if(!options.body){
+        return {result: 400,message: '接收参数失败'}
+    }else if(!JSON.parse(options.body).goods_id){
+        return {result: 400,message: '传参错误'}
     }
+    let id = parseInt(JSON.parse(options.body).goods_id); // 获取请求的id，将options.body转换为JSON对象
+    let save_length = store.list.length;
+    store.list = store.list.filter(function(val) {
+        return val.id != id;  // 过滤掉前台传过来的id对应的相应数据，并重新返回
+    });
+    if(save_length.length!=store.list.length){
+        store.count = store.count - 1;
+        return {result: 1,message: '删除成功'}
+    }else{
+        return {result: 400,message: '传参错误'}
+    }
+
 }
-Mock.mock("plugin.store-cashier.frontend.store.goods.destroy-goods",/get|post/i,is_delete);
+
 
 
 // 数据的添加操作
 let is_add = function(options){
-    let rtype = options.type.toLowerCase(); //获取请求的类型
-    switch (rtype) {
-        case 'get':
-            return {result: "请求方式错误"}
-        case 'post':
             let obj = JSON.parse(options.body);
             if(obj.title==''||obj.company==''||obj.thumb==''||obj.price==''||obj.original_price==''||obj.cost==''||obj.stock==''||obj.virtual_sales==''){
-                return {result: "参数不能为空"}
+                return {result: 400,message: '参数不能为空'}
             }
             obj.id = store.count + 1;
             store.count = store.count + 1;
             store.list = store.list.concat(obj);  // 将前台返回来的数据，拼接到数组中。
-            return {result: 1}
-        default:
-            break;
-    }
+            return {result: 1,message: '添加成功'}
+
 }
-Mock.mock("plugin.store-cashier.frontend.store.goods.add-goods",/get|post/i,is_add);
+
 
 
 
 // 数据的修改操作
 let is_update = function(options){
-    let rtype = options.type.toLowerCase(); //获取请求的类型
-    switch (rtype) {
-        case 'get':
-            return {result: "请求方式错误"}
-        case 'post':
-        // 获取前端返回的参数,要字符串转对象
             let obj = JSON.parse(options.body);
             if(obj.title==''||obj.company==''||obj.thumb==''||obj.price==''||obj.original_price==''||obj.cost==''||obj.stock==''||obj.virtual_sales==''){
-                return {result: "参数不能为空"}
+                return {result: 400,message: '参数不能为空'}
             }
             store.list = store.list.map(val => {  // 将需要替换的数据替换掉
                 return Number(val.id) === Number(obj.id) ? obj : val ;
             });
-            return {result: 1}
-        default:
-            break;
-    }
+            return {result: 1,message: '修改成功'}
+            
 }
-Mock.mock("plugin.store-cashier.frontend.store.goods.edit-goods",/get|post/i,is_update);
+
 
 
 
@@ -190,25 +166,28 @@ var classify = [
                     }
                 ]
 
-            let is_classify = function(options){
-                let rtype = options.type.toLowerCase(); //获取请求的类型并转换为小写
-                switch (rtype) {
-                    case 'get':
-                        return {result: "请求方式错误"}
-                    case 'post':
-                        let id = parseInt(JSON.parse(options.body).store_id); // 获取请求的id，将options.body转换为JSON对象
-                        if(id==12){
-                            return classify
-                        }else{
-                            return {result: "参数不对"}
-                        }
-                    default:
-                        break;
-                }
+let is_classify = function(options){
+        let id = parseInt(JSON.parse(options.body).store_id); // 获取请求的id，将options.body转换为JSON对象
+        if(id==12){
+            return classify
+        }else{
+            return {result: 400,message: '传参错误'}
+        }
                 
-            }
-            Mock.mock("plugin.store-cashier.frontend.store.goods-category.get-category-by-store-id",/get|post/i,is_classify);
+    }
+            
 
+
+let shop_json = {
+    store,
+    is_single,
+    is_delete,
+    is_add,
+    is_update,
+    is_classify
+}
+
+export default shop_json;
 
 
 

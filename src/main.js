@@ -46,6 +46,8 @@ Vue.use(VueCookies)
 import apiHttp from './api/http.js';
 Vue.prototype.$apihttp = apiHttp;
 
+import '@/mockjs'; // mock数据
+
 
 import recharge from './components/recharge.vue';
 import withdrawal from './components/withdrawal.vue';
