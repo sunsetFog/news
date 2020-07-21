@@ -152,7 +152,7 @@ export default {
           exhibition: true,
           path: "/agentsystem"
         },
-        { title: "管理中心", active: false, exhibition: true, path: "/crux" }
+        { title: "管理中心", active: false, exhibition: true, path: "/mcenter/crux" }
       ],
       fixed_bar: [
         { url: "../../static/dream/home/jiangyuan-nomal.png" },

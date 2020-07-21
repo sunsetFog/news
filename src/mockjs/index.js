@@ -46,11 +46,11 @@ Mock.mock("plugin.store-cashier.frontend.store.goods.get-goods-detail","post",sh
 // 数据的删除操作   传参 {goods_id: ''}  商品id
 Mock.mock("plugin.store-cashier.frontend.store.goods.destroy-goods","get",shopAPI.is_delete);
 // 数据的添加操作  传参  store_id: 12,(店铺id)title: '',(商品名称)company: '',(商品单位)category_pid: '',(商品分类一级id)category_cid: '',(商品分类二级id)thumb: '../../../../static/meitu/dian/lizhi.jpg',(商品图片)price: '',(商品现价)original_price: '',(商品原价)cost: '',(商品成本)stock: '',(库存)virtual_sales: ''(虚拟销量)
-Mock.mock("plugin.store-cashier.frontend.store.goods.add-goods","post",shopAPI.is_add);//
+Mock.mock("plugin.store-cashier.frontend.store.goods.add-goods","post",shopAPI.is_add);
 // 数据的修改操作  传参   store_id: 12,(店铺id)id: '',(商品id)title: '',(商品名称)company: '',(商品单位)category_pid: '',(商品分类一级id)category_cid: '',(商品分类二级id)thumb: '../../../../static/meitu/dian/lizhi.jpg',(商品图片)price: '',(商品现价)original_price: '',(商品原价)cost: '',(商品成本)stock: '',(库存)virtual_sales: ''(虚拟销量)
-Mock.mock("plugin.store-cashier.frontend.store.goods.edit-goods","post",shopAPI.is_update);//传参
+Mock.mock("plugin.store-cashier.frontend.store.goods.edit-goods","post",shopAPI.is_update);
 //查询分类数据   传参   {store_id: 12}; 店铺id
-Mock.mock("plugin.store-cashier.frontend.store.goods-category.get-category-by-store-id","post",shopAPI.is_classify);//传参
+Mock.mock("plugin.store-cashier.frontend.store.goods-category.get-category-by-store-id","post",shopAPI.is_classify);
 
 
 

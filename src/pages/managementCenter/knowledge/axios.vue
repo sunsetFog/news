@@ -8,11 +8,16 @@
 //配置main.js
 // import apiHttp from './api/http.js';
 // Vue.prototype.$apihttp = apiHttp;
+import { login } from "@/api/user";
 export default {
     data(){
         return{
 
         }
+    },
+    created(){
+        // this.interface();
+        this.http2();
     },
     methods: {
         //不推荐---因为再mockjs中get请求，参数接收不到
@@ -20,10 +25,10 @@ export default {
             //这个是配置axios的请求方式
             let that = this;
             let json = {
-                username: "gggg",
-                password: "1234567890"
+                username: "admin",
+                password: "123456"
             }
-            that.$apihttp.post('http://10.1.101.120/backend/account/checklogin',json).then((res) => {
+            that.$apihttp.post('/user/login',json).then((res) => {
                 console.log('H-token',res);
             }).catch((err)=>{
                 console.log('error',err);
@@ -33,15 +38,27 @@ export default {
         http2(){
             let that = this;
             let json = {
-                username: "gggg",
-                password: "1234567890"
+                username: "admin",
+                password: "123456"
             }
             that.$apihttp({
-                url: 'http://10.1.101.120/backend/account/checklogin',
+                url: '/user/login',
                 method: 'get',
                 data: json
             }).then((res) => {
                 console.log('H-token',res);
+            }).catch((err)=>{
+                console.log('error',err);
+            })
+        },
+        //封装接口在一处，单个变量用
+        interface(){
+            let json = {
+                username: "admin",
+                password: "123456"
+            }
+            login(json).then(res => {
+                console.log('返回的参数',res);
             }).catch((err)=>{
                 console.log('error',err);
             })

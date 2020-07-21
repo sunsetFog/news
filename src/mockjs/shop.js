@@ -80,7 +80,7 @@ let is_single = function(options){
     if(only.length!=0){
         return only
     }else{
-        return {result: 400,message: '传参错误'}
+        return {code: 400,message: '传参错误'}
     }
     
 }
@@ -90,9 +90,9 @@ let is_single = function(options){
 // 数据的删除操作
 let is_delete = function(options){
     if(!options.body){
-        return {result: 400,message: '接收参数失败'}
+        return {code: 400,message: '接收参数失败'}
     }else if(!JSON.parse(options.body).goods_id){
-        return {result: 400,message: '传参错误'}
+        return {code: 400,message: '传参错误'}
     }
     let id = parseInt(JSON.parse(options.body).goods_id); // 获取请求的id，将options.body转换为JSON对象
     let save_length = store.list.length;
@@ -101,9 +101,9 @@ let is_delete = function(options){
     });
     if(save_length.length!=store.list.length){
         store.count = store.count - 1;
-        return {result: 1,message: '删除成功'}
+        return {code: 1,message: '删除成功'}
     }else{
-        return {result: 400,message: '传参错误'}
+        return {code: 400,message: '传参错误'}
     }
 
 }
@@ -114,12 +114,12 @@ let is_delete = function(options){
 let is_add = function(options){
             let obj = JSON.parse(options.body);
             if(obj.title==''||obj.company==''||obj.thumb==''||obj.price==''||obj.original_price==''||obj.cost==''||obj.stock==''||obj.virtual_sales==''){
-                return {result: 400,message: '参数不能为空'}
+                return {code: 400,message: '参数不能为空'}
             }
             obj.id = store.count + 1;
             store.count = store.count + 1;
             store.list = store.list.concat(obj);  // 将前台返回来的数据，拼接到数组中。
-            return {result: 1,message: '添加成功'}
+            return {code: 1,message: '添加成功'}
 
 }
 
@@ -130,12 +130,12 @@ let is_add = function(options){
 let is_update = function(options){
             let obj = JSON.parse(options.body);
             if(obj.title==''||obj.company==''||obj.thumb==''||obj.price==''||obj.original_price==''||obj.cost==''||obj.stock==''||obj.virtual_sales==''){
-                return {result: 400,message: '参数不能为空'}
+                return {code: 400,message: '参数不能为空'}
             }
             store.list = store.list.map(val => {  // 将需要替换的数据替换掉
                 return Number(val.id) === Number(obj.id) ? obj : val ;
             });
-            return {result: 1,message: '修改成功'}
+            return {code: 1,message: '修改成功'}
             
 }
 
@@ -171,7 +171,7 @@ let is_classify = function(options){
         if(id==12){
             return classify
         }else{
-            return {result: 400,message: '传参错误'}
+            return {code: 400,message: '传参错误'}
         }
                 
     }
