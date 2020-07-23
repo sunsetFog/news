@@ -106,7 +106,7 @@ export default {
             console.log('1函数转换parseInt',parseInt("10.12"));//结果10，遇到小数点或者非数字就终止
             console.log('2函数转换parseInt',parseInt("哈哈"));//结果，首字符为非数字型，停止返回NaN
             console.log('3函数转换parseInt',parseInt("11哈哈"));//结果11，如果第一个字符是数字型，一直往后解析，直到碰到非数字型的字符停止，返回前面的数值
-            console.log('4函数转换parseInt',parseInt(10101,2));//2进制，结果21，可以将不同进制数解析为十进制显示
+            console.log('4函数转换parseInt',parseInt("10101",2));//2进制，结果21，可以将不同进制数解析为十进制显示
             // parseFloat(变量) 字符串转浮点型类型
             console.log('1函数转换parseFloat',parseFloat("11.22"));//结果11.22，
             console.log('2函数转换parseFloat',parseFloat("6.6.6"));//结果6.6，只能解析第一个小数点

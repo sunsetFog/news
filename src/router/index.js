@@ -36,6 +36,7 @@ export default new Router({
             { path: 'tags', name: 'tags', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/tagStyle/tags.vue'], resolve) },
 
             { path: 'data_type', name: 'data_type', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/javaScript/dataType.vue'], resolve) },
+            { path: 'processing', name: 'processing', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/javaScript/processing.vue'], resolve) },
 
             { path: 'v_tag', name: 'v_tag', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/knowledge/v_tag.vue'], resolve) },
             { path: 'modifier', name: 'modifier', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/knowledge/modifier.vue'], resolve) },
