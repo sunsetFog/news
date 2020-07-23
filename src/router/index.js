@@ -31,6 +31,12 @@ export default new Router({
           path: 'mcenter', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/managementCenter.vue'], resolve),
           children: [
             { path: 'crux', name: 'crux', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/crux.vue'], resolve) },
+
+            { path: 'css', name: 'css', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/tagStyle/css.vue'], resolve) },
+            { path: 'tags', name: 'tags', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/tagStyle/tags.vue'], resolve) },
+
+            { path: 'data_type', name: 'data_type', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/javaScript/dataType.vue'], resolve) },
+
             { path: 'v_tag', name: 'v_tag', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/knowledge/v_tag.vue'], resolve) },
             { path: 'modifier', name: 'modifier', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/knowledge/modifier.vue'], resolve) },
             { path: 'lifecycle', name: 'lifeCycle', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/knowledge/lifeCycle.vue'], resolve) },
@@ -53,6 +59,7 @@ export default new Router({
             { path: 'mock', name: 'mock', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/knowledge/mock.vue'], resolve) },
             { path: 'cache', name: 'cache', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/knowledge/cache.vue'], resolve) },
             { path: 'axios', name: 'axios', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/knowledge/axios.vue'], resolve) },
+
             { path: 'download_ex', name: 'download_ex', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/effect/download.vue'], resolve) },
             { path: 'copy', name: 'copy', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/effect/copy.vue'], resolve) },
             { path: 'field', name: 'field', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/effect/field.vue'], resolve) },
@@ -65,6 +72,7 @@ export default new Router({
             { path: 'editor', name: 'editor', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/effect/editor.vue'], resolve) },
             { path: 'vueqr', name: 'vueqr', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/effect/vueqr.vue'], resolve) },
             { path: 'listener', name: 'listener', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/effect/listener.vue'], resolve) },
+            { path: 'websocket', name: 'websocket', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/effect/websocket.vue'], resolve) },
             { path: '/', redirect: '/mcenter/crux' }
           ]
         },

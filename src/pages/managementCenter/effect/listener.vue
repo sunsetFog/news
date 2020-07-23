@@ -18,7 +18,7 @@ export default {
         window.addEventListener("scroll", this.handleScroll);
         this.keyboard();
     },
-    beforeDestroy:function(){//在销毁的生命周期里删除监听
+    destroyed:function(){//在销毁的生命周期里删除监听
         window.removeEventListener("resize", this.renderResize, false);
         window.removeEventListener("scroll", this.handleScroll);
     },

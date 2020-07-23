@@ -116,6 +116,9 @@ export default{
     .theme_picture{
         width: 100%;
         height: 500px;
+        .el-carousel--horizontal{
+            overflow: hidden;
+        }
         .example_picture{
             width: 100%;
             height: 500px;
@@ -151,6 +154,9 @@ export default{
             
             .el-carousel__item:nth-child(2n+1) {
                 -background-color: #d3dce6;
+            }
+            .el-carousel--horizontal{
+                overflow: hidden;
             }
             .game_frame{
                 .mixin_div(100%,100%,none,auto,left);

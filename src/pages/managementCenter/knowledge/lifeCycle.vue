@@ -110,7 +110,10 @@ export default {
     activated(){//移动端-创建前
 
     },
-    beforeDestroy(){//销毁前-用于该页关闭后执行
+    beforeDestroy(){//销毁前-用于该页关闭后执行---用下面一个
+
+    },
+    destroyed() {//销毁后-用于该页关闭后执行---常用
 
     },
     computed:{//计算属性-用于vuex的getter
