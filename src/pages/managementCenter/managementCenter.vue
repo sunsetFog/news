@@ -123,7 +123,10 @@ export default{
                     {key: '4-2-11',label: '二维码',path: '/mcenter/vueqr',icon: '../../../static/dream/center/qipai.png',effect:[]},
                     {key: '4-2-12',label: '浏览器监听',path: '/mcenter/listener',icon: '../../../static/dream/center/qipai.png',effect:[]},
                     {key: '4-2-13',label: 'websocket',path: '/mcenter/websocket',icon: '../../../static/dream/center/qipai.png',effect:[]},
-                ]}
+                ]},
+                {key: '5',label: '拓展知识',path: '',icon: '../../../static/dream/center/tuiguang.png',effect:[
+                    {key:'5-2-1',label: '知识1',path: '/mcenter/research',icon: '../../../static/dream/center/daili.png',effect:[]},
+                ]},
             ],
         }
     },
