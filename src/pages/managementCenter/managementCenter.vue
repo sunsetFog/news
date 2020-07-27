@@ -82,8 +82,10 @@ export default{
                     {key:'1-2-2',label: '标签',path: '/mcenter/tags',icon: '../../../static/dream/center/gonggao.png',effect:[]},
                 ]},
                 {key: '2',label: 'javaScript',path: '',icon: '../../../static/dream/center/caiwu.png',effect:[
-                    {key:'2-2-1',label: '数据类型',path: '/mcenter/data_type',icon: '../../../static/dream/center/wanjia.png',effect:[]},
-                    {key:'2-2-2',label: '处理数据',path: '/mcenter/processing',icon: '../../../static/dream/center/wanjia.png',effect:[]},
+                    {key:'2-2-1',label: '必学1',path: '/mcenter/learn1',icon: '../../../static/dream/center/wanjia.png',effect:[]},
+                    {key:'2-2-2',label: '必学2',path: '/mcenter/learn2',icon: '../../../static/dream/center/wanjia.png',effect:[]},
+                    {key:'2-2-3',label: '处理数据',path: '/mcenter/processing',icon: '../../../static/dream/center/wanjia.png',effect:[]},
+                    {key:'2-2-4',label: '小练习',path: '/mcenter/practice',icon: '../../../static/dream/center/wanjia.png',effect:[]},
                 ]},
                 {key: '3',label: 'vue知识点',path: '',icon: '../../../static/dream/center/pai.png',effect:[
                     {key:'3-2-1',label: 'v-标签',path: '/mcenter/v_tag',icon: '../../../static/dream/center/qipai.png',effect:[]},

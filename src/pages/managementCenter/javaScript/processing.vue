@@ -13,7 +13,7 @@ export default {
         }
     },
     mounted(){
-        this.demo7();
+        this.demo5();
     },
     methods: {
         demo1(){
@@ -137,9 +137,13 @@ export default {
             //    /[A-Z]/   匹配26个大写字母
 
             //    正则表达式.test(字符);      如果有返回true,否则返回false
+            //    字符串.replace(正则表达式,'');  参数2:替换的字符串
 
 			var str = "0";
-			console.log('test',reg2.test(str));//true
+            console.log('test',reg2.test(str));//true
+
+            let name = " xiao ming ";
+            console.log('去除所有空格',name.replace(/\s*/g,''));
         },
         demo6(){
             //Math对象: 数学任务      Math.方法名(运算值)
@@ -209,9 +213,6 @@ export default {
 
             console.log("距离2050年元旦还有："+days+"天"+hours+"时"+minutes+"分"+seconds+"秒");
             // setInterval(this.demo7,1000);//倒计时
-        },
-        demo8(){
-            
         }
     }
 }

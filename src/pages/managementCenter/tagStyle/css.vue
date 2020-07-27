@@ -20,6 +20,11 @@
                 行内式(行间式)：标签行内style="";
 			    内部式(内联式)：在head内部使用<style></style>;
 			    外部式(外链式)：使用<link rel="stylesheet" type="text/css" href="">
+            5.浏览器私有属性
+            -moz  指firefox
+            -ms  指IE
+            -webkit  指chrome、safari
+            -o  指Opera
         
         -->
     </section>

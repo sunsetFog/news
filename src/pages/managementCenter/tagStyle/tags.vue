@@ -45,6 +45,7 @@
 
         <hr><!-- 8.表单form -->
         <form>
+			<label>昵称:</label>
             <input type="button" name="button" id="" value="提交" />
         </form>
 

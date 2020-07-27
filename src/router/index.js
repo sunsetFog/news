@@ -35,8 +35,10 @@ export default new Router({
             { path: 'css', name: 'css', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/tagStyle/css.vue'], resolve) },
             { path: 'tags', name: 'tags', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/tagStyle/tags.vue'], resolve) },
 
-            { path: 'data_type', name: 'data_type', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/javaScript/dataType.vue'], resolve) },
+            { path: 'learn1', name: 'learn1', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/javaScript/learn1.vue'], resolve) },
+            { path: 'learn2', name: 'learn2', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/javaScript/learn2.vue'], resolve) },
             { path: 'processing', name: 'processing', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/javaScript/processing.vue'], resolve) },
+            { path: 'practice', name: 'practice', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/javaScript/practice.vue'], resolve) },
 
             { path: 'v_tag', name: 'v_tag', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/knowledge/v_tag.vue'], resolve) },
             { path: 'modifier', name: 'modifier', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/knowledge/modifier.vue'], resolve) },
