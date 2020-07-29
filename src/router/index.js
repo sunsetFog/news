@@ -37,6 +37,7 @@ export default new Router({
 
             { path: 'learn1', name: 'learn1', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/javaScript/learn1.vue'], resolve) },
             { path: 'learn2', name: 'learn2', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/javaScript/learn2.vue'], resolve) },
+            { path: 'learn3', name: 'learn3', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/javaScript/learn3.vue'], resolve) },
             { path: 'processing', name: 'processing', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/javaScript/processing.vue'], resolve) },
             { path: 'practice', name: 'practice', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/javaScript/practice.vue'], resolve) },
 
