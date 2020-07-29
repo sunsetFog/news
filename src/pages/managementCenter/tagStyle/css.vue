@@ -115,6 +115,17 @@ export default {
         // cursor: pointer;//鼠标小手
         // text-shadow: 5px 5px 10px aqua;	//文本阴影   右、下、模糊度、颜色
 
+        // zoom: 100%;  等于100%是原图、大于100%是放大、小于100%是缩小
+        // background: radial-gradient(circle, red,blue);//径向渐变  circle:使默认的椭圆形变为圆形(可以不写)
+        // background: linear-gradient(to top, red,blue 10%,green 10%);//线性渐变  默认从上往下依次渐变  to top/right/left:从--往--依次渐变  指定的百分比后开始出现当前颜色
+
+        // @media only screen and (min-width: 300px) {// 媒体查询
+        //     //样式
+		// }
+        // @media only screen and (max-width: 700px){
+        //     //样式
+		// }
+
         // transition: 1s;//过渡周期
         // transform-origin: -10px 0px;//起点  默认以中心为圆点
         // animation: eason 0.3s linear infinite;//infinite无限循环 linear匀速

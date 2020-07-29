@@ -13,10 +13,28 @@ export default {
         }
     },
     mounted(){
-        this.demo5();
+        this.demo2(8,9);
     },
     methods: {
         demo1(){
+            // 讲解JSON文档     key必须是字符串
+            // JSON:是一种服务器与客户端进行数据交互的格式
+            // JSON的数据结构：{键(key):值(value)}   在数组中下标就是key
+            // Json的常见类型：对象、数组、对象数组嵌套、字符串Json
+            var jsonObj = {
+					"name":"Jhon",
+					"age":18
+                }
+            var jsonArr = [
+					{"name":"Deo","age":18},
+					{"name":"Jhon","age":20}
+				]
+            var jsonStr = '{"name": "Jhon","age":18}';//字符串Json   后台有时给这种，注意打印看清类型
+            console.log('字符串解析为json对象',JSON.parse(jsonStr));// 或者 key是字符串,就转换
+            console.log('将json对象转为json字符串',JSON.stringify(jsonObj));
+            console.log('字符串解析为json对象',eval('('+jsonStr+')'));//不推荐，存在安全隐患
+        },
+        demo2(){
             //数组概念：用来存储一系列数据的集合,下标从0开始，下标最大值为length-1
             // 定义数组   一维数组
             var arr1 = new Array(5);//构造方法
@@ -25,8 +43,14 @@ export default {
             console.log('数组的长度',arr3.length);
             // 二维数组
             var arr4 = [[1,2,3,4],[5,6,7,8],[9,10,11,12]];
+
+            // arguments   调用this.demo2(8,9);   记得调用带参数，方法内不写参数
+            console.log('arguments',arguments,Array.isArray(arguments));//arguments不是数组,是函数里的内置对象,方法里没有写参数却传入了参数,用arguments可以取
+            console.log('arguments特性',arguments[0],arguments.length);//可以用下标，可以用长度，也能for循环，但不能用数组中的常用方法，比如push()...
+            var args = Array.prototype.slice.call(arguments);
+            console.log('把arguments转换成真正的数组',args);
         },
-        demo2(){
+        demo3(){
             // 数组中的常用方法
             // 1  数组.join("")      将数组中的值拼接为字符串显示,括号中填写拼接内容
             // 2  数组.pop()       删除并返回数组的最后一个元素
@@ -54,9 +78,11 @@ export default {
             })
             console.log('数组排序',arr);
         },
-        demo3(){
+        demo4(){
             // 对象概念：一个对象可包含多个属性
-            // 定义对象
+            // 访问Json数据：obj.key或者obj["key"]
+            // 删除对象中的某个属性: delete obj["key"];
+            // 定义对象      
             var person = {
 				    name : "娜娜",
 					age : 18,
@@ -70,14 +96,14 @@ export default {
             person.drink();//调用对象方法
             person['character'] = "温柔贤淑";//添加新属性
             console.log('添加新属性',person);
-            //遍历对象
+            //枚举法:遍历对象      注意：枚举法中，只能使用obj["key"]的形式
             for(let key in person){
                 if(key=="age"){
                     console.log('遍历对象',person[key]);
                 }
             }
         },
-        demo4(){
+        demo5(){
             // 字符串常见方法：
 			// 1  字符串.charAt(下标)    获取字符串中指定下标的字符
 			// 2  字符串.charCodeAt(下标)    获取字符串中指定下标的字符编码
@@ -85,11 +111,14 @@ export default {
 			// 4  字符串.search("字符")    用来检索字符串中指定的字符串，返回该子串第一次出现的下标，如果未找到，返回-1
 			// 5  字符串.replace(字符串,字符串)    用新的子串替换指定的旧子串
 			// 6  字符串.indexOf("字符")    返回该子串第一次出现的下标，如果找不到，返回-1
-			// 7  字符串.lastIndexOf("字符")     返回指定子串最后一次出现的下标，找不到返回-1
+            // 7  字符串.lastIndexOf("字符")     返回指定子串最后一次出现的下标，找不到返回-1
+            
+            // 区分这三个
 			// 8  字符串.slice(开始下标,结束下标)     返回开始下标和结束下标间的字符,留头不留尾   如果只有一个参数，默认取到最后
 			// 9  字符串.substring(开始下标,结束下标)     返回开始下标和结束下标之间的字符，同样留头不留尾
-			//   substring()和slice()的区别：substring会将两个参数按照小的在前，大的再后排列
-			// 10  字符串.substr(开始下标,获取个数)      参数1:获取子串的开始下标，参数2:获取的个数，如果参数2是0,或者负数，获取的为空
+			//   substring()和slice()的区别：substring会将两个参数按照小在前，大在后排列,而slice()不会大小排列
+            // 10  字符串.substr(开始下标,获取个数)      参数1:获取子串的开始下标，参数2:获取的个数，这就是以上两个的不同
+            
 			// 11  字符串.toLowerCase()    将大写转小写
 			// 12  字符串.toUpperCase()    将小写转大写
 			// 13  字符串.split("字符")      将字符串分割为数组，参数个数为1个或者2个    参数2:获取个数
@@ -123,7 +152,7 @@ export default {
 			console.log('split',str.split("好"));//["今天", "是", "个", "日子"]
 			console.log('split',str.split("好",2));//["今天", "是"]
         },
-        demo5(){
+        demo6(){
             //正则表达式: 验证指定字符串合法与否
             // 定义正则表达变量
             var reg1 = new RegExp("a");
@@ -145,7 +174,7 @@ export default {
             let name = " xiao ming ";
             console.log('去除所有空格',name.replace(/\s*/g,''));
         },
-        demo6(){
+        demo7(){
             //Math对象: 数学任务      Math.方法名(运算值)
 			var a=-4.5;
 			console.log('绝对值',Math.abs(a));//
@@ -171,7 +200,7 @@ export default {
             console.log('余弦',Math.cos(deg60));
             console.log('正切',Math.tan(deg60));
         },
-        demo7(){
+        demo8(){
             //Dtae对象
             var nowTime = new Date();//Date构造函数
             console.log('当前时间',nowTime);

@@ -17,7 +17,7 @@ export default {
         }
     },
     mounted(){//可以dom操作
-        this.demo8();
+        this.demo5();
     },
     methods: {
         demo1(){
@@ -43,7 +43,13 @@ export default {
 			// 7.onmousedown：鼠标按下时触发该事件
 			// 8.onmouseup：鼠标抬起事件
 			// 9.onclick：鼠标点击完毕事件
-			// 10.ondblclick：双击事件
+            // 10.ondblclick：双击事件
+            // 移动端事件
+            // ontouchstart
+            // ontouchmove
+            // ontouchend
+
+            // 在某情况会去掉on，或用@代替on
 
             // html中的节点类型：
 			// 1.元素节点：html、div、p、span等这些元素
@@ -117,6 +123,10 @@ export default {
             // console.log('获取最后一个子节点(不包空格)',yuansu.lastElementChild);//父元素名.lastElementChild
 
             // console.log('获取第一个定位的元素(就近原则)',bread.offsetparent);//子元素名.offsetparent
+            console.log('获取元素的宽度(width+border+padding)',yuansu.offsetWidth);//元素.offsetWidth
+            console.log('获取元素的高度(height+border+padding)',yuansu.offsetHeight);//元素.offsetHeight
+            console.log('获取定位元素到父元素左边距离(left+marginLeft)',yuansu.offsetLeft);//元素.offsetLeft
+            console.log('获取定位元素到父元素上边距离(top+marginTop)',yuansu.offsetTop);//元素.offsetTop
         },
         demo3(){
             //BOM    浏览器对象模型
@@ -185,8 +195,7 @@ export default {
             //js的常量:值在程序执行过程中不会改变
 		    var PI = 3.1415926;//值不变
             //js中的变量：用来储存数据的容器，值可以改变
-        },
-        demo5(){
+            
             //变量或者常量的命名规范:
             // 1.不能取关键字，var,function,ducument,alert....
             // var function = 32;//报错
@@ -194,10 +203,20 @@ export default {
             var _age = ""//对
             // 3.遵循驼峰式命名
             var studentName;
+
+            // 变量:用来储存数据的容器，当声明一个变量时
+            // 变量的作用域:
+            // 1.全局变量:一般是在函数外部定义，作用于整个函数
+            // 2.局部变量：定义在函数内部，只能被该函数
+            // 生命周期:
+            // 1.全局变量：从变量被定义直到程序被关闭而终止
+            // 2.局部变量：从变量被定义直到函数被关闭而终止
+            var i = "yi";//局部变量
         },
-        demo6(){
+        demo5(){
             // 五种基本数据类型，数字（number),字符串（string)，布尔(boolean）,空（null），未定义（undefined）
             // 检测数据类型用：typeof 变量   不同写法   typeof(变量)
+            // NaN不是一个数字，typeof(NaN)结果为number
             var age = 18;//number
             var name = "张";//字符串
             // 布尔Boolean:true/false用来做判断条件
@@ -207,9 +226,25 @@ export default {
                 sex = "男";//赋值
             var age = 32;//声明同时直接赋值
             console.log('1typeof',typeof age,typeof(age));
-            console.log('2typeof',typeof null,typeof []);//都是object
+            console.log('2typeof',typeof null,typeof [],typeof {});//都是object   因此需要用到instanceof来检测某个对象是不是另一个对象的实例，返回true或false
+            let arr = [];
+            let obj = {};
+            console.log('方法1-判断是数组还是对象',obj instanceof Array);//false 判断obj不是数组
+            console.log('方法1-判断是数组还是对象',arr instanceof Array);//true,判断arr是数组
+
+            console.log('但是-instanceof',arr instanceof Object);//也会返回 true;这是因为 Array 是 object 的子类。
+
+            console.log('方法2-判断是数组还是对象',Array.isArray(arr));// true      Array.isArray(参数) 用于判断值是否为数组   是返回true,否返回false
+            console.log('方法2-判断是数组还是对象',Array.isArray(obj));// false
+
+            console.log('方法3-判断是数组还是对象',arr.constructor === Array); //true
+            console.log('方法4-判断是数组还是对象',arr.constructor === Object); //false
+
+            // Object.prototype.toString.call(参数)方法可以精准判断变量类型
+            // console.log('精准判断变量类型',Object.prototype.toString.call(arr));//[object Array]    需要截取第二个值
+            console.log('精准判断变量类型',Object.prototype.toString.call(arr).slice(8,-1));
         },
-        demo7(){
+        demo6(){
             //数据类型转换
             // 1.隐式转换(弱类型转换)
             // 使用+，-，*，/运算符来转换
@@ -253,18 +288,7 @@ export default {
             console.log('2函数转换parseFloat',parseFloat("6.6.6"));//结果6.6，只能解析第一个小数点
             console.log('3函数转换parseFloat',parseFloat("0x10101",2));//结果0，只能解释十进制的形式
         },
-        demo8(){
-            // 变量:用来储存数据的容器，当声明一个变量时
-            // 变量的作用域:
-            // 1.全局变量:一般是在函数外部定义，作用于整个函数
-            // 2.局部变量：定义在函数内部，只能被该函数
-            // 生命周期:
-            // 1.全局变量：从变量被定义直到程序被关闭而终止
-            // 2.局部变量：从变量被定义直到函数被关闭而终止
-
-            var i = "yi";//局部变量
-        },
-        demo9(){
+        demo7(){
             // 运算符:
             // 1.算术运算符:+,-,*,/,++,--,%(余数)
             // +,-,*,/,%类似数学运算
@@ -326,7 +350,7 @@ export default {
             var m = 5-++u;
             console.log('++u',u,m);//u为10，m为-5   这里先算u=u+1，再算m=5-10
         },
-        demo10(){
+        demo8(){
             //流程控制
             var i = 6;
             if(i==5){//不管成立与否，都会往下执行，除非用return
@@ -377,7 +401,7 @@ export default {
 				p++;
 			}while(p<2);//先执行do中的语句，再去判断while的条件,不管while中的条件是否成立，do都要执行一次
         },
-        demo11(){
+        demo9(){
             //这里测试this无效，要在html文档测试,一看就明白
             //this：指针，虚拟的替代品，谁调用，this就指向谁
 

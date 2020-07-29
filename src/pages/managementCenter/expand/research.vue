@@ -5,7 +5,6 @@
 </template>
 
 <script>
-//Array.isArray(参数) 用于判断值是否为数组   是返回true,否返回false
 export default {
     name: 'research',
     data(){
