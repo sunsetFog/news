@@ -49,6 +49,13 @@ export default {
             console.log('arguments特性',arguments[0],arguments.length);//可以用下标，可以用长度，也能for循环，但不能用数组中的常用方法，比如push()...
             var args = Array.prototype.slice.call(arguments);
             console.log('把arguments转换成真正的数组',args);
+            //遍历数组
+            for(let i=0;i<arr3.length;i++){
+
+            }
+            arr3.forEach(function(item,index,array){//参数1:数组项、参数2:数组索引(数组下标)、参数3:数组本身
+
+            })
         },
         demo3(){
             // 数组中的常用方法

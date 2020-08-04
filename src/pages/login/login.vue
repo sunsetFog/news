@@ -9,6 +9,7 @@
                         <span @click="customerService()"></span>
                     </div>
                     <div class="form_information">
+                        <form>
                         <div class="account">
                             <span>账号:</span>
                             <input v-model.trim="account_number" maxlength="20" placeholder="请输入账号"></input>
@@ -24,6 +25,7 @@
                                 <img v-else class="biyan" src="../../../static/dream/login/biyan.png"/>
                             </div>
                         </div>
+                        </form>
                         <div class="remember_and_forget">
                             <div class="rectangle" @click="rememberMeans()"><img v-show="remember_checked" src="../../../static/dream/login/jizhu.png"/></div>
                             <span>记住密码</span>

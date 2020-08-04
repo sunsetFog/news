@@ -87,6 +87,7 @@ export default{
                     {key:'2-2-3',label: '必学3',path: '/mcenter/learn3',icon: '../../../static/dream/center/wanjia.png',effect:[]},
                     {key:'2-2-4',label: '处理数据',path: '/mcenter/processing',icon: '../../../static/dream/center/wanjia.png',effect:[]},
                     {key:'2-2-5',label: '小练习',path: '/mcenter/practice',icon: '../../../static/dream/center/wanjia.png',effect:[]},
+                    {key:'2-2-6',label: 'es6',path: '/mcenter/es6',icon: '../../../static/dream/center/wanjia.png',effect:[]},
                 ]},
                 {key: '3',label: 'vue知识点',path: '',icon: '../../../static/dream/center/pai.png',effect:[
                     {key:'3-2-1',label: 'v-标签',path: '/mcenter/v_tag',icon: '../../../static/dream/center/qipai.png',effect:[]},
@@ -101,16 +102,15 @@ export default{
                     {key:'3-2-10',label: '全局方法',path: '/mcenter/public',icon: '../../../static/dream/center/gonggao.png',effect:[]},
                     {key:'3-2-11',label: 'watch监听',path: '/mcenter/watch',icon: '../../../static/dream/center/caiwu.png',effect:[]},
                     {key:'3-2-12',label: 'computed',path: '/mcenter/computed',icon: '../../../static/dream/center/caiwu.png',effect:[]},
-                    {key:'3-2-13',label: 'es6',path: '/mcenter/es6',icon: '../../../static/dream/center/caiwu.png',effect:[]},
-                    {key:'3-2-14',label: 'filters',path: '/mcenter/filters',icon: '../../../static/dream/center/caiwu.png',effect:[]},
-                    {key:'3-2-15',label: 'transition',path: '/mcenter/transition',icon: '../../../static/dream/center/caiwu.png',effect:[]},
-                    {key:'3-2-16',label: 'refs',path: '/mcenter/refs',icon: '../../../static/dream/center/caiwu.png',effect:[]},
-                    {key:'3-2-17',label: 'canvas',path: '/mcenter/canvas',icon: '../../../static/dream/center/caiwu.png',effect:[]},
-                    {key:'3-2-18',label: 'echarts图表',path: '/mcenter/echarts',icon: '../../../static/dream/center/caiwu.png',effect:[]},
-                    {key:'3-2-19',label: 'base64解密',path: '/mcenter/base64',icon: '../../../static/dream/center/caiwu.png',effect:[]},
-                    {key:'3-2-20',label: 'mock模拟接口',path: '/mcenter/mock',icon: '../../../static/dream/center/caiwu.png',effect:[]},
-                    {key:'3-2-21',label: '缓存',path: '/mcenter/cache',icon: '../../../static/dream/center/caiwu.png',effect:[]},
-                    {key:'3-2-22',label: 'axios配置',path: '/mcenter/axios',icon: '../../../static/dream/center/caiwu.png',effect:[]}
+                    {key:'3-2-13',label: 'filters',path: '/mcenter/filters',icon: '../../../static/dream/center/caiwu.png',effect:[]},
+                    {key:'3-2-14',label: 'transition',path: '/mcenter/transition',icon: '../../../static/dream/center/caiwu.png',effect:[]},
+                    {key:'3-2-15',label: 'refs',path: '/mcenter/refs',icon: '../../../static/dream/center/caiwu.png',effect:[]},
+                    {key:'3-2-16',label: 'canvas',path: '/mcenter/canvas',icon: '../../../static/dream/center/caiwu.png',effect:[]},
+                    {key:'3-2-17',label: 'echarts图表',path: '/mcenter/echarts',icon: '../../../static/dream/center/caiwu.png',effect:[]},
+                    {key:'3-2-18',label: 'base64解密',path: '/mcenter/base64',icon: '../../../static/dream/center/caiwu.png',effect:[]},
+                    {key:'3-2-19',label: 'mock模拟接口',path: '/mcenter/mock',icon: '../../../static/dream/center/caiwu.png',effect:[]},
+                    {key:'3-2-20',label: '缓存',path: '/mcenter/cache',icon: '../../../static/dream/center/caiwu.png',effect:[]},
+                    {key:'3-2-21',label: 'axios配置',path: '/mcenter/axios',icon: '../../../static/dream/center/caiwu.png',effect:[]}
                 ]},
                 {key: '4',label: 'vue功能集',path: '',icon: '../../../static/dream/center/qipai.png',effect: [
                     {key: '4-2-1',label: '下载',path: '/mcenter/download_ex',icon: '../../../static/dream/center/qipai.png',effect:[]},

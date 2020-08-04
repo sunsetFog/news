@@ -6,6 +6,18 @@ const path = require('path')
 
 module.exports = {
   dev: {
+    // 跨域由同源策略判断: 协议（http或https）、端口、域名，三条件一致才不会跨域
+    // npm install http-proxy-middleware --save 使用代理解决跨域
+    // 这方法还要配置生产环境域名，请看main.js的Vue.prototype.$domain = domain;配置全局变量，用在请求接口的url: this.$domain + '后台给的访问url'
+    proxyTable: {
+      '/': {
+          target: 'http://10.1.5.11:8080/', // 开发环境访问的域名(后台给)
+          changeOrigin: true, // 允许跨域(创建本地虚拟服务端，接受了域名，就请求后端服务器)
+          pathRewrite: {// 路径重写
+          '^/': '' // 意思: 开发环境访问的域名 + '这个的名'
+          }
+      }
+    },
 
     // Paths
     assetsSubDirectory: 'static',

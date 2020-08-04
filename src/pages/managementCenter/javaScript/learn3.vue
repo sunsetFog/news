@@ -42,7 +42,7 @@ export default {
             // 简单理解: 先同步，再异步(先微任务，再宏任务)     请记能异步的js
         },
         demo2(){
-            // 异步解决方案: 是的顺序步骤执行
+            // 异步编程: 是的顺序步骤执行（promise和async属于es6）
             // Promise多用于在方法return new Promise.....然后调用该方法时，方法名(传参).then回调函数
             function is_promise(value) {
                 return new Promise(resolve => {
