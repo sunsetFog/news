@@ -86,7 +86,7 @@ export default {
             console.log('数组排序',arr);
         },
         demo4(){
-            // 对象概念：一个对象可包含多个属性
+            // 对象概念：一个对象可包含多个属性    {key(键): 'value值'}
             // 访问Json数据：obj.key或者obj["key"]
             // 删除对象中的某个属性: delete obj["key"];
             // 定义对象      

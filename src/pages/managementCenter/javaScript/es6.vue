@@ -13,7 +13,7 @@ export default {
         }
     },
     mounted(){
-        this.demo6();
+        this.demo9();
     },
     methods: {
         demo1(){
@@ -125,6 +125,138 @@ export default {
             console.log('fill填充',arr.fill('填充的值',1,3));//[1, "填充的值", "填充的值", 4]
             console.log('1.数组是否包含指定值',arr.includes(1));// true
             console.log('2.数组是否包含指定值',arr.includes(1,2));// false
+        },
+        demo7(){
+            // map对象: Map 的键可以是任意值,Object 的键只能是字符串或者 Symbols
+            var myMap = new Map();
+
+            var keyString = "a string"; 
+            myMap.set(keyString, "1");
+            console.log('key是字符串',myMap.get(keyString));// 1
+            console.log('key是字符串',myMap.get("a string"));// 1    因为 keyString === 'a string'
+                
+            var keyObj = {};
+            myMap.set(keyObj, "2");
+            console.log('key是对象',myMap.get(keyObj));// 2
+            console.log('key是对象',myMap.get({}));// undefined, 因为 keyObj !== {}
+
+            var keyFunc = function () {}; // 函数
+            myMap.set(keyFunc, "3");
+            console.log('key是函数',myMap.get(keyFunc));// 3
+            console.log('key是函数',myMap.get(function() {}));// undefined, 因为 keyFunc !== function () {}
+
+            myMap.set(NaN, "not a number");
+            console.log('key是NaN',myMap.get(NaN));// "not a number"
+            var otherNaN = Number("foo");
+            console.log('key是NaN',myMap.get(otherNaN));// "not a number"
+
+            //map遍历
+            var list = new Map();
+            list.set(0, "zero");
+            list.set(1, "one");
+            for (let [key, value] of list) {
+                console.log(key + " = " + value);
+            }
+            list.forEach(function(value, key) {
+                console.log(key + " = " + value);
+            });
+
+            var kvArray = [["key1", "value1"], ["key2", "value2"]];
+            var myMap = new Map(kvArray);
+            console.log('array转map',myMap);// 数组得规定以上写法
+            var outArray = Array.from(myMap);
+            console.log('map转array',outArray);
+
+            var first = new Map([[1, 'one'], [2, 'two'], [3, 'three'],]);
+            var second = new Map([[1, '111'], [2, '222']]);
+            // 合并两个 Map 对象时，如果有重复的键值，则后面的会覆盖前面的
+            var merged = new Map([...first, ...second]);
+            console.log('map合并',merged);// {1: '111',2: '222',3: 'three'}
+        },
+        demo8(){
+            // set对象: 用来存储任何类型的唯一值
+            // +0 与 -0恒等不重复、undefined 与 undefined恒等不重复、NaN 与 NaN不恒等不重复
+            let mySet = new Set();
+            mySet.add(5);
+            mySet.add(5); // 值的唯一性
+            mySet.add("some text"); // 类型的多样性
+            var o = {a: 1, b: 2};
+            mySet.add(o);
+            mySet.add({a: 1, b: 2}); // 引用对象不同不恒等，即使值相同，Set 也能存储
+            console.log('set',mySet);// {5, "some text", {…}, {…}}
+
+            var setList = new Set(["value1", "value2", "value3","value2"]);
+            console.log('array转set',setList);
+            console.log('set转array',[...setList]);// 有数组去重效果
+
+            var a = new Set([1, 2, 3]);
+            var b = new Set([4, 3, 2]);
+            var union = new Set([...a, ...b]);
+            console.log('合并set',union);// {1, 2, 3, 4}
+            var intersect = new Set([...a].filter(x => b.has(x)));// Set.has(x) 判断set 是否含有 x，有返回 true，没有返回 false
+            console.log('交集',intersect);// {2,3}
+        },
+        demo9(){
+            // class 的本质是 function
+            // 匿名类
+            let Example = class {
+                constructor(a) {
+                    this.a = a;
+                    console.log('99ii')
+                }
+            }
+            console.log('匿名类',Example);
+            // 命名类
+            class means{
+                constructor(money,age) {// constructor 方法是类的默认方法，类的实例化对象时被调用
+                    // super();
+                    this.money = money;
+                    this.age = age;
+                    console.log('调用',this);
+                }
+                get money(){// getter函数随this.a变化而变化
+                    console.log('getter');
+                    return this._money;
+                }
+                set money(value){
+                    console.log('setter');
+                    this._money = value;
+                }
+                sum(){// setter函数
+                    return this.money;
+                }
+                static bloom(){// 静态方法
+                    return 1000;
+                }
+
+            }
+            console.log('默认name属性',means.name);
+            let surprised = new means(12,15);// 类的实例化,先调用setting方法，再调用constructor方法     surprised.__proto__ === means.prototype并且means.prototype.constructor === surprised.constructor === means
+            console.log('类的实例化',surprised);// 返回this对象
+            console.log('调用隐式原型(__proto__)里的方法',surprised.sum());
+
+            // 类的继承
+            class Father {
+                test(){
+                    return '01111';
+                }
+                static test1(){
+                    return '02222';
+                }
+            }
+            class Child extends Father {
+                constructor(fan) {
+                    super();// 必须有super,且要在this前
+                    this.fan = fan;
+                    console.log('调用父类方法',super.test());
+                    console.log('类的继承',this);
+                }
+                static test3(){
+                    return super.test1();
+                }
+            }
+            console.log('调用静态方法',Child.test3());
+            let intellect = new Child(98);     
         }
     }
 }
