@@ -9,9 +9,12 @@
                         <div style="width: 100%;height: 100%;background: rgba(45,45,45,0);position: absolute;left: 0rem;top:0rem;z-index: 2;" @click.stop="occlusion()" v-if="upNumMax>=3"></div>
 					</div>
 				</el-upload>
-			</div> 
-			<!-- name="upload"，这是后台绑定的字段，必须有 -->
-            <!-- 以上:data="{'attach':'upload'}"是指传值给后台，要遍历必须传，不遍历传也没事       -->
+			</div>
+			<!-- 
+				action 后台请求url 
+				name="upload" 后台绑定的节点，必须有
+				:data="{'attach':'upload'}" 传参给后台，要遍历必须传，不遍历传也没事
+			-->
     </section>
 </template>
 
@@ -19,7 +22,7 @@
 export default {
     data(){
         return{
-			uploadUrl:'',//后台接口url
+			uploadUrl:'',//后台请求url
 			fileList1: [],//获取后台url,格式为[{url:'图片路径'},{url: '图片路径'}]
 			fileList2: [],//仅仅是保存url,传后台用
       		upNumMax: 0//图片数量

@@ -13,7 +13,7 @@ export default {
         }
     },
     mounted(){
-        this.demo1();
+        this.demo2();
     },
     methods: {
         demo1(value){

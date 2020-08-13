@@ -11,9 +11,11 @@
                     <img v-if="imageUrl" :src="imageUrl" class="avatar">
                     <i v-else class="el-icon-plus avatar-uploader-icon"></i>
             </el-upload>
-            <!-- name="upload"，这是后台绑定的字段，必须有 -->
-            <!-- 不需要写请求头，在action里加后台接口url 
-            下载文件也不需要写请求头,只用window.open("api/download?id="+拼接的参数);-->
+            <!-- 
+				action 后台请求url 
+				name="upload" 后台绑定的节点，必须有
+				:data="{'attach':'upload'}" 传参给后台，要遍历必须传，不遍历传也没事
+			-->
 		</div>       
     </section>
 </template>

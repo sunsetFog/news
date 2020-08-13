@@ -130,6 +130,9 @@ export default{
                 {key: '5',label: '拓展知识',path: '',icon: '../../../static/dream/center/tuiguang.png',effect:[
                     {key:'5-2-1',label: '知识1',path: '/mcenter/research',icon: '../../../static/dream/center/daili.png',effect:[]},
                 ]},
+                {key: '6',label: '面试要谈',path: '',icon: '../../../static/dream/center/tuandui.png',effect:[
+                    {key:'6-2-1',label: '要点1',path: '/mcenter/talk1',icon: '../../../static/dream/center/tuiguang.png',effect:[]},
+                ]},
             ],
         }
     },

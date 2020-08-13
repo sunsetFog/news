@@ -79,6 +79,8 @@ export default new Router({
             { path: 'websocket', name: 'websocket', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/effect/websocket.vue'], resolve) },
 
             { path: 'research', name: 'research', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/expand/research.vue'], resolve) },
+
+            { path: 'talk1', name: 'talk1', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/talk/talk1.vue'], resolve) },
             { path: '/', redirect: '/mcenter/crux' }
           ]
         },

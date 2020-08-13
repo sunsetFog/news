@@ -13,7 +13,7 @@ export default {
         }
     },
     mounted(){
-        this.demo1();
+        this.demo4();
     },
     methods: {
         demo1(){
@@ -102,7 +102,35 @@ export default {
             console.log('冒泡排序',arr);
         },
         demo4(){
-
+            // 遍历树(理解不了，死记就行)      js 遍历树的层级关系的实现  https://www.cnblogs.com/xuqp/p/10954849.html
+            const list = [
+                { id: "01", parentId: "0", name: "第一层", children: [] },
+                { id: "01-22", parentId: "01", name: "第二层", children: [] },
+                { id: "03", parentId: "0", name: "第一层", children: [] },
+                { id: "01-22-12", parentId: "01-22", name: "第三层", children: [] }
+            ];
+            let mapList = [];
+            let tree = [];
+            list.forEach(item => {// 下标为id的数组
+                mapList[item.id] = item;
+            });
+            // console.log("88y", mapList);
+            list.forEach(item => {
+                const parentNode = mapList[item.parentId];
+                if (!parentNode) {//是undefined就执行if
+            　　　　if (!item.children) {
+            　　　　　　item.children = []
+            　　　　}
+                    // console.log('yrrrr=',item);
+                    tree.push(item);
+                } else {
+            　　　　　if (!parentNode.children) {
+            　　　　　　　parentNode.children = []
+            　　      }
+                    parentNode.children.push(item);
+                }
+            });
+            console.log("遍历树", tree);
         }
     }
 }
