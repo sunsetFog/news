@@ -11,11 +11,9 @@ const player = {
             //console.log('player_money',state.userInfo.money);
             let money = state.userInfo.money/10000;
             // let money = 88888865999990/10000;
-            if(money.toString().indexOf('.')==-1){
-                money = money.toFixed(2);
-            }else{
-                money = parseInt(money*100)/100;
-            }
+
+            money = Number(money.toFixed(2));
+            // money = parseInt(money*100)/100;
             return money;
         }
     },

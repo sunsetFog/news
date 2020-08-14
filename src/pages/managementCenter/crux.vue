@@ -369,7 +369,7 @@ export default{
                         float: right;
                         font-size: @font_size12;
                         border: 1px solid @color_blueviolet;
-                        padding: 0px 8px 0px 8px;
+                        padding: 0px 5px 0px 5px;
                         box-sizing: border-box;
                     }
                     button:hover{
@@ -392,7 +392,7 @@ export default{
                     .nickname_select{
                         .mixin_float(80%,30px,right);
                         input{
-                            .mixin_input(160px,28px);
+                            .mixin_input(100px,28px);
                             border: 1px solid @color_blueviolet;
                             background: @color_indigo;
                             color: @color_blueviolet;
@@ -409,8 +409,8 @@ export default{
                             border: 1px solid @color_blueviolet;
                             font-size: 12px;
                             float: right;
-                            margin-left: 10px;
-                            padding: 0px 8px 0px 8px;
+                            margin-left: 5px;
+                            padding: 0px 5px 0px 5px;
                             box-sizing: border-box;
                         }
                         button:nth-of-type(1):hover{
@@ -421,7 +421,7 @@ export default{
                             border: 1px solid @color_blueviolet;
                             font-size: 12px;
                             float: right;
-                            padding: 0px 8px 0px 8px;
+                            padding: 0px 5px 0px 5px;
                             box-sizing: border-box;
                         }
                         button:nth-of-type(2):hover{

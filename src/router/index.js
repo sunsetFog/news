@@ -77,6 +77,7 @@ export default new Router({
             { path: 'vueqr', name: 'vueqr', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/effect/vueqr.vue'], resolve) },
             { path: 'listener', name: 'listener', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/effect/listener.vue'], resolve) },
             { path: 'websocket', name: 'websocket', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/effect/websocket.vue'], resolve) },
+            { path: 'adaption', name: 'adaption', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/effect/adaption.vue'], resolve) },
 
             { path: 'research', name: 'research', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/expand/research.vue'], resolve) },
 
