@@ -27,10 +27,16 @@
             -o  指Opera
         
         -->
+        样式命名规范:
+        <br>
+        1.用-：class="list-cell"
+        <br>
+        2.一个页面用一个id类，尽量有class类
     </section>
 </template>
 
 <script>
+// CSS 选择器：https://www.runoob.com/cssref/css-selectors.html
 export default {
     name: 'css'
 }
@@ -38,6 +44,7 @@ export default {
 
 <style lang="less" scoped>
     #css{
+        color: #fff;
 		// width: 800px;//宽
         // height: 200px;//高
 
@@ -81,6 +88,7 @@ export default {
 		// text-align: center;//文本水平居中
         // text-align: left;//文本靠左居中
         // text-align: right;//
+        // vertical-align: middle;// 垂直对齐（图片与文字对齐）.fu-img * {vertical-align: middle;}
 
         // position: static;//静态定位  等价于不定位
         // position: relative;//相对定位  以自身为参考，不脱脱离文档

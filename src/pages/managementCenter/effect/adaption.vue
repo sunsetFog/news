@@ -40,7 +40,7 @@ export default {
             width: 100%;
             height: 100%;
             background: blueviolet;
-            float: left;// 中盒子不用定位，用浮动也行
+            float: left;// 宽100%的盒子不要用定位，用浮动
             // position: absolute;
             // top: 0px;
             // left: 120px;

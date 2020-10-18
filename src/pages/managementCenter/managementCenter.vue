@@ -80,6 +80,7 @@ export default{
                 {key: '1',label: '标签样式',path: '',icon: '../../../static/dream/center/shouyi.png',effect:[
                     {key:'1-2-1',label: '样式',path: '/mcenter/css',icon: '../../../static/dream/center/gonggao.png',effect:[]},
                     {key:'1-2-2',label: '标签',path: '/mcenter/tags',icon: '../../../static/dream/center/gonggao.png',effect:[]},
+                    {key:'1-2-3',label: 'flex弹性布局',path: '/mcenter/flex',icon: '../../../static/dream/center/gonggao.png',effect:[]},
                 ]},
                 {key: '2',label: 'javaScript',path: '',icon: '../../../static/dream/center/caiwu.png',effect:[
                     {key:'2-2-1',label: '必学1',path: '/mcenter/learn1',icon: '../../../static/dream/center/wanjia.png',effect:[]},

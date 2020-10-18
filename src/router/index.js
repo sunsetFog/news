@@ -9,7 +9,8 @@ Vue.use(Router)
 //重复点菜单，路由重复跳转报错问题
 const originalPush = Router.prototype.push
 Router.prototype.push = function push(location) {
-  return originalPush.call(this, location).catch(err => err)
+  // return originalPush.call(this, location).catch(err => err)
+  return originalPush.call(this, location)
 }
 
 
@@ -34,6 +35,7 @@ export default new Router({
 
             { path: 'css', name: 'css', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/tagStyle/css.vue'], resolve) },
             { path: 'tags', name: 'tags', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/tagStyle/tags.vue'], resolve) },
+            { path: 'flex', name: 'flex', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/tagStyle/flex.vue'], resolve) },
 
             { path: 'learn1', name: 'learn1', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/javaScript/learn1.vue'], resolve) },
             { path: 'learn2', name: 'learn2', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/javaScript/learn2.vue'], resolve) },
