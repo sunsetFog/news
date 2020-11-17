@@ -2,10 +2,10 @@
 <template>
   <section id="register">
       <div class="entertainment">
-          <img class="register_logo" src="../../../static/dream/register/logo.png"/>
+          <img class="register-logo" src="../../../static/dream/register/logo.png"/>
           <div class="containter">
-              <div class="heart_content">
-                    <div class="back_login">
+              <div class="heart-content">
+                    <div class="back-login">
                         <div @click="toBack()" @mouseover="fixedOver()" @mouseout="fixedOut()">
                             <img :src="to_back.point"/>
                             <span :style="{color: to_back.color}">返回登陆界面</span>
@@ -232,7 +232,7 @@ export default{
         width: 100%;
         height: 100%;
         position: relative;
-        .register_logo{
+        .register-logo{
             .mixin_img(474px;410px);
             position: absolute;
             left: 0px;
@@ -243,9 +243,9 @@ export default{
             .mixin_image(url('../../../static/dream/register/frame01.png'));
             padding: 90px 140px 70px 140px;
             box-sizing: border-box;
-            .heart_content{
+            .heart-content{
                 .mixin_float(100%,100%,left);
-                .back_login{
+                .back-login{
                     width: 100%;
                     height: 30px;
                     position: relative;

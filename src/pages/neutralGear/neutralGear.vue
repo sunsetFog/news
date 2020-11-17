@@ -1,7 +1,7 @@
 <template>
     <section id="neutralGear">
         <img src="../../../static/dream/portrait/logo2.png"/>
-        <div class="progress_example">
+        <div class="progress-example">
             <span :style="{width: percentage+'%',borderTopRightRadius: radius.top_right,borderBottomRightRadius: radius.bottom_right}"></span>
             <!-- <el-progress :percentage="percentage" :color="customColor" :show-text="false" :width="155" :stroke-width="20"></el-progress> -->
         </div>
@@ -73,7 +73,7 @@ export default {
         top: 150px;
         margin-left: -275px;
     }
-    .progress_example{
+    .progress-example{
         width: 860px;
         height: 46px;
         .mixin_image(url('../../../static/dream/portrait/kuang.png'));

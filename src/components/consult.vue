@@ -6,13 +6,13 @@
         top="0.99rem"
         center>
         <div slot="title">{{consult_data.title}}</div>
-        <div class="varieties_content">
-            <div class="look_content" v-html="consult_data.content"></div>
-            <div class="delete_info">
+        <div class="varieties-content">
+            <div class="look-content" v-html="consult_data.content"></div>
+            <div class="delete-info">
                 <button @click="deleteMeans">删除</button>
             </div>
         </div>
-        <div slot="footer" class="example_footer">
+        <div slot="footer" class="example-footer">
 
         </div>
         </el-dialog>
@@ -79,19 +79,19 @@ export default {
 
 <style lang="less" scoped>
 #consult{
-    .varieties_content{
+    .varieties-content{
         width: 100%;
         height: 470px;
         padding: 50px;
         box-sizing: border-box;
-        .look_content{
+        .look-content{
             width: 100%;
             height: 320px;
             font-size: @font_size18;
             color: @color_white;
             overflow-y: auto;
         }
-        .delete_info{
+        .delete-info{
             width: 100%;
             height: 35px;
             margin-top: 15px;
@@ -106,7 +106,7 @@ export default {
             }
         }
     }
-    .example_footer{
+    .example-footer{
         .mixin_div(100%,0px,none,auto,left);
     }
 }

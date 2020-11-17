@@ -7,20 +7,20 @@
         center>
         <div slot="title">绑定支付宝</div>
         <div class="varieties-content">
-            <div class="account_name">
+            <div class="account-name">
                 <label>支付宝账号:</label>
                 <input type="text" maxlength="25" v-model.trim="account" placeholder="请输入支付宝账号"/>
             </div>
-            <div class="card_number">
+            <div class="card-number">
                 <label>实名制姓名:</label>
                 <input type="text" maxlength="25" v-model.trim="real_name" placeholder="请输入实名制姓名"/>
             </div>
-            <div class="line_example">支付宝绑定的注意事项说明</div>
-            <div class="confirm_add">
+            <div class="line-example">支付宝绑定的注意事项说明</div>
+            <div class="confirm-add">
                 <button @click="sureAdd()">确认添加</button>
             </div>
         </div>
-        <div slot="footer" class="example_footer">
+        <div slot="footer" class="example-footer">
 
         </div>
         </el-dialog>
@@ -71,7 +71,7 @@ export default {
         height: 465px;
         padding: 45px 40px 0px 40px;
         box-sizing: border-box;
-        .account_name,.card_number{
+        .account-name,.card-number{
             width: 100%;
             height: 45px;
             label{
@@ -81,7 +81,7 @@ export default {
                 font-size: @font_size18;
             }
         }
-        .account_name,.card_number{
+        .account-name,.card-number{
             input{
                 .mixin_input(280px,43px);
                 float: left;
@@ -91,17 +91,17 @@ export default {
                 font-size: @font_size18;
             }
         }
-        .card_number{
+        .card-number{
             margin-top: 40px;
         }
-        .line_example{
+        .line-example{
             .mixin_div(100%,120px,none,@color_blueviolet,left);
             line-height: 90px;
             border-bottom: 1px solid @color_blueviolet;
             padding-left: 235px;
             box-sizing: border-box;
         }
-        .confirm_add{
+        .confirm-add{
             width: 100%;
             height: 35px;
             margin-top: 50px;
@@ -116,7 +116,7 @@ export default {
             }
         }
     }
-    .example_footer{
+    .example-footer{
         .mixin_div(100%,0px,none,auto,left);
     }
 }

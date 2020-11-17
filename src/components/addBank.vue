@@ -1,30 +1,30 @@
 <template>
-    <section id="addBank">
+    <section id="add-bank">
         <el-dialog
         :visible.sync="rechargeActive"
         width="4.07rem"
         top="1.25rem"
         center>
         <div slot="title">添加银行卡</div>
-        <div class="varieties_content">
-            <div class="account_name">
+        <div class="varieties-content">
+            <div class="account-name">
                 <label>开户姓名:</label>
                 <input type="text" maxlength="10" v-model.trim="account_name" placeholder="请输入开户人姓名"/>
             </div>
-            <div class="card_number">
+            <div class="card-number">
                 <label>银行卡号:</label>
                 <input type="text" maxlength="19" v-model.trim="card_number" placeholder="请输入银行卡号"/>
             </div>
-            <div class="opening_bank">
+            <div class="opening-bank">
                 <label>开户行:</label>
                 <input type="text" maxlength="12" v-model.trim="opening_bank" placeholder="请输入开户行"/>
             </div>
-            <div class="line_example"></div>
-            <div class="confirm_add">
+            <div class="line-example"></div>
+            <div class="confirm-add">
                 <button @click="sureAdd()">确认添加</button>
             </div>
         </div>
-        <div slot="footer" class="example_footer">
+        <div slot="footer" class="example-footer">
 
         </div>
         </el-dialog>
@@ -33,7 +33,7 @@
 
 <script>
 export default {
-    name: 'addBank',
+    name: 'add-bank',
     data(){
         return{
             rechargeActive: false,
@@ -96,13 +96,13 @@ export default {
 </script>
 
 <style lang="less" scoped>
-#addBank{
-    .varieties_content{
+#add-bank{
+    .varieties-content{
         width: 100%;
         height: 465px;
         padding: 45px 40px 0px 40px;
         box-sizing: border-box;
-        .account_name,.card_number,.opening_bank{
+        .account-name,.card-number,.opening-bank{
             width: 100%;
             height: 45px;
             label{
@@ -112,7 +112,7 @@ export default {
                 font-size: @font_size18;
             }
         }
-        .account_name,.card_number,.opening_bank{
+        .account-name,.card-number,.opening-bank{
             input{
                 .mixin_input(280px,43px);
                 float: left;
@@ -122,15 +122,15 @@ export default {
                 font-size: @font_size18;
             }
         }
-        .card_number,.opening_bank{
+        .card-number,.opening-bank{
             margin-top: 40px;
         }
-        .line_example{
+        .line-example{
             width: 100%;
             height: 60px;
             border-bottom: 1px solid @color_blueviolet;
         }
-        .confirm_add{
+        .confirm-add{
             width: 100%;
             height: 35px;
             margin-top: 50px;
@@ -145,7 +145,7 @@ export default {
             }
         }
     }
-    .example_footer{
+    .example-footer{
         .mixin_div(100%,0px,none,auto,left);
     }
 }

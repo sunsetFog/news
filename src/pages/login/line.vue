@@ -2,41 +2,41 @@
 <template>
   <section id="line">
       <div class="entertainment">
-          <img class="login_logo" src="../../../static/dream/login/logo2.png"/>
-          <img class="big_fish" src="../../../static/dream/login/fish.png"/>
+          <img class="login-logo" src="../../../static/dream/login/logo2.png"/>
+          <img class="big-fish" src="../../../static/dream/login/fish.png"/>
 
-            <div class="circuit_detection">
-                <div class="testing_header">
+            <div class="circuit-detection">
+                <div class="testing-header">
                     <label>线路检测</label>
                     <img @click="rapidRegistration('home')" src="../../../static/dream/login/kuaisudenglu.png"/>
                     <span>快速登陆</span>
                 </div>
-                <div class="example_detection">
-                    <div class="line_content" v-for="(item,index) in line_list">
-                        <div class="line_data" v-if="item.state==1">
+                <div class="example-detection">
+                    <div class="line-content" v-for="(item,index) in line_list">
+                        <div class="line-data" v-if="item.state==1">
                             <img :src="item.circular1"/>
                             <span :style="{color: item.color}">{{item.title}}</span>
-                            <div class="progress_bar" :style="{backgroundImage: item.signal1}">
+                            <div class="progress-bar" :style="{backgroundImage: item.signal1}">
                                 <div :style="{width: item.width,backgroundImage: item.progress1}"></div>
                             </div>
                             <span :style="{color: item.color}">0.169秒</span>
                             <img :src="item.type1"/>
                             <img :src="item.enter1"/>
                         </div>
-                        <div class="line_data" v-if="item.state==2">
+                        <div class="line-data" v-if="item.state==2">
                             <img :src="item.circular2"/>
                             <span :style="{color: item.color}">{{item.title}}</span>
-                            <div class="progress_bar" :style="{backgroundImage: item.signal2}">
+                            <div class="progress-bar" :style="{backgroundImage: item.signal2}">
                                 <div :style="{width: item.width,backgroundImage: item.progress2}"></div>
                             </div>
                             <span :style="{color: item.color}">0.169秒</span>
                             <img :src="item.type2"/>
                             <img :src="item.enter2"/>
                         </div>
-                        <div class="line_data" v-if="item.state==3">
+                        <div class="line-data" v-if="item.state==3">
                             <img :src="item.circular3"/>
                             <span :style="{color: item.color}">{{item.title}}</span>
-                            <div class="progress_bar" :style="{backgroundImage: item.signal3}">
+                            <div class="progress-bar" :style="{backgroundImage: item.signal3}">
                                 <div :style="{width: item.width,backgroundImage: item.progress3}"></div>
                             </div>
                             <span :style="{color: item.color}">0.169秒</span>
@@ -119,20 +119,20 @@ export default{
         width: 100%;
         height: 100%;
         position: relative;
-        .login_logo{
+        .login-logo{
             .mixin_img(790px;170px);
             position: absolute;
             top: 70px;
             left: 50%;
             margin-left: -395px;
         }
-        .big_fish{
+        .big-fish{
             .mixin_img(426px;487px);
             position: absolute;
             left: 0px;
             bottom: 0px;
         }
-        .circuit_detection{
+        .circuit-detection{
             width: 660px;
             height: 450px;
             .mixin_image(url('../../../static/dream/login/luxiankuan.png'));
@@ -142,7 +142,7 @@ export default{
             margin-left: -330px;
             padding: 10px 30px 0px 30px;
             box-sizing: border-box;
-            .testing_header{
+            .testing-header{
                 width: 100%;
                 height: 60px;
                 label{
@@ -165,17 +165,17 @@ export default{
                     cursor: pointer;
                 }
             }
-            .example_detection{
+            .example-detection{
                 width: 580px;
                 height: 350px;
                 margin: 5px 0px 0px 10px;
                 padding: 12px 0px 0px 22px;
                 box-sizing: border-box;
-                .line_content{
+                .line-content{
                     width: 100%;
                     height: 30px;
                     margin-bottom: 10px;
-                    .line_data{
+                    .line-data{
                         width: 100%;
                         height: 30px;
                         img:nth-of-type(1){
@@ -188,7 +188,7 @@ export default{
                             float: left;
                             margin-left: 10px;
                         }
-                        .progress_bar{
+                        .progress-bar{
                             .mixin_float(152px,20px,left);
                             margin-top: 5px;
                             background-size: 100% 100%;

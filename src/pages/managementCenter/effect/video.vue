@@ -1,11 +1,11 @@
 <template>
     <section id="video">
-        <div class="video_dialog" v-show="play_active">
-            <div class="video_header">
+        <div class="video-dialog" v-show="play_active">
+            <div class="video-header">
                 <i class="el-icon-close" @click="closeAudio()"></i>
             </div>
-            <div class="video_body">
-                <video id="video_girl" controls width="100%" autoplay>
+            <div class="video-body">
+                <video id="video-girl" controls width="100%" autoplay>
                     <source src="../../../../static/study/video/58244a10da66c5401.mp4" type="video/mp4">
                 </video>
             </div>
@@ -30,12 +30,12 @@ export default {
 
 <style lang="less" scoped>
 #video{
-    .video_dialog{
+    .video-dialog{
         width: 600px;
         margin: 100px auto;
         border-radius: 4px;
         background: rgba(45,45,45,0.4);
-        .video_header{
+        .video-header{
             width: 100%;
             height: 30px;
             background: rgba(45,45,45,0.4);

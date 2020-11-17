@@ -1,34 +1,34 @@
 <template>
-    <section id="game_withdrawal">
+    <section id="game-withdrawal">
         <el-dialog
         :visible.sync="rechargeActive"
         width="5.73rem"
         top="0.8rem"
         center>
         <div slot="title">提款</div>
-        <div class="varieties_content">
-            <div class="payment_type">
+        <div class="varieties-content">
+            <div class="payment-type">
                 <ul>
-                    <li v-for="(item,index) in withdrawal_types" :class="{'type_active':item.active}" @click="paymentType(index)">
+                    <li v-for="(item,index) in withdrawal_types" :class="{'type-active':item.active}" @click="paymentType(index)">
                         <span>{{item.name}}</span>
                         <span v-if="item.active"></span>
                     </li>
                 </ul>
             </div>
-            <div class="payment_content">
-                <div class="current_balance">
+            <div class="payment-content">
+                <div class="current-balance">
                     <label>当前余额:</label>
                     <input type="text" disabled v-model.trim="money_total" placeholder="当前余额"/>
                 </div>
-                <div class="withdrawal_amount_s">
+                <div class="withdrawal-amount-s">
                     <label>提款金额:</label>
-                    <img src="../../static/dream/recharge/jian.png" :class="{'amount_disable': withdrawal_amount=='','amount_pointer': withdrawal_amount!=''}" @click="addition(1)"/>
+                    <img src="../../static/dream/recharge/jian.png" :class="{'amount-disable': withdrawal_amount=='','amount-pointer': withdrawal_amount!=''}" @click="addition(1)"/>
                     <input v-model.trim="withdrawal_amount" type="text" placeholder="请输入提款金额"/>
                     <img src="../../static/dream/recharge/jia.png" @click="addition(2)"/>
                 </div>
-                <div class="account_number" v-show="withdrawal_types[0].active">
+                <div class="account-number" v-show="withdrawal_types[0].active">
                     <label>收取银行卡:</label>
-                    <div class="user_account">
+                    <div class="user-account">
                         <el-select v-model="bank_card" placeholder="请选择银行卡" size="mini">
                                 <el-option
                                 v-for="(item,index) in bank_list"
@@ -38,11 +38,11 @@
                                 </el-option>
                         </el-select>
                     </div>
-                    <button class="admin_account" @click="manageMeans(1)">管理银行卡</button>
+                    <button class="admin-account" @click="manageMeans(1)">管理银行卡</button>
                 </div>
-                <!-- <div class="account_number" v-show="withdrawal_types[1].active">
+                <!-- <div class="account-number" v-show="withdrawal_types[1].active">
                     <label>支付宝账号:</label>
-                    <div class="user_account">
+                    <div class="user-account">
                         <el-select v-model="alipay_card" placeholder="请选择支付宝" size="mini">
                                 <el-option
                                 v-for="(item,index) in alipay_list"
@@ -52,15 +52,15 @@
                                 </el-option>
                         </el-select>
                     </div>
-                    <button class="admin_account" @click="manageMeans(2)">管理支付宝</button>
+                    <button class="admin-account" @click="manageMeans(2)">管理支付宝</button>
                 </div> -->
-                <div class="line_bottom"></div>
-                <div class="payment_button">
+                <div class="line-bottom"></div>
+                <div class="payment-button">
                     <button @click="exchange()">确认兑换</button>
                 </div>
             </div>
         </div>
-        <div slot="footer" class="example_footer">
+        <div slot="footer" class="example-footer">
 
         </div>
         </el-dialog>
@@ -69,7 +69,7 @@
 
 <script>
 export default {
-    name: 'game_withdrawal',
+    name: 'game-withdrawal',
     data(){
         return{
             rechargeActive: false,
@@ -185,15 +185,15 @@ export default {
 </script>
 
 <style lang="less" scoped>
-#game_withdrawal{
-    .varieties_content{
+#game-withdrawal{
+    .varieties-content{
         width: 100%;
         height: 620px;
-        .payment_type{
+        .payment-type{
             .mixin_float(155px,620px,left);
             background: @color_tone20;
             font-size: @font_size20;
-            .type_active{
+            .type-active{
                 .mixin_image(url('../../static/dream/recharge/beijingkuang.png'));
             }
             ul{
@@ -220,11 +220,11 @@ export default {
                 }
             }
         }
-        .payment_content{
+        .payment-content{
             .mixin_float(84%,620px,right);
             padding: 75px 45px 0px 45px;
             box-sizing: border-box;
-            .current_balance,.withdrawal_amount_s,.account_number{
+            .current-balance,.withdrawal-amount-s,.account-number{
                 width: 100%;
                 height: 45px;
                 label{
@@ -234,7 +234,7 @@ export default {
                     font-size: @font_size18;
                 }
             }
-            .current_balance{
+            .current-balance{
                 input{
                     .mixin_input(280px,43px);
                     float: left;
@@ -245,12 +245,12 @@ export default {
                     cursor: not-allowed;
                 }
             }
-            .withdrawal_amount_s{
+            .withdrawal-amount-s{
                 margin-top: 50px;
-                .amount_disable{
+                .amount-disable{
                     cursor: not-allowed;
                 }
-                .amount_pointer{
+                .amount-pointer{
                     cursor: pointer;
                 }
                 img:nth-of-type(1){
@@ -275,28 +275,28 @@ export default {
                     cursor: pointer;
                 }
             }
-            .account_number{
+            .account-number{
                 margin-top: 50px;
-                .user_account{
+                .user-account{
                     .mixin_float(280px,45px,left);
                 }
-                .admin_account{
+                .admin-account{
                     .mixin_button(122px,34px,@color_white2,@color_blueviolet);
                     float: left;
                     margin: 5px 0px 0px 25px;
                     border: 1px solid @color_blueviolet;
                 }
-                .admin_account:hover{
+                .admin-account:hover{
                     background: @color_white2_hover;
                 }
             }
-            .line_bottom{
+            .line-bottom{
                 width: 100%;
                 height: 45px;
                 margin-top: 15px;
                 border-bottom: 1px solid @color_blueviolet;
             }
-            .payment_button{
+            .payment-button{
                 width: 100%;
                 height: 36px;
                 margin-top: 50px;
@@ -311,7 +311,7 @@ export default {
             }
         }
     }
-    .example_footer{
+    .example-footer{
         .mixin_div(100%,0px,none,auto,left);
     }
 }

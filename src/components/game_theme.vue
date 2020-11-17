@@ -1,10 +1,10 @@
 <template>
-    <section id="game_theme"></section>
+    <section id="game-theme"></section>
 </template>
 
 <script>
 export default {
-    name: 'game_theme',
+    name: 'game-theme',
     props: ['subject'],
     data(){
         return{
@@ -170,7 +170,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-#game_theme{
+#game-theme{
     width: 100%;
     height: 0px;
 }

@@ -1,44 +1,44 @@
 <template>
     <section id="crux">
-        <div class="personal_information">
-            <div class="information_left">
-                <div class="user_title">个人信息</div>
-                <div class="user_contain">
-                    <div class="user_info">
+        <div class="personal-information">
+            <div class="information-left">
+                <div class="user-title">个人信息</div>
+                <div class="user-contain">
+                    <div class="user-info">
                         <img :src="portrait.head" @click="portraitMeans()"/>
                         <img :src="portrait.frame"/>
                         <span>{{player_info.nickname}}</span>
                     </div>
-                    <div class="account_balance">
+                    <div class="account-balance">
                         <label>账户余额:</label>
                         <span><img v-for="(item,index) in number_money" :src="number_count[item].url"/></span>
                         <span @click="payMeans(0)">充值</span>
                     </div>
-                    <div class="user_id">
+                    <div class="user-id">
                         <label>我的ID:</label>
                         <span>{{player_info.mShowUid}}</span>
-                        <button class="copy_dom" :data-clipboard-text="player_info.mShowUid" @click="copyText()">复制</button>
+                        <button class="copy-dom" :data-clipboard-text="player_info.mShowUid" @click="copyText()">复制</button>
                     </div>
                     <div class="nickname">
                         <label>昵称:</label>
-                        <div class="edit_name" v-if="!nickname_state">
+                        <div class="edit-name" v-if="!nickname_state">
                             <span>{{player_info.nickname}}</span>
                             <i class="el-icon-edit" @click="nicknameEdit()"></i>
                         </div>
-                        <div class="nickname_select" v-else>
+                        <div class="nickname-select" v-else>
                             <input type="text" placeholder="请输入昵称" v-model.trim="pet_name" ref="pet_name" @input="changeValue"/>
                             <button @click="nicknameDetermine">确定</button>
                             <button @click="nickname_state = false">取消</button>
                         </div>
                     </div>
-                    <div class="sex_example">
+                    <div class="sex-example">
                         <label>性别:</label>
-                        <div class="edit_sex" v-if="sex_state==false">
+                        <div class="edit-sex" v-if="sex_state==false">
                             <span v-if="player_info.sex==1">男</span>
                             <span v-if="player_info.sex==2">女</span>
                             <i class="el-icon-edit" @click="sexEdit()"></i>
                         </div>
-                        <div class="sex_select" v-else>
+                        <div class="sex-select" v-else>
                             <el-select v-model="sex_value" placeholder="请选择" size="mini">
                                 <el-option
                                 v-for="item in sex_options"
@@ -54,10 +54,10 @@
                 </div>
             </div>
 
-            <div class="information_right">
-                <div class="archives_list" v-for="(item,index) in archives_list">
-                    <div class="archives_header"></div>
-                    <div class="archives_contain">
+            <div class="information-right">
+                <div class="archives-list" v-for="(item,index) in archives_list">
+                    <div class="archives-header"></div>
+                    <div class="archives-contain">
                         <img :src="item.url"/>
                         <span>{{item.theme}}</span>
                         <span v-if="index!=2">{{item.explain}}</span>
@@ -173,7 +173,7 @@ export default{
             this.$refs.portrait.changeMeans(this.player_info.avatar,this.player_info.avatar_box);
         },
         copyText(){
-            var clipboard = new Clipboard('.copy_dom')  
+            var clipboard = new Clipboard('.copy-dom')  
             clipboard.on('success', e => {  
                 this.$message.success('复制成功');
                 // 释放内存  
@@ -287,23 +287,23 @@ export default{
 #crux{
     width: 100%;
     height: 100%;
-    .personal_information{
+    .personal-information{
         width: 100%;
         height: 100%;
-        .information_left{
+        .information-left{
             .mixin_float(36.9%,100%,left);
-            .user_title{
+            .user-title{
                 border-top: 7px solid @color_blueviolet;
                 .mixin_div(100%,70px,@color_darkgray,@color_gray,left);
                 text-indent: 20px;
                 font-size: @font_size20;
                 line-height: 60px;
             }
-            .user_contain{
+            .user-contain{
                 .mixin_div(100%,731px,@color_purple,@color_white,left);
                 padding: 0px 20px;
                 box-sizing: border-box;
-                .user_info{
+                .user-info{
                     .mixin_div(100%,205px,none,@color_white,left);
                     position: relative;
                     img:nth-of-type(1){
@@ -331,7 +331,7 @@ export default{
                         font-size: @font_size18;
                     }
                 }
-                .account_balance,.nickname,.sex_example,.user_id{
+                .account-balance,.nickname,.sex-example,.user-id{
                     .mixin_div(100%,30px,none,@color_white,left);
                     margin-bottom: 10px;
                     font-size: @font_size16;
@@ -341,7 +341,7 @@ export default{
                         float: left;
                     }
                 }
-                .account_balance{
+                .account-balance{
                     span:nth-of-type(1){
                         .mixin_span(auto,30px,none,@color_white,center);
                         padding-top: 5px;
@@ -359,7 +359,7 @@ export default{
                         cursor: pointer;
                     }
                 }
-                .user_id{
+                .user-id{
                     span{
                         .mixin_span(150px,30px,none,@color_white,left);
                         float: left;
@@ -376,8 +376,8 @@ export default{
                         background: @color_white2_hover;
                     }
                 }
-                .nickname,.sex_example{
-                    .edit_sex,.edit_name{
+                .nickname,.sex-example{
+                    .edit-sex,.edit-name{
                         span:nth-of-type(1){
                             .mixin_span(auto,30px,none,@color_gray,center);
                             float: left;
@@ -389,7 +389,7 @@ export default{
                             float: left;
                         }
                     }
-                    .nickname_select{
+                    .nickname-select{
                         .mixin_float(80%,30px,right);
                         input{
                             .mixin_input(100px,28px);
@@ -400,10 +400,10 @@ export default{
                             float: left;
                         }
                     }
-                    .sex_select{
+                    .sex-select{
                         .mixin_float(80%,30px,right);
                     }
-                    .nickname_select,.sex_select{
+                    .nickname-select,.sex-select{
                         button:nth-of-type(1){
                             .mixin_button(auto,28px,@color_white2,@color_blueviolet);
                             border: 1px solid @color_blueviolet;
@@ -432,19 +432,19 @@ export default{
             }
             
         }
-        .information_right{
+        .information-right{
             .mixin_float(63.1%,100%,right);
             padding: 0px 0px 0px 20px;
             box-sizing: border-box;
-            .archives_list{
+            .archives-list{
                 .mixin_div(100%,145px,none,auto,left);
                 float: left;
                 margin-bottom: 20px;
-                .archives_header{
+                .archives-header{
                     .mixin_div(100%,45px,@color_darkgray,@color_white,left);
                     border-top: 7px solid @color_blueviolet;
                 }
-                .archives_contain{
+                .archives-contain{
                     .mixin_div(100%,95px,@color_purple,@color_white,left);
                     position: relative;
                     img{

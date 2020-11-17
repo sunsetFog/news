@@ -6,15 +6,15 @@
         top="1.46rem"
         center>
         <div slot="title"></div>
-        <div class="varieties_content">
-            <div class="already_submit">您的提款申请已提交</div>
-            <div class="withdrawal_money">提款金额为<span>{{money}}</span>金币</div>
+        <div class="varieties-content">
+            <div class="already-submit">您的提款申请已提交</div>
+            <div class="withdrawal-money">提款金额为<span>{{money}}</span>金币</div>
             <div class="attention">请留意游戏信息哈，看申请结果，谢谢~</div>
-            <div class="sure_btn">
+            <div class="sure-btn">
                 <button @click="sureMeans()">知道了</button>
             </div>
         </div>
-        <div slot="footer" class="example_footer">
+        <div slot="footer" class="example-footer">
 
         </div>
         </el-dialog>
@@ -44,16 +44,16 @@ export default {
 
 <style lang="less" scoped>
 #know{
-    .varieties_content{
+    .varieties-content{
         width: 100%;
         height: 295px;
         padding: 35px 35px 0px 35px;
         box-sizing: border-box;
-        .already_submit{
+        .already-submit{
             .mixin_div(100%,45px,none,@color_white,center);
             font-size: @font_size24;
         }
-        .withdrawal_money{
+        .withdrawal-money{
             .mixin_div(100%,45px,none,@color_white,center);
             font-size: @font_size22;
             margin-top: 10px;
@@ -65,7 +65,7 @@ export default {
             .mixin_div(100%,45px,none,@color_blueviolet,center);
             margin-top: 10px;
         }
-        .sure_btn{
+        .sure-btn{
             .mixin_div(100%,45px,none,@color_white,left);
             padding-left: 180px;
             box-sizing: border-box;
@@ -79,7 +79,7 @@ export default {
             }
         }
     }
-    .example_footer{
+    .example-footer{
         .mixin_div(100%,0px,none,auto,left);
     }
 }

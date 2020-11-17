@@ -1,10 +1,10 @@
 <template>
-    <section id="v_tag">
+    <section id="v-tag">
         <!-- 注意v-if与v-else标签并排 -->
         <div>
-            <p class="line_color" v-if="if_active==9">v-if</p>
-            <p class="line_color" v-else-if="if_active==6">v-else-if</p>
-            <p class="line_color" v-else>v-else</p>
+            <p class="line-color" v-if="if_active==9">v-if</p>
+            <p class="line-color" v-else-if="if_active==6">v-else-if</p>
+            <p class="line-color" v-else>v-else</p>
         </div>
         <hr>
         <!-- v-show-->
@@ -13,14 +13,14 @@
             2.v-show只能用布尔值true或false，为false时，标签还能找到，相当于样式 display: none;
         -->
         <div>
-            <p class="line_color" v-show="show_active">v-show的true</p>
-            <p class="line_color" v-show="!show_active">v-show的false</p>
+            <p class="line-color" v-show="show_active">v-show的true</p>
+            <p class="line-color" v-show="!show_active">v-show的false</p>
         </div>
 
         <hr>
         <!-- v-for     index是下标，可以绑定事件上传-->
         <div v-for="(item,index) in for_list">
-            <p class="line_color">
+            <p class="line-color">
                 {{item.title}}===
                 <span v-if="item.state==0">状态0</span>
                 <span v-if="item.state==2">状态2</span>
@@ -35,8 +35,8 @@
         <hr>
         <!-- 属性绑定v-bind简写成 : -->
         <div>
-            <p class="line_color" v-bind:id="binding">v-bind绑定</p>
-            <a class="line_color" :href="url">:绑定</a>
+            <p class="line-color" v-bind:id="binding">v-bind绑定</p>
+            <a class="line-color" :href="url">:绑定</a>
         </div>
         <hr>
         <!-- 事件绑定: v-on缩写成@ -->
@@ -46,20 +46,20 @@
         </div>
         <!-- 在正式vue项目里不需要v-cloak。在直接引用vue.js中,v-cloak解决屏幕闪动的问题: 当网络较慢，网页还在加载 Vue.js ，而导致 Vue 来不及渲染，这时页面就会显示出 Vue 源代码-->
         <div>
-            <p class="line_color" v-cloak>{{binding}}</p>
+            <p class="line-color" v-cloak>{{binding}}</p>
         </div>
         <hr>
         <!-- v-text与v-html的区别:
             同样是填充内容，v-text识别不了标签，直接解析成字符串，v-html能识别标签
         -->
         <div>
-            <p class="line_color" v-text="text_html"></p>
-            <p class="line_color" v-html="text_html"></p>
+            <p class="line-color" v-text="text_html"></p>
+            <p class="line-color" v-html="text_html"></p>
         </div>
         <hr>
         <!-- v-pre没啥用，把花括号解析成字符串 -->
         <div>
-            <p class="line_color" v-pre>{{binding}}</p>
+            <p class="line-color" v-pre>{{binding}}</p>
         </div>
     </section>
 </template>
@@ -91,8 +91,8 @@ export default {
 </script>
 
 <style lang="less" scoped>
-#v_tag{
-    .line_color{
+#v-tag{
+    .line-color{
         color: white;
     }
 }

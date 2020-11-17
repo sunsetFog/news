@@ -1,25 +1,25 @@
 <template>
-    <section id="home_index">
-       <div class="theme_picture">
+    <section id="home-index">
+       <div class="theme-picture">
                 <el-carousel :interval="5000" arrow="always" :autoplay="true" trigger="click">
                     <el-carousel-item v-for="(item,index) in card_picture" :key="index">
-                        <div class="example_picture">
+                        <div class="example-picture">
                             <img :src="item.url"/>
                         </div>
                     </el-carousel-item>
                 </el-carousel>
        </div>
-       <div class="enter_game">
-           <img class="big_fish" src="../../../static/dream/login/fish.png" @click="fishMeans()"/>
+       <div class="enter-game">
+           <img class="big-fish" src="../../../static/dream/login/fish.png" @click="fishMeans()"/>
            <div class="advertisement">
 
            </div>
-           <div class="game_contain">
+           <div class="game-contain">
                 <el-carousel :interval="5000" arrow="always" indicator-position="outside" :autoplay="false" trigger="click">
                     <el-carousel-item v-for="(val,keys) in game_list" :key="keys">
-                        <div class="game_frame">
-                            <div class="carousel_header"></div>
-                            <div class="carousel_contain">
+                        <div class="game-frame">
+                            <div class="carousel-header"></div>
+                            <div class="carousel-contain">
                                 <ul>
                                     <li v-for="(item,index) in val.pages">
                                         <img :src="item.url" :style="{height: item.height,top: item.top}" @click="enterTheGame(index,keys)"/>
@@ -39,7 +39,7 @@
 <script>
 import footers from '../../components/footer.vue';
 export default{
-    name: 'home_index',
+    name: 'home-index',
     components: {footers},
     data(){
         return{
@@ -112,14 +112,14 @@ export default{
 </script>
 
 <style lang="less" scoped>
-#home_index{
-    .theme_picture{
+#home-index{
+    .theme-picture{
         width: 100%;
         height: 500px;
         .el-carousel--horizontal{
             overflow: hidden;
         }
-        .example_picture{
+        .example-picture{
             width: 100%;
             height: 500px;
             img{
@@ -127,12 +127,12 @@ export default{
             }
         }
     }
-    .enter_game{
+    .enter-game{
         width: 100%;
         height: 1010px;
          .mixin_image(url('../../../static/dream/home/background.jpg'));
          position: relative;
-        .big_fish{
+        .big-fish{
             .mixin_img(426px;487px);
             position: absolute;
             left: 0px;
@@ -146,7 +146,7 @@ export default{
              left: 0px;
              top: 8px;
          }
-         .game_contain{
+         .game-contain{
              .mixin_center(1350px,740px);
             .el-carousel__item:nth-child(2n) {
                 -background-color: #99a9bf;
@@ -158,15 +158,15 @@ export default{
             .el-carousel--horizontal{
                 overflow: hidden;
             }
-            .game_frame{
+            .game-frame{
                 .mixin_div(100%,100%,none,auto,left);
                 padding: 0px 80px;
                 box-sizing: border-box;
-                .carousel_header{
+                .carousel-header{
                     width: 100%;
                     height: 60px;
                 }
-                .carousel_contain{
+                .carousel-contain{
                     width: 100%;
                     height: 620px;
                     ul{

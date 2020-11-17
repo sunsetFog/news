@@ -1,7 +1,7 @@
 
 <template>
-<!-- 在main.ja引入了index.less样式，看upload_function -->
-    <section id="upload_function">
+<!-- 在main.ja引入了index.less样式，看upload-function -->
+    <section id="upload-function">
             <div style="text-align: left;">
 				<el-upload class="upload-demo" name="upload" :data="{'attach':'upload'}" :on-change="handleChange" :action="uploadUrl" :on-remove="handleAptiRemove" :file-list="fileList1" list-type="picture-card" :before-upload="beforeUpload" :on-success="handleAptiSuccess">
 					<div style="width: 100%;height: 100%;background: rgba(45,45,45,0);position: relative;">
@@ -91,7 +91,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-#upload_function{
+#upload-function{
 	
 }
 </style>

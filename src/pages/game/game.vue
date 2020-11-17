@@ -1,9 +1,9 @@
 <template>
-        <section id="home_game">
-            <div class="game_example">
+        <section id="home-game">
+            <div class="game-example">
                 <el-button :disabled="enlarge_disable" style="position:absolute;left:100px;top:20px;" @click="zoomMeans(1)">放大</el-button>
                 <el-button :disabled="count_height==550" style="position:absolute;left:190px;top:20px;" @click="zoomMeans(2)">缩小</el-button>
-                <div class="gameOrigin" :style="{width: game_frame.width+'px',height: game_frame.height+'px',marginLeft: game_frame.margin_left+'px',top: game_frame.top+'px'}">
+                <div class="game-origin" :style="{width: game_frame.width+'px',height: game_frame.height+'px',marginLeft: game_frame.margin_left+'px',top: game_frame.top+'px'}">
                     <div :style="{width: purple_define.main_width+'px',left: purple_define.left_y+'px',top: purple_define.top_y+'px',height: purple_define.height+'px'}"></div>
                     <div :style="{width: purple_define.main_width+'px',right: purple_define.right_e+'px',top: purple_define.top_e+'px',height: purple_define.height+'px'}"></div>
                     <div :style="{height: purple_define.main_height+'px',left: purple_define.left_s+'px',top: purple_define.top_s+'px',width: purple_define.width+'px'}"></div>
@@ -15,7 +15,7 @@
 
 <script>
     export default{
-        name: 'home_game',
+        name: 'home-game',
         data(){
             return{
                 count_height: 630,
@@ -45,11 +45,11 @@
         },
         mounted(){
             var that = this;
-            that.$means.overallHeight('home_game');
+            that.$means.overallHeight('home-game');
             window.onresize = function temp3(){
-                let overallApp = document.getElementById('home_game');
+                let overallApp = document.getElementById('home-game');
                 if(overallApp!=null){
-                    that.$means.overallHeight('home_game');
+                    that.$means.overallHeight('home-game');
                     that.enlargeDisable();
                 }
             }
@@ -108,16 +108,16 @@
 </script>
 
 <style lang="less" scoped>
-#home_game{
+#home-game{
     width: 100%;
     overflow: hidden;
     min-height: 800px;
     .mixin_image(url('../../../static/dream/center/bj-youxi.jpg'));
-    .game_example{
+    .game-example{
         width: 100%;
         height: 80px;
         position: relative;
-        .gameOrigin{
+        .game-origin{
             position: absolute;
             -top: 120px;
             left: 50%;

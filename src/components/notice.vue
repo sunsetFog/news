@@ -6,10 +6,10 @@
         top="0.53rem"
         center>
         <div slot="title">公告</div>
-        <div class="varieties_content">
-            <div class="mail_content">
-                <div class="mail_example" v-for="(item,index) in mail_list" @click="consult(index,false)">
-                    <div class="picture_example">
+        <div class="varieties-content">
+            <div class="mail-content">
+                <div class="mail-example" v-for="(item,index) in mail_list" @click="consult(index,false)">
+                    <div class="picture-example">
                         <img v-show="!item.is_readed" src="../../static/dream/recharge/weidu.png"/>
                         <img v-show="item.is_readed" src="../../static/dream/recharge/yidu.png"/>
                     </div>
@@ -21,13 +21,13 @@
                         <img v-show="item.is_readed" src="../../static/dream/recharge/read.png"/>
                     </div>
                 </div>
-                <div class="no_time" v-show="no_have">暂无公告</div>
+                <div class="no-time" v-show="no_have">暂无公告</div>
              </div>
-             <div class="page_example">
+             <div class="page-example">
                 <pagination :pagination="pagination" @emitWay="getJson"></pagination>
              </div>
         </div>
-        <div slot="footer" class="example_footer">
+        <div slot="footer" class="example-footer">
 
         </div>
         </el-dialog>
@@ -139,20 +139,20 @@ export default {
 
 <style lang="less" scoped>
 #notice{
-    .varieties_content{
+    .varieties-content{
         width: 100%;
         height: 710px;
         padding: 25px 35px 0px 35px;
         box-sizing: border-box;
-        .mail_content{
+        .mail-content{
             width: 100%;
             height: 600px;
             overflow-y: auto;
-            .mail_example{
+            .mail-example{
                 width: 100%;
                 height: 105px;
                 margin-bottom: 25px;
-                .picture_example{
+                .picture-example{
                     .mixin_float(13%,100%,left);
                     background: #420f4a;
                     border-top-left-radius: 4px;
@@ -206,19 +206,19 @@ export default {
                     }
                 }
             }
-            .no_time{
+            .no-time{
                 .mixin_div(100%,80px,none,@color_dimgray,center);
                 font-size: @font_size20;
             }
 
         }
-        .page_example{
+        .page-example{
             width: 100%;
             height: 40px;
             margin-top: 25px;
         }
     }
-    .example_footer{
+    .example-footer{
         .mixin_div(100%,0px,none,auto,left);
     }
 }

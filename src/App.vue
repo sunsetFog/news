@@ -3,13 +3,13 @@
     <router-view></router-view>
     <game-theme ref="subject" :subject="false" v-show="subject" @interaction="setMove"></game-theme>
     <div class="advertisement" v-show="notice_active">
-      <div class="message_tips">
-        <span v-show="play_info" class="laba_quality">
+      <div class="message-tips">
+        <span v-show="play_info" class="laba-quality">
           <img src="../static/dream/home/laba.png">
         </span>
-        <span v-show="play_info" class="word_quality">最新公告&nbsp;:</span>
-        <div class="flash_quality" v-show="play_info">
-          <div v-html="timer_content" class="move_left" :style="{width:timer_width+'px'}"></div>
+        <span v-show="play_info" class="word-quality">最新公告&nbsp;:</span>
+        <div class="flash-quality" v-show="play_info">
+          <div v-html="timer_content" class="move-left" :style="{width:timer_width+'px'}"></div>
         </div>
       </div>
     </div>
@@ -120,12 +120,12 @@ export default {
   position: absolute;
   left: 0px;
   top: 653px;
-  .message_tips {
+  .message-tips {
     width: 1200px;
     height: 35px;
     margin: 0 auto;
     position: relative;
-    .laba_quality {
+    .laba-quality {
       .mixin_span(25px, 35px, none, auto, center);
       margin-right: 16px;
       line-height: 0px;
@@ -138,19 +138,19 @@ export default {
         .mixin_img(25px, 25px);
       }
     }
-    .word_quality {
+    .word-quality {
       .mixin_span(auto, 35px, none, @color_tone1, left);
       position: absolute;
       top: 0px;
       left: 41px;
     }
-    .flash_quality {
+    .flash-quality {
       .mixin_span(1000px, 35px, none, @color_white, left);
       position: absolute;
       top: 0px;
       left: 131px;
       overflow: hidden;
-      .move_left {
+      .move-left {
         width: 0px;
         height: 35px;
         float: right;

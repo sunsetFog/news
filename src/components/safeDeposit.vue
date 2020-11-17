@@ -1,39 +1,39 @@
 <template>
-    <section id="safeDeposit">
+    <section id="safe-deposit">
         <el-dialog
         :visible.sync="rechargeActive"
         width="5.73rem"
         top="0.53rem"
         center>
         <div slot="title">保险箱</div>
-        <div class="varieties_content">
-            <div class="service_type">
+        <div class="varieties-content">
+            <div class="service-type">
                 <ul>
-                    <li v-for="(item,index) in service_list" :class="{'type_active':item.active}" @click="serviceType(index)">
+                    <li v-for="(item,index) in service_list" :class="{'type-active':item.active}" @click="serviceType(index)">
                         <span>{{item.name}}</span>
                         <span v-if="item.active"></span>
                     </li>
                 </ul>
             </div>
-            <div class="safe_content">
-                <div class="account_balance">
+            <div class="safe-content">
+                <div class="account-balance">
                     <label>账户余额:</label>
                     <input type="text" disabled v-model.trim="money_total" placeholder="请输入账户余额"/>
                 </div>
-                <div class="amount_deposited">
+                <div class="amount-deposited">
                     <label>已存余额:</label>
                     <input type="text" disabled v-model.trim="deposited_money" placeholder="请输入已存金额"/>
                 </div>
-                <div class="input_deposit">
+                <div class="input-deposit">
                     <label>{{deposit_label}}:</label>
                     <input type="text" maxlength="20" v-model.trim="save_money" :placeholder="deposit_place"/>
                 </div>
-                <div class="safe_button">
+                <div class="safe-button">
                     <button @click="safeMeans()">{{deposit_btn}}</button>
                 </div>
             </div>
         </div>
-        <div slot="footer" class="example_footer">
+        <div slot="footer" class="example-footer">
 
         </div>
         </el-dialog>
@@ -42,7 +42,7 @@
 
 <script>
 export default {
-    name: 'safeDeposit',
+    name: 'safe-deposit',
     data(){
         return{
             rechargeActive: false,
@@ -187,15 +187,15 @@ export default {
 </script>
 
 <style lang="less" scoped>
-#safeDeposit{
-    .varieties_content{
+#safe-deposit{
+    .varieties-content{
         width: 100%;
         height: 620px;
-        .service_type{
+        .service-type{
             .mixin_float(155px,620px,left);
             background: @color_tone20;
             font-size: @font_size20;
-            .type_active{
+            .type-active{
                 .mixin_image(url('../../static/dream/recharge/beijingkuang.png'));
             }
             ul{
@@ -222,11 +222,11 @@ export default {
                 }
             }
         }
-        .safe_content{
+        .safe-content{
             .mixin_float(84%,620px,right);
             padding: 75px 40px 0px 40px;
             box-sizing: border-box;
-            .account_balance,.amount_deposited,.input_deposit{
+            .account-balance,.amount-deposited,.input-deposit{
                 width: 100%;
                 height: 45px;
                 label{
@@ -244,15 +244,15 @@ export default {
                     font-size: @font_size18;
                 }
             }
-            .amount_deposited,.input_deposit{
+            .amount-deposited,.input-deposit{
                 margin-top: 40px;
             }
-            .account_balance,.amount_deposited{
+            .account-balance,.amount-deposited{
                 input{
                     cursor: not-allowed;
                 }
             }
-            .safe_button{
+            .safe-button{
                 width: 100%;
                 height: 36px;
                 margin-top: 50px;
@@ -267,7 +267,7 @@ export default {
             }
         }
     }
-    .example_footer{
+    .example-footer{
         .mixin_div(100%,0px,none,auto,left);
     }
 }

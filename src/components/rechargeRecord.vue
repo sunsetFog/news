@@ -1,23 +1,23 @@
 <template>
-    <section id="rechargeRecord">
+    <section id="recharge-record">
         <el-dialog
         :visible.sync="rechargeActive"
         width="5.73rem"
         top="0.8rem"
         center>
         <div slot="title">充值记录</div>
-        <div class="varieties_content">
-            <div class="record_left">
+        <div class="varieties-content">
+            <div class="record-left">
                 <ul>
-                    <li v-for="(item,index) in record_type" :class="{'type_active':item.active}" @click="recordState(index)">
+                    <li v-for="(item,index) in record_type" :class="{'type-active':item.active}" @click="recordState(index)">
                         <span>{{item.name}}</span>
                         <span v-if="item.active"></span>
                     </li>
                 </ul>
             </div>
-            <div class="record_right">
-                <div class="record_example">
-                    <div class="record_content" v-for="(item,index) in record_list">
+            <div class="record-right">
+                <div class="record-example">
+                    <div class="record-content" v-for="(item,index) in record_list">
                         <ul>
                             <li>
                                 <label>支付宝类型:</label>
@@ -27,7 +27,7 @@
                             <li>
                                 <label>订单号:</label>
                                 <span>{{item.order_no}}</span>
-                                <button class="copy_dom" :data-clipboard-text="item.order_no" @click="copyText()">复制</button>
+                                <button class="copy-dom" :data-clipboard-text="item.order_no" @click="copyText()">复制</button>
                             </li>
                             <li>
                                 <label>提交时间:</label>
@@ -39,11 +39,11 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="no_time" v-show="no_have">暂无充值记录</div>
+                    <div class="no-time" v-show="no_have">暂无充值记录</div>
                 </div>
             </div>
         </div>
-        <div slot="footer" class="example_footer">
+        <div slot="footer" class="example-footer">
 
         </div>
         </el-dialog>
@@ -53,7 +53,7 @@
 <script>
 import Clipboard from 'clipboard';
 export default {
-    name: 'rechargeRecord',
+    name: 'recharge-record',
     data(){
         return{
             rechargeActive: false,
@@ -100,7 +100,7 @@ export default {
             }
         },
         copyText(){
-            var clipboard = new Clipboard('.copy_dom')  
+            var clipboard = new Clipboard('.copy-dom')  
             clipboard.on('success', e => {  
                 this.$message.success('复制成功');
                 // 释放内存  
@@ -117,15 +117,15 @@ export default {
 </script>
 
 <style lang="less" scoped>
-#rechargeRecord{
-    .varieties_content{
+#recharge-record{
+    .varieties-content{
         width: 100%;
         height: 620px;
-        .record_left{
+        .record-left{
             .mixin_float(155px,620px,left);
             background: @color_tone20;
             font-size: @font_size20;
-            .type_active{
+            .type-active{
                 .mixin_image(url('../../static/dream/recharge/beijingkuang.png'));
             }
             ul{
@@ -152,17 +152,17 @@ export default {
                 }
             }
         }
-        .record_right{
+        .record-right{
             .mixin_float(84%,620px,right);
             padding: 30px 75px 0px 85px;
             box-sizing: border-box;
-            .record_example{
+            .record-example{
                 width: 100%;
                 height: 560px;
                 overflow-y: auto;
                 padding-right: 10px;
                 box-sizing: border-box;
-                .record_content{
+                .record-content{
                     .mixin_div(100%,120px,@color_white,@color_blueviolet,left);
                     margin-bottom: 15px;
                     ul{
@@ -197,14 +197,14 @@ export default {
                         }
                     }
                 }
-                .no_time{
+                .no-time{
                     .mixin_div(100%,80px,none,@color_dimgray,center);
                     font-size: @font_size20;
                 }
             }
         }
     }
-    .example_footer{
+    .example-footer{
         .mixin_div(100%,0px,none,auto,left);
     }
 }

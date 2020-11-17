@@ -1,5 +1,5 @@
 <template>
-    <section id="import_ex">
+    <section id="import-ex">
         <div class="frame">
             <ul>
                 <li v-for="(item,index) in loading">{{item.title}}</li>

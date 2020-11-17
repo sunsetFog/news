@@ -2,19 +2,19 @@
 <template>
     <section id="login">
         <div class="entertainment">
-            <img class="login_logo" src="../../../static/dream/login/logo2.png"/>
-            <img class="big_fish" src="../../../static/dream/login/fish.png"/>
-                <div class="sign_frame">
-                    <div class="code_and_service">
+            <img class="login-logo" src="../../../static/dream/login/logo2.png"/>
+            <img class="big-fish" src="../../../static/dream/login/fish.png"/>
+                <div class="sign-frame">
+                    <div class="code-and-service">
                         <span @click="customerService()"></span>
                     </div>
-                    <div class="form_information">
+                    <div class="form-information">
                         <form>
                         <div class="account">
                             <span>账号:</span>
                             <input v-model.trim="account_number" maxlength="20" placeholder="请输入账号"></input>
                         </div>
-                        <div class="password_enter">
+                        <div class="password-enter">
                             <span>密码:</span>
                             <!-- autocomplete="new-password"禁止浏览器自动填充到表单 
                             在登录页的时候浏览器记住了密码，如果去到新建用户页则 username 和 password 会被自动填充上去
@@ -26,12 +26,12 @@
                             </div>
                         </div>
                         </form>
-                        <div class="remember_and_forget">
+                        <div class="remember-and-forget">
                             <div class="rectangle" @click="rememberMeans()"><img v-show="remember_checked" src="../../../static/dream/login/jizhu.png"/></div>
                             <span>记住密码</span>
                             <!-- <span @click="forgetPassword">忘记密码</span> -->
                         </div>
-                        <div class="login_register">
+                        <div class="login-register">
                             <span @click="signIn"></span>
                             <span @click="rapidRegistration('register')"></span>
                         </div>
@@ -222,20 +222,20 @@ export default{
         width: 100%;
         height: 100%;
         position: relative;
-        .login_logo{
+        .login-logo{
             .mixin_img(790px;170px);
             position: absolute;
             top: 70px;
             left: 50%;
             margin-left: -395px;
         }
-        .big_fish{
+        .big-fish{
             .mixin_img(426px;487px);
             position: absolute;
             left: 0px;
             bottom: 0px;
         }
-        .sign_frame{
+        .sign-frame{
             width: 480px;
             height: 430px;
             .mixin_image(url('../../../static/dream/login/kuankuan.png'));
@@ -243,7 +243,7 @@ export default{
             top: 290px;
             left: 50%;
             margin-left: -240px;
-            .code_and_service{
+            .code-and-service{
                 width: 100%;
                 height: 40px;
                 span:nth-of-type(1){
@@ -258,12 +258,12 @@ export default{
                     .mixin_image(url('../../../static/dream/login/kefu_hover.png'));
                 }
             }
-            .form_information{
+            .form-information{
                 width: 100%;
                 height: 390px;
                 padding: 20px 30px 0px 30px;
                 box-sizing: border-box;
-                .account,.password_enter{
+                .account,.password-enter{
                     width: 100%;
                     height: 50px;
                     .mixin_image(url('../../../static/dream/login/juxingkuang.png'));
@@ -309,10 +309,10 @@ export default{
                         width: 80%;
                     }
                 }
-                .password_enter{
+                .password-enter{
                     margin-top: 15px;
                 }
-                .remember_and_forget{
+                .remember-and-forget{
                     width: 100%;
                     height: 35px;
                     position: relative;
@@ -351,7 +351,7 @@ export default{
                         color: @color_hover;
                     }
                 }
-                .login_register{
+                .login-register{
                     width: 100%;
                     height: 50px;
                     span:nth-of-type(1){

@@ -1,8 +1,8 @@
 
 <template>
-    <section id="backToTop">
+    <section id="back-to-top">
         <div style="width: 100%;margin: 15px 0px 0px 15px;height: 1500px;"></div>
-        <div @click="backTop" class="toTop">
+        <div @click="backTop" class="to-top">
             <img src="../../../../static/study/img/backToTop.png"/>
         </div>
     </section>
@@ -34,9 +34,9 @@ export default {
 </script>
 
 <style lang="less" scoped>
-#backToTop{
+#back-to-top{
     width: 100%;
-    .toTop{
+    .to-top{
         width: 50px;
         height: 50px;
         position: fixed;

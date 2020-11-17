@@ -1,23 +1,23 @@
 <template>
   <section id="home">
     <div
-      class="cover_up"
+      class="cover-up"
       :style="{height: cover_height}"
       v-show="cover_active"
       @click="judgeToken()"
     ></div>
-    <div class="header_info">
-      <div class="head_content">
+    <div class="header-info">
+      <div class="head-content">
         <div class="reserve">
           <ul>
             <li
               v-for="(item,index) in header_list"
-              :class="{'reserve_border':index!=2}"
+              :class="{'reserve-border':index!=2}"
               @click="lineMeans(index)"
             >{{item.title}}</li>
           </ul>
         </div>
-        <div class="dream_login" v-if="safeActive">
+        <div class="dream-login" v-if="safeActive">
           <input
             class="nickname"
             v-model.trim="account_number"
@@ -34,14 +34,14 @@
             autocomplete="new-password"
             @keyup.enter="signIn"
           >
-          <button class="sign_in" @click="signIn"></button>
+          <button class="sign-in" @click="signIn"></button>
           <button class="register" @click="registerMeans"></button>
         </div>
-        <div class="recharge_example" v-if="!safeActive">
-          <div class="example_contain">
+        <div class="recharge-example" v-if="!safeActive">
+          <div class="example-contain">
             <button class="drawing" @click="rechargeMeans(2)"></button>
             <button class="recharge" @click="rechargeMeans(1)"></button>
-            <span class="exit_login" @click="safeExit()">安全退出</span>
+            <span class="exit-login" @click="safeExit()">安全退出</span>
             <div class="balance">
               <span>余额&nbsp;:</span>
               <span>￥{{money}}</span>
@@ -55,17 +55,17 @@
       </div>
     </div>
 
-    <div class="navigation_bar">
-      <div class="tabs_content">
-        <div class="tabs_left">
+    <div class="navigation-bar">
+      <div class="tabs-content">
+        <div class="tabs-left">
           <img src="../../static/dream/home/logo3.png">
         </div>
-        <div class="tabs_right">
+        <div class="tabs-right">
           <ul v-if="player_info.mIsAgent">
             <li
               style="width: 14.28%;"
               v-for="(item,index) in tabs_bar"
-              :class="{'tabs_active':item.active}"
+              :class="{'tabs-active':item.active}"
               @click="tabBarChange(index,item.exhibition,item.path)"
             >{{item.title}}</li>
           </ul>
@@ -74,7 +74,7 @@
               style="width: 16.66%;"
               v-for="(item,index) in tabs_bar"
               v-if="item.title!='代理系统'"
-              :class="{'tabs_active':item.active}"
+              :class="{'tabs-active':item.active}"
               @click="tabBarChange(index,item.exhibition,item.path)"
             >{{item.title}}</li>
           </ul>
@@ -85,7 +85,7 @@
       <router-view></router-view>
     </template>
 
-    <div class="fixed_bar" v-show="fixed_state">
+    <div class="fixed-bar" v-show="fixed_state">
       <ul>
         <li
           v-for="(item,index) in fixed_bar"
@@ -454,19 +454,19 @@ export default {
 
 <style lang="less" scoped>
 #home {
-  .cover_up {
+  .cover-up {
     width: 100%;
     position: fixed;
     top: 50px;
     left: 0px;
     z-index: 999;
   }
-  .tabs_active {
+  .tabs-active {
     color: #ffea00;
     .mixin_image(url("../../static/dream/home/tabs_active.png"));
     font-size: @font_size16;
   }
-  .fixed_bar {
+  .fixed-bar {
     width: 136px;
     height: 180px;
     .mixin_image(url("../../static/dream/home/xuanfuchuang.png"));
@@ -508,11 +508,11 @@ export default {
     }
   }
 
-  .header_info {
+  .header-info {
     width: 100%;
     height: 50px;
     background: #210723;
-    .head_content {
+    .head-content {
       width: 1200px;
       height: 50px;
       margin: 0 auto;
@@ -523,7 +523,7 @@ export default {
         .mixin_float(auto, 100%, left);
         padding: 17px 0px 0px 0px;
         box-sizing: border-box;
-        .reserve_border {
+        .reserve-border {
           border-right: 1px solid @color_tone1;
         }
         ul {
@@ -543,7 +543,7 @@ export default {
           }
         }
       }
-      .dream_login {
+      .dream-login {
         .mixin_float(10px, 50px, right);
         position: relative;
         .nickname,
@@ -562,14 +562,14 @@ export default {
         .password {
           right: 188px;
         }
-        .sign_in {
+        .sign-in {
           .mixin_button(84px, 34px, none, auto);
           position: absolute;
           right: 94px;
           top: 8px;
           .mixin_image(url("../../static/dream/home/dengru_nomal.png"));
         }
-        .sign_in:hover {
+        .sign-in:hover {
           .mixin_image(url("../../static/dream/home/dengru_hover.png"));
         }
         .register {
@@ -583,10 +583,10 @@ export default {
           .mixin_image(url("../../static/dream/home/zhuce_hover.png"));
         }
       }
-      .recharge_example {
+      .recharge-example {
         .mixin_float(260px, 50px, right);
         position: relative;
-        .example_contain {
+        .example-contain {
           width: 800px;
           height: 50px;
           position: absolute;
@@ -610,7 +610,7 @@ export default {
             .mixin_div(auto, 50px, none, #732c94, left);
             float: right;
           }
-          .exit_login {
+          .exit-login {
             .mixin_span(auto, 50px, none, #eb2020, left);
             text-decoration: underline;
             float: right;
@@ -644,15 +644,15 @@ export default {
     }
   }
 
-  .navigation_bar {
+  .navigation-bar {
     width: 100%;
     height: 95px;
     .mixin_image(url("../../static/dream/home/tab_image.png"));
-    .tabs_content {
+    .tabs-content {
       width: 1200px;
       height: 95px;
       margin: 0 auto;
-      .tabs_left {
+      .tabs-left {
         .mixin_float(200px, 100%, left);
         position: relative;
         img {
@@ -662,7 +662,7 @@ export default {
           left: -150px;
         }
       }
-      .tabs_right {
+      .tabs-right {
         .mixin_float(1000px, 100%, right);
         ul {
           color: @color_white;

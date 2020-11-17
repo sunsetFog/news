@@ -6,21 +6,21 @@
         top="0.8rem"
         center>
         <div slot="title">修改头像</div>
-        <div class="varieties_content">
-            <div class="service_type">
-                <div class="user_info">
+        <div class="varieties-content">
+            <div class="service-type">
+                <div class="user-info">
                     <img :src="head"/>
                     <img :src="frame"/>
                 </div>
                 <ul>
-                    <li v-for="(item,index) in service_list" :class="{'type_active':item.active}" @click="serviceType(index)">
+                    <li v-for="(item,index) in service_list" :class="{'type-active':item.active}" @click="serviceType(index)">
                         <span>{{item.name}}</span>
                         <span v-if="item.active"></span>
                     </li>
                 </ul>
             </div>
-            <div class="picture_content">
-                <div class="head_example" v-if="portrait_index==0">
+            <div class="picture-content">
+                <div class="head-example" v-if="portrait_index==0">
                     <ul>
                         <li v-for="(item,index) in portrait_head" @click="headMeans(index)">
                             <img :src="item.url"/>
@@ -28,7 +28,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="box_example" v-if="portrait_index==1">
+                <div class="box-example" v-if="portrait_index==1">
                     <ul>
                         <li v-for="(item,index) in portrait_box" @click="boxMeans(index)">
                             <img :src="item.url"/>
@@ -36,12 +36,12 @@
                         </li>
                     </ul>
                 </div>
-                <div class="save_button">
+                <div class="save-button">
                     <button @click="savePortrait()">保存</button>
                 </div>
             </div>
         </div>
-        <div slot="footer" class="example_footer">
+        <div slot="footer" class="example-footer">
 
         </div>
         </el-dialog>
@@ -166,16 +166,16 @@ export default {
 
 <style lang="less" scoped>
 #portrait{
-    .varieties_content{
+    .varieties-content{
         width: 100%;
         height: 620px;
-        .service_type{
+        .service-type{
             .mixin_float(155px,620px,left);
             background: @color_tone20;
             font-size: @font_size20;
             padding: 40px 0px 0px 0px;
             box-sizing: border-box;
-            .user_info{
+            .user-info{
                 .mixin_div(100%,140px,none,@color_white,left);
                 position: relative;
                 cursor: pointer;
@@ -196,7 +196,7 @@ export default {
                     z-index: 2;
                 }
             }
-            .type_active{
+            .type-active{
                 .mixin_image(url('../../static/dream/recharge/beijingkuang.png'));
             }
             ul{
@@ -223,11 +223,11 @@ export default {
                 }
             }
         }
-        .picture_content{
+        .picture-content{
             .mixin_float(84%,620px,right);
             padding: 30px 120px 0px 150px;
             box-sizing: border-box;
-            .head_example{
+            .head-example{
                 width: 100%;
                 height: 420px;
                 ul{
@@ -251,7 +251,7 @@ export default {
                     }
                 }
             }
-            .box_example{
+            .box-example{
                 width: 100%;
                 height: 420px;
                 ul{
@@ -275,7 +275,7 @@ export default {
                     }
                 }
             }
-            .save_button{
+            .save-button{
                 width: 100%;
                 height: 36px;
                 margin-top: 50px;
@@ -290,7 +290,7 @@ export default {
             }
         }
     }
-    .example_footer{
+    .example-footer{
         .mixin_div(100%,0px,none,auto,left);
     }
 }

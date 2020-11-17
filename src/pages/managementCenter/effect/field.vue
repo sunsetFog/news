@@ -2,18 +2,18 @@
   <section id="field">
     <!-- :sign="item.sign"是给盒子加属性，可用于座位表标志，好知道位置点。相当于js的setAttribute('sign') -->
     <section v-for="(item,index) in article_list" :sign="item.sign">
-      <div class="wonderful_article" :class="{'active_color': item.active_color}">
-        <div class="wonderful_article_left">{{item.name}}</div>
-        <div class="wonderful_article_right" @click="modify(index)">{{item.setting}}</div>
+      <div class="wonderful-article" :class="{'active_color': item.active_color}">
+        <div class="wonderful-article-left">{{item.name}}</div>
+        <div class="wonderful-article-right" @click="modify(index)">{{item.setting}}</div>
       </div>
-      <div class="modify_content" v-if="item.setting != '设置'">
+      <div class="modify-content" v-if="item.setting != '设置'">
         修改内容-
         <div class="praise">
           <span>好评:</span>
           <button
             style="margin:5px 0px 0px 10px;"
             v-for="(term,status) in bright_list"
-            :class="{'active_praise': term.active}"
+            :class="{'active-praise': term.active}"
             @click="praise(status)"
           >{{term.name}}</button>
         </div>
@@ -92,17 +92,17 @@ export default {
   .active_color {
     border-bottom: 1px solid #ebeef5;
   }
-  .wonderful_article {
+  .wonderful-article {
     width: 100%;
     height: 40px;
     line-height: 40px;
-    .wonderful_article_left {
+    .wonderful-article-left {
       width: 80%;
       height: 40px;
       float: left;
       text-indent: 20px;
     }
-    .wonderful_article_right {
+    .wonderful-article-right {
       width: 20%;
       height: 40px;
       float: right;
@@ -112,14 +112,14 @@ export default {
       cursor: pointer;
     }
   }
-  .modify_content {
+  .modify-content {
     width: 100%;
     height: 80px;
     padding: 5px 20px 0px 20px;
     box-sizing: border-box;
     border-bottom: 1px solid #ebeef5;
     .praise {
-      .active_praise {
+      .active-praise {
         background: #2e163d;
         color: white;
       }

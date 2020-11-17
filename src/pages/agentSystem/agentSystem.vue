@@ -1,9 +1,9 @@
 <template>
-<section id="agent_system">
-    <div class="system_example">
-        <img class="big_fish" src="../../../static/dream/login/fish.png" @click="fishMeans()"/>
-        <div class="manage_content">
-            <iframe :src="agentSrc" id="mapFrame" class="mapFrame" ref="mapFrame" @load="systemMeans()"></iframe>
+<section id="agent-system">
+    <div class="system-example">
+        <img class="big-fish" src="../../../static/dream/login/fish.png" @click="fishMeans()"/>
+        <div class="manage-content">
+            <iframe :src="agentSrc" id="map-frame" class="map-frame" ref="map-frame" @load="systemMeans()"></iframe>
         </div>
     </div>
     <footers :vip_foot="false"></footers>
@@ -13,7 +13,7 @@
 <script>
 import footers from '../../components/footer.vue';
 export default{
-    name: 'agent_system',
+    name: 'agent-system',
     components: {footers},
     data(){
         return{
@@ -50,21 +50,21 @@ export default{
 </script>
 
 <style lang="less" scoped>
-#agent_system{
+#agent-system{
     width: 100%;
     height: 100%;
-    .system_example{
+    .system-example{
         width: 100%;
         height: 1200px;
         .mixin_image(url('../../../static/dream/center/bg-guanli.jpg'));
         position: relative;
-        .big_fish{
+        .big-fish{
             .mixin_img(426px;487px);
             position: absolute;
             left: 0px;
             bottom: 0px;
         }
-        .manage_content{
+        .manage-content{
             width: 1200px;
             height: 1200px;
             background: rgba(88,51,82,0.6);
@@ -76,7 +76,7 @@ export default{
             margin-left: -600px;
             padding: 45px 225px 0px 225px;
             box-sizing: border-box;
-            .mapFrame{
+            .map-frame{
                 width: 100%;
                 height: 100%;
                 border: none;

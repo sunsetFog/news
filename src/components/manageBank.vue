@@ -1,25 +1,25 @@
 <template>
-    <section id="manageBank">
+    <section id="manage-bank">
         <el-dialog
         :visible.sync="rechargeActive"
         width="4.07rem"
         top="1.25rem"
         center>
         <div slot="title">管理银行卡</div>
-        <div class="varieties_content">
-            <div class="account_example">
-                <div class="account_list" v-for="(item,index) in bank_list">
+        <div class="varieties-content">
+            <div class="account-example">
+                <div class="account-list" v-for="(item,index) in bank_list">
                     <label>卡{{index+1}}:</label>
                     <div><span>{{item.bank_name}}</span><span>{{item.cardno}}</span></div>
                     <img src="../../static/dream/recharge/xiaochu.png" @click="deleteBank(index)"/>
                 </div>
             </div>
 
-            <div class="confirm_add">
+            <div class="confirm-add">
                 <button @click="sureAdd()">添加银行卡</button>
             </div>
         </div>
-        <div slot="footer" class="example_footer">
+        <div slot="footer" class="example-footer">
 
         </div>
         </el-dialog>
@@ -28,7 +28,7 @@
 
 <script>
 export default {
-    name: 'manageBank',
+    name: 'manage-bank',
     data(){
         return{
             rechargeActive: false,
@@ -71,17 +71,17 @@ export default {
 </script>
 
 <style lang="less" scoped>
-#manageBank{
-    .varieties_content{
+#manage-bank{
+    .varieties-content{
         width: 100%;
         height: 465px;
         padding: 10px 40px 0px 40px;
         box-sizing: border-box;
-        .account_example{
+        .account-example{
             width: 100%;
             height: 330px;
             border-bottom: 1px solid @color_blueviolet;
-            .account_list{
+            .account-list{
                 width: 100%;
                 height: 45px;
                 margin-top: 20px;
@@ -118,7 +118,7 @@ export default {
             }
         }
 
-        .confirm_add{
+        .confirm-add{
             width: 100%;
             height: 35px;
             margin-top: 40px;
@@ -133,7 +133,7 @@ export default {
             }
         }
     }
-    .example_footer{
+    .example-footer{
         .mixin_div(100%,0px,none,auto,left);
     }
 }

@@ -1,10 +1,10 @@
 <template>
 <section id="management">
-    <div class="example_frame">
-        <img class="big_fish" src="../../../static/dream/login/fish.png"/>
-        <div class="manage_content">
+    <div class="example-frame">
+        <img class="big-fish" src="../../../static/dream/login/fish.png"/>
+        <div class="manage--content">
             <router-view v-if="!manage_state"></router-view>
-            <div class="manage_content_left" v-if="manage_state">
+            <div class="manage-content-left" v-if="manage_state">
                 <el-scrollbar>
                     <el-menu
                     :router="true"
@@ -18,11 +18,11 @@
                     active-text-color="#ffd04b"
                     >
                     
-                    <el-menu-item index="/mcenter/crux"><div style="width: 100%;height: 100%;"><img class="icon_url_margin" src="../../../static/dream/center/shezhi.png"/>管理中心</div></el-menu-item>
+                    <el-menu-item index="/mcenter/crux"><div style="width: 100%;height: 100%;"><img class="icon-url-margin" src="../../../static/dream/center/shezhi.png"/>管理中心</div></el-menu-item>
 
                     <el-submenu :index="item.key" :key="item.key" v-for="(item,index) in menuList">
                         <template slot="title">
-                        <img class="icon_url_margin" :src="item.icon"/>
+                        <img class="icon-url-margin" :src="item.icon"/>
                         <span>{{item.label}}</span>
                         </template>
 
@@ -31,12 +31,12 @@
                             <section v-if="term.effect.length!=0">
                                 <el-submenu :index="term.key">
                                 <template slot="title">
-                                <img class="icon_url_margin" :src="term.icon"/>
+                                <img class="icon-url-margin" :src="term.icon"/>
                                 <span>{{term.label}}</span>
                                 </template>
                                 <section v-for="(val,index) in term.effect">
                                     <el-menu-item  :index="val.path">
-                                        <img class="icon_url_margin" :src="val.icon"/>
+                                        <img class="icon-url-margin" :src="val.icon"/>
                                         {{val.label}}
                                     </el-menu-item>
                                 </section>
@@ -46,7 +46,7 @@
 
                             <section v-else>
                                 <el-menu-item :index="term.path">
-                                    <img class="icon_url_margin" :src="term.icon"/>
+                                    <img class="icon-url-margin" :src="term.icon"/>
                                     {{term.label}}
                                 </el-menu-item>
                             </section>
@@ -59,7 +59,7 @@
                 </el-scrollbar>
             
             </div>
-            <div class="manage_content_right" v-if="manage_state">
+            <div class="manage-content-right" v-if="manage_state">
                 <router-view></router-view>
             </div>
         </div>
@@ -153,18 +153,18 @@ export default{
 <style lang="less" scoped>
 #management{
     width: 100%;
-    .example_frame{
+    .example-frame{
         width: 100%;
         height: 1200px;
         .mixin_image(url('../../../static/dream/center/bg-guanli.jpg'));
         position: relative;
-        .big_fish{
+        .big-fish{
             .mixin_img(426px;487px);
             position: absolute;
             left: 0px;
             bottom: 0px;
         }
-        .manage_content{
+        .manage--content{
             width: 1200px;
             height: 1200px;
             background: rgba(88,51,82,0.6);
@@ -176,19 +176,19 @@ export default{
             margin-left: -600px;
             padding: 45px 43px 0px 43px;
             box-sizing: border-box;
-            .manage_content_left{
+            .manage-content-left{
                 .mixin_float(230px,auto,left);
                 background: #513663;
                 margin-right: 40px;
                 min-height: 1130px;
                 text-align: left;
-                .icon_url_margin{
+                .icon-url-margin{
                     .mixin_img(20px,20px);
                     margin-right: 11px;
                     margin-top: -5px;
                 }
             }
-            .manage_content_right{
+            .manage-content-right{
                 .mixin_float(840px,1130px,right);
                 overflow-x: hidden;
             }

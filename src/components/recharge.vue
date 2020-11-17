@@ -1,16 +1,16 @@
 <template>
-    <section id="game_recharge">
+    <section id="game-recharge">
         <el-dialog
         :visible.sync="rechargeActive"
         width="5.73rem"
         top="0.8rem"
         center>
         <div slot="title">充值</div>
-        <div class="varieties_content">
-            <div class="fashion_way">
-                <div class="payment_type">
+        <div class="varieties-content">
+            <div class="fashion-way">
+                <div class="payment-type">
                     <ul>
-                        <li v-for="(item,index) in pay_types" :class="{'type_active':item.active}" @click="paymentType(index)">
+                        <li v-for="(item,index) in pay_types" :class="{'type-active':item.active}" @click="paymentType(index)">
                             <span>{{item.name}}</span>
                             <span v-if="item.active"></span>
                         </li>
@@ -18,36 +18,36 @@
                 </div>
             </div>
                 
-            <div class="payment_content">
-                <div class="payment_methods">
+            <div class="payment-content">
+                <div class="payment-methods">
                     <ul>
-                        <li v-for="(item,index) in payment_list" :class="{'mode_active':item.active}" @click="modeMeans(index)">{{item.name}}</li>
+                        <li v-for="(item,index) in payment_list" :class="{'mode-active':item.active}" @click="modeMeans(index)">{{item.name}}</li>
                     </ul>
-                    <div class="no_time" v-show="no_have">暂无充值渠道</div>
+                    <div class="no-time" v-show="no_have">暂无充值渠道</div>
                 </div>
-                <div class="recharge_money">
+                <div class="recharge-money">
                     <span>充值金额:</span>
                     <input type="text" v-model.trim="money" maxlength="20" placeholder="请按充值范围输入您的充值金额"/>
                     <img src="../../static/dream/recharge/xiaochu.png" @click="money = ''"/>
                 </div>
-                <div class="recharge_range">充值范围{{min_limit}}-{{max_limit}}元,比例为1:1</div>
-                <div class="money_example">
+                <div class="recharge-range">充值范围{{min_limit}}-{{max_limit}}元,比例为1:1</div>
+                <div class="money-example">
                     <ul>
                         <li v-for="(item,index) in money_list" :style="{padding: item.padding}" @mousedown="moneyDown(index)" @mouseup="moneyUp(index)">
                             <span><img :src="item.url"/></span>
                         </li>
                     </ul>
                 </div>
-                <div class="payment_button">
+                <div class="payment-button">
                     <button @click="confirmRecharge()">确认充值</button>
                 </div>
-                <div class="position_record">
+                <div class="position-record">
                     <span></span>
                     <button @click="rechargeRecord()">充值记录</button>
                 </div>
             </div>
         </div>
-        <div slot="footer" class="example_footer">
+        <div slot="footer" class="example-footer">
 
         </div>
         </el-dialog>
@@ -56,7 +56,7 @@
 
 <script>
 export default {
-    name: 'game_recharge',
+    name: 'game-recharge',
     data(){
         return{
             rechargeActive: false,
@@ -198,14 +198,14 @@ export default {
 </script>
 
 <style lang="less" scoped>
-#game_recharge{
-    .varieties_content{
+#game-recharge{
+    .varieties-content{
         width: 100%;
         height: 620px;
-        .fashion_way{
+        .fashion-way{
             .mixin_float(190px,620px,left);
             overflow: auto;
-            .payment_type{
+            .payment-type{
                 width: 155px;
                 min-height: 620px;
                 float: left;
@@ -213,7 +213,7 @@ export default {
                 font-size: @font_size20;
                 padding-bottom: 115px;
                 box-sizing: border-box;
-                .type_active{
+                .type-active{
                     .mixin_image(url('../../static/dream/recharge/beijingkuang.png'));
                 }
                 ul{
@@ -243,17 +243,17 @@ export default {
                 }
             }
         }
-        .payment_content{
+        .payment-content{
             .mixin_float(82%,620px,right);
             padding: 0px 35px 0px 25px;
             box-sizing: border-box;
-            .payment_methods{
+            .payment-methods{
                 width: 100%;
                 height: 210px;
                 padding: 30px 0px 0px 0px;
                 box-sizing: border-box;
                 font-size: @font_size20;
-                .mode_active{
+                .mode-active{
                     .mixin_image(url('../../static/dream/recharge/kuangkuang.png'));
                 }
                 ul{
@@ -267,12 +267,12 @@ export default {
                         cursor: pointer;
                     }
                 }
-                .no_time{
+                .no-time{
                     .mixin_div(100%,80px,none,@color_dimgray,center);
                     font-size: @font_size20;
                 }
             }
-            .recharge_money{
+            .recharge-money{
                 width: 100%;
                 height: 50px;
                 position: relative;
@@ -300,13 +300,13 @@ export default {
                     top: 4px; 
                 }
             }
-            .recharge_range{
+            .recharge-range{
                 .mixin_div(100%,50px,none,@color_blueviolet,center);
                 padding-right: 120px;
                 box-sizing: border-box;
                 font-size: @font_size16;
             }
-            .money_example{
+            .money-example{
                 width: 100%;
                 height: 180px;
                 padding-left: 90px;
@@ -329,7 +329,7 @@ export default {
                     }
                 }
             }
-            .payment_button{
+            .payment-button{
                 width: 100%;
                 height: 36px;
                 margin-top: 50px;
@@ -342,7 +342,7 @@ export default {
                     background: @color_white2_hover;
                 }
             }
-            .position_record{
+            .position-record{
                 width: 100%;
                 height: 30px;
                 position: relative;
@@ -361,7 +361,7 @@ export default {
             }
         }
     }
-    .example_footer{
+    .example-footer{
         .mixin_div(100%,0px,none,auto,left);
     }
 }
