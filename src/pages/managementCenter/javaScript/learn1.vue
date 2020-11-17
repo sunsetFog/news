@@ -17,7 +17,7 @@ export default {
         }
     },
     mounted(){//可以dom操作
-        this.demo5();
+        this.demo1();
     },
     methods: {
         demo1(){
@@ -31,7 +31,8 @@ export default {
             // 注意:1.js不区分单双引号,但是双引号不能包双引号，单引号不能包单引号
             let imgName = "flower";
             let src = "../img/" + imgName + ".png";
-            console.log('变量与字符串拼接写法',src);
+            let src2 = `../img/${imgName}.png`
+            console.log('两种变量与字符串拼接写法', src, src2);
 
             // 事件
 			// 1.onload:用户打开页面执行该事件，放在body内部
@@ -154,16 +155,16 @@ export default {
             // window.close()    关闭窗口
             
             // window.location:获取浏览器URL信息(window可省略)
-            console.log('URL的文件路径',location.pathname);
-            console.log('URL的完整路径',location.href);//跳转  location.href = "http://www.jd.com";
-            console.log('主机域名',location.hostname);
-            console.log('URL中的端口号',location.port);
-            console.log('主机域名和端口号',location.host);
-            console.log('web协议(一般为http或者https，加s的安全性比较高)',location.protocol);
-            console.log('截取URL中？后面的字符串',location.search);
+            console.log('URL的完整路径',location.href);// http://localhost:9090/root/mcenter/learn1?id=128  用于跳转 location.href = "http://www.jd.com";
+            console.log('URL的文件路径',location.pathname);// /root/mcenter/learn1
+            console.log('主机域名',location.hostname);// localhost
+            console.log('URL中的端口号',location.port);// 9090
+            console.log('主机域名和端口号',location.host);// localhost:9090
+            console.log('web协议(一般为http或者https，加s的安全性比较高)',location.protocol);// http:
+            console.log('截取URL中？后面的字符串',location.search);// ?id=128
             // location.assign("http://www.jd.com");//加载或者跳转
             // location.replace("http://www.jd.com");//加载或者跳转,跳转后无法退回到原网页
-            // location.reload();重定向网页,重新加载
+            // location.reload();重定向网页,刷新
 
             // window.navigator:获取浏览器本身的信息
             console.log('浏览器的名称',navigator.appName);

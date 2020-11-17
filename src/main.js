@@ -5,8 +5,6 @@ import App from './App'
 import iView from 'iview'
 import 'iview/dist/styles/iview.css'
 import router from './router'
-import axios from 'axios';
-Vue.prototype.$axios = axios;
 import globalMeans from './public/index.js';
 Vue.prototype.$means = globalMeans;
 import 'babel-polyfill'
@@ -14,15 +12,13 @@ Vue.config.productionTip = false
 // es6Promise .polyfill();
 Vue.use(iView);
 
-import overall from '../static/capital/overall.json'
-let domain;
-if (process.env.NODE_ENV === 'development') {
-    domain = overall.development;
-} else {
-    domain = location.protocol + '//' + window.location.host;
+
+import allKey from '../static/capital/allKey.json'
+// import '../mockjs/index'; // 不能用if动态加载js
+if (allKey['key']) {
+  require('../mockjs/index') // 可以动态加载，不报错
 }
-Vue.prototype.$domain = domain;
-//console.log('domain',domain);
+
 
 
 import ElementUI from 'element-ui';
@@ -46,7 +42,7 @@ Vue.use(VueCookies)
 import apiHttp from './api/http.js';
 Vue.prototype.$apihttp = apiHttp;
 
-import '@/mockjs'; // mock数据
+
 
 
 import recharge from './components/recharge.vue';

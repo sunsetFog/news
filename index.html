@@ -72,7 +72,6 @@
             text-align: center;
             font-family:"SimHei";
             font-size: 20px;
-            /*font-weight:bold*/
         }
 
         @-webkit-keyframes stretchdelay {
@@ -160,7 +159,7 @@
     }
 
     function webLoginCallback() {
-        //console.info("callback:",web.game_getPlayer())
+
     }
     
     function web_gameInited() {
@@ -176,7 +175,6 @@
     }
     //进入场景
     function web_enterScene(type){
-        //console.info("enterScene",type)
         sceneWeb.type = type;
     }
     //服务器错误信息提示
@@ -185,7 +183,6 @@
         errorCodeGame.code = data.code;
         if(data.description&&data.description!="请求超时！"){
             errorCodeGame.description = data.description;
-            // alert("Error:" + data.description);
         }
         // 1001 服务器内部错误(服务器繁忙，稍后再试)
         // 1002 游戏维护中
@@ -210,12 +207,10 @@
     }
     //跑马灯
     function web_broadcast(data){
-        // console.log("web_broadcast",data);
         errorCodeGame.move = data.mTxtMsg;
     }
     // 游戏断开连接
     function web_socketClose(){
-        //console.log('network@');
         errorCodeGame.socket = 'socket';
         // let network =  confirm('服务器连接已断开，是否重连？');
         // if(network==true){
@@ -281,18 +276,9 @@
         var xhr = new XMLHttpRequest();
         xhr.open('GET', './static/manifest.json?v=' + Math.random(), true);
         xhr.addEventListener("load", function () {
-            // //console.log('xml',xhr)
             var manifest = JSON.parse(xhr.response);
             var list = manifest.initial.concat(manifest.game);
             loadScript(list, function () {
-                /**
-                 * {
-                 * "renderMode":, //Engine rendering mode, "canvas" or "webgl"
-                 * "audioType": 0 //Use the audio type, 0: default, 2: web audio, 3: audio
-                 * "antialias": //Whether the anti-aliasing is enabled in WebGL mode, true: on, false: off, defaults to false
-                 * "calculateCanvasScaleFactor": //a function return canvas scale factor
-                 * }
-                 **/
                 egret.runEgret({ renderMode: "webgl", audioType: 0, calculateCanvasScaleFactor:function(context) {
                     var backingStore = context.backingStorePixelRatio ||
                         context.webkitBackingStorePixelRatio ||

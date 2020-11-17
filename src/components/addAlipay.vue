@@ -1,12 +1,12 @@
 <template>
-    <section id="addAlipay">
+    <section id="add-alipay">
         <el-dialog
         :visible.sync="rechargeActive"
         width="4.07rem"
         top="1.25rem"
         center>
         <div slot="title">绑定支付宝</div>
-        <div class="varieties_content">
+        <div class="varieties-content">
             <div class="account_name">
                 <label>支付宝账号:</label>
                 <input type="text" maxlength="25" v-model.trim="account" placeholder="请输入支付宝账号"/>
@@ -29,7 +29,7 @@
 
 <script>
 export default {
-    name: 'addAlipay',
+    name: 'add-alipay',
     data(){
         return{
             rechargeActive: false,
@@ -65,8 +65,8 @@ export default {
 </script>
 
 <style lang="less" scoped>
-#addAlipay{
-    .varieties_content{
+#add-alipay{
+    .varieties-content{
         width: 100%;
         height: 465px;
         padding: 45px 40px 0px 40px;

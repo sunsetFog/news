@@ -30,8 +30,8 @@ export default {
 					{"name":"Jhon","age":20}
 				]
             var jsonStr = '{"name": "Jhon","age":18}';//字符串Json   后台有时给这种，注意打印看清类型
-            console.log('字符串解析为json对象',JSON.parse(jsonStr));// 或者 key是字符串,就转换
-            console.log('将json对象转为json字符串',JSON.stringify(jsonObj));
+            console.log('字符串解析为json对象',JSON.parse(jsonStr));// JSON.parse(必须是字符串)
+            console.log('将json对象转为json字符串',JSON.stringify(jsonObj));// JSON.stringify(必须是对象)
             console.log('字符串解析为json对象',eval('('+jsonStr+')'));//不推荐，存在安全隐患
         },
         demo2(){
@@ -64,8 +64,8 @@ export default {
             // 3  数组.shift()      删除并返回数组的第一个元素
             // 4  数组.push(可以是对象)     在数组末尾添加一个或多个元素,并且返回数组长度
             // 5  数组.unshift(可以是对象)     在数组的前面添加一个或多个元素，并且返回数组长度
-            // 6  数组.splice(下标)     删除或者添加指定的元素、、、删除并返回
-            //     如果只有一个参数，表示从当前下标一直删到最后
+            // 6  数组.splice(下标,1)     删除或者添加指定的元素、、、删除并返回
+            //     注意：如果只有一个参数，表示从当前下标一直删到最后
             //     三个参数，第三个可选
             //     第一个参数代表需要删除的起始下标
             //     第二个参数代表需要删除的个数，0代表不删，1代表删除一个....

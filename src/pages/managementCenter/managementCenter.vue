@@ -78,12 +78,13 @@ export default{
             manage_state: true,//管理中心
             menuList: [
                 {key: '1',label: '标签样式',path: '',icon: '../../../static/dream/center/shouyi.png',effect:[
-                    {key:'1-2-1',label: '样式',path: '/mcenter/css',icon: '../../../static/dream/center/gonggao.png',effect:[]},
-                    {key:'1-2-2',label: '标签',path: '/mcenter/tags',icon: '../../../static/dream/center/gonggao.png',effect:[]},
-                    {key:'1-2-3',label: 'flex弹性布局',path: '/mcenter/flex',icon: '../../../static/dream/center/gonggao.png',effect:[]},
+                    {key:'1-2-1',label: '代码规范',path: '/mcenter/standard',icon: '../../../static/dream/center/gonggao.png',effect:[]},
+                    {key:'1-2-2',label: '样式',path: '/mcenter/css',icon: '../../../static/dream/center/gonggao.png',effect:[]},
+                    {key:'1-2-3',label: '标签',path: '/mcenter/tags',icon: '../../../static/dream/center/gonggao.png',effect:[]},
+                    {key:'1-2-4',label: 'flex弹性布局',path: '/mcenter/flex',icon: '../../../static/dream/center/gonggao.png',effect:[]},
                 ]},
                 {key: '2',label: 'javaScript',path: '',icon: '../../../static/dream/center/caiwu.png',effect:[
-                    {key:'2-2-1',label: '必学1',path: '/mcenter/learn1',icon: '../../../static/dream/center/wanjia.png',effect:[]},
+                    {key:'2-2-1',label: '必学1',path: '/mcenter/learn1?id=128',icon: '../../../static/dream/center/wanjia.png',effect:[]},
                     {key:'2-2-2',label: '必学2',path: '/mcenter/learn2',icon: '../../../static/dream/center/wanjia.png',effect:[]},
                     {key:'2-2-3',label: '必学3',path: '/mcenter/learn3',icon: '../../../static/dream/center/wanjia.png',effect:[]},
                     {key:'2-2-4',label: '处理数据',path: '/mcenter/processing',icon: '../../../static/dream/center/wanjia.png',effect:[]},

@@ -156,7 +156,7 @@ export default{
 					smscode: that.verify_code,
                     agentorg: window.location.host
 			}
-			that.$axios.post(that.$domain + '/web/player/safetyreg',json).then(res=>{
+			that.$apihttp.post('/web/player/safetyreg',json).then(res=>{
                 //console.log('success_register',res);
                 if(res.data.code==0){
                     that.$router.push({path: '/login'});
@@ -177,7 +177,7 @@ export default{
             let json = {
 				cellphone: that.account_number
 			}
-			that.$axios.post(that.$domain + '/web/player/getmobilecode',json).then(res=>{
+			that.$apihttp.post('/web/player/getmobilecode',json).then(res=>{
                 //console.log('success_code',res,typeof res.data);
                 if(typeof res.data=='string'){
                     that.verify_time = 60;

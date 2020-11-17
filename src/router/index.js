@@ -33,6 +33,7 @@ export default new Router({
           children: [
             { path: 'crux', name: 'crux', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/crux.vue'], resolve) },
 
+            { path: 'standard', name: 'standard', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/tagStyle/standard.vue'], resolve) },
             { path: 'css', name: 'css', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/tagStyle/css.vue'], resolve) },
             { path: 'tags', name: 'tags', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/tagStyle/tags.vue'], resolve) },
             { path: 'flex', name: 'flex', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/tagStyle/flex.vue'], resolve) },

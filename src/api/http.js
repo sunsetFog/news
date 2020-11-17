@@ -1,56 +1,74 @@
 import axios from 'axios'
 import { Message, MessageBox } from 'element-ui'
-import router from '@/router'
+import router from '@/router' // 用于路由跳转 router.push({path: '/login'})
+// import means from '../means/index'
+import allKey from '../../static/capital/allKey.json'
+
+let domain
+if (process.env.NODE_ENV === 'development') { // 开发环境
+    if (allKey['key']) {
+        domain = allKey['mock-url']
+    } else {
+        domain = allKey['dev-url']
+    }
+} else if (process.env.NODE_ENV === 'production') { // 生产环境
+    domain = allKey['prod-url']
+    // domain = location.protocol + '//' + window.location.host;
+}
 
 // 创建axios实例
-axios.defaults.withCredentials = true
 const service = axios.create({
-    // baseURL: 'http://10.1.5.11:8080/', // 开发环境的请求域名，不需要设在这（后台给）
+    baseURL: domain, // 请求域名设置
     // 请求超时时间
-    timeout: 10000,
-    withCredentials: true, // 允许携带cookie
+    timeout: 10000, // 网络超时时间
+    withCredentials: false, // 是否允许携带cookie
     headers: {
         'Content-Type': 'application/json',// 请求头格式
     }
 })
-service.$source = axios.CancelToken.source()
-// request拦截器
+
+// 前端的Request Headers设置，对应后台的 Response Headers设置    (容易引起跨域)
 service.interceptors.request.use(config => {
-    config.headers.common['Access-Control-Allow-Origin'] = '*';// 允许所有来源访问(跨域时，后台设)
-    config.cancelToken = service.$source.token;// 取消重复请求
-    if (sessionStorage.getItem('token')) {
-        config.headers['H-Token'] = sessionStorage.getItem('token');// header里存token,登录接口获取token并session缓存token,每一次请求后台都可获取(token是判断是否登陆的状态,不能把中文存在header)
-    }
+    config.headers['Access-Control-Allow-Origin'] = '*';// 允许所有来源访问(跨域时，关键是后台设，前端也可以设置)
+    config.cancelToken = axios.CancelToken.source().token;// 取消重复请求
+    // header里存token,前端必然传参(token可以判断登陆的状态,不能存中文)
+    // token的获取：1.访问链接上的参数 2.浏览器缓存里 3.直接在登录接口获取
+    // config.headers['tgticket'] = means.getQuery('tgticket');
     return config
 }, error => {
     Promise.reject(error)
 })
 
-// respone拦截器
-service.interceptors.response.use(response => {//以下根据后台状态修改
-    // console.log('Hk-拦截器', response);
-    return response.data;//成功回调（这里return,以下代码不执行）
-    
-    if (!response.data.code) {//判断code是否为null,或undefined,是就返回false,所以要加非！
-        Message({ message: '返回的code值找不到', type: 'error', duration: 3000 });
-        return Promise.reject(response);//捕捉异常,失败回调
+// 接口拦截器 (可以控制成功回调和失败回调)
+service.interceptors.response.use(response => {
+    // console.log('后台返回的数据', response);
+    if (response.data.data === 'checkToken') {
+        Message.error('登陆过期！');
+        return Promise.reject(response); // 失败回调,捕捉异常
     } else {
-        let code = response.data.code;// code码 1001会话过期, 1002无权限, 1003其他客户端登录了
-        if ([1001, 1003].indexOf(code) > -1) {
-            MessageBox.alert(response.data.message, {
-                confirmButtonText: '确定',
-                callback: action => {
-                    router.push({path: '/login'});//路由跳转
-                }
-            })
-            return Promise.reject(response)
-        } else if ([1002].indexOf(code) > -1) {
-            Message({ message: '无权限', type: 'error', duration: 3000 })
-            return Promise.reject(response)
-        } else {
-            return response.data;//成功回调
-        }
+        return response.data; // 成功回调
     }
+
+    // if (!response.data.code) {//判断code是否为null,或undefined,是就返回false,所以要加非！
+    //     Message({ message: '返回的code值找不到', type: 'error', duration: 3000 });
+    //     return Promise.reject(response);// 失败回调,捕捉异常
+    // } else {
+    //     let code = response.data.code;// code码 1001会话过期, 1002无权限, 1003其他客户端登录了
+    //     if ([1001, 1003].indexOf(code) > -1) {
+    //         MessageBox.alert(response.data.message, {
+    //             confirmButtonText: '确定',
+    //             callback: action => {
+    //                 router.push({path: '/login'});//路由跳转
+    //             }
+    //         })
+    //         return Promise.reject(response)
+    //     } else if ([1002].indexOf(code) > -1) {
+    //         Message({ message: '无权限', type: 'error', duration: 3000 })
+    //         return Promise.reject(response)
+    //     } else {
+    //         return response.data;//成功回调
+    //     }
+    // }
 }, error => {
     Message({ message: error.message, type: 'error', duration: 5000 })
     return Promise.reject(error)

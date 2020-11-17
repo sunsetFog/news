@@ -30,6 +30,14 @@ npm test
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 
+|- src/  --------------------- 项目源代码
+    |- App.vue
+    |- main.js  -------------- 入口文件
+|- .babelrc  ----------------- babel 配置文件
+|- index.html  --------------- HTML 模板
+|- package.json  ------------- npm 配置文件
+
+
 vue-cli（vue脚手架）详细教程     https://www.cnblogs.com/fengzhenxiong/p/10213198.html
 1.全局安装vue-cli
 cnpm install --global vue-cli
