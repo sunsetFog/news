@@ -1,1 +1,0 @@
-{"width":256,"imagePath":"bullboom_tex.png","height":256,"name":"bullboom","SubTexture":[{"width":168,"y":82,"height":63,"name":"fire","x":1},{"frameHeight":81,"y":1,"frameX":-2,"width":183,"frameY":-1,"height":79,"name":"bgboom","frameWidth":186,"x":1},{"frameHeight":40,"y":147,"frameX":0,"width":130,"frameY":0,"height":39,"name":"bullboom","frameWidth":131,"x":1}]}

@@ -1,9 +1,0 @@
-{"file":"ui_set.png","frames":{
-"common_ui_help":{"x":1,"y":359,"w":108,"h":55,"offX":0,"offY":0,"sourceW":108,"sourceH":55},
-"common_ui_online":{"x":169,"y":1,"w":78,"h":81,"offX":0,"offY":0,"sourceW":78,"sourceH":81},
-"common_ui_record":{"x":117,"y":358,"w":114,"h":53,"offX":0,"offY":0,"sourceW":114,"sourceH":53},
-"common_ui_return":{"x":1,"y":302,"w":114,"h":55,"offX":0,"offY":0,"sourceW":114,"sourceH":55},
-"common_ui_set":{"x":117,"y":302,"w":115,"h":54,"offX":0,"offY":0,"sourceW":115,"sourceH":54},
-"common_ui_tbd":{"x":1,"y":1,"w":166,"h":299,"offX":0,"offY":0,"sourceW":166,"sourceH":299},
-"common_ui_xl":{"x":169,"y":84,"w":78,"h":80,"offX":0,"offY":0,"sourceW":78,"sourceH":80},
-"common_ui_xlh":{"x":169,"y":166,"w":80,"h":78,"offX":0,"offY":0,"sourceW":80,"sourceH":78}}}

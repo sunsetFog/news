@@ -1,8 +1,0 @@
-{"file":"qznn_room.png","frames":{
-"qzbull_ui_1score":{"x":1482,"y":9,"w":317,"h":441,"offX":0,"offY":2,"sourceW":322,"sourceH":444},
-"qzbull_ui_2score":{"x":1477,"y":468,"w":312,"h":441,"offX":5,"offY":2,"sourceW":322,"sourceH":444},
-"qzbull_ui_3score":{"x":1147,"y":9,"w":317,"h":441,"offX":0,"offY":2,"sourceW":322,"sourceH":444},
-"qzbull_ui_4score":{"x":9,"y":657,"w":312,"h":441,"offX":5,"offY":2,"sourceW":322,"sourceH":444},
-"qzbull_ui_5score":{"x":1147,"y":468,"w":312,"h":444,"offX":5,"offY":0,"sourceW":322,"sourceH":444},
-"qzbull_ui_hallbg":{"x":9,"y":9,"w":1120,"h":630,"offX":0,"offY":0,"sourceW":1120,"sourceH":630},
-"qzbull_ui_words":{"x":339,"y":657,"w":473,"h":117,"offX":0,"offY":0,"sourceW":473,"sourceH":117}}}
