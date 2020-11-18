@@ -5,8 +5,6 @@ import App from './App'
 import iView from 'iview'
 import 'iview/dist/styles/iview.css'
 import router from './router'
-import globalMeans from './public/index.js';
-Vue.prototype.$means = globalMeans;
 import 'babel-polyfill'
 Vue.config.productionTip = false
 // es6Promise .polyfill();
@@ -16,7 +14,7 @@ Vue.use(iView);
 import allKey from '../static/capital/allKey.json'
 // import '../mockjs/index'; // 不能用if动态加载js
 if (allKey['key']) {
-  require('../mockjs/index') // 可以动态加载，不报错
+  require('../database/index') // 可以动态加载，不报错
 }
 
 
@@ -27,6 +25,8 @@ Vue.use(ElementUI);
 
 import '../static/capital/flexible.js';
 
+import means from './public/index.js';
+Vue.prototype.$means = means;
 import store from './vuex/vuex.js';
 // Vue.prototype.$store = store;
 

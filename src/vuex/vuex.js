@@ -3,8 +3,8 @@ import Vuex from 'vuex';
 Vue.use(Vuex);
 
 
-import pool from './modules/pool';
-import player from './modules/player';
+import pool from './modular/pool';
+import player from './modular/player';
 
 
 export default new Vuex.Store({
