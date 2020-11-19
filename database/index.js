@@ -25,27 +25,27 @@ Mock.mock(allKey['mock-url'] + "/store/goods-list", "post", shopAPI.store);
  * 查询该单条数据
  * @param { goods_id: '' }  商品id
  */
-Mock.mock(allKey['mock-url'] + "/store/goods-detail", "post", shopAPI.is_single);
+Mock.mock(allKey['mock-url'] + "/store/goods-detail", "post", shopAPI.isSingle);
 /**
  * 数据的删除操作
  * @param { goods_id: '' }  商品id
  */
-Mock.mock(allKey['mock-url'] + "/store/destroy-goods", "get", shopAPI.is_delete);
+Mock.mock(allKey['mock-url'] + "/store/destroy-goods", "get", shopAPI.isDelete);
 /**
  * 数据的添加操作
  * @param store_id: 12,(店铺id)title: '',(商品名称)company: '',(商品单位)category_pid: '',(商品分类一级id)category_cid: '',(商品分类二级id)thumb: '../../../../static/meitu/dian/lizhi.jpg',(商品图片)price: '',(商品现价)original_price: '',(商品原价)cost: '',(商品成本)stock: '',(库存)virtual_sales: ''(虚拟销量)
  */
-Mock.mock(allKey['mock-url'] + "/store/add-goods", "post", shopAPI.is_add);
+Mock.mock(allKey['mock-url'] + "/store/add-goods", "post", shopAPI.isAdd);
 /**
  * 数据的修改操作
  * @param store_id: 12,(店铺id)id: '',(商品id)title: '',(商品名称)company: '',(商品单位)category_pid: '',(商品分类一级id)category_cid: '',(商品分类二级id)thumb: '../../../../static/meitu/dian/lizhi.jpg',(商品图片)price: '',(商品现价)original_price: '',(商品原价)cost: '',(商品成本)stock: '',(库存)virtual_sales: ''(虚拟销量)
  */
-Mock.mock(allKey['mock-url'] + "/store/edit-goods", "post", shopAPI.is_update);
+Mock.mock(allKey['mock-url'] + "/store/edit-goods", "post", shopAPI.isUpdate);
 /**
  * 查询分类数据
  * @param { store_id: 12 } 店铺id
  */
-Mock.mock(allKey['mock-url'] + "/store/goods/get-category", "post", shopAPI.is_classify);
+Mock.mock(allKey['mock-url'] + "/store/goods/get-category", "post", shopAPI.classify);
 
 /**
  * mock.vue调用的接口

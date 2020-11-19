@@ -1,9 +1,12 @@
 {
-    "count": 3,
+    "total": 3,
+    "current_page": 1,
+    "page_size": 15,
+    "total_page": 1,
     "list": [
         {
             "store_id": 12,
-            "id": 1,
+            "goods_id": 1,
             "title": "5斤装桂味荔枝现摘现发",
             "company": "包",
             "category_pid": 201,
@@ -17,7 +20,7 @@
         },
         {
             "store_id": 12,
-            "id": 2,
+            "goods_id": 2,
             "title": "海南金煌新鲜芒果",
             "company": "箱",
             "category_pid": 301,
@@ -31,7 +34,7 @@
         },
         {
             "store_id": 12,
-            "id": 3,
+            "goods_id": 3,
             "title": "新鲜采摘龙眼甜桂圆肉",
             "company": "袋",
             "category_pid": 401,

@@ -39,9 +39,9 @@ export default {
     },
     created() {
         this.getJson();
-        this.tiao();
+        this.dantiao();
         this.shanchu();
-        this.add()
+        this.tianjia()
         this.xiugai()
     },
     methods: {
@@ -113,14 +113,14 @@ export default {
             let dian = chu.toFixed(2)
             return Number(dian).toLocaleString()
         },
-        tiao () {
+        dantiao () {
             let self = this;
             self.$apihttp({
                 url: '/store/goods-detail',
                 method: 'post',
                 data: { goods_id: 1 }
             }).then((res) => {
-                console.log('tiao=', res)
+                console.log('查询单条数据---', res)
             }).catch((err) => {
                 console.log('error',err);
             })
@@ -132,12 +132,12 @@ export default {
                 method: 'get',
                 data: { goods_id: 2 }
             }).then((res) => {
-                console.log('shanchu=', res)
+                console.log('删除---', res)
             }).catch((err) => {
                 console.log('error',err);
             })
         },
-        add () {
+        tianjia () {
             let self = this;
             let params = {
                 title: 'ai',
@@ -156,7 +156,7 @@ export default {
                 method: 'post',
                 data: params
             }).then((res) => {
-                console.log('add=', res)
+                console.log('添加---', res)
             }).catch((err) => {
                 console.log('error',err);
             })
@@ -164,7 +164,7 @@ export default {
         xiugai () {
             let self = this;
             let params = {
-                id: 1,
+                goods_id: 1,
                 title: 'weq',
                 company: 'eeiu',
                 category_pid: 26,
@@ -181,7 +181,7 @@ export default {
                 method: 'post',
                 data: params
             }).then((res) => {
-                console.log('xiugai=', res)
+                console.log('修改---', res)
             }).catch((err) => {
                 console.log('error',err);
             })
