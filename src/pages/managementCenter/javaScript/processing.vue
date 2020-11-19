@@ -13,7 +13,7 @@ export default {
         }
     },
     mounted(){
-        this.demo2(8,9);
+        this.demo4(8,9);
     },
     methods: {
         demo1(){
@@ -77,6 +77,7 @@ export default {
             // 10  数组.sort(函数)     数组排序，默认从小到大排而且是按照字符编码排列
 
             var arr=[10,6,-2,1];
+            console.log('判断数组是否有该值', arr.indexOf(6)); // 大于1有，等于-1没有
             console.log('数组拼接',arr.join(""));
             console.log('数组后添加',arr.push(9));
 			arr.sort(function(a,b){
@@ -99,6 +100,7 @@ export default {
                         console.log("今晚的酒真好喝");
                     }
                 }
+            console.log('判断对象是否有该属性', person.hasOwnProperty('name')); // true有，false没有
             console.log('调用对象属性',person.hobby);
             person.drink();//调用对象方法
             person['character'] = "温柔贤淑";//添加新属性
