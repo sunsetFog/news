@@ -21,16 +21,16 @@ npm run build --report
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 |- build/
-    |- build.js --------------------------------------- 生产环境构建脚本
-    |- check-versions.js ------------------------------ 检测node和npm版本的
-    |- utils.js --------------------------------------- 构建相关工具方法 主要用来处理css-loader和vue-style-loader的
-    |- vue-loader.conf.js ----------------------------- 配置文件的解释
+    |- build.js --------------------------------------- 打包构建脚本
+    |- check-versions.js ------------------------------ 检测版本,提示用户更新版本
+    |- utils.js --------------------------------------- 构建相关loader工具方法
+    |- vue-loader.conf.js ----------------------------- loader搭环境配置
     |- webpack.base.conf.js --------------------------- wabpack开发和生产配置
     |- webpack.dev.conf.js ---------------------------- wabpack开发环境配置
     |- webpack.prod.conf.js --------------------------- wabpack生产环境配置
 |- config/
     |- dev.env.js ------------------------------------- 开发环境变量
-    |- index.js --------------------------------------- 项目配置文件
+    |- index.js --------------------------------------- 项目环境配置js
     |- prod.env.js ------------------------------------ 生产环境变量
 |- database/ ------------------------------------------ mockjs模拟数据库
     |- modular/
@@ -41,7 +41,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 |- src/ ----------------------------------------------- 项目源代码
     |- api/
         |- http.js ------------------------------------ 接口请求配置
-    |- assets/
+    |- assets/ ---------------------------------------- 静态资源(样式文件)
         |- app.less ----------------------------------- 全局样式
         |- common.less -------------------------------- 全局样式的变量与方法
     |- components/ ------------------------------------ 公用组件
@@ -56,14 +56,14 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
             |- modular.js ----------------------------- 方法文件
         |- index.js ----------------------------------- 合并暴露方法
     |- router/
-        |- index.js ----------------------------------- 路由文件
+        |- index.js ----------------------------------- 路由配置文件
     |- vuex/ ------------------------------------------ vuex缓存数据
         |- modular/
             |- modular.js ----------------------------- vuex文件
         |- index.js ----------------------------------- vuex实例与合并
     |- App.vue ---------------------------------------- 入口vue(通过路由视图关联)
     |- main.js ---------------------------------------- 入口js
-|- static/
+|- static/ -------------------------------------------- 静态资源(图片，文件，视频)
     |- capital/
         |- allKey.json -------------------------------- json全局变量
         |- rem.js ------------------------------------- 移动端rem适配
@@ -75,7 +75,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 |- .gitignore ----------------------------------------- git提交文件权限
 |- .postcssrc.js -------------------------------------- 解决浏览器加css前缀  css不用写-webkit...
 |- index.html ----------------------------------------- html5模板
-|- package-lock.json ---------------------------------- 依赖锁
+|- package-lock.json ---------------------------------- 依赖版本锁，保证大家依赖一致
 |- package.json --------------------------------------- npm配置文件
 |- README.md ------------------------------------------ 项目说明
 
