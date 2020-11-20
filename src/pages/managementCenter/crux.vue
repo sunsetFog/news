@@ -96,28 +96,28 @@ export default{
         return{
             nickname_state: false,
             archives_list: [
-                {theme: '登陆密码',explain: '6-12个字符',modify: '修改登录密码',url: '../../../static/dream/center/denglu.png'},
-                // {theme: '绑定银行卡',explain: '最多可绑定5张银行卡',modify: '绑定银行卡',url: '../../../static/dream/center/yinhangka.png'},
-                {theme: '提款密码',explain: '6个数字密码',modify: '设置提款密码',url: '../../../static/dream/center/tikuanmima.png'},
-                {theme: '邮件',explain: '条未读',modify: '查看邮件',url: '../../../static/dream/center/zhanneixin.png'},
-                // {theme: '密保设定',explain: '用于找回密码',modify: '修改密保设定',url: '../../../static/dream/center/baomi.png'},
-                {theme: '公告',explain: '请随时关注最新公告',modify: '查看公告',url: '../../../static/dream/center/xinxi.png'},
-                {theme: '保险箱',explain: '用于存入和取出资金',modify: '查看保险箱',url: '../../../static/dream/center/baoxianxiang.png'}
+                {theme: '登陆密码',explain: '6-12个字符',modify: '修改登录密码',url: '../../../static/picture/center/denglu.png'},
+                // {theme: '绑定银行卡',explain: '最多可绑定5张银行卡',modify: '绑定银行卡',url: '../../../static/picture/center/yinhangka.png'},
+                {theme: '提款密码',explain: '6个数字密码',modify: '设置提款密码',url: '../../../static/picture/center/tikuanmima.png'},
+                {theme: '邮件',explain: '条未读',modify: '查看邮件',url: '../../../static/picture/center/zhanneixin.png'},
+                // {theme: '密保设定',explain: '用于找回密码',modify: '修改密保设定',url: '../../../static/picture/center/baomi.png'},
+                {theme: '公告',explain: '请随时关注最新公告',modify: '查看公告',url: '../../../static/picture/center/xinxi.png'},
+                {theme: '保险箱',explain: '用于存入和取出资金',modify: '查看保险箱',url: '../../../static/picture/center/baoxianxiang.png'}
             ],
             pet_name: '',
             number_count: [
-                {url: '../../../static/dream/center/0.png'},
-                {url: '../../../static/dream/center/1.png'},
-                {url: '../../../static/dream/center/2.png'},
-                {url: '../../../static/dream/center/3.png'},
-                {url: '../../../static/dream/center/4.png'},
-                {url: '../../../static/dream/center/5.png'},
-                {url: '../../../static/dream/center/6.png'},
-                {url: '../../../static/dream/center/7.png'},
-                {url: '../../../static/dream/center/8.png'},
-                {url: '../../../static/dream/center/9.png'},
-                {url: '../../../static/dream/center/dian.png'},
-                {url: '../../../static/dream/center/11.png'}
+                {url: '../../../static/picture/center/0.png'},
+                {url: '../../../static/picture/center/1.png'},
+                {url: '../../../static/picture/center/2.png'},
+                {url: '../../../static/picture/center/3.png'},
+                {url: '../../../static/picture/center/4.png'},
+                {url: '../../../static/picture/center/5.png'},
+                {url: '../../../static/picture/center/6.png'},
+                {url: '../../../static/picture/center/7.png'},
+                {url: '../../../static/picture/center/8.png'},
+                {url: '../../../static/picture/center/9.png'},
+                {url: '../../../static/picture/center/dian.png'},
+                {url: '../../../static/picture/center/11.png'}
             ],
             number_money: [],
             portrait: {head: '',frame: ''},
@@ -141,8 +141,8 @@ export default{
     },
     methods:{
         getJson(){
-                this.portrait.head = '../../../static/dream/portrait/ui_headImg_'+this.player_info.avatar+'.png';
-                this.portrait.frame = '../../../static/dream/portrait/ui_headBox_'+this.player_info.avatar_box+'.png';
+                this.portrait.head = '../../../static/picture/portrait/ui_headImg_'+this.player_info.avatar+'.png';
+                this.portrait.frame = '../../../static/picture/portrait/ui_headBox_'+this.player_info.avatar_box+'.png';
                 this.pet_name = this.player_info.nickname;
                 this.sex_value = this.player_info.sex;
                 this.number_money = this.money.toString().split('');

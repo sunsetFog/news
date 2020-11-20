@@ -1,6 +1,6 @@
 import router from '../../router';
 import { Message } from 'element-ui';
-import cache from '../../vuex/vuex.js';
+import cache from '../../vuex/index.js';
 const comic = {
     //vue项目，输入框限制输入15个中文，或者30个英文
     validateTextLength (value) {

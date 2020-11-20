@@ -15,7 +15,7 @@ export default {
         return{
             config: {
                 value: 'www.baidu.com',//显示的值、跳转的地址
-                logo:'../../../../static/dream/center/caiwu.png'//中间logo的地址
+                logo:'../../../../static/picture/center/caiwu.png'//中间logo的地址
             }
         }
     },

@@ -5,7 +5,7 @@
     <div class="advertisement" v-show="notice_active">
       <div class="message-tips">
         <span v-show="play_info" class="laba-quality">
-          <img src="../static/dream/home/laba.png">
+          <img src="../static/picture/home/laba.png">
         </span>
         <span v-show="play_info" class="word-quality">最新公告&nbsp;:</span>
         <div class="flash-quality" v-show="play_info">
@@ -116,7 +116,7 @@ export default {
 .advertisement {
   width: 100%;
   height: 35px;
-  .mixin_image(url("../static/dream/home/gonggaotiao.png"));
+  .mixin_image(url("../static/picture/home/gonggaotiao.png"));
   position: absolute;
   left: 0px;
   top: 653px;

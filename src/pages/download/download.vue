@@ -19,6 +19,6 @@ export default{
 #download{
     width: 100%;
     height: 2000px;
-    .mixin_image(url('../../../static/dream/center/bg-guanli.jpg'));
+    .mixin_image(url('../../../static/picture/center/bg-guanli.jpg'));
 }
 </style>

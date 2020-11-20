@@ -27,7 +27,7 @@ Vue.use(ElementUI);
 
 import means from './public/index.js';
 Vue.prototype.$means = means;
-import store from './vuex/vuex.js';
+import store from './vuex/index.js';
 // Vue.prototype.$store = store;
 
 // https://www.cnblogs.com/zhaojunhao/p/9622299.html

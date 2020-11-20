@@ -11,7 +11,7 @@
                 <div class="account-list" v-for="(item,index) in alipay_list">
                     <label>支付宝{{index+1}}:</label>
                     <div><span>{{item.cardholder}}</span><span>{{item.cardno}}</span></div>
-                    <img src="../../static/dream/recharge/xiaochu.png" @click="deleteAlipay(index)"/>
+                    <img src="../../static/picture/recharge/xiaochu.png" @click="deleteAlipay(index)"/>
                 </div>
             </div>
 

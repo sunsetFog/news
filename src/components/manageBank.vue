@@ -11,7 +11,7 @@
                 <div class="account-list" v-for="(item,index) in bank_list">
                     <label>卡{{index+1}}:</label>
                     <div><span>{{item.bank_name}}</span><span>{{item.cardno}}</span></div>
-                    <img src="../../static/dream/recharge/xiaochu.png" @click="deleteBank(index)"/>
+                    <img src="../../static/picture/recharge/xiaochu.png" @click="deleteBank(index)"/>
                 </div>
             </div>
 

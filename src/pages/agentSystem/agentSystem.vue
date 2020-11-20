@@ -1,7 +1,7 @@
 <template>
 <section id="agent-system">
     <div class="system-example">
-        <img class="big-fish" src="../../../static/dream/login/fish.png" @click="fishMeans()"/>
+        <img class="big-fish" src="../../../static/picture/login/fish.png" @click="fishMeans()"/>
         <div class="manage-content">
             <iframe :src="agentSrc" id="map-frame" class="map-frame" ref="map-frame" @load="systemMeans()"></iframe>
         </div>
@@ -56,7 +56,7 @@ export default{
     .system-example{
         width: 100%;
         height: 1200px;
-        .mixin_image(url('../../../static/dream/center/bg-guanli.jpg'));
+        .mixin_image(url('../../../static/picture/center/bg-guanli.jpg'));
         position: relative;
         .big-fish{
             .mixin_img(326px;387px);

@@ -1,6 +1,6 @@
 <template>
     <section>
-        <img class="fish" style="width: 120px;height: 120px;zoom: 100%" src="../../../../static/dream/login/fish.png" title="这是图片" alt="哎呀，图片加载失败"/>
+        <img class="fish" style="width: 120px;height: 120px;zoom: 100%" src="../../../../static/picture/login/fish.png" title="这是图片" alt="哎呀，图片加载失败"/>
         <div id="box" style="width: 100%;height: 50px;background: blue;">
 			<p id="pp" style="width: 100px;height: 50px;background: yellow;margin: 0 auto;">子元素范围</p>
 		</div>
