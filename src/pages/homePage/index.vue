@@ -133,7 +133,7 @@ export default{
          .mixin_image(url('../../../static/dream/home/background.jpg'));
          position: relative;
         .big-fish{
-            .mixin_img(426px;487px);
+            .mixin_img(326px;387px);
             position: absolute;
             left: 0px;
             bottom: 0px;

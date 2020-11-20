@@ -225,12 +225,12 @@ export default{
         .login-logo{
             .mixin_img(790px;170px);
             position: absolute;
-            top: 70px;
+            top: 10px;
             left: 50%;
             margin-left: -395px;
         }
         .big-fish{
-            .mixin_img(426px;487px);
+            .mixin_img(326px;387px);
             position: absolute;
             left: 0px;
             bottom: 0px;
@@ -240,7 +240,7 @@ export default{
             height: 430px;
             .mixin_image(url('../../../static/dream/login/kuankuan.png'));
             position: absolute;
-            top: 290px;
+            top: 180px;
             left: 50%;
             margin-left: -240px;
             .code-and-service{

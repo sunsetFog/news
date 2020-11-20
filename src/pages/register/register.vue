@@ -233,15 +233,15 @@ export default{
         height: 100%;
         position: relative;
         .register-logo{
-            .mixin_img(474px;410px);
+            .mixin_img(374px;310px);
             position: absolute;
             left: 0px;
             bottom: 0px;
         }
         .containter{
-            .mixin_center(800px,720px);
+            .mixin_center(600px,600px);
             .mixin_image(url('../../../static/dream/register/frame01.png'));
-            padding: 90px 140px 70px 140px;
+            padding: 20px 40px 20px 40px;
             box-sizing: border-box;
             .heart-content{
                 .mixin_float(100%,100%,left);
@@ -255,8 +255,8 @@ export default{
                         cursor: pointer;
                         overflow: hidden;
                         position: absolute;
-                        left: -110px;
-                        top: -60px;
+                        left: -20px;
+                        top: -10px;
                         img{
                             .mixin_img(18px,18px);
                             float: left;

@@ -2,8 +2,8 @@
     <section id="safe-deposit">
         <el-dialog
         :visible.sync="rechargeActive"
-        width="5.73rem"
-        top="0.53rem"
+        width="1100px"
+        top="101px"
         center>
         <div slot="title">保险箱</div>
         <div class="varieties-content">

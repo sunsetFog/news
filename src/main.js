@@ -23,7 +23,7 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
 
-import '../static/capital/flexible.js';
+
 
 import means from './public/index.js';
 Vue.prototype.$means = means;

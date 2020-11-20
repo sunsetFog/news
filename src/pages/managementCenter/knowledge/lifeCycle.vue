@@ -54,7 +54,15 @@ main.js
     import 'vue-ydui/dist/ydui.px.css';
     import 'vue-ydui/dist/ydui.base.css';
     Vue.use(YDUI);
-    7.pc端适配  https://blog.csdn.net/weixin_41257563/article/details/97266234
+    7.pc端适配(不好用)  https://blog.csdn.net/weixin_41257563/article/details/97266234
+    utils.js
+        // const px2remLoader = {
+        //   loader: 'px2rem-loader',
+        //   options: {
+        //     remUnit: 192
+        //   }
+        // }
+        const loaders = options.usePostCSS ? [cssLoader, postcssLoader, px2remLoader] : [cssLoader, px2remLoader]
     npm install lib-flexible --save
     npm install px2rem-loader --save-dev
     import '../static/capital/flexible.js';//加载js，并540改document.body.clientWidth

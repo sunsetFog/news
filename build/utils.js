@@ -29,17 +29,9 @@ exports.cssLoaders = function (options) {
     }
   }
 
-  const px2remLoader = {
-    loader: 'px2rem-loader',
-    options: {
-      remUnit: 192
-    }
-  }
-
   // generate loader string to be used with extract text plugin
   function generateLoaders (loader, loaderOptions) {
-    // const loaders = options.usePostCSS ? [cssLoader, postcssLoader] : [cssLoader]
-    const loaders = options.usePostCSS ? [cssLoader, postcssLoader, px2remLoader] : [cssLoader, px2remLoader]
+    const loaders = options.usePostCSS ? [cssLoader, postcssLoader] : [cssLoader]
 
     if (loader) {
       loaders.push({
@@ -71,7 +63,7 @@ exports.cssLoaders = function (options) {
     less: generateLoaders('less').concat({
       loader: 'sass-resources-loader',
       options: {
-        resources: path.resolve(__dirname, '../src/assets/styles/common.less')
+        resources: path.resolve(__dirname, '../src/assets/common.less')
       }
     }),
 

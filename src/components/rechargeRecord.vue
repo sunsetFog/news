@@ -2,8 +2,8 @@
     <section id="recharge-record">
         <el-dialog
         :visible.sync="rechargeActive"
-        width="5.73rem"
-        top="0.8rem"
+        width="1100px"
+        top="153px"
         center>
         <div slot="title">充值记录</div>
         <div class="varieties-content">

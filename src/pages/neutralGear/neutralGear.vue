@@ -42,7 +42,6 @@ export default {
             }else{
                 this.percentage+=9.3;
             }
-            // //console.log('width%%',this.percentage);
         },
         variableGear(value){
             var that = this;
@@ -52,7 +51,6 @@ export default {
                 that.radius.top_right = '15px';
                 that.radius.bottom_right = '15px';
                 that.$router.push({path: sessionStorage.getItem('save_path')});
-                //console.log('loading%%%');
             });
         }
     }
@@ -83,7 +81,7 @@ export default {
         box-sizing: border-box;
         position: absolute;
         left: 50%;
-        bottom: 150px;
+        bottom: 50px;
         margin-left: -430px;
         span{
             height: 35px;

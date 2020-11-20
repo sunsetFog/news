@@ -45,10 +45,10 @@ export default {
       }
       // console.log('watch~~~',to,from);
       if (to.path == "/game") {
-        purpleMagic(3);
+        // purpleMagic(3);
         window.dispatchEvent(new Event("resize"));
       } else {
-        purpleMagic(2);
+        // purpleMagic(2);
       }
 
       if (from.path == "/register") {

@@ -2,8 +2,8 @@
     <section id="withdrawal-password">
         <el-dialog
         :visible.sync="rechargeActive"
-        width="4.07rem"
-        top="0.99rem"
+        width="781px"
+        top="190px"
         center>
         <div slot="title">重置提款密码</div>
         <div class="varieties-content">

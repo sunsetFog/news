@@ -2,8 +2,8 @@
     <section id="notice">
         <el-dialog
         :visible.sync="rechargeActive"
-        width="6.33rem"
-        top="0.53rem"
+        width="1215px"
+        top="101px"
         center>
         <div slot="title">公告</div>
         <div class="varieties-content">

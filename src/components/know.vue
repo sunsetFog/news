@@ -2,8 +2,8 @@
     <section id="know">
         <el-dialog
         :visible.sync="rechargeActive"
-        width="2.79rem"
-        top="1.46rem"
+        width="535px"
+        top="280px"
         center>
         <div slot="title"></div>
         <div class="varieties-content">

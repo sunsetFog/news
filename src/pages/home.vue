@@ -659,7 +659,7 @@ export default {
           .mixin_img(300px, 70px);
           position: absolute;
           top: 11px;
-          left: -150px;
+          left: -120px;
         }
       }
       .tabs-right {

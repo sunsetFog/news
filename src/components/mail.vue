@@ -2,8 +2,8 @@
     <section id="mail">
         <el-dialog
         :visible.sync="rechargeActive"
-        width="6.33rem"
-        top="0.53rem"
+        width="1215px"
+        top="101px"
         center>
         <div slot="title">邮件</div>
         <div class="varieties-content">

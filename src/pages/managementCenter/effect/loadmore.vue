@@ -44,7 +44,7 @@ export default {
                         var response = {list: [1,2,3,4,5,6,7,8,9,10],
                                         total: 20,
                                         current_page: 1,
-                                        last_page: 2
+                                        total_page: 2
                                         }//模拟的后台数据
                         that.pageNum = Number(that.pageNum) + 1;
 						// 搜索结果为空
@@ -54,7 +54,7 @@ export default {
 							return;
 						}
                         that.stores = that.stores.concat(response.list);
-						if (response.current_page == response.last_page) {
+						if (response.current_page == response.total_page) {
 							that.loading = true;
 							that.allLoaded = true;
 							return;

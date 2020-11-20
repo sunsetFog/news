@@ -2,8 +2,8 @@
     <section id="add-bank">
         <el-dialog
         :visible.sync="rechargeActive"
-        width="4.07rem"
-        top="1.25rem"
+        width="781px"
+        top="240"
         center>
         <div slot="title">添加银行卡</div>
         <div class="varieties-content">

@@ -2,8 +2,8 @@
     <section id="manage-bank">
         <el-dialog
         :visible.sync="rechargeActive"
-        width="4.07rem"
-        top="1.25rem"
+        width="781px"
+        top="240px"
         center>
         <div slot="title">管理银行卡</div>
         <div class="varieties-content">

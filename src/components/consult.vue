@@ -2,8 +2,8 @@
     <section id="consult">
         <el-dialog
         :visible.sync="rechargeActive"
-        width="4.07rem"
-        top="0.99rem"
+        width="781px"
+        top="190px"
         center>
         <div slot="title">{{consult_data.title}}</div>
         <div class="varieties-content">
