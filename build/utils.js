@@ -47,8 +47,7 @@ exports.cssLoaders = function (options) {
     if (options.extract) {
       return ExtractTextPlugin.extract({
         use: loaders,
-        publicPath: '../../',//解决打包图片读不出来
-        fallback: 'vue-style-loader',
+        fallback: 'vue-style-loader'
       })
     } else {
       return ['vue-style-loader'].concat(loaders)
@@ -66,9 +65,6 @@ exports.cssLoaders = function (options) {
         resources: path.resolve(__dirname, '../src/assets/common.less')
       }
     }),
-
-
-
     sass: generateLoaders('sass', { indentedSyntax: true }),
     scss: generateLoaders('sass'),
     stylus: generateLoaders('stylus'),

@@ -31,7 +31,7 @@ export default {
         this.radius.bottom_right = '0px';
         this.timerKey = setInterval(this.timerMeans,200);
         if(refreshWeb.state==''){
-            flashGameplayer();
+            // flashGameplayer();
         }
     },
     methods:{

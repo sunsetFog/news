@@ -161,47 +161,4 @@ export default {
     }
   }
 }
-
-/*公共样式--开始*/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-html,
-body {
-  min-height: 100%;
-  height: 100%;
-}
-ul,
-ol,
-li {
-  list-style: none;
-}
-img {
-  border: none;
-  -vertical-align: middle;
-}
-
-a {
-  text-decoration: none;
-  color: #232323;
-}
-
-table {
-  border-collapse: collapse;
-  table-layout: fixed;
-}
-
-input,
-textarea,
-button {
-  outline: none;
-  border: none;
-}
-
-textarea {
-  resize: none;
-  overflow: auto;
-}
 </style>

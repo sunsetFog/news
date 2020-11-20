@@ -1,35 +1,27 @@
-# new
+# price-map
 
-> 钻石娱乐
+> pc价格地图
 
 ## Build Setup
 
 ``` bash
-# install dependencies  安装依赖项
+# install dependencies
 npm install
 
-# serve with hot reload at localhost:8080  启动项目
+# serve with hot reload at localhost:8080
 npm run dev
 
-# build for production with minification  打包上线
+# build for production with minification
 npm run build
 
-# build for production and view the bundle analyzer report   生成 report.html 以帮助分析包内容
+# build for production and view the bundle analyzer report
 npm run build --report
-
-# run unit tests  单元测试
-npm run unit
-
-# run e2e tests  e2e测试
-npm run e2e
-
-# run all tests  测试所有
-npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-
+|- config
+    |- dev.env.js
 |- src/  --------------------- 项目源代码
     |- App.vue
     |- main.js  -------------- 入口文件
@@ -61,6 +53,10 @@ npm run build
 
 
 npm install、npm install --save与npm install --save-dev区别（转）    https://blog.csdn.net/Uncle_long/article/details/80524947
+使用原则:
+1.运行时需要用到的包使用–-save，否则使用–-save-dev。
+2.我这只有sass-resources-loader是--save-dev。（99%是--save）
+
 在模块配置文件package.json中:
 npm install不改dependencies和devDependencies
 npm install 名 --save 添加模块和版本号到dependencies
@@ -69,16 +65,3 @@ npm uninstall 名 --save 和npm uninstall 名 --save-dev 删除模块
 有可能出现模块版本问题:
 npm install less@3.0.4 --save   添加指定版本模块（如less）
 news\static\study\warning.png   模块版本低报错，删除并重新下载模块（如echarts，selenium-server）
-
-
-
-
-
-
-以下略略略
-index.html-flashGameplayer()-refreshWeb.state = 'init';return;
-web.game_
-that.$means.amateur_
-index.html,README返回
-consult.vue两个web
-刷新:this.variableGear();

@@ -69,7 +69,7 @@ export default{
     created(){
         this.catchMice();
         if(refreshWeb.state==''){
-            flashGameplayer();
+            // flashGameplayer();
         }else{
             this.$means.amateur_exit(function(){});
         }
