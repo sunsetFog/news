@@ -6,7 +6,15 @@
 
 <script>
 	export default{
-		props:['article'],//父传子
+		// props:['article'],//父传子
+		props: {
+			article: {
+				type: String, // 类型：Array，Object
+				default: function () { // 没有值，默认为空字符串
+					return ''
+				}
+			}
+		},
 		data(){
 			return{
 				son:'$emit子组件数据'

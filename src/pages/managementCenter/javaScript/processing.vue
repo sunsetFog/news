@@ -13,7 +13,7 @@ export default {
         }
     },
     mounted(){
-        this.demo4(8,9);
+        this.demo6(8,9);
     },
     methods: {
         demo1(){
@@ -182,6 +182,8 @@ export default {
 
             let name = " xiao ming ";
             console.log('去除所有空格',name.replace(/\s*/g,''));
+            // 正则表达式-元字符
+            console.log('匹配换行符', 'A\nB'); // \n
         },
         demo7(){
             //Math对象: 数学任务      Math.方法名(运算值)

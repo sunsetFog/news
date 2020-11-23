@@ -43,7 +43,7 @@ import apiHttp from './api/http.js';
 Vue.prototype.$apihttp = apiHttp;
 
 
-
+import cloudEchart from './components/echarts/cloudEchart.vue'
 
 import recharge from './components/recharge.vue';
 import withdrawal from './components/withdrawal.vue';
@@ -62,6 +62,7 @@ import gameTheme from './components/game_theme.vue';
 import safeDeposit from './components/safeDeposit.vue';
 import portrait from './components/portrait.vue';
 import rechargeRecord from './components/rechargeRecord.vue';
+Vue.component('cloudEchart',cloudEchart);
 Vue.component('recharge',recharge);
 Vue.component('withdrawal',withdrawal);
 Vue.component('manageBank',manageBank);

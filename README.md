@@ -111,6 +111,7 @@ npm install、npm install --save与npm install --save-dev区别（转）    http
 使用原则:
 1.运行时需要用到的包使用–-save，否则使用–-save-dev。
 2.我这只有sass-resources-loader是--save-dev。（99%是--save）
+3.–-save和–-save-dev能用来更新版本
 
 在模块配置文件package.json中:
 npm install不改dependencies和devDependencies

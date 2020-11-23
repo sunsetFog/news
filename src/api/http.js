@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { Message, MessageBox } from 'element-ui'
 import router from '@/router' // 用于路由跳转 router.push({path: '/login'})
-// import means from '../means/index'
+import means from '../public/modular/accumulation01'
 import allKey from '../../static/capital/allKey.json'
 
 let domain
@@ -44,7 +44,7 @@ service.interceptors.request.use(config => {
     config.cancelToken = axios.CancelToken.source().token;// 取消重复请求
     // header里存token,前端必然传参(token可以判断登陆的状态,不能存中文)
     // token的获取：1.访问链接上的参数 2.浏览器缓存里 3.直接在登录接口获取
-    // config.headers['tgticket'] = means.getQuery('tgticket');
+    config.headers['tgticket'] = means.getQuery('tgticket');
     return config
 }, error => {
     Promise.reject(error)

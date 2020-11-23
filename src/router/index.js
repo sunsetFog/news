@@ -37,12 +37,13 @@ export default new Router({
             { path: 'css', name: 'css', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/tagStyle/css.vue'], resolve) },
             { path: 'tags', name: 'tags', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/tagStyle/tags.vue'], resolve) },
             { path: 'flex', name: 'flex', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/tagStyle/flex.vue'], resolve) },
+            { path: 'cssDemo', name: 'cssDemo', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/tagStyle/cssDemo.vue'], resolve) },
 
             { path: 'learn1', name: 'learn1', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/javaScript/learn1.vue'], resolve) },
             { path: 'learn2', name: 'learn2', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/javaScript/learn2.vue'], resolve) },
             { path: 'learn3', name: 'learn3', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/javaScript/learn3.vue'], resolve) },
             { path: 'processing', name: 'processing', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/javaScript/processing.vue'], resolve) },
-            { path: 'practice', name: 'practice', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/javaScript/practice.vue'], resolve) },
+            { path: 'jsDemo', name: 'jsDemo', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/javaScript/jsDemo.vue'], resolve) },
             { path: 'es6', name: 'es6', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/javaScript/es6.vue'], resolve) },
 
             { path: 'v_tag', name: 'v_tag', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/knowledge/v_tag.vue'], resolve) },
@@ -61,7 +62,6 @@ export default new Router({
             { path: 'transition', name: 'transition', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/knowledge/transition.vue'], resolve) },
             { path: 'refs', name: 'refs', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/knowledge/refs.vue'], resolve) },
             { path: 'canvas', name: 'canvas', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/knowledge/canvas.vue'], resolve) },
-            { path: 'echarts', name: 'echarts', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/knowledge/echarts.vue'], resolve) },
             { path: 'base64', name: 'base64', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/knowledge/base64.vue'], resolve) },
             { path: 'mock', name: 'mock', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/knowledge/mock.vue'], resolve) },
             { path: 'cache', name: 'cache', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/knowledge/cache.vue'], resolve) },
@@ -81,6 +81,8 @@ export default new Router({
             { path: 'listener', name: 'listener', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/effect/listener.vue'], resolve) },
             { path: 'websocket', name: 'websocket', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/effect/websocket.vue'], resolve) },
             { path: 'adaption', name: 'adaption', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/effect/adaption.vue'], resolve) },
+
+            { path: 'echartsDemo1', name: 'echartsDemo1', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/reportForm/demo1.vue'], resolve) },
 
             { path: 'research', name: 'research', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/expand/research.vue'], resolve) },
 
