@@ -20,6 +20,7 @@ npm run build --report
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
+|- .git ----------------------------------------------- git本地配置
 |- build/
     |- build.js --------------------------------------- 打包构建脚本
     |- check-versions.js ------------------------------ 检测node和npm版本,提示用户更新版本

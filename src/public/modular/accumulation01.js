@@ -9,5 +9,11 @@ export default {
             }
         }
         return false;
+    },
+    pxToRem (num) { // 移动端px转rem
+        return num / Number(sessionStorage.getItem('pixelSize'))
+    },
+    remToPx (num) { // 移动端rem转px
+        return num * Number(sessionStorage.getItem('pixelSize'))
     }
 }

@@ -16,7 +16,7 @@ import allKey from '../static/capital/allKey.json'
 if (allKey['key']) {
   require('../database/index') // 可以动态加载，不报错
 }
-
+import '../static/capital/rem.js'
 
 
 import ElementUI from 'element-ui';

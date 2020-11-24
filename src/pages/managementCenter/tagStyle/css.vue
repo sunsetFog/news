@@ -25,6 +25,9 @@
             -ms  指IE
             -webkit  指chrome、safari
             -o  指Opera
+
+            6.!important是样式层级最高，可以覆盖style样式
+            width: 45px !important;
         
         -->
         样式命名规范:
