@@ -22,15 +22,15 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 |- build/
     |- build.js --------------------------------------- 打包构建脚本
-    |- check-versions.js ------------------------------ 检测版本,提示用户更新版本
-    |- utils.js --------------------------------------- 构建相关loader工具方法
-    |- vue-loader.conf.js ----------------------------- loader搭环境配置
+    |- check-versions.js ------------------------------ 检测node和npm版本,提示用户更新版本
+    |- utils.js --------------------------------------- 构建css和style
+    |- vue-loader.conf.js ----------------------------- 打包生成map文
     |- webpack.base.conf.js --------------------------- wabpack开发和生产配置
     |- webpack.dev.conf.js ---------------------------- wabpack开发环境配置
-    |- webpack.prod.conf.js --------------------------- wabpack生产环境配置
+    |- webpack.prod.conf.js --------------------------- wabpack开发和生产打包编译
 |- config/
     |- dev.env.js ------------------------------------- 开发环境变量
-    |- index.js --------------------------------------- 项目环境配置js
+    |- index.js --------------------------------------- 项目环境配置
     |- prod.env.js ------------------------------------ 生产环境变量
 |- database/ ------------------------------------------ mockjs模拟数据库
     |- modular/
@@ -70,9 +70,10 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
     |- picture/ --------------------------------------- 图片库
     |- video/ ----------------------------------------- 视频库
     |- favicon.ico ------------------------------------ 浏览器title的ico图标
+    |- .gitkeep --------------------------------------- git上传忽略的文件，与.gitignore一样
 |- .babelrc ------------------------------------------- babel-loader解释es6
 |- .editorconfig -------------------------------------- vscode安装editorConfig for vs Code插件才会起作用
-|- .gitignore ----------------------------------------- git提交文件权限
+|- .gitignore ----------------------------------------- git上传忽略的文件
 |- .postcssrc.js -------------------------------------- 解决浏览器加css前缀  css不用写-webkit...
 |- index.html ----------------------------------------- html5模板
 |- package-lock.json ---------------------------------- 依赖版本锁，保证大家依赖一致
@@ -120,4 +121,4 @@ npm install 名 --save-dev 添加模块和版本号到devDependencies
 npm uninstall 名 --save 和npm uninstall 名 --save-dev 删除模块
 有可能出现模块版本问题:
 npm install less@3.0.4 --save   添加指定版本模块（如less）
-news\static\study\warning.png   模块版本低报错，删除并重新下载模块（如echarts，selenium-server）
+news\static\picture\warning.png   模块版本低报错，删除并重新下载模块（如echarts，selenium-server）

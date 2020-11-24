@@ -3,7 +3,7 @@
     <section id="back-to-top">
         <div style="width: 100%;margin: 15px 0px 0px 15px;height: 1500px;"></div>
         <div @click="backTop" class="to-top">
-            <img src="../../../../static/study/img/backToTop.png"/>
+            <img src="../../../../static/picture/backToTop.png"/>
         </div>
     </section>
 </template>
