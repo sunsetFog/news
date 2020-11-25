@@ -5,7 +5,7 @@
         <div class="manage--content">
             <router-view v-if="!manage_state"></router-view>
             <div class="manage-content-left" v-if="manage_state">
-                <el-scrollbar>
+                <el-scrollbar style="width:100%;height:100%;">
                     <el-menu
                     :router="true"
                     :default-active="$route.path"

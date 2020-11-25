@@ -1,8 +1,15 @@
 <template>
     <section id="flex-index">
-        <hr>1.垂直居中</hr>
+        <hr>1.盒子和文字垂直居中</hr>
+        <!-- 问题：高为百分比时，文字垂直居中？     line-height: 100%;和字体大小一样大，不能用 -->
         <div class="vertical-center">
-            <p></p>
+            <!-- 1.利用弹性布局 -->
+            垂直居中文字
+            <p>盒子垂直居中</p>
+        </div>
+        <!-- 2.利用display:table-cell -->
+        <div class="height-percentage">
+            <span>垂直居中文字</span>
         </div>
         <hr>2.是否浮动</hr>
         <div class="list">
@@ -61,7 +68,17 @@ export default {
         p {
             width: 100px;
             height: 100px;
-            background: white;
+            background: blue;
+        }
+    }
+    .height-percentage {
+        width: 200px;
+        height: 50px;
+        border: 1px solid red;
+        display: table;
+        span {
+            display: table-cell; // 水平
+            vertical-align: middle; // 垂直
         }
     }
 
