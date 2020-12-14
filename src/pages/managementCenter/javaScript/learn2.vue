@@ -263,9 +263,10 @@ export default {
                 age: 19
             }
             function aa(x,y){
-                console.log(this);
+                console.log('方法里的this', this);
             }
             aa(1,2);//此时,this指向window
+            // 在方法后加
             aa.call(person,4,5);//此时，this指向person
             aa.apply(person, [4, 5]);//此时，this指向person
             aa.bind(person,4,5)();//此时，this指向person

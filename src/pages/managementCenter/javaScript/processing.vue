@@ -13,7 +13,7 @@ export default {
         }
     },
     mounted(){
-        this.demo6(8,9);
+        this.demo9();
     },
     methods: {
         demo1(){
@@ -253,6 +253,12 @@ export default {
 
             console.log("距离2050年元旦还有："+days+"天"+hours+"时"+minutes+"分"+seconds+"秒");
             // setInterval(this.demo7,1000);//倒计时
+        },
+        demo9 (params = []) {
+            console.log('方法默认值', params);
+            let key = null;
+            let sky = key || '默认值';
+            console.log('定义默认值', sky);
         }
     }
 }
