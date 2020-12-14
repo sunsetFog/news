@@ -258,17 +258,17 @@ export default {
 
             //4种更改this指向
             // apply()与call()非常相似,但传参方式不同,apply()参数2必须数组
-            // var person = {
-            //     name: "zhangsan",
-            //     age: 19
-            // }
-            // function aa(x,y){
-            //     console.log(this);
-            // }
-            // aa(1,2);//此时,this指向window
-            // aa.call(person,4,5);//此时，this指向person
-            // aa.apply(person, [4, 5]);//此时，this指向person
-            // aa.bind(person,4,5)();//此时，this指向person
+            var person = {
+                name: "zhangsan",
+                age: 19
+            }
+            function aa(x,y){
+                console.log(this);
+            }
+            aa(1,2);//此时,this指向window
+            aa.call(person,4,5);//此时，this指向person
+            aa.apply(person, [4, 5]);//此时，this指向person
+            aa.bind(person,4,5)();//此时，this指向person
             // 存储this指向到变量中
             // let that = this;
             // setInterval(function () {

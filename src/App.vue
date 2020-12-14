@@ -111,6 +111,7 @@ export default {
   text-align: center;
   font-size: 14px;
   color: #2c3e50;
+  position: relative;
 }
 
 .advertisement {
