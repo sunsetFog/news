@@ -13,14 +13,14 @@ export default {
         }
     },
     mounted(){
-        this.demo9();
+        this.demo8();
     },
     methods: {
         demo1(){
-            // 讲解JSON文档     key必须是字符串
-            // JSON:是一种服务器与客户端进行数据交互的格式
-            // JSON的数据结构：{键(key):值(value)}   在数组中下标就是key
-            // Json的常见类型：对象、数组、对象数组嵌套、字符串Json
+            // 讲解json文件     key必须是字符串
+            // json:是一种服务器与客户端进行数据交互的格式
+            // json的数据结构：{键(key):值(value)}   在数组中下标就是key
+            // json的常见类型：对象、数组、对象数组嵌套、字符串Json
             var jsonObj = {
 					"name":"Jhon",
 					"age":18
@@ -33,6 +33,8 @@ export default {
             console.log('字符串解析为json对象',JSON.parse(jsonStr));// JSON.parse(必须是字符串)
             console.log('将json对象转为json字符串',JSON.stringify(jsonObj));// JSON.stringify(必须是对象)
             console.log('字符串解析为json对象',eval('('+jsonStr+')'));//不推荐，存在安全隐患
+            let slogan = '标语'
+            console.log('把字符串当变量使用', eval('slogan'))
         },
         demo2(){
             //数组概念：用来存储一系列数据的集合,下标从0开始，下标最大值为length-1
@@ -58,22 +60,20 @@ export default {
             })
         },
         demo3(){
-            // 数组中的常用方法
-            // 1  数组.join("")      将数组中的值拼接为字符串显示,括号中填写拼接内容
+            // 数组中的常用方法 (注意返回内容，不能赋值)
+            // 1  数组.join("")      将数组中的值拼接为字符串显示  参数1:拼接内容
             // 2  数组.pop()       删除并返回数组的最后一个元素
             // 3  数组.shift()      删除并返回数组的第一个元素
-            // 4  数组.push(可以是对象)     在数组末尾添加一个或多个元素,并且返回数组长度
-            // 5  数组.unshift(可以是对象)     在数组的前面添加一个或多个元素，并且返回数组长度
-            // 6  数组.splice(下标,1)     删除或者添加指定的元素、、、删除并返回
+            // 4  数组.push(可以是对象)     在数组末尾添加元素,并且返回数组长度
+            // 5  数组.unshift(可以是对象)     在数组的前面添加元素，并且返回数组长度
+            // 6  数组.splice(下标,1)     删除或者添加指定的元素、、、删除并返回删除元素
             //     注意：如果只有一个参数，表示从当前下标一直删到最后
-            //     三个参数，第三个可选
-            //     第一个参数代表需要删除的起始下标
-            //     第二个参数代表需要删除的个数，0代表不删，1代表删除一个....
-            //     第三个参数代表要添加的内容
-            //     如果第一个值是负数，从数组末尾开始算起
-            // 7  数组.indexof("值")     获取数组中指定值的下标，如果未找到该值，下标弹出-1
+            //     参数1: 删除下标，是负数，从数组末尾开始算起
+            //     参数2: 删除的个数，0代表不删，1代表删除一个....
+            //     参数3: 添加的内容
+            // 7  数组.indexof("值")     获取数组中指定值的下标，如果未找到，返回-1
             // 8  数组.reverse()     将数组中的内容倒序排列
-            // 9  数组.concat(数组,数组)     拼接多个数组的内容为一个数组,arr1.concat(arr2,arr3,....);
+            // 9  数组.concat(数组)     拼接数组,arr1.concat(arr2,arr3,....);
             // 10  数组.sort(函数)     数组排序，默认从小到大排而且是按照字符编码排列
 
             var arr=[10,6,-2,1];
@@ -88,7 +88,7 @@ export default {
         },
         demo4(){
             // 对象概念：一个对象可包含多个属性    {key(键): 'value值'}
-            // 访问Json数据：obj.key或者obj["key"]
+            // 访问Json数据：obj.key或者obj["key"],因为key是字符串
             // 删除对象中的某个属性: delete obj["key"];
             // 定义对象      
             var person = {
@@ -114,23 +114,25 @@ export default {
         },
         demo5(){
             // 字符串常见方法：
-			// 1  字符串.charAt(下标)    获取字符串中指定下标的字符
-			// 2  字符串.charCodeAt(下标)    获取字符串中指定下标的字符编码
-			// 3  字符串.concat(字符串,字符串)    拼接一个或多个字符串
-			// 4  字符串.search("字符")    用来检索字符串中指定的字符串，返回该子串第一次出现的下标，如果未找到，返回-1
-			// 5  字符串.replace(字符串,字符串)    用新的子串替换指定的旧子串
-			// 6  字符串.indexOf("字符")    返回该子串第一次出现的下标，如果找不到，返回-1
-            // 7  字符串.lastIndexOf("字符")     返回指定子串最后一次出现的下标，找不到返回-1
+			// 1  字符串.charAt(下标)    指定下标的字符
+			// 2  字符串.charCodeAt(下标)    指定下标的字符编码
+            // 3  字符串.concat(字符串,字符串)    拼接一个或多个字符串
+            
+            // 4  字符串.search("字符或正则表达式")    用来检索字符串中指定的字符串，返回该子串第一次出现的下标，如果未找到，返回-1
+            // 5  字符串.indexOf("字符但不能正则表达式")    返回该子串第一次出现的下标，未找到，返回-1
+            // 6  字符串.lastIndexOf("字符")     返回指定子串最后一次出现的下标，找不到，返回-1
+
+			// 7  字符串.replace(字符串或正则表达式,字符串)    用新子串替换指定的旧子串
             
             // 区分这三个
 			// 8  字符串.slice(开始下标,结束下标)     返回开始下标和结束下标间的字符,留头不留尾   如果只有一个参数，默认取到最后
 			// 9  字符串.substring(开始下标,结束下标)     返回开始下标和结束下标之间的字符，同样留头不留尾
 			//   substring()和slice()的区别：substring会将两个参数按照小在前，大在后排列,而slice()不会大小排列
-            // 10  字符串.substr(开始下标,获取个数)      参数1:获取子串的开始下标，参数2:获取的个数，这就是以上两个的不同
+            // 10  字符串.substr(开始下标,获取个数)
             
 			// 11  字符串.toLowerCase()    将大写转小写
 			// 12  字符串.toUpperCase()    将小写转大写
-			// 13  字符串.split("字符")      将字符串分割为数组，参数个数为1个或者2个    参数2:获取个数
+			// 13  字符串.split("字符")      将字符串分割为数组，参数2:获取个数
 			var str0 = "HELLO WORLD";
 			var str = "今天好是好个好日子";
 			var str1 = "hello world"
@@ -213,12 +215,12 @@ export default {
         },
         demo8(){
             //Dtae对象
-            var nowTime = new Date();//Date构造函数
+            var nowTime = new Date();//Date构造函数，时间从1970 年 1 月 1开始算
             console.log('当前时间',nowTime);
             var futureTime = new Date(2050,0,1);
             console.log('目标时间',futureTime);
 
-            console.log('时间戳',Date.parse(nowTime));// Date.parse() 1970 年 1 月 1 日至今的毫秒数
+            
             console.log('当月几号(1 ~ 31)',nowTime.getDate());
             console.log('星期几(0 ~ 6)',nowTime.getDay()+1);
             console.log('月份 (0 ~ 11)',nowTime.getMonth()+1);
@@ -230,6 +232,10 @@ export default {
             console.log('2020/7/26===',nowTime.toLocaleDateString());
             console.log('2020/7/26 下午11:54:30===',nowTime.toLocaleString());
             console.log('下午11:54:30===',nowTime.toLocaleTimeString());
+
+            let field = new Date().getTime();
+            console.log('当前时间转时间戳', field);// 1608003110000
+            console.log('时间戳转时间', new Date(field));// 格式未处理
             
 
 
@@ -259,6 +265,8 @@ export default {
             let key = null;
             let sky = key || '默认值';
             console.log('定义默认值', sky);
+            let purpose = '?id=128';
+            console.log('括号连续拼写', (purpose.split('id='))[1]);
         }
     }
 }

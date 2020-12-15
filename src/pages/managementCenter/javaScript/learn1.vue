@@ -354,9 +354,9 @@ export default {
         demo8(){
             //流程控制
             var i = 6;
-            if(i==5){//不管成立与否，都会往下执行，除非用return
+            if(i==5){//不管成立与否，都会往下执行，除非方法里用return
                 console.log("if=6");
-            }else if(i==7){//不管成立与否，都会往下执行，除非用return
+            }else if(i==7){//不管成立与否，都会往下执行，除非方法里用return
                 console.log("if=7");
             }else{//以上都不成立才执行
                 console.log("什么都不是");
@@ -376,7 +376,7 @@ export default {
 				default://以上case均不成立，才执行
                     console.log("什么都不是");
             }
-            
+            // 无需判断，直接遍历
             var arr = [1,2,3,4,5,6];
             for(let i=0;i<arr.length;i++){
                 if(arr[i] == 3){
@@ -386,21 +386,21 @@ export default {
                     continue;//终止本次循环，进行下一次
                 }
             }
-            //当不确定循环条件时，用while，已知循环条件时用for
+            // 先判断，true才遍历
 			var m=0;
-			while(m<5){//先判断为true，才执行以下
+			while(m<5){
                 m++;
 				console.log("while",m);
 				if(m>2){
 					break;//直接终止循环
 				}
             }
-
+            // 先走一次，再判断，true才遍历
             var p = 0;
 			do{
 				console.log("do==while");//弹两次
 				p++;
-			}while(p<2);//先执行do中的语句，再去判断while的条件,不管while中的条件是否成立，do都要执行一次
+			}while(p<2);
         },
     }
 }

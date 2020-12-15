@@ -10,10 +10,24 @@ export default {
 
         }
     },
+    created () {
+        // this.cause('传入参数').then(function(res){ // 可以省略then,catch
+        //     console.log('最终步骤', res)
+        // }).catch(err => {
+        //     console.log('error',err);//语法错误会触发catch方法
+        // })
+    },
     mounted(){
-        this.demo4();
+        // this.demo2();
+        // this.init('参数1', '参数2', function(res){
+        //     console.log('最终执行', res);
+        // })
     },
     methods: {
+        init (params1, params2, callback) { // 方法callback的应用
+            console.log('传入的参数:', params1, params2);
+            callback({ message: '成功' }); // callback有return功能，结束方法
+        },
         demo1(){
             console.log( "1" );// 同步任务
             setTimeout(function() {// setTimeout和setInterval函数，是异步-宏任务
@@ -23,6 +37,7 @@ export default {
                 console.log( "3" )
             }, 0 );
 
+            // 应用: 现在是定义给变量，还可以在方法里return给方法, 就可以then了
             var promise = new Promise(function(resolve) {// new Promise是同步任务
                 console.log('4')
                 resolve()
@@ -71,16 +86,36 @@ export default {
                 await step3(333);
                 return {message: '回调成功'};
             }
-            myAsync(111).then(result => {
+            myAsync('传参!').then(result => {
                 console.log('步骤4-结果',result);
             }).catch(err => {
                 console.log('error',err);//语法错误会触发catch方法
             })
         },
+        // vue应用async
+        async cause (params) {// 应用接口的执行步骤: 如先获取id，再用该id传别的接口   http请求就是用这个封装的
+            let guide = await this.cause1(params);
+            await this.cause2(guide);// 步骤1获取的id，传给步骤2
+            await this.cause3()
+            console.log('await-4')
+            return {message: '回调成功'};
+        },
+        cause1 (params) {
+            console.log('await-1', params)
+            return { id: 910 }
+        },
+        cause2 (val) {
+            if (val.id === 910) {
+                console.log('await-2')
+            }
+        },
+        cause3 () {
+            console.log('await-3')
+        },
         demo3(){
             // 遍历
             // for与forEach的区别:
-            // forEach不能使用break,return,不能用arr.splice(),索引index不会被重置,相反for可以
+            // forEach不能使用break,continue,不能用arr.splice(),索引index不会被重置,相反for可以
             let arr = [1,2,3];
             for(let i=0;i<arr.length;i++){//能使用break,return
 

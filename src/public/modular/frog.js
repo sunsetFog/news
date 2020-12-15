@@ -81,7 +81,7 @@ const comic = {
         return new Date().getTime();
     },
     //时间戳转时间  https://www.cnblogs.com/zhaojunhao/p/9630315.html
-    getLocalTime(nS) {    
+    getLocalTime(nS) { // ns是10位准确，13位不准确
         return new Date(parseInt(nS) * 1000).toLocaleString().replace(/年|月/g, "-").replace(/日/g, " ");     
     },
     overallHeight(value){

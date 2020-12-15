@@ -33,6 +33,7 @@ export default {
         },
         demo2(){
             //箭头函数  (参数) => {}  相当于  function (参数) {}        箭头函数里面没有 this 对象，用的this是外层或Window 
+            // 简写: res => 'return内容'
             var f = v => v;
             //等价于
             // var f = function(v){

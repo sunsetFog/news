@@ -69,6 +69,7 @@ export default {
             //     altKey: alt键按下true，抬起false
             // }	
             document.onkeydown = function(event){
+                // 用||或，前面值没有，就取后面的值
                 var ev = event || window.event;//event  谷歌、火狐等，浏览器内置参数      window.event  IE浏览器内置参数    这是兼容性写法
                 if(ev.ctrlKey){
                     console.log('你按下了Ctrl键');

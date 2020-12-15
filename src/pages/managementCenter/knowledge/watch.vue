@@ -22,7 +22,7 @@ export default {
   //1. 不支持缓存,数据改变而触发 2.watch支持异步
   //用法: watch监听数据，用于监听输入框或路由变化
   watch: {
-    $route(to, from) {//监听路由变化
+    $route(to, from) {//监听路由变化，前提要有视图<router-view></router-view>
 
     },
     //推荐使用

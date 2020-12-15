@@ -21,7 +21,7 @@ export default {
             let turn = str.split("").reverse().join("");
             console.log('字符串反转',turn);
 
-            let frequency = (str.split("p")).length-1;
+            let frequency = (str.split("p")).length-1; // 括号连续拼写
             console.log('p字母次数',frequency);
 
             let num = 7590584;

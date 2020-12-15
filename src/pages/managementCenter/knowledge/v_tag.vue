@@ -9,8 +9,8 @@
         <hr>
         <!-- v-show-->
         <!-- 同样是显示隐藏v-if与v-show的区别: 
-            1.v-if是条件判断也能布尔值，判断为false时，标签删除找不到，相当于样式 visibility: hidden;
-            2.v-show只能用布尔值true或false，为false时，标签还能找到，相当于样式 display: none;
+            1.v-if是条件判断也能布尔值，判断为false时，元素节点删除找不到，相当于样式 visibility: hidden;
+            2.v-show只能用布尔值true或false，为false时，元素节点还能找到，相当于样式 display: none;
         -->
         <div>
             <p class="line-color" v-show="show_active">v-show的true</p>

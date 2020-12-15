@@ -16,7 +16,7 @@ export default {
         demo1(){
             // 自我介绍
             // 考官好，很荣幸有机会向考官请教和学习。我叫***，读计算机网络应用专业，平时喜欢研究代码和上网浏览信息。
-            // 出来后，从事前端行业，三年来经历丰富，具有移动端和PC端经验。
+            // 出来后，从事前端行业，三年半来经历丰富，具有移动端和PC端经验。
             // 性格开朗随和，有上进心，希望日后能做的更好，介绍完毕，谢谢！
         },
         demo2(){
@@ -27,10 +27,20 @@ export default {
             // vue的拦截: 路由拦截，请求拦截
         },
         demo3(){
-            // pc端和移动端自适应:
-            // pc端两种：
-            //     1.不转rem  看src\pages\managementCenter\effect\adaption.vue
-            // 转rem
+            /**
+             * vue中mvvm原理及其实现
+             * 原理: M(Model，模型层),V(View，视图层),VM(ViewMode, 桥梁)。用桥梁监听模型层与视图层，实现数据的双向绑定
+             * 实现: 用下面知识点，监听对象属性变化，
+             */
+            let obj = { key: '' }
+            Object.defineProperty(obj, 'key', {
+                get() {// get函数
+
+                },
+                set() {// set函数
+
+                }
+            })
         },
         demo4(){
             // 页面的传参方式:
