@@ -8,7 +8,7 @@ import player from './modular/player';
 
 
 export default new Vuex.Store({
-	modules: {
+	modules: {// modules模块化vuex
 		pool,
 		player
 	}

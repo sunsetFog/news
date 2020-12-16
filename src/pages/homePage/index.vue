@@ -44,22 +44,38 @@ export default{
     data(){
         return{
             card_picture: [
-                {url: '../../../static/picture/home/photo2.jpg'},
-                {url: '../../../static/picture/home/banner.jpg'}
+                {url: '../../../static/picture/banner/1.jpg'},
+                {url: '../../../static/picture/banner/2.jpg'},
+                {url: '../../../static/picture/banner/4.jpg'},
+                {url: '../../../static/picture/banner/6.jpg'},
+                {url: '../../../static/picture/banner/7.jpg'},
+                {url: '../../../static/picture/banner/8.jpg'}
+                // {url: '../../../static/picture/banner/original/photo2.jpg'},
+                // {url: '../../../static/picture/banner/original/banner.jpg'}
             ],
             game_list: [
                 {pages: [
-                    {url: '../../../static/picture/home/longhudou.png',margin: '0px 5px 60px 0px',height: '100%',top: '0px'},
-                    {url: '../../../static/picture/home/baijiale.png',margin: '0px 5px 60px 0px',height: '112.5%',top: '-12.5%'},
-                    {url: '../../../static/picture/home/bairenniuniu.png',margin: '0px 5px 60px 0px',height: '121.4%',top: '-21.4%'},
-                    {url: '../../../static/picture/home/shuiguoji.png',margin: '0px 0px 60px 0px',height: '100%',top: '0px'},
-                    {url: '../../../static/picture/home/buyu.png',margin: '0px 5px 0px 0px',height: '117.1%',top: '-17.1%'},
-                    {url: '../../../static/picture/home/shuihu.png',margin: '0px 5px 0px 0px',height: '100%',top: '0px'},
-                    {url: '../../../static/picture/home/doudizhu.png',margin: '0px 5px 0px 0px',height: '100%',top: '0px'},
-                    {url: '../../../static/picture/home/honghei.png',margin: '0px 0px 0px 0px',height: '110.7%',top: '-10.7%'}
+                    {url: '../../../static/picture/game/1.jpg',margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
+                    {url: '../../../static/picture/game/2.jpg',margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
+                    {url: '../../../static/picture/game/3.jpg',margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
+                    {url: '../../../static/picture/game/4.jpg',margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
+                    {url: '../../../static/picture/game/5.jpg',margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
+                    {url: '../../../static/picture/game/6.jpg',margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
+                    {url: '../../../static/picture/game/7.jpg',margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
+                    {url: '../../../static/picture/game/8.jpg',margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
+
+                    // {url: '../../../static/picture/game/original/longhudou.png',margin: '0px 5px 60px 0px',height: '100%',top: '0px'},
+                    // {url: '../../../static/picture/game/original/baijiale.png',margin: '0px 5px 60px 0px',height: '112.5%',top: '-12.5%'},
+                    // {url: '../../../static/picture/game/original/bairenniuniu.png',margin: '0px 5px 60px 0px',height: '121.4%',top: '-21.4%'},
+                    // {url: '../../../static/picture/game/original/shuiguoji.png',margin: '0px 0px 60px 0px',height: '100%',top: '0px'},
+                    // {url: '../../../static/picture/game/original/buyu.png',margin: '0px 5px 0px 0px',height: '117.1%',top: '-17.1%'},
+                    // {url: '../../../static/picture/game/original/shuihu.png',margin: '0px 5px 0px 0px',height: '100%',top: '0px'},
+                    // {url: '../../../static/picture/game/original/doudizhu.png',margin: '0px 5px 0px 0px',height: '100%',top: '0px'},
+                    // {url: '../../../static/picture/game/original/honghei.png',margin: '0px 0px 0px 0px',height: '110.7%',top: '-10.7%'}
                 ]},
                 {pages: [
-                    {url: '../../../static/picture/home/fengkuangniuniu.png',margin: '0px 0px 0px 0px',height: '117.1%',top: '-17.1%'}
+                    {url: '../../../static/picture/game/9.jpg',margin: '0px 0px 0px 0px',height: '100%',top: '0px'}
+                    // {url: '../../../static/picture/home/fengkuangniuniu.png',margin: '0px 0px 0px 0px',height: '117.1%',top: '-17.1%'}
                 ]}
             ]
         }
@@ -130,7 +146,7 @@ export default{
     .enter-game{
         width: 100%;
         height: 1010px;
-         .mixin_image(url('../../../static/picture/home/background.jpg'));
+         .mixin_image(url('../../../static/picture/home/bj-index.jpg'));
          position: relative;
         .big-fish{
             .mixin_img(326px;387px);
