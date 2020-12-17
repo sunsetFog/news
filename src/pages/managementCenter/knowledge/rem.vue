@@ -1,7 +1,7 @@
 <template>
     <section id="rem">
         <!-- 移动端适配 -->
-        <!-- 注意:谷歌浏览器最小字体为12像素,项目要用大于12的字体，
+        <!-- 注意:谷歌浏览器最小字体为12像素,项目要用大于12的字体，选16就好
         应用自动转换px为rem   https://www.cnblogs.com/wangqiao170/p/8652505.html
         npm install postcss-pxtorem --save-dev
         配置postcssrc.js文件，而16为字体大小

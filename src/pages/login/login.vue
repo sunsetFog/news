@@ -237,10 +237,10 @@ export default{
         }
         .sign-frame{
             width: 480px;
-            height: 430px;
+            height: 400px;
             .mixin_image(url('../../../static/picture/login/kuankuan.png'));
             position: absolute;
-            top: 180px;
+            top: 190px;
             left: 50%;
             margin-left: -240px;
             .code-and-service{
@@ -260,7 +260,7 @@ export default{
             }
             .form-information{
                 width: 100%;
-                height: 390px;
+                height: 360px;
                 padding: 20px 30px 0px 30px;
                 box-sizing: border-box;
                 .account,.password-enter{
@@ -354,6 +354,9 @@ export default{
                 .login-register{
                     width: 100%;
                     height: 50px;
+                    span {
+                        cursor: pointer;
+                    }
                     span:nth-of-type(1){
                         .mixin_span(48%,50px,none,white,center);
                         float: left;

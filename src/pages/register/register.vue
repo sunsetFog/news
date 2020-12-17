@@ -19,7 +19,7 @@
                   <div class="grows">
                       <input type="text" placeholder="请填写验证码" v-model.trim="verify_code" maxlength="10"/>
                   </div>
-                  <div class="verify">
+                  <div class="pen-verify">
                       <button v-if="verify_active">{{verify_time}}s</button>
                       <button v-else @click="verificationCode">发送验证码</button>
                   </div>
@@ -129,74 +129,6 @@ export default{
                 that.$message.success('短信发送成功！');
             })
         },
-        nowRegister2(){
-            let that = this;
-            if(that.$means.isMoblie(that.account_number)){
-                that.$message.error('请输入正确的手机号！');
-                return;
-            }else if(that.verify_code==''){
-                that.$message.error('请输入手机验证码！');
-                return;
-            }else if(that.old_password==''||that.new_password==''){
-                that.$message.error('请输入密码或确认密码！');
-                return;
-            }else if(that.old_password!=that.new_password){
-                that.$message.error('请输入两个密码一致的密码！');
-                return;
-            }else if(that.new_password.length<6){
-                that.$message.error('请输入6~16个字符的密码！');
-                return;
-            }
-            let json = {
-					cellphone: that.account_number,
-					loginpwd: that.old_password,
-					confirmpwd: that.new_password,
-					promocode: '',
-					deviceid: that.account_number+Date.now(),
-					smscode: that.verify_code,
-                    agentorg: window.location.host
-			}
-			that.$apihttp.post('/web/player/safetyreg',json).then(res=>{
-                //console.log('success_register',res);
-                if(res.data.code==0){
-                    that.$router.push({path: '/login'});
-                    that.$message.success('注册成功');
-                }else{
-                    that.$message.error(res.data.message);
-                }
-			}).catch((err)=>{
-                //console.log('error',err);
-            })
-        },
-        verificationCode2(){
-            let that = this;
-            if(that.$means.isMoblie(that.account_number)){
-                that.$message.error('请输入正确的手机号！');
-                return;
-            }
-            let json = {
-				cellphone: that.account_number
-			}
-			that.$apihttp.post('/web/player/getmobilecode',json).then(res=>{
-                //console.log('success_code',res,typeof res.data);
-                if(typeof res.data=='string'){
-                    that.verify_time = 60;
-                    that.verify_active = true;
-                    that.timer();
-                    return;
-                }
-                if(res.data.code==0){
-                    that.verify_time = 60;
-                    that.verify_active = true;
-                    that.timer();
-                    that.$message.success(res.data.message);
-                }else{
-                    that.$message.error(res.data.message);
-                }
-			}).catch((err)=>{
-                //console.log('error',err);
-            })    
-        },
         timer(){
             if(this.verify_time>0){
                 this.verify_time--;
@@ -239,9 +171,9 @@ export default{
             bottom: 0px;
         }
         .containter{
-            .mixin_center(600px,600px);
+            .mixin_center(600px,550px);
             .mixin_image(url('../../../static/picture/register/frame01.png'));
-            padding: 20px 40px 20px 40px;
+            padding: 20px 40px 0px 40px;
             box-sizing: border-box;
             .heart-content{
                 .mixin_float(100%,100%,left);
@@ -287,10 +219,10 @@ export default{
                         font-size: @font_size18;
                     }
                 }
-                .verify{
+                .pen-verify{
                     width: 100%;
                     height: 50px;
-                    margin: 9px 0px 12px 0px;
+                    margin: 9px 0px 0px 0px;
                     button{
                         .mixin_button(100px,50px,none,#7d500f);
                         float: right;
@@ -304,7 +236,7 @@ export default{
                     .mixin_div(100%,50px,none,#174308,center);
                     .mixin_image(url('../../../static/picture/register/button01.png'));
                     font-size: @font_size18;
-                    margin-top: 55px;
+                    margin-top: 35px;
                     cursor: pointer;
                 }
                 .submit:hover{
