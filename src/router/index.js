@@ -19,6 +19,7 @@ export default new Router({
   mode: 'history',//路由路径#
   base: '/root/', // 添加根目录,对应服务器部署子目录
   routes: [
+    { path: '*', name: 'error', meta: { title: '找不到该页',key: 404}, component: resolve => require(['@/pages/error.vue'], resolve) },
     {
       path: '/', component: resolve => require(['@/pages/home'], resolve),
       children: [

@@ -98,14 +98,8 @@ router.beforeEach((to, from, next) => {
         next({path: '/neutralgear'});
     }
 
-    let user = sessionStorage.getItem('token');
-    let beforeRouterArr = ['/login','/register','/line'];
-    if (!user && beforeRouterArr.indexOf(to.path)==-1) {
-        next({path: '/login'});
-    } else {
-        NProgress.start();
-        next()
-    }
+    NProgress.start();
+    next()
 }); 
 router.afterEach(transition => {
   NProgress.done();

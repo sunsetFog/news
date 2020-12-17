@@ -66,7 +66,7 @@ export default {
         // border-left: 1px solid red;
         // border-right: 1px solid red;
 
-        // margin: 0 auto;//div水平居中
+        // margin: 0px auto 0px auto;// div水平居中  简写: margin: 0 auto;
         // margin-top: 100px;
         // margin-bottom: 100px;
         // margin-left: 100px;

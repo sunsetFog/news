@@ -195,11 +195,12 @@ export default {
             console.log('去除所有空格',name.replace(/\s*/g,''));
             // 正则表达式-元字符
             console.log('匹配换行符', 'A\nB'); // \n
+            console.log('空格', 'A&nbsp;B'); // &nbsp;
         },
         demo7(){
             //Math对象: 数学任务      Math.方法名(运算值)
 			var a=-4.5;
-			console.log('绝对值',Math.abs(a));//
+			console.log('绝对值',Math.abs(a));
 			var b=4.2;
 			console.log('上取整',Math.ceil(b));
 			console.log('下取整',Math.floor(b));
