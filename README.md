@@ -124,4 +124,4 @@ npm uninstall 名 --save 和npm uninstall 名 --save-dev 删除模块
 npm install less@3.0.4 --save   添加指定版本模块（如less）
 news\static\picture\warning.png   模块版本低报错，删除并重新下载模块（如echarts，selenium-server）
 
-package.json插件介绍
+package.json插件介绍:
