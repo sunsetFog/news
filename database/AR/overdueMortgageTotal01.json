@@ -1,0 +1,42 @@
+{
+    "result": "S",
+    "msg": null,
+    "data": [
+        {
+            "bu_name": "集团总部",
+            "lm_mtd_rec_amt": 3379336700.00000000,
+            "lm_ytd_normal_rec_amt": 29058696096.00000000,
+            "ly_ytd_rec_amt": 38169421899.90000000,
+            "rec_yoy_rate": 34.4300,
+            "ytd_overdue_rec_amt_rate": 33.11874707,
+            "lm_mtd_overdue_rec_amt": 1042117800.00000000,
+            "mtd_rec_amt": 4095002844.00000000,
+            "ytd_overdue_mom_rate": 11.0200,
+            "overdue_yoy_rate": 33.3400,
+            "mtd_rec_mom_rate": 21.1800,
+            "w_insert_date": 1606293670000,
+            "ly_mtd_rec_amt": 3046216637.50000000,
+            "mtd_overdue_rec_amt": 1266003395.00000000,
+            "ytd_overdue_rec_amt": 16155376005.00000000,
+            "bu_id": "A30003353",
+            "ytd_rec_mom_rate": 11.8600,
+            "lm_mtd_normal_rec_amt": 2337218900.00000000,
+            "row_type": "BU",
+            "ly_ytd_normal_rec_amt": 26053562977.00000000,
+            "level": 1,
+            "ytd_rec_amt": 48780154550.00000000,
+            "mtd_overdue_rec_amt_rate": 30.91581235,
+            "ly_rec_yoy_rate": 27.8000,
+            "ytd_normal_mom_rate": 12.2700,
+            "mtd_normal_rec_amt": 2828999449.00000000,
+            "lm_ytd_rec_amt": 43610133759.00000000,
+            "ly_ytd_overdue_rec_amt": 12115858922.90000000,
+            "normal_mom_rate": 21.0400,
+            "normal_yoy_rate": 25.2200,
+            "period_wid": "20201125",
+            "ytd_normal_rec_amt": 32624778545.00000000,
+            "overdue_mom_rate": 21.4800,
+            "lm_ytd_overdue_rec_amt": 14551437663.00000000
+        }
+    ]
+}

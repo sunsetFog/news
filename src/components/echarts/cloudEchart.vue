@@ -80,7 +80,7 @@ export default {
 <style lang="less" scoped>
 #echarts {
   width: 100%;
-  color: black;
+  color: white;
   .show-chart,.nothing-tip{
     width: 100%;
   }

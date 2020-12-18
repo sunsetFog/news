@@ -4,10 +4,10 @@ module.exports = {
   "plugins": {
     "postcss-import": {},
     "postcss-url": {},
-    // "postcss-pxtorem": {
-    //   "rootValue": 16,
-    //   "propList": ["*"]
-    // },
+    "postcss-pxtorem": {
+      "rootValue": 16,
+      "propList": ["*"]
+    },
     // to edit target browsers: use "browserslist" field in package.json
     "autoprefixer": {}
   }

@@ -1,7 +1,7 @@
 <template>
     <section id="error">
         <p>
-            <i class="el-icon-error"></i>
+            <van-icon name="clear"/>
             404&nbsp;找不到该页，请检查您输入的网址是否正确！
         </p>
     </section>
@@ -17,11 +17,11 @@ export default {
 #error {
     width: 100%;
     p {
-        width: 600px;
+        width: 375px;
         height: 35px;
         line-height: 35px;
-        font-size: 18px;
-        margin: 200px auto 0px auto;
+        font-size: 14px;
+        padding: 200px 0 0 0;
         i {
             font-size: 26px;
             vertical-align: middle;

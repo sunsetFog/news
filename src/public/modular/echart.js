@@ -16,7 +16,8 @@ export default {
      * echarts在移动端要转rem
      */
     typefaceSize (num) {
-        return num
+        num = num / Number(sessionStorage.getItem('pixelSize'))
+        return num * Number(sessionStorage.getItem('pixelSize'))
     },
     /**
      * 数字加千位分隔符   1234567 转 '1,234,567'

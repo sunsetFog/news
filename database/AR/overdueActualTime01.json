@@ -1,0 +1,24 @@
+{
+    "result": "S",
+    "msg": null,
+    "data": [
+        {
+            "bu_name": "集团总部",
+            "month_last_avg_times": 86.57541232,
+            "month_mom_rate": 0.77000000,
+            "row_type": "BU",
+            "level": 1,
+            "month_yoy_rate": -21.74000000,
+            "month_cur_avg_times": 67.75234812,
+            "w_insert_date": 1606293670000,
+            "year_pre_avg_times": 75.67167471,
+            "year_yoy_rate": -12.66000000,
+            "month_pre_avg_times": 67.23602615,
+            "year_last_avg_times": 85.87710335,
+            "year_cur_avg_times": 75.00685617,
+            "period_wid": "20201125",
+            "bu_id": "A30003353",
+            "year_mom_rate": -0.88000000
+        }
+    ]
+}

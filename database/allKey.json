@@ -1,0 +1,7 @@
+{
+    "key": true,
+    "dev-url": "https://pricemapif_test.mideazy.com",
+    "prod-url-test": "https://pricemapif_test.mideazy.com",
+    "prod-url-ok": "https://pricemapif.mideazy.com",
+    "mock-url": "http://mock-api-success.com"
+}

@@ -1,0 +1,18 @@
+{
+    "result": "S",
+    "msg": null,
+    "data": [
+        {
+            "PLAN_AMOUNT": 15108706003.8000,
+            "WWQ_PLAN_AMOUNT": 7539434753.8000,
+            "PERIOD_WID": "20201125",
+            "ORG_ID": "A30003353",
+            "ORG_NAME": "集团总部",
+            "YWQ_PLAN_AMOUNT": 7569271250.0000,
+            "W_INSERT_DT": 1606293774000,
+            "LEVEL": "1",
+            "ROW_TYPE": "BU",
+            "MOY_RATE": 0.0000
+        }
+    ]
+}

@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { Message, MessageBox } from 'element-ui'
+// import { Message, MessageBox } from 'element-ui'
 import router from '@/router' // 用于路由跳转 router.push({path: '/login'})
 import means from '../public/modular/accumulation01'
 import allKey from '../../static/capital/allKey.json'
@@ -54,34 +54,14 @@ service.interceptors.request.use(config => {
 service.interceptors.response.use(response => {
     // console.log('后台返回的数据', response);
     if (response.data.data === 'checkToken') {
-        Message.error('登陆过期！');
+        // Message.error('登陆过期！');
         return Promise.reject(response); // 失败回调,捕捉异常
     } else {
         return response.data; // 成功回调
     }
 
-    // if (!response.data.code) {//判断code是否为null,或undefined,是就返回false,所以要加非！
-    //     Message({ message: '返回的code值找不到', type: 'error', duration: 3000 });
-    //     return Promise.reject(response);// 失败回调,捕捉异常
-    // } else {
-    //     let code = response.data.code;// code码 1001会话过期, 1002无权限, 1003其他客户端登录了
-    //     if ([1001, 1003].indexOf(code) > -1) {
-    //         MessageBox.alert(response.data.message, {
-    //             confirmButtonText: '确定',
-    //             callback: action => {
-    //                 router.push({path: '/login'});//路由跳转
-    //             }
-    //         })
-    //         return Promise.reject(response)
-    //     } else if ([1002].indexOf(code) > -1) {
-    //         Message({ message: '无权限', type: 'error', duration: 3000 })
-    //         return Promise.reject(response)
-    //     } else {
-    //         return response.data;//成功回调
-    //     }
-    // }
 }, error => {
-    Message({ message: error.message, type: 'error', duration: 5000 })
+    // Message({ message: error.message, type: 'error', duration: 5000 })
     return Promise.reject(error)
 })
 

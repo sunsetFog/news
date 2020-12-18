@@ -1,12 +1,23 @@
 import Mock from 'mockjs' // npm install mockjs --save
-import allKey from '../static/capital/allKey.json'
+import allKey from './allKey.json'
 
 /**
  * 接受所以暴露export default
  * import * as obj from './'
  */
-import shopAPI from './shop/shop'
-import mapAPI from './map/map'
+import menu from './menu/menu.json'
+import power from './menu/power.json'
+
+import selectDefaultCity from './map/selectDefaultCity.json'
+import orgCityListFull from './map/orgCityListFull.json'
+import allCityPriceAnalysis from './map/allCityPriceAnalysis.json'
+import selectProjectByProjectName from './map/selectProjectByProjectName.json'
+import priceAnalysisList from './PriceAnalysis/priceAnalysisList.json'
+import priceAnalysisTrendData from './PriceAnalysis/priceAnalysisTrendData.json'
+import x_power from './PriceAnalysis/power.json'
+
+import ar from './ar.js'
+
 
 // 设置全局延时 没有延时的话有时候会检测不到数据变化 建议保留
 Mock.setup({
@@ -17,41 +28,59 @@ Mock.setup({
 
 
 /**
- * 查询该全部数据
- * @param { store_id: 12 } 店铺id
+ * 菜单1
+ * @param
  */
-Mock.mock(allKey['mock-url'] + "/store/goods-list", "post", shopAPI.store);
+Mock.mock(allKey['mock-url'] + "/role/menu", "post", menu);
 /**
- * 查询该单条数据
- * @param { goods_id: '' }  商品id
+ * 所在区域数据
+ * @param
  */
-Mock.mock(allKey['mock-url'] + "/store/goods-detail", "post", shopAPI.isSingle);
+Mock.mock(allKey['mock-url'] + "/role/power", "post", power);
 /**
- * 数据的删除操作
- * @param { goods_id: '' }  商品id
+ * 定位失败后，默认城市
+ * @param
  */
-Mock.mock(allKey['mock-url'] + "/store/destroy-goods", "get", shopAPI.isDelete);
+Mock.mock(allKey['mock-url'] + "/role/selectDefaultCity", "post", selectDefaultCity);
 /**
- * 数据的添加操作
- * @param store_id: 12,(店铺id)title: '',(商品名称)company: '',(商品单位)category_pid: '',(商品分类一级id)category_cid: '',(商品分类二级id)thumb: '../../../../static/meitu/dian/lizhi.jpg',(商品图片)price: '',(商品现价)original_price: '',(商品原价)cost: '',(商品成本)stock: '',(库存)virtual_sales: ''(虚拟销量)
+ * 选择城市
+ * @param
  */
-Mock.mock(allKey['mock-url'] + "/store/add-goods", "post", shopAPI.isAdd);
+Mock.mock(allKey['mock-url'] + "/mktinformationoperativemenu/orgCityListFull", "post", orgCityListFull);
 /**
- * 数据的修改操作
- * @param store_id: 12,(店铺id)id: '',(商品id)title: '',(商品名称)company: '',(商品单位)category_pid: '',(商品分类一级id)category_cid: '',(商品分类二级id)thumb: '../../../../static/meitu/dian/lizhi.jpg',(商品图片)price: '',(商品现价)original_price: '',(商品原价)cost: '',(商品成本)stock: '',(库存)virtual_sales: ''(虚拟销量)
+ * 项目列表
+ * @param
  */
-Mock.mock(allKey['mock-url'] + "/store/edit-goods", "post", shopAPI.isUpdate);
+Mock.mock(allKey['mock-url'] + "/priceAnalysis/allCityPriceAnalysis", "post", allCityPriceAnalysis);
 /**
- * 查询分类数据
- * @param { store_id: 12 } 店铺id
+ * 搜索项目
+ * @param
  */
-Mock.mock(allKey['mock-url'] + "/store/goods/get-category", "post", shopAPI.classify);
+Mock.mock(allKey['mock-url'] + "/priceAnalysis/selectProjectByProjectName", "post", selectProjectByProjectName);
+/**
+ * 项目详情
+ * @param
+ */
+Mock.mock(allKey['mock-url'] + "/priceAnalysis/priceAnalysisList", "post", priceAnalysisList);
+/**
+ * 项目详情图表
+ * @param
+ */
+Mock.mock(allKey['mock-url'] + "/priceAnalysis/priceAnalysisTrendData", "post", priceAnalysisTrendData);
+/**
+ * 选择项目
+ * @param
+ */
+Mock.mock(allKey['mock-url'] + "/role/power", "post", x_power);
 
-/**
- * mock.vue调用的接口
- * @param {}
- */
-Mock.mock(allKey['mock-url'] + "/store/price-list", "post", mapAPI.mapList);
+
+Mock.mock(allKey['mock-url'] + "/accountsReceivable/inTransitMortgage", "post", ar.inTransitMortgage);
+Mock.mock(allKey['mock-url'] + "/accountsReceivable/overdueActualTime", "post", ar.overdueActualTime);
+Mock.mock(allKey['mock-url'] + "/accountsReceivable/overdueMortgageTotal", "post", ar.overdueMortgageTotal);
+Mock.mock(allKey['mock-url'] + "/accountsReceivable/overdueProcessingTotal", "post", ar.overdueProcessingTotal);
+Mock.mock(allKey['mock-url'] + "/accountsReceivable/selectBylist", "post", ar.selectBylist);
+Mock.mock(allKey['mock-url'] + "/accountsReceivable/structuralAnalysisList", "post", ar.structuralAnalysisList);
+Mock.mock(allKey['mock-url'] + "/accountsReceivable/structuralMortgage", "post", ar.structuralMortgage);
 
 
 

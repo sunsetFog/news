@@ -1,0 +1,138 @@
+{
+    "result": "S",
+    "msg": null,
+    "data": [
+        {
+            "PLAN_AMOUNT": 1028075884.0000,
+            "WWQ_PLAN_AMOUNT": 400296887.0000,
+            "PERIOD_WID": "20201125",
+            "ORG_ID": "A1788118227",
+            "ORG_NAME": "粤桂区域公司",
+            "YWQ_PLAN_AMOUNT": 627778997.0000,
+            "W_INSERT_DT": 1606293774000,
+            "LEVEL": "2",
+            "ROW_TYPE": "ORG",
+            "MOY_RATE": 0.0000
+        },
+        {
+            "PLAN_AMOUNT": 814210975.0000,
+            "WWQ_PLAN_AMOUNT": 304741599.0000,
+            "PERIOD_WID": "20201125",
+            "ORG_ID": "A1392342636",
+            "ORG_NAME": "湖南区域公司",
+            "YWQ_PLAN_AMOUNT": 509469376.0000,
+            "W_INSERT_DT": 1606293774000,
+            "LEVEL": "2",
+            "ROW_TYPE": "ORG",
+            "MOY_RATE": 0.0000
+        },
+        {
+            "PLAN_AMOUNT": 552887000.0000,
+            "WWQ_PLAN_AMOUNT": 132800000.0000,
+            "PERIOD_WID": "20201125",
+            "ORG_ID": "A7319161253",
+            "ORG_NAME": "川渝区域公司",
+            "YWQ_PLAN_AMOUNT": 420087000.0000,
+            "W_INSERT_DT": 1606293774000,
+            "LEVEL": "2",
+            "ROW_TYPE": "ORG",
+            "MOY_RATE": 0.0000
+        },
+        {
+            "PLAN_AMOUNT": 2664363531.2000,
+            "WWQ_PLAN_AMOUNT": 1784515544.2000,
+            "PERIOD_WID": "20201125",
+            "ORG_ID": "A7244622569",
+            "ORG_NAME": "赣闽区域公司",
+            "YWQ_PLAN_AMOUNT": 879847987.0000,
+            "W_INSERT_DT": 1606293774000,
+            "LEVEL": "2",
+            "ROW_TYPE": "ORG",
+            "MOY_RATE": 0.0000
+        },
+        {
+            "PLAN_AMOUNT": 2679405345.0000,
+            "WWQ_PLAN_AMOUNT": 1667041104.0000,
+            "PERIOD_WID": "20201125",
+            "ORG_ID": "A1630176062",
+            "ORG_NAME": "沪苏皖区域公司",
+            "YWQ_PLAN_AMOUNT": 1012364241.0000,
+            "W_INSERT_DT": 1606293774000,
+            "LEVEL": "2",
+            "ROW_TYPE": "ORG",
+            "MOY_RATE": 0.0000
+        },
+        {
+            "PLAN_AMOUNT": 664609163.0000,
+            "WWQ_PLAN_AMOUNT": 81594163.0000,
+            "PERIOD_WID": "20201125",
+            "ORG_ID": "A7330700607",
+            "ORG_NAME": "津淮区域公司",
+            "YWQ_PLAN_AMOUNT": 583015000.0000,
+            "W_INSERT_DT": 1606293774000,
+            "LEVEL": "2",
+            "ROW_TYPE": "ORG",
+            "MOY_RATE": 0.0000
+        },
+        {
+            "PLAN_AMOUNT": 1507453362.0000,
+            "WWQ_PLAN_AMOUNT": 989148362.0000,
+            "PERIOD_WID": "20201125",
+            "ORG_ID": "A2470314399",
+            "ORG_NAME": "中部区域公司",
+            "YWQ_PLAN_AMOUNT": 518305000.0000,
+            "W_INSERT_DT": 1606293774000,
+            "LEVEL": "2",
+            "ROW_TYPE": "ORG",
+            "MOY_RATE": 0.0000
+        },
+        {
+            "PLAN_AMOUNT": 2814162713.6000,
+            "WWQ_PLAN_AMOUNT": 1454126216.6000,
+            "PERIOD_WID": "20201125",
+            "ORG_ID": "A2782646555",
+            "ORG_NAME": "浙江区域公司",
+            "YWQ_PLAN_AMOUNT": 1360036497.0000,
+            "W_INSERT_DT": 1606293774000,
+            "LEVEL": "2",
+            "ROW_TYPE": "ORG",
+            "MOY_RATE": 0.0000
+        },
+        {
+            "PLAN_AMOUNT": 542945152.0000,
+            "WWQ_PLAN_AMOUNT": 106759000.0000,
+            "PERIOD_WID": "20201125",
+            "ORG_ID": "A1195403672",
+            "ORG_NAME": "西南区域公司",
+            "YWQ_PLAN_AMOUNT": 436186152.0000,
+            "W_INSERT_DT": 1606293774000,
+            "LEVEL": "2",
+            "ROW_TYPE": "ORG",
+            "MOY_RATE": 0.0000
+        },
+        {
+            "PLAN_AMOUNT": 104790000.0000,
+            "WWQ_PLAN_AMOUNT": 85950000.0000,
+            "PERIOD_WID": "20201125",
+            "ORG_ID": "A7221113714",
+            "ORG_NAME": "辽宁区域公司",
+            "YWQ_PLAN_AMOUNT": 18840000.0000,
+            "W_INSERT_DT": 1606293774000,
+            "LEVEL": "2",
+            "ROW_TYPE": "ORG",
+            "MOY_RATE": 0.0000
+        },
+        {
+            "PLAN_AMOUNT": 1735802878.0000,
+            "WWQ_PLAN_AMOUNT": 532461878.0000,
+            "PERIOD_WID": "20201125",
+            "ORG_ID": "A1392342741",
+            "ORG_NAME": "珠三角区域公司",
+            "YWQ_PLAN_AMOUNT": 1203341000.0000,
+            "W_INSERT_DT": 1606293774000,
+            "LEVEL": "2",
+            "ROW_TYPE": "ORG",
+            "MOY_RATE": 0.0000
+        }
+    ]
+}
