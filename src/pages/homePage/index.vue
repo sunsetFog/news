@@ -55,14 +55,14 @@ export default{
             ],
             game_list: [
                 {pages: [
-                    {url: '../../../static/picture/game/1.jpg',margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
-                    {url: '../../../static/picture/game/2.jpg',margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
-                    {url: '../../../static/picture/game/3.jpg',margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
-                    {url: '../../../static/picture/game/4.jpg',margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
-                    {url: '../../../static/picture/game/5.jpg',margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
-                    {url: '../../../static/picture/game/6.jpg',margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
-                    {url: '../../../static/picture/game/7.jpg',margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
-                    {url: '../../../static/picture/game/8.jpg',margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
+                    {url: '../../../static/picture/game/z1.png',margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
+                    {url: '../../../static/picture/game/z2.png',margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
+                    {url: '../../../static/picture/game/z3.png',margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
+                    {url: '../../../static/picture/game/z4.png',margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
+                    {url: '../../../static/picture/game/z5.png',margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
+                    {url: '../../../static/picture/game/z6.png',margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
+                    {url: '../../../static/picture/game/z7.png',margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
+                    {url: '../../../static/picture/game/z8.png',margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
 
                     // {url: '../../../static/picture/game/original/longhudou.png',margin: '0px 5px 60px 0px',height: '100%',top: '0px'},
                     // {url: '../../../static/picture/game/original/baijiale.png',margin: '0px 5px 60px 0px',height: '112.5%',top: '-12.5%'},
@@ -74,7 +74,7 @@ export default{
                     // {url: '../../../static/picture/game/original/honghei.png',margin: '0px 0px 0px 0px',height: '110.7%',top: '-10.7%'}
                 ]},
                 {pages: [
-                    {url: '../../../static/picture/game/9.jpg',margin: '0px 0px 0px 0px',height: '100%',top: '0px'}
+                    {url: '../../../static/picture/game/z9.png',margin: '0px 0px 0px 0px',height: '100%',top: '0px'}
                     // {url: '../../../static/picture/home/fengkuangniuniu.png',margin: '0px 0px 0px 0px',height: '117.1%',top: '-17.1%'}
                 ]}
             ]
