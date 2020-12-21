@@ -23,5 +23,6 @@ export default new Router({
     { path: '/', name: 'home', meta: { title: '首页',key: 1}, component: resolve => require(['@/pages/home'], resolve) },
     { path: '/priceManage', name: 'priceManage', meta: { title: '价格地图',key: 1}, component: resolve => require(['@/pages/priceManage/priceManage'], resolve) },
     { path: '/PriceAnalysis', name: 'PriceAnalysis', meta: { title: '价格详情',key: 1}, component: resolve => require(['@/pages/priceManage/PriceAnalysis'], resolve) },
+    { path: '/AR', name: 'AR', meta: { title: '应收账款',key: 1}, component: resolve => require(['@/pages/receivable/receivable'], resolve) },
   ]
 })

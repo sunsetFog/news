@@ -1,7 +1,7 @@
 <template>
   <section id="echarts">
     <div v-show="!nothingTip" ref="showChart" class="show-chart" :style="{width: dynamic_width,height: dynamic_height}"></div>
-    <div v-show="nothingTip" class="nothing-tip" :style="{width: dynamic_width==='10rem'?'7rem':dynamic_width,height: dynamic_height,lineHeight: dynamic_height}">{{nothing_name}}</div>
+    <div v-show="nothingTip" class="nothing-tip" :style="{width: dynamic_width==='23.43rem'?'16.4rem':dynamic_width,height: dynamic_height,lineHeight: dynamic_height}">{{nothing_name}}</div>
   </section>
 </template>
 
@@ -19,11 +19,11 @@ export default {
   props: {
     dynamic_width: {
       type: String,
-      default: () => '9.2rem'
+      default: () => '21.56rem'
     },
     dynamic_height: {
       type: String,
-      default: () => '6rem'
+      default: () => '14.06rem'
     },
     option_list: {
       type: Object,

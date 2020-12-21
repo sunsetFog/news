@@ -5,7 +5,7 @@
             {{title}}
         </div>
         <img src="../../static/image/refresh.png" @click="refreshPage">
-        <img src="../../static/image/tip.png">
+        <img src="../../static/image/tip.png" @click="explain()">
         <van-overlay :show="forum" @click.stop="forum = false">
             <div class="mechanism">
                 <div class="pen-header">
@@ -29,7 +29,7 @@ export default {
     name: 'headerBar',
     data () {
         return {
-            forum: true
+            forum: false
         }
     },
     props: {
@@ -44,6 +44,9 @@ export default {
         },
         refreshPage () {
             location.reload()
+        },
+        explain () {
+            this.forum = true
         }
     }
 }
@@ -91,7 +94,7 @@ export default {
     /deep/ .van-overlay {
         top: 50%;
         left: 30px;
-        margin-top: -280px;
+        margin-top: -270px;
     }
     .mechanism {
         width: 315px;

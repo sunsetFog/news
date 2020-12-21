@@ -1,10 +1,8 @@
 <template>
   <section id="receivable">
+    <header-bar :title="title"></header-bar>
     <div class="header-box">
-      <div class="header">
-        <header-comp :title="title" @backPage="back" @openMenu="openMenu" @refresh="refresh"></header-comp>
-      </div>
-      <date-control :date="date" :time="time" @refreshDate="setDate"></date-control>
+
     </div>
 
     <article class="contain">
@@ -18,12 +16,12 @@
         <div class="income-change">
           <label>近一年应收变动情况</label>
           <div class="box">
-            <cloud-echart dynamic_width="9.2rem" dynamic_height="4.92rem" :option_list="option_01"></cloud-echart>
+            <cloud-echart dynamic_width="21.5rem" dynamic_height="11.53rem" :option_list="option_01"></cloud-echart>
           </div>
         </div>
         <div class="income-contrast">
           <label>各区域应收对比</label>
-          <cloud-echart dynamic_width="9.2rem" :dynamic_height="height_02" :option_list="option_02" @xAxisEvent="xAxisEvent"></cloud-echart>
+          <cloud-echart dynamic_width="21.5rem" :dynamic_height="height_02" :option_list="option_02" @xAxisEvent="xAxisEvent"></cloud-echart>
         </div>
 
         <div class="structure">
@@ -40,11 +38,11 @@
           <div class="columnar">
             <div class="columnar-cell">分期款</div>
             <div :class="{'columnar-cell': true, 'scroll-active': levelType !== 1 && levelType !== 2}">
-              <cloud-echart :dynamic_width="width_03" dynamic_height="6.13rem" :option_list="option_03" @xAxisEvent="xAxisEvent"></cloud-echart>
+              <cloud-echart :dynamic_width="width_03" dynamic_height="14.36rem" :option_list="option_03" @xAxisEvent="xAxisEvent"></cloud-echart>
             </div>
             <div class="columnar-cell">按揭款</div>
             <div :class="{'columnar-cell': true, 'scroll-active': levelType !== 1 && levelType !== 2}">
-              <cloud-echart :dynamic_width="width_04" dynamic_height="6.13rem" :option_list="option_04" @xAxisEvent="xAxisEvent"></cloud-echart>
+              <cloud-echart :dynamic_width="width_04" dynamic_height="14.36rem" :option_list="option_04" @xAxisEvent="xAxisEvent"></cloud-echart>
             </div>
           </div>
         </div>
@@ -52,7 +50,7 @@
         <div class="be-overdue">
           <label>逾期处理情况</label>
           <div class="situation">
-            <cloud-echart dynamic_width="9.2rem" dynamic_height="3.2rem" :option_list="option_05"></cloud-echart>
+            <cloud-echart dynamic_width="21.5rem" dynamic_height="7.5rem" :option_list="option_05"></cloud-echart>
           </div>
         </div>
 
@@ -77,7 +75,7 @@
                 <li>同比<span>{{tab1_list.ly_ytd_rec_amt}}亿</span><span>{{tab1_list.ly_rec_yoy_rate}}%</span></li>
               </ul>
             </div>
-            <cloud-echart dynamic_width="8.9rem" :dynamic_height="height_06" :option_list="option_06" @xAxisEvent="xAxisEvent"></cloud-echart>
+            <cloud-echart dynamic_width="20.85rem" :dynamic_height="height_06" :option_list="option_06" @xAxisEvent="xAxisEvent"></cloud-echart>
           </div>
           <div class="tag2" v-show="tag_index == 1">
             <div class="proportion2">
@@ -86,7 +84,7 @@
                 <li>环比年初<span>{{tab2_list.BOY_PLAN_AMONT}}亿</span><span>{{tab2_list.MOY_RATE}}%</span></li>
               </ul>
             </div>
-            <cloud-echart dynamic_width="8.9rem" :dynamic_height="height_07" :option_list="option_07" @xAxisEvent="xAxisEvent"></cloud-echart>
+            <cloud-echart dynamic_width="20.85rem" :dynamic_height="height_07" :option_list="option_07" @xAxisEvent="xAxisEvent"></cloud-echart>
           </div>
           <div class="tag3" v-show="tag_index == 2">
             <div class="interest-rate">
@@ -101,7 +99,7 @@
             </div>
             <div class="footprint"></div>
             <div class="pie-box">
-              <cloud-echart dynamic_width="8.9rem" dynamic_height="1.6rem" :option_list="option_08"></cloud-echart>
+              <cloud-echart dynamic_width="20.85rem" dynamic_height="3.75rem" :option_list="option_08"></cloud-echart>
             </div>
             <div class="proportion3">
               <ul>
@@ -115,7 +113,7 @@
                 <li>同比<span>{{tab1_list.ly_ytd_overdue_rec_amt}}亿</span><span>{{tab1_list.overdue_yoy_rate}}%</span></li>
               </ul>
             </div>
-            <cloud-echart dynamic_width="8.9rem" :dynamic_height="height_09" :option_list="option_09" @xAxisEvent="xAxisEvent"></cloud-echart>
+            <cloud-echart dynamic_width="20.85rem" :dynamic_height="height_09" :option_list="option_09" @xAxisEvent="xAxisEvent"></cloud-echart>
           </div>
           <div class="tag4" v-show="tag_index == 3">
             <div class="proportion4">
@@ -130,7 +128,7 @@
                 <li>同比<span>{{tab4_list.year_yoy_rate}}%</span></li>
               </ul>
             </div>
-            <cloud-echart dynamic_width="8.9rem" dynamic_height="8.86rem" :option_list="option_10" @xAxisEvent="xAxisEvent"></cloud-echart>
+            <cloud-echart dynamic_width="20.85rem" dynamic_height="20.76rem" :option_list="option_10" @xAxisEvent="xAxisEvent"></cloud-echart>
           </div>
         </div>
     </article>
@@ -138,9 +136,7 @@
 </template>
 
 <script>
-import HeaderComp from '../../components/common/HeaderComp'
-import DateControl from '../../components/common/DateControl'
-import API from '../../assets/js/api.js'
+import headerBar from '../../components/headerBar.vue'
 import drawingLine from './echartLine.js'
 import echartLineBar from './echartLineBar.js'
 import echartBarStack from './echartBarStack.js'
@@ -175,12 +171,12 @@ export default {
       tab1_list: {},
       tab2_list: {},
       tab4_list: {},
-      height_02: '5.3rem',
-      height_06: '8.86rem',
-      height_07: '9.6rem',
-      height_09: '6rem',
-      width_03: '7rem',
-      width_04: '7rem',
+      height_02: '12.4rem',
+      height_06: '20.76rem',
+      height_07: '22.5rem',
+      height_09: '14.06rem',
+      width_03: '16.4rem',
+      width_04: '16.4rem',
       option_01: {},
       option_02: {},
       option_03: {},
@@ -200,11 +196,6 @@ export default {
   },
   mounted () {
   },
-  computed: {
-    token () {
-      return this.$store.state.token
-    }
-  },
   watch: {
     date () {
       this.init()
@@ -222,17 +213,17 @@ export default {
       })
     },
     init () {
-      this.dateSort()
-      this.selectBylist1()
-      this.structuralAnalysisList()
-      this.structuralMortgage()
-      this.overdueProcessingTotal()
-      this.overdueActualTime1()
-      this.overdueActualTime2()
-      this.overdueMortgageTotal1()
-      this.overdueMortgageTotal2()
-      this.inTransitMortgage1()
-      this.inTransitMortgage2()
+      // this.dateSort()
+      // this.selectBylist1()
+      // this.structuralAnalysisList()
+      // this.structuralMortgage()
+      // this.overdueProcessingTotal()
+      // this.overdueActualTime1()
+      // this.overdueActualTime2()
+      // this.overdueMortgageTotal1()
+      // this.overdueMortgageTotal2()
+      // this.inTransitMortgage1()
+      // this.inTransitMortgage2()
     },
     interlinking (level, name, code, parentCode) {
       if (level) {
@@ -246,12 +237,12 @@ export default {
         this.organizationId = code
       }
       if (this.levelType + 1 === 4) {
-        this.height_02 = '10rem'
-        this.height_09 = '10rem'
-        this.height_06 = '10rem'
-        this.height_07 = '10rem'
-        this.width_03 = '10rem'
-        this.width_04 = '10rem'
+        this.height_02 = '23.43rem'
+        this.height_09 = '23.43rem'
+        this.height_06 = '23.43rem'
+        this.height_07 = '23.43rem'
+        this.width_03 = '23.43rem'
+        this.width_04 = '23.43rem'
       }
     },
     xContent (value, level) {
@@ -375,11 +366,10 @@ export default {
     inTransitMortgage1 () {
       const self = this
       let param = { periodWid: self.dayByday('20201017'), orgId: self.orgKey(self.levelType, '单'), type: self.levelType, cityId: self.cityKey(self.levelType, '单') }
-      this.$request({
+      this.$apihttp({
+        url: '/accountsReceivable/inTransitMortgage',
         method: 'post',
-        url: API.inTransitMortgage,
-        data: param,
-        headers: { 'usertoken': self.token }
+        data: param
       }).then((res) => {
         let container = res.data.data
         if (Number(container.length) === 0) {
@@ -400,11 +390,10 @@ export default {
     inTransitMortgage2 () {
       const self = this
       let param = { periodWid: self.dayByday('20201017'), orgId: self.orgKey(self.levelType + 1, '列'), type: self.levelType + 1, cityId: self.cityKey(self.levelType + 1, '列') }
-      this.$request({
+      this.$apihttp({
+        url: '/accountsReceivable/inTransitMortgage',
         method: 'post',
-        url: API.inTransitMortgage,
-        data: param,
-        headers: { 'usertoken': self.token }
+        data: param
       }).then((res) => {
         let container = res.data.data
         if (Number(container.length) === 0) {
@@ -434,11 +423,10 @@ export default {
     selectBylist1 () {
       const self = this
       let param = { periodWid: self.dayByday('20200911'), orgId: self.orgKey(self.levelType, '单'), type: self.levelType, cityId: self.cityKey(self.levelType, '单') }
-      this.$request({
+      this.$apihttp({
+        url: '/accountsReceivable/selectBylist',
         method: 'post',
-        url: API.selectBylist,
-        data: param,
-        headers: { 'usertoken': self.token }
+        data: param
       }).then((res) => {
         let container = res.data.data
         if (Number(container.length) === 0) {
@@ -465,11 +453,10 @@ export default {
     selectBylist2 () {
       const self = this
       let param = { periodWid: self.dayByday('20200911'), orgId: self.orgKey(self.levelType + 1, '列'), type: self.levelType + 1, cityId: self.cityKey(self.levelType + 1, '列') }
-      this.$request({
+      this.$apihttp({
+        url: '/accountsReceivable/selectBylist',
         method: 'post',
-        url: API.selectBylist,
-        data: param,
-        headers: { 'usertoken': self.token }
+        data: param
       }).then((res) => {
         let container = res.data.data
         if (Number(container.length) === 0) {
@@ -497,18 +484,18 @@ export default {
     combination (container, i, key) {
       let emptyArr = []
       emptyArr.push(
-        container[i][key + this.monthSort[0]].toFixed(0),
-        container[i][key + this.monthSort[1]].toFixed(0),
-        container[i][key + this.monthSort[2]].toFixed(0),
-        container[i][key + this.monthSort[3]].toFixed(0),
-        container[i][key + this.monthSort[4]].toFixed(0),
-        container[i][key + this.monthSort[5]].toFixed(0),
-        container[i][key + this.monthSort[6]].toFixed(0),
-        container[i][key + this.monthSort[7]].toFixed(0),
-        container[i][key + this.monthSort[8]].toFixed(0),
-        container[i][key + this.monthSort[9]].toFixed(0),
-        container[i][key + this.monthSort[10]].toFixed(0),
-        container[i][key + this.monthSort[11]].toFixed(0)
+        container[i][key + this.monthSort[0]],
+        container[i][key + this.monthSort[1]],
+        container[i][key + this.monthSort[2]],
+        container[i][key + this.monthSort[3]],
+        container[i][key + this.monthSort[4]],
+        container[i][key + this.monthSort[5]],
+        container[i][key + this.monthSort[6]],
+        container[i][key + this.monthSort[7]],
+        container[i][key + this.monthSort[8]],
+        container[i][key + this.monthSort[9]],
+        container[i][key + this.monthSort[10]],
+        container[i][key + this.monthSort[11]]
       )
       // console.log('数组=', emptyArr)
       return emptyArr
@@ -516,11 +503,10 @@ export default {
     structuralAnalysisList () {
       const self = this
       let param = { periodWid: self.dayByday('20201008'), orgId: self.orgKey(self.levelType + 1, '列'), type: self.levelType + 1, cityId: self.cityKey(self.levelType + 1, '列') }
-      this.$request({
+      this.$apihttp({
+        url: '/accountsReceivable/structuralAnalysisList',
         method: 'post',
-        url: API.structuralAnalysisList,
-        data: param,
-        headers: { 'usertoken': self.token }
+        data: param
       }).then((res) => {
         let container = res.data.data
         if (Number(container.length) === 0) {
@@ -568,11 +554,10 @@ export default {
     structuralMortgage () {
       const self = this
       let param = { periodWid: self.dayByday('20201008'), orgId: self.orgKey(self.levelType + 1, '列'), type: self.levelType + 1, cityId: self.cityKey(self.levelType + 1, '列') }
-      this.$request({
+      this.$apihttp({
+        url: '/accountsReceivable/structuralMortgage',
         method: 'post',
-        url: API.structuralMortgage,
-        data: param,
-        headers: { 'usertoken': self.token }
+        data: param
       }).then((res) => {
         let container = res.data.data
         if (Number(container.length) === 0) {
@@ -613,11 +598,10 @@ export default {
     overdueProcessingTotal () {
       const self = this
       let param = { periodWid: self.dayByday('20200915'), orgId: self.orgKey(self.levelType, '单'), type: self.levelType, cityId: self.cityKey(self.levelType, '单') }
-      this.$request({
+      this.$apihttp({
+        url: '/accountsReceivable/overdueProcessingTotal',
         method: 'post',
-        url: API.overdueProcessingTotal,
-        data: param,
-        headers: { 'usertoken': self.token }
+        data: param
       }).then((res) => {
         let container = res.data.data
         if (Number(container.length) === 0) {
@@ -641,11 +625,10 @@ export default {
     overdueActualTime1 () {
       const self = this
       let param = { periodWid: self.dayByday('20200918'), orgId: self.orgKey(self.levelType, '单'), type: self.levelType, cityId: self.cityKey(self.levelType, '单') }
-      this.$request({
+      this.$apihttp({
+        url: '/accountsReceivable/overdueActualTime',
         method: 'post',
-        url: API.overdueActualTime,
-        data: param,
-        headers: { 'usertoken': self.token }
+        data: param
       }).then((res) => {
         let container = res.data.data
         if (Number(container.length) === 0) {
@@ -669,11 +652,10 @@ export default {
     overdueActualTime2 () {
       const self = this
       let param = { periodWid: self.dayByday('20200918'), orgId: self.orgKey(self.levelType + 1, '列'), type: self.levelType + 1, cityId: self.cityKey(self.levelType + 1, '列') }
-      this.$request({
+      this.$apihttp({
+        url: '/accountsReceivable/overdueActualTime',
         method: 'post',
-        url: API.overdueActualTime,
-        data: param,
-        headers: { 'usertoken': self.token }
+        data: param
       }).then((res) => {
         let container = res.data.data
         if (Number(container.length) === 0) {
@@ -701,11 +683,10 @@ export default {
     overdueMortgageTotal1 () {
       const self = this
       let param = { periodWid: self.dayByday('20200831'), orgId: self.orgKey(self.levelType, '单'), type: self.levelType, cityId: self.cityKey(self.levelType, '单') }
-      this.$request({
+      this.$apihttp({
+        url: '/accountsReceivable/overdueMortgageTotal',
         method: 'post',
-        url: API.overdueMortgageTotal,
-        data: param,
-        headers: { 'usertoken': self.token }
+        data: param
       }).then((res) => {
         let container = res.data.data
         if (Number(container.length) === 0) {
@@ -754,11 +735,10 @@ export default {
     overdueMortgageTotal2 () {
       const self = this
       let param = { periodWid: self.dayByday('20200831'), orgId: self.orgKey(self.levelType + 1, '列'), type: self.levelType + 1, cityId: self.cityKey(self.levelType + 1, '列') }
-      this.$request({
+      this.$apihttp({
+        url: '/accountsReceivable/overdueMortgageTotal',
         method: 'post',
-        url: API.overdueMortgageTotal,
-        data: param,
-        headers: { 'usertoken': self.token }
+        data: param
       }).then((res) => {
         let container = res.data.data
         if (Number(container.length) === 0) {
@@ -820,13 +800,12 @@ export default {
     }
   },
   components: {
-    HeaderComp,
-    DateControl
+    headerBar
   }
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 #receivable {
   position: relative;
   width: 100%;
@@ -835,61 +814,54 @@ export default {
   font-family: PingFangSC-Medium;
   label {
     width: 100%;
-    height: px2rem(20);
+    height: 20px;
     display: inline-block;
-    line-height: px2rem(20);
+    line-height: 20px;
+    text-align: left;
     color: #fff;
     font-weight: bold;
-    font-size: px2rem(12);
+    font-size: 12px;
   }
   .header-box {
     width: 100%;
+    height: 50px;
     position: fixed;
-    top: 0;
+    top: 50px;
     left: 0;
     z-index: 999999999;
     background-color: #001018;
-    .header {
-      position: relative;
-      width: 100%;
-      height: px2rem(50);
-      line-height: px2rem(50);
-      font-size: px2rem(18);
-      text-align: center;
-      background-color: #001e2d;
-    }
   }
   .contain {
     width: 100%;
-    min-height: px2rem(650);
-    padding: px2rem(100) px2rem(15) px2rem(15) px2rem(15);
+    min-height: 650px;
+    padding: 100px 15px 15px 15px;
     box-sizing: border-box;
     .grid {
       display: flex;
       justify-content: space-between;
       .grid-cell {
         flex: 0 0 30%;
-        height: px2rem(50);
+        height: 50px;
         background: #48566F;
         p {
           margin: 0;
         }
         p:nth-of-type(1) {
-          height: px2rem(20);
-          line-height: px2rem(20);
-          text-indent: px2rem(10);
+          height: 20px;
+          line-height: 20px;
+          text-indent: 10px;
           color: #fff;
           font-weight: bold;
-          font-size: px2rem(12);
+          font-size: 12px;
         }
         p:nth-of-type(2) {
-          height: px2rem(30);
-          line-height: px2rem(30);
+          height: 30px;
+          line-height: 30px;
           text-align: center;
           color: #FFFFFF;
-          font-size: px2rem(12);
+          font-size: 12px;
           span {
-            font-size: px2rem(14);
+            font-size: 14px;
           }
         }
       }
@@ -897,9 +869,9 @@ export default {
   }
   .income-change {
     width: 100%;
-    height: px2rem(185);
+    height: 185px;
     background: #48566F;
-    margin: px2rem(15) 0 0 0;
+    margin: 15px 0 0 0;
     position: relative;
     label {
       position: absolute;
@@ -916,24 +888,24 @@ export default {
   }
   .income-contrast {
     width: 100%;
-    min-height: px2rem(220);
+    min-height: 220px;
     background: #48566F;
-    margin: px2rem(15) 0 0 0;
+    margin: 15px 0 0 0;
   }
   .structure {
     width: 100%;
-    min-height: px2rem(335);
+    min-height: 335px;
     background: #48566F;
-    margin: px2rem(15) 0 0 0;
-    padding: 0 0 px2rem(5) 0;
+    margin: 15px 0 0 0;
+    padding: 0 0 5px 0;
     box-sizing: border-box;
     .format {
-      margin-top: px2rem(5);
+      margin-top: 5px;
       display: flex;
       justify-content: space-around;
       .format-cell {
         flex: 0 0 24%;
-        height: px2rem(40);
+        height: 40px;
         background: #333B4B;
         color: #ffffff;
         ul {
@@ -942,36 +914,36 @@ export default {
           }
           li:nth-of-type(1) {
             width: 100%;
-            height: px2rem(20);
+            height: 20px;
             text-align: center;
-            line-height: px2rem(20);
-            font-size: px2rem(11);
+            line-height: 20px;
+            font-size: 11px;
           }
           li:nth-of-type(2) {
-            height: px2rem(20);
+            height: 20px;
             float: left;
-            font-size: px2rem(9);
-            line-height: px2rem(20);
-            margin-left: px2rem(1);
+            font-size: 9px;
+            line-height: 20px;
+            margin-left: 1px;
           }
           li:nth-of-type(3) {
-            height: px2rem(20);
+            height: 20px;
             text-align: left;
-            line-height: px2rem(20);
+            line-height: 20px;
             float: right;
-            margin-right: px2rem(1);
-            font-size: px2rem(9);
+            margin-right: 1px;
+            font-size: 9px;
           }
         }
       }
     }
     .columnar {
       display: flex;
-      width: px2rem(335);
-      min-height: px2rem(462);
+      width: 335px;
+      min-height: 462px;
       flex-wrap: wrap;
-      margin: px2rem(5) px2rem(5) 0 px2rem(5);
-      border-radius: px2rem(8);
+      margin: 5px 5px 0 5px;
+      border-radius: 8);
       border: 1px solid #C9CACB;
       .scroll-active {
         overflow: scroll;
@@ -979,77 +951,77 @@ export default {
       .columnar-cell:nth-of-type(1) {
         flex: 0 0 20%;
         float: left;
-        height: px2rem(230);
+        height: 230px;
         border-right: 1px solid #C9CACB;
         border-bottom: 1px solid #C9CACB;
         text-align: center;
-        line-height: px2rem(230);
-        font-size: px2rem(11);
+        line-height: 230px;
+        font-size: 11px;
         background: #48566F;
-        border-top-left-radius: px2rem(8);
+        border-top-left-radius: 8px;
       }
       .columnar-cell:nth-of-type(2) {
         flex: 0 0 80%;
         float: left;
-        height: px2rem(230);
+        height: 230px;
         border-bottom: 1px solid #C9CACB;
-        border-top-right-radius: px2rem(8);
+        border-top-right-radius: 8px;
       }
       .columnar-cell:nth-of-type(3) {
         flex: 0 0 20%;
         float: left;
-        height: px2rem(230);
+        height: 230px;
         border-right: 1px solid #C9CACB;
         text-align: center;
-        line-height: px2rem(230);
-        font-size: px2rem(11);
+        line-height: 230px;
+        font-size: 11px;
         background: #48566F;
-        border-bottom-left-radius: px2rem(8);
+        border-bottom-left-radius: 8px;
       }
       .columnar-cell:nth-of-type(4) {
         flex: 0 0 80%;
         float: left;
-        height: px2rem(230);
-        border-bottom-right-radius: px2rem(8);
+        height: 230px;
+        border-bottom-right-radius: 8px;
       }
     }
   }
   .be-overdue {
     width: 100%;
-    min-height: px2rem(140);
+    min-height: 140px;
     background: #48566F;
-    margin: px2rem(15) 0 0 0;
+    margin: 15px 0 0 0;
     .situation {
       width: 100%;
-      height: px2rem(120);
+      height: 120px;
     }
   }
   .mortgage-analysis {
-    width: px2rem(345);
-    min-height: px2rem(330);
+    width: 345px;
+    min-height: 330px;
     background: #48566F;
-    margin-top: px2rem(15);
-    padding: 0 0 px2rem(5) 0;
+    margin-top: 15px;
+    padding: 0 0 5px 0;
     box-sizing: border-box;
     .house {
       display: flex;
-      padding: 0 px2rem(15);
+      padding: 0 15px;
       box-sizing: border-box;
       justify-content: space-between;
-      margin-top: px2rem(10);
+      margin-top: 10px;
       .house-cell {
         flex: 0 0 18%;
-        height: px2rem(25);
+        height: 25px;
         text-align: center;
-        line-height: px2rem(25);
+        line-height: 25px;
         background: #fff;
         color: #333B4B;
         border-radius: 4px;
-        font-size: px2rem(12);
+        font-size: 12px;
         position: relative;
         .triangle {
-          width: px2rem(10);
-          height: px2rem(10);
+          width: 10px;
+          height: 10px;
           border-left: 1px solid #C9CACB;
           border-top: 1px solid #C9CACB;
           background: #586B8D;
@@ -1058,8 +1030,8 @@ export default {
           -ms-transform: rotate(45deg);
           -o-transform: rotate(45deg);
           position: absolute;
-          left: px2rem(22);
-          top: px2rem(40.2);
+          left: 22px;
+          top: 40.2px;
           z-index: 2;
         }
       }
@@ -1072,35 +1044,35 @@ export default {
       }
     }
     .tag1, .tag2, .tag3, .tag4 {
-      width: px2rem(335);
-      min-height: px2rem(394);
-      margin: px2rem(20) 0 0 px2rem(5);
+      width: 335px;
+      min-height: 394px;
+      margin: 20px 0 0 5px;
       border: 1px solid #C9CACB;
       background: #586B8D;
-      padding: px2rem(8) 0 0 0;
+      padding: 8px 0 0 0;
       box-sizing: border-box;
     }
     .proportion1 {
       width: 100%;
-      padding: 0 0 px2rem(5) 0;
+      padding: 0 0 5px 0;
       box-sizing: border-box;
       ul {
-        font-size: px2rem(10);
+        font-size: 10px;
         background: #333B4B;
         color: #fff;
-        width: px2rem(325);
-        height: px2rem(20);
-        line-height: px2rem(20);
+        width: 325px;
+        height: 20px;
+        line-height: 20px;
         margin: 0 auto;
         li {
           float: left;
           span {
-            margin-left: px2rem(3);
+            margin-left: 3px;
           }
         }
         li:nth-of-type(1) {
           width: 34%;
-          text-indent: px2rem(3);
+          text-indent: 3px;
           text-align: left;
         }
         li:nth-of-type(2) {
@@ -1113,32 +1085,32 @@ export default {
         }
       }
       ul:nth-of-type(1) {
-        margin-bottom: px2rem(8);
+        margin-bottom: 8px;
       }
     }
     .proportion2 {
       width: 100%;
-      padding: 0 0 px2rem(5) 0;
+      padding: 0 0 5px 0;
       box-sizing: border-box;
       ul {
-        font-size: px2rem(10);
+        font-size: 10px;
         background: #333B4B;
         color: #fff;
-        width: px2rem(325);
-        height: px2rem(20);
-        line-height: px2rem(20);
+        width: 325px;
+        height: 20px;
+        line-height: 20px;
         margin: 0 auto;
         text-align: center;
         li {
           float: left;
           span {
-            margin-left: px2rem(10);
+            margin-left: 10px;
           }
         }
         li:nth-of-type(1) {
           width: 40%;
           text-align: left;
-          text-indent: px2rem(3);
+          text-indent: 3px;
         }
         li:nth-of-type(2) {
           width: 60%;
@@ -1148,27 +1120,27 @@ export default {
     }
     .proportion3 {
       width: 100%;
-      padding: 0 0 px2rem(5) 0;
+      padding: 0 0 5px 0;
       box-sizing: border-box;
       ul {
-        font-size: px2rem(10);
+        font-size: 10px;
         background: #333B4B;
         color: #fff;
-        width: px2rem(325);
-        height: px2rem(20);
-        line-height: px2rem(20);
+        width: 325px;
+        height: 20px;
+        line-height: 20px;
         margin: 0 auto;
         text-align: center;
         li {
           float: left;
           span {
-            margin-left: px2rem(3);
+            margin-left: 3px;
           }
         }
         li:nth-of-type(1) {
           width: 38%;
           text-align: left;
-          text-indent: px2rem(1);
+          text-indent: 1px;
         }
         li:nth-of-type(2) {
           width: 31%;
@@ -1180,32 +1152,32 @@ export default {
         }
       }
       ul:nth-of-type(1) {
-        margin-bottom: px2rem(8);
+        margin-bottom: 8px;
       }
     }
     .proportion4 {
       width: 100%;
-      padding: 0 0 px2rem(5) 0;
+      padding: 0 0 5px 0;
       box-sizing: border-box;
       ul {
-        font-size: px2rem(10);
+        font-size: 10px;
         background: #333B4B;
         color: #fff;
-        width: px2rem(325);
-        height: px2rem(20);
-        line-height: px2rem(20);
+        width: 325px;
+        height: 20px;
+        line-height: 20px;
         margin: 0 auto;
         text-align: center;
         li {
           float: left;
           span {
-            margin-left: px2rem(8);
+            margin-left: 8px;
           }
         }
         li:nth-of-type(1) {
           width: 40%;
           text-align: left;
-          text-indent: px2rem(3);
+          text-indent: 3px;
         }
         li:nth-of-type(2) {
           width: 30%;
@@ -1217,47 +1189,47 @@ export default {
         }
       }
       ul:nth-of-type(1) {
-        margin-bottom: px2rem(8);
+        margin-bottom: 8px;
       }
     }
     .interest-rate {
       width: 100%;
-      min-height: px2rem(45);
+      min-height: 45px;
       position: relative;
       ul {
-        width: px2rem(120);
+        width: 120px;
         background: #333B4B;
         color: #fff;
         position: absolute;
         li {
           width: 100%;
-          height: px2rem(20);
+          height: 20px;
           text-align: center;
-          line-height: px2rem(20);
-          font-size: px2rem(10);
+          line-height: 20px;
+          font-size: 10px;
         }
         li:nth-of-type(2) {
-          font-size: px2rem(12);
+          font-size: 12px;
         }
       }
       ul:nth-of-type(1) {
-        top: px2rem(0);
-        left: px2rem(35);
+        top: 0px;
+        left: 35px;
       }
       ul:nth-of-type(2) {
-        top: px2rem(0);
-        right: px2rem(35);
+        top: 0px;
+        right: 35px;
       }
     }
     .footprint {
-      width: px2rem(315);
-      height: px2rem(1);
-      border-bottom: px2rem(0.6) solid #C9CACB;
-      margin-left: px2rem(10);
+      width: 315px;
+      height: 1px;
+      border-bottom: 0.6px solid #C9CACB;
+      margin-left: 10px;
     }
     .pie-box {
       width: 100%;
-      min-height: px2rem(60);
+      min-height: 60px;
       box-sizing: border-box;
       -border: 1px solid blue;
     }

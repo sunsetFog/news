@@ -35,6 +35,7 @@ import ar3_structuralAnalysisList from './AR3/structuralAnalysisList.json'
 import ar3_structuralMortgage from './AR3/structuralMortgage.json'
 
 function typeLevel(name, json) {
+    console.log('level===', name, json)
     if (Number(json.type) === 1 && json.orgId === '' && json.cityId === '') {
         return 'ar1_' + name + '01'
     } else if (Number(json.type) === 2 && json.orgId === '' && json.cityId === '') {
@@ -50,6 +51,7 @@ function typeLevel(name, json) {
     }
 }
 function typeOnly(name, json) {
+    console.log('only===', name, json)
     if (Number(json.type) === 1) {
         return 'ar1' + name
     } else if (Number(json.type) === 2) {
