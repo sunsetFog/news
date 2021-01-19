@@ -13,6 +13,13 @@
                 </ul>
             </el-scrollbar>
         </div>
+        <h3>清除浮动</h3>
+        <div class="pen-float">
+            <div class="pen-left">左浮动盒子</div>
+            <div class="pen-right">右浮动盒子</div>
+            <!-- 第一种 -->
+            <div class="pen-clear"></div>
+        </div>
     </section>
 </template>
 
@@ -70,6 +77,27 @@ export default {
         }
         /deep/ .el-scrollbar__wrap{ // /deep/加高样式层级，或放置全局
             overflow-x: hidden;
+        }
+    }
+
+    .pen-float {
+        width: 100%;
+        height: 100px;
+        -overflow: hidden; // 第二种给父元素这个
+        .pen-left {
+            width: 40%;
+            height: 100px;
+            float: left;
+            background: royalblue;
+        }
+        .pen-right {
+            width: 60%;
+            height: 100px;
+            float: right;
+            background: salmon;
+        }
+        .pen-clear {
+            clear: both;
         }
     }
 }

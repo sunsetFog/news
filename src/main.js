@@ -95,7 +95,7 @@ router.beforeEach((to, from, next) => {
         }else{
             sessionStorage.setItem('save_path',to.path);
         }
-        next({path: '/neutralgear'});
+        // next({path: '/neutralgear'});
     }
 
     NProgress.start();
