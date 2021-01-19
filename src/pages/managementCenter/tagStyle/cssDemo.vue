@@ -20,6 +20,15 @@
             <!-- 第一种 -->
             <div class="pen-clear"></div>
         </div>
+        <h3>px,rem,em</h3>
+        <!-- 
+            px相对屏幕分辨率  固定单位
+            em相对父元素font-size： 1em=(父元素font-size)px   默认值16px  4em*(父元素font-size)=？px
+            rem相对html的font-size: 1rem=(html的font-size)px  默认值16px  4rem*(html的font-size)=？px
+         -->
+        <div class="pen-cat">
+            <div></div>
+        </div>
     </section>
 </template>
 
@@ -40,7 +49,7 @@ export default {
             width: 10px;
             height: 10px;
             border-left: 1px solid #C9CACB;
-            border-top: 1px solid #C9CACB;
+            border-top: 1px solid #bbbbbb;
             background: #586B8D;
             -webkit-transform: rotate(45deg); // 旋转角度
             -moz-transform: rotate(45deg);
@@ -98,6 +107,17 @@ export default {
         }
         .pen-clear {
             clear: both;
+        }
+    }
+    .pen-cat {
+        width: 100px;
+        height: 100px;
+        font-size: 12px;
+        background: slateblue;
+        div {
+            width: 4em;// 1em = 12px   4*12=48
+            height: 100px;
+            background: snow;
         }
     }
 }

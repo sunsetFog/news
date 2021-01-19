@@ -115,6 +115,8 @@ export default {
 		// overflow: scroll;//溢出出现滚动条
         // overflow-y: scroll;//y轴出现滚动条
         // overflow-x: scroll;//x轴出现滚动条
+        
+        // box-shadow: 1px 1px 10px 0 #C9CACB; // 阴影
 
 		// text-indent: 30px;//首行缩进
         // white-space: nowrap;//文本强制不换行

@@ -124,6 +124,12 @@ export default {
                 5.WebSokect跨域
                 6.ifram跨域
              */
+        },
+        demo16(){
+            /*
+            px,rem,em区别
+            看pages\managementCenter\tagStyle\cssDemo.vue
+             */
         }
     }
 }
