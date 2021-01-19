@@ -32,6 +32,7 @@ export default {
         demo3(){
             /**
              * vue中mvvm原理及其实现
+             mvvm是mvc的改进
              * 原理: M(Model，模型层),V(View，视图层),VM(ViewMode, 桥梁)。用桥梁监听模型层与视图层，实现数据的双向绑定
              * 实现: 用下面知识点，监听对象属性变化，
              */
@@ -46,12 +47,18 @@ export default {
             })
         },
         demo4(){
-            // 页面的传参方式:
+            /* 
+            页面的传参方式:
+            1.路由传参
+            2.vuex传参
+            3.缓存传参
+            4.子父组件传参
+             */
         },
         demo5(){
             // vuex运用:
             // 看src\pages\managementCenter\knowledge\vuex.vue
-            // 看vuex里的的js
+            // 看src\vuex
         },
         demo6(){
             // computed与watch的区别:  
@@ -77,7 +84,7 @@ export default {
                 4、根据IP建立TCP连接（三次握手）。
                 5、HTTP发起请求。
                 6、服务器处理请求，浏览器接收HTTP响应。
-                7、渲染页面，构建DOM树。
+                7、渲染页面:构建DOM树;解析CSS,将CSS与DOM合并，构建渲染树;布局和绘制，重绘和重排
                 8、关闭TCP连接（四次挥手）
              */
         },
@@ -195,6 +202,9 @@ export default {
                 2.减少DOM操作
                 3.图片预加载，将样式表放在顶部
                 4.少用全局变量
+                5.按需加载资源
+                6.压缩和模块打包
+                7.图片编码优化
             */
         },
         demo24(){
@@ -202,8 +212,62 @@ export default {
             哪些常见操作会造成内存泄漏？
             内存泄漏指不再需要的变量仍然存在
             闭包、控制台日志、循环
-            setTimeout('参数一') 参数1不是函数，是字符串，会引发内存泄漏
+            没有清理的DOM元素引用
+            被遗忘的定时器
             */
+        },
+        demo25(){
+            /* 
+            css盒子垂直居中
+            看pages\managementCenter\tagStyle\flex.vue
+             */
+        },
+        demo26(){
+            /* 
+            http 和 https 有何区别？如何灵活使用？
+            https比http安全性高
+http是HTTP协议运行在TCP之上。所有传输的内容都是明文，客户端和服务器端都无法验证对方的身份。
+https是HTTP运行在SSL/TLS之上，SSL/TLS运行在TCP之上。所有传输的内容都经过加密，加密采用对称加密，
+但对称加密的密钥用服务器方的证书进行了非对称加密。此外客户端可以验证服务器端的身份，
+如果配置了客户端验证，服务器方也可以验证客户端的身份         
+             */
+        },
+        demo27(){
+            /* 
+            浏览器缓存有哪些
+            一.http缓存
+            二.websql缓存，
+                1.cookie
+                2.localStorage
+                3.sessionStorage
+                4.flash缓存
+
+             */
+        },
+        demo28(){
+            /* 
+            安全性上的同源策略：两个域要同协议, 同端口，同host域名，其中有一个不同，就产生跨域问题
+             */
+        },
+        demo29(){
+            /* 
+            cookie,localStorage,sessionStorage的区别
+            看pages\managementCenter\knowledge\cache.vue
+             */
+        },
+        demo30(){
+            /* 
+            v-if和v-show的区别
+            即是display none;和visibility hidden区别
+            看pages\managementCenter\knowledge\v_tag.vue
+             */
+        },
+        demo31(){
+           /* 
+           说说vue的生命周期
+           created先执行，再mounted，区别：created是创建数据不能Dom操作，mounted用于Dom操作
+           看pages\managementCenter\knowledge\lifeCycle.vue
+            */ 
         }
     }
 }

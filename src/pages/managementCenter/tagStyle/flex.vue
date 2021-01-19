@@ -3,13 +3,16 @@
         <hr>1.盒子和文字垂直居中</hr>
         <!-- 问题：高为百分比时，文字垂直居中？     line-height: 100%;和字体大小一样大，不能用 -->
         <div class="vertical-center">
-            <!-- 1.利用弹性布局 -->
-            垂直居中文字
+            <!-- 答1.用弹性布局，使文字垂直居中 -->
+            文字垂直居中
             <p>盒子垂直居中</p>
         </div>
-        <!-- 2.利用display:table-cell -->
+        <div class="pen-scenery">
+            <p>盒子垂直居中</p>
+        </div>
+        <!-- 答2.用display:table-cell，使文字垂直居中 -->
         <div class="height-percentage">
-            <span>垂直居中文字</span>
+            <span>文字垂直居中</span>
         </div>
         <hr>2.是否浮动</hr>
         <div class="list">
@@ -60,15 +63,30 @@ export default {
 
     .vertical-center {
         width: 100%;
-        height: 150px;
+        height: 80px;
         background: #333;
         display: flex;
         align-items: center; // 垂直-对齐方式
         justify-content: center; // 水平-对齐方式
         p {
             width: 100px;
-            height: 100px;
+            height: 50px;
             background: blue;
+        }
+    }
+    .pen-scenery {
+        width: 100%;
+        height: 80px;
+        background: royalblue;
+        position: relative;
+        p {
+            width: 100px;
+            height: 50px;
+            background: salmon;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -25PX 0 0 -50px;//上，右，下，坐    负值，宽的一半，高的一半
         }
     }
     .height-percentage {

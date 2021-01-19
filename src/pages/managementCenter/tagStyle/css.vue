@@ -26,8 +26,16 @@
             -webkit  指chrome、safari
             -o  指Opera
 
-            6.!important是样式层级最高，可以覆盖style样式
-            width: 45px !important;
+            6.
+            CSS样式覆盖规则             权值
+            标签选择器                  1
+            类选择器                    10
+            ID选择器                    100
+            内联样式                    1000
+            HTML中的style样式           2000
+            伪元素(:first-child等)      1
+            伪类(:link等)               10
+            width: 45px !important;     9999最大 (可以覆盖style样式)
         
         -->
         样式命名规范:
