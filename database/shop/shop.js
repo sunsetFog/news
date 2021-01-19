@@ -4,26 +4,26 @@ import classify from './classify.json'
 let idParams = 'goods_id' // id名传参
 let addParams = { // 添加传参
     title: null,
-    company: null,
-    category_pid: null,
-    category_cid: null,
+    // company: null,
+    // category_pid: null,
+    // category_cid: null,
     thumb: null,
     price: null,
-    original_price: null,
-    cost: null,
+    // original_price: null,
+    // cost: null,
     stock: null,
     virtual_sales: null
 }
 let modifyParams = { // 修改传参
     goods_id: null, // 相比添加，修改一般多个id
     title: null,
-    company: null,
-    category_pid: null,
-    category_cid: null,
+    // company: null,
+    // category_pid: null,
+    // category_cid: null,
     thumb: null,
     price: null,
-    original_price: null,
-    cost: null,
+    // original_price: null,
+    // cost: null,
     stock: null,
     virtual_sales: null
 }

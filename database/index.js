@@ -33,12 +33,12 @@ Mock.mock(allKey['mock-url'] + "/store/goods-detail", "post", shopAPI.isSingle);
 Mock.mock(allKey['mock-url'] + "/store/destroy-goods", "get", shopAPI.isDelete);
 /**
  * 数据的添加操作
- * @param store_id: 12,(店铺id)title: '',(商品名称)company: '',(商品单位)category_pid: '',(商品分类一级id)category_cid: '',(商品分类二级id)thumb: '../../../../static/meitu/dian/lizhi.jpg',(商品图片)price: '',(商品现价)original_price: '',(商品原价)cost: '',(商品成本)stock: '',(库存)virtual_sales: ''(虚拟销量)
+ * @param 看shop.js添加传参
  */
 Mock.mock(allKey['mock-url'] + "/store/add-goods", "post", shopAPI.isAdd);
 /**
  * 数据的修改操作
- * @param store_id: 12,(店铺id)id: '',(商品id)title: '',(商品名称)company: '',(商品单位)category_pid: '',(商品分类一级id)category_cid: '',(商品分类二级id)thumb: '../../../../static/meitu/dian/lizhi.jpg',(商品图片)price: '',(商品现价)original_price: '',(商品原价)cost: '',(商品成本)stock: '',(库存)virtual_sales: ''(虚拟销量)
+ * @param 看shop.js修改传参
  */
 Mock.mock(allKey['mock-url'] + "/store/edit-goods", "post", shopAPI.isUpdate);
 /**

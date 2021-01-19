@@ -21,7 +21,7 @@ import moon from './quote/children';
 			light(){
 				alert(this.$refs.stars.id);//获取属性值,标志位置
 				//方法一:
-				// var frames = document.getElementsByClassName('frames')[0];
+				// var frames = document.getElementsByClassName('rainbow')[0];
 				//相当于方法二:
 				var frames = this.$refs.stars;
 				console.log(frames);
