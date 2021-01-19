@@ -16,7 +16,7 @@ export default {
         }
     },
     mounted(){
-        this.demo1();
+        this.demo7();
     },
     methods: {
         demo1(){
@@ -223,54 +223,58 @@ export default {
             // },false);
         },
         demo7(){
-            //这里测试this无效，要在html文档测试,一看就明白
-            //this：指针，虚拟的替代品，谁调用，this就指向谁
+        /*   this：指针，虚拟的替代品，谁调用，this就指向谁
 
-            //var name = "夏兰";
-            //console.log(this.name);//夏兰，说明this是全局对象window
+            var name = "夏兰";
+            console.log(this.name);//夏兰，说明this是全局对象window
             
-            // function fn(){
-            //     console.log(this.name);//夏兰   1. 在普通函数中，this指向全局对象window
-            // }
-            // fn()
+            function fn(){
+                console.log(this.name);//夏兰   1. 在普通函数中，this指向全局对象window
+            }
+            fn()
 
-			// var obj = {
-			// 	name:"星星",
-			// 	eat:function(){
-			// 		console.log(this.name);//星星     2. 在对象方法中，this指向当前对象
-			// 	}
-            // }
-            // obj.eat();
+			var obj = {
+				name:"星星",
+				eat:function(){
+					console.log(this.name);//星星     2. 在对象方法中，this指向当前对象
+				}
+            }
+            obj.eat();
 
-            // function student(name,age){
-			// 	this.name = name;
-			// 	this.age = age;
-            // }
-            // student.prototype.getName = function(){
-			// 	console.log(this.name);//娜娜     3. 在构造函数中，this指向构造函数new出来的对象
-            // }
-            // var rice = new student("娜娜",18);
-            // rice.getName();
+            function student(name,age){
+				this.name = name;
+				this.age = age;
+            }
+            student.prototype.getName = function(){
+				console.log(this.name);//娜娜     3. 在构造函数中，this指向构造函数new出来的对象
+            }
+            var rice = new student("娜娜",18);
+            rice.getName();
 
-            // setInterval(function () {
-            //     console.log(this); // 4. 在定时器中,this指向全局对象window
-            // }, 1000);
+            setInterval(function () {
+                console.log(this); // 4. 在定时器中,this指向全局对象window
+            }, 1000); 
+
+            以上这个在方法内，this不是全局了，this无效，看看就好
+        */
+
+
 
 
             //4种更改this指向
-            // apply()与call()非常相似,但传参方式不同,apply()参数2必须数组
+            // apply()与call()非常相似,区别是传参方式不同,apply()参数2必须数组
             var person = {
                 name: "zhangsan",
                 age: 19
             }
             function aa(x,y){
-                console.log('方法里的this', this);
+                console.log(x+'方法里的this', this);
             }
             aa(1,2);//此时,this指向window
             // 在方法后加
-            aa.call(person,4,5);//此时，this指向person
-            aa.apply(person, [4, 5]);//此时，this指向person
-            aa.bind(person,4,5)();//此时，this指向person
+            aa.call(person,'call改',5);//此时，方法里this指向person
+            aa.apply(person, ['apply改', 5]);//此时，方法里this指向person
+            aa.bind(person,'bind改',5)();//此时，方法里this指向person
             // 存储this指向到变量中
             // let that = this;
             // setInterval(function () {

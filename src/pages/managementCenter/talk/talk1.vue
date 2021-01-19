@@ -12,6 +12,9 @@ export default {
 
         }
     },
+    created(){
+        this.demo20();
+    },
     methods: {
         demo1(){
             // 自我介绍
@@ -87,8 +90,8 @@ export default {
         demo12(){
             /**
              * 什么叫优雅降级和渐进增强？
-             * 渐进增强: 针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验
-             * 优雅降级: 一开始就构建完整的功能，然后再针对低版本浏览器进行兼容
+             * 渐进增强: 保证低版本浏览器进行构建页面，再针对高版本浏览器进行效果、交互等改进和追加功能达到更好的用户体验
+             * 优雅降级: 构建完整的功能后，再针对低版本浏览器进行兼容
              */
         },
         demo13(){
@@ -125,11 +128,82 @@ export default {
                 6.ifram跨域
              */
         },
-        demo16(){
+        demo17(){
             /*
             px,rem,em区别
             看pages\managementCenter\tagStyle\cssDemo.vue
              */
+        },
+        demo18(){
+            /*
+            导入样式，link和@import的区别
+            页面被加载的时，link会同时被加载，而@import要页面被加载完再加载
+            link可以加载css，还能定义RSS。而@import只能加载css
+             */
+        },
+        demo19(){
+            /* 
+                HTML语义化的理解？
+                html语义化让页面的内容结构化，结构更清晰，便于对浏览器、搜索引擎解析,便于阅读维护理解;
+             */
+        },
+        demo20(){
+            console.log('null转数值为0,类型是对象', Number(null), typeof null); // 0 object
+            console.log('undefined转数值为NaN,类型是undefined',Number(undefined), typeof undefined); // NaN undefined
+            let apple;
+            console.log('声明未赋值', apple);//undefined
+            let star = null;
+            if(!apple && !star){
+                console.log('两者都是false,if时用！非')
+            }
+            /* 
+            null与undefined区别
+            很相似，无的意思。
+            null表示"不应该有值"
+            undefined表示"缺少值"
+             */
+        },
+        demo21(){
+            /* 
+                apply()与call()的区别
+                看pages\managementCenter\javaScript\learn2.vue
+            */
+        },
+        demo22(){
+            /* 
+                HTTP状态码
+100 Continue 继续，表示确认，请传具体参数
+200 OK 正常返回信息
+201 Created 请求成功并且服务器创建了新的资源
+202 Accepted 服务器已接受请求，但尚未处理
+301 Moved Permanently 请求的网页已永久移动到新位置。
+302 Found 临时性重定向。
+303 See Other 临时性重定向，且总是使用 GET 请求新的 URI。
+304 Not Modified 自从上次请求后，请求的网页未修改过。
+400 Bad Request 服务器无法理解请求的格式，客户端不应当尝试再次使用相同的内容发起请求。
+401 Unauthorized 请求未授权。
+403 Forbidden 禁止访问。
+404 Not Found 找不到如何与 URI 相匹配的资源。
+500 Internal Server Error 最常见的服务器端错误。
+503 Service Unavailable 服务器端暂时无法处理请求（可能是过载或维护）。
+            */
+        },
+        demo23(){
+            /* 
+            有哪些性能优化方法
+                1.减少http请求次数
+                2.减少DOM操作
+                3.图片预加载，将样式表放在顶部
+                4.少用全局变量
+            */
+        },
+        demo24(){
+            /* 
+            哪些常见操作会造成内存泄漏？
+            内存泄漏指不再需要的变量仍然存在
+            闭包、控制台日志、循环
+            setTimeout('参数一') 参数1不是函数，是字符串，会引发内存泄漏
+            */
         }
     }
 }

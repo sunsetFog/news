@@ -59,10 +59,10 @@ function limitField(obj, params) { // 判断字段：添加和修改用
     }
     for (let i = 0; i < arr.length; i++) {
         if (!obj.hasOwnProperty(arr[i])) {
-            return { code: 400, message: '参数错误' }
+            return { code: 100, message: '参数错误' }
         }
         if (!obj[arr[i]]) {
-            return { code: 400, message: '参数不能为空' }
+            return { code: 100, message: '参数不能为空' }
         }
     }
 }
@@ -89,7 +89,7 @@ let isSingle = function (options) {
             return store.list[i];
         }
     }
-    return { code: 400, message: '传参错误' }
+    return { code: 100, message: '传参错误' }
 }
 
 // 数据的删除操作
@@ -104,9 +104,9 @@ let isDelete = function (options) {
     }
     if (save_length.length !== store.list.length) {
         store.total = store.total - 1;
-        return { code: 1, message: '删除成功' }
+        return { code: 200, message: '删除成功' }
     } else {
-        return { code: 400, message: '传参错误' }
+        return { code: 100, message: '传参错误' }
     }
 }
 
@@ -121,7 +121,7 @@ let isAdd = function (options) {
 
     obj = sortObj(obj)
     store.list = store.list.concat(obj);  // 将前台返回来的数据，拼接到数组中。
-    return { code: 1, message: '添加成功' }
+    return { code: 200, message: '添加成功' }
     // return store
 }
 
@@ -135,7 +135,7 @@ let isUpdate = function (options) {
     store.list = store.list.map(val => {  // 将需要替换的数据替换掉
         return Number(val[idParams]) === Number(obj[idParams]) ? obj : val;
     });
-    return { code: 1, message: '修改成功' }
+    return { code: 200, message: '修改成功' }
     // return store
 
 }

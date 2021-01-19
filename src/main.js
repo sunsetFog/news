@@ -81,6 +81,8 @@ Vue.component('safeDeposit',safeDeposit);
 Vue.component('portrait',portrait);
 Vue.component('rechargeRecord',rechargeRecord);
 
+import penCache from './vuex/index.js';
+import penMeans from './public/index.js';
 
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
@@ -95,6 +97,7 @@ router.beforeEach((to, from, next) => {
         }else{
             sessionStorage.setItem('save_path',to.path);
         }
+        penCache.dispatch('getPlayerInfo',penMeans.amateur_getPlayer()); //调用vuex和全局方法
         // next({path: '/neutralgear'});
     }
 
