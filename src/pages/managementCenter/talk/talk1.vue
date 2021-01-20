@@ -110,8 +110,14 @@ export default {
              */
         },
         demo14(){
-            /**
-             * 前端性能优化
+            /*
+             减少页面加载时间的方法
+                a. 尽量减少页面中重复的HTTP请求数量
+                b. 服务器开启gzip压缩
+                c. css样式的定义放置在文件头部
+                d. Javascript脚本放在文件末尾
+                e. 压缩合并Javascript、CSS代码
+                f. 使用多域名负载网页内的多个文件、图片
              */
         },
         demo15(){
@@ -275,6 +281,58 @@ https是HTTP运行在SSL/TLS之上，SSL/TLS运行在TCP之上。所有传输的
             JSON相对于XML来讲，数据的体积小，传递的速度更快些
             JSON与JavaScript的交互更加方便，更容易解析处理，更好的数据交互
             XML对数据描述性比较好；
+             */
+        },
+        demo33(){
+            /* 
+            浏览器内核的理解
+            主要分成两部分：渲染引擎和JS引擎
+            渲染引擎：负责取得网页的内容（HTML、XML、图像等等）、整理讯息（例如加入CSS等），以及计算网页的显示方式
+            JS引擎则：解析和执行javascript来实现网页的动态效果
+             */
+        },
+        demo34(){
+            /* 
+            html5有哪些新特性？
+            (1)绘画 canvas;
+            (2)用于媒介回放的 video 和 audio 元素;
+            (3)本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失;
+            (4)sessionStorage 的数据在浏览器关闭后自动删除;
+            (5)语意化更好的内容元素，比如 article、footer、header、nav、section;
+            (6)表单控件，calendar、date、time、email、url、search;
+            (7)新的技术webworker, websocket, Geolocation;
+             */
+        },
+        demo35(){
+            /* 
+            方法如何改变this指向？
+            看pages\managementCenter\javaScript\learn2.vue
+             */
+        },
+        demo36(){
+            /* 
+            网站重构的理解
+            重构：在不改变外部行为的前提下，简化结构、添加可读性，而在网站前端保持一致的行为。
+            a. 使网站前端兼容于现代浏览器(针对于不合规范的CSS、如对IE6有效的)
+            b. 对于移动平台的优化，针对于SEO进行优化
+            c. 减少代码间的耦合，让代码保持弹性
+            d. 压缩或合并JS、CSS、image等前端资源
+            */
+        },
+        demo37(){
+            /* 
+            一个页面上有大量的图片（大型电商网站），加载很慢，你有哪些方法优化这些图片的加载，给用户更好的体验。
+            a. 图片懒加载，滚动到相应位置才加载图片。
+            b. 图片预加载，如果为幻灯片、相册等，将当前展示图片的前一张和后一张优先下载。
+            c. 使用CSSsprite，SVGsprite，Iconfont、Base64等技术，如果图片为css图片的话。
+            d. 如果图片过大，可以使用特殊编码的图片，加载时会先加载一张压缩的特别厉害的缩略图，以提高用户体验。
+             */
+        },
+        demo38(){
+            /* 
+            属性src与href的区别？
+            src指向外部资源的位置
+            href指向网络资源所在位置
              */
         }
     }
