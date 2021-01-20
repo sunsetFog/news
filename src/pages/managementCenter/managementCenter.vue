@@ -89,8 +89,8 @@ export default{
                     {key:'2-2-2',label: '必学2',path: '/mcenter/learn2',icon: '../../../static/picture/center/wanjia.png',effect:[]},
                     {key:'2-2-3',label: '必学3',path: '/mcenter/learn3',icon: '../../../static/picture/center/wanjia.png',effect:[]},
                     {key:'2-2-4',label: '处理数据',path: '/mcenter/processing',icon: '../../../static/picture/center/wanjia.png',effect:[]},
-                    {key:'2-2-5',label: 'js例子',path: '/mcenter/jsDemo',icon: '../../../static/picture/center/wanjia.png',effect:[]},
-                    {key:'2-2-6',label: 'es6',path: '/mcenter/es6',icon: '../../../static/picture/center/wanjia.png',effect:[]},
+                    {key:'2-2-5',label: 'es6',path: '/mcenter/es6',icon: '../../../static/picture/center/wanjia.png',effect:[]},
+                    {key:'2-2-6',label: 'js例子',path: '/mcenter/jsDemo',icon: '../../../static/picture/center/wanjia.png',effect:[]},
                 ]},
                 {key: '3',label: 'vue知识点',path: '',icon: '../../../static/picture/center/pai.png',effect:[
                     {key:'3-2-1',label: 'vue指令',path: '/mcenter/v_tag',icon: '../../../static/picture/center/qipai.png',effect:[]},

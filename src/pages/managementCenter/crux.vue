@@ -145,6 +145,7 @@ export default{
                 this.portrait.frame = '../../../static/picture/portrait/ui_headBox_'+this.player_info.avatar_box+'.png';
                 this.pet_name = this.player_info.nickname;
                 this.sex_value = this.player_info.sex;
+                
                 this.number_money = this.money.toString().split('');
                 for(let i=0;i<this.number_money.length;i++){
                     if(this.number_money[i]=='.'){

@@ -17,17 +17,20 @@ export default {
     },
     methods: {
         demo1(){
-            // 自我介绍
-            // 考官好，很荣幸有机会向考官请教和学习。我叫***，读计算机网络应用专业，平时喜欢研究代码和上网浏览信息。
-            // 出来后，从事前端行业，三年半来经历丰富，具有移动端和PC端经验。
-            // 性格开朗随和，有上进心，希望日后能做的更好，介绍完毕，谢谢！
+            /* 自我介绍
+            考官好，很荣幸有机会向考官请教和学习。我叫***，读计算机网络应用专业，平时喜欢研究代码和上网浏览信息。
+            出来后，从事前端行业，三年半来经历丰富，具有移动端和PC端经验。
+            性格开朗随和，有上进心，希望日后能做的更好，介绍完毕，谢谢！ */
         },
         demo2(){
-            // 对接后台不一定用请求头:
-            // 1. 下载文档：window.open("后台请求url?id="+传参数后台);
-            // 2. 图片上传: （查看vue功能集）
+            /* 
+            问随便讲讲时(讲出经验来)
+            对接后台不一定用请求头:
+            1. 下载文档：window.open("后台请求url?id="+传参数后台);
+            2. element图片上传: （查看vue功能集）
 
-            // vue的拦截: 路由拦截，请求拦截
+            vue的拦截: 路由拦截，请求拦截
+             */
         },
         demo3(){
             /**
@@ -56,24 +59,24 @@ export default {
              */
         },
         demo5(){
-            // vuex运用:
-            // 看src\pages\managementCenter\knowledge\vuex.vue
-            // 看src\vuex
+           /*  vuex运用:
+            看src\pages\managementCenter\knowledge\vuex.vue
+            看src\vuex */
         },
         demo6(){
-            // computed与watch的区别:  
-            // 看src\pages\managementCenter\knowledge\computed.vue
-            // 看src\pages\managementCenter\knowledge\watch.vue
+            /* computed与watch的区别:  
+            看pages\managementCenter\knowledge\computed.vue
+            看pages\managementCenter\knowledge\watch.vue */
         },
         demo7(){
-            // 浏览器兼容性:
-            // 语法错误（js不兼容浏览器）
+            /* 浏览器兼容性:
+            语法错误（js不兼容浏览器） */
         },
         demo8(){
-            // es6: 看src\pages\managementCenter\javaScript\es6.vue
+            /* es6: 看pages\managementCenter\javaScript\es6.vue */
         },
         demo9(){
-            // 数组去重:  看src\pages\managementCenter\javaScript\practice.vue
+            /* 数组去重:  看pages\managementCenter\javaScript\jsDemo.vue */
         },
         demo10(){
             /*
@@ -333,6 +336,12 @@ https是HTTP运行在SSL/TLS之上，SSL/TLS运行在TCP之上。所有传输的
             属性src与href的区别？
             src指向外部资源的位置
             href指向网络资源所在位置
+             */
+        },
+        demo39(){
+            /* 
+            同步和异步编程
+            看pages\managementCenter\javaScript\learn3.vue
              */
         }
     }

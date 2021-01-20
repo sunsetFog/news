@@ -34,29 +34,30 @@ export default {
             let src2 = `../img/${imgName}.png`
             console.log('两种变量与字符串拼接写法', src, src2);
 
-            // 事件
-			// 1.onload:用户打开页面执行该事件，放在body内部
-			// 2.onchange：当表单内容发生改变时触发该事件,div,p等非表单元素没有改属性
-			// 3.onfocus：表单获取焦点事件
-			// 4.onblur：表单失去焦点事件
-			// 5.onmouseover：鼠标悬浮事件
-			// 6.onmouseout: 鼠标离开事件
-			// 7.onmousedown：鼠标按下时触发该事件
-			// 8.onmouseup：鼠标抬起事件
-			// 9.onclick：鼠标点击完毕事件
-            // 10.ondblclick：双击事件
-            // 移动端事件
-            // ontouchstart
-            // ontouchmove
-            // ontouchend
+            /* 事件
+			1.onload:用户打开页面执行该事件，放在body内部
+			2.onchange：当表单内容发生改变时触发该事件,div,p等非表单元素没有改属性
+			3.onfocus：表单获取焦点事件
+			4.onblur：表单失去焦点事件
+			5.onmouseover：鼠标悬浮事件
+			6.onmouseout: 鼠标离开事件
+			7.onmousedown：鼠标按下时触发该事件
+			8.onmouseup：鼠标抬起事件
+			9.onclick：鼠标点击完毕事件
+            10.ondblclick：双击事件
+            移动端事件
+            ontouchstart
+            ontouchmove
+            ontouchend
 
-            // 在某情况会去掉on，或用@代替on
+            在某情况会去掉on，或用@代替on
 
-            // html中的节点类型：
-			// 1.元素节点：html、div、p、span等这些元素
-			// 2.属性节点：src、href、type、id等
-			// 3.文本节点：指标签的内容,js会默认把空格当成空白节点
-			// 4.注释节点：html中的注释
+            html中的节点类型：
+			1.元素节点：html、div、p、span等这些元素
+			2.属性节点：src、href、type、id等
+			3.文本节点：指标签的内容,js会默认把空格当成空白节点
+            4.注释节点：html中的注释
+            */
         },
         demo2(){
             //DOM文档对象模型
@@ -194,30 +195,30 @@ export default {
         },
         demo4(){
             //js的常量:值在程序执行过程中不会改变
-		    var PI = 3.1415926;//值不变
-            //js中的变量：用来储存数据的容器，值可以改变
+            var PI = 3.1415926;//值不变
             
-            //变量或者常量的命名规范:
-            // 1.不能取关键字，var,function,ducument,alert....
-            // var function = 32;//报错
-            // 2.必须以字母或者下划线开头，不能以数字开头
+            /* js中的变量：用来储存数据的容器，值可以改变
+            变量或者常量的命名规范:
+            1.不能取关键字，var,function,ducument,alert....
+            var function = 32;//报错
+            2.必须以字母或者下划线开头，不能以数字开头 */
             var _age = ""//对
             // 3.遵循驼峰式命名
             var studentName;
 
-            // 变量:用来储存数据的容器，当声明一个变量时
-            // 变量的作用域:
-            // 1.全局变量:一般是在函数外部定义，作用于整个函数
-            // 2.局部变量：定义在函数内部，只能被该函数
-            // 生命周期:
-            // 1.全局变量：从变量被定义直到程序被关闭而终止
-            // 2.局部变量：从变量被定义直到函数被关闭而终止
+            /* 变量:用来储存数据的容器，当声明一个变量时
+            变量的作用域:
+            1.全局变量:一般是在函数外部定义，作用于整个函数
+            2.局部变量：定义在函数内部，只能被该函数
+            生命周期:
+            1.全局变量：从变量被定义直到程序被关闭而终止
+            2.局部变量：从变量被定义直到函数被关闭而终止 */
             var i = "yi";//局部变量
         },
         demo5(){
-            // 五种基本数据类型，数字（number),字符串（string)，布尔(boolean）,空（null），未定义（undefined）
-            // 检测数据类型用：typeof 变量   不同写法   typeof(变量)
-            // NaN不是一个数字，typeof(NaN)结果为number
+            /* 五种基本数据类型，数字（number),字符串（string)，布尔(boolean）,空（null），未定义（undefined）
+            检测数据类型用：typeof 变量   不同写法   typeof(变量)
+            NaN不是一个数字，typeof(NaN)结果为number */
             var age = 18;//number
             var name = "张";//字符串
             // 布尔Boolean:true/false用来做判断条件
@@ -255,9 +256,11 @@ export default {
             var value2 = num1 - num2;//"-"字符串转数字，相减
             // 备注：数字和字符串相减结果为NaN(Not a Number不是一个数)
             console.log('++--',value1,typeof value1);
-            // 2.显示转换
-            // 使用String(变量),Boolean(变量),Number(变量)构造方法来转
-            //变量.toString() 但不能转null/undefined
+            /* 2.显示转换
+            转字符串：String(变量)  或 变量.toString() 但不能转null/undefined
+            转布尔值：Boolean(变量)
+            转数字：Number(变量)  可以去掉小数点后的零   如20.00变20
+            */
             var phone = 100;
             var transform1 = String(phone);
             var age = 6;
@@ -278,56 +281,59 @@ export default {
             console.log('4显示转换number',Number(false));//结果0
             console.log('5显示转换number',Number(null));//结果0
             console.log('6显示转换number',Number(undefined));//结果NaN
-            // 3.使用函数转换
-            // parseInt(变量) 字符串转为整数   经常用
+            /* 3.使用函数转换
+            字符串转为整数  parseInt(变量)
+            字符串转浮点型类型  parseFloat(变量)
+            */
             console.log('1函数转换parseInt',parseInt("10.12"));//结果10，遇到小数点或者非数字就终止
             console.log('2函数转换parseInt',parseInt("哈哈"));//结果，首字符为非数字型，停止返回NaN
             console.log('3函数转换parseInt',parseInt("11哈哈"));//结果11，如果第一个字符是数字型，一直往后解析，直到碰到非数字型的字符停止，返回前面的数值
             console.log('4函数转换parseInt',parseInt("10101",2));//2进制，结果21，可以将不同进制数解析为十进制显示
-            // parseFloat(变量) 字符串转浮点型类型
+            
             console.log('1函数转换parseFloat',parseFloat("11.22"));//结果11.22，
             console.log('2函数转换parseFloat',parseFloat("6.6.6"));//结果6.6，只能解析第一个小数点
             console.log('3函数转换parseFloat',parseFloat("0x10101",2));//结果0，只能解释十进制的形式
         },
         demo7(){
-            // 运算符:
-            // 1.算术运算符:+,-,*,/,++,--,%(余数)
-            // +,-,*,/,%类似数学运算
-            // ++：在自身基础上+1
-            // --：在自身基础上-1
-            // a++:先运算赋值再自增
-            // ++a：先自增再运算赋值
-            // a--:先运算赋值再自减
-            // --a：先自减再运算赋值
+            /* 运算符:
+            1.算术运算符:+,-,*,/,++,--,%(余数)
+            +,-,*,/,%类似数学运算
+            ++：在自身基础上+1
+            --：在自身基础上-1
+            a++:先运算赋值再自增
+            ++a：先自增再运算赋值
+            a--:先运算赋值再自减
+            --a：先自减再运算赋值
 
-            // 2.赋值运算符：=，+=,-=,*=,/=，%=
-            // a+=b:等价于a=a+b
-            // a-=b:等价于a=a-b
-            // a*=b:等价于a=a*b
-            // a/=b:等价于a=a/b
-            // a%=b:等价于a=a%b
+            2.赋值运算符：=，+=,-=,*=,/=，%=
+            a+=b:等价于a=a+b
+            a-=b:等价于a=a-b
+            a*=b:等价于a=a*b
+            a/=b:等价于a=a/b
+            a%=b:等价于a=a%b
 
-            // 3.比较运算符：>,<,>=,<=,!=,==,===
+            3.比较运算符：>,<,>=,<=,!=,==,===
                 
-            // 4.逻辑运算符:与&&,或||,非!
-            // 与&&:只有&&符两边的等式同时成立,结果才为true否为flase
-            // &&与&区别:
-            // &&:前不对,不再执行后面
-            // &:前不对,依然执行后面(true为1,false为0)
-            // 或||:只要有一个成立,就true,两不成立为false
-            // 非! 结果取反  false变true   true变false
+            4.逻辑运算符:与&&,或||,非!
+            与&&:只有&&符两边的等式同时成立,结果才为true否为flase
+            &&与&区别:
+            &&:前不对,不再执行后面
+            &:前不对,依然执行后面(true为1,false为0)
+            或||:只要有一个成立,就true,两不成立为false
+            非! 结果取反  false变true   true变false
             
-            // ==与===区别
-            // ===等同符    类型和值相等才true
-            // ==等值符    值相等就true，不同会先转化类型再比较，比如true代表1，false代表0
-            // 注意：NaN==NaN  //返回false，NaN和所有值包括自己都不相等
+            ==与===区别
+            ===等同符    类型和值相等才true
+            ==等值符    值相等就true，不同会先转化类型再比较，比如true代表1，false代表0
+            注意：NaN==NaN  //返回false，NaN和所有值包括自己都不相等
 
-            // 5.三目运算符:(条件)?(语句1):(语句2)
-            // 如果条件成立,结果为语句1,否为语句2
+            5.三目运算符:(条件)?(语句1):(语句2)
+            如果条件成立,结果为语句1,否为语句2
             
-            // 优先级:()--乘除加减--赋值
+            优先级:()--乘除加减--赋值
 
-            // 科学计数法    800000 = 8e5       0.00008 = 8e-5
+            科学计数法    800000 = 8e5       0.00008 = 8e-5 
+            */
             var a=16;
             var b=3;
             console.log('%',a%b);

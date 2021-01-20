@@ -44,8 +44,8 @@ export default new Router({
             { path: 'learn2', name: 'learn2', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/javaScript/learn2.vue'], resolve) },
             { path: 'learn3', name: 'learn3', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/javaScript/learn3.vue'], resolve) },
             { path: 'processing', name: 'processing', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/javaScript/processing.vue'], resolve) },
-            { path: 'jsDemo', name: 'jsDemo', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/javaScript/jsDemo.vue'], resolve) },
             { path: 'es6', name: 'es6', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/javaScript/es6.vue'], resolve) },
+            { path: 'jsDemo', name: 'jsDemo', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/javaScript/jsDemo.vue'], resolve) },
 
             { path: 'v_tag', name: 'v_tag', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/knowledge/v_tag.vue'], resolve) },
             { path: 'modifier', name: 'modifier', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/knowledge/modifier.vue'], resolve) },
