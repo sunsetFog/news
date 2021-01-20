@@ -60,11 +60,11 @@ export default{
         }
     },
     mounted(){
-        var that = this;
-        that.$means.overallHeight('login');
-        window.onresize = function temp1(){
-            that.$means.overallHeight('login');
-        }
+        // var that = this;
+        // that.$means.overallHeight('login');
+        // window.onresize = function temp1(){
+        //     that.$means.overallHeight('login');
+        // }
     },
     created(){
         this.catchMice();
@@ -209,6 +209,7 @@ export default{
 <style lang="less" scoped>
 #login{
     width: 100%;
+    height: 750px;
     padding-bottom: 115px;
     box-sizing: border-box;
     overflow: hidden;

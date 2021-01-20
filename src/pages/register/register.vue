@@ -58,11 +58,11 @@ export default{
         this.registerEnter();
     },
     mounted(){
-        var that = this;
-        that.$means.overallHeight('register');
-        window.onresize = function temp7(){
-            that.$means.overallHeight('register');
-        }
+        // var that = this;
+        // that.$means.overallHeight('register');
+        // window.onresize = function temp7(){
+        //     that.$means.overallHeight('register');
+        // }
     },
     watch: {
         account_number(cur,old){
@@ -156,6 +156,7 @@ export default{
 <style lang="less" scoped>
 #register{
     width: 100%;
+    height: 750px;
     padding-bottom: 115px;
     box-sizing: border-box;
     overflow: hidden;

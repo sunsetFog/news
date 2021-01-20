@@ -656,10 +656,10 @@ export default {
         .mixin_float(200px, 100%, left);
         position: relative;
         img {
-          .mixin_img(300px, 70px);
+          .mixin_img(250px, 70px);
           position: absolute;
           top: 11px;
-          left: -120px;
+          left: -46px;
         }
       }
       .tabs-right {

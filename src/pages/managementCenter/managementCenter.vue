@@ -93,7 +93,7 @@ export default{
                     {key:'2-2-6',label: 'es6',path: '/mcenter/es6',icon: '../../../static/picture/center/wanjia.png',effect:[]},
                 ]},
                 {key: '3',label: 'vue知识点',path: '',icon: '../../../static/picture/center/pai.png',effect:[
-                    {key:'3-2-1',label: 'v-标签',path: '/mcenter/v_tag',icon: '../../../static/picture/center/qipai.png',effect:[]},
+                    {key:'3-2-1',label: 'vue指令',path: '/mcenter/v_tag',icon: '../../../static/picture/center/qipai.png',effect:[]},
                     {key:'3-2-2',label: 'vue修饰符',path: '/mcenter/modifier',icon: '../../../static/picture/center/qipai.png',effect:[]},
                     {key:'3-2-3',label: '生命周期',path: '/mcenter/lifecycle',icon: '../../../static/picture/center/qipai.png',effect:[]},
                     {key:'3-2-4',label: 'vuex',path: '/mcenter/vuex',icon: '../../../static/picture/center/tuandui.png',effect:[]},
@@ -108,11 +108,9 @@ export default{
                     {key:'3-2-13',label: 'filters',path: '/mcenter/filters',icon: '../../../static/picture/center/caiwu.png',effect:[]},
                     {key:'3-2-14',label: 'transition',path: '/mcenter/transition',icon: '../../../static/picture/center/caiwu.png',effect:[]},
                     {key:'3-2-15',label: 'refs',path: '/mcenter/refs',icon: '../../../static/picture/center/caiwu.png',effect:[]},
-                    {key:'3-2-16',label: 'canvas',path: '/mcenter/canvas',icon: '../../../static/picture/center/caiwu.png',effect:[]},
-                    {key:'3-2-17',label: 'base64解密',path: '/mcenter/base64',icon: '../../../static/picture/center/caiwu.png',effect:[]},
-                    {key:'3-2-18',label: 'mock模拟接口',path: '/mcenter/mock',icon: '../../../static/picture/center/caiwu.png',effect:[]},
-                    {key:'3-2-19',label: '缓存',path: '/mcenter/cache',icon: '../../../static/picture/center/caiwu.png',effect:[]},
-                    {key:'3-2-20',label: 'axios配置',path: '/mcenter/axios',icon: '../../../static/picture/center/caiwu.png',effect:[]}
+                    {key:'3-2-16',label: 'mock模拟接口',path: '/mcenter/mock',icon: '../../../static/picture/center/caiwu.png',effect:[]},
+                    {key:'3-2-17',label: '缓存',path: '/mcenter/cache',icon: '../../../static/picture/center/caiwu.png',effect:[]},
+                    {key:'3-2-18',label: 'axios配置',path: '/mcenter/axios',icon: '../../../static/picture/center/caiwu.png',effect:[]}
                 ]},
                 {key: '4',label: 'vue功能集',path: '',icon: '../../../static/picture/center/qipai.png',effect: [
                     {key: '4-2-1',label: '下载',path: '/mcenter/download_ex',icon: '../../../static/picture/center/qipai.png',effect:[]},
@@ -135,6 +133,8 @@ export default{
                 ]},
                 {key: '6',label: '拓展知识',path: '',icon: '../../../static/picture/center/tuiguang.png',effect:[
                     {key:'6-2-1',label: '知识1',path: '/mcenter/research',icon: '../../../static/picture/center/daili.png',effect:[]},
+                    {key:'6-2-2',label: 'canvas',path: '/mcenter/canvas',icon: '../../../static/picture/center/caiwu.png',effect:[]},
+                    {key:'6-2-3',label: 'base64解密',path: '/mcenter/base64',icon: '../../../static/picture/center/caiwu.png',effect:[]},
                 ]},
                 {key: '7',label: '面试要谈',path: '',icon: '../../../static/picture/center/tuandui.png',effect:[
                     {key:'7-2-1',label: '要点1',path: '/mcenter/talk1',icon: '../../../static/picture/center/tuiguang.png',effect:[]},

@@ -268,6 +268,14 @@ https是HTTP运行在SSL/TLS之上，SSL/TLS运行在TCP之上。所有传输的
            created先执行，再mounted，区别：created是创建数据不能Dom操作，mounted用于Dom操作
            看pages\managementCenter\knowledge\lifeCycle.vue
             */ 
+        },
+        demo32(){
+            /* 
+            xml和json的区别
+            JSON相对于XML来讲，数据的体积小，传递的速度更快些
+            JSON与JavaScript的交互更加方便，更容易解析处理，更好的数据交互
+            XML对数据描述性比较好；
+             */
         }
     }
 }
