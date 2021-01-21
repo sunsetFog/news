@@ -81,6 +81,17 @@ function sortObj(obj) { // 对象排序
     return newObj
 }
 
+//查询全部数据
+let purchase = function (options) {
+    let obj = JSON.parse(options.body);
+    let arr = store
+    arr.list = []
+    for(let i = (obj.current_page-1)*10; i < obj.current_page*10-1; i++) {
+        arr.list.push(store.list[i])
+    }
+    return arr
+}
+
 //查询该单条数据
 let isSingle = function (options) {
     let id = Number(JSON.parse(options.body)[idParams]); // 获取请求的id，将options.body转换为JSON对象
@@ -90,6 +101,11 @@ let isSingle = function (options) {
         }
     }
     return { code: 100, message: '传参错误' }
+}
+
+//搜索数据
+let search = function (options) {
+    return [ store.list[0] ]
 }
 
 // 数据的删除操作
@@ -142,10 +158,11 @@ let isUpdate = function (options) {
 
 
 export default {
-    store, // 查询所有数据用的
+    purchase, // 查询所有数据用的
     classify, // 查询分类数据    这两个没做啥处理，不用写function
     isSingle,
     isDelete,
     isAdd,
-    isUpdate
+    isUpdate,
+    search
 };

@@ -18,9 +18,14 @@ Mock.setup({
 
 /**
  * 查询该全部数据
- * @param { store_id: 12 } 店铺id
+ * @param { store_id: 12, current_page: 1, page_size: 10 } 店铺id
  */
-Mock.mock(allKey['mock-url'] + "/store/goods-list", "post", shopAPI.store);
+Mock.mock(allKey['mock-url'] + "/store/goods-list", "post", shopAPI.purchase);
+/**
+ * 搜索数据
+ * @param { search_value: 12 } 店铺id
+ */
+Mock.mock(allKey['mock-url'] + "/store/search", "post", shopAPI.search);
 /**
  * 查询该单条数据
  * @param { goods_id: '' }  商品id
