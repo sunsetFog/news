@@ -38,12 +38,12 @@ Mock.mock(allKey['mock-url'] + "/store/goods-detail", "post", shopAPI.isSingle);
 Mock.mock(allKey['mock-url'] + "/store/destroy-goods", "get", shopAPI.isDelete);
 /**
  * 数据的添加操作
- * @param 看shop.js添加传参
+ * @param 看param 传http的参数
  */
 Mock.mock(allKey['mock-url'] + "/store/add-goods", "post", shopAPI.isAdd);
 /**
  * 数据的修改操作
- * @param 看shop.js修改传参
+ * @param 看param 传http的参数
  */
 Mock.mock(allKey['mock-url'] + "/store/edit-goods", "post", shopAPI.isUpdate);
 /**

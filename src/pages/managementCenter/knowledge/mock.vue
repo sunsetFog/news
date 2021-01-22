@@ -117,7 +117,7 @@ export default {
             self.$apihttp({
                 url: '/store/goods-list',
                 method: 'post',
-                data: { store_id: 12, current_page: 1, page_size: 5 }
+                data: { store_id: 12, current_page: 3, page_size: 10 }
             }).then((res) => {
                 console.log('后台返回数据---', res)
             }).catch((err) => {

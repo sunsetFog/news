@@ -72,16 +72,18 @@ let purchase = function (receive) {
     if (ending) {
         return ending
     }
+    store.current_page = receive.current_page;
+    store.page_size = receive.page_size;
     // let magic = store; // 错误，来自json的变量，赋值改变了store结构
     let magic = {}
     for (let item in store) {
         magic[item] = store[item];
     }
     magic.list = []
-    for(let i = (receive.current_page-1)*receive.page_size; i < receive.current_page*receive.page_size; i++) {
+    let electric = receive.current_page*receive.page_size >= store.total ? store.total : receive.current_page*receive.page_size;
+    for(let i = (receive.current_page-1)*receive.page_size; i < electric; i++) {
         magic.list.push(store.list[i]);
     }
-    // console.log('store==22', store)
     return magic
 }
 
@@ -128,6 +130,7 @@ let isAdd = function (receive) {
         // category_pid: null,
         // category_cid: null,
         thumb: null,
+        imgName: null,
         price: null,
         // original_price: null,
         // cost: null,
@@ -157,6 +160,7 @@ let isUpdate = function (receive) {
         // category_pid: null,
         // category_cid: null,
         thumb: null,
+        imgName: null,
         price: null,
         // original_price: null,
         // cost: null,
