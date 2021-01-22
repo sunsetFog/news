@@ -39,10 +39,7 @@ export default {
     },
     created() {
         this.getJson();
-        this.dantiao();
-        this.shanchu();
-        this.tianjia()
-        this.xiugai()
+        this.demo();
     },
     methods: {
         getJson () {
@@ -109,83 +106,24 @@ export default {
             if (num === '') {
                 return ''
             }
-            let chu = Number(num) / 10000
-            let dian = chu.toFixed(2)
-            return Number(dian).toLocaleString()
+            // let chu = Number(num) / 10000
+            // let dian = chu.toFixed(2)
+            // return Number(dian).toLocaleString()
+            return ((Number(num) / 10000).toFixed(2)).toLocaleString()
         },
-        dantiao () {
+        /* 调用mock接口 */
+        demo () {
             let self = this;
             self.$apihttp({
-                url: '/store/goods-detail',
+                url: '/store/goods-list',
                 method: 'post',
-                data: { goods_id: 1 }
+                data: { store_id: 12, current_page: 1, page_size: 5 }
             }).then((res) => {
-                console.log('查询单条数据---', res)
+                console.log('后台返回数据---', res)
             }).catch((err) => {
                 console.log('error',err);
             })
-        },
-        shanchu () {
-            let self = this;
-            self.$apihttp({
-                url: '/store/destroy-goods',
-                method: 'get',
-                data: { goods_id: 2 }
-            }).then((res) => {
-                console.log('删除---', res)
-            }).catch((err) => {
-                console.log('error',err);
-            })
-        },
-        tianjia () {
-            let self = this;
-            let params = {
-                title: 'ai',
-                company: 'iu',
-                category_pid: 6,
-                category_cid: 7,
-                thumb: 'src',
-                price: 76,
-                original_price: 99,
-                cost: 24,
-                stock: 1222,
-                virtual_sales: 5902
-            }
-            self.$apihttp({
-                url: '/store/add-goods',
-                method: 'post',
-                data: params
-            }).then((res) => {
-                console.log('添加---', res)
-            }).catch((err) => {
-                console.log('error',err);
-            })
-        },
-        xiugai () {
-            let self = this;
-            let params = {
-                goods_id: 1,
-                title: 'weq',
-                company: 'eeiu',
-                category_pid: 26,
-                category_cid: 47,
-                thumb: 'y7src',
-                price: 3476,
-                original_price: 799,
-                cost: 224,
-                stock: 422,
-                virtual_sales: 19902
-            }
-            self.$apihttp({
-                url: '/store/edit-goods',
-                method: 'post',
-                data: params
-            }).then((res) => {
-                console.log('修改---', res)
-            }).catch((err) => {
-                console.log('error',err);
-            })
-        },
+        }
 
     }
 }

@@ -1,32 +1,7 @@
 import store from './store.json'
 import classify from './classify.json'
 
-let idParams = 'goods_id' // id名传参
-let addParams = { // 添加传参
-    title: null,
-    // company: null,
-    // category_pid: null,
-    // category_cid: null,
-    thumb: null,
-    price: null,
-    // original_price: null,
-    // cost: null,
-    stock: null,
-    virtual_sales: null
-}
-let modifyParams = { // 修改传参
-    goods_id: null, // 相比添加，修改一般多个id
-    title: null,
-    // company: null,
-    // category_pid: null,
-    // category_cid: null,
-    thumb: null,
-    price: null,
-    // original_price: null,
-    // cost: null,
-    stock: null,
-    virtual_sales: null
-}
+let idAi = 'goods_id' // id名传参
 /* 
 |- total: 3, 商品数量
 |- current_page: 1, 当前页
@@ -51,52 +26,70 @@ let modifyParams = { // 修改传参
     2.下面别改，改上面传入参数就行
     3.其他传入参数可以无视，下面没限制
 */
+/**
+ * @param receive 接受http的参数
+ * @param param   传http的参数
+ */
 
-function limitField(obj, params) { // 判断字段：添加和修改用
+function limitField(receive, param) { // 确认两者参数
     let arr = []
-    for (let item in params) {
+    for (let item in param) {
         arr.push(item)
     }
     for (let i = 0; i < arr.length; i++) {
-        if (!obj.hasOwnProperty(arr[i])) {
+        if (!receive.hasOwnProperty(arr[i])) {
             return { code: 100, message: '参数错误' }
         }
-        if (!obj[arr[i]]) {
+        if (!receive[arr[i]]) {
             return { code: 100, message: '参数不能为空' }
         }
     }
 }
-function sortObj(obj) { // 对象排序
+function sortAi(receive) { // 对象属性排序
     let allField = [] // 所有字段
     for (let item in store.list[0]) {
         allField.push(item)
-        if (!obj.hasOwnProperty(item)) { // 额外字段：组合传参没有的字段
-            obj[item] = store.list[0][item]
+        if (!receive.hasOwnProperty(item)) { // 额外字段：组合传参没有的字段
+            receive[item] = store.list[0][item]
         }
     }
-    let newObj = {}
+    let newAi = {}
     for (let i = 0; i < allField.length; i++) {
-        newObj[allField[i]] = obj[allField[i]]
+        newAi[allField[i]] = receive[allField[i]]
     }
-    return newObj
+    return newAi
 }
 
 //查询全部数据
-let purchase = function (options) {
-    let obj = JSON.parse(options.body);
-    let arr = store
-    arr.list = []
-    for(let i = (obj.current_page-1)*10; i < obj.current_page*10-1; i++) {
-        arr.list.push(store.list[i])
+let purchase = function (receive) {
+    receive = JSON.parse(receive.body);
+    let param = {
+        store_id: null,
+        current_page: null,
+        page_size: null
     }
-    return arr
+    let ending = limitField(receive, param);
+    if (ending) {
+        return ending
+    }
+    // let magic = store; // 错误，来自json的变量，赋值改变了store结构
+    let magic = {}
+    for (let item in store) {
+        magic[item] = store[item];
+    }
+    magic.list = []
+    for(let i = (receive.current_page-1)*receive.page_size; i < receive.current_page*receive.page_size; i++) {
+        magic.list.push(store.list[i]);
+    }
+    // console.log('store==22', store)
+    return magic
 }
 
 //查询该单条数据
-let isSingle = function (options) {
-    let id = Number(JSON.parse(options.body)[idParams]); // 获取请求的id，将options.body转换为JSON对象
+let isSingle = function (receive) {
+    let id = Number(JSON.parse(receive.body)[idAi]); // 获取请求的id，将receive.body转换为JSON对象
     for (let i = 0; i < store.list.length; i++) {
-        if (store.list[i][idParams] == id) {
+        if (store.list[i][idAi] == id) {
             return store.list[i];
         }
     }
@@ -104,19 +97,19 @@ let isSingle = function (options) {
 }
 
 //搜索数据
-let search = function (options) {
+let search = function (receive) {
     return [ store.list[0] ]
 }
 
 // 数据的删除操作
-let isDelete = function (options) {
-    let id = Number(JSON.parse(options.body)[idParams]); // 获取请求的id，将options.body转换为JSON对象
+let isDelete = function (receive) {
+    let id = Number(JSON.parse(receive.body)[idAi]); // 获取请求的id，将receive.body转换为JSON对象
     let save_length = store.list.length;
     store.list = store.list.filter(function (val) {
-        return val[idParams] != id;  // 过滤掉前台传过来的id对应的相应数据，并重新返回
+        return val[idAi] != id;  // 过滤掉前台传过来的id对应的相应数据，并重新返回
     });
     for (let i = 0; i < store.list.length; i++) { // 删除后重新排列id
-        store.list[i][idParams] = i + 1
+        store.list[i][idAi] = i + 1
     }
     if (save_length.length !== store.list.length) {
         store.total = store.total - 1;
@@ -127,29 +120,56 @@ let isDelete = function (options) {
 }
 
 // 数据的添加操作
-let isAdd = function (options) {
-    let obj = JSON.parse(options.body);
-    if (limitField(obj, addParams)) {
-        return limitField(obj, addParams)
+let isAdd = function (receive) {
+    receive = JSON.parse(receive.body);
+    let param = {
+        title: null,
+        // company: null,
+        // category_pid: null,
+        // category_cid: null,
+        thumb: null,
+        price: null,
+        // original_price: null,
+        // cost: null,
+        stock: null,
+        virtual_sales: null
+    }
+    let ending = limitField(receive, param);
+    if (ending) {
+        return ending
     }
     store.total = store.list.length + 1;
-    obj[idParams] = store.list.length + 1;
+    receive[idAi] = store.list.length + 1;
 
-    obj = sortObj(obj)
-    store.list = store.list.concat(obj);  // 将前台返回来的数据，拼接到数组中。
+    receive = sortAi(receive)
+    store.list = store.list.concat(receive);  // 将前台返回来的数据，拼接到数组中。
     return { code: 200, message: '添加成功' }
     // return store
 }
 
 // 数据的修改操作
-let isUpdate = function (options) {
-    let obj = JSON.parse(options.body);
-    if (limitField(obj, modifyParams)) {
-        return limitField(obj, modifyParams)
+let isUpdate = function (receive) {
+    receive = JSON.parse(receive.body);
+    let param = {
+        goods_id: null, // 相比添加，修改一般多个id
+        title: null,
+        // company: null,
+        // category_pid: null,
+        // category_cid: null,
+        thumb: null,
+        price: null,
+        // original_price: null,
+        // cost: null,
+        stock: null,
+        virtual_sales: null
     }
-    obj = sortObj(obj)
+    let ending = limitField(receive, param);
+    if (ending) {
+        return ending
+    }
+    receive = sortAi(receive)
     store.list = store.list.map(val => {  // 将需要替换的数据替换掉
-        return Number(val[idParams]) === Number(obj[idParams]) ? obj : val;
+        return Number(val[idAi]) === Number(receive[idAi]) ? receive : val;
     });
     return { code: 200, message: '修改成功' }
     // return store

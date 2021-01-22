@@ -84,28 +84,33 @@ Vue.component('rechargeRecord',rechargeRecord);
 import penCache from './vuex/index.js';
 import penMeans from './public/index.js';
 
-import NProgress from 'nprogress'
-import 'nprogress/nprogress.css'
+import NProgress from 'nprogress'; // 路由变化的转圈进度条
+import 'nprogress/nprogress.css'; // 加载转圈进度条样式
 router.beforeEach((to, from, next) => {
     document.title = to.meta.title;
-    let routeScreen = ['/login','/neutralgear'];
-    if (to.path == '/login') {
+    if (to.path == '/login') { // 登录页面，删除token缓存
         sessionStorage.removeItem('token');
-    }else if(routeScreen.indexOf(to.path)==-1&&from.path == '/'){
-        if(to.path=='/game'){
-            sessionStorage.setItem('save_path','/home');
-        }else{
-            sessionStorage.setItem('save_path',to.path);
-        }
-        penCache.dispatch('getPlayerInfo',penMeans.amateur_getPlayer()); //调用vuex和全局方法
-        // next({path: '/neutralgear'});
+    }
+    if(from.path == '/'){ // 刷新判断
+      penCache.dispatch('getPlayerInfo',penMeans.amateur_getPlayer()); //调用vuex和全局方法
     }
 
-    NProgress.start();
-    next()
+    // 通过刷新判断，跳转至/neutralgear页面
+    // let routeScreen = ['/login','/neutralgear'];
+    // if(routeScreen.indexOf(to.path)==-1&&from.path == '/'){ // 刷新判断
+    //     if(to.path=='/game'){
+    //         sessionStorage.setItem('save_path','/home');
+    //     }else{
+    //         sessionStorage.setItem('save_path',to.path);
+    //     }
+    //     next({path: '/neutralgear'}); // next页面跳转
+    // }
+
+    NProgress.start(); // 开始动画
+    next(); // next默认跳转
 }); 
 router.afterEach(transition => {
-  NProgress.done();
+  NProgress.done(); // 结束动画
 });
 
 /* eslint-disable no-new */
