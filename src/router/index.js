@@ -16,7 +16,7 @@ Router.prototype.push = function push(location) {
 
 
 export default new Router({
-  mode: 'history',//路由路径#
+  mode: 'history',//路由路径#    mode: 'hash'
   // base: '/root/', // 添加根目录,对应服务器部署子目录
   routes: [
     { path: '*', name: 'error', meta: { title: '找不到该页',key: 404}, component: resolve => require(['@/pages/error.vue'], resolve) },
