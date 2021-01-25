@@ -62,7 +62,7 @@ exports.cssLoaders = function (options) {
     less: generateLoaders('less').concat({
       loader: 'sass-resources-loader',
       options: {
-        resources: path.resolve(__dirname, '../src/assets/common.less')
+        resources: path.resolve(__dirname, '../static/capital/common.less')
       }
     }),
     sass: generateLoaders('sass', { indentedSyntax: true }),

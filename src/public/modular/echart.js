@@ -1,5 +1,13 @@
 import echarts from 'echarts'
 export default {
+    colorFlowers (index) {
+        let arr = ['#60acfc', '#32d3eb', '#5bc49f', '#feb64d', '#ff7c7c', '#9287e7', '#668ED6', '#A3BBE6']
+        let value = []
+        for (let i = 0; i < index; i++) {
+          value.push(arr[i])
+        }
+        return value
+    },
     /**
      * echarts颜色渐变函数
      */

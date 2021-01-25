@@ -9,8 +9,8 @@ Vue.config.productionTip = false
 
 
 
-import '../database/index';
-import '../static/capital/rem.js'
+import '../static/database/index';
+import '../static/capital/rem.js';
 
 
 import Vant from 'vant';

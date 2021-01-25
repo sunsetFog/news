@@ -28,7 +28,7 @@ module.exports = {
 
     // Various Dev Server settings
     host: 'localhost', // localhost   10.73.158.67
-    port: 1199, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+    port: 1166, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false, // 是否打开默认的浏览器
     errorOverlay: true,
     notifyOnErrors: true,

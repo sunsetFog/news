@@ -150,7 +150,7 @@ export default {
       loading: false,
       levelType: 1,
       cityId: '',
-      date: window.defaultDate,
+      date: '',
       time: '',
       organizationId: '',
       house_list: [{ name: '按揭回款', active: true }, { name: '在途按揭', active: false }, { name: '按揭逾期回款', active: false }, { name: '按揭回款时长', active: false }],
@@ -213,17 +213,17 @@ export default {
       })
     },
     init () {
-      // this.dateSort()
-      // this.selectBylist1()
-      // this.structuralAnalysisList()
-      // this.structuralMortgage()
-      // this.overdueProcessingTotal()
-      // this.overdueActualTime1()
-      // this.overdueActualTime2()
-      // this.overdueMortgageTotal1()
-      // this.overdueMortgageTotal2()
-      // this.inTransitMortgage1()
-      // this.inTransitMortgage2()
+      this.dateSort()
+      this.selectBylist1()
+      this.structuralAnalysisList()
+      this.structuralMortgage()
+      this.overdueProcessingTotal()
+      this.overdueActualTime1()
+      this.overdueActualTime2()
+      this.overdueMortgageTotal1()
+      this.overdueMortgageTotal2()
+      this.inTransitMortgage1()
+      this.inTransitMortgage2()
     },
     interlinking (level, name, code, parentCode) {
       if (level) {
@@ -299,9 +299,9 @@ export default {
     dayByday (value) {
       let dBy = false
       if (dBy) {
-        return value
+        // return value
       } else {
-        return this.date.split('-').join('')
+        return value
       }
     },
     orgKey (level, type) {
@@ -371,7 +371,7 @@ export default {
         method: 'post',
         data: param
       }).then((res) => {
-        let container = res.data.data
+        let container = res.data
         if (Number(container.length) === 0) {
           return
         }
@@ -395,7 +395,7 @@ export default {
         method: 'post',
         data: param
       }).then((res) => {
-        let container = res.data.data
+        let container = res.data
         if (Number(container.length) === 0) {
           return
         }
@@ -428,7 +428,8 @@ export default {
         method: 'post',
         data: param
       }).then((res) => {
-        let container = res.data.data
+        console.log('aiai--ai==', res)
+        let container = res.data
         if (Number(container.length) === 0) {
           return
         }
@@ -458,7 +459,7 @@ export default {
         method: 'post',
         data: param
       }).then((res) => {
-        let container = res.data.data
+        let container = res.data
         if (Number(container.length) === 0) {
           return
         }
@@ -508,7 +509,7 @@ export default {
         method: 'post',
         data: param
       }).then((res) => {
-        let container = res.data.data
+        let container = res.data
         if (Number(container.length) === 0) {
           return
         }
@@ -559,7 +560,7 @@ export default {
         method: 'post',
         data: param
       }).then((res) => {
-        let container = res.data.data
+        let container = res.data
         if (Number(container.length) === 0) {
           return
         }
@@ -603,7 +604,7 @@ export default {
         method: 'post',
         data: param
       }).then((res) => {
-        let container = res.data.data
+        let container = res.data
         if (Number(container.length) === 0) {
           return
         }
@@ -630,7 +631,7 @@ export default {
         method: 'post',
         data: param
       }).then((res) => {
-        let container = res.data.data
+        let container = res.data
         if (Number(container.length) === 0) {
           return
         }
@@ -657,7 +658,7 @@ export default {
         method: 'post',
         data: param
       }).then((res) => {
-        let container = res.data.data
+        let container = res.data
         if (Number(container.length) === 0) {
           return
         }
@@ -688,7 +689,7 @@ export default {
         method: 'post',
         data: param
       }).then((res) => {
-        let container = res.data.data
+        let container = res.data
         if (Number(container.length) === 0) {
           return
         }
@@ -740,7 +741,7 @@ export default {
         method: 'post',
         data: param
       }).then((res) => {
-        let container = res.data.data
+        let container = res.data
         if (Number(container.length) === 0) {
           return
         }
