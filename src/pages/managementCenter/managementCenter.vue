@@ -110,7 +110,8 @@ export default{
                     {key:'3-2-15',label: 'refs',path: '/mcenter/refs',icon: '../../../static/picture/center/caiwu.png',effect:[]},
                     {key:'3-2-16',label: 'mock模拟接口',path: '/mcenter/mock',icon: '../../../static/picture/center/caiwu.png',effect:[]},
                     {key:'3-2-17',label: '缓存',path: '/mcenter/cache',icon: '../../../static/picture/center/caiwu.png',effect:[]},
-                    {key:'3-2-18',label: 'axios配置',path: '/mcenter/axios',icon: '../../../static/picture/center/caiwu.png',effect:[]}
+                    {key:'3-2-18',label: 'axios配置',path: '/mcenter/axios',icon: '../../../static/picture/center/caiwu.png',effect:[]},
+                    {key:'3-2-19',label: '图片相对路径',path: '/mcenter/relativePath',icon: '../../../static/picture/center/caiwu.png',effect:[]}
                 ]},
                 {key: '4',label: 'vue功能集',path: '',icon: '../../../static/picture/center/qipai.png',effect: [
                     {key: '4-2-1',label: '下载',path: '/mcenter/download_ex',icon: '../../../static/picture/center/qipai.png',effect:[]},

@@ -21,9 +21,13 @@ export default {
     methods: {
         jump(){
             this.$router.push({path: '/mcenter/crux?id=100&status=true'});//推荐用这个，没刷新问题
+            // this.$router.go(-1);//返回上一页    参数1：数字，返回第几页
+
             // query没刷新问题  params要路由path:'/router/:id',才无刷新丢失数据问题
             // this.$router.push({name: 'crux',query: {id: 100,status: true}});//可用
             // this.$router.push({name: 'crux',params: {id: 1010,status: true}});//不建议使用
+            // this.$router.push({path: '/mcenter/crux',query: {id: 100,status: true}});//可用
+            // this.$router.push({path: '/mcenter/crux',params: {id: 1010,status: true}});//不建议使用
             console.log('查看路由参数',this.$route);
         }
     }

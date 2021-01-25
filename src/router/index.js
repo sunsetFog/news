@@ -17,7 +17,7 @@ Router.prototype.push = function push(location) {
 
 export default new Router({
   mode: 'history',//路由路径#
-  base: '/root/', // 添加根目录,对应服务器部署子目录
+  // base: '/root/', // 添加根目录,对应服务器部署子目录
   routes: [
     { path: '*', name: 'error', meta: { title: '找不到该页',key: 404}, component: resolve => require(['@/pages/error.vue'], resolve) },
     {
@@ -65,6 +65,7 @@ export default new Router({
             { path: 'mock', name: 'mock', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/knowledge/mock.vue'], resolve) },
             { path: 'cache', name: 'cache', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/knowledge/cache.vue'], resolve) },
             { path: 'axios', name: 'axios', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/knowledge/axios.vue'], resolve) },
+            { path: 'relativePath', name: 'relativePath', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/knowledge/relativePath.vue'], resolve) },
 
             { path: 'download_ex', name: 'download_ex', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/effect/download.vue'], resolve) },
             { path: 'copy', name: 'copy', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/effect/copy.vue'], resolve) },

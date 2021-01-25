@@ -1,5 +1,5 @@
 import Mock from 'mockjs' // npm install mockjs --save
-import allKey from '../static/capital/allKey.json'
+import allKey from '../capital/allKey.json'
 
 /**
  * 接受所以暴露export default

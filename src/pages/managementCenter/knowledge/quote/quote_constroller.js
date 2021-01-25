@@ -1,7 +1,7 @@
 export default{
     data(){
         return{
-            loading: [{title: '主页'},{title: '事项'},{title: '活动'}],
+            loading: 'vue文件引用js文件,或less文件',
         }
     },
     methods: {

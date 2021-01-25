@@ -1,9 +1,7 @@
 <template>
     <section id="import-ex">
-        <div class="frame">
-            <ul>
-                <li v-for="(item,index) in loading">{{item.title}}</li>
-            </ul>
+        <div class="quality">
+            <span>{{loading}}</span>
         </div>
     </section>
 </template>
