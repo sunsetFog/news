@@ -1,5 +1,5 @@
 import Mock from 'mockjs' // npm install mockjs --save
-import allKey from '../capital/allKey.json'
+import domain from '../../src/api/domain'
 
 /**
  * 接受所以暴露export default
@@ -20,43 +20,43 @@ Mock.setup({
  * 查询该全部数据
  * @param { store_id: 12, current_page: 1, page_size: 10 } 店铺id
  */
-Mock.mock(allKey['mock-url'] + "/store/goods-list", "post", shopAPI.purchase);
+Mock.mock(domain + "/store/goods-list", "post", shopAPI.purchase);
 /**
  * 搜索数据
  * @param { search_value: 12 } 店铺id
  */
-Mock.mock(allKey['mock-url'] + "/store/search", "post", shopAPI.search);
+Mock.mock(domain + "/store/search", "post", shopAPI.search);
 /**
  * 查询该单条数据
  * @param { goods_id: '' }  商品id
  */
-Mock.mock(allKey['mock-url'] + "/store/goods-detail", "post", shopAPI.isSingle);
+Mock.mock(domain + "/store/goods-detail", "post", shopAPI.isSingle);
 /**
  * 数据的删除操作
  * @param { goods_id: '' }  商品id
  */
-Mock.mock(allKey['mock-url'] + "/store/destroy-goods", "get", shopAPI.isDelete);
+Mock.mock(domain + "/store/destroy-goods", "get", shopAPI.isDelete);
 /**
  * 数据的添加操作
  * @param 看param 传http的参数
  */
-Mock.mock(allKey['mock-url'] + "/store/add-goods", "post", shopAPI.isAdd);
+Mock.mock(domain + "/store/add-goods", "post", shopAPI.isAdd);
 /**
  * 数据的修改操作
  * @param 看param 传http的参数
  */
-Mock.mock(allKey['mock-url'] + "/store/edit-goods", "post", shopAPI.isUpdate);
+Mock.mock(domain + "/store/edit-goods", "post", shopAPI.isUpdate);
 /**
  * 查询分类数据
  * @param { store_id: 12 } 店铺id
  */
-Mock.mock(allKey['mock-url'] + "/store/goods/get-category", "post", shopAPI.classify);
+Mock.mock(domain + "/store/goods/get-category", "post", shopAPI.classify);
 
 /**
  * mock.vue调用的接口
  * @param {}
  */
-Mock.mock(allKey['mock-url'] + "/store/price-list", "post", mapAPI.mapList);
+Mock.mock(domain + "/store/price-list", "post", mapAPI.mapList);
 
 
 

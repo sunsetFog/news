@@ -2,30 +2,7 @@ import axios from 'axios'
 import { Message, MessageBox } from 'element-ui'
 import router from '@/router' // 用于路由跳转 router.push({path: '/login'})
 import means from '../public/modular/accumulation01'
-import allKey from '../../static/capital/allKey.json'
-
-let domain
-if (process.env.NODE_ENV === 'development') { // 开发环境
-    if (allKey['key']) {
-        domain = allKey['mock-url']
-    } else {
-        domain = allKey['dev-url']
-    }
-} else if (process.env.NODE_ENV === 'production') { // 生产环境
-    if (location.hostname === 'pricemap.mideazy.com') {
-        /**
-         * 测试环境：用域名作判断
-         * https://pricemap.mideazy.com
-         */
-        domain = allKey['prod-url-test']
-    } else {
-        /**
-         * 线上环境
-         */
-        domain = allKey['prod-url-ok']
-    }
-    // domain = location.protocol + '//' + window.location.host;
-}
+import domain from './domain'
 
 // 创建axios实例
 const service = axios.create({
