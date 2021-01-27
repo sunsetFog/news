@@ -119,7 +119,6 @@ export default{
                 };
         },
         customerService(){
-            // window.open("https://chat32.live800.com/live800/chatClient/chatbox.jsp?companyID=12698&enterurl=&codeType=custom&info=");
             window.open("https://nine.mdihi.com/chat/chatClient/chatbox.jsp?companyID=365033539&configID=2306&jid=4095904748&s=1");
         },
         rapidRegistration(value){

@@ -352,12 +352,6 @@ export default {
           json.timestamp +
           "&key=" +
           json.key;
-        // console.log('hash',json.hashCode);
-        //console.log("url$$$", infoValue);
-        // window.open(
-        //   "https://chat32.live800.com/live800/chatClient/chatbox.jsp?companyID=12698&enterurl=&codeType=custom&info=" +
-        //     encodeURIComponent(infoValue)
-        // );
         window.open(
             "https://nine.mdihi.com/chat/chatClient/chatbox.jsp?companyID=365033539&configID=2306&jid=4095904748&s=1&enterurl=&codeType=custom&info=" +
             encodeURIComponent(infoValue)
@@ -441,11 +435,6 @@ export default {
       // }else{
       //   this.$message.success("敬请期待！");
       // }
-    }
-  },
-  beforeCreate() {
-    if (!sessionStorage.getItem("token")) {
-      this.$router.push({ name: "Login" });
     }
   }
 };

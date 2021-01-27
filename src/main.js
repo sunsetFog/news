@@ -92,7 +92,10 @@ router.beforeEach((to, from, next) => {
     if (to.path == '/login') { // 登录页面，删除token缓存
         sessionStorage.removeItem('token');
     }
-    if(from.path == '/'){ // 刷新判断
+    if (to.path == '/home' && !sessionStorage.getItem('token')) { // path: '/' 路由默认页，检查有无token，无则跳回登录
+      next({path: '/login'}); // next页面跳转
+    }
+    if(from.path == '/' && sessionStorage.getItem('token')){ // 刷新判断
       penCache.dispatch('getPlayerInfo',penMeans.amateur_getPlayer()); //调用vuex和全局方法
     }
 

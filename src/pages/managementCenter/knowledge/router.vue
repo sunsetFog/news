@@ -22,7 +22,7 @@ export default {
     },
     methods: {
         jump(){
-            this.$router.push({path: '/mcenter/crux?id=100&status=true'});//推荐用这个，没刷新问题
+            this.$router.push({path: '/mcenter/crux?id=100&status=九九'});//推荐用这个，没刷新问题
             // this.$router.go(-1);//返回上一页    参数1：数字，返回第几页
 
 
@@ -44,18 +44,20 @@ export default {
 
 encodeURI(参数1)  元字符和语义字符之外，都可以转义
 encodeURIComponent(参数1)  语义字符之外，都可以转义
+
+不同浏览器中url的编码方式   ---略
+谷歌地址栏显示中文，ie显示编码，location.href获取显示编码
             */
 
-            let yaya = 'http://localhost:1199/mcenter/router?title=您好'
-            console.log('整条编码', encodeURI(yaya)); // http://localhost:1199/mcenter/router?title=%E6%82%A8%E5%A5%BD
-            let rea = 'http://localhost:1199/mcenter/router?title=%E6%82%A8%E5%A5%BD'
-            console.log('整条解码', decodeURI(rea)); // http://localhost:1199/mcenter/router?title=您好
+            console.log('整条编码', encodeURI('http://localhost:1199/mcenter/router?title=您好')); // http://localhost:1199/mcenter/router?title=%E6%82%A8%E5%A5%BD
+            console.log('整条解码', decodeURI('http://localhost:1199/mcenter/router?title=%E6%82%A8%E5%A5%BD')); // http://localhost:1199/mcenter/router?title=您好
+            // this.$router.push({path: encodeURI('/mcenter/crux?id=100&city=广州')});
 
-            let code = "究竟"
-            let url = '?title='+encodeURIComponent(code);
-            console.log('只有参数编码', url);// ?title=%E7%A9%B6%E7%AB%9F
-            let frv = '%E7%A9%B6%E7%AB%9F'
-            console.log('只有参数解码', decodeURIComponent(frv));
+
+            console.log('只有参数编码', '?title='+encodeURIComponent("究竟"));// ?title=%E7%A9%B6%E7%AB%9F
+            console.log('只有参数解码', decodeURIComponent('%E7%A9%B6%E7%AB%9F'));
+
+            this.$router.push({path: '/mcenter/crux?id=100&name=' + encodeURIComponent('红雾君')});
         }
     }
 }

@@ -131,6 +131,7 @@ export default{
         }
     },
     created(){
+        console.log('来自路由跳转：', location.href, this.$route)
         this.getJson();
     },
     computed: {
