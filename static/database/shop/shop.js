@@ -1,5 +1,6 @@
 import store from './store.json'
 import classify from './classify.json'
+import login from './login.json'
 
 let idAi = 'goods_id' // id名传参
 /* 
@@ -180,6 +181,22 @@ let isUpdate = function (receive) {
 
 }
 
+// 数据的修改操作
+let loginAi = function (receive) {
+/*
+
+|- token ---------- token(24小时失效)
+|- nickname ------------ 昵称
+|- avatar_img ---------- 头像
+|- sex ---------------- 性别
+|- vip --------------- vip等级
+|- store_id ------------ 商店id
+|- user_id ------------ 用户id
+
+*/
+    return login
+}
+
 
 export default {
     purchase, // 查询所有数据用的
@@ -188,5 +205,6 @@ export default {
     isDelete,
     isAdd,
     isUpdate,
-    search
+    search,
+    loginAi
 };

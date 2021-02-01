@@ -127,7 +127,8 @@ export default{
                     {key: '4-2-11',label: '二维码',path: '/mcenter/vueqr',icon: '../../../static/picture/center/qipai.png',effect:[]},
                     {key: '4-2-12',label: '浏览器监听',path: '/mcenter/listener',icon: '../../../static/picture/center/qipai.png',effect:[]},
                     {key: '4-2-13',label: 'websocket',path: '/mcenter/websocket',icon: '../../../static/picture/center/qipai.png',effect:[]},
-                    {key: '4-2-14',label: 'pc自适应',path: '/mcenter/adaption',icon: '../../../static/picture/center/qipai.png',effect:[]},
+                    {key: '4-2-14',label: 'pc自适应',path: '/adaption',icon: '../../../static/picture/center/qipai.png',effect:[]},
+                    {key: '4-2-15',label: '水波',path: '/wave',icon: '../../../static/picture/center/qipai.png',effect:[]},
                 ]},
                 {key: '5',label: '项目报表',path: '',icon: '../../../static/picture/center/tuiguang.png',effect:[
                     {key:'5-2-1',label: 'echart图表',path: '/mcenter/echartsDemo1',icon: '../../../static/picture/center/daili.png',effect:[]},

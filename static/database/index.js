@@ -51,6 +51,11 @@ Mock.mock(domain + "/store/edit-goods", "post", shopAPI.isUpdate);
  * @param { store_id: 12 } 店铺id
  */
 Mock.mock(domain + "/store/goods/get-category", "post", shopAPI.classify);
+/**
+ * 登录
+ * @param { username: '', password: '' }
+ */
+Mock.mock(domain + "/shop/login", "post", shopAPI.loginAi);
 
 /**
  * mock.vue调用的接口

@@ -80,7 +80,6 @@ export default new Router({
             { path: 'vueqr', name: 'vueqr', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/effect/vueqr.vue'], resolve) },
             { path: 'listener', name: 'listener', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/effect/listener.vue'], resolve) },
             { path: 'websocket', name: 'websocket', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/effect/websocket.vue'], resolve) },
-            { path: 'adaption', name: 'adaption', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/effect/adaption.vue'], resolve) },
 
             { path: 'echartsDemo1', name: 'echartsDemo1', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/reportForm/demo1.vue'], resolve) },
 
@@ -95,6 +94,8 @@ export default new Router({
         { path: '/', redirect: '/home' }
       ]
     },
+    { path: '/adaption', name: 'adaption', meta: { title: 'pc自适应',key: 404}, component: resolve => require(['@/pages/managementCenter/effect/adaption.vue'], resolve) },
+    { path: '/wave', name: 'wave', meta: { title: '水波',key: 404}, component: resolve => require(['@/pages/managementCenter/effect/wave.vue'], resolve) },
     { path: '/login', name: 'Login', meta: { title: '登陆',key: 404}, component: resolve => require(['@/pages/login/login'], resolve) },
     { path: '/line', name: 'Line', meta: { title: '线路检测',key: 404}, component: resolve => require(['@/pages/login/line'], resolve) },
     { path: '/register', name: 'Register', meta: { title: '注册',key: 404}, component: resolve => require(['@/pages/register/register'], resolve) },
