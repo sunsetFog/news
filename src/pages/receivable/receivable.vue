@@ -1,5 +1,5 @@
 <template>
-  <section id="receivable">
+  <section id="pen-receivable">
     <header-bar :title="title"></header-bar>
     <div class="header-box">
 
@@ -807,8 +807,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-#receivable {
-  position: relative;
+#pen-receivable {
   width: 100%;
   background-color: #001018;
   color: #ffffff;
@@ -829,7 +828,7 @@ export default {
     position: fixed;
     top: 50px;
     left: 0;
-    z-index: 999999999;
+    z-index: 99;
     background-color: #001018;
   }
   .contain {
@@ -1058,7 +1057,6 @@ export default {
       padding: 0 0 5px 0;
       box-sizing: border-box;
       ul {
-        font-size: 10px;
         background: #333B4B;
         color: #fff;
         width: 325px;
@@ -1067,6 +1065,7 @@ export default {
         margin: 0 auto;
         li {
           float: left;
+          font-size: 10px;
           span {
             margin-left: 3px;
           }

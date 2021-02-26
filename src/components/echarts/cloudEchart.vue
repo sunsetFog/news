@@ -81,6 +81,7 @@ export default {
 #echarts {
   width: 100%;
   color: white;
+  text-align: left;
   .show-chart,.nothing-tip{
     width: 100%;
   }
