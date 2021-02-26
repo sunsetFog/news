@@ -129,6 +129,10 @@ export default {
 		// text-indent: 30px;//首行缩进
         // white-space: nowrap;//文本强制不换行
 
+        // word-break: normal; // 默认换行
+        // word-break: break-all; // 允许在单词内换行
+        // word-break: keep-all; // 只能在半角空格或连字符处换行
+
         // display: none;//元素消失
         // display: block;//元素出现
 

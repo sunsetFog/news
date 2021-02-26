@@ -181,7 +181,7 @@ let isUpdate = function (receive) {
 
 }
 
-// 数据的修改操作
+// 登录
 let loginAi = function (receive) {
 /*
 

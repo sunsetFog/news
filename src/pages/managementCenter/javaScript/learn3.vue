@@ -113,8 +113,7 @@ export default {
             console.log('await-3')
         },
         demo3(){
-            // 遍历
-            // for与forEach的区别:
+            // 遍历: for与forEach的区别:
             // forEach不能使用break,continue,不能用arr.splice(),索引index不会被重置,相反for可以
             let arr = [1,2,3];
             for(let i=0;i<arr.length;i++){//能使用break,continue
@@ -126,25 +125,25 @@ export default {
                 console.log('this',this.aaa);
             },obj);// this指向obj
 
-            // 数组.map: 返回新的数组（可以用return）
+            // 遍历: 数组.map: 返回新的数组（可以用return）
             let newArr = arr.map(function(num){
                 return num*2;
             })
             console.log('新数组',newArr);
 
-            // 数组.filter: 返回符合条件的新数组
+            // 遍历: 数组.filter: 返回符合条件的新数组
             let newArr2 = arr.filter(function(item){
                 return item>1&&item<3;
             })
             console.log('filter',newArr2);
 
-            // 数组.some: 检测数组中的元素是否满足指定条件,返回true,false
+            // 遍历: 数组.some: 检测数组中的元素是否满足指定条件,返回true,false
             let active = arr.some(function(item,index,arr){
                 return item == 1;
             })
             console.log('some',active);
 
-            // 数组.find()  查找符合条件的元素，则返回第一个元素
+            // 遍历: 数组.find()  查找符合条件的元素，则返回第一个元素
             let content = arr.find(function(item){
                 return item>0;
             })
