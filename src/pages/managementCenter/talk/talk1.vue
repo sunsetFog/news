@@ -24,15 +24,30 @@ export default {
         },
         demo2(){
             /* 
-            问随便讲讲时(讲出经验来)
-            对接后台不一定用请求头:
-            1. 下载文档：window.open("后台请求url?id="+传参数后台);
-            2. element图片上传: （查看vue功能集）
-
-            vue的拦截: 路由拦截，请求拦截
+            讲讲经验问题:
+                一. 刷新vuex数据丢失问题，解决: 1.用浏览器缓存,在main.js的刷新判断用缓存 2.刷新判断再次调用http请求，重新存vuex数据
+                二. 用浏览器缓存时: 参数2要是数组或对象，请转化成字符串,用时再字符串再转回数组或对象   看src\pages\managementCenter\knowledge\cache.vue
+                三.对接后台不一定用请求头:
+                    1. 下载文档：window.open("后台请求url?id="+传参数后台);
+                    2. element图片上传: （查看vue功能集）
+                四. rem自动转换，转换不了内联样式(style里的样式),需要手动计算转换
+                五.pc端的自适应如何实现    看src\pages\managementCenter\effect\adaption.vue
+                六.vue的拦截: 路由拦截(看src\main.js)，请求拦截(看src\api\http.js)
+                七.router配置: 看src\router\index.js
+                八.加载完页面后，多个button高亮---向后台保存要高亮的下标，那数据时，用该下标高亮
              */
         },
         demo3(){
+            /* 
+            页面的传参方式:
+                一.兄弟vue传参方式
+                    1.vuex
+                    2.浏览器缓存(session,localStorage,cookies)
+                    3.路由传参
+                二.子父组件传参    看src\pages\managementCenter\knowledge\parent.vue
+             */
+        },
+        demo4(){
             /**
              * vue中mvvm原理及其实现
              mvvm是mvc的改进
@@ -48,15 +63,6 @@ export default {
 
                 }
             })
-        },
-        demo4(){
-            /* 
-            页面的传参方式:
-            1.路由传参
-            2.vuex传参
-            3.缓存传参
-            4.子父组件传参
-             */
         },
         demo5(){
            /*  vuex运用:

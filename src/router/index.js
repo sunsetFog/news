@@ -19,6 +19,13 @@ export default new Router({
   //  mode: 'history',//去掉路由路径#    默认mode: 'hash'  ---最好别加，apache服务器或其他服务器，部署项目时有刷新404问题
   // base: '/root/', // 添加根目录,对应服务器部署子目录 ---最好别加
   routes: [
+    /* 
+      路由配置要点:
+      1.path: '*'找不到路径， 相当于if的else判断
+      2.path: '/'  默认值
+      3.children是用来搭建路由视图，包有{ path: '/', redirect: '/home' }  默认值：children里的重定向
+      4.meta是用来存路由参数，比如title
+    */
     { path: '*', name: 'error', meta: { title: '找不到该页',key: 404}, component: resolve => require(['@/pages/error.vue'], resolve) },
     {
       path: '/', component: resolve => require(['@/pages/home'], resolve),
