@@ -113,49 +113,12 @@ export default {
             console.log('await-3')
         },
         demo3(){
-            // 遍历: for与forEach的区别:
-            // forEach不能使用break,continue,不能用arr.splice(),索引index不会被重置,相反for可以
-            let arr = [1,2,3];
-            for(let i=0;i<arr.length;i++){//能使用break,continue
-
-            }
-
-            let obj = {aaa: 102};
-            arr.forEach(function(item,index,arr){//参数分别是:数组元素,索引,数组自身
-                console.log('this',this.aaa);
-            },obj);// this指向obj
-
-            // 遍历: 数组.map: 返回新的数组（可以用return）
-            let newArr = arr.map(function(num){
-                return num*2;
-            })
-            console.log('新数组',newArr);
-
-            // 遍历: 数组.filter: 返回符合条件的新数组
-            let newArr2 = arr.filter(function(item){
-                return item>1&&item<3;
-            })
-            console.log('filter',newArr2);
-
-            // 遍历: 数组.some: 检测数组中的元素是否满足指定条件,返回true,false
-            let active = arr.some(function(item,index,arr){
-                return item == 1;
-            })
-            console.log('some',active);
-
-            // 遍历: 数组.find()  查找符合条件的元素，则返回第一个元素
-            let content = arr.find(function(item){
-                return item>0;
-            })
-            console.log('find',content);
-        },
-        demo4(){
             // 保留两个小数点
             let money = 75995094.5789;
             console.log('保留两个小数点',Number(money.toFixed(2)));// toFixed(num) 指定小数位数（四舍五入，返回的是字符串）
             console.log('保留两个小数点',parseInt(money*100)/100);
         },
-        demo5(){
+        demo4(){
             //递归: 函数直接或间接调用自己
             // 阶乘
             function fact(num) {
@@ -167,7 +130,7 @@ export default {
             }
             console.log('3*2*1',fact(3));// 结果为 6 
         },
-        demo6(){
+        demo5(){
             // 递归2
             let list = [{
                 "thisNode": "10000480",

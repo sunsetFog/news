@@ -87,7 +87,7 @@ import penMeans from './public/index.js';
 
 import NProgress from 'nprogress'; // 路由变化的转圈进度条
 import 'nprogress/nprogress.css'; // 加载转圈进度条样式
-// 路由拦截
+// 路由拦截（路由守卫）
 router.beforeEach((to, from, next) => {
     document.title = to.meta.title;
     if (to.path == '/login') { // 登录页面，删除token缓存

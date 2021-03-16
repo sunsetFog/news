@@ -48,20 +48,50 @@ export default {
             // 二维数组
             var arr4 = [[1,2,3,4],[5,6,7,8],[9,10,11,12]];
 
-            // arguments   调用this.demo2(8,9);   记得调用带参数，方法内不写参数
+            // arguments伪数组   调用this.demo2(8,9);   记得调用带参数，方法内不写参数
             console.log('arguments',arguments,Array.isArray(arguments));//arguments不是数组,是函数里的内置对象,方法里没有写参数却传入了参数,用arguments可以取
             console.log('arguments特性',arguments[0],arguments.length);//可以用下标，可以用长度，也能for循环，但不能用数组中的常用方法，比如push()...
-            var args = Array.prototype.slice.call(arguments);
-            console.log('把arguments转换成真正的数组',args);
-            //遍历数组
-            for(let i=0;i<arr3.length;i++){
-
-            }
-            arr3.forEach(function(item,index,array){//参数1:数组项、参数2:数组索引(数组下标)、参数3:数组本身
-
-            })
+            console.log('把arguments转换成真正的数组',Array.prototype.slice.call(arguments));
         },
         demo3(){
+            //遍历数组
+            // for与forEach的区别:
+            // forEach不能使用break,continue,不能用arr.splice(),索引index不会被重置,相反for可以
+            let arr = [1,2,3];
+            for(let i=0;i<arr.length;i++){//能使用break,continue
+
+            }
+
+            let obj = {aaa: 102};
+            arr.forEach(function(item,index,arr){//参数1:数组项、参数2:数组索引(数组下标)、参数3:数组本身
+                console.log('this',this.aaa);
+            },obj);// this指向obj      去掉(,obj)  一般不需要
+
+            // 遍历: 数组.map: 返回新的数组（可以用return）
+            let newArr = arr.map(function(num){
+                return num*2;
+            })
+            console.log('新数组',newArr);
+
+            // 遍历: 数组.filter: 返回符合条件的新数组
+            let newArr2 = arr.filter(function(item){
+                return item>1&&item<3;
+            })
+            console.log('filter',newArr2);
+
+            // 遍历: 数组.some: 检测数组中的元素是否满足指定条件,返回true,false
+            let active = arr.some(function(item,index,arr){
+                return item == 1;
+            })
+            console.log('some',active);
+
+            // 遍历: 数组.find()  查找符合条件的元素，则返回第一个元素
+            let content = arr.find(function(item){
+                return item>0;
+            })
+            console.log('find',content);
+        },
+        demo4(){
             /*
                 数组中的常用方法 (注意返回内容，不能赋值)
                 1  数组.join("")      将数组中的值拼接为字符串显示  参数1:拼接内容
@@ -90,7 +120,7 @@ export default {
             })
             console.log('数组排序',arr);
         },
-        demo4(){
+        demo5(){
             /*
                 对象概念：一个对象可包含多个属性    {key(键): 'value值'}
                 访问Json数据：obj.key或者obj["key"],因为key是字符串
@@ -118,7 +148,7 @@ export default {
                 }
             }
         },
-        demo5(){
+        demo6(){
             /*
                 字符串常见方法：
                 1  字符串.charAt(下标)    指定下标的字符
@@ -172,7 +202,7 @@ export default {
 			console.log('split',str.split("好"));//["今天", "是", "个", "日子"]
 			console.log('split',str.split("好",2));//["今天", "是"]
         },
-        demo6(){
+        demo7(){
             //正则表达式: 验证指定字符串合法与否
             // 定义正则表达变量
             var reg1 = new RegExp("a");
@@ -197,7 +227,7 @@ export default {
             console.log('匹配换行符', 'A\nB'); // \n
             console.log('空格', 'A&nbsp;B'); // &nbsp;
         },
-        demo7(){
+        demo8(){
             //Math对象: 数学任务      Math.方法名(运算值)
 			var a=-4.5;
 			console.log('绝对值',Math.abs(a));
@@ -223,7 +253,7 @@ export default {
             console.log('余弦',Math.cos(deg60));
             console.log('正切',Math.tan(deg60));
         },
-        demo8(){
+        demo9(){
             //Dtae对象
             var nowTime = new Date();//Date构造函数，时间从1970 年 1 月 1开始算
             console.log('当前时间',nowTime);
@@ -270,7 +300,7 @@ export default {
             console.log("距离2050年元旦还有："+days+"天"+hours+"时"+minutes+"分"+seconds+"秒");
             // setInterval(this.demo7,1000);//倒计时
         },
-        demo9 (params = []) {
+        demo10 (params = []) {
             console.log('方法默认值', params);
             let key = null;
             let sky = key || '默认值';
