@@ -6,36 +6,49 @@
                 块元素：单独占一行，可以设宽高  例如div,p,h1-h6,table,ul-li,ol-li  
                 行内块元素：同一行显示,可以设宽高  例如img,input,button
             2.盒子模型: 内容content、内边距padding、边框border、外边距margin
-            3.三种常见选择器类型：
-                1.标签选择器
-				2.class选择器
-				3.id选择器
-				优先级(权重)：id选择器>class选择器>标签选择器
-            不常见的选择器
-                属性选择器：input[type="password"]
-                伪类选择器：:hover :focus :active :visitied :link :after
-                子代选择器：>
-                后代选择器：空格
+            3.样式选择器
+            三种常见选择器类型：
+                1.标签选择器  div{}
+				2.class选择器   .ming{}
+				3.id选择器    #ming{}
+            不常见的选择器：
+                属性选择器：input[type="password"]{}      p[class="ra"] {}
+                伪类选择器：
+                    div:hover{}  --- 鼠标悬停
+                    div:focus{}
+                    div:active{}
+                    div:visitied{}
+                    div:link{}
+                    div:after{}
+                    div:first-child{}  --- div里第一个子元素
+                    div:last-child{}  --- div里最后子元素
+                    div:nth-of-type(2){}  --- div里第几个子元素
+                伪元素选择器:
+                    p::first-line{} ---- 内容首行添加样式
+                    div::before {content: url(smiley.gif);} ---- div内容之前插入一幅图像
+                子代选择器： div > p{}  
+                后代选择器： div p{}
+                相邻兄弟选择器：  p + span{}
             4.引入css的三种方式
-                行内式(行间式)：标签行内style="";
-			    内部式(内联式)：在head内部使用<style></style>;
-			    外部式(外链式)：使用<link rel="stylesheet" type="text/css" href="">
-            5.浏览器私有属性
-            -moz  指firefox
-            -ms  指IE
-            -webkit  指chrome、safari
-            -o  指Opera
+                行内式(行间式)：<div style=""></div>
+			    内部式(内联式)：在head标签内使用<style></style>;
+			    外部式(外链式)： <link rel="stylesheet" type="text/css" href="">
+            5.浏览器私有属性      比如：  -webkit-transform: translate(100px);
+            -moz-  指firefox
+            -ms-  指IE
+            -webkit-  指chrome、safari
+            -o-  指Opera
 
-            6.
-            CSS样式覆盖规则             权值
-            标签选择器                  1
-            类选择器                    10
-            ID选择器                    100
-            内联样式                    1000
-            HTML中的style样式           2000
-            伪元素(:first-child等)      1
-            伪类(:link等)               10
-            width: 45px !important;     9999最大 (可以覆盖style样式)
+            6.优先级(权重)
+            CSS样式覆盖规则                         权值
+            标签选择器                              1
+            类选择器                                10
+            ID选择器                                100
+            行内式                                  1000
+            内部式                                  2000
+            伪元素                                  1
+            伪类                                    10
+            width: 45px !important;                 9999最大
         
         -->
         样式命名规范:

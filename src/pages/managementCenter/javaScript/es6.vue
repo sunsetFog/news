@@ -40,23 +40,6 @@ export default {
             //     return v;
             // }
             console.log('箭头函数',f(1));
-
-            // 默认参数
-            function fn(name,age=17){
-                console.log('默认参数',name+","+age);
-            }
-            fn("Amy");// Amy,17
-            fn("Amy",undefined);// Amy,17
-            fn("Amy",18);// Amy,18
-            fn("Amy","");// Amy,
-            fn("Amy",null);// Amy,null
-
-            //不定参数: 表示不确定参数个数
-            function fi(...values){
-                console.log('不定参数',values);
-            }
-            fi(1,2);// [1,2]
-            fi(1,2,3,4);// [1,2,3,4]
         },
         demo3(){
             // 简写

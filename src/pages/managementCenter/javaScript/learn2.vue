@@ -28,6 +28,24 @@ export default {
             }
             fn(5);//调用函数
 
+            // 默认参数
+            function fn(name,age=17){
+                console.log('默认参数',name+","+age);
+            }
+            fn("Amy");// Amy,17
+            fn("Amy",undefined);// Amy,17
+            fn("Amy",18);// Amy,18
+            fn("Amy","");// Amy,
+            fn("Amy",null);// Amy,null
+
+            //不定参数: 表示不确定参数个数
+            function fi(...values){
+                console.log('不定参数',values);
+            }
+            fi(1,2);// [1,2]
+            fi(1,2,3,4);// [1,2,3,4]
+            
+            // 函数赋值给一个变量
             var yaya =  function(){
                 return {message: '成功状态'};// return;    函数的返回结果,直接结束该函数
             }
@@ -46,16 +64,6 @@ export default {
             (function(){
                 console.log('已调用的匿名函数');
             })();
-
-            function student(name,age){
-                this.name = name;
-                this.age = age;
-            }
-            student.prototype.getName = function(){
-                console.log('构造函数',this.name);//娜娜     在构造函数中，this指向构造函数new出来的对象
-            }
-            var rice = new student("娜娜",18);//构造函数
-            rice.getName();//调用函数
         },
         demo2(){
             /* 键盘事件
@@ -109,15 +117,16 @@ export default {
             function fn(){
                 console.log('timer');
             }
+            // 写法1
             // let timer = setTimeout("fn()",1000);
-            let timer = setTimeout(fn,1000);
+            // 写法2
+            // let timer = setTimeout(fn,1000);
+            // 写法3
             // let timer = setTimeout(function(){},1000);
             // clearTimeout(timer);//清除一次性定时器
 
             // 间隔性定时器：setInterval(回调函数，时间)
-            // let timer = setInterval("fn()",1000);
             // let timer = setInterval(fn,1000);
-            // let timer = setInterval(function(){},1000);
             // clearInterval(timer);//清除间隔性定时器
         },
         demo4(){
@@ -151,7 +160,8 @@ export default {
             })()
         },
         demo5(){
-            /* 面向对象：以事务为中心的编程思想
+            /* 构造函数
+            面向对象：以事务为中心的编程思想
             面向对象的三种特性：
             	1.继承：通过继承，子类可以访问父类的属性和方法
             	2.多态：同一个方法,不同的类,实现不同的功能
@@ -160,8 +170,8 @@ export default {
             原型链属性prototype:声明一个函数时，js会自动为其创建一个原型链属性prototype
             使该函数有能力去自行定义方法和属性 */
 
-            function A(){
-                this.age = 18;
+            function A(age){
+                this.age = age;
             };//构造函数A
             function B(){
                 this.name = 'B';
@@ -171,18 +181,18 @@ export default {
                 
             }
             A.prototype.callEat = function(){
-                console.log('A',this.age);
+                console.log('构造函数里用this',this.age);//在构造函数中，this指向构造函数new出来的对象
             }
             A.prototype.sex = "女";
 
             B.prototype.flower = function(){
                 console.log('丢失')
             }
-            B.prototype = new A();//此时B继承A的所有属性和方法,自己的prototype就会丢失
+            B.prototype = new A(18);//此时B继承A的所有属性和方法,自己的prototype就会丢失
             //创建B的实例对象B
-            var B = new B();
-            B.callEat();
-            console.log('继承属性',B);
+            var jiji = new B();
+            jiji.callEat(); // 调用方法
+            console.log('继承属性',jiji);
         },
         demo6(){
             //事件冒泡：事件从子元素传递到父元素(从内向外传递),浏览器默认的事件传递方式（父子元素都绑定了事件）

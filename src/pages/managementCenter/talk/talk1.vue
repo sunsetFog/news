@@ -19,7 +19,7 @@ export default {
         demo1(){
             /* 自我介绍
             考官好，很荣幸有机会向考官请教和学习。我叫***，读计算机网络应用专业，平时喜欢研究代码和上网浏览信息。
-            出来后，从事前端行业，三年半来经历丰富，具有移动端和PC端经验。
+            出来后，从事前端行业，实践经历丰富，具有移动端和PC端经验。
             性格开朗随和，有上进心，希望日后能做的更好，介绍完毕，谢谢！ */
         },
         demo2(){
@@ -42,6 +42,9 @@ export default {
                     用的是什么框架？
                     请问你贵公司做的事怎样的项目？
                     项目组有多少个前端和后端
+                    职位空缺的原因？
+                    公司如何保证人才不流失？
+                    工作内容？
                 二.HR公司福利情况:
                     12薪还是13薪
                     五险一金按照哪个地区标准？
@@ -54,6 +57,7 @@ export default {
                     工资：15号发放吗？有拖欠工资吗？
                     入职体检，机票，签证能报销吗？
                     自己携带电脑补贴多少
+                    试用期时间？通过试用期的标准？
              */
         },
         demo3(){
@@ -206,27 +210,28 @@ export default {
         },
         demo21(){
             /* 
-                apply()与call()的区别
+                apply()与call()的区别？
+                方法如何改变this指向？
                 看pages\managementCenter\javaScript\learn2.vue
             */
         },
         demo22(){
             /* 
                 HTTP状态码
-100 Continue 继续，表示确认，请传具体参数
-200 OK 正常返回信息
-201 Created 请求成功并且服务器创建了新的资源
-202 Accepted 服务器已接受请求，但尚未处理
-301 Moved Permanently 请求的网页已永久移动到新位置。
-302 Found 临时性重定向。
-303 See Other 临时性重定向，且总是使用 GET 请求新的 URI。
-304 Not Modified 自从上次请求后，请求的网页未修改过。
-400 Bad Request 服务器无法理解请求的格式，客户端不应当尝试再次使用相同的内容发起请求。
-401 Unauthorized 请求未授权。
-403 Forbidden 禁止访问。
-404 Not Found 找不到如何与 URI 相匹配的资源。
-500 Internal Server Error 最常见的服务器端错误。
-503 Service Unavailable 服务器端暂时无法处理请求（可能是过载或维护）。
+                100 Continue 继续，表示确认，请传具体参数
+                200 OK 正常返回信息
+                201 Created 请求成功并且服务器创建了新的资源
+                202 Accepted 服务器已接受请求，但尚未处理
+                301 Moved Permanently 请求的网页已永久移动到新位置。
+                302 Found 临时性重定向。
+                303 See Other 临时性重定向，且总是使用 GET 请求新的 URI。
+                304 Not Modified 自从上次请求后，请求的网页未修改过。
+                400 Bad Request 服务器无法理解请求的格式，客户端不应当尝试再次使用相同的内容发起请求。
+                401 Unauthorized 请求未授权。
+                403 Forbidden 禁止访问。
+                404 Not Found 找不到如何与 URI 相匹配的资源。
+                500 Internal Server Error 最常见的服务器端错误。
+                503 Service Unavailable 服务器端暂时无法处理请求（可能是过载或维护）。
             */
         },
         demo23(){
@@ -285,7 +290,7 @@ https是HTTP运行在SSL/TLS之上，SSL/TLS运行在TCP之上。所有传输的
         },
         demo29(){
             /* 
-            cookie,localStorage,sessionStorage的区别
+            浏览器缓存cookie,localStorage,sessionStorage的区别
             看pages\managementCenter\knowledge\cache.vue
              */
         },
@@ -329,12 +334,14 @@ https是HTTP运行在SSL/TLS之上，SSL/TLS运行在TCP之上。所有传输的
             (5)语意化更好的内容元素，比如 article、footer、header、nav、section;
             (6)表单控件，calendar、date、time、email、url、search;
             (7)新的技术webworker, websocket, Geolocation;
+            css3新特性：
+            border-radius，box-shadow,border-image,backgroung-origin等等
+
              */
         },
         demo35(){
             /* 
-            方法如何改变this指向？
-            看pages\managementCenter\javaScript\learn2.vue
+            
              */
         },
         demo36(){

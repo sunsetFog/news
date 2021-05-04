@@ -30,6 +30,9 @@ export default {
       timer_list: []
     };
   },
+  created(){
+    console.log('run===', process.env)
+  },
   watch: {
     $route(to, from) {
       if (to.path == "/neutralgear") {
@@ -102,7 +105,7 @@ export default {
 </script>
 
 
-<style lang="less">
+<style lang="less">//为了全局样式有效，App.vue文件别用scoped
 @import "../static/capital/app.less";
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;

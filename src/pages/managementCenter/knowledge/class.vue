@@ -15,7 +15,7 @@
 	<!-- a链接 -->
 	<a :href="link">百度链接</a>
 
-	<!-- 根据后台返回不同的类 -->
+	<!-- 根据后台状态，返回不同的类 -->
 	<div>
 		<ul v-for="item in payData">
 			<li :class="[btnClass(item.value)]">{{item.name}}</li>

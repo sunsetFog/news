@@ -115,7 +115,7 @@ export default {
     mounted(){//挂在前-用于dom操作---常用
 
     },
-    activated(){//移动端-创建前
+    activated(){//移动端-创建前---要有<keep-alive><router-view></router-view></keep-alive>，缓存页面的作用
 
     },
     beforeDestroy(){//销毁前-用于该页关闭后执行---用下面一个

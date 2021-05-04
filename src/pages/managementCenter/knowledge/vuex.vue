@@ -21,13 +21,13 @@
 			...mapMutations(['playerInfo']),//引入mutation方法
 			...mapActions(['getPlayerInfo']),//引入actions方法
 			submit_mutation(){
-				this.$store.commit('playerInfo',{title: 'money',params: 9966999222});//调用mutation方法，并传递数据
+				this.$store.commit('playerInfo',{title: 'money',params: 9966999222});//存vuex：调用mutation方法，并传递数据
 			},
 			submit_action(){
-				this.$store.dispatch('getPlayerInfo',this.player_info);//调用action
+				this.$store.dispatch('getPlayerInfo',this.player_info);//存vuex：调用action
 			},
 		},
-		computed:{
+		computed:{ // 使用vuex
 			...mapGetters(['money','player_info'])
 		}
 	}

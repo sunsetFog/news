@@ -87,7 +87,7 @@ import penMeans from './public/index.js';
 
 import NProgress from 'nprogress'; // 路由变化的转圈进度条
 import 'nprogress/nprogress.css'; // 加载转圈进度条样式
-// 路由拦截（路由守卫）
+// 路由拦截（路由守卫）   用来拦截改变跳转页
 router.beforeEach((to, from, next) => {
     document.title = to.meta.title;
     if (to.path == '/login') { // 登录页面，删除token缓存
@@ -96,7 +96,7 @@ router.beforeEach((to, from, next) => {
     if (to.path == '/home' && !sessionStorage.getItem('token')) { // path: '/' 路由默认页，检查有无token，无则跳回登录
       next({path: '/login'}); // next页面跳转
     }
-    if(from.path == '/' && sessionStorage.getItem('token')){ // 刷新判断
+    if(from.path == '/' && sessionStorage.getItem('token')){ // 刷新判断，vuex刷新丢失数据，需要重新赋值
       penCache.dispatch('getPlayerInfo',penMeans.amateur_getPlayer()); //调用vuex和全局方法
     }
 

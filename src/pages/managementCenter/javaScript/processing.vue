@@ -58,8 +58,13 @@ export default {
             // for与forEach的区别:
             // forEach不能使用break,continue,不能用arr.splice(),索引index不会被重置,相反for可以
             let arr = [1,2,3];
-            for(let i=0;i<arr.length;i++){//能使用break,continue
-
+            for(let i=0;i<arr.length;i++){
+                if(arr[i] == 2){
+                    break;//直接终止循环
+                }
+                if(arr[i] == 3){
+                    continue;//终止本次循环，进行下一次
+                }
             }
 
             let obj = {aaa: 102};

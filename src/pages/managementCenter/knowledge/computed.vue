@@ -16,8 +16,8 @@
 			}
 		},
 		//1.有缓存作用，数据改变而触发 2.不支持异步  
-		//注意:创建在data数据里,不是方法调用
-		//用法: 1.改写某个数据   2.输入框数据缓存vuex里
+		//注意:创建在data数据里,不是方法调用。比如：this.updateJson
+		//用法: 1.改写某个数据   2.用vuex
 		computed:{
 			getter1:function(){//getter函数: count改变才触发
 				console.log('getter简写',this.count);

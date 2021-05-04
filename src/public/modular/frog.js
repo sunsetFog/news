@@ -43,7 +43,7 @@ const comic = {
             return false;
         }
     },
-    //不能输入特殊字符
+    //不能输入特殊字符 (不能输入的字符，还能自个在正则添加)
     validatSpecial(str){
         const reg = new RegExp("[\\+,\\/,\\\\,\\?,\\？,\\%,\\#,\\&,\\=,\\(,\\),\\（,\\）,\\{,\\},\\',\\\",\\<,\\>,\\@,\\!,\\！,\\$,\\.,\\，,\\、,\\:,\\：,\\;,\\；,\\￥,\\*,\\~,\\`,\\-,\\——,\\_,\\^,\\“,\\”,\\‘,\\’,\\……,\\【,\\】,\\[,\\],\\,]", "gm");
         if(reg.test(str)){
@@ -62,9 +62,11 @@ const comic = {
             return false;  
         }  
     },
+    //验证是否手机号
     isMoblie: function (value) {
 		return !/^1\d{10}$/.test(value);
     },
+    //是否有某值
     judgeToken(){
         if(!sessionStorage.getItem('token')){
             Message.error('请先登录');
@@ -79,9 +81,9 @@ const comic = {
     getLocalTime(nS) { // ns是10位准确，13位不准确
         return new Date(parseInt(nS) * 1000).toLocaleString().replace(/年|月/g, "-").replace(/日/g, " ");     
     },
+    //dom定义高度
     overallHeight(value){
         let overallApp = document.getElementById(value);
-        // //console.log('jianting###',overallApp);
         if(overallApp!=null){
             overallApp.style.height = document.body.clientHeight+'px';
         }

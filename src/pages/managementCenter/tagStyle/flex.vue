@@ -86,7 +86,7 @@ export default {
             position: absolute;
             top: 50%;
             left: 50%;
-            margin: -25PX 0 0 -50px;//上，右，下，坐    负值，宽的一半，高的一半
+            margin: -25PX 0 0 -50px;//上，右，下，左   负值，宽的一半，高的一半
         }
     }
     .height-percentage {
