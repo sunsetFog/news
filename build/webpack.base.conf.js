@@ -24,9 +24,10 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
-    alias: {
+    alias: { // 这里设置路径引入
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
+      '@static': path.resolve(__dirname, '../static')
     }
   },
   module: {

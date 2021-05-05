@@ -1,5 +1,7 @@
 <template>
     <section id="tags">
+		<!-- 可以使用element-ui和iview-ui的 Layout 布局 -->
+
         <!-- 1.标题h1-h6 -->
         <h1>一级标题</h1>
 

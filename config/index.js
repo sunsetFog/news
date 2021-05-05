@@ -10,21 +10,20 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
     // 跨域由同源策略判断: 协议（http或https）、端口、域名，三条件一致才不会跨域
     // npm install http-proxy-middleware --save 使用代理解决跨域
     // 这方法还要配置生产环境域名
-    // proxyTable: {
-    //   '/web': {
-    //       target: 'http://10.1.5.11:8080/', // 开发环境访问的域名(后台给)
-    //       changeOrigin: true, // 允许跨域(创建本地虚拟服务端，接受了域名，就请求后端服务器)
-    //       // secure: true, // 如果是https接口，需要配置这个参数
-    //       ws: true, //如果要代理 websockets，配置这个参数
-    //       pathRewrite: {// 路径重写
-    //       '^/web': '' // 意思: 开发环境访问的域名 + '这个的名'
-    //       }
-    //   }
-    // },
+    proxyTable: {
+      '/web': {
+          target: 'http://10.1.5.11:8080', // 开发环境访问的域名(后台给)
+          changeOrigin: true, // 允许跨域(创建本地虚拟服务端，接受了域名，就请求后端服务器)
+          // secure: true, // 如果是https接口，需要配置这个参数
+          // ws: true, //如果要代理 websockets，配置这个参数
+          pathRewrite: {// 路径重写
+          '^/web': '' // 意思: 开发环境访问的域名 + '这个的名'
+          }
+      }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // localhost   10.73.158.67

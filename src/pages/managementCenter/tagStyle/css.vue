@@ -151,6 +151,7 @@ export default {
 
         // border-radius: 10px;//圆角
         // cursor: pointer;//鼠标小手
+        // cursor: not-allowed;// 鼠标禁用图标
         // text-shadow: 5px 5px 10px aqua;	//文本阴影   右、下、模糊度、颜色
 
         // zoom: 100%;  等于100%是原图、大于100%是放大、小于100%是缩小

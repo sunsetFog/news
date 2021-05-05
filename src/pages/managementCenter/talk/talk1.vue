@@ -341,7 +341,8 @@ https是HTTP运行在SSL/TLS之上，SSL/TLS运行在TCP之上。所有传输的
         },
         demo35(){
             /* 
-            
+                赋值，浅拷贝和深拷贝的区别
+                看src\pages\managementCenter\javaScript\research.vue
              */
         },
         demo36(){

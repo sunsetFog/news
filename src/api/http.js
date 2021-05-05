@@ -2,11 +2,11 @@ import axios from 'axios'
 import { Message, MessageBox } from 'element-ui'
 import router from '@/router' // 用于路由跳转 router.push({path: '/login'})
 import means from '../public/modular/accumulation01'
-import domain from './domain'
+
 
 // 创建axios实例
 const service = axios.create({
-    baseURL: domain, // 请求域名设置
+    baseURL: process.env.mock_url, // 请求域名设置
     // 请求超时时间
     timeout: 10000, // 网络超时时间
     withCredentials: false, // 是否允许携带cookie

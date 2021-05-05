@@ -3,5 +3,9 @@ const merge = require('webpack-merge')
 const prodEnv = require('./prod.env')
 
 module.exports = merge(prodEnv, {
-  NODE_ENV: '"development"'
+  NODE_ENV: '"development"',
+  dev_url: '"http://10.1.101.120:502"',
+  prod_url_test: '"https://pricemapif_test.mideazy.com"',
+  prod_url_ok: '"https://pricemapif.mideazy.com"',
+  mock_url: '"http://mock-api-success.com"'
 })

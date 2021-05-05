@@ -66,7 +66,7 @@
 
 <script>
 export default {
-    name: "v-标签",
+    name: "v-tag",
     data(){
         return{
             if_active: 6,

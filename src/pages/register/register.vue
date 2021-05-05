@@ -58,11 +58,11 @@ export default{
         this.registerEnter();
     },
     mounted(){
-        // var that = this;
-        // that.$means.overallHeight('register');
-        // window.onresize = function temp7(){
-        //     that.$means.overallHeight('register');
-        // }
+        var that = this;
+        that.$means.overallHeight('register');
+        window.onresize = function temp7(){
+            that.$means.overallHeight('register');
+        }
     },
     watch: {
         account_number(cur,old){

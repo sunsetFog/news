@@ -53,6 +53,7 @@ export default new Router({
             { path: 'processing', name: 'processing', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/javaScript/processing.vue'], resolve) },
             { path: 'es6', name: 'es6', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/javaScript/es6.vue'], resolve) },
             { path: 'jsDemo', name: 'jsDemo', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/javaScript/jsDemo.vue'], resolve) },
+            { path: 'research', name: 'research', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/javaScript/research.vue'], resolve) },
 
             { path: 'v_tag', name: 'v_tag', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/knowledge/v_tag.vue'], resolve) },
             { path: 'modifier', name: 'modifier', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/knowledge/modifier.vue'], resolve) },
@@ -90,9 +91,8 @@ export default new Router({
 
             { path: 'echartsDemo1', name: 'echartsDemo1', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/reportForm/demo1.vue'], resolve) },
 
-            { path: 'research', name: 'research', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/expand/research.vue'], resolve) },
-            { path: 'canvas', name: 'canvas', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/knowledge/canvas.vue'], resolve) },
-            { path: 'base64', name: 'base64', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/knowledge/base64.vue'], resolve) },
+            { path: 'canvas', name: 'canvas', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/expand/canvas.vue'], resolve) },
+            { path: 'base64', name: 'base64', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/expand/base64.vue'], resolve) },
 
             { path: 'talk1', name: 'talk1', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/talk/talk1.vue'], resolve) },
             { path: '/', redirect: '/mcenter/crux' }

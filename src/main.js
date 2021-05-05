@@ -12,10 +12,9 @@ Vue.use(iView);
 
 
 
-import '../static/database/index'; // 不能用if动态加载js
-// import allKey from '../static/capital/allKey.json'
-// if (allKey['key']) {
-//   require('../database/index') // 可以动态加载，不报错
+import './database/index'; // 不能用if动态加载js
+// if (true) {
+//   require('./database/index') // 可以动态加载，不报错
 // }
 import '../static/capital/rem.js'
 

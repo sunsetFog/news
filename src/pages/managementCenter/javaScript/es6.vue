@@ -12,11 +12,31 @@ export default {
 
         }
     },
+    created(){
+        // this.demo9();
+    },
     mounted(){
-        this.demo9();
+        let ly = this.demo1();//调用函数后不会运行，而是返回指向函数内部状态的指针
+        
+        console.log('next一',ly.next());// {value: 1, done: false}
+        console.log('next二',ly.next());// {value: 2, done: false}
+        console.log('next三',ly.next());// {value: "成功返回信息", done: true}      ----执行结束后done: true
+
+        // for(let item of this.demo1()){// 遍历Generator函数
+        //     console.log('item=',item);
+        // }
     },
     methods: {
-        demo1(){
+        /* 用于控制函数的运行 */
+        *demo1 () {
+            console.log('运行步骤一');
+            yield 1;// 遇到yield暂停
+            console.log('运行步骤二');
+            yield 2;
+            console.log('运行步骤三');
+            return '成功返回信息';
+        },
+        demo2(){
             // 声明与表达
             // let: 1.代码块内有效  2.不能重复声明
             if(true){
@@ -31,7 +51,7 @@ export default {
             // PI = 666;// const值无法改变，报错
             console.log('const',PI);
         },
-        demo2(){
+        demo3(){
             //箭头函数  (参数) => {}  相当于  function (参数) {}        箭头函数里面没有 this 对象，用的this是外层或Window 
             // 简写: res => 'return内容'
             var f = v => v;
@@ -41,7 +61,7 @@ export default {
             // }
             console.log('箭头函数',f(1));
         },
-        demo3(){
+        demo4(){
             // 简写
             const age = 12;
             const name = "Amy";
@@ -62,7 +82,7 @@ export default {
             // }
             // people.sayHi();//"Hi"
         },
-        demo4(){
+        demo5(){
             // 对象的拓展运算符: ...
             let people = {name: "Amy", age: 15};
             let someone = { ...people };
@@ -80,23 +100,12 @@ export default {
             let heArr = [...arr1,...arr2];
             console.log('合并数组',heArr);
         },
-        demo5(){
-            // 对象新方法  Object.assign(target, source_1, ···)   参数1: 目标对象、参数2: 源对象、参数3: 源对象    将源对象的所有可枚举属性复制到目标对象中(属于浅拷贝)
-            let target = {a: 1};
-            let obj2 = {b: 2};
-            let obj3 = {c: 3};
-            Object.assign(target,obj2,obj3);
-            console.log('目标对象',target);//{a: 1, b: 2, c: 3}
-            console.log('参数不是对象就转为对象然后返回',Object.assign(3));// {3}
-            // console.log(Object.assign(null));// 报错，null 和 undefined 不能转化为对象
-            // console.log(Object.assign(undefined));// 报错
-            console.log('参数1正常，后undefined，不会报错',Object.assign(1,undefined));//{1}
-
+        demo6(){
             // Object.is(value1, value2)  比较两个值是否严格相等，与（===）基本类似，返回true或false
             console.log('1严格相等',Object.is('p','p'));//true
             console.log('2严格相等',Object.is([1],[1]));//false 类型相等，值不相等
         },
-        demo6(){
+        demo7(){
             // Array.of() 将参数中所有值作为元素形成数组
             console.log('形成数组',Array.of(1, 2, 3, 4)); // [1, 2, 3, 4]
             // Array.from() 将类数组对象或可迭代对象转化为数组,返回值为转换后的数组
@@ -110,7 +119,7 @@ export default {
             console.log('1.数组是否包含指定值',arr.includes(1));// true
             console.log('2.数组是否包含指定值',arr.includes(1,2));// false
         },
-        demo7(){
+        demo8 () {
             // map对象: Map 的键可以是任意值,Object 的键只能是字符串或者 Symbols
             var myMap = new Map();
 
@@ -157,7 +166,7 @@ export default {
             var merged = new Map([...first, ...second]);
             console.log('map合并',merged);// {1: '111',2: '222',3: 'three'}
         },
-        demo8(){
+        demo9 () {
             // set对象: 用来存储任何类型的唯一值
             // +0 与 -0恒等不重复、undefined 与 undefined恒等不重复、NaN 与 NaN不恒等不重复
             let mySet = new Set();
@@ -180,7 +189,7 @@ export default {
             var intersect = new Set([...a].filter(x => b.has(x)));// Set.has(x) 判断set 是否含有 x，有返回 true，没有返回 false
             console.log('交集',intersect);// {2,3}
         },
-        demo9(){
+        demo10 () {
             // class 的本质是 function
             // 匿名类
             let Example = class {

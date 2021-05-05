@@ -13,7 +13,7 @@ export default {
         }
     },
     mounted(){
-        this.demo8();
+        this.demo11();
     },
     methods: {
         demo1(){
@@ -312,6 +312,15 @@ export default {
             console.log('定义默认值', sky);
             let purpose = '?id=128';
             console.log('括号连续拼写', (purpose.split('id='))[1]);
+        },
+        demo11 () {
+            let ly = 867;
+            try{
+                ly = ly.split('');// ly不是字符串
+                console.log('在此运行代码');
+            }catch(err){
+                console.log('在此处理错误',err);
+            }
         }
     }
 }

@@ -91,6 +91,7 @@ export default{
                     {key:'2-2-4',label: '处理数据',path: '/mcenter/processing',icon: '../../../static/picture/center/wanjia.png',effect:[]},
                     {key:'2-2-5',label: 'es6',path: '/mcenter/es6',icon: '../../../static/picture/center/wanjia.png',effect:[]},
                     {key:'2-2-6',label: 'js例子',path: '/mcenter/jsDemo',icon: '../../../static/picture/center/wanjia.png',effect:[]},
+                    {key:'2-2-7',label: '赋值-浅拷贝-深拷贝',path: '/mcenter/research',icon: '../../../static/picture/center/wanjia.png',effect:[]},
                 ]},
                 {key: '3',label: 'vue知识点',path: '',icon: '../../../static/picture/center/pai.png',effect:[
                     {key:'3-2-1',label: 'vue指令',path: '/mcenter/v_tag',icon: '../../../static/picture/center/qipai.png',effect:[]},
@@ -134,9 +135,8 @@ export default{
                     {key:'5-2-1',label: 'echart图表',path: '/mcenter/echartsDemo1',icon: '../../../static/picture/center/daili.png',effect:[]},
                 ]},
                 {key: '6',label: '拓展知识',path: '',icon: '../../../static/picture/center/tuiguang.png',effect:[
-                    {key:'6-2-1',label: '知识1',path: '/mcenter/research',icon: '../../../static/picture/center/daili.png',effect:[]},
-                    {key:'6-2-2',label: 'canvas',path: '/mcenter/canvas',icon: '../../../static/picture/center/caiwu.png',effect:[]},
-                    {key:'6-2-3',label: 'base64解密',path: '/mcenter/base64',icon: '../../../static/picture/center/caiwu.png',effect:[]},
+                    {key:'6-2-1',label: 'canvas',path: '/mcenter/canvas',icon: '../../../static/picture/center/caiwu.png',effect:[]},
+                    {key:'6-2-2',label: 'base64解密',path: '/mcenter/base64',icon: '../../../static/picture/center/caiwu.png',effect:[]},
                 ]},
                 {key: '7',label: '面试要谈',path: '',icon: '../../../static/picture/center/tuandui.png',effect:[
                     {key:'7-2-1',label: '要点1',path: '/mcenter/talk1',icon: '../../../static/picture/center/tuiguang.png',effect:[]},

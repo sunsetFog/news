@@ -30,9 +30,9 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
     |- webpack.dev.conf.js ---------------------------- wabpack开发环境配置
     |- webpack.prod.conf.js --------------------------- wabpack开发和生产打包编译
 |- config/
-    |- dev.env.js ------------------------------------- 开发环境变量
+    |- dev.env.js ------------------------------------- 开发环境全局变量
     |- index.js --------------------------------------- 项目环境配置
-    |- prod.env.js ------------------------------------ 生产环境变量
+    |- prod.env.js ------------------------------------ 生产环境全局变量
 |- database/ ------------------------------------------ mockjs模拟数据库
     |- modular/
         |- modular.js --------------------------------- 增删改查处理
@@ -93,6 +93,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
     "js-md5": "^0.7.3",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
+    "lodash": "^4.17.21",
     "mockjs": "^1.1.0",
     "nprogress": "^0.2.0",
     "vue": "^2.5.2",

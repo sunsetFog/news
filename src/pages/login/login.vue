@@ -60,11 +60,11 @@ export default{
         }
     },
     mounted(){
-        // var that = this;
-        // that.$means.overallHeight('login');
-        // window.onresize = function temp1(){
-        //     that.$means.overallHeight('login');
-        // }
+        var that = this;
+        that.$means.overallHeight('login');
+        window.onresize = function temp1(){
+            that.$means.overallHeight('login');
+        }
     },
     created(){
         this.catchMice();
@@ -102,11 +102,13 @@ export default{
                 this.eyeType = 'password';
             }
         },
+        /* 登录按钮---监听键盘事件 */
         keyEnter(){
                 let that = this;
                 document.onkeypress = function(e) {
-                    var keycode = document.all ? event.keyCode : e.which;
-                    // console.log('keycode',keycode);
+                    let evt = e || event;
+                    let keycode = evt.keyCode ? evt.keyCode : evt.which;
+                    // console.log('keycode',keycode,'---',evt);
                     if (keycode == 13) {
                         let login = document.getElementById('login');
                         // console.log('#login',login);
