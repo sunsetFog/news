@@ -13,7 +13,7 @@ export default {
         }
     },
     mounted(){
-        this.demo11();
+        this.demo3();
     },
     methods: {
         demo1(){
@@ -72,13 +72,21 @@ export default {
                 console.log('this',this.aaa);
             },obj);// this指向obj      去掉(,obj)  一般不需要
 
-            // 遍历: 数组.map: 返回新的数组（可以用return）
-            let newArr = arr.map(function(num){
-                return num*2;
+            // 遍历: 数组.map: 返回新的数组（必用return，返回新数组的每一项）
+            let lyArr = [{title: '嘿嘿'},{title: '阚凯力'}]
+            let newArr = lyArr.map(function(item){
+                item.title = 'hk-' + item.title;// 修改
+                item.active = false;// 新增
+                return item;
+                // 或
+                // return {
+                //     name: item.title,
+                //     active: false
+                // }
             })
             console.log('新数组',newArr);
 
-            // 遍历: 数组.filter: 返回符合条件的新数组
+            // 遍历: 数组.filter: 返回每项符合条件的新数组
             let newArr2 = arr.filter(function(item){
                 return item>1&&item<3;
             })

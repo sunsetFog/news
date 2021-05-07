@@ -185,7 +185,7 @@ export default{
                 .mixin_float(230px,auto,left);
                 background: #513663;
                 margin-right: 40px;
-                min-height: 1130px;
+                height: 1130px;
                 text-align: left;
                 .icon-url-margin{
                     .mixin_img(20px,20px);

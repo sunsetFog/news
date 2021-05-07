@@ -276,10 +276,8 @@ export default {
     },
     //返回顶部
     backTop() {
-      var scrollHight =
-        document.documentElement.scrollTop ||
-        document.body.scrollTop ||
-        window.pageYOffset;
+      let scrollHight = document.documentElement.scrollTop || document.body.scrollTop || window.pageYOffset;
+      console.log('滚动条高度=',document.documentElement.scrollTop, document.body.scrollTop, window.pageYOffset)
       if (scrollHight > 50) {
         document.documentElement.scrollTop = document.body.scrollTop =
           scrollHight - 100;

@@ -43,8 +43,8 @@ import apiHttp from './api/http.js';
 Vue.prototype.$apihttp = apiHttp;
 
 
+/* 子父组件的全局引入 */
 import cloudEchart from './components/echarts/cloudEchart.vue'
-
 import recharge from './components/recharge.vue';
 import withdrawal from './components/withdrawal.vue';
 import manageBank from './components/manageBank.vue';
@@ -80,6 +80,13 @@ Vue.component('gameTheme',gameTheme);
 Vue.component('safeDeposit',safeDeposit);
 Vue.component('portrait',portrait);
 Vue.component('rechargeRecord',rechargeRecord);
+
+// vue自定义指令
+import * as directives from '@/directive'
+// 注册全局指令
+Object.keys(directives).forEach(key => {
+  directives[key].install(Vue)
+})
 
 import penCache from './vuex/index.js';
 import penMeans from './public/index.js';

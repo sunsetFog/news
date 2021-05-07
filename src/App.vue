@@ -31,7 +31,7 @@ export default {
     };
   },
   created(){
-    console.log('run===', process.env)
+    // console.log('run===', process.env)
   },
   watch: {
     $route(to, from) {

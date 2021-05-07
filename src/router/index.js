@@ -24,7 +24,7 @@ export default new Router({
       1.path: '*'找不到路径， 相当于if的else判断
       2.path: '/'  默认值
       3.children是用来搭建路由视图，包有{ path: '/', redirect: '/home' }  默认值：children里的重定向
-      4.meta是用来存路由参数，比如title
+      4.meta路由元信息，是用来存路由参数，比如title
     */
     { path: '*', name: 'error', meta: { title: '找不到该页',key: 404}, component: resolve => require(['@/pages/error.vue'], resolve) },
     {

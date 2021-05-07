@@ -21,11 +21,15 @@
 			...mapMutations(['playerInfo']),//引入mutation方法
 			...mapActions(['getPlayerInfo']),//引入actions方法
 			submit_mutation(){
-				this.$store.commit('playerInfo',{title: 'money',params: 9966999222});//存vuex：调用mutation方法，并传递数据
+				// 存vuex：commit调用mutation方法，并传递数据
+				this.$store.commit('playerInfo',{title: 'money',params: 9966999222});
 			},
 			submit_action(){
-				this.$store.dispatch('getPlayerInfo',this.player_info);//存vuex：调用action
-			},
+				// 存vuex：dispatch调用actions异步方法，并传递数据
+				this.$store.dispatch('fragrant',{ num: 662 }).then((result) => {
+					console.log("promise.then是异步-微任务");
+				});
+			}
 		},
 		computed:{ // 使用vuex
 			...mapGetters(['money','player_info'])
