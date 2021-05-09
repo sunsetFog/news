@@ -99,7 +99,7 @@ router.beforeEach((to, from, next) => {
     if (to.path == '/login') { // 登录页面，删除token缓存
         sessionStorage.removeItem('token');
     }
-    if (to.path == '/home' && !sessionStorage.getItem('token')) { // path: '/' 路由默认页，检查有无token，无则跳回登录
+    if (!sessionStorage.getItem('token')) { // path: '/' 路由默认页，检查有无token，无则跳回登录
       next({path: '/login'}); // next页面跳转
     }
     if(from.path == '/' && sessionStorage.getItem('token')){ // 刷新判断，vuex刷新丢失数据，需要重新赋值

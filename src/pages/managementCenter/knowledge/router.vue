@@ -53,7 +53,7 @@ encodeURIComponent(参数1)  语义字符之外，都可以转义
             console.log('整条解码', decodeURI('http://localhost:1199/mcenter/router?title=%E6%82%A8%E5%A5%BD')); // http://localhost:1199/mcenter/router?title=您好
             // this.$router.push({path: encodeURI('/mcenter/crux?id=100&city=广州')});
 
-
+            // url带的是中文参数，得用编码转换
             console.log('只有参数编码', '?title='+encodeURIComponent("究竟"));// ?title=%E7%A9%B6%E7%AB%9F
             console.log('只有参数解码', decodeURIComponent('%E7%A9%B6%E7%AB%9F'));
 

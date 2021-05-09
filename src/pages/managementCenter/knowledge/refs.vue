@@ -29,12 +29,10 @@ import moon from './quote/children';
 			},
 			gift(){
 				let that = this;
-				that.$nextTick(function(){// DOM的异步更新
-					that.$refs.play.son = "ref改变子组件数据";
-					//触动子组件方法
-					that.$refs.play.secret();//常用
-					console.log('$nextTick是DOM的异步更新');
-				})
+				that.$refs.play.son = "ref改变子组件数据";
+				//触动子组件方法
+				that.$refs.play.secret();//常用
+				console.log('$nextTick是DOM的异步更新');
 			},
 			initial(value){
 				

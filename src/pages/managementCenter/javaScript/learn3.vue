@@ -17,15 +17,24 @@ export default {
   },
   mounted() {
     // this.demo2();
-    // this.init('参数1', '参数2', function(res){
+    // this.comeBack1('参数1', '参数2', function(res){
     //     console.log('最终执行', res);
     // })
+    this.comeBack2(520, function(res){
+      console.log('最终执行', res);
+    })
   },
   methods: {
-    init(params1, params2, callback) {
+    comeBack1(params1, params2, callback) {
       // 方法callback的应用
       console.log("传入的参数:", params1, params2);
       callback({ message: "成功" }); // callback有return功能，结束方法
+    },
+    comeBack2(params,result){
+      console.log('传入的参数:',params);
+      result({
+        message: '回调函数成功！'
+      })
     },
     demo1() {
       console.log("1"); // 同步任务

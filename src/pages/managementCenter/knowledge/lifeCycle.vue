@@ -93,7 +93,12 @@ router/index.js
     https://www.cnblogs.com/softwarefang/p/9405537.html
     favicon.ico在线制作
     http://www.faviconico.org/favicon -->
-    <section id="lifeCycle">生命周期</section>
+    <section id="lifeCycle">
+        <div ref="tissue" @click="texture">
+            {{title}}
+            <span ref="exquisite" v-if="student.age">{{student.age}}</span>
+        </div>
+    </section>
 </template>
 
 <script>
@@ -103,14 +108,43 @@ export default {
     components: {},//子父组件
     data(){//数据
         return{
-
+            title: '周期',
+            student: {
+                name: '',
+                sex: '',
+                age: ''
+            },
+            overnight: {
+                charm: '魅力'
+            },
+            list: [
+                { id: 1, name: '看来' }
+            ]
         }
     },
     beforeCreate(){//创建前-用于拦截跳转---少用
 
     },
     created(){//创建后-无dom操作,用于创建数据---常用
+        /* 
+            改值了，在控制台能打印出来，却没有更新到视图上时用$set解决:
+            target：要更改的数据源(可以是对象或者数组)
+            key：要更改的具体数据---数组是下标，对象是key值
+            value ：重新赋的值
+            Vue.set( target, key, value );不好用，不能触发视图更新
+            this.$set( target, key, value );能触发视图更新
+        */
+        this.$set( this, 'title', '生命周期' );
+        this.$set( this.list, 1, { id: 2, name: '锦锦' } );// created里添加才行
+        console.log('$set数组', this.list);
+        this.$set( this.overnight, 'charm', '气质' );// 修改
+        this.$set( this.overnight, 'Dijah', '迪迦' );// created里添加才行
+        console.log('$set对象', this.overnight);
 
+        // 应用情景一
+        this.$nextTick(function(){// 异步将回调延迟到下次 DOM 更新后执行
+            console.log('created-DOM操作', this.$refs.tissue);
+        });
     },
     mounted(){//挂在前-用于dom操作---常用
 
@@ -134,7 +168,15 @@ export default {
 
     },
     methods: {//方法
-
+        texture () {
+            // 应用情景二
+            console.log('方法前DOM-1', this.$refs.exquisite);// undefined
+            this.student.age = 19;
+            this.$nextTick(function(){// 异步将回调延迟到下次 DOM 更新后执行
+                console.log('异步DOM-2', this.$refs.exquisite);// 有
+            });
+            console.log('方法后');
+        }
     }
 }
 </script>
