@@ -28,7 +28,7 @@ export default {
                 username: "admin",
                 password: "123456"
             }
-            that.$apihttp.post('/user/login',json).then((res) => {
+            that.$apihttp.post('http://localhost:1199/mock/geoJson',json).then((res) => {
                 console.log('H-token',res);
             }).catch((err)=>{
                 console.log('error',err);
@@ -42,9 +42,11 @@ export default {
                 password: "123456"
             }
             that.$apihttp({
-                url: '/user/login',
-                method: 'get',
-                data: json
+                url: 'http://localhost:1199/mock/geoJson',
+                // url: 'http://localhost:1199/mock/backList',
+                method: 'post',
+                params: json // 不管get还是post，这个都是拼接参数到url上
+                // data: json // 不管get还是post，这个都不拼接参数到url上
             }).then((res) => {
                 console.log('H-token',res);
             }).catch((err)=>{

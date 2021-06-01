@@ -65,6 +65,23 @@ Mock.mock(process.env.mock_url + "/store/price-list", "post", mapAPI.mapList);
 
 
 
+import getOCRTemplate from './attachment/getOCRTemplate.json'
+import uniRecognized from './attachment/uniRecognized.json'
+import getRegInvoiceResult from './attachment/getRegInvoiceResult.json'
+Mock.mock(process.env.mock_url + "/ifin-expense/ocrTemplates/getOCRTemplate", "post", function (options) {
+    return getOCRTemplate
+});
+Mock.mock(process.env.mock_url + "/ifin-expense/oieOcr/uniRecognized", "post", function (options) {
+    // let json = JSON.parse(options.body);报错Unexpected token o in JSON at position 1
+    return uniRecognized
+});
+Mock.mock(process.env.mock_url + "/ifin-expense/ocr/getRegInvoiceResult", "post", function (options) {
+    return getRegInvoiceResult
+});
+
+
+
+
 
 /**
  * 无需暴露，main.js加载加载过mock就行

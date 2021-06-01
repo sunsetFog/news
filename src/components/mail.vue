@@ -8,7 +8,7 @@
         <div slot="title">邮件</div>
         <div class="varieties-content">
             <div class="mail-content">
-                <div class="mail-example" v-for="(item,index) in mail_list" @click="consult(index,false)">
+                <div class="mail-example" v-for="(item,index) in mail_list.slice((pagination.page-1)*pagination.pagesize,pagination.page*pagination.pagesize)" @click="consult(index,false)">
                     <div class="picture-example">
                         <img v-show="!item.is_readed" src="../../static/picture/recharge/weidu.png"/>
                         <img v-show="item.is_readed" src="../../static/picture/recharge/yidu.png"/>
@@ -41,7 +41,7 @@ export default {
         return{
             rechargeActive: false,
             mail_list: [],
-            pagination: {page: 1,pagesize: 25,total: 0},
+            pagination: {page: 1,pagesize: 10,total: 0},
             no_have: false
         }
     },
@@ -74,57 +74,10 @@ export default {
                     // res.list[i].created_at = yearData;
                 }
                 that.$parent.hostMeans('mail','readed',count_readed);
-                if(that.pagination.page==1){
-                    if(9<=res.list.length-1){
-                        var start = 0;
-                        var end = 9;
-                    }else{
-                        var start = 0;
-                        var end = res.list.length-1;
-                    }
-                }else if(that.pagination.page==2){
-                    if(19<=res.list.length-1){
-                        var start = 10;
-                        var end = 19;
-                    }else{
-                        var start = 10;
-                        var end = res.list.length-1;
-                    }
-                }else if(that.pagination.page==3){
-                    if(29<=res.list.length-1){
-                        var start = 20;
-                        var end = 29;
-                    }else{
-                        var start = 20;
-                        var end = res.list.length-1;
-                    }
-                }else if(that.pagination.page==4){
-                    if(39<=res.list.length-1){
-                        var start = 30;
-                        var end = 39;
-                    }else{
-                        var start = 30;
-                        var end = res.list.length-1;
-                    }
-                }else if(that.pagination.page==5){
-                    if(49<=res.list.length-1){
-                        var start = 40;
-                        var end = 49;
-                    }else{
-                        var start = 40;
-                        var end = res.list.length-1;
-                    }
-                }
-                that.mail_list = [];
-                for(let k=start;k<=end;k++){
-                    that.mail_list.push(res.list[k]);
-                }
-                that.pagination.pagesize = 10;
-                if(res.totalrows<=50){
-                    that.pagination.total = res.totalrows;
-                }else{
-                    that.pagination.total = 50;
-                }
+
+                that.mail_list = res.list;
+
+                that.pagination.total = res.totalrows;
                 if(that.mail_list.length==0){
                     that.no_have = true;
                 }else{

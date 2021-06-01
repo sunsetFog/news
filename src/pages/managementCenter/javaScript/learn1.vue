@@ -17,7 +17,7 @@ export default {
         }
     },
     mounted(){//可以dom操作
-        this.demo1();
+        this.demo5();
     },
     methods: {
         demo1(){
@@ -229,6 +229,18 @@ export default {
             var age = 32;//声明同时直接赋值
             console.log('1typeof',typeof age,typeof(age));
             console.log('2typeof',typeof null,typeof [],typeof {});//都是object   因此需要用到instanceof来检测某个对象是不是另一个对象的实例，返回true或false
+
+            console.log('判断值是数字或是NaN', isNaN('锦锦'));// true 返回true或false
+            var isValue = '$8,9yuu9.8'
+            for(let i = 0; i<isValue.length;i++){
+                var zifu = isValue.charAt(i)
+                if (isNaN(zifu)&&zifu!='.'){
+                    isValue = isValue.split(zifu).join('');
+                }
+            }
+            console.log('去掉不是数字的字符', isValue)
+
+
             let arr = [];
             let obj = {};
             console.log('方法1-判断是数组还是对象',obj instanceof Array);//false 判断obj不是数组

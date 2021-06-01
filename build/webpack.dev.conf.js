@@ -13,6 +13,14 @@ const portfinder = require('portfinder')
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
 
+// -------vue-cli3 本地数据模拟后台接口-------
+const express = require('express')
+const app = express()
+let apiRoutes = express.Router()
+app.use('/api', apiRoutes)
+// --------------
+
+
 const devWebpackConfig = merge(baseWebpackConfig, {
   module: {
     rules: utils.styleLoaders({ sourceMap: config.dev.cssSourceMap, usePostCSS: true })
@@ -22,6 +30,18 @@ const devWebpackConfig = merge(baseWebpackConfig, {
 
   // these devServer options should be customized in /config/index.js
   devServer: {
+// --------------
+    before (app) {
+      /* 基年数据列表接口 */
+      app.get('/mock/backList', (req, res) => {
+        res.json({list: ['backList']})
+      })
+      /* 业务图层数据接口 */
+      app.post('/mock/geoJson', (req, res) => {
+        res.json({list: ['geoJson']})
+      })
+    },
+// --------------
     clientLogLevel: 'warning',
     historyApiFallback: {
       rewrites: [

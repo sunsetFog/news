@@ -20,13 +20,13 @@
                     
                     <el-menu-item index="/mcenter/crux"><div style="width: 100%;height: 100%;"><img class="icon-url-margin" src="../../../static/picture/center/shezhi.png"/>管理中心</div></el-menu-item>
 
-                    <el-submenu :index="item.key" :key="item.key" v-for="(item,index) in menuList">
+                    <el-submenu :index="item.key" :key="item.key" v-for="(item,index01) in menuList">
                         <template slot="title">
                         <img class="icon-url-margin" :src="item.icon"/>
                         <span>{{item.label}}</span>
                         </template>
 
-                        <section v-for="(term,index) in item.effect">
+                        <section v-for="(term,index02) in item.effect">
 
                             <section v-if="term.effect.length!=0">
                                 <el-submenu :index="term.key">
@@ -34,7 +34,7 @@
                                 <img class="icon-url-margin" :src="term.icon"/>
                                 <span>{{term.label}}</span>
                                 </template>
-                                <section v-for="(val,index) in term.effect">
+                                <section v-for="(val,index03) in term.effect">
                                     <el-menu-item  :index="val.path">
                                         <img class="icon-url-margin" :src="val.icon"/>
                                         {{val.label}}

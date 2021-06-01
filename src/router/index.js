@@ -109,6 +109,8 @@ export default new Router({
     { path: '/register', name: 'Register', meta: { title: '注册',key: 404}, component: resolve => require(['@/pages/register/register'], resolve) },
     { path: '/game', name: 'game', meta: { title: '首页',key: 404}, component: resolve => require(['@/pages/game/game.vue'], resolve) },
     { path: '/neutralgear', name: 'neutralGear', meta: { title: '加载中',key: 404}, component: resolve => require(['@/pages/neutralGear/neutralGear'], resolve) },
-    { path: '/download', name: 'download', meta: { title: '下载中心',key: 404}, component: resolve => require(['@/pages/download/download'], resolve) }
+    { path: '/download', name: 'download', meta: { title: '下载中心',key: 404}, component: resolve => require(['@/pages/download/download'], resolve) },
+    { path: '/attachmentUpload', name: 'attachmentUpload', meta: { title: '发票识别',key: 404}, component: resolve => require(['@/pages/managementCenter/effect/attachmentUpload.vue'], resolve) }
+
   ]
 })
