@@ -193,6 +193,9 @@ export default{
                     margin-right: 11px;
                     margin-top: -5px;
                 }
+                /deep/.el-scrollbar__wrap{
+                    overflow-x: hidden !important;
+                }
             }
             .manage-content-right{
                 .mixin_float(840px,1130px,right);
