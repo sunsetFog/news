@@ -12,14 +12,18 @@
                         <form>
                         <div class="account">
                             <span>账号:</span>
-                            <input v-model.trim="account_number" maxlength="20" placeholder="请输入账号"></input>
+                            <input style="background: none;backgroundColor: none !important;" v-model.trim="account_number" maxlength="20" placeholder="请输入账号" name="username" autocomplete="new-password"></input>
                         </div>
                         <div class="password-enter">
                             <span>密码:</span>
-                            <!-- autocomplete="new-password"禁止浏览器自动填充到表单 
-                            在登录页的时候浏览器记住了密码，如果去到新建用户页则 username 和 password 会被自动填充上去
+                            <!-- 
+                            name="username"和name="password"是自动填充的关键
+                            autocomplete="new-password"禁止浏览器自动填充到表单 
+                            在登录后浏览器会提示保存密码
+                            密码input加enter事件：@keyup.enter.native="signIn"   native组件事件无效用
+                            登录按钮加@click.native.prevent="signIn"   prevent阻止浏览器默认动作   还可以加loading加载效果
                             -->
-                            <input :type="eyeType" maxlength="12" v-model.trim="password_number" placeholder="请输入登陆密码" autocomplete="new-password"></input>
+                            <input :type="eyeType" maxlength="12" v-model.trim="password_number" placeholder="请输入登陆密码" name="password" autocomplete="new-password"></input>
                             <div @click="eyeMeans">
                                 <img v-if="eyeType=='text'" class="zhengyan" src="../../../static/picture/login/zhengyan.png"/>
                                 <img v-else class="biyan" src="../../../static/picture/login/biyan.png"/>
@@ -220,6 +224,13 @@ export default{
     @color_green: #0f991a;//按钮背景
     @color_hover: #f85e0b;//hover
     @color_stroke: #143597;
+    /deep/input:-webkit-autofill {
+        background-color: none !important;
+    }
+    /deep/input{
+        background-color: none !important;
+        background: none;
+    }
     .entertainment{
         width: 100%;
         height: 100%;

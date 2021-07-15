@@ -96,13 +96,13 @@ import 'nprogress/nprogress.css'; // 加载转圈进度条样式
 // 路由拦截（路由守卫）   用来拦截改变跳转页
 router.beforeEach((to, from, next) => {
     document.title = to.meta.title;
-    if (to.path == '/login') { // 登录页面，删除token缓存
-        sessionStorage.removeItem('token');
-    }
-    // to.path != '/login' 判断要加这个，否则会死循环
-    if (to.path != '/login' && !sessionStorage.getItem('token')) { // 检查有无token，无则跳回登录
-      next({path: '/login'}); // next页面跳转
-    }
+    // if (to.path == '/login') { // 登录页面，删除token缓存
+    //     sessionStorage.removeItem('token');
+    // }
+    // // to.path != '/login' 判断要加这个，否则会死循环
+    // if (to.path != '/login' && !sessionStorage.getItem('token')) { // 检查有无token，无则跳回登录
+    //   next({path: '/login'}); // next页面跳转
+    // }
     if(from.path == '/' && sessionStorage.getItem('token')){ // 刷新判断，vuex刷新丢失数据，需要重新赋值
       penCache.dispatch('getPlayerInfo',penMeans.amateur_getPlayer()); //调用vuex和全局方法
     }

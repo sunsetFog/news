@@ -160,7 +160,7 @@
                 />
               </template>
               <!-- 字段内容 -->
-              <span v-else>{{scope.row[col.prop]}}</span>
+              <span v-else>{{formatter(scope.row,col,scope.$index)}}</span>
               <!-- 校验信息展示   'valid-' + 行下标 + '-' + 列下标 -->
               <div>
                 <el-tag
@@ -286,6 +286,15 @@ export default {
     };
   },
   methods: {
+    formatter(row, col, index){
+      let label = '';
+      if (col.hasOwnProperty('formattor')) {
+        label = col.formattor(row[col.prop])
+      }else{
+        label = row[col.prop];
+      }
+      return label
+    },
     // 行单击事件-----操作___editting的true或false
     rowClick(row) {
       if (this.rowEditType === "CLICK") {
@@ -444,10 +453,6 @@ export default {
     getFilterColumnData() {
       return this.filterColumnData;
     },
-    // table_methods 重置清空
-    clearFilterColumnData() {
-      this.filterColumnData = {};
-    },
     // table_methods 获取新增行列表
     getAddRows() {
       const list = [];
@@ -467,9 +472,21 @@ export default {
         }
       }
       return list;
+    },
+    // table_methods 重置筛选条件清空
+    clearFilterColumnData() {
+      this.filterColumnData = {};
+    },
+    // 更新筛选条件
+    updateFilterColumnData(){
+        this.clearFilterColumnData()
+        Object.keys(this.queryData).forEach(key=>{
+            this.$set(this.filterColumnData, key, this.queryData[key])
+        })
     }
   },
   created() {
+    this.updateFilterColumnData()
     this.sunQuery();
     this.refreshCacheData();
   }

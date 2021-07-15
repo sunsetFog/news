@@ -2,7 +2,7 @@
 <template>
 <section :style="{height: sunHeight+'px'}" class="sun-water">
     <div style="width: 100%;height: 100px;">
-        <Button @click="item.eventName" style="min-width: 80px;margin-left: 5px;" v-for="(item, index) in crmBtn" :key="index">
+        <Button @click="sunSearch()" style="min-width: 80px;margin-left: 5px;" v-for="(item, index) in crmBtn" :key="index">
             <i :class="item.icon" style="margin-right: 8px;"></i>{{item.label}}
         </Button>
     </div>
@@ -154,6 +154,10 @@ export default {
                 filter: {
                     type: "text",
                     clearable: true
+                },
+                formattor(val) {
+                    // console.log('SIGN',val);
+                    return val + '+SIGN'
                 }
             },
             {

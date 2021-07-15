@@ -169,7 +169,8 @@ export default {
                 { event_name: 'setEditingRow',explain: '设定编辑行',params: 'rowIndex或row' },
                 { event_name: 'getSelectionRows',explain: '返回表格当前勾选行数组',params: '' },
                 { event_name: 'refreshCacheData',explain: '刷新表格缓存数据（重置已修改标记）',params: '' },
-                { event_name: 'clearFilterColumnData',explain: '重置清空',params: '' }
+                { event_name: 'clearFilterColumnData',explain: '重置筛选条件清空',params: '' },
+                { event_name: 'updateFilterColumnData',explain: '更新筛选条件',params: '' }
             ],
             table_header: [
                 { params: 'prop',explain: '字段',type: 'String',optional_value: '',default_value: '' },
@@ -213,7 +214,8 @@ export default {
                 { params: 'rule:message',explain: '消息提示',type: 'String',optional_value: '',default_value: '' },
                 { params: 'rule:validator',explain: '自定义校验方法，入参为row，需返回true或者false（缺省为必填校验）',type: 'Function',optional_value: '',default_value: '' },
                 { params: 'rules',explain: '校验规则(数组结构，元素格式与rule相同) ',type: 'Array',optional_value: '',default_value: '' },
-                { params: 'placeholder',explain: '占位文本',type: 'String',optional_value: '',default_value: '' }
+                { params: 'placeholder',explain: '占位文本',type: 'String',optional_value: '',default_value: '' },
+                { params: 'formattor',explain: 'id换字段',type: 'Function',optional_value: '',default_value: '' }
             ],
             type_data: [
                 { params: 'input---ignoreSearch',explain: '忽略全文搜索',type: 'Boolean',optional_value: 'true、false',default_value: false },

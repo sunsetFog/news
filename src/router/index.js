@@ -112,7 +112,8 @@ export default new Router({
     { path: '/download', name: 'download', meta: { title: '下载中心',key: 404}, component: resolve => require(['@/pages/download/download'], resolve) },
     { path: '/attachmentUpload', name: 'attachmentUpload', meta: { title: '发票识别',key: 404}, component: resolve => require(['@/pages/managementCenter/effect/attachmentUpload.vue'], resolve) },
     { path: '/crmTable', name: 'crmTable', meta: { title: 'table组件',key: 404}, component: resolve => require(['@/pages/managementCenter/effect/crmTable.vue'], resolve) },
-    { path: '/explainTable', name: 'explainTable', meta: { title: 'table说明',key: 404}, component: resolve => require(['@/pages/managementCenter/effect/explainTable.vue'], resolve) }
+    { path: '/explainTable', name: 'explainTable', meta: { title: 'table说明',key: 404}, component: resolve => require(['@/pages/managementCenter/effect/explainTable.vue'], resolve) },
+    { path: '/packageTable', name: 'packageTable', meta: { title: 'packageJson说明',key: 404}, component: resolve => require(['@/pages/managementCenter/effect/packageTable.vue'], resolve) }
 
   ]
 })
