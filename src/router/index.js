@@ -89,6 +89,7 @@ export default new Router({
             { path: 'vueqr', name: 'vueqr', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/effect/vueqr.vue'], resolve) },
             { path: 'listener', name: 'listener', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/effect/listener.vue'], resolve) },
             { path: 'websocket', name: 'websocket', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/effect/websocket.vue'], resolve) },
+            { path: 'window_tab', name: 'window_tab', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/effect/windowTab.vue'], resolve) },
 
             { path: 'echartsDemo1', name: 'echartsDemo1', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/pages/managementCenter/reportForm/demo1.vue'], resolve) },
 
@@ -113,7 +114,8 @@ export default new Router({
     { path: '/attachmentUpload', name: 'attachmentUpload', meta: { title: '发票识别',key: 404}, component: resolve => require(['@/pages/managementCenter/effect/attachmentUpload.vue'], resolve) },
     { path: '/crmTable', name: 'crmTable', meta: { title: 'table组件',key: 404}, component: resolve => require(['@/pages/managementCenter/effect/crmTable.vue'], resolve) },
     { path: '/explainTable', name: 'explainTable', meta: { title: 'table说明',key: 404}, component: resolve => require(['@/pages/managementCenter/effect/explainTable.vue'], resolve) },
-    { path: '/packageTable', name: 'packageTable', meta: { title: 'packageJson说明',key: 404}, component: resolve => require(['@/pages/managementCenter/effect/packageTable.vue'], resolve) }
+    { path: '/packageTable', name: 'packageTable', meta: { title: 'packageJson说明',key: 404}, component: resolve => require(['@/pages/managementCenter/effect/packageTable.vue'], resolve) },
+    { path: '/openTab', name: 'openTab', meta: { title: 'openTab',key: 404}, component: resolve => require(['@/pages/managementCenter/effect/openTab.vue'], resolve) }
 
   ]
 })

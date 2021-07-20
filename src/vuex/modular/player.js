@@ -1,6 +1,7 @@
 const player = {
     state: {
-        userInfo: {}
+        userInfo: {},
+        seed: '种子'
     },
     mutations: {// 不可以异步操作，commit调用
 

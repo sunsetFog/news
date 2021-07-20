@@ -1,10 +1,10 @@
 <template>
-<section>
+<section id="nicePager">
     <el-pagination
       @size-change="sizeChange"
       @current-change="currentChange"
       :current-page="pagination.page"
-      :page-sizes="[10]"
+      :page-sizes="pageStep"
       :page-size="pagination.pagesize"
       layout="total, sizes, prev, pager, next, jumper"
       :total="pagination.total">
@@ -14,7 +14,16 @@
 <script>
   export default {
     name: 'page',
-    props: ['pagination'],
+    props: {
+      pagination: {
+        type: Object,
+        default: {}
+      },
+      pageStep: {
+        type: Array,
+        default: [10]
+      }
+    },
     data () {
       return {
       }
@@ -33,4 +42,11 @@
     }
   }
 </script>
+<style lang="less" scoped>
+#nicePager{
+  width: 100%;
+  height: 45px;
+  padding: 6px 0 0 0;
+}
+</style>
 

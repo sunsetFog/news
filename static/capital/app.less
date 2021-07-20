@@ -142,51 +142,54 @@
     }
 }
 
-.el-pagination{
-    float: right;
-    .el-pagination__total{
-        color: @color_blueviolet;
-    }
-    .el-input__inner{
-        background: @color_indigo;
-        border: 1px solid @color_blueviolet;
-        color: @color_blueviolet;
-        border-color: @color_blueviolet;
-    }
-    .el-input__inner:focus{
-        border-color: @color_blueviolet;
-    }
-    .el-input.is-focus .el-input__inner{
-        border-color: @color_blueviolet;
-    }
-    .btn-prev,.btn-next{
-        background: @color_indigo;
-        .el-icon{
-            color: @color_white;
+#mail,#notice{
+    .el-pagination{
+        float: right;
+        .el-pagination__total{
+            color: @color_blueviolet;
         }
-    }
-    button:disabled {
-        background-color: @color_indigo;
-        .el-icon{
-            color: #9a9696;
-        }
-    }
-    button:hover{
-        color: @color_white;
-    }
-    .el-pager{
-        li{
+        .el-input__inner{
             background: @color_indigo;
+            border: 1px solid @color_blueviolet;
+            color: @color_blueviolet;
+            border-color: @color_blueviolet;
+        }
+        .el-input__inner:focus{
+            border-color: @color_blueviolet;
+        }
+        .el-input.is-focus .el-input__inner{
+            border-color: @color_blueviolet;
+        }
+        .btn-prev,.btn-next{
+            background: @color_indigo;
+            .el-icon{
+                color: @color_white;
+            }
+        }
+        button:disabled {
+            background-color: @color_indigo;
+            .el-icon{
+                color: #9a9696;
+            }
+        }
+        button:hover{
             color: @color_white;
         }
-        li.active{
+        .el-pager{
+            li{
+                background: @color_indigo;
+                color: @color_white;
+            }
+            li.active{
+                color: @color_blueviolet;
+            }
+        }
+        .el-pagination__jump{
             color: @color_blueviolet;
         }
     }
-    .el-pagination__jump{
-        color: @color_blueviolet;
-    }
 }
+
 
 
 #management{

@@ -41,8 +41,9 @@ export default {
             queryData: {
                 bankName: '',
                 bankNameCond: 'cn',
-                __page: 1,
-                __pagesize: 15
+                page: 1,
+                pagesize: 15,
+                total: 0
             },
             crmBtn: [
                 { label: '搜索', eventName: 'sunSearch', icon: 'el-icon-search' },
@@ -189,7 +190,7 @@ export default {
                                         disabled: row.disabled ? true : false
                                     },
                                     domProps: {
-                                        innerHTML: '发布'
+                                        innerHTML: '删除'
                                     },
                                     style: {  },
                                     on: {

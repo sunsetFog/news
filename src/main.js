@@ -5,8 +5,8 @@ import App from './App'
 import iView from 'iview'
 import 'iview/dist/styles/iview.css'
 import router from './router'
-import 'babel-polyfill'
-Vue.config.productionTip = false
+import 'babel-polyfill'// 浏览器兼容 IE8
+Vue.config.productionTip = false //生产提示
 // es6Promise .polyfill();
 Vue.use(iView);
 
@@ -43,7 +43,7 @@ import apiHttp from './api/http.js';
 Vue.prototype.$apihttp = apiHttp;
 
 
-/* 子父组件的全局引入 */
+/* 全局注册子组件 */
 import cloudEchart from './components/echarts/cloudEchart.vue'
 import recharge from './components/recharge.vue';
 import withdrawal from './components/withdrawal.vue';
@@ -81,15 +81,41 @@ Vue.component('safeDeposit',safeDeposit);
 Vue.component('portrait',portrait);
 Vue.component('rechargeRecord',rechargeRecord);
 
-// vue自定义指令
+// 全局注册自定义指令
 import * as directives from '@/directive'
-// 注册全局指令
 Object.keys(directives).forEach(key => {
   directives[key].install(Vue)
 })
+// 全局注册过滤器
+import filters from '@/filters';
+Object.keys(filters).forEach(key => {
+  Vue.filter(key, filters[key])
+})
+/*
+相当于
+Vue.filter("numPercent", function(value) {
+    return value + 4;
+})
+用法:{{num | numPercent}}
+*/
 
 import penCache from './vuex/index.js';
 import penMeans from './public/index.js';
+
+//vuex 中保存错误日志数组,展示table里
+if (process.env.NODE_ENV === 'production') {
+  Vue.config.errorHandler = function(err, vm, info, a) {
+    Vue.nextTick(() => {
+      // penCache.dispatch('addErrorLog', {
+      //   err,
+      //   vm,
+      //   info,
+      //   url: window.location.href
+      // })
+      console.error('错误日志', err, vm, info, a);
+    })
+  }
+}
 
 import NProgress from 'nprogress'; // 路由变化的转圈进度条
 import 'nprogress/nprogress.css'; // 加载转圈进度条样式
@@ -103,9 +129,9 @@ router.beforeEach((to, from, next) => {
     // if (to.path != '/login' && !sessionStorage.getItem('token')) { // 检查有无token，无则跳回登录
     //   next({path: '/login'}); // next页面跳转
     // }
-    if(from.path == '/' && sessionStorage.getItem('token')){ // 刷新判断，vuex刷新丢失数据，需要重新赋值
+    // if(from.path == '/' && sessionStorage.getItem('token')){ // 刷新判断，vuex刷新丢失数据，需要重新赋值
       penCache.dispatch('getPlayerInfo',penMeans.amateur_getPlayer()); //调用vuex和全局方法
-    }
+    // }
 
     // 通过刷新判断，跳转至/neutralgear页面
     // let routeScreen = ['/login','/neutralgear'];

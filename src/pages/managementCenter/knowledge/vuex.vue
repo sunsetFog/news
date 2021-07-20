@@ -1,7 +1,7 @@
 <template>
 <div>
 	<!--用了methods与computed-->
-	<el-button type="info">mapGetters:{{money}}</el-button>
+	<el-button type="info">mapGetters:{{money}}---{{seed}}</el-button>
 	<el-button type="success" @click="playerInfo({title: 'money',params: 9966666888})">...mapMutations</el-button>
 	<el-button type="error" @click="submit_mutation">调用_mutation</el-button>
 	<el-button type="warning" @click="getPlayerInfo(player_info)">...mapActions</el-button>
@@ -28,11 +28,14 @@
 				// 存vuex：dispatch调用actions异步方法，并传递数据
 				this.$store.dispatch('fragrant',{ num: 662 }).then((result) => {
 					console.log("promise.then是异步-微任务");
-				});
+				}); 
 			}
 		},
 		computed:{ // 使用vuex
-			...mapGetters(['money','player_info'])
+			...mapGetters(['money','player_info','seed'])
+		},
+		created(){
+			console.log('created-seed--',this.seed)
 		}
 	}
 </script>

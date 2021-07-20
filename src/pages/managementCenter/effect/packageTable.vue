@@ -153,6 +153,9 @@ export default {
                 { params: 'webpack-merge',explain: '合并代码' }
             ]
         }
+    },
+    created(){
+        console.log('notes',process.env.NODE_ENV)
     }
 }
 </script>

@@ -112,3 +112,15 @@ npm run build
 
 
 
+npm install cross-env --save-dev
+package.json
+"build:notes": "cross-env NODE_ENV=production env_config=notes node build/build.js"
+------ build.js -------
+const spinner = ora('building for ' + process.env.env_config +  ' production...')
+------ webpack.prod.conf.js ------
+// const env = require('../config/prod.env')
+const env = require('../config/' + process.env.env_config + '.env')
+新建文件   notes.env.js
+
+
+

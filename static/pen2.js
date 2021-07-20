@@ -17,28 +17,10 @@ menuId: 11120783
     &:nth-child(2){
     {tabs:true, height:'高度', subHeight:'高度差'}
     
-    vuex:
-    modules: {},
-    getters
+
     
-    main.js
-    import 'babel-polyfill' // 兼容 IE8
-    vuex 中保存错误日志数组,展示table里
-    import Vue from 'vue'
-    import store from './store'
-    if (process.env.NODE_ENV === 'production') {
-      Vue.config.errorHandler = function(err, vm, info, a) {
-        Vue.nextTick(() => {
-          store.dispatch('addErrorLog', {
-            err,
-            vm,
-            info,
-            url: window.location.href
-          })
-          console.error(err, info)
-        })
-      }
-    }
+
+    
     
     vue中使用svg-icon
     https://blog.csdn.net/shentibeitaokong/article/details/83039021
@@ -53,14 +35,9 @@ menuId: 11120783
           },
     import 'font-awesome/css/font-awesome.min.css' // font-awesome icon
     
-    Object.keys(filters).forEach(key => {
-      Vue.filter(key, filters[key])
-    })
+    
     //Vue实例化注册自定义过滤器
-    Vue.filter("sum", function(value) {
-       return value + 4;
-    })
-    {{message | sum}}
+    
     
     import '@/ierp/index' // 加载ierp应用初始化文件
     import './styles/common.css'
@@ -93,7 +70,7 @@ const blob = res.data
         }
 
 
-        页面缓存设置keep-alive
+
 
 
 import Vue from 'vue';

@@ -1,18 +1,11 @@
-npm install cross-env --save-dev
-package.json
-"build:uya": "cross-env NODE_ENV=production env_config=uya node build/build.js"
------- build.js -------
-const spinner = ora('building for ' + process.env.env_config +  ' production...')
------- webpack.prod.conf.js ------
-// const env = require('../config/prod.env')
-const env = require('../config/' + process.env.env_config + '.env')
 
 
 
 
 
 
-activated() {}缓存界面生命周期，当跳转created没触发时用
+
+
 
 
 
@@ -84,51 +77,8 @@ apple: 'no apples | one apple | {count} apples',
   100%的宽度少20px
 
 
-  window.name = "tabWinEec"
-  let ocrParams = {
-    sunCurrency: 'E_EC',
-    vendorSiteId: this.ruleForm.vendorSiteId,
-    showEecVec: 'Eec',
-    currencyArr: this.ruleForm.currencyArrCopy,
-    isShow: this.isShowOCR
-  }
-  window.ocrParams = JSON.stringify(ocrParams)
-  window.open(location.protocol + "//" +location.host + '/#/vendorPayment/OCRDemo', "tabWinOcrEec");
 
-let ecParams = {
-      tabWinActive: 'sureFrom',
-      data: this.ocrFormData
-    }
-    window.ecParams = JSON.stringify(ecParams)
-    window.open(location.protocol + "//" +location.host + '/#/' + url, window.opener.name);
+table的分页
 
-mounted(){
-let that = this;
-document.addEventListener('visibilitychange', function() { 
-    let isHidden = document.hidden;
-    console.log('document.hidden',document.hidden,window.opener)
-    that.ecParams = !window.opener?{}:window.opener.ecParams?JSON.parse(window.opener.ecParams):{}
-    console.log('window.opener.ecParams',that.ecParams)
-    if (!isHidden&&window.opener) { // 显示
-      // 做数据更新操作，重新发起请求或者直接刷新当前页面
-      console.log('显示')
-      if(that.ecParams.tabWinActive == 'sureFrom'){
-        that.updateOcr(that.ecParams.data)
-        let ecParams = {
-          tabWinActive: 'cancelFrom',
-          data: {}
-        }
-        window.opener.ecParams = JSON.stringify(ecParams)
-      }
-    }else if(isHidden){// 隐藏
-      console.log('隐藏')
-      
-        
-    }
-});
-//当前窗口得到焦点 
-// window.onfocus = function() { 
-//   // 做数据更新操作，重新发起请求或者直接刷新当前页面 
-//   console.log('---onfocus')
-// }; 
-},
+
+

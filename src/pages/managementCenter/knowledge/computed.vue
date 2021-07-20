@@ -15,7 +15,7 @@
 				count: 600
 			}
 		},
-		//1.有缓存作用，数据改变而触发 2.不支持异步  
+		//1.有缓存作用，数据改变而触发 2.不支持异步  3.computed与watch都是监听功能，computed关联两个变量的变化，watch是一个变量的变化
 		//注意:创建在data数据里,不是方法调用。比如：this.updateJson
 		//用法: 1.改写某个数据   2.用vuex
 		computed:{

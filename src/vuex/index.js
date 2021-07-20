@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 Vue.use(Vuex);
 
+import getters from './getters';
 // 方法一：固定写法
 // import pool from './modular/pool';
 // import player from './modular/player';
@@ -9,17 +10,18 @@ Vue.use(Vuex);
 // 	modules: {// modules模块化vuex
 // 		pool,
 // 		player
-// 	}
+// 	},
+//  getters: getters
 // })
 
 
 
 // 方法二：动态写法
-
 let store = new Vuex.Store({
     modules: {// modules模块化vuex
 
-    }
+    },
+    getters: getters
 })
 
 //动态导入文件--require.context( )

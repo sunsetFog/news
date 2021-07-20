@@ -1,5 +1,6 @@
 
 <template>
+<section :style="{height:setHeight}" id="TableEditor">
       <el-table
         stripe
         border
@@ -19,7 +20,7 @@
         :row-class-name="setRowClass"
         height="99%"
         ref="refTable"
-        style="flex: 1;display: flex;flex-direction: column;"
+        style="flex: 1;"
       >
         <!-- 勾选 -->
         <el-table-column v-if="checkbox" width="40" type="selection" fixed/>
@@ -187,6 +188,9 @@
           </template>
         </el-table-column>
       </el-table>
+
+      <pagination :pagination="queryData" :pageStep="[10,15]" @emitWay="sunQuery"></pagination>
+</section>
 </template>
 <script>
 import FilterColumn from "./FilterHeaderColumn";
@@ -199,6 +203,15 @@ export default {
     TableEditFormatter
   },
   mixins: [bodyColumn],
+  data() {
+    return {
+      setHeight: (document.documentElement.clientHeight - 100) + 'px',
+      loading: false, // 加载中
+      currentRow: null, // 当前行
+      selectionRows: [], // 选择的数组
+      filterColumnData: {} // 表头过滤参数
+    };
+  },
   props: {
     /**
      * 表头是否显示Tooltip
@@ -277,15 +290,54 @@ export default {
       default: true
     }
   },
-  data() {
-    return {
-      loading: false, // 加载中
-      currentRow: null, // 当前行
-      selectionRows: [], // 选择的数组
-      filterColumnData: {} // 表头过滤参数
-    };
-  },
   methods: {
+    // table_methods 查询
+    sunQuery() {
+      const reqData = Object.assign({}, this.queryData, this.filterColumnData);
+      this.loading = true;
+      // this.$apihttp({
+      //   url: this.queryUrl,
+      //   method: 'post',
+      //   data: reqData
+      // }).then(data => {
+      let data = {
+        total: 18,
+        currentPage: 1,
+        pageSize: 15,
+        totalPage: 2,
+        list: [
+          { sex: '男', address: "信宜市东镇镇介可路", date: "2016-05-02 ~ 2016-05-06", country: "中国", province: "广东", Operation: "操作" },
+          { sex: '女', address: "上海市普陀区金沙江路", date: "2017-08-16 ~ 2017-08-20", country: "中国", province: "上海", Operation: "操作" },
+          { sex: '男', address: "信宜市东镇镇介可路", date: "2016-05-02 ~ 2016-05-06", country: "中国", province: "广东", Operation: "操作" },
+          { sex: '女', address: "上海市普陀区金沙江路", date: "2017-08-16 ~ 2017-08-20", country: "中国", province: "上海", Operation: "操作" },
+          { sex: '男', address: "信宜市东镇镇介可路", date: "2016-05-02 ~ 2016-05-06", country: "中国", province: "广东", Operation: "操作" },
+          { sex: '女', address: "上海市普陀区金沙江路", date: "2017-08-16 ~ 2017-08-20", country: "中国", province: "上海", Operation: "操作" },
+          { sex: '男', address: "信宜市东镇镇介可路", date: "2016-05-02 ~ 2016-05-06", country: "中国", province: "广东", Operation: "操作" },
+          { sex: '女', address: "上海市普陀区金沙江路", date: "2017-08-16 ~ 2017-08-20", country: "中国", province: "上海", Operation: "操作" },
+          { sex: '男', address: "信宜市东镇镇介可路", date: "2016-05-02 ~ 2016-05-06", country: "中国", province: "广东", Operation: "操作" },
+          { sex: '女', address: "上海市普陀区金沙江路", date: "2017-08-16 ~ 2017-08-20", country: "中国", province: "上海", Operation: "操作" },
+          { sex: '男', address: "信宜市东镇镇介可路", date: "2016-05-02 ~ 2016-05-06", country: "中国", province: "广东", Operation: "操作" },
+          { sex: '女', address: "上海市普陀区金沙江路", date: "2017-08-16 ~ 2017-08-20", country: "中国", province: "上海", Operation: "操作" },
+          { sex: '男', address: "信宜市东镇镇介可路", date: "2016-05-02 ~ 2016-05-06", country: "中国", province: "广东", Operation: "操作" },
+          { sex: '女', address: "上海市普陀区金沙江路", date: "2017-08-16 ~ 2017-08-20", country: "中国", province: "上海", Operation: "操作" },
+          { sex: '男', address: "信宜市东镇镇介可路", date: "2016-05-02 ~ 2016-05-06", country: "中国", province: "广东", Operation: "操作" },
+          { sex: '女', address: "上海市普陀区金沙江路", date: "2017-08-16 ~ 2017-08-20", country: "中国", province: "上海", Operation: "操作" },
+          { sex: '男', address: "信宜市东镇镇介可路", date: "2016-05-02 ~ 2016-05-06", country: "中国", province: "广东", Operation: "操作" },
+          { sex: '女', address: "上海市普陀区金沙江路", date: "2017-08-16 ~ 2017-08-20", country: "中国", province: "上海", Operation: "操作" }
+        ]
+      };
+      let list = data.list.slice((this.queryData.page-1)*this.queryData.pagesize,this.queryData.page*this.queryData.pagesize)
+      this.queryData.total = data.total
+      this.tableData.splice(0);
+      for (const item of list) {
+        this.tableData.push(item);
+      }
+      this.refreshCacheData();
+      this.loading = false;
+      // }).catch(() => {
+      //   this.loading = false
+      // })
+    },
     formatter(row, col, index){
       let label = '';
       if (col.hasOwnProperty('formattor')) {
@@ -409,29 +461,6 @@ export default {
         col.visibleChange(status, col, row, key, index);
       }
     },
-    // table_methods 查询
-    sunQuery() {
-      const reqData = Object.assign({}, this.queryData, this.filterColumnData);
-      this.loading = true;
-      // this.$apihttp({
-      //   url: this.queryUrl,
-      //   method: 'post',
-      //   data: reqData
-      // }).then(data => {
-      let data = [
-        { sex: '男', address: "信宜市东镇镇介可路", date: "2016-05-02 ~ 2016-05-06", country: "中国", province: "广东", Operation: "操作" },
-        { sex: '女', address: "上海市普陀区金沙江路", date: "2017-08-16 ~ 2017-08-20", country: "中国", province: "上海", Operation: "操作" },
-      ];
-      this.tableData.splice(0);
-      for (const item of data) {
-        this.tableData.push(item);
-      }
-      this.refreshCacheData();
-      this.loading = false;
-      // }).catch(() => {
-      //   this.loading = false
-      // })
-    },
     /**
      * table_methods 刷新页面数据缓存
      */
@@ -493,6 +522,13 @@ export default {
 };
 </script>
 <style lang="less" scoped>
+#TableEditor {
+  display: flex;
+  flex-direction: column;
+}
+/deep/.el-table__body-wrapper{
+    flex: 1;
+}
 /deep/ .cell-changed:before {
   content: "";
   top: -5px;
@@ -515,16 +551,12 @@ export default {
   word-break: break-all;
   overflow: hidden;
 }
-
+// 选择器加remote下拉图标不见问题
 /deep/.el-select .el-input .el-icon-::before {
   content: "\e6e1";
   transform: rotate(180deg);
 }
 /deep/.el-select .el-input.is-focus .el-icon- {
   transform: rotate(0deg);
-}
-
-/deep/.el-table__body-wrapper{
-    flex: 1;
 }
 </style>

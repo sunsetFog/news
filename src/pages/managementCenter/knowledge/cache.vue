@@ -37,7 +37,7 @@ export default {
             // import VueCookies from 'vue-cookies'
             // Vue.use(VueCookies)
 
-            // this.$cookies.set("test_u890", "value", "expireTimes", "path", "domain", "secure");
+            // this.$cookies.set("key", "value", "expireTimes", "path", "domain", "secure");
             
             this.$cookies.set("test_cookies","GH1.1.1689020474.1484362313","2m");
             // this.$cookies.get("test_cookies");
