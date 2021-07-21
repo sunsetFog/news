@@ -16,7 +16,7 @@ import './database/index'; // 不能用if动态加载js
 // if (true) {
 //   require('./database/index') // 可以动态加载，不报错
 // }
-import '../static/capital/rem.js'
+import '@static/capital/rem.js'
 
 
 import ElementUI from 'element-ui';
@@ -44,24 +44,24 @@ Vue.prototype.$apihttp = apiHttp;
 
 
 /* 全局注册子组件 */
-import cloudEchart from './components/echarts/cloudEchart.vue'
-import recharge from './components/recharge.vue';
-import withdrawal from './components/withdrawal.vue';
-import manageBank from './components/manageBank.vue';
-import addBank from './components/addBank.vue';
-import manageAlipay from './components/manageAlipay.vue';
-import addAlipay from './components/addAlipay.vue';
-import withdrawalPassword from './components/withdrawalPassword.vue';
-import know from './components/know.vue';
-import mail from './components/mail.vue';
-import notice from './components/notice.vue';
-import pagination from './components/pagination.vue';
-import consult from './components/consult.vue';
-import loginPassword from './components/loginPassword.vue';
-import gameTheme from './components/game_theme.vue';
-import safeDeposit from './components/safeDeposit.vue';
-import portrait from './components/portrait.vue';
-import rechargeRecord from './components/rechargeRecord.vue';
+import cloudEchart from '@/components/echarts/cloudEchart.vue'
+import recharge from '@/components/recharge.vue';
+import withdrawal from '@/components/withdrawal.vue';
+import manageBank from '@/components/manageBank.vue';
+import addBank from '@/components/addBank.vue';
+import manageAlipay from '@/components/manageAlipay.vue';
+import addAlipay from '@/components/addAlipay.vue';
+import withdrawalPassword from '@/components/withdrawalPassword.vue';
+import know from '@/components/know.vue';
+import mail from '@/components/mail.vue';
+import notice from '@/components/notice.vue';
+import pagination from '@/components/pagination.vue';
+import consult from '@/components/consult.vue';
+import loginPassword from '@/components/loginPassword.vue';
+import gameTheme from '@/components/game_theme.vue';
+import safeDeposit from '@/components/safeDeposit.vue';
+import portrait from '@/components/portrait.vue';
+import rechargeRecord from '@/components/rechargeRecord.vue';
 Vue.component('cloudEchart',cloudEchart);
 Vue.component('recharge',recharge);
 Vue.component('withdrawal',withdrawal);

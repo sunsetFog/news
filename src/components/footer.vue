@@ -36,7 +36,7 @@ export default{
     .footer-contain{
         width: 100%;
         height: 100%;
-        .mixin_image(url('../../static/picture/home/diceng.png'));
+        .mixin_image(url('~@static/picture/home/diceng.png'));
         .contain-center{
             width: 1200px;
             height: 100%;

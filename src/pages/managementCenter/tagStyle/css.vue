@@ -22,7 +22,7 @@
                     div:after{}
                     div:first-child{}  --- div里第一个子元素
                     div:last-child{}  --- div里最后子元素
-                    div:nth-of-type(2){}  --- div里第几个子元素
+                    div:nth-of-type(2){}  --- div里第几个子元素--- 实用
                 伪元素选择器:
                     p::first-line{} ---- 内容首行添加样式
                     div::before {content: url(smiley.gif);} ---- div内容之前插入一幅图像
@@ -69,6 +69,12 @@ export default {
 <style lang="less" scoped>
     #css{
         color: #fff;
+        //width: calc(100% - 20px);//100%的宽度少20px
+        // .box{
+        //     &.add-ys{}// 嵌套样式
+        //     &:nth-child(2){}
+        // }
+        
 		// width: 800px;//宽
         // height: 200px;//高
 

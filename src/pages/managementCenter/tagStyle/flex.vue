@@ -1,50 +1,72 @@
 <template>
     <section id="flex-index">
-        <hr>1.盒子和文字垂直居中</hr>
         <!-- 问题：高为百分比时，文字垂直居中？     line-height: 100%;和字体大小一样大，不能用 -->
+        <hr>1.flex---盒子和文字垂直居中</hr>
         <div class="vertical-center">
-            <!-- 答1.用弹性布局，使文字垂直居中 -->
             文字垂直居中
-            <p>盒子垂直居中</p>
+            <p></p>
         </div>
+        <hr>1.定位---盒子垂直居中</hr>
         <div class="pen-scenery">
-            <p>盒子垂直居中</p>
+            <p></p>
         </div>
-        <!-- 答2.用display:table-cell，使文字垂直居中 -->
+        <hr>1.高为百分比时，display:table-cell文字垂直居中</hr>
         <div class="height-percentage">
             <span>文字垂直居中</span>
         </div>
-        <hr>2.是否浮动</hr>
+        <hr>2.行和列</hr>
         <div class="list">
-            <div class="list-cell"></div>
-            <div class="list-cell"></div>
-            <div class="list-cell"></div>
+            <div class="list-cell02"></div>
+            <div class="list-cell02"></div>
+            <div class="list-cell02"></div>
         </div>
-        <hr>3.网格等比布局</hr>
-        <div class="Grid">
-            <div class="Grid-cell">1/3</div>
-            <div class="Grid-cell">1/3</div>
-            <div class="Grid-cell">1/3</div>
+        <hr>3.等比伸缩</hr>
+        <div class="grid">
+            <div class="grid-cell03">1/3</div>
+            <div class="grid-cell03">1/3</div>
+            <div class="grid-cell03">1/3</div>
         </div>
         <hr>4.百分比布局</hr>
         <div class="percentage">
-            <div class="percentage-cell">5/10</div>
-            <div class="percentage-cell">4/10</div>
-            <div class="percentage-cell">1/10</div>
+            <div class="percentage-cell04">5/10</div>
+            <div class="percentage-cell04">4/10</div>
+            <div class="percentage-cell04">1/10</div>
         </div>
-        <hr>5.水平对齐布局</hr>
+        <hr>5.水平间隔</hr>
         <div class="format">
-            <div class="format-cell">5/10</div>
-            <div class="format-cell">4/10</div>
-            <div class="format-cell">1/10</div>
+            <div class="format-cell05">5/10</div>
+            <div class="format-cell05">4/10</div>
+            <div class="format-cell05">1/10</div>
         </div>
-        <hr>6.流式布局</hr>
+        <hr>6.流式布局---水平换行</hr>
         <div class="flowing">
-            <div class="flowing-cell"></div>
-            <div class="flowing-cell"></div>
-            <div class="flowing-cell"></div>
-            <div class="flowing-cell"></div>
-            <div class="flowing-cell"></div>
+            <div class="flowing-cell06"></div>
+            <div class="flowing-cell06"></div>
+            <div class="flowing-cell06"></div>
+            <div class="flowing-cell06"></div>
+            <div class="flowing-cell06"></div>
+        </div>
+        <!-- 
+            flex: 1;某盒子划分剩余空间--（兄弟盒子中，只有一个盒子加flex: 1;）
+            flex: 1;  flex: 2; flex: 3;按照倍数划分
+
+            剩余空间分配相关属性
+            flex 属性包括了 flex-basis、 flex-grow、flex-shrink
+            flex-basis 用来定义子元素的默认宽或高（高需要设置flex-direction）----flex-basis: 80px;
+            flex-grow 用来指定父容器多余空间的分配比率，默认值为0
+            flex-shrink 用来指定父容器空间不够时子元素的缩小比例，默认为1，0不压缩
+         -->
+        <hr>7.高---划分剩余空间---大盒子固定高</hr>
+        <div class="surplus01">
+            <div class="surplus-cell17"></div>
+            <div class="surplus-cell27"></div>
+            <div class="surplus-cell37"></div>
+        </div>
+        <hr>7.宽---划分剩余空间---大盒子固定宽</hr>
+        <div class="surplus02">
+            <div class="surplus-cell17">恍恍惚惚</div>
+            <div class="surplus-cell27"></div>
+            <div class="surplus-cell37"></div>
         </div>
     </section>
 </template>
@@ -102,61 +124,61 @@ export default {
 
     .list {
         display: flex;
-        -flex-direction: row; // 默认浮动，可以不写
-        flex-direction: column;
-        .list-cell {
-            // flex: 0 0 30%; // 用flex-direction: column;不要这个
+        -flex-direction: row;// 行---默认，可以不写
+        flex-direction: column;// 列
+        .list-cell02 {
+            // flex: 0 0 30%; //这个与flex-direction: column;冲突
             height: 30px;
         }
-        .list-cell:nth-of-type(1) {
+        .list-cell02:nth-of-type(1) {
             background: yellowgreen;
         }
-        .list-cell:nth-of-type(2) {
+        .list-cell02:nth-of-type(2) {
             background: violet;
         }
-        .list-cell:nth-of-type(3) {
+        .list-cell02:nth-of-type(3) {
             background: brown;
         }
     }
 
-    .Grid {
+    .grid {
         display: flex;
-        .Grid-cell {
+        .grid-cell03 {
             flex: 1; // 等比伸缩   相对与flex: 0 0 33.33%;
         }
-        .Grid-cell:nth-of-type(1) {
+        .grid-cell03:nth-of-type(1) {
             background: yellowgreen;
         }
-        .Grid-cell:nth-of-type(2) {
+        .grid-cell03:nth-of-type(2) {
             background: violet;
         }
-        .Grid-cell:nth-of-type(3) {
+        .grid-cell03:nth-of-type(3) {
             background: brown;
         }
     }
 
     .percentage {
         display: flex;
-        .percentage-cell:nth-of-type(1) {
-            flex: 0 0 50%;
+        .percentage-cell04:nth-of-type(1) {
+            flex: 0 0 50%;//宽50%
             background: yellowgreen;
         }
-        .percentage-cell:nth-of-type(2) {
-            flex: 0 0 40%;
+        .percentage-cell04:nth-of-type(2) {
+            flex: 0 0 40%;//宽40%
             background: violet;
         }
-        .percentage-cell:nth-of-type(3) {
-            flex: 0 0 10%;
+        .percentage-cell04:nth-of-type(3) {
+            flex: 0 0 10%;//宽10%
             background: brown;
         }
     }
 
     .format {
         display: flex;
-        -justify-content: space-around; // 水平-对齐方式
-        justify-content: space-between;
+        justify-content: space-around; //margin左右间隔
+        -justify-content: space-between;//中间隔
         background: white;
-        .format-cell {
+        .format-cell05 {
             flex: 0 0 26%;
             height: 30px;
             background: #333B4B;
@@ -168,13 +190,56 @@ export default {
         min-height: 150px;
         display: flex;
         // flex-flow: row wrap; // flex-direction: row;和flex-wrap: wrap;的简写
-        flex-wrap: wrap; // 水平排不下就换行
+        flex-wrap: wrap; // 水平换行
         background: yellowgreen;
-        .flowing-cell {
+        .flowing-cell06 {
             flex: 0 0 42%;
             height: 40px;
             background: #eee;
             margin: 7.5px;
+        }
+    }
+
+    .surplus01 {
+        width: 100%;
+        height: 200px;
+        display: flex;
+        flex-direction: column;//列
+        .surplus-cell17 {
+            width: 100%;
+            height: 50px;
+            background: #F56C6C;
+        }
+        .surplus-cell27 {
+            width: 100%;
+            flex: 1;//高划分剩余空间
+            background: #67C23A;
+        }
+        .surplus-cell37 {
+            width: 100%;
+            height: 60px;
+            background: #909399;
+        }
+    }
+
+    .surplus02 {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        flex-direction: row;//行，默认
+        .surplus-cell17 {
+            height: 50px;
+            background: #F56C6C;
+        }
+        .surplus-cell27 {
+            height: 50px;
+            flex: 1;//宽划分剩余空间
+            background: #67C23A;
+        }
+        .surplus-cell37 {
+            width: 80px;
+            height: 50px;
+            background: #909399;
         }
     }
 }

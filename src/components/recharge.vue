@@ -28,7 +28,7 @@
                 <div class="recharge-money">
                     <span>充值金额:</span>
                     <input type="text" v-model.trim="money" maxlength="20" placeholder="请按充值范围输入您的充值金额"/>
-                    <img src="../../static/picture/recharge/xiaochu.png" @click="money = ''"/>
+                    <img src="@static/picture/recharge/xiaochu.png" @click="money = ''"/>
                 </div>
                 <div class="recharge-range">充值范围{{min_limit}}-{{max_limit}}元,比例为1:1</div>
                 <div class="money-example">
@@ -65,14 +65,14 @@ export default {
             payment_list: [],
             money: '',
             money_list: [
-                {name: 100,url: '../../static/picture/recharge/100.png',padding: '0px'},
-                {name: 300,url: '../../static/picture/recharge/300.png',padding: '0px'},
-                {name: 500,url: '../../static/picture/recharge/500.png',padding: '0px'},
-                {name: 1000,url: '../../static/picture/recharge/1000.png',padding: '0px'},
-                {name: 1500,url: '../../static/picture/recharge/1500.png',padding: '0px'},
-                {name: 3000,url: '../../static/picture/recharge/3000.png',padding: '0px'},
-                {name: 5000,url: '../../static/picture/recharge/5000.png',padding: '0px'},
-                {name: 9999,url: '../../static/picture/recharge/9999.png',padding: '0px'}
+                {name: 100,url: require('@static/picture/recharge/100.png'),padding: '0px'},
+                {name: 300,url: require('@static/picture/recharge/300.png'),padding: '0px'},
+                {name: 500,url: require('@static/picture/recharge/500.png'),padding: '0px'},
+                {name: 1000,url: require('@static/picture/recharge/1000.png'),padding: '0px'},
+                {name: 1500,url: require('@static/picture/recharge/1500.png'),padding: '0px'},
+                {name: 3000,url: require('@static/picture/recharge/3000.png'),padding: '0px'},
+                {name: 5000,url: require('@static/picture/recharge/5000.png'),padding: '0px'},
+                {name: 9999,url: require('@static/picture/recharge/9999.png'),padding: '0px'}
             ],
             first_index: null,
             second_index: null,
@@ -214,7 +214,7 @@ export default {
                 padding-bottom: 115px;
                 box-sizing: border-box;
                 .type-active{
-                    .mixin_image(url('../../static/picture/recharge/beijingkuang.png'));
+                    .mixin_image(url('~@static/picture/recharge/beijingkuang.png'));
                 }
                 ul{
                     width: 100%;
@@ -237,7 +237,7 @@ export default {
                             position: absolute;
                             right: -10px;
                             top: 0px;
-                            .mixin_image(url('../../static/picture/recharge/zhizhen.png'));
+                            .mixin_image(url('~@static/picture/recharge/zhizhen.png'));
                         }
                     }
                 }
@@ -254,7 +254,7 @@ export default {
                 box-sizing: border-box;
                 font-size: @font_size20;
                 .mode-active{
-                    .mixin_image(url('../../static/picture/recharge/kuangkuang.png'));
+                    .mixin_image(url('~@static/picture/recharge/kuangkuang.png'));
                 }
                 ul{
                     li{
@@ -262,7 +262,7 @@ export default {
                         padding: 0px 20px 0px 20px;
                         box-sizing: border-box;
                         margin: 25px 0px 0px 40px;
-                        .mixin_image(url('../../static/picture/recharge/zhifufangshi.png'));
+                        .mixin_image(url('~@static/picture/recharge/zhifufangshi.png'));
                         color: @color_white;
                         cursor: pointer;
                     }
@@ -319,7 +319,7 @@ export default {
                         cursor: pointer;
                         span{
                             .mixin_span(100%,100%,none,@color_white,left);
-                            .mixin_image(url('../../static/picture/recharge/money.png'));
+                            .mixin_image(url('~@static/picture/recharge/money.png'));
                             img{
                                 .mixin_img(53.5%,60%);
                                 float: left;

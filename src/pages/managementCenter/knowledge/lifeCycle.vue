@@ -34,7 +34,7 @@ main.js
         template: '<app/>'
     })
     5.加载js或css
-    import '../static/capital/flexible.js';
+    import '@static/capital/flexible.js';
     6.引入组件
     //引入iview组件(不支持移动端)  npm install iview --save
     import iView from 'iview'
@@ -65,7 +65,7 @@ main.js
         const loaders = options.usePostCSS ? [cssLoader, postcssLoader, px2remLoader] : [cssLoader, px2remLoader]
     npm install lib-flexible --save
     npm install px2rem-loader --save-dev
-    import '../static/capital/flexible.js';//加载js，并540改document.body.clientWidth
+    import '@static/capital/flexible.js';//加载js，并540改document.body.clientWidth
     配置build/utils.js，加入px2rem-loader
 
 router/index.js

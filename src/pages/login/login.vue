@@ -2,8 +2,8 @@
 <template>
     <section id="login">
         <div class="entertainment">
-            <img class="login-logo" src="../../../static/picture/login/logo2.png"/>
-            <img class="big-fish" src="../../../static/picture/login/fish.png"/>
+            <img class="login-logo" src="@static/picture/login/logo2.png"/>
+            <img class="big-fish" src="@static/picture/login/fish.png"/>
                 <div class="sign-frame">
                     <div class="code-and-service">
                         <span @click="customerService()"></span>
@@ -25,13 +25,13 @@
                             -->
                             <input :type="eyeType" maxlength="12" v-model.trim="password_number" placeholder="请输入登陆密码" name="password" autocomplete="new-password"></input>
                             <div @click="eyeMeans">
-                                <img v-if="eyeType=='text'" class="zhengyan" src="../../../static/picture/login/zhengyan.png"/>
-                                <img v-else class="biyan" src="../../../static/picture/login/biyan.png"/>
+                                <img v-if="eyeType=='text'" class="zhengyan" src="@static/picture/login/zhengyan.png"/>
+                                <img v-else class="biyan" src="@static/picture/login/biyan.png"/>
                             </div>
                         </div>
                         </form>
                         <div class="remember-and-forget">
-                            <div class="rectangle" @click="rememberMeans()"><img v-show="remember_checked" src="../../../static/picture/login/jizhu.png"/></div>
+                            <div class="rectangle" @click="rememberMeans()"><img v-show="remember_checked" src="@static/picture/login/jizhu.png"/></div>
                             <span>记住密码</span>
                             <!-- <span @click="forgetPassword">忘记密码</span> -->
                         </div>
@@ -218,7 +218,7 @@ export default{
     padding-bottom: 115px;
     box-sizing: border-box;
     overflow: hidden;
-    .mixin_image(url('../../../static/picture/login/bg_denglu.jpg'));
+    .mixin_image(url('~@static/picture/login/bg_denglu.jpg'));
     @color_violet: #3d1351;//字体
     @color_label: #dbcbb7;//字体
     @color_green: #0f991a;//按钮背景
@@ -251,7 +251,7 @@ export default{
         .sign-frame{
             width: 480px;
             height: 400px;
-            .mixin_image(url('../../../static/picture/login/kuankuan.png'));
+            .mixin_image(url('~@static/picture/login/kuankuan.png'));
             position: absolute;
             top: 190px;
             left: 50%;
@@ -263,12 +263,12 @@ export default{
                     width: 105px;
                     height: 34px;
                     float: right;
-                    .mixin_image(url('../../../static/picture/login/kefu.png'));
+                    .mixin_image(url('~@static/picture/login/kefu.png'));
                     cursor: pointer;
                     margin: 3px 3px 0px 0px;
                 }
                 span:nth-of-type(1):hover{
-                    .mixin_image(url('../../../static/picture/login/kefu_hover.png'));
+                    .mixin_image(url('~@static/picture/login/kefu_hover.png'));
                 }
             }
             .form-information{
@@ -279,7 +279,7 @@ export default{
                 .account,.password-enter{
                     width: 100%;
                     height: 50px;
-                    .mixin_image(url('../../../static/picture/login/juxingkuang.png'));
+                    .mixin_image(url('~@static/picture/login/juxingkuang.png'));
                     color: @color_white;
                     border-radius: 4px;
                     border: 1px solid #b1923f;
@@ -333,7 +333,7 @@ export default{
                     .rectangle{
                         width: 18px;
                         height: 18px;
-                        .mixin_image(url('../../../static/picture/login/fuxuankuang.png'));
+                        .mixin_image(url('~@static/picture/login/fuxuankuang.png'));
                         position: absolute;
                         top: 50%;
                         left: 5px;
@@ -376,10 +376,10 @@ export default{
                         border-radius: 4px;
                         font-size: 16px;
                         font-weight: 600;
-                        .mixin_image(url('../../../static/picture/login/denglu.jpg'));
+                        .mixin_image(url('~@static/picture/login/denglu.jpg'));
                     }
                     span:nth-of-type(1):hover{
-                        .mixin_image(url('../../../static/picture/login/denglu_hover.jpg'));
+                        .mixin_image(url('~@static/picture/login/denglu_hover.jpg'));
                     }
                     span:nth-of-type(2){
                         .mixin_span(48%,50px,none,white,center);
@@ -387,10 +387,10 @@ export default{
                         border-radius: 4px;
                         font-size: 16px;
                         font-weight: 600;
-                        .mixin_image(url('../../../static/picture/login/kuaisuzhuce.jpg'));
+                        .mixin_image(url('~@static/picture/login/kuaisuzhuce.jpg'));
                     }
                     span:nth-of-type(2):hover{
-                        .mixin_image(url('../../../static/picture/login/kuaisuzhuce_hover.jpg'));
+                        .mixin_image(url('~@static/picture/login/kuaisuzhuce_hover.jpg'));
                     }
                 }
                 .recommend{
@@ -423,13 +423,13 @@ export default{
                 .optimal{
                     width: 100%;
                     height: 50px;
-                    .mixin_image(url('../../../static/picture/login/xuanxian.png'));
+                    .mixin_image(url('~@static/picture/login/xuanxian.png'));
                     cursor: pointer;
                     font-size: 16px;
                     font-weight: 600; 
                 }
                 .optimal:hover{
-                    .mixin_image(url('../../../static/picture/login/xuanxian_hover.png'));
+                    .mixin_image(url('~@static/picture/login/xuanxian_hover.png'));
                 }
             }
         }

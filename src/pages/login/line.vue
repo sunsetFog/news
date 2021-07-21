@@ -2,13 +2,13 @@
 <template>
   <section id="line">
       <div class="entertainment">
-          <img class="login-logo" src="../../../static/picture/login/logo2.png"/>
-          <img class="big-fish" src="../../../static/picture/login/fish.png"/>
+          <img class="login-logo" src="@static/picture/login/logo2.png"/>
+          <img class="big-fish" src="@static/picture/login/fish.png"/>
 
             <div class="circuit-detection">
                 <div class="testing-header">
                     <label>线路检测</label>
-                    <img @click="rapidRegistration('home')" src="../../../static/picture/login/kuaisudenglu.png"/>
+                    <img @click="rapidRegistration('home')" src="@static/picture/login/kuaisudenglu.png"/>
                     <span>快速登陆</span>
                 </div>
                 <div class="example-detection">
@@ -81,21 +81,21 @@ export default{
   created(){
       
       for(let i=0;i<this.line_list.length;i++){
-          this.line_list[i].circular1 = '../../../static/picture/login/luxian1.png';
-          this.line_list[i].circular2 = '../../../static/picture/login/luxian2.png';
-          this.line_list[i].circular3 = '../../../static/picture/login/luxian3.png';
-          this.line_list[i].signal1 = 'url(../../../static/picture/login/luxian1jindu.png)';
-          this.line_list[i].signal2 = 'url(../../../static/picture/login/luxian2jindu.png)';
-          this.line_list[i].signal3 = 'url(../../../static/picture/login/luxian3jindu.png)';
-          this.line_list[i].type1 = '../../../static/picture/login/luxian1shuoming.png';
-          this.line_list[i].type2 = '../../../static/picture/login/luxian2shuoming.png';
-          this.line_list[i].type3 = '../../../static/picture/login/luxian3shuoming.png';
-          this.line_list[i].enter1 = '../../../static/picture/login/luxian1jinru.png';
-          this.line_list[i].enter2 = '../../../static/picture/login/luxian2jinru.png';
-          this.line_list[i].enter3 = '../../../static/picture/login/luxian3jinru.png';
-          this.line_list[i].progress1 =  'url(../../../static/picture/login/luxian11jindu.png)';
-          this.line_list[i].progress2 = 'url(../../../static/picture/login/luxian22jindu.png)';
-          this.line_list[i].progress3 = 'url(../../../static/picture/login/luxian33jindu.png)';
+          this.line_list[i].circular1 = require('@static/picture/login/luxian1.png');
+          this.line_list[i].circular2 = require('@static/picture/login/luxian2.png');
+          this.line_list[i].circular3 = require('@static/picture/login/luxian3.png');
+          this.line_list[i].signal1 = 'url(~@static/picture/login/luxian1jindu.png)';
+          this.line_list[i].signal2 = 'url(~@static/picture/login/luxian2jindu.png)';
+          this.line_list[i].signal3 = 'url(~@static/picture/login/luxian3jindu.png)';
+          this.line_list[i].type1 = require('@static/picture/login/luxian1shuoming.png');
+          this.line_list[i].type2 = require('@static/picture/login/luxian2shuoming.png');
+          this.line_list[i].type3 = require('@static/picture/login/luxian3shuoming.png');
+          this.line_list[i].enter1 = require('@static/picture/login/luxian1jinru.png');
+          this.line_list[i].enter2 = require('@static/picture/login/luxian2jinru.png');
+          this.line_list[i].enter3 = require('@static/picture/login/luxian3jinru.png');
+          this.line_list[i].progress1 =  'url(~@static/picture/login/luxian11jindu.png)';
+          this.line_list[i].progress2 = 'url(~@static/picture/login/luxian22jindu.png)';
+          this.line_list[i].progress3 = 'url(~@static/picture/login/luxian33jindu.png)';
       }
   },
   methods: {
@@ -112,7 +112,7 @@ export default{
     padding-bottom: 115px;
     box-sizing: border-box;
     overflow: hidden;
-    .mixin_image(url('../../../static/picture/login/bg_denglu.jpg'));
+    .mixin_image(url('~@static/picture/login/bg_denglu.jpg'));
     @color_violet: #3d1351;//字体
     @color_stroke: #143597;
     .entertainment{
@@ -135,7 +135,7 @@ export default{
         .circuit-detection{
             width: 660px;
             height: 450px;
-            .mixin_image(url('../../../static/picture/login/luxiankuan.png'));
+            .mixin_image(url('~@static/picture/login/luxiankuan.png'));
             position: absolute;
             top: 290px;
             left: 50%;

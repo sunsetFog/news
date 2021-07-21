@@ -10,7 +10,7 @@
                 </el-carousel>
        </div>
        <div class="enter-game">
-           <img class="big-fish" src="../../../static/picture/login/fish.png" @click="fishMeans()"/>
+           <img class="big-fish" src="@static/picture/login/fish.png" @click="fishMeans()"/>
            <div class="advertisement">
 
            </div>
@@ -44,38 +44,38 @@ export default{
     data(){
         return{
             card_picture: [
-                {url: '../../../static/picture/banner/1.jpg'},
-                {url: '../../../static/picture/banner/2.jpg'},
-                {url: '../../../static/picture/banner/4.jpg'},
-                {url: '../../../static/picture/banner/6.jpg'},
-                {url: '../../../static/picture/banner/7.jpg'},
-                {url: '../../../static/picture/banner/8.jpg'}
-                // {url: '../../../static/picture/banner/original/photo2.jpg'},
-                // {url: '../../../static/picture/banner/original/banner.jpg'}
+                {url: require('@static/picture/banner/1.jpg')},
+                {url: require('@static/picture/banner/2.jpg')},
+                {url: require('@static/picture/banner/4.jpg')},
+                {url: require('@static/picture/banner/6.jpg')},
+                {url: require('@static/picture/banner/7.jpg')},
+                {url: require('@static/picture/banner/8.jpg')}
+                // {url: require('@static/picture/banner/original/photo2.jpg')},
+                // {url: require('@static/picture/banner/original/banner.jpg')}
             ],
             game_list: [
                 {pages: [
-                    {url: '../../../static/picture/game/z1.png',margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
-                    {url: '../../../static/picture/game/z2.png',margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
-                    {url: '../../../static/picture/game/z3.png',margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
-                    {url: '../../../static/picture/game/z4.png',margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
-                    {url: '../../../static/picture/game/z5.png',margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
-                    {url: '../../../static/picture/game/z6.png',margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
-                    {url: '../../../static/picture/game/z7.png',margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
-                    {url: '../../../static/picture/game/z8.png',margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
+                    {url: require('@static/picture/game/z1.png'),margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
+                    {url: require('@static/picture/game/z2.png'),margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
+                    {url: require('@static/picture/game/z3.png'),margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
+                    {url: require('@static/picture/game/z4.png'),margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
+                    {url: require('@static/picture/game/z5.png'),margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
+                    {url: require('@static/picture/game/z6.png'),margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
+                    {url: require('@static/picture/game/z7.png'),margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
+                    {url: require('@static/picture/game/z8.png'),margin: '0px 0px 0px 0px',height: '100%',top: '0px'},
 
-                    // {url: '../../../static/picture/game/original/longhudou.png',margin: '0px 5px 60px 0px',height: '100%',top: '0px'},
-                    // {url: '../../../static/picture/game/original/baijiale.png',margin: '0px 5px 60px 0px',height: '112.5%',top: '-12.5%'},
-                    // {url: '../../../static/picture/game/original/bairenniuniu.png',margin: '0px 5px 60px 0px',height: '121.4%',top: '-21.4%'},
-                    // {url: '../../../static/picture/game/original/shuiguoji.png',margin: '0px 0px 60px 0px',height: '100%',top: '0px'},
-                    // {url: '../../../static/picture/game/original/buyu.png',margin: '0px 5px 0px 0px',height: '117.1%',top: '-17.1%'},
-                    // {url: '../../../static/picture/game/original/shuihu.png',margin: '0px 5px 0px 0px',height: '100%',top: '0px'},
-                    // {url: '../../../static/picture/game/original/doudizhu.png',margin: '0px 5px 0px 0px',height: '100%',top: '0px'},
-                    // {url: '../../../static/picture/game/original/honghei.png',margin: '0px 0px 0px 0px',height: '110.7%',top: '-10.7%'}
+                    // {url: require('@static/picture/game/original/longhudou.png'),margin: '0px 5px 60px 0px',height: '100%',top: '0px'},
+                    // {url: require('@static/picture/game/original/baijiale.png'),margin: '0px 5px 60px 0px',height: '112.5%',top: '-12.5%'},
+                    // {url: require('@static/picture/game/original/bairenniuniu.png'),margin: '0px 5px 60px 0px',height: '121.4%',top: '-21.4%'},
+                    // {url: require('@static/picture/game/original/shuiguoji.png'),margin: '0px 0px 60px 0px',height: '100%',top: '0px'},
+                    // {url: require('@static/picture/game/original/buyu.png'),margin: '0px 5px 0px 0px',height: '117.1%',top: '-17.1%'},
+                    // {url: require('@static/picture/game/original/shuihu.png'),margin: '0px 5px 0px 0px',height: '100%',top: '0px'},
+                    // {url: require('@static/picture/game/original/doudizhu.png'),margin: '0px 5px 0px 0px',height: '100%',top: '0px'},
+                    // {url: require('@static/picture/game/original/honghei.png'),margin: '0px 0px 0px 0px',height: '110.7%',top: '-10.7%'}
                 ]},
                 {pages: [
-                    {url: '../../../static/picture/game/z9.png',margin: '0px 0px 0px 0px',height: '100%',top: '0px'}
-                    // {url: '../../../static/picture/home/fengkuangniuniu.png',margin: '0px 0px 0px 0px',height: '117.1%',top: '-17.1%'}
+                    {url: require('@static/picture/game/z9.png'),margin: '0px 0px 0px 0px',height: '100%',top: '0px'}
+                    // {url: require('@static/picture/home/fengkuangniuniu.png'),margin: '0px 0px 0px 0px',height: '117.1%',top: '-17.1%'}
                 ]}
             ]
         }
@@ -146,7 +146,7 @@ export default{
     .enter-game{
         width: 100%;
         height: 1010px;
-         .mixin_image(url('../../../static/picture/home/bj-index.jpg'));
+         .mixin_image(url('~@static/picture/home/bj-index.jpg'));
          position: relative;
         .big-fish{
             .mixin_img(326px;387px);
@@ -157,7 +157,7 @@ export default{
          .advertisement{
              width: 100%;
              height: 35px;
-             .mixin_image(url('../../../static/picture/home/gonggaotiao.png'));
+             .mixin_image(url('~@static/picture/home/gonggaotiao.png'));
              position: absolute;
              left: 0px;
              top: 8px;

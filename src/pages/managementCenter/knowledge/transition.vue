@@ -21,7 +21,7 @@
 		methods:{
 			fileDownLoad(path) {
                         console.log('bingo+++66',axios);
-                        // return;@click="fileDownLoad('../../../../static/manifest.json')"
+                        // return;@click="fileDownLoad('@static/manifest.json')"
                         let urls = path.split('/');
                         axios.create().get(path,{
                             responseType: 'blob'

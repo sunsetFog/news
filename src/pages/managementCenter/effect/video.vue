@@ -6,7 +6,7 @@
             </div>
             <div class="video-body">
                 <video id="video-girl" controls width="100%" autoplay>
-                    <source src="../../../../static/video/58244a10da66c5401.mp4" type="video/mp4">
+                    <source src="@static/video/58244a10da66c5401.mp4" type="video/mp4">
                 </video>
             </div>
         </div>

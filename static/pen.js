@@ -42,14 +42,7 @@ Vue.use(Element, {
 
 
 
-flex: 1;某盒子划分剩余空间--（兄弟盒子中，只有一个盒子加flex: 1;）
-flex: 1;  flex: 2; flex: 3;按照倍数划分
 
-剩余空间分配相关属性
-flex 属性包括了 flex-basis、 flex-grow、flex-shrink
-flex-basis 用来定义子元素的默认宽或高（高需要设置flex-direction）----flex-basis: 80px;
-flex-grow 用来指定父容器多余空间的分配比率，默认值为0
-flex-shrink 用来指定父容器空间不够时子元素的缩小比例，默认为1，0不压缩
 
 
 
@@ -73,12 +66,10 @@ apple: 'no apples | one apple | {count} apples',
   马市，菜鸟教程，k发帮,我要自学网
 
 
-  width: calc(100% - 20px); 
-  100%的宽度少20px
 
 
 
-table的分页
+
 
 
 

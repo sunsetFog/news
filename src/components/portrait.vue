@@ -24,7 +24,7 @@
                     <ul>
                         <li v-for="(item,index) in portrait_head" @click="headMeans(index)">
                             <img :src="item.url"/>
-                            <img v-show="item.active" src="../../static/picture/portrait/gougou.png"/>
+                            <img v-show="item.active" src="@static/picture/portrait/gougou.png"/>
                         </li>
                     </ul>
                 </div>
@@ -32,7 +32,7 @@
                     <ul>
                         <li v-for="(item,index) in portrait_box" @click="boxMeans(index)">
                             <img :src="item.url"/>
-                            <img v-show="item.active" src="../../static/picture/portrait/gougou.png"/>
+                            <img v-show="item.active" src="@static/picture/portrait/gougou.png"/>
                         </li>
                     </ul>
                 </div>
@@ -58,40 +58,40 @@ export default {
                 {name: '修改头像',active: true},
                 {name: '修改头像框',active: false}
             ],
-            head: '../../../static/picture/portrait/ui_headImg_1.png',
-            frame: '../../../static/picture/portrait/ui_headBox_1.png',
+            head: require('@static/picture/portrait/ui_headImg_1.png'),
+            frame: require('@static/picture/portrait/ui_headBox_1.png'),
             portrait_index: 0,
             head_index: 0,
             box_index: 0,
             save_head: 0,
             save_box: 0,
             portrait_head: [
-                {url: '../../../static/picture/portrait/ui_headImg_1.png',active: false},
-                {url: '../../../static/picture/portrait/ui_headImg_2.png',active: false},
-                {url: '../../../static/picture/portrait/ui_headImg_3.png',active: false},
-                {url: '../../../static/picture/portrait/ui_headImg_4.png',active: false},
-                {url: '../../../static/picture/portrait/ui_headImg_5.png',active: false},
-                {url: '../../../static/picture/portrait/ui_headImg_6.png',active: false},
-                {url: '../../../static/picture/portrait/ui_headImg_7.png',active: false},
-                {url: '../../../static/picture/portrait/ui_headImg_8.png',active: false},
-                {url: '../../../static/picture/portrait/ui_headImg_9.png',active: false},
-                {url: '../../../static/picture/portrait/ui_headImg_10.png',active: false},
-                {url: '../../../static/picture/portrait/ui_headImg_11.png',active: false},
-                {url: '../../../static/picture/portrait/ui_headImg_12.png',active: false}
+                {url: require('@static/picture/portrait/ui_headImg_1.png'),active: false},
+                {url: require('@static/picture/portrait/ui_headImg_2.png'),active: false},
+                {url: require('@static/picture/portrait/ui_headImg_3.png'),active: false},
+                {url: require('@static/picture/portrait/ui_headImg_4.png'),active: false},
+                {url: require('@static/picture/portrait/ui_headImg_5.png'),active: false},
+                {url: require('@static/picture/portrait/ui_headImg_6.png'),active: false},
+                {url: require('@static/picture/portrait/ui_headImg_7.png'),active: false},
+                {url: require('@static/picture/portrait/ui_headImg_8.png'),active: false},
+                {url: require('@static/picture/portrait/ui_headImg_9.png'),active: false},
+                {url: require('@static/picture/portrait/ui_headImg_10.png'),active: false},
+                {url: require('@static/picture/portrait/ui_headImg_11.png'),active: false},
+                {url: require('@static/picture/portrait/ui_headImg_12.png'),active: false}
             ],
             portrait_box: [
-                {url: '../../../static/picture/portrait/ui_headBox_1.png',active: false},
-                {url: '../../../static/picture/portrait/ui_headBox_2.png',active: false},
-                {url: '../../../static/picture/portrait/ui_headBox_3.png',active: false},
-                {url: '../../../static/picture/portrait/ui_headBox_4.png',active: false},
-                {url: '../../../static/picture/portrait/ui_headBox_5.png',active: false},
-                {url: '../../../static/picture/portrait/ui_headBox_6.png',active: false},
-                {url: '../../../static/picture/portrait/ui_headBox_7.png',active: false},
-                {url: '../../../static/picture/portrait/ui_headBox_8.png',active: false},
-                {url: '../../../static/picture/portrait/ui_headBox_9.png',active: false},
-                {url: '../../../static/picture/portrait/ui_headBox_10.png',active: false},
-                {url: '../../../static/picture/portrait/ui_headBox_11.png',active: false},
-                {url: '../../../static/picture/portrait/ui_headBox_12.png',active: false}
+                {url: require('@static/picture/portrait/ui_headBox_1.png'),active: false},
+                {url: require('@static/picture/portrait/ui_headBox_2.png'),active: false},
+                {url: require('@static/picture/portrait/ui_headBox_3.png'),active: false},
+                {url: require('@static/picture/portrait/ui_headBox_4.png'),active: false},
+                {url: require('@static/picture/portrait/ui_headBox_5.png'),active: false},
+                {url: require('@static/picture/portrait/ui_headBox_6.png'),active: false},
+                {url: require('@static/picture/portrait/ui_headBox_7.png'),active: false},
+                {url: require('@static/picture/portrait/ui_headBox_8.png'),active: false},
+                {url: require('@static/picture/portrait/ui_headBox_9.png'),active: false},
+                {url: require('@static/picture/portrait/ui_headBox_10.png'),active: false},
+                {url: require('@static/picture/portrait/ui_headBox_11.png'),active: false},
+                {url: require('@static/picture/portrait/ui_headBox_12.png'),active: false}
             ],
         }
     },
@@ -197,7 +197,7 @@ export default {
                 }
             }
             .type-active{
-                .mixin_image(url('../../static/picture/recharge/beijingkuang.png'));
+                .mixin_image(url('~@static/picture/recharge/beijingkuang.png'));
             }
             ul{
                 li{
@@ -218,7 +218,7 @@ export default {
                         position: absolute;
                         right: -10px;
                         top: 0px;
-                        .mixin_image(url('../../static/picture/recharge/zhizhen.png'));
+                        .mixin_image(url('~@static/picture/recharge/zhizhen.png'));
                     }
                 }
             }

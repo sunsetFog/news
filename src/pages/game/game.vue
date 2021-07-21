@@ -112,7 +112,7 @@
     width: 100%;
     overflow: hidden;
     min-height: 800px;
-    .mixin_image(url('../../../static/picture/center/bj-youxi.jpg'));
+    .mixin_image(url('~@static/picture/center/bj-youxi.jpg'));
     .game-example{
         width: 100%;
         height: 80px;

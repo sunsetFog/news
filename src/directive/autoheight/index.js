@@ -1,6 +1,9 @@
 import { debounce } from 'lodash'
 const mideaAutoheight = {}
 
+/*
+binding.value-----  传入参数{tabs:true, height:'高度', subHeight:'高度差'}
+ */
 function calcHeight(bindValue, height) {
     let elHeight = height
     if (bindValue) {

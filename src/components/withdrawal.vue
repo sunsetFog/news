@@ -22,9 +22,9 @@
                 </div>
                 <div class="withdrawal-amount-s">
                     <label>提款金额:</label>
-                    <img src="../../static/picture/recharge/jian.png" :class="{'amount-disable': withdrawal_amount=='','amount-pointer': withdrawal_amount!=''}" @click="addition(1)"/>
+                    <img src="@static/picture/recharge/jian.png" :class="{'amount-disable': withdrawal_amount=='','amount-pointer': withdrawal_amount!=''}" @click="addition(1)"/>
                     <input v-model.trim="withdrawal_amount" type="text" placeholder="请输入提款金额"/>
-                    <img src="../../static/picture/recharge/jia.png" @click="addition(2)"/>
+                    <img src="@static/picture/recharge/jia.png" @click="addition(2)"/>
                 </div>
                 <div class="account-number" v-show="withdrawal_types[0].active">
                     <label>收取银行卡:</label>
@@ -194,7 +194,7 @@ export default {
             background: @color_tone20;
             font-size: @font_size20;
             .type-active{
-                .mixin_image(url('../../static/picture/recharge/beijingkuang.png'));
+                .mixin_image(url('~@static/picture/recharge/beijingkuang.png'));
             }
             ul{
                 li{
@@ -215,7 +215,7 @@ export default {
                         position: absolute;
                         right: -10px;
                         top: 0px;
-                        .mixin_image(url('../../static/picture/recharge/zhizhen.png'));
+                        .mixin_image(url('~@static/picture/recharge/zhizhen.png'));
                     }
                 }
             }

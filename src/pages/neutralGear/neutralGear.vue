@@ -1,6 +1,6 @@
 <template>
     <section id="neutralGear">
-        <img src="../../../static/picture/portrait/logo2.png"/>
+        <img src="@static/picture/portrait/logo2.png"/>
         <div class="progress-example">
             <span :style="{width: percentage+'%',borderTopRightRadius: radius.top_right,borderBottomRightRadius: radius.bottom_right}"></span>
             <!-- <el-progress :percentage="percentage" :color="customColor" :show-text="false" :width="155" :stroke-width="20"></el-progress> -->
@@ -61,7 +61,7 @@ export default {
 #neutralGear{
     width: 100%;
     overflow: hidden;
-    .mixin_image(url('../../../static/picture/portrait/bg_loading.jpg'));
+    .mixin_image(url('~@static/picture/portrait/bg_loading.jpg'));
     position: relative;
     img{
         width: 550px;
@@ -74,7 +74,7 @@ export default {
     .progress-example{
         width: 860px;
         height: 46px;
-        .mixin_image(url('../../../static/picture/portrait/kuang.png'));
+        .mixin_image(url('~@static/picture/portrait/kuang.png'));
         overflow: hidden;
         border-radius: 20px;
         padding: 5px 0px 0px 6px;
@@ -86,7 +86,7 @@ export default {
         span{
             height: 35px;
             display: inline-block;
-            .mixin_image(url('../../../static/picture/portrait/jindus.png'));
+            .mixin_image(url('~@static/picture/portrait/jindus.png'));
             float: left;
             overflow: hidden;
             border-top-right-radius: 15px;

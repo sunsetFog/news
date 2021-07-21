@@ -1,7 +1,7 @@
 <template>
 <section id="management">
     <div class="example-frame">
-        <img class="big-fish" src="../../../static/picture/login/fish.png"/>
+        <img class="big-fish" src="@static/picture/login/fish.png"/>
         <div class="manage--content">
             <router-view v-if="!manage_state"></router-view>
             <div class="manage-content-left" v-if="manage_state">
@@ -18,7 +18,7 @@
                     active-text-color="#ffd04b"
                     >
                     
-                    <el-menu-item index="/mcenter/crux"><div style="width: 100%;height: 100%;"><img class="icon-url-margin" src="../../../static/picture/center/shezhi.png"/>管理中心</div></el-menu-item>
+                    <el-menu-item index="/mcenter/crux"><div style="width: 100%;height: 100%;"><img class="icon-url-margin" src="@static/picture/center/shezhi.png"/>管理中心</div></el-menu-item>
 
                     <el-submenu :index="item.key" :key="item.key" v-for="(item,index01) in menuList">
                         <template slot="title">
@@ -77,71 +77,71 @@ export default{
         return{
             manage_state: true,//管理中心
             menuList: [
-                {key: '1',label: '标签样式',path: '',icon: '../../../static/picture/center/shouyi.png',effect:[
-                    {key:'1-2-1',label: '代码规范',path: '/mcenter/standard',icon: '../../../static/picture/center/gonggao.png',effect:[]},
-                    {key:'1-2-2',label: '样式',path: '/mcenter/css',icon: '../../../static/picture/center/gonggao.png',effect:[]},
-                    {key:'1-2-3',label: '标签',path: '/mcenter/tags',icon: '../../../static/picture/center/gonggao.png',effect:[]},
-                    {key:'1-2-4',label: 'flex弹性布局',path: '/mcenter/flex',icon: '../../../static/picture/center/gonggao.png',effect:[]},
-                    {key:'1-2-5',label: '样式例子',path: '/mcenter/cssDemo',icon: '../../../static/picture/center/gonggao.png',effect:[]},
+                {key: '1',label: '标签样式',path: '',icon: require('@static/picture/center/shouyi.png'),effect:[
+                    {key:'1-2-1',label: '代码规范',path: '/mcenter/standard',icon: require('@static/picture/center/gonggao.png'),effect:[]},
+                    {key:'1-2-2',label: '样式',path: '/mcenter/css',icon: require('@static/picture/center/gonggao.png'),effect:[]},
+                    {key:'1-2-3',label: '标签',path: '/mcenter/tags',icon: require('@static/picture/center/gonggao.png'),effect:[]},
+                    {key:'1-2-4',label: 'flex弹性布局',path: '/mcenter/flex',icon: require('@static/picture/center/gonggao.png'),effect:[]},
+                    {key:'1-2-5',label: '样式例子',path: '/mcenter/cssDemo',icon: require('@static/picture/center/gonggao.png'),effect:[]},
                 ]},
-                {key: '2',label: 'javaScript',path: '',icon: '../../../static/picture/center/caiwu.png',effect:[
-                    {key:'2-2-1',label: '必学1',path: '/mcenter/learn1?id=128',icon: '../../../static/picture/center/wanjia.png',effect:[]},
-                    {key:'2-2-2',label: '必学2',path: '/mcenter/learn2',icon: '../../../static/picture/center/wanjia.png',effect:[]},
-                    {key:'2-2-3',label: '必学3',path: '/mcenter/learn3',icon: '../../../static/picture/center/wanjia.png',effect:[]},
-                    {key:'2-2-4',label: '处理数据',path: '/mcenter/processing',icon: '../../../static/picture/center/wanjia.png',effect:[]},
-                    {key:'2-2-5',label: 'es6',path: '/mcenter/es6',icon: '../../../static/picture/center/wanjia.png',effect:[]},
-                    {key:'2-2-6',label: 'js例子',path: '/mcenter/jsDemo',icon: '../../../static/picture/center/wanjia.png',effect:[]},
-                    {key:'2-2-7',label: '赋值-浅拷贝-深拷贝',path: '/mcenter/research',icon: '../../../static/picture/center/wanjia.png',effect:[]},
+                {key: '2',label: 'javaScript',path: '',icon: require('@static/picture/center/caiwu.png'),effect:[
+                    {key:'2-2-1',label: '必学1',path: '/mcenter/learn1?id=128',icon: require('@static/picture/center/wanjia.png'),effect:[]},
+                    {key:'2-2-2',label: '必学2',path: '/mcenter/learn2',icon: require('@static/picture/center/wanjia.png'),effect:[]},
+                    {key:'2-2-3',label: '必学3',path: '/mcenter/learn3',icon: require('@static/picture/center/wanjia.png'),effect:[]},
+                    {key:'2-2-4',label: '处理数据',path: '/mcenter/processing',icon: require('@static/picture/center/wanjia.png'),effect:[]},
+                    {key:'2-2-5',label: 'es6',path: '/mcenter/es6',icon: require('@static/picture/center/wanjia.png'),effect:[]},
+                    {key:'2-2-6',label: 'js例子',path: '/mcenter/jsDemo',icon: require('@static/picture/center/wanjia.png'),effect:[]},
+                    {key:'2-2-7',label: '赋值-浅拷贝-深拷贝',path: '/mcenter/research',icon: require('@static/picture/center/wanjia.png'),effect:[]},
                 ]},
-                {key: '3',label: 'vue知识点',path: '',icon: '../../../static/picture/center/pai.png',effect:[
-                    {key:'3-2-1',label: 'vue指令',path: '/mcenter/v_tag',icon: '../../../static/picture/center/qipai.png',effect:[]},
-                    {key:'3-2-2',label: 'vue修饰符',path: '/mcenter/modifier',icon: '../../../static/picture/center/qipai.png',effect:[]},
-                    {key:'3-2-3',label: '生命周期',path: '/mcenter/lifecycle',icon: '../../../static/picture/center/qipai.png',effect:[]},
-                    {key:'3-2-4',label: 'vuex',path: '/mcenter/vuex',icon: '../../../static/picture/center/tuandui.png',effect:[]},
-                    {key:'3-2-5',label: '组件遍历',path: '/mcenter/ergodic',icon: '../../../static/picture/center/daili.png',effect:[]},
-                    {key:'3-2-6',label: '路由传参',path: '/mcenter/router',icon: '../../../static/picture/center/wanjia.png',effect:[]},
-                    {key:'3-2-7',label: '动态样式',path: '/mcenter/class',icon: '../../../static/picture/center/caiwu.png',effect:[]},
-                    {key:'3-2-8',label: '引用less',path: '/mcenter/quote',icon: '../../../static/picture/center/shouyi.png',effect:[]},
-                    {key:'3-2-9',label: '子父通讯',path: '/mcenter/parent',icon: '../../../static/picture/center/tuiguang.png',effect:[]},
-                    {key:'3-2-10',label: '全局方法',path: '/mcenter/public',icon: '../../../static/picture/center/gonggao.png',effect:[]},
-                    {key:'3-2-11',label: 'watch监听',path: '/mcenter/watch',icon: '../../../static/picture/center/caiwu.png',effect:[]},
-                    {key:'3-2-12',label: 'computed',path: '/mcenter/computed',icon: '../../../static/picture/center/caiwu.png',effect:[]},
-                    {key:'3-2-13',label: 'filters',path: '/mcenter/filters',icon: '../../../static/picture/center/caiwu.png',effect:[]},
-                    {key:'3-2-14',label: 'transition',path: '/mcenter/transition',icon: '../../../static/picture/center/caiwu.png',effect:[]},
-                    {key:'3-2-15',label: 'refs',path: '/mcenter/refs',icon: '../../../static/picture/center/caiwu.png',effect:[]},
-                    {key:'3-2-16',label: 'mock模拟接口',path: '/mcenter/mock',icon: '../../../static/picture/center/caiwu.png',effect:[]},
-                    {key:'3-2-17',label: '缓存',path: '/mcenter/cache',icon: '../../../static/picture/center/caiwu.png',effect:[]},
-                    {key:'3-2-18',label: 'axios配置',path: '/mcenter/axios',icon: '../../../static/picture/center/caiwu.png',effect:[]},
-                    {key:'3-2-19',label: '图片相对路径',path: '/mcenter/relativePath',icon: '../../../static/picture/center/caiwu.png',effect:[]},
-                    {key:'3-2-20',label: 'mixins',path: '/mcenter/sunMixin',icon: '../../../static/picture/center/caiwu.png',effect:[]}
+                {key: '3',label: 'vue知识点',path: '',icon: require('@static/picture/center/pai.png'),effect:[
+                    {key:'3-2-1',label: 'vue指令',path: '/mcenter/v_tag',icon: require('@static/picture/center/qipai.png'),effect:[]},
+                    {key:'3-2-2',label: 'vue修饰符',path: '/mcenter/modifier',icon: require('@static/picture/center/qipai.png'),effect:[]},
+                    {key:'3-2-3',label: '生命周期',path: '/mcenter/lifecycle',icon: require('@static/picture/center/qipai.png'),effect:[]},
+                    {key:'3-2-4',label: 'vuex',path: '/mcenter/vuex',icon: require('@static/picture/center/tuandui.png'),effect:[]},
+                    {key:'3-2-5',label: '组件遍历',path: '/mcenter/ergodic',icon: require('@static/picture/center/daili.png'),effect:[]},
+                    {key:'3-2-6',label: '路由传参',path: '/mcenter/router',icon: require('@static/picture/center/wanjia.png'),effect:[]},
+                    {key:'3-2-7',label: '动态样式',path: '/mcenter/class',icon: require('@static/picture/center/caiwu.png'),effect:[]},
+                    {key:'3-2-8',label: '引用less',path: '/mcenter/quote',icon: require('@static/picture/center/shouyi.png'),effect:[]},
+                    {key:'3-2-9',label: '子父通讯',path: '/mcenter/parent',icon: require('@static/picture/center/tuiguang.png'),effect:[]},
+                    {key:'3-2-10',label: '全局方法',path: '/mcenter/public',icon: require('@static/picture/center/gonggao.png'),effect:[]},
+                    {key:'3-2-11',label: 'watch监听',path: '/mcenter/watch',icon: require('@static/picture/center/caiwu.png'),effect:[]},
+                    {key:'3-2-12',label: 'computed',path: '/mcenter/computed',icon: require('@static/picture/center/caiwu.png'),effect:[]},
+                    {key:'3-2-13',label: 'filters',path: '/mcenter/filters',icon: require('@static/picture/center/caiwu.png'),effect:[]},
+                    {key:'3-2-14',label: 'transition',path: '/mcenter/transition',icon: require('@static/picture/center/caiwu.png'),effect:[]},
+                    {key:'3-2-15',label: 'refs',path: '/mcenter/refs',icon: require('@static/picture/center/caiwu.png'),effect:[]},
+                    {key:'3-2-16',label: 'mock模拟接口',path: '/mcenter/mock',icon: require('@static/picture/center/caiwu.png'),effect:[]},
+                    {key:'3-2-17',label: '缓存',path: '/mcenter/cache',icon: require('@static/picture/center/caiwu.png'),effect:[]},
+                    {key:'3-2-18',label: 'axios配置',path: '/mcenter/axios',icon: require('@static/picture/center/caiwu.png'),effect:[]},
+                    {key:'3-2-19',label: '图片相对路径',path: '/mcenter/relativePath',icon: require('@static/picture/center/caiwu.png'),effect:[]},
+                    {key:'3-2-20',label: 'mixins',path: '/mcenter/sunMixin',icon: require('@static/picture/center/caiwu.png'),effect:[]}
                 ]},
-                {key: '4',label: 'vue功能集',path: '',icon: '../../../static/picture/center/qipai.png',effect: [
-                    {key: '4-2-1',label: '下载',path: '/mcenter/download_ex',icon: '../../../static/picture/center/qipai.png',effect:[]},
-                    {key: '4-2-2',label: 'copy复制',path: '/mcenter/copy',icon: '../../../static/picture/center/qipai.png',effect:[]},
-                    {key: '4-2-3',label: '字段变量',path: '/mcenter/field',icon: '../../../static/picture/center/qipai.png',effect:[]},
-                    {key: '4-2-4',label: '返回顶部',path: '/mcenter/backtotop',icon: '../../../static/picture/center/qipai.png',effect:[]},
-                    {key: '4-2-5',label: '分页封装',path: '/mcenter/pagination',icon: '../../../static/picture/center/qipai.png',effect:[]},
-                    {key: '4-2-6',label: '上传图片列表',path: '/mcenter/upload',icon: '../../../static/picture/center/qipai.png',effect:[]},
-                    {key: '4-2-7',label: '单个上传图片',path: '/mcenter/upload1',icon: '../../../static/picture/center/qipai.png',effect:[]},
-                    {key: '4-2-8',label: '懒加载',path: '/mcenter/lazy',icon: '../../../static/picture/center/qipai.png',effect:[]},
-                    {key: '4-2-9',label: '视频',path: '/mcenter/video',icon: '../../../static/picture/center/qipai.png',effect:[]},
-                    {key: '4-2-10',label: '文本编辑器',path: '/mcenter/editor',icon: '../../../static/picture/center/qipai.png',effect:[]},
-                    {key: '4-2-11',label: '二维码',path: '/mcenter/vueqr',icon: '../../../static/picture/center/qipai.png',effect:[]},
-                    {key: '4-2-12',label: '浏览器监听',path: '/mcenter/listener',icon: '../../../static/picture/center/qipai.png',effect:[]},
-                    {key: '4-2-13',label: 'websocket',path: '/mcenter/websocket',icon: '../../../static/picture/center/qipai.png',effect:[]},
-                    {key: '4-2-14',label: 'pc自适应',path: '/adaption',icon: '../../../static/picture/center/qipai.png',effect:[]},
-                    {key: '4-2-15',label: '水波',path: '/wave',icon: '../../../static/picture/center/qipai.png',effect:[]},
-                    {key: '4-2-16',label: '开新窗口',path: '/mcenter/window_tab',icon: '../../../static/picture/center/qipai.png',effect:[]},
+                {key: '4',label: 'vue功能集',path: '',icon: require('@static/picture/center/qipai.png'),effect: [
+                    {key: '4-2-1',label: '下载',path: '/mcenter/download_ex',icon: require('@static/picture/center/qipai.png'),effect:[]},
+                    {key: '4-2-2',label: 'copy复制',path: '/mcenter/copy',icon: require('@static/picture/center/qipai.png'),effect:[]},
+                    {key: '4-2-3',label: '字段变量',path: '/mcenter/field',icon: require('@static/picture/center/qipai.png'),effect:[]},
+                    {key: '4-2-4',label: '返回顶部',path: '/mcenter/backtotop',icon: require('@static/picture/center/qipai.png'),effect:[]},
+                    {key: '4-2-5',label: '分页封装',path: '/mcenter/pagination',icon: require('@static/picture/center/qipai.png'),effect:[]},
+                    {key: '4-2-6',label: '上传图片列表',path: '/mcenter/upload',icon: require('@static/picture/center/qipai.png'),effect:[]},
+                    {key: '4-2-7',label: '单个上传图片',path: '/mcenter/upload1',icon: require('@static/picture/center/qipai.png'),effect:[]},
+                    {key: '4-2-8',label: '懒加载',path: '/mcenter/lazy',icon: require('@static/picture/center/qipai.png'),effect:[]},
+                    {key: '4-2-9',label: '视频',path: '/mcenter/video',icon: require('@static/picture/center/qipai.png'),effect:[]},
+                    {key: '4-2-10',label: '文本编辑器',path: '/mcenter/editor',icon: require('@static/picture/center/qipai.png'),effect:[]},
+                    {key: '4-2-11',label: '二维码',path: '/mcenter/vueqr',icon: require('@static/picture/center/qipai.png'),effect:[]},
+                    {key: '4-2-12',label: '浏览器监听',path: '/mcenter/listener',icon: require('@static/picture/center/qipai.png'),effect:[]},
+                    {key: '4-2-13',label: 'websocket',path: '/mcenter/websocket',icon: require('@static/picture/center/qipai.png'),effect:[]},
+                    {key: '4-2-14',label: 'pc自适应',path: '/adaption',icon: require('@static/picture/center/qipai.png'),effect:[]},
+                    {key: '4-2-15',label: '水波',path: '/wave',icon: require('@static/picture/center/qipai.png'),effect:[]},
+                    {key: '4-2-16',label: '开新窗口',path: '/mcenter/window_tab',icon: require('@static/picture/center/qipai.png'),effect:[]},
                 ]},
-                {key: '5',label: '项目报表',path: '',icon: '../../../static/picture/center/tuiguang.png',effect:[
-                    {key:'5-2-1',label: 'echart图表',path: '/mcenter/echartsDemo1',icon: '../../../static/picture/center/daili.png',effect:[]},
+                {key: '5',label: '项目报表',path: '',icon: require('@static/picture/center/tuiguang.png'),effect:[
+                    {key:'5-2-1',label: 'echart图表',path: '/mcenter/echartsDemo1',icon: require('@static/picture/center/daili.png'),effect:[]},
                 ]},
-                {key: '6',label: '拓展知识',path: '',icon: '../../../static/picture/center/tuiguang.png',effect:[
-                    {key:'6-2-1',label: 'canvas',path: '/mcenter/canvas',icon: '../../../static/picture/center/caiwu.png',effect:[]},
-                    {key:'6-2-2',label: 'base64解密',path: '/mcenter/base64',icon: '../../../static/picture/center/caiwu.png',effect:[]},
+                {key: '6',label: '拓展知识',path: '',icon: require('@static/picture/center/tuiguang.png'),effect:[
+                    {key:'6-2-1',label: 'canvas',path: '/mcenter/canvas',icon: require('@static/picture/center/caiwu.png'),effect:[]},
+                    {key:'6-2-2',label: 'base64解密',path: '/mcenter/base64',icon: require('@static/picture/center/caiwu.png'),effect:[]},
                 ]},
-                {key: '7',label: '面试要谈',path: '',icon: '../../../static/picture/center/tuandui.png',effect:[
-                    {key:'7-2-1',label: '要点1',path: '/mcenter/talk1',icon: '../../../static/picture/center/tuiguang.png',effect:[]},
+                {key: '7',label: '面试要谈',path: '',icon: require('@static/picture/center/tuandui.png'),effect:[
+                    {key:'7-2-1',label: '要点1',path: '/mcenter/talk1',icon: require('@static/picture/center/tuiguang.png'),effect:[]},
                 ]},
             ],
         }
@@ -163,7 +163,7 @@ export default{
     .example-frame{
         width: 100%;
         height: 1200px;
-        .mixin_image(url('../../../static/picture/center/bg-guanli.jpg'));
+        .mixin_image(url('~@static/picture/center/bg-guanli.jpg'));
         position: relative;
         .big-fish{
             .mixin_img(326px;387px);

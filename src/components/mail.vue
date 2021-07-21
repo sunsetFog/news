@@ -10,15 +10,15 @@
             <div class="mail-content">
                 <div class="mail-example" v-for="(item,index) in mail_list.slice((pagination.page-1)*pagination.pagesize,pagination.page*pagination.pagesize)" @click="consult(index,false)">
                     <div class="picture-example">
-                        <img v-show="!item.is_readed" src="../../static/picture/recharge/weidu.png"/>
-                        <img v-show="item.is_readed" src="../../static/picture/recharge/yidu.png"/>
+                        <img v-show="!item.is_readed" src="@static/picture/recharge/weidu.png"/>
+                        <img v-show="item.is_readed" src="@static/picture/recharge/yidu.png"/>
                     </div>
                     <div class="information">
                         <span>{{item.title}}</span>
                         <span></span>
                         <span>{{item.created_at}}</span>
                         <button v-show="!item.is_readed" @click.stop="consult(index,true)">点击查阅</button>
-                        <img v-show="item.is_readed" src="../../static/picture/recharge/read.png"/>
+                        <img v-show="item.is_readed" src="@static/picture/recharge/read.png"/>
                     </div>
                 </div>
                 <div class="no-time" v-show="no_have">暂无邮件</div>
