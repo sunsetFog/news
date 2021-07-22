@@ -1,0 +1,22 @@
+{
+    "result": "S",
+    "msg": null,
+    "data": [
+        {
+            "bu_name": "集团总部",
+            "begin_amt": 18131885.65000000,
+            "row_type": "ORG_CITY",
+            "level": 3,
+            "ytd_clear_amt": 165347335.95000000,
+            "w_insert_date": 1606295666000,
+            "ytd_add_amt": 221371458.60000000,
+            "org_city_id": "A0000000011",
+            "org_id": "A1392342741",
+            "period_wid": "20201125",
+            "org_city_name": "广州公司",
+            "bu_id": "A30003353",
+            "org_name": "珠三角区域公司",
+            "end_amt": 74156008.30000000
+        }
+    ]
+}

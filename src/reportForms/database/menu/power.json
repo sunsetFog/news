@@ -1,0 +1,309 @@
+{
+    "result": "S",
+    "msg": null,
+    "data": [
+        {
+            "level": 1,
+            "code": "A7319161253",
+            "name": "夕阳红雾集团",
+            "parentCode": "A30003353",
+            "parentName": "集团总部",
+            "grandParentCode": null,
+            "grandParentName": null,
+            "type": "ORG",
+            "children": [
+                {
+                    "level": 3,
+                    "code": "A0000000021",
+                    "name": "川中公司",
+                    "parentCode": "A7319161253",
+                    "parentName": "川渝区域公司",
+                    "grandParentCode": null,
+                    "grandParentName": null,
+                    "type": "CITY_ORG",
+                    "children": [
+                        {
+                            "level": 3,
+                            "code": "c79b4c26d0f311e8bbf60a58ac1401a5",
+                            "name": "成都市",
+                            "parentCode": "A0000000021",
+                            "parentName": "川中公司",
+                            "grandParentCode": null,
+                            "grandParentName": null,
+                            "type": "CITY",
+                            "children": null,
+                            "group": false
+                        },
+                        {
+                            "level": 3,
+                            "code": "c79b7c42d0f311e8bbf60a58ac1401a5",
+                            "name": "乐山市",
+                            "parentCode": "A0000000021",
+                            "parentName": "川中公司",
+                            "grandParentCode": null,
+                            "grandParentName": null,
+                            "type": "CITY",
+                            "children": null,
+                            "group": false
+                        },
+                        {
+                            "level": 3,
+                            "code": "c79b8a2fd0f311e8bbf60a58ac1401a5",
+                            "name": "眉山市",
+                            "parentCode": "A0000000021",
+                            "parentName": "川中公司",
+                            "grandParentCode": null,
+                            "grandParentName": null,
+                            "type": "CITY",
+                            "children": null,
+                            "group": false
+                        },
+                        {
+                            "level": 4,
+                            "code": "B0C4D46D-5943-48E0-A5B4-E72BB42FD043",
+                            "name": "成都美的·澜桥郡",
+                            "parentCode": "A0000000021",
+                            "parentName": "川中公司",
+                            "grandParentCode": "A7319161253",
+                            "grandParentName": "川渝区域公司",
+                            "type": "PROJECT",
+                            "children": null,
+                            "group": false
+                        },
+                        {
+                            "level": 4,
+                            "code": "CB58C24A-61E4-4A5A-BF86-38AF02B6D07F",
+                            "name": "成都美的新城公园天下",
+                            "parentCode": "A0000000021",
+                            "parentName": "川中公司",
+                            "grandParentCode": "A7319161253",
+                            "grandParentName": "川渝区域公司",
+                            "type": "PROJECT",
+                            "children": null,
+                            "group": false
+                        },
+                        {
+                            "level": 4,
+                            "code": "541CC9D0-B2C9-4898-9B8F-D7340164F5EA",
+                            "name": "成都彭州美的碧桂园观澜府",
+                            "parentCode": "A0000000021",
+                            "parentName": "川中公司",
+                            "grandParentCode": "A7319161253",
+                            "grandParentName": "川渝区域公司",
+                            "type": "PROJECT",
+                            "children": null,
+                            "group": false
+                        },
+                        {
+                            "level": 4,
+                            "code": "b5791340-23d1-11eb-bdce-75e22e11599c",
+                            "name": "成都双流区双楠大道项目",
+                            "parentCode": "A0000000021",
+                            "parentName": "川中公司",
+                            "grandParentCode": "A7319161253",
+                            "grandParentName": "川渝区域公司",
+                            "type": "PROJECT",
+                            "children": null,
+                            "group": false
+                        },
+                        {
+                            "level": 4,
+                            "code": "15CF7AEB-FB72-4483-8F97-F6DFE86A36FA",
+                            "name": "崇州翰林·首府",
+                            "parentCode": "A0000000021",
+                            "parentName": "川中公司",
+                            "grandParentCode": "A7319161253",
+                            "grandParentName": "川渝区域公司",
+                            "type": "PROJECT",
+                            "children": null,
+                            "group": false
+                        },
+                        {
+                            "level": 4,
+                            "code": "C572EBB6-ED7D-4124-8A82-E3CAEC8AA1F0",
+                            "name": "乐山美的珺御府",
+                            "parentCode": "A0000000021",
+                            "parentName": "川中公司",
+                            "grandParentCode": "A7319161253",
+                            "grandParentName": "川渝区域公司",
+                            "type": "PROJECT",
+                            "children": null,
+                            "group": false
+                        },
+                        {
+                            "level": 4,
+                            "code": "8702BE57-0F14-4777-A5D1-22DA6F632CAD",
+                            "name": "眉山仁寿美的金辉郡",
+                            "parentCode": "A0000000021",
+                            "parentName": "川中公司",
+                            "grandParentCode": "A7319161253",
+                            "grandParentName": "川渝区域公司",
+                            "type": "PROJECT",
+                            "children": null,
+                            "group": false
+                        },
+                        {
+                            "level": 4,
+                            "code": "5F073828-2048-424C-B4D7-0947B4451237",
+                            "name": "眉山仁寿美的云溪郡",
+                            "parentCode": "A0000000021",
+                            "parentName": "川中公司",
+                            "grandParentCode": "A7319161253",
+                            "grandParentName": "川渝区域公司",
+                            "type": "PROJECT",
+                            "children": null,
+                            "group": false
+                        }
+                    ],
+                    "group": false
+                },
+                {
+                    "level": 3,
+                    "code": "A0000000045",
+                    "name": "区域直属城市公司",
+                    "parentCode": "A7319161253",
+                    "parentName": "川渝区域公司",
+                    "grandParentCode": null,
+                    "grandParentName": null,
+                    "type": "CITY_ORG",
+                    "children": [
+                        {
+                            "level": 3,
+                            "code": "c79b34fcd0f311e8bbf60a58ac1401a5",
+                            "name": "重庆城区",
+                            "parentCode": "A0000000045",
+                            "parentName": "区域直属城市公司",
+                            "grandParentCode": null,
+                            "grandParentName": null,
+                            "type": "CITY",
+                            "children": null,
+                            "group": false
+                        },
+                        {
+                            "level": 4,
+                            "code": "2F3E4950-680E-4FE6-B2C4-3BD3F862009A",
+                            "name": "重庆璧山黛山道8號",
+                            "parentCode": "A0000000045",
+                            "parentName": "区域直属城市公司",
+                            "grandParentCode": "A7319161253",
+                            "grandParentName": "川渝区域公司",
+                            "type": "PROJECT",
+                            "children": null,
+                            "group": false
+                        },
+                        {
+                            "level": 4,
+                            "code": "F8017C75-CA98-4E9D-9723-4198C8BDE521",
+                            "name": "重庆璧山美的万麓府",
+                            "parentCode": "A0000000045",
+                            "parentName": "区域直属城市公司",
+                            "grandParentCode": "A7319161253",
+                            "grandParentName": "川渝区域公司",
+                            "type": "PROJECT",
+                            "children": null,
+                            "group": false
+                        },
+                        {
+                            "level": 4,
+                            "code": "35a25460-14d2-11ea-8bd3-6d44619bf26c",
+                            "name": "重庆金科美的新天宸",
+                            "parentCode": "A0000000045",
+                            "parentName": "区域直属城市公司",
+                            "grandParentCode": "A7319161253",
+                            "grandParentName": "川渝区域公司",
+                            "type": "PROJECT",
+                            "children": null,
+                            "group": false
+                        },
+                        {
+                            "level": 4,
+                            "code": "68e89e00-5421-11e9-b8b0-27105390e774",
+                            "name": "重庆金科美的原上",
+                            "parentCode": "A0000000045",
+                            "parentName": "区域直属城市公司",
+                            "grandParentCode": "A7319161253",
+                            "grandParentName": "川渝区域公司",
+                            "type": "PROJECT",
+                            "children": null,
+                            "group": false
+                        },
+                        {
+                            "level": 4,
+                            "code": "E0487FC1-36C5-45C8-B9C4-1BCC5676C1E2",
+                            "name": "重庆礼悦江山",
+                            "parentCode": "A0000000045",
+                            "parentName": "区域直属城市公司",
+                            "grandParentCode": "A7319161253",
+                            "grandParentName": "川渝区域公司",
+                            "type": "PROJECT",
+                            "children": null,
+                            "group": false
+                        },
+                        {
+                            "level": 4,
+                            "code": "61F01F65-C411-4DBC-A7CB-E071FE405F9B",
+                            "name": "重庆美的金科郡",
+                            "parentCode": "A0000000045",
+                            "parentName": "区域直属城市公司",
+                            "grandParentCode": "A7319161253",
+                            "grandParentName": "川渝区域公司",
+                            "type": "PROJECT",
+                            "children": null,
+                            "group": false
+                        },
+                        {
+                            "level": 4,
+                            "code": "4C82CCC7-1947-424C-B8D8-C87D527C6F7E",
+                            "name": "重庆美的荣安公园天下",
+                            "parentCode": "A0000000045",
+                            "parentName": "区域直属城市公司",
+                            "grandParentCode": "A7319161253",
+                            "grandParentName": "川渝区域公司",
+                            "type": "PROJECT",
+                            "children": null,
+                            "group": false
+                        },
+                        {
+                            "level": 4,
+                            "code": "22226fd0-a2c5-11e9-a93c-3b7aa9f46ca6",
+                            "name": "重庆美的云来",
+                            "parentCode": "A0000000045",
+                            "parentName": "区域直属城市公司",
+                            "grandParentCode": "A7319161253",
+                            "grandParentName": "川渝区域公司",
+                            "type": "PROJECT",
+                            "children": null,
+                            "group": false
+                        },
+                        {
+                            "level": 4,
+                            "code": "53e66100-b8b1-11e9-8067-e159d60e523d",
+                            "name": "重庆西永万云府",
+                            "parentCode": "A0000000045",
+                            "parentName": "区域直属城市公司",
+                            "grandParentCode": "A7319161253",
+                            "grandParentName": "川渝区域公司",
+                            "type": "PROJECT",
+                            "children": null,
+                            "group": false
+                        },
+                        {
+                            "level": 4,
+                            "code": "CC271A8F-3B3F-4807-97DA-4FC44BC4A317",
+                            "name": "重庆云璟",
+                            "parentCode": "A0000000045",
+                            "parentName": "区域直属城市公司",
+                            "grandParentCode": "A7319161253",
+                            "grandParentName": "川渝区域公司",
+                            "type": "PROJECT",
+                            "children": null,
+                            "group": false
+                        }
+                    ],
+                    "group": false
+                }
+            ],
+            "group": false
+        }
+    ]
+}

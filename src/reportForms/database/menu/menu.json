@@ -1,0 +1,117 @@
+{
+    "result": "S",
+    "msg": null,
+    "data": [
+        {
+            "type": "营销类",
+            "children": [
+                {
+                    "parentCode": null,
+                    "code": "MSTART_SALEREC",
+                    "full": "启明星-销售回款",
+                    "name": "销售回款",
+                    "path": "/index",
+                    "icon": "sale.png",
+                    "desc": "认购、签约、回款数据实时更新；区域、项目完成率对比分析一目了然",
+                    "flag": "Y",
+                    "msg": null,
+                    "capacityRole": "ZCN,ZCN_FIN,ZCN_PUB"
+                },
+                {
+                    "parentCode": null,
+                    "code": "MSTART_RemovalRate",
+                    "full": "启明星-去化率",
+                    "name": "去化率",
+                    "path": "/RemovalRate",
+                    "icon": "RemovalRate.png",
+                    "desc": "年度累计去化完成率情况分析",
+                    "flag": "Y",
+                    "msg": "",
+                    "capacityRole": "ZCN,ZCN_FIN,ZCN_PUB"
+                },
+                {
+                    "parentCode": null,
+                    "code": "MSTART_PriceManage",
+                    "full": "启明星-项目价格地图",
+                    "name": "项目价格地图",
+                    "path": "/PriceManage",
+                    "icon": "PriceManage.png",
+                    "desc": "全国各项目成交均价走势、各版本定价分析",
+                    "flag": "Y",
+                    "msg": null,
+                    "capacityRole": "ZCN,ZCN_FIN,ZCN_PUB"
+                },
+                {
+                    "parentCode": null,
+                    "code": "MSTART_AheadVenus",
+                    "full": "启明星-市场周/月动态",
+                    "name": "市场周/月动态",
+                    "path": "https://msuat.mideazy.com/qianceH5/dist/#/phosphor/PhosphorPage?token=uhILm2XAUMI=",
+                    "icon": "AheadVenus.png",
+                    "desc": "前测周月报",
+                    "flag": "Y",
+                    "msg": null,
+                    "capacityRole": "ZCN,ZCN_FIN,ZCN_PUB"
+                }
+            ]
+        },
+        {
+            "type": "运营类",
+            "children": [
+                {
+                    "parentCode": null,
+                    "code": "MSTART_LANDSUPPLY",
+                    "full": "启明星-土地产能",
+                    "name": "土地产能",
+                    "path": "/productivity",
+                    "icon": "land.png",
+                    "desc": "动态总产能即时分析；各阶段库存货值与面积动态更新； 分产品多维度综合分析",
+                    "flag": "Y",
+                    "msg": "",
+                    "capacityRole": "ZCN,ZCN_FIN,ZCN_PUB"
+                },
+                {
+                    "parentCode": null,
+                    "code": "MSTART_INVOICINGMANAGE",
+                    "full": "启明星-供销存",
+                    "name": "供销存",
+                    "path": "/storage",
+                    "icon": "invoice.png",
+                    "desc": "供销比、存销比、储销比数据一图展示；区域、城市、项目对比排名分析",
+                    "flag": "Y",
+                    "msg": "",
+                    "capacityRole": "ZCN,ZCN_FIN,ZCN_PUB"
+                },
+                {
+                    "parentCode": null,
+                    "code": "MSTART_INVAGE",
+                    "full": "启明星-分类库存",
+                    "name": "分类库存",
+                    "path": "/INVAGE",
+                    "icon": "INVAGE.png",
+                    "desc": "超龄库存实时掌控；区域排名分析预警",
+                    "flag": "Y",
+                    "msg": null,
+                    "capacityRole": "ZCN,ZCN_FIN,ZCN_PUB"
+                }
+            ]
+        },
+        {
+            "type": "财务类",
+            "children": [
+                {
+                    "parentCode": null,
+                    "code": "MSTART_AR",
+                    "full": "启明星-应收账款分析",
+                    "name": "应收账款分析",
+                    "path": "/AR",
+                    "icon": "AR.png",
+                    "desc": "应收账款、逾期分析",
+                    "flag": "Y",
+                    "msg": null,
+                    "capacityRole": "ZCN,ZCN_FIN,ZCN_PUB"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "result": "S",
+    "msg": null,
+    "data": [
+        {
+            "PLAN_AMOUNT": 513505878.0000,
+            "WWQ_PLAN_AMOUNT": 190365878.0000,
+            "PERIOD_WID": "20201125",
+            "ORG_ID": "A1392342741",
+            "ORG_CITY_ID": "A0000000011",
+            "ORG_NAME": "珠三角区域公司",
+            "YWQ_PLAN_AMOUNT": 323140000.0000,
+            "ORG_CITY_NAME": "广州公司",
+            "W_INSERT_DT": 1606295773000,
+            "LEVEL": "3",
+            "ROW_TYPE": "ORG_CITY",
+            "MOY_RATE": 0.0000
+        }
+    ]
+}

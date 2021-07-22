@@ -1,0 +1,60 @@
+{
+    "result": "S",
+    "msg": null,
+    "data": [
+        {
+            "ORG_ID": "A1392342741",
+            "ORG_NAME": "珠三角区域公司",
+            "YWQ_PLAN_AMOUNT": 148280000.0000,
+            "ORG_CITY_NAME": "广州公司",
+            "W_INSERT_DT": 1606295773000,
+            "LEVEL": "4",
+            "PROJECT_NAME": "广州美的华发天珀花园",
+            "MOY_RATE": 0.0000,
+            "PLAN_AMOUNT": 224805878.0000,
+            "WWQ_PLAN_AMOUNT": 76525878.0000,
+            "PERIOD_WID": "20201125",
+            "CITY_ID": "c79a7c4dd0f311e8bbf60a58ac1401a5",
+            "ORG_CITY_ID": "A0000000011",
+            "CITY_NAME": "广州市",
+            "ROW_TYPE": "PROJ",
+            "PROJECT_ID": "9dd84b90-c642-11e9-82e5-e172d9e7af2b"
+        },
+        {
+            "ORG_ID": "A1392342741",
+            "ORG_NAME": "珠三角区域公司",
+            "YWQ_PLAN_AMOUNT": 41990000.0000,
+            "ORG_CITY_NAME": "广州公司",
+            "W_INSERT_DT": 1606295773000,
+            "LEVEL": "4",
+            "PROJECT_NAME": "南沙美的云筑",
+            "MOY_RATE": 0.0000,
+            "PLAN_AMOUNT": 76690000.0000,
+            "WWQ_PLAN_AMOUNT": 34700000.0000,
+            "PERIOD_WID": "20201125",
+            "CITY_ID": "c79a7c4dd0f311e8bbf60a58ac1401a5",
+            "ORG_CITY_ID": "A0000000011",
+            "CITY_NAME": "广州市",
+            "ROW_TYPE": "PROJ",
+            "PROJECT_ID": "276552BF-17A4-4226-9B3E-718DE9EABC68"
+        },
+        {
+            "ORG_ID": "A1392342741",
+            "ORG_NAME": "珠三角区域公司",
+            "YWQ_PLAN_AMOUNT": 132870000.0000,
+            "ORG_CITY_NAME": "广州公司",
+            "W_INSERT_DT": 1606295773000,
+            "LEVEL": "4",
+            "PROJECT_NAME": "广州南沙美的绿城8号地块项目",
+            "MOY_RATE": 0.0000,
+            "PLAN_AMOUNT": 212010000.0000,
+            "WWQ_PLAN_AMOUNT": 79140000.0000,
+            "PERIOD_WID": "20201125",
+            "CITY_ID": "c79a7c4dd0f311e8bbf60a58ac1401a5",
+            "ORG_CITY_ID": "A0000000011",
+            "CITY_NAME": "广州市",
+            "ROW_TYPE": "PROJ",
+            "PROJECT_ID": "7c96be80-de98-11e9-92b6-451ae69f85a1"
+        }
+    ]
+}

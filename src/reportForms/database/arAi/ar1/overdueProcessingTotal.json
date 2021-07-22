@@ -1,0 +1,18 @@
+{
+    "result": "S",
+    "msg": null,
+    "data": [
+        {
+            "bu_name": "集团总部",
+            "begin_amt": 6482213483.12000000,
+            "row_type": "BU",
+            "level": 1,
+            "ytd_clear_amt": 22400336727.59000000,
+            "period_wid": "20201125",
+            "w_insert_date": 1606293681000,
+            "bu_id": "A30003353",
+            "end_amt": 7139714010.72000000,
+            "ytd_add_amt": 23057837255.19000000
+        }
+    ]
+}
