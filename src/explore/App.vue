@@ -108,6 +108,7 @@ export default {
 <style lang="less">//为了全局样式有效，App.vue文件别用scoped
 @import "~@static/capital/app.less";
 @import "~@static/capital/whole1.less";
+@import "~@static/capital/baidumap.less";
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

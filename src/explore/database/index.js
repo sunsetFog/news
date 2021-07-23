@@ -1,6 +1,6 @@
 import Mock from 'mockjs' // npm install mockjs --save
 
-
+import './baidumap/index'
 /**
  * 接受所以暴露export default
  * import * as obj from './'

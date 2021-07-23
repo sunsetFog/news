@@ -113,6 +113,7 @@ export default {
                 { params: 'vueditor',explain: '富文本编辑器' },
                 { params: 'vuex',explain: '状态管理库' },
                 { params: 'vue-amap',explain: '高德地图' },
+                { params: 'vue-baidu-map',explain: '百度地图' },
                 { params: 'fastclick',explain: '移动端解决事件穿透' },
                 { params: 'vant',explain: '移动端ui' },
                 { params: 'vue-i18n',explain: '国际多语言翻译' }

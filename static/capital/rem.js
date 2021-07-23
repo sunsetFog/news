@@ -19,6 +19,7 @@
         sessionStorage.setItem('clientWidth', clientWidth);
 
         if (!clientWidth) return;
+        if (process.env.entry_config != './src/reportForms/main.js') return;
         let pixelSize = 16 * (clientWidth / 375)
         sessionStorage.setItem('pixelSize', pixelSize)
         docEl.style.fontSize = pixelSize + 'px'; // 关键：设置的html的font-size计算值
