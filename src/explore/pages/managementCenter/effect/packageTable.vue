@@ -114,7 +114,8 @@ export default {
                 { params: 'vuex',explain: '状态管理库' },
                 { params: 'vue-amap',explain: '高德地图' },
                 { params: 'fastclick',explain: '移动端解决事件穿透' },
-                { params: 'vant',explain: '移动端ui' }
+                { params: 'vant',explain: '移动端ui' },
+                { params: 'vue-i18n',explain: '国际多语言翻译' }
             ],
             save_dev_list: [
                 { params: 'cross-env',explain: '运行跨平台设置和使用环境变量' },

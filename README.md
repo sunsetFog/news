@@ -12,6 +12,7 @@ npm install
 npm run dev
 npm run dev:explore
 npm run dev:reportForms
+npm run dev:crm
 
 # build for production with minification
 npm run build

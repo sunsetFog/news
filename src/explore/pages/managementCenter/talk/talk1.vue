@@ -35,6 +35,13 @@ export default {
                 六.vue的拦截: 路由拦截(看src\main.js)，请求拦截(看src\api\http.js)
                 七.router配置: 看src\router\index.js
                 八.加载完页面后，多个button高亮---向后台保存要高亮的下标，那数据时，用该下标高亮
+            
+            为啥离职？
+                面试时沟通的工作内容和实际情况完全不一样
+                公司不发工资
+                项目没了
+                业务突然被喊停
+
 
 
             有什么问题？

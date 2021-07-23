@@ -8,6 +8,7 @@
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "dev:explore": "cross-env NODE_ENV=development env_config=notes entry_config=./src/explore/main.js webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "dev:reportForms": "cross-env NODE_ENV=development env_config=notes entry_config=./src/reportForms/main.js webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev:crm": "cross-env NODE_ENV=development env_config=notes entry_config=./src/crm/main.js webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "build": "node build/build.js",
     "build:notes": "cross-env NODE_ENV=production env_config=notes entry_config=./src/explore/main.js node build/build.js"
@@ -30,6 +31,7 @@
     "vue": "^2.5.2",
     "vue-amap": "^0.5.10",
     "vue-cookies": "^1.5.13",
+    "vue-i18n": "^8.25.0",
     "vue-qr": "^2.2.1",
     "vue-router": "^3.0.1",
     "vueditor": "^0.3.1",

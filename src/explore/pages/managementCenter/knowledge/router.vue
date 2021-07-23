@@ -27,11 +27,21 @@ export default {
 
 
 
-            // query没刷新问题  params要路由path:'/router/:id',才无刷新丢失数据问题
-            // this.$router.push({name: 'crux',query: {id: 100,status: true}});//可用
-            // this.$router.push({name: 'crux',params: {id: 1010,status: true}});//不建议使用
-            // this.$router.push({path: '/mcenter/crux',query: {id: 100,status: true}});//可用
-            // this.$router.push({path: '/mcenter/crux',params: {id: 1010,status: true}});//不建议使用
+            // this.$router.push({name: 'crux',query: {id: 100,status: true}});
+            // this.$router.push({name: 'crux',params: {id: 1010,status: true}});
+            // this.$router.push({path: '/mcenter/crux',query: {id: 100,status: true}});
+            // this.$router.push({path: '/mcenter/crux',params: {id: 1010,status: true}});
+
+
+            /*
+            完整
+                this.$router.push({
+                    path: '/mcenter/crux', --- 可以拼接参数 --- 刷新不丢失
+                    name: 'crux',
+                    query: {id: 100,status: true},   --- 刷新不丢失 --- 推荐
+                    params: {id: 1010,status: true}  --- 刷新丢失 --- 解决在路由path:'/router/:id'
+                });
+            */
             console.log('查看路由参数',this.$route);
         },
         code(){
