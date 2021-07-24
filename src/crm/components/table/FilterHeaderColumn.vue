@@ -62,7 +62,7 @@
       :type="col.filter.dateType"
       range-separator="~"
       size="mini"
-     
+      style="width:100%;" 
       :disabled="col.filter.disabled"
       :editable="col.filter.editable"
       :clearable="col.filter.clearable"

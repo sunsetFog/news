@@ -173,7 +173,6 @@ export default {
     },
     methods: {
         penDetail () {
-            this.$store.commit('addWater', { path: '/administrators/detail', name: '详情页'});
             this.$store.commit('addPane',{
                 title: '详情页',
                 path: '/administrators/detail',

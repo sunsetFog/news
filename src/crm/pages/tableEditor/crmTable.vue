@@ -2,9 +2,9 @@
 <template>
 <section :style="{height: sunHeight+'px'}" class="sun-water">
     <div style="width: 100%;height: 100px;">
-        <Button @click="sunSearch()" style="min-width: 80px;margin-left: 5px;" v-for="(item, index) in crmBtn" :key="index">
+        <el-button @click="sunSearch()" style="min-width: 80px;margin-left: 5px;" v-for="(item, index) in crmBtn" :key="index">
             <i :class="item.icon" style="margin-right: 8px;"></i>{{item.label}}
-        </Button>
+        </el-button>
     </div>
         <table-editor
             ref="refTable"
@@ -21,7 +21,7 @@
         >
         <!--         -------slot插槽的用法---------            -->
         <!-- <div slot="operationBody" slot-scope="slotProps">
-            <Button @click="lyDelete(slotProps.lyItem)"><i class="el-icon-delete"></i>删除</Button>
+            <el-button @click="lyDelete(slotProps.lyItem)"><i class="el-icon-delete"></i>删除</el-button>
         </div> -->
 
         </table-editor>
@@ -29,14 +29,14 @@
 </template>
 
 <script>
-import TableEditor from '@/explore/components/table/TableEditor'
-import demoAssembly from '@/explore/components/table/demoAssembly'
+import TableEditor from '@/crm/components/table/TableEditor'
+import demoAssembly from '@/crm/components/table/demoAssembly'
 export default {
     name: 'crmTable',
     components: { TableEditor,demoAssembly },
     data(){
         return {
-            sunHeight: document.documentElement.clientHeight,
+            sunHeight: document.documentElement.clientHeight - 80,
             tableHeader: [],
             queryData: {
                 bankName: '',
@@ -167,7 +167,7 @@ export default {
                     label: '操作',
                     formatter: function (createElement, row, column, index) {
                         return createElement("div", {}, [
-                                createElement("Button", {
+                                createElement("el-button", {
                                     attrs: {
                                         type: "primary",
                                         icon: "",
@@ -183,7 +183,7 @@ export default {
                                         }
                                     }
                                 }),
-                                createElement("Button", {
+                                createElement("el-button", {
                                     attrs: {
                                         type: "primary",
                                         icon: "",

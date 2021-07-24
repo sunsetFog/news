@@ -37,7 +37,7 @@ function calcHeight(bindValue, height) {
 let debounceFn = null
 
 const install = function (Vue) {
-    Vue.directive('mideaAutoheight', {
+    Vue.directive('autoHeight', {
         bind: function (el, binding, vnode) {
         },
         /**

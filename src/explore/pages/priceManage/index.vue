@@ -1,5 +1,5 @@
 <template>
-    <section class="page-index" :style="{height: set_height}">
+    <section id="price-baidumap" :style="{height: set_height}">
         <div class="container">
             <div class="container-right">
                 <price-map @mapEmit="mapEmit" ref="map" :take_list="take_list"></price-map>
@@ -281,7 +281,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.page-index {
+.price-baidumap {
     width: 100%;
     height: 100%;
     overflow: hidden;

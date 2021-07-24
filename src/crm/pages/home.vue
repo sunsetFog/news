@@ -1,11 +1,10 @@
 <template>
     <div id="home">
         <div class="header">
-            管理系统----{{$t("common.title")}}-----{{$t("home.title")}}
-            <button @click="translate('zh')">中文翻译</button>----<button@click="translate('en')">英文翻译</button>
+            管理系统
         </div>
-        <div class="cont">
-          <div class="left">
+        <div class="heart-main" :style="{height: set_height}">
+          <div class="heart-left">
               <el-menu
                 @select="summer"
                 @open="handleOpen"
@@ -31,12 +30,12 @@
                 </div>
               </el-menu>
           </div>
-          <div class="right">
-              <div class="pen-eat">
+          <div class="heart-right">
+              <!-- <div class="pen-eat">
                   <ul>
                   <li  v-for="(item,index) in bread" :key="index" @click="penWater(index)">{{item.name}}<i v-if="index!=bread.length-1" class="el-icon-arrow-right"></i></li>
                   </ul>
-              </div>
+              </div> -->
               <div class="cha-tibs">
                   <ul>
                     <li  v-for="(item,index) in tabList" :key="index" :class="{'pen-nice': item.tab_active}" @click="penTab(index)">{{item.title}}<i class="el-icon-close" @click.stop="closeTab(index)"></i></li>
@@ -57,6 +56,7 @@ export default {
   name: "home",
   data() {
     return {
+      set_height: (document.documentElement.clientHeight - 40) + 'px',
       navmenuArr: [
         {
           title: "首页",
@@ -92,12 +92,6 @@ export default {
       ],
     };
   },
-  beforeCreate() {
-    const lang = this.$i18n.locale;
-    console.log("lang==", lang);
-    const locals = require(`./locals/${this.$options.name}_${lang}`).default;
-    this.$i18n.mergeLocaleMessage(lang, locals);
-  },
   created() {
     this.navmenuArr = this.addMenu;
       console.log('loca===', lodash.uniqueId('contact_'),this.navmenuArr)
@@ -108,36 +102,16 @@ export default {
     },
   },
   computed: {
-    ...mapGetters(["bread", "tabList","addMenu","menuIndex"]),
+    ...mapGetters(["tabList","addMenu","menuIndex"]),
   },
   mounted() {
-    let elHeight = document.getElementsByClassName("el-menu")[0];
-    elHeight.style.height = document.documentElement.clientHeight - 40 + "px";
-    let rightHight = document.getElementsByClassName("right")[0];
-    rightHight.style.height =
-      document.documentElement.clientHeight - 110 + "px";
   },
   methods: {
-    translate(value) {
-      if (value == "zh") {
-        // this.$i18n.locale = 'en'
-        sessionStorage.setItem("language", "zh");
-      } else if (value == "en") {
-        // this.$i18n.locale = 'zh'
-        sessionStorage.setItem("language", "en");
-      }
-      window.location.reload();
-    },
-    penWater(index) {
-      //面包屑事件
-      this.$store.commit("banana", index);
-    },
     penTab(index) {
       // 标签页事件
       this.$store.commit("menuIndex", this.tabList[index].id);
       this.$store.commit("chaActive", index);
       this.$router.push({ path: this.tabList[index].path });
-      this.$store.commit("modifyBread", this.tabList[index].save_bread);
     },
     closeTab(index) {
       // 关闭标签页事件
@@ -198,7 +172,7 @@ export default {
         { path: "no_path", name: title1 },
         { path: path2, name: title2 },
       ];
-      this.$store.commit("addWater", hy);
+      // this.$store.commit("addWater", hy);
       // console.log('vuex--', this.bread)
       this.$store.commit("addPane", {
         title: title2,
@@ -230,45 +204,36 @@ export default {
     box-sizing: border-box;
     background: #409eff;
   }
-  .cont {
+  .heart-main {
     width: 100%;
-    height: 100%;
     position: relative;
     padding: 0 0 0 216px;
     box-sizing: border-box;
-    .left {
+    overflow: hidden;
+    .heart-left {
       width: 216px;
+      height: 100%;
       position: absolute;
       left: 0;
       top: 0;
-      .el-menu {
+      /deep/.el-menu {
         width: 216px;
+        height: 100% !important;
         border: none;
       }
     }
-    .right {
+    .heart-right {
       width: 100%;
       height: 100%;
       float: left;
-      .pen-eat {
-        width: 100%;
-        height: 35px;
-        color: gray;
-        font-size: 14px;
-        line-height: 35px;
-        padding: 0 0 0 10px;
-        box-sizing: border-box;
-        ul {
-          li {
-            float: left;
-          }
-        }
-      }
+      overflow-y: scroll;
+      padding: 0px 10px 0px 10px;
+      box-sizing: border-box;
       .cha-tibs {
         width: 100%;
-        height: 35px;
+        height: 40px;
         line-height: 35px;
-        padding: 0 0 0 10px;
+        padding: 2.5px 0 2.5px 10px;
         box-sizing: border-box;
         ul {
           .pen-nice {

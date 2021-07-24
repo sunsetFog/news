@@ -112,8 +112,6 @@ export default new Router({
     { path: '/neutralgear', name: 'neutralGear', meta: { title: '加载中',key: 404}, component: resolve => require(['@/explore/pages/neutralGear/neutralGear'], resolve) },
     { path: '/download', name: 'download', meta: { title: '下载中心',key: 404}, component: resolve => require(['@/explore/pages/download/download'], resolve) },
     { path: '/attachmentUpload', name: 'attachmentUpload', meta: { title: '发票识别',key: 404}, component: resolve => require(['@/explore/pages/managementCenter/effect/attachmentUpload.vue'], resolve) },
-    { path: '/crmTable', name: 'crmTable', meta: { title: 'table组件',key: 404}, component: resolve => require(['@/explore/pages/managementCenter/effect/crmTable.vue'], resolve) },
-    { path: '/explainTable', name: 'explainTable', meta: { title: 'table说明',key: 404}, component: resolve => require(['@/explore/pages/managementCenter/effect/explainTable.vue'], resolve) },
     { path: '/packageTable', name: 'packageTable', meta: { title: 'packageJson说明',key: 404}, component: resolve => require(['@/explore/pages/managementCenter/effect/packageTable.vue'], resolve) },
     { path: '/openTab', name: 'openTab', meta: { title: 'openTab',key: 404}, component: resolve => require(['@/explore/pages/managementCenter/effect/openTab.vue'], resolve) },
     { path: '/priceManage', name: 'priceManage', meta: { title: '价格地图',key: 404}, component: resolve => require(['@/explore/pages/priceManage/index.vue'], resolve) }

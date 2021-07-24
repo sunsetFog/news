@@ -1,6 +1,6 @@
 <template>
     <section>
-        <Button @click="sunCustom">{{params.label}}</Button>
+        <el-button @click="sunCustom">{{params.label}}</el-button>
     </section>
 </template>
 

@@ -28,10 +28,7 @@
     }
 }
 
-.el-cascader__dropdown {
-    position: absolute;
-    top: 55px !important;
-}
+
 .BMapLabel {
     background-color: none !important;
 }
@@ -55,9 +52,7 @@
         }
     }
 }
-.el-scrollbar__wrap{
-    overflow-x: hidden !important;
-}
+
 .BMap_cpyCtrl {
     display: none !important;
 }
@@ -74,27 +69,38 @@
     }
 }
 
-.el-dialog__header, .el-dialog__body {
-    background: #5BB7EB !important;
-    color: #fff !important;
-    font-size: 13px !important;
-    .el-dialog__title {
-        color: #fff;
-        font-weight: 700 !important;
-        font-size: 18px !important;
+
+
+#price-baidumap {
+    .el-scrollbar__wrap{
+        overflow-x: hidden !important;
     }
-    .el-icon-close {
-        color: #fff;
+    .el-cascader__dropdown {
+        position: absolute;
+        top: 55px !important;
     }
-    .el-icon-close:hover {
+    .el-dialog__header, .el-dialog__body {
+        background: #5BB7EB !important;
         color: #fff !important;
-        font-weight: 700 !important;
+        font-size: 13px !important;
+        .el-dialog__title {
+            color: #fff;
+            font-weight: 700 !important;
+            font-size: 18px !important;
+        }
+        .el-icon-close {
+            color: #fff;
+        }
+        .el-icon-close:hover {
+            color: #fff !important;
+            font-weight: 700 !important;
+        }
     }
-}
-.el-dialog__body {
-    text-align: left !important;
-    padding: 20px !important;
-}
-.el-dialog__footer {
-   padding: 0 !important;
+    .el-dialog__body {
+        text-align: left !important;
+        padding: 20px !important;
+    }
+    .el-dialog__footer {
+       padding: 0 !important;
+    }
 }

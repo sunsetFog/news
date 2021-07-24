@@ -24,6 +24,33 @@
                 "icon": null,
                 "type": 1,
                 "children": []
+            },
+            {
+                "id": "202",
+                "parentId": 0,
+                "title": "table组件",
+                "path": "/tableEditor/crmTable",
+                "icon": null,
+                "type": 1,
+                "children": []
+            },
+            {
+                "id": "203",
+                "parentId": 0,
+                "title": "table说明",
+                "path": "/tableEditor/explainTable",
+                "icon": null,
+                "type": 1,
+                "children": []
+            },
+            {
+                "id": "4",
+                "parentId": 0,
+                "title": "多语言翻译",
+                "path": "/multilingual",
+                "icon": null,
+                "type": 1,
+                "children": []
             }
         ]
     },

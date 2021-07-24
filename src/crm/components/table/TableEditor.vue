@@ -195,17 +195,19 @@
 <script>
 import FilterColumn from "./FilterHeaderColumn";
 import bodyColumn from "./bodyColumn";
-import TableEditFormatter from '@/explore/components/table/TableEditFormatter'
+import TableEditFormatter from './TableEditFormatter';
+import pagination from '@/explore/components/pagination.vue';
 export default {
   name: "TableEditor",
   components: {
     FilterColumn,
-    TableEditFormatter
+    TableEditFormatter,
+    pagination
   },
   mixins: [bodyColumn],
   data() {
     return {
-      setHeight: (document.documentElement.clientHeight - 100) + 'px',
+      setHeight: (document.documentElement.clientHeight - 180) + 'px',
       loading: false, // 加载中
       currentRow: null, // 当前行
       selectionRows: [], // 选择的数组
