@@ -83,17 +83,18 @@ export default {
                 username: "admin",
                 password: "123456"
             }
-            that.$https({
+            that.$apihttp({
                 url: 'http://mock-api-success.com/crm/login',
                 method: 'post',
                 data: json
             }).then((res) => {
                 console.log('H-token',res);
-                sessionStorage.setItem('loginJson',JSON.stringify(res));
-                that.$store.dispatch('GenerateRoutes',res).then(function(result){
+                sessionStorage.setItem('loginJson',JSON.stringify(res.menu_list));
+                sessionStorage.setItem('buttonPermissions',JSON.stringify(res.buttonPermissions));
+                that.$store.dispatch('GenerateRoutes',res.menu_list).then(function(result){
                   console.log('result===', result);
                   sessionStorage.setItem('token', 'txvb-8325487189');
-                  that.$router.addRoutes(result)
+                  that.$router.addRoutes(result);//参数得是数组
                   that.$router.push({path: '/world/world'});
                 })
             }).catch((err)=>{

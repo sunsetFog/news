@@ -39,8 +39,19 @@ import store from './vuex/index.js';
 import VueCookies from 'vue-cookies'
 Vue.use(VueCookies)
 
-import apiHttp from '../explore/api/http.js';
+import apiHttp from '@/explore/api/http.js';
 Vue.prototype.$apihttp = apiHttp;
+
+// 全局注册自定义指令
+import * as directives from '@/explore/directive'
+Object.keys(directives).forEach(key => {
+  directives[key].install(Vue)
+})
+// 全局注册过滤器
+import filters from '@/explore/filters';
+Object.keys(filters).forEach(key => {
+  Vue.filter(key, filters[key])
+})
 
 
 

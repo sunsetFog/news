@@ -18,12 +18,24 @@ import store from './vuex/index'
 
 import './database/index'; // 不能用if动态加载js
 
-import https from '../explore/api/http.js'
-Vue.prototype.$https = https
+import apiHttp from '@/explore/api/http.js';
+Vue.prototype.$apihttp = apiHttp;
+
+// 全局注册自定义指令
+import * as directives from '@/explore/directive'
+Object.keys(directives).forEach(key => {
+  directives[key].install(Vue)
+})
+// 全局注册过滤器
+import filters from '@/explore/filters';
+Object.keys(filters).forEach(key => {
+  Vue.filter(key, filters[key])
+})
 
 
 
 Vue.config.productionTip = false
+
 
 
 
@@ -36,11 +48,7 @@ router.beforeEach((to, from, next) => {
     sessionStorage.removeItem('bread');
     sessionStorage.removeItem('tabList');
   }
-  console.log('-asj--',sessionStorage.getItem('token'),'---',to.path)
-  // if (!sessionStorage.getItem('token') && to.path == '/'){
-  //   console.log('----------login---00')
-  //   next({ path: '/login' });
-  // }
+
   if(from.path == '/' && sessionStorage.getItem('bread')&& sessionStorage.getItem('tabList')){ // 刷新判断
     store.commit('modifyTab',JSON.parse(sessionStorage.getItem('tabList')));
   }
@@ -49,14 +57,10 @@ router.beforeEach((to, from, next) => {
     let loginJson = JSON.parse(sessionStorage.getItem('loginJson'));
     store.dispatch('GenerateRoutes',loginJson).then(function(res){
       console.log('动态添加菜单路由---',res)
-      router.addRoutes(res)
+      router.addRoutes(res);//参数得是数组
       next({ path: sessionStorage.getItem('currentPath') });
       // next({ ...to, replace: true })
     })
-  }
-  if (!sessionStorage.getItem('token') && to.path == '/'){
-    console.log('----------login---00')
-    next({ path: '/login' });
   } else {
     next();    //如果匹配到正确跳转
   }

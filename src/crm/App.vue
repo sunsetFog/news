@@ -41,6 +41,10 @@ export default {
 <style lang="less">
 /* @import 加载 */
 @import "./assets/app.less";
+.pen-is-disabled {
+  color: #c0c4cc;
+  cursor: not-allowed;
+}
 /*公共样式--开始*/
 * {
   margin: 0;

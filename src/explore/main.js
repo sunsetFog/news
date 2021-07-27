@@ -39,8 +39,7 @@ Vue.prototype.$md5 = md5;
 import VueCookies from 'vue-cookies'
 Vue.use(VueCookies)
 
-import apiHttp from './api/http.js';
-Vue.prototype.$apihttp = apiHttp;
+
 
 
 /* 全局注册子组件 */
@@ -80,6 +79,9 @@ Vue.component('gameTheme',gameTheme);
 Vue.component('safeDeposit',safeDeposit);
 Vue.component('portrait',portrait);
 Vue.component('rechargeRecord',rechargeRecord);
+
+import apiHttp from '@/explore/api/http.js';
+Vue.prototype.$apihttp = apiHttp;
 
 // 全局注册自定义指令
 import * as directives from '@/explore/directive'

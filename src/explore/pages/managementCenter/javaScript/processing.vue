@@ -122,6 +122,8 @@ export default {
                 9  数组.concat(数组)     拼接数组,arr1.concat(arr2,arr3,....);
                 10  数组.sort(函数)     数组排序，默认从小到大排而且是按照字符编码排列
                 11  数组.slice(开始下标,结束下标) 留头不留尾
+
+                12 数组.includes('指定的值')   判断数组是否包含指定的值，如果是返回 true，否则false
             */
 
             var arr=[10,6,-2,1];

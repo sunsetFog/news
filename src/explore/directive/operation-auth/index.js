@@ -6,9 +6,17 @@
  * @binding 一个对象   value：指令的绑定值
  * @vnode 虚拟节点
  */
-function getOperationAuth() {
-    return 'show'
-}
+// function getOperationAuth(value) {
+//     let buttonPermissions = JSON.parse(sessionStorage.getItem('buttonPermissions'))
+//     for(let i=0;i<buttonPermissions.length;i++){
+//         if(buttonPermissions[i].code == value){
+//             if(buttonPermissions[i].disabled == 'Y'){
+//                 return 'disabled'
+//             }
+//         }
+//     }
+//     return 'show'
+// }
 
 const operationAuth = {}
 
@@ -18,31 +26,35 @@ const install = function (Vue) {
         bind: function (el, binding, vnode) {
             console.log('---bind---', el, binding, vnode);
             const key = binding.value
-            if (!key) {
+            if (!key) {// 不带值，结束方法
                 return
             }
-            el.style.visibility = 'hidden'
-            const auth = getOperationAuth(key)
-            // 可用
-            if (auth === 'show') {
-                el.style.visibility = 'visible'
-            }
-            // 禁用
-            else if (auth === 'disabled') {
-                el.style.visibility = 'visible'
-                el.setAttribute('disabled', true)
-                el.className = el.className + ' is-disabled'
 
-                //el-select 禁用
-                if (el.className.indexOf("el-select") !== -1) {
-                    el.children[0].className = el.children[0].className + ' is-disabled'
-                    el.style.pointerEvents = 'none'
-                    el.children[0].children[1].children[0].style.pointerEvents = 'none'
+            let buttonPermissions = JSON.parse(sessionStorage.getItem('buttonPermissions'))
+            for(let i=0;i<buttonPermissions.length;i++){
+                if(buttonPermissions[i].code == key){
+                    if(buttonPermissions[i].disabled == 'Y'){
+                        el.style.visibility = 'visible';
+                        el.style.cursor = 'not-allowed';
+                        el.style.color = '#c0c4cc';
+                        el.setAttribute('disabled', true);
+                        break
+                    }else if(buttonPermissions[i].disabled == 'N'){
+                        el.style.visibility = 'visible';
+                        el.setAttribute('disabled', false);
+                        break
+                    }else if(buttonPermissions[i].displayed == 'Y'){
+                        el.style.visibility = 'visible';
+                        break
+                    }else if(buttonPermissions[i].displayed == 'N'){
+                        el.style.visibility = 'hidden';
+                        break
+                    }else{
+                        el.parentNode.removeChild(el)
+                    }
                 }
-
-            } else {
-                el.parentNode.removeChild(el)
             }
+
         },
         // 被绑定元素插入父节点时调用
         inserted(el, binding, vnode) {

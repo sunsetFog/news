@@ -42,7 +42,7 @@ export const asyncRouterMap = [
 // export default new Router({
 //   mode: 'history',//路由路径#
 //   routes: [
-//     {path: '/', component: resolve => require(['@/crm/pages/home'],resolve),//下面有children，所以这里不用name，不然会有黄色警告
+//     {path: '/home', component: resolve => require(['@/crm/pages/home'],resolve),//下面有children，所以这里不用name，不然会有黄色警告
 //       children: [
 //         { path: '/world/world', name: 'world', meta: { title: '首页'},component: resolve => require(['@/crm/pages/world/world'],resolve) },
 //         { path: '/administrators/setton', name: 'setton', meta: { title: '管理员列表'},component: resolve => require(['@/crm/pages/administrators/setton'],resolve) },
@@ -53,7 +53,8 @@ export const asyncRouterMap = [
 //         { path: '/', redirect: '/world/world' }
 //       ]
 //     },
-//     { path: '/login', name: 'Login', meta: { title: '登录'},component: resolve => require(['@/crm/pages/login'],resolve) }
+    // { path: '/login', name: 'Login', meta: { title: '登录'},component: resolve => require(['@/crm/pages/login'],resolve) },
+    // { path: '/', redirect: '/login' }
   
 
 //   ]

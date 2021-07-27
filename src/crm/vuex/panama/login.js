@@ -50,7 +50,7 @@ const login = {
             
             let initial = [
                 {
-                    path: '/',
+                    path: '/home',
                     component: resolve => require(['@/crm/pages/home'],resolve),
                     // component: () => import('@/crm/pages/home'),
                     children: [

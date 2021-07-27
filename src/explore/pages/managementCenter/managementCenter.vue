@@ -113,7 +113,8 @@ export default{
                     {key:'3-2-17',label: '缓存',path: '/mcenter/cache',icon: require('@static/picture/center/caiwu.png'),effect:[]},
                     {key:'3-2-18',label: 'axios配置',path: '/mcenter/axios',icon: require('@static/picture/center/caiwu.png'),effect:[]},
                     {key:'3-2-19',label: '图片相对路径',path: '/mcenter/relativePath',icon: require('@static/picture/center/caiwu.png'),effect:[]},
-                    {key:'3-2-20',label: 'mixins',path: '/mcenter/sunMixin',icon: require('@static/picture/center/caiwu.png'),effect:[]}
+                    {key:'3-2-20',label: 'mixins',path: '/mcenter/sunMixin',icon: require('@static/picture/center/caiwu.png'),effect:[]},
+                    {key:'3-2-21',label: 'packageJson说明',path: '/packageTable',icon: require('@static/picture/center/caiwu.png'),effect:[]}
                 ]},
                 {key: '4',label: 'vue功能集',path: '',icon: require('@static/picture/center/qipai.png'),effect: [
                     {key: '4-2-1',label: '下载',path: '/mcenter/download_ex',icon: require('@static/picture/center/qipai.png'),effect:[]},
