@@ -11,7 +11,7 @@
 
 <script>
 	// import store from '@/explore/vuex/vuex';//@代表'/src',看build/webpack.base.conf.js
-	import {mapMutations,mapGetters,mapActions} from 'vuex'
+	import {mapMutations,mapGetters,mapActions} from 'vuex';// 用了这三个变量，请引入
 	export default{
 		data(){
 			return{

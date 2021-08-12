@@ -139,7 +139,7 @@ export default {
         demo5(){
             /*
                 对象概念：一个对象可包含多个属性    {key(键): 'value值'}
-                访问Json数据：obj.key或者obj["key"],因为key是字符串
+                获取或添加新属性语法：obj.key或者obj["key"],因为key是字符串
                 删除对象中的某个属性: delete obj["key"];
              */
             // 定义对象      
@@ -154,8 +154,8 @@ export default {
                 }
             console.log('判断对象是否有该属性', person.hasOwnProperty('name')); // true有，false没有
             console.log('调用对象属性',person.hobby);
-            person.drink();//调用对象方法
-            person['character'] = "温柔贤淑";//添加新属性
+            person.drink();//调用对象成员方法
+            person['character'] = "温柔贤淑";//对象添加新属性
             console.log('添加新属性',person);
             //枚举法:遍历对象      注意：枚举法中，只能使用obj["key"]的形式
             for(let key in person){
@@ -167,25 +167,25 @@ export default {
         demo6(){
             /*
                 字符串常见方法：
-                1  字符串.charAt(下标)    指定下标的字符
-                2  字符串.charCodeAt(下标)    指定下标的字符编码
-                3  字符串.concat(字符串,字符串)    拼接一个或多个字符串
+                1  字符串.charAt(下标)    返回指定下标的字符
+                2  字符串.charCodeAt(下标)    返回指定下标的字符编码
+                3  字符串.concat(字符串,字符串,字符串)    返回拼接一个或多个字符串
                 
-                4  字符串.search("字符或正则表达式")    用来检索字符串中指定的字符串，返回该子串第一次出现的下标，如果未找到，返回-1
-                5  字符串.indexOf("字符但不能正则表达式")    返回该子串第一次出现的下标，未找到，返回-1
+                4  字符串.search("字符或正则表达式")    用来检索字符串中指定的字符串，返回该子串第一次出现的下标，找不到返回-1
+                5  字符串.indexOf("字符但不能正则表达式")    返回该子串第一次出现的下标，找不到返回-1
                 6  字符串.lastIndexOf("字符")     返回指定子串最后一次出现的下标，找不到，返回-1
 
-                7  字符串.replace(字符串或正则表达式,字符串)    用新子串替换指定的旧子串
+                7  字符串.replace(字符串或正则表达式,字符串)    新子串替换指定的旧子串，返回替换值
                 
                 区分这三个
-                8  字符串.slice(开始下标,结束下标)     返回开始下标和结束下标间的字符,留头不留尾   如果只有一个参数，默认取到最后
-                9  字符串.substring(开始下标,结束下标)     返回开始下标和结束下标之间的字符，同样留头不留尾
+                8  字符串.slice(开始下标,结束下标)     返回开始下标和结束下标间的字符,留头不留尾   如果只有一个参数，截取到最后
+                9  字符串.substring(开始下标,结束下标)   与slice一样
                 substring()和slice()的区别：substring会将两个参数按照小在前，大在后排列,而slice()不会大小排列
                 10  字符串.substr(开始下标,获取个数)
                 
-                11  字符串.toLowerCase()    将大写转小写
-                12  字符串.toUpperCase()    将小写转大写
-                13  字符串.split("字符")      将字符串分割为数组，参数2:获取个数
+                11  字符串.toLowerCase()    大写转小写
+                12  字符串.toUpperCase()    小写转大写
+                13  字符串.split("字符")     返回字符串分割的数组，参数2:获取个数
              */
             
 			var str0 = "HELLO WORLD";
@@ -270,7 +270,7 @@ export default {
             console.log('正切',Math.tan(deg60));
         },
         demo9(){
-            //Dtae对象
+            //Date对象
             var nowTime = new Date();//Date构造函数，时间从1970 年 1 月 1开始算
             console.log('当前时间',nowTime);
             var futureTime = new Date(2050,0,1);
@@ -278,7 +278,7 @@ export default {
 
             
             console.log('当月几号(1 ~ 31)',nowTime.getDate());
-            console.log('星期几(0 ~ 6)',nowTime.getDay()+1);
+            console.log('星期几(0 ~ 6)',nowTime.getDay()+1); // 加一是因为从零开始
             console.log('月份 (0 ~ 11)',nowTime.getMonth()+1);
             console.log('年份',nowTime.getFullYear());
             console.log('小时 (0 ~ 23)',nowTime.getHours()+1);

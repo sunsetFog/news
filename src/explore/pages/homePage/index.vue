@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import footers from '../../components/footer.vue';
+import footers from '@/explore/components/footer.vue';
 export default{
     name: 'home-index',
     components: {footers},

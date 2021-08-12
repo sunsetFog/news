@@ -1,6 +1,10 @@
 <template>
 <section id="children">
 	<el-button @click='secret()'>child:{{article}}</el-button>
+	<!-- 具名插槽 -->
+	<slot name="er"></slot>
+	<!-- 作用域插槽(或叫:带数据的插槽)-->
+	<slot  name="yaa" data="带数据的插槽"></slot>
 </section>
 </template>
 
@@ -38,6 +42,8 @@
 
 <style lang="less" scoped>
 #children{
-	
+	width: 100%;
+	height: 400px;
+	background: blue;
 }
 </style>

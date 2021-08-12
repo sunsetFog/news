@@ -62,8 +62,8 @@
 </template>
 
 <script>
-import headerBar from '../../components/headerBar.vue'
-import Loading from '../../components/common/Loading'
+import headerBar from '@/explore/components/headerBar.vue'
+import Loading from '@/explore/components/common/Loading'
 import drawing from './echart.js'
 export default {
   name: 'PriceAnalysis',

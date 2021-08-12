@@ -43,7 +43,6 @@ export default {
             }
             that.$apihttp({
                 url: 'http://localhost:1199/mock/geoJson',
-                // url: 'http://localhost:1199/mock/backList',
                 method: 'post',
                 params: json // 不管get还是post，这个都是拼接参数到url上
                 // data: json // 不管get还是post，这个都不拼接参数到url上

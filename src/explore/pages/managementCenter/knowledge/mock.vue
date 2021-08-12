@@ -14,14 +14,7 @@
         </template>
         
         <h2>3.slot插槽渲染</h2>
-        <children>
-            <p slot="er">2-2-2-2</p>
-            <template slot-scope="user">
-                <ul>
-                    <li v-for="item in user.data">{{item.name}}</li>
-                </ul>
-            </template>
-        </children>
+
 
         <h2>4.render渲染</h2>
     </section>
@@ -29,9 +22,7 @@
 
 <script>
 //npm install mockjs --save
-import children from './quote/slot' 
 export default {
-    components: { children },
     data() {
         return {
             markers: []

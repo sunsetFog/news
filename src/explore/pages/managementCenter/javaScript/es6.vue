@@ -20,17 +20,17 @@ export default {
         
         console.log('next一',ly.next());// {value: 1, done: false}
         console.log('next二',ly.next());// {value: 2, done: false}
-        console.log('next三',ly.next());// {value: "成功返回信息", done: true}      ----执行结束后done: true
+        console.log('next三',ly.next());// {value: "成功返回信息", done: true}      ----done: true，方法再调用无效
 
         // for(let item of this.demo1()){// 遍历Generator函数
         //     console.log('item=',item);
         // }
     },
     methods: {
-        /* 用于控制函数的运行 */
-        *demo1 () {
+        /* 用于控制函数的运行: 设置调用次数和暂停 */
+        *demo1 () {// 方法名有*才能用yield
             console.log('运行步骤一');
-            yield 1;// 遇到yield暂停
+            yield 1;// 遇到yield暂停和返回内容 ---（有return功能）
             console.log('运行步骤二');
             yield 2;
             console.log('运行步骤三');
@@ -42,13 +42,13 @@ export default {
             if(true){
                 let name = '笑笑';
                 // let name = '涵涵';// 重复声明了，报错
-                var age = 19;
+                var age = 19;// var 局部变量，执行体内有效
             }
             console.log('let与var',name,age);//结果: 空、19    let在if代码块有效
 
-            //const 声明一个只读变量,声明后值无法改变
+            //const 声明一个只读变量,声明后值不能修改
             const PI = "3.1415926";
-            // PI = 666;// const值无法改变，报错
+            // PI = 666;// const值不能修改，报错
             console.log('const',PI);
         },
         demo3(){
@@ -85,15 +85,8 @@ export default {
         demo5(){
             // 对象的拓展运算符: ...
             let people = {name: "Amy", age: 15};
-            let someone = { ...people };
-            console.log('拓展运算符...',someone);  //{name: "Amy", age: 15}
             let fugai = { ...people,name: '覆盖'};
-            console.log('覆盖前同名属性',fugai);
-
-            let age = {age: 18};
-            let name = {name: "乎乎"};
-            let person = {...age, ...name};
-            console.log('合并两个对象',person);
+            console.log('合并对象---同key会覆盖',fugai);
 
             let arr1 = [1,2];
             let arr2 = [3,4];

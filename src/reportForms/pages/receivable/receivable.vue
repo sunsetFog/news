@@ -136,7 +136,7 @@
 </template>
 
 <script>
-import headerBar from '../../components/headerBar.vue'
+import headerBar from '@/explore/components/headerBar.vue'
 import drawingLine from './echartLine.js'
 import echartLineBar from './echartLineBar.js'
 import echartBarStack from './echartBarStack.js'

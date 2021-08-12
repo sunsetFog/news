@@ -2,16 +2,14 @@
   <section id="login">
     <div class="pen-container">
       <el-form :model="form_data" :rules="form_rules" ref="refForm">
-        <label>手 机 号</label>
-        <el-form-item label="" prop="phone">
+        <el-form-item label="手 机 号" prop="phone">
           <el-input
             v-model.trim="form_data.phone"
             placeholder="请输入手机号"
             maxlength="12"
           ></el-input>
         </el-form-item>
-        <label>密 码</label>
-        <el-form-item label="" prop="pwd">
+        <el-form-item label="密 码" prop="pwd">
           <el-input
             v-model.trim="form_data.pwd"
             placeholder="请输入账号密码"
@@ -122,10 +120,6 @@ export default {
     left: 50%;
     top: 50%;
     margin: -300px 0 0px -250px;
-    label {
-      height: 35px;
-      line-height: 35px;
-    }
   }
 }
 </style>

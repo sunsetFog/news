@@ -17,24 +17,16 @@ export default {
   },
   mounted() {
     // this.demo2();
-    // this.comeBack1('参数1', '参数2', function(res){
-    //     console.log('最终执行', res);
-    // })
-    this.comeBack2(520, function(res){
-      console.log('最终执行', res);
-    })
+    this.comeBack1('参数1', '参数2', function(res){
+        console.log('最终执行', res);
+    });// 传参3是个方法
   },
   methods: {
-    comeBack1(params1, params2, callback) {
+    // 用于控制执行顺序
+    comeBack1(params1, params2, callback) {// 参数3是个方法，一定要放最后
       // 方法callback的应用
       console.log("传入的参数:", params1, params2);
-      callback({ message: "成功" }); // callback有return功能，结束方法
-    },
-    comeBack2(params,result){
-      console.log('传入的参数:',params);
-      result({
-        message: '回调函数成功！'
-      })
+      callback({ message: "成功" }); // callback有return功能，结束方法    不一定命名callback 或result
     },
     demo1() {
       console.log("1"); // 同步任务
@@ -47,7 +39,7 @@ export default {
         console.log("3");
       }, 0);
 
-      // 应用: 现在是定义给变量，还可以在方法里return给方法, 就可以then了
+      // 应用: new Promise给变量，或return new Promise...给方法都行, 就可以then了
       var promise = new Promise(function (resolve) {
         // new Promise是同步任务
         console.log("4");
@@ -61,15 +53,15 @@ export default {
       console.log("6"); // 同步任务
       //执行顺序: 1、4、6、5、2、3
 
-      /* javascript是一门“单线程”的语言，所以javascript就像一条流水线，不能同时进行多个任务和流程
-            同步任务: 在主线程上排队执行的任务，只有前一个任务执行完毕，才能执行后一个任务。（主线程就是执行栈）
+      /* javascript是一门“单线程”的语言，要顺序执行，不能同时执行多个任务
+            同步任务: 在主线程上排队执行的任务。（主线程就是执行栈）
             异步任务: 先进入"任务队列"，等待主线程任务执行完毕，"任务队列"才进入主线程，开始执行
 
-            异步任务: 分为宏任务和微任务,只有微任务执行完毕，才执行宏任务
+            异步任务: 分为宏任务和微任务,先微任务，再宏任务
             简单理解: 先同步，再异步(先微任务，再宏任务)     请记能异步的js */
     },
     demo2() {
-      // 异步编程: 是的顺序步骤执行（promise和async属于es6）
+      // 异步编程: 按顺序步骤执行（promise和async属于es6）
       // Promise多用于在方法return new Promise.....然后调用该方法时，方法名(传参).then回调函数
       function is_promise(value) {
         return new Promise((resolve) => {
@@ -147,7 +139,7 @@ export default {
       console.log("3*2*1", fact(3)); // 结果为 6
     },
     demo5() {
-      // 高级遍历：递归 ------ children有一层的，有二层的，有三层的，那如何遍历呢？----用递归
+      // 高级遍历：递归，调用自身方法 ------ children有一层的，有二层的，有三层的，那如何遍历呢？----用递归
       let list = [
         {
           code: "10000770",
@@ -177,7 +169,7 @@ export default {
           ]
         }
       ];
-      function recursion(arr, value, callback) {// callback是回调函数,可以去掉，因为结束方法而影响添加或删除属性
+      function recursion(arr, value, callback) {// 参数3callback是个方法
         for (let i = 0; i < arr.length; i++) {
         //   arr[i].hidden = false; // 添加属性，实现改造自身数组
         //   delete arr[i]["title"]; // 删除属性
@@ -187,9 +179,10 @@ export default {
           recursion(arr[i].children, value, callback); // 传children数组
         }
       }
-      recursion(list, "10000420", function (children) {// 找出code："10000420"的children
+      // 找出code："10000420"的children
+      recursion(list, "10000420", function (children) {
         console.log(children);
-      });
+      });// 传参3是个方法
     },
   },
 };

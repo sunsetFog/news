@@ -17,14 +17,16 @@
 ./src/assets ^\.\/.*$
 Module not found: Error: Can't resolve 'style-loader' in 
 
+相对路径：从当前目录开始定位，形成的路径
+绝对定位: 从顶级目录src开始定位，形成的路径
 
 样式下
 background: url('~@/explore/assets/theme/logo_blue.png') no-repeat center center;
 
 1.相对路径: "./assets/logo_blue.png" 用的多，就是路径打包易报错，找不到
-2.没有前缀的路径 "assets/logo_blue.png" 被webpack解析为 相对路径
-推荐3.带~的路径  "~@/explore/assets/theme/logo_blue.png" 被webpack解析为 require(src/assets/theme/logo_blue.png) 动态引入   @等于/src
-4.相对根目录的路径 "/assets/logo_blue.png" webpack不解析
+2.相对路径，没前缀 "assets/logo_blue.png" 被webpack解析为 相对路径
+推荐3.绝对路径，带~  "~@/explore/assets/theme/logo_blue.png" 被webpack解析为 require(src/assets/theme/logo_blue.png) 动态引入   @等于/src
+4.绝对路径，相对根目录的路径 "/assets/logo_blue.png" webpack不解析
 
 */
 import lizhi from '../../../assets/lizhi.jpg'

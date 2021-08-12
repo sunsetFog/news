@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import headerBar from '../../components/headerBar.vue'
-import GaodeAmap from '../../components/GaoDeAmap'
+import headerBar from '@/explore/components/headerBar.vue'
+import GaodeAmap from '@/explore/components/GaoDeAmap'
 export default {
   name: 'PriceManage',
   data () {

@@ -59,7 +59,6 @@ export default new Router({
             { path: 'modifier', name: 'modifier', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/knowledge/modifier.vue'], resolve) },
             { path: 'lifecycle', name: 'lifeCycle', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/knowledge/lifeCycle.vue'], resolve) },
             { path: 'vuex', name: 'vuex', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/knowledge/vuex.vue'], resolve) },
-            { path: 'ergodic', name: 'ergodic', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/knowledge/ergodic.vue'], resolve) },
             { path: 'router', name: 'router', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/knowledge/router.vue'], resolve) },
             { path: 'class', name: 'class', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/knowledge/class.vue'], resolve) },
             { path: 'quote', name: 'quote', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/knowledge/quote.vue'], resolve) },
