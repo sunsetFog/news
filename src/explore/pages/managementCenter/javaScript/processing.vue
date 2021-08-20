@@ -29,7 +29,7 @@ export default {
                 }
             var jsonArr = [
 					{"name":"Deo","age":18},
-					{"name":"Jhon","age":20}
+					{"name":"Jhon","age":20} 
 				]
             var jsonStr = '{"name": "Jhon","age":18}';//字符串Json   后台有时给这种，注意打印看清类型
             console.log('字符串解析为json对象',JSON.parse(jsonStr));// JSON.parse(必须是字符串)

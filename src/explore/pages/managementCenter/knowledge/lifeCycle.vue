@@ -71,13 +71,9 @@ main.js
 router/index.js
     1.export default new Router({
         mode: 'history',//vue 路径去掉#
-    2.//引入路由的三种引入方式
-        // import Twelve from '../pages/index/twelve';
-        //@代表'/src'
+    2.//引入路由的两种引入方式
         //import Twelve from '@/explore/components/miss/twelve';
-        //优化好
         //const Twelve = resolve => require(['@/explore/pages/index/twelve'],resolve);
-        //component: resolve => require(['../components/page/Login.vue'], resolve)
     3.  //重点:路由参数解决刷新丢失问题
         // 1.meta是路由参数,却不在path路径上,可以打印this或者打印this.$route看,用this.$route.meta获取
         // 2.路由传参,在路径上
