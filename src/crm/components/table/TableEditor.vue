@@ -182,9 +182,7 @@
           </template>
           <!-- 表体 -->
           <template slot-scope="scope">
-            <template>
               <slot name="operationBody" :lyItem="scope"></slot>
-            </template>
           </template>
         </el-table-column>
       </el-table>

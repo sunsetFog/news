@@ -5,11 +5,11 @@
         <table border="1" width="900px">
             <thead>
                 <tr>
-                    <td width="200px">参数</td>
-                    <td width="300px">说明</td>
-                    <td width="90px">类型</td>
-                    <td>可选值</td>
-                    <td width="90px">默认值</td>
+                    <th width="200px">参数</th>
+                    <th width="300px">说明</th>
+                    <th width="90px">类型</th>
+                    <th>可选值</th>
+                    <th width="90px">默认值</th>
                 </tr>
             </thead>
 
@@ -33,9 +33,9 @@
         <table border="1" width="900px">
             <thead>
                 <tr>
-                    <td width="200px">事件名</td>
-                    <td width="300px">说明</td>
-                    <td>参数</td>
+                    <th width="200px">事件名</th>
+                    <th width="300px">说明</th>
+                    <th>参数</th>
                 </tr>
             </thead>
 
@@ -57,9 +57,9 @@
         <table border="1" width="900px">
             <thead>
                 <tr>
-                    <td width="200px">函数名</td>
-                    <td width="300px">说明</td>
-                    <td>入参</td>
+                    <th width="200px">函数名</th>
+                    <th width="300px">说明</th>
+                    <th>入参</th>
                 </tr>
             </thead>
 
@@ -81,11 +81,11 @@
         <table border="1" width="900px">
             <thead>
                 <tr>
-                    <td width="200px">属性</td>
-                    <td width="300px">说明</td>
-                    <td width="90px">类型</td>
-                    <td>可选值</td>
-                    <td width="90px">默认值</td>
+                    <th width="200px">属性</th>
+                    <th width="300px">说明</th>
+                    <th width="90px">类型</th>
+                    <th>可选值</th>
+                    <th width="90px">默认值</th>
                 </tr>
             </thead>
 
@@ -108,11 +108,11 @@
         <table border="1" width="900px">
             <thead>
                 <tr>
-                    <td width="200px">type类型-属性</td>
-                    <td width="300px">说明</td>
-                    <td width="90px">类型</td>
-                    <td>可选值</td>
-                    <td width="90px">默认值</td>
+                    <th width="200px">type类型-属性</th>
+                    <th width="300px">说明</th>
+                    <th width="90px">类型</th>
+                    <th>可选值</th>
+                    <th width="90px">默认值</th>
                 </tr>
             </thead>
 

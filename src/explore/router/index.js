@@ -26,7 +26,8 @@ export default new Router({
       3.children是用来搭建路由视图，包有{ path: '/', redirect: '/home' }  默认值：children里的重定向
       4.meta路由元信息，是用来存路由参数，比如title
     */
-    { path: '*', name: 'error', meta: { title: '找不到该页',key: 404}, component: resolve => require(['@/explore/pages/error.vue'], resolve) },
+    { path: '*', name: 'error', meta: { title: '找不到该页',key: 404}, component: resolve => require(['@/explore/pages/404.vue'], resolve) },
+    { path: '/noPermission', name: 'noPermission', meta: { title: '无权限访问该页',key: 401}, component: resolve => require(['@/explore/pages/401.vue'], resolve) },
     {
       path: '/', component: resolve => require(['@/explore/pages/home'], resolve),
       children: [

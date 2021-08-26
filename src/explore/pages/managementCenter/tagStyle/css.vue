@@ -21,6 +21,11 @@
                     div:link{}
                     div:after{}
                     div:first-child{}  --- div里第一个子元素
+                    不同写法
+                    .box{
+                        &:first-child{
+                        }
+                    }
                     div:last-child{}  --- div里最后子元素
                     div:nth-of-type(2){}  --- div里第几个子元素--- 实用
                 伪元素选择器:
@@ -56,6 +61,12 @@
         1.用-：class="list-cell"
         <br>
         2.一个页面用一个id类，尽量有class类
+        <!--
+            img 元素的 srcset 属性用于浏览器根据宽、高和像素密度来加载相应的图片资源。
+            属性格式：图片地址 宽度描述w 像素密度描述x，多个资源之间用逗号分隔
+            background-image: image-set(url("@static/picture/breezy/logo.png") 1x, url("@static/picture/breezy/logo_2x.png") 2x, url("@static/picture/breezy/logo_3x.png") 3x);
+        -->
+        <img style="width: 100px;height: 100px;" src="@static/picture/breezy/logo.png" srcset="@static/picture/breezy/logo_2x.png 2x,@static/picture/breezy/logo_3x.png 3x" alt="">
     </section>
 </template>
 

@@ -47,13 +47,12 @@ export default {
         },
         translate(value) {
             if (value == "zh") {
-                // this.$i18n.locale = 'en'
+                this.$i18n.locale = 'en';// 更换语言，无需刷新
                 sessionStorage.setItem("language", "zh");
             } else if (value == "en") {
-                // this.$i18n.locale = 'zh'
+                this.$i18n.locale = 'zh';
                 sessionStorage.setItem("language", "en");
             }
-            window.location.reload();
         }
     }
 }

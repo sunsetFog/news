@@ -239,9 +239,23 @@ export default {
 
             let name = " xiao ming ";
             console.log('去除所有空格',name.replace(/\s*/g,''));
-            // 正则表达式-元字符
+            // 正则表达式-元字符    可用于标签内容  <span>小&nbsp;白</span>
             console.log('匹配换行符', 'A\nB'); // \n
             console.log('空格', 'A&nbsp;B'); // &nbsp;
+            /*
+                比较元字符
+                &bt; 之间
+                &cn; 包含
+                &eq; 等于
+                &ne; 不等
+                &me; 多选
+                &bw; 开始于
+                &ew; 结束于
+                &gt; 大于
+                &ge; 大于等于
+                &lt; 小于
+                &le; 小于等于
+            */
         },
         demo8(){
             //Math对象: 数学任务      Math.方法名(运算值)

@@ -62,8 +62,14 @@
         <hr>
         <!-- 10文本域 -->
         <textarea name="area" rows="3" cols="50">加不了图片、背景图片可以。反正不能写标签</textarea>
+		<!-- 11.粗体文本 -->
+		<hr>
+		<b>这是粗体文本</b>
+		<!-- 12.换行 -->
+		<hr>
+		<span>换<br>行</span>
 
-        <hr><!-- 11.表格table -->
+        <hr><!-- 13.表格table -->
 		<table border="1" width="520px" height="550px">
 			<tr>
 				<td>姓名</td>

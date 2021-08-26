@@ -9,9 +9,9 @@
         <table border="1" width="900px">
             <thead>
                 <tr>
-                    <td width="200px">指令</td>
-                    <td width="400px">说明</td>
-                    <td width="200px">缩写</td>
+                    <th width="200px">指令</th>
+                    <th width="400px">说明</th>
+                    <th width="200px">缩写</th>
                 </tr>
             </thead> 
 
@@ -34,8 +34,8 @@
         <table border="1" width="900px">
             <thead>
                 <tr>
-                    <td width="200px">插件名</td>
-                    <td width="600px">说明</td>
+                    <th width="200px">插件名</th>
+                    <th width="600px">说明</th>
                 </tr>
             </thead> 
 
@@ -57,8 +57,8 @@
         <table border="1" width="900px">
             <thead>
                 <tr>
-                    <td width="200px">插件名</td>
-                    <td width="600px">说明</td>
+                    <th width="200px">插件名</th>
+                    <th width="600px">说明</th>
                 </tr>
             </thead> 
 
