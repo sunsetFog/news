@@ -54,15 +54,6 @@ const comic = {
             return {state: false,value: ''};
         }
     },
-    //判断是否微信浏览器
-    is_weixn(){  
-        var ua = navigator.userAgent.toLowerCase();  
-        if(ua.match(/MicroMessenger/i)=="micromessenger") {  
-            return true;  
-        } else {  
-            return false;  
-        }  
-    },
     isMoblie: function (value) {
 		return !/^1\d{10}$/.test(value);
     },
