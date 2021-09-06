@@ -21,18 +21,7 @@ menuId: 11120783
 
     
     
-    vue中使用svg-icon
-    https://blog.csdn.net/shentibeitaokong/article/details/83039021
-    <svg-icon icon-class="eye" />
-    {
-            test: /\.svg$/,
-            loader: 'svg-sprite-loader',
-            include: [resolve('src/portal/icons')],
-            options: {
-              symbolId: 'icon-[name]'
-            }
-          },
-    import 'font-awesome/css/font-awesome.min.css' // font-awesome icon
+
     
     
     //Vue实例化注册自定义过滤器

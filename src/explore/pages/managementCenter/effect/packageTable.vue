@@ -116,7 +116,10 @@ export default {
                 { params: 'vue-baidu-map',explain: '百度地图' },
                 { params: 'fastclick',explain: '移动端解决事件穿透' },
                 { params: 'vant',explain: '移动端ui' },
-                { params: 'vue-i18n',explain: '国际多语言翻译' }
+                { params: 'vue-i18n',explain: '国际多语言翻译' },
+                { params: 'font-awesome',explain: 'font-awesome图标' },
+                { params: 'driver.js',explain: '分步引导' },
+                { params: 'screenfull',explain: '全屏' }
             ],
             save_dev_list: [
                 { params: 'cross-env',explain: '运行跨平台设置和使用环境变量' },
@@ -156,7 +159,8 @@ export default {
                 { params: 'webpack-bundle-analyzer',explain: '分析构建产物' },
                 { params: 'webpack-dev-server',explain: '开发模式' },
                 { params: 'webpack-merge',explain: '合并代码' },
-                { params: 'postcss-pxtorem',explain: 'px自动转换rem---注意版本错误' }
+                { params: 'postcss-pxtorem',explain: 'px自动转换rem---注意版本错误' },
+                { params: 'svg-sprite-loader',explain: 'svg sprite' }
             ]
         }
     },

@@ -10,6 +10,9 @@ Vue.config.productionTip = false //生产提示
 // es6Promise .polyfill();
 Vue.use(iView);
 
+// font-awesome图标
+import 'font-awesome/css/font-awesome.min.css';
+
 
 
 import './database/index'; // 不能用if动态加载js

@@ -90,6 +90,10 @@ export default new Router({
             { path: 'listener', name: 'listener', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/effect/listener.vue'], resolve) },
             { path: 'websocket', name: 'websocket', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/effect/websocket.vue'], resolve) },
             { path: 'window_tab', name: 'window_tab', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/effect/windowTab.vue'], resolve) },
+            { path: 'svgIcons', name: 'svgIcons', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/effect/svgIcons.vue'], resolve) },
+            { path: 'awesomeIcons', name: 'awesomeIcons', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/effect/awesomeIcons.vue'], resolve) },
+            { path: 'guide', name: 'guide', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/effect/guide.vue'], resolve) },
+            { path: 'screenfull', name: 'screenfull', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/effect/screenfull.vue'], resolve) },
 
             { path: 'echartsDemo1', name: 'echartsDemo1', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/reportForm/demo1.vue'], resolve) },
 

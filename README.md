@@ -116,6 +116,7 @@ npm run build
 
 
 
+全局环境变量
 npm install cross-env --save-dev
 package.json
 "build:notes": "cross-env NODE_ENV=production env_config=notes node build/build.js"

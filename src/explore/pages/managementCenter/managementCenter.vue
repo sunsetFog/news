@@ -132,6 +132,10 @@ export default{
                     {key: '4-14',label: 'pc自适应',path: '/adaption',icon: require('@static/picture/center/qipai.png'),effect:[]},
                     {key: '4-15',label: '水波',path: '/wave',icon: require('@static/picture/center/qipai.png'),effect:[]},
                     {key: '4-16',label: '开新窗口',path: '/mcenter/window_tab',icon: require('@static/picture/center/qipai.png'),effect:[]},
+                    {key: '4-17',label: 'svg',path: '/mcenter/svgIcons',icon: require('@static/picture/center/qipai.png'),effect:[]},
+                    {key: '4-18',label: 'font-awesome',path: '/mcenter/awesomeIcons',icon: require('@static/picture/center/qipai.png'),effect:[]},
+                    {key: '4-19',label: '分步引导',path: '/mcenter/guide',icon: require('@static/picture/center/qipai.png'),effect:[]},
+                    {key: '4-20',label: '全屏',path: '/mcenter/screenfull',icon: require('@static/picture/center/qipai.png'),effect:[]}
                 ]},
                 {key: '5',label: '项目报表',path: '',icon: require('@static/picture/center/tuiguang.png'),effect:[
                     {key:'5-1',label: 'echart图表',path: '/mcenter/echartsDemo1',icon: require('@static/picture/center/daili.png'),effect:[]},
