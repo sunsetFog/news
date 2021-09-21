@@ -1,19 +1,22 @@
 <template>
     <div id="home">
-        <div class="header">
-            管理系统
-        </div>
-        <div class="heart-main" :style="{height: set_height}">
-          <div class="heart-left">
+          <div class="heart-left" :style="{width: left_width}">
+              <div class="logo-name">
+                  <img :class="{'logo-img': true,'logo-active': isCollapse}" src="@static/crm/image/logo.png"/>
+                  <span v-show="!isCollapse">娱乐管理后台</span>
+              </div>
               <el-menu
                 @select="summer"
                 @open="handleOpen"
                 @close="handleClose"
                 :default-active="menuIndex"
-                background-color="#545c64"
-                text-color="#fff"
+                background-color="#fff"
+                text-color="black"
                 unique-opened
-                active-text-color="#ffd04b">
+                active-text-color="#ffd04b"
+                mode="vertical"
+                :collapse="isCollapse"
+            >
                 <div v-for="(item,index) in navmenuArr" :key="index+'w'">
                   <el-submenu :index="item.id" >
                     <template slot="title">
@@ -31,19 +34,18 @@
               </el-menu>
           </div>
           <div class="heart-right">
-              <!-- <div class="pen-eat">
-                  <ul>
-                  <li  v-for="(item,index) in bread" :key="index" @click="penWater(index)">{{item.name}}<i v-if="index!=bread.length-1" class="el-icon-arrow-right"></i></li>
-                  </ul>
-              </div> -->
+              <div class="header">
+                    <i class="el-icon-menu show-menu" @click="collapseEvent"></i>
+                </div>
               <div class="cha-tibs">
                   <ul>
                     <li  v-for="(item,index) in tabList" :key="index" :class="{'pen-nice': item.tab_active}" @click="penTab(index)">{{item.title}}<i class="el-icon-close" @click.stop="closeTab(index)"></i></li>
                   </ul>
               </div>
-              <router-view></router-view>
+              <div class="pen-router-view">
+                  <router-view></router-view>
+              </div>
           </div>
-        </div>
         
     </div>
 </template>
@@ -56,7 +58,8 @@ export default {
   name: "home",
   data() {
     return {
-      set_height: (document.documentElement.clientHeight - 40) + 'px',
+        isCollapse: false,
+        left_width: '300px',
       navmenuArr: [
         {
           title: "首页",
@@ -66,11 +69,11 @@ export default {
           children: []
         },
         {
-          title: "管理员设置",
+          title: "表格",
           id: "2",
           open_active: false,
           path: "/",
-          children: [{ title: "管理员列表", id: "2-1", open_active: false, path: "/administrators/setton" }],
+          children: [{ title: "原版el-table", id: "2-1", open_active: false, path: "/administrators/setton" }],
         },
         {
           title: "权限管理",
@@ -107,6 +110,15 @@ export default {
   mounted() {
   },
   methods: {
+    collapseEvent() {
+      if(this.isCollapse) {
+        this.isCollapse = false;
+        this.left_width = '300px';
+      } else {
+        this.isCollapse = true;
+        this.left_width = '63px';
+      }
+    },
     penTab(index) {
       // 标签页事件
       this.$store.commit("menuIndex", this.tabList[index].id);
@@ -195,40 +207,73 @@ export default {
 
 <style lang="less" scoped>
 #home {
-  .header {
     width: 100%;
-    height: 40px;
-    line-height: 40px;
-    color: white;
-    padding: 0 20px;
-    box-sizing: border-box;
-    background: #409eff;
-  }
-  .heart-main {
-    width: 100%;
-    position: relative;
-    padding: 0 0 0 216px;
-    box-sizing: border-box;
-    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
     .heart-left {
-      width: 216px;
-      height: 100%;
-      position: absolute;
-      left: 0;
-      top: 0;
-      /deep/.el-menu {
-        width: 216px;
-        height: 100% !important;
-        border: none;
-      }
-    }
-    .heart-right {
-      width: 100%;
       height: 100%;
       float: left;
-      overflow-y: scroll;
-      padding: 0px 10px 0px 10px;
-      box-sizing: border-box;
+      box-shadow: 0 1px 2px #999999;
+      display: flex;
+      flex-direction: column;
+      .logo-name {
+          width: 100%;
+          height: 50px;
+          margin: 20px 0 30px 0;
+          .logo-img {
+              width: 50px;
+              height: 50px;
+              float: left;
+              margin: 0 10px;
+          }
+          .logo-active {
+            width: 30px;
+            height: 30px;
+            margin: 0 0px 0 16px;
+          }
+          span {
+              height: 50px;
+              line-height: 50px;
+              display: inline-block;
+              float: left;
+              color: #435EBE;
+              font-weight: 600;
+              font-size: 24px;
+          }
+      }
+      /deep/.el-menu {
+         flex: 1;
+      }
+        /*由于 element-ui 的<el-menu>标签本身希望里面嵌套的是<el-menu-item>,<el-submenu>,<el-menu-item-group>之一，但是却嵌套了<div>,而导致收折就隐藏不了文字*/
+        /*隐藏文字*/
+        /deep/.el-menu--collapse  .el-submenu__title span{
+            display: none;
+        }
+        /*隐藏 > */
+        /deep/.el-menu--collapse  .el-submenu__title .el-submenu__icon-arrow{
+            display: none;
+        }
+    }
+    .heart-right {
+      flex: 1;
+      height: 100%;
+      float: right;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+        .header {
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            padding: 0 20px;
+            box-sizing: border-box;
+            overflow: hidden;
+            box-shadow: 0 1px 2px #999999;
+            .show-menu {
+                font-size: 24px;
+            }
+        }
       .cha-tibs {
         width: 100%;
         height: 40px;
@@ -264,7 +309,10 @@ export default {
           }
         }
       }
+      .pen-router-view {
+          width: 100%;
+          flex: 1;
+      }
     }
-  }
 }
 </style>

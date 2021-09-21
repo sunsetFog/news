@@ -25,7 +25,7 @@ export default {
 
 <style lang="less">
 @import "~@static/capital/app2.less";
-@import "~@static/capital/whole2.less";
+@import "~@static/capital/whole.less";
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

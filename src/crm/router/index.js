@@ -45,7 +45,7 @@ export const asyncRouterMap = [
 //     {path: '/home', component: resolve => require(['@/crm/pages/home'],resolve),//下面有children，所以这里不用name，不然会有黄色警告
 //       children: [
 //         { path: '/world/world', name: 'world', meta: { title: '首页'},component: resolve => require(['@/crm/pages/world/world'],resolve) },
-//         { path: '/administrators/setton', name: 'setton', meta: { title: '管理员列表'},component: resolve => require(['@/crm/pages/administrators/setton'],resolve) },
+//         { path: '/administrators/setton', name: 'setton', meta: { title: '原版el-table'},component: resolve => require(['@/crm/pages/administrators/setton'],resolve) },
 //         { path: '/jurisdiction/role', name: 'role', meta: { title: '角色列表'},component: resolve => require(['@/crm/pages/jurisdiction/role'],resolve) },
 //         { path: '/jurisdiction/menu', name: 'menu', meta: { title: '菜单列表'},component: resolve => require(['@/crm/pages/jurisdiction/menu'],resolve) },
 //         { path: '/system/initial', name: 'initial', meta: { title: '网络设置'},component: resolve => require(['@/crm/pages/system/initial'],resolve) },

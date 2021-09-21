@@ -70,6 +70,7 @@
 
 <script>
 import footers from '@/explore/components/footer.vue';
+import lodash from 'lodash'
 export default{
     name: 'management',
     components: {footers},
@@ -77,75 +78,78 @@ export default{
         return{
             manage_state: true,//管理中心
             menuList: [
-                {key: '1',label: '标签样式',path: '',icon: require('@static/picture/center/shouyi.png'),effect:[
-                    {key:'1-1',label: '代码规范',path: '/mcenter/standard',icon: require('@static/picture/center/gonggao.png'),effect:[]},
-                    {key:'1-2',label: '样式',path: '/mcenter/css',icon: require('@static/picture/center/gonggao.png'),effect:[]},
-                    {key:'1-3',label: '标签',path: '/mcenter/tags',icon: require('@static/picture/center/gonggao.png'),effect:[]},
-                    {key:'1-4',label: 'flex弹性布局',path: '/mcenter/flex',icon: require('@static/picture/center/gonggao.png'),effect:[]},
-                    {key:'1-5',label: '样式例子',path: '/mcenter/cssDemo',icon: require('@static/picture/center/gonggao.png'),effect:[]},
+                {key: lodash.uniqueId('first_'), label: '标签样式', path: '', icon: require('@static/picture/center/shouyi.png'), effect:[
+                    {key: lodash.uniqueId('second_'), label: '代码规范', path: '/mcenter/standard', icon: require('@static/picture/center/gonggao.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: '样式', path: '/mcenter/css', icon: require('@static/picture/center/gonggao.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: '标签', path: '/mcenter/tags', icon: require('@static/picture/center/gonggao.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: 'flex弹性布局', path: '/mcenter/flex', icon: require('@static/picture/center/gonggao.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: '样式例子', path: '/mcenter/cssDemo', icon: require('@static/picture/center/gonggao.png'), effect:[]},
                 ]},
-                {key: '2',label: 'javaScript',path: '',icon: require('@static/picture/center/caiwu.png'),effect:[
-                    {key:'2-1',label: '必学1',path: '/mcenter/learn1?id=128',icon: require('@static/picture/center/wanjia.png'),effect:[]},
-                    {key:'2-2',label: '必学2',path: '/mcenter/learn2',icon: require('@static/picture/center/wanjia.png'),effect:[]},
-                    {key:'2-3',label: '必学3',path: '/mcenter/learn3',icon: require('@static/picture/center/wanjia.png'),effect:[]},
-                    {key:'2-4',label: '处理数据',path: '/mcenter/processing',icon: require('@static/picture/center/wanjia.png'),effect:[]},
-                    {key:'2-5',label: 'es6',path: '/mcenter/es6',icon: require('@static/picture/center/wanjia.png'),effect:[]},
-                    {key:'2-6',label: 'js例子',path: '/mcenter/jsDemo',icon: require('@static/picture/center/wanjia.png'),effect:[]},
-                    {key:'2-7',label: '赋值-浅拷贝-深拷贝',path: '/mcenter/research',icon: require('@static/picture/center/wanjia.png'),effect:[]},
+                {key: lodash.uniqueId('first_'), label: 'javaScript', path: '', icon: require('@static/picture/center/caiwu.png'), effect:[
+                    {key: lodash.uniqueId('second_'), label: '必学1', path: '/mcenter/learn1?id=128', icon: require('@static/picture/center/wanjia.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: '必学2', path: '/mcenter/learn2', icon: require('@static/picture/center/wanjia.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: '必学3', path: '/mcenter/learn3', icon: require('@static/picture/center/wanjia.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: '处理数据', path: '/mcenter/processing', icon: require('@static/picture/center/wanjia.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: 'es6', path: '/mcenter/es6', icon: require('@static/picture/center/wanjia.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: 'js例子', path: '/mcenter/jsDemo', icon: require('@static/picture/center/wanjia.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: '赋值-浅拷贝-深拷贝', path: '/mcenter/research', icon: require('@static/picture/center/wanjia.png'), effect:[]},
                 ]},
-                {key: '3',label: 'vue知识点',path: '',icon: require('@static/picture/center/pai.png'),effect:[
-                    {key:'3-1',label: 'vue指令',path: '/mcenter/v_tag',icon: require('@static/picture/center/qipai.png'),effect:[]},
-                    {key:'3-2',label: 'vue修饰符',path: '/mcenter/modifier',icon: require('@static/picture/center/qipai.png'),effect:[]},
-                    {key:'3-3',label: '生命周期',path: '/mcenter/lifecycle',icon: require('@static/picture/center/qipai.png'),effect:[]},
-                    {key:'3-4',label: 'vuex',path: '/mcenter/vuex',icon: require('@static/picture/center/tuandui.png'),effect:[]},
-                    {key:'3-5',label: '路由传参',path: '/mcenter/router',icon: require('@static/picture/center/wanjia.png'),effect:[]},
-                    {key:'3-6',label: '动态样式',path: '/mcenter/class',icon: require('@static/picture/center/caiwu.png'),effect:[]},
-                    {key:'3-7',label: '样式或js外引入',path: '/mcenter/quote',icon: require('@static/picture/center/shouyi.png'),effect:[]},
-                    {key:'3-8',label: '子父通讯',path: '/mcenter/parent',icon: require('@static/picture/center/tuiguang.png'),effect:[]},
-                    {key:'3-9',label: '全局方法',path: '/mcenter/public',icon: require('@static/picture/center/gonggao.png'),effect:[]},
-                    {key:'3-10',label: 'watch监听',path: '/mcenter/watch',icon: require('@static/picture/center/caiwu.png'),effect:[]},
-                    {key:'3-11',label: 'computed',path: '/mcenter/computed',icon: require('@static/picture/center/caiwu.png'),effect:[]},
-                    {key:'3-12',label: 'filters过滤器',path: '/mcenter/filters',icon: require('@static/picture/center/caiwu.png'),effect:[]},
-                    {key:'3-13',label: 'transition动画',path: '/mcenter/transition',icon: require('@static/picture/center/caiwu.png'),effect:[]},
-                    {key:'3-14',label: 'refs操作Dom',path: '/mcenter/refs',icon: require('@static/picture/center/caiwu.png'),effect:[]},
-                    {key:'3-15',label: 'mock模拟接口',path: '/mcenter/mock',icon: require('@static/picture/center/caiwu.png'),effect:[]},
-                    {key:'3-16',label: '浏览器缓存',path: '/mcenter/cache',icon: require('@static/picture/center/caiwu.png'),effect:[]},
-                    {key:'3-17',label: 'axios配置',path: '/mcenter/axios',icon: require('@static/picture/center/caiwu.png'),effect:[]},
-                    {key:'3-18',label: '图片相对路径',path: '/mcenter/relativePath',icon: require('@static/picture/center/caiwu.png'),effect:[]},
-                    {key:'3-19',label: 'mixins混合',path: '/mcenter/sunMixin',icon: require('@static/picture/center/caiwu.png'),effect:[]},
-                    {key:'3-20',label: 'packageJson说明',path: '/packageTable',icon: require('@static/picture/center/caiwu.png'),effect:[]}
+                {key: lodash.uniqueId('first_'), label: 'vue知识点', path: '', icon: require('@static/picture/center/pai.png'), effect:[
+                    {key: lodash.uniqueId('second_'), label: 'vue指令', path: '/mcenter/v_tag', icon: require('@static/picture/center/qipai.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: 'vue修饰符', path: '/mcenter/modifier', icon: require('@static/picture/center/qipai.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: '生命周期', path: '/mcenter/lifecycle', icon: require('@static/picture/center/qipai.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: 'vuex', path: '/mcenter/vuex', icon: require('@static/picture/center/tuandui.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: '路由传参', path: '/mcenter/router', icon: require('@static/picture/center/wanjia.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: '动态样式', path: '/mcenter/class', icon: require('@static/picture/center/caiwu.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: '样式或js外引入', path: '/mcenter/quote', icon: require('@static/picture/center/shouyi.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: '子父通讯', path: '/mcenter/parent', icon: require('@static/picture/center/tuiguang.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: '全局方法', path: '/mcenter/public', icon: require('@static/picture/center/gonggao.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: 'watch监听', path: '/mcenter/watch', icon: require('@static/picture/center/caiwu.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: 'computed', path: '/mcenter/computed', icon: require('@static/picture/center/caiwu.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: 'filters过滤器', path: '/mcenter/filters', icon: require('@static/picture/center/caiwu.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: 'transition动画', path: '/mcenter/transition', icon: require('@static/picture/center/caiwu.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: 'refs操作Dom', path: '/mcenter/refs', icon: require('@static/picture/center/caiwu.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: 'mock模拟接口', path: '/mcenter/mock', icon: require('@static/picture/center/caiwu.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: '浏览器缓存', path: '/mcenter/cache', icon: require('@static/picture/center/caiwu.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: 'axios配置', path: '/mcenter/axios', icon: require('@static/picture/center/caiwu.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: '图片相对路径', path: '/mcenter/relativePath', icon: require('@static/picture/center/caiwu.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: 'mixins混合', path: '/mcenter/sunMixin', icon: require('@static/picture/center/caiwu.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: 'packageJson说明', path: '/packageTable', icon: require('@static/picture/center/caiwu.png'), effect:[]}
                 ]},
-                {key: '4',label: 'vue功能集',path: '',icon: require('@static/picture/center/qipai.png'),effect: [
-                    {key: '4-1',label: '下载',path: '/mcenter/download_ex',icon: require('@static/picture/center/qipai.png'),effect:[]},
-                    {key: '4-2',label: 'copy复制',path: '/mcenter/copy',icon: require('@static/picture/center/qipai.png'),effect:[]},
-                    {key: '4-3',label: '字段变量',path: '/mcenter/field',icon: require('@static/picture/center/qipai.png'),effect:[]},
-                    {key: '4-4',label: '返回顶部',path: '/mcenter/backtotop',icon: require('@static/picture/center/qipai.png'),effect:[]},
-                    {key: '4-5',label: '分页封装',path: '/mcenter/pagination',icon: require('@static/picture/center/qipai.png'),effect:[]},
-                    {key: '4-6',label: '上传图片列表',path: '/mcenter/upload',icon: require('@static/picture/center/qipai.png'),effect:[]},
-                    {key: '4-7',label: '单个上传图片',path: '/mcenter/upload1',icon: require('@static/picture/center/qipai.png'),effect:[]},
-                    {key: '4-8',label: '懒加载',path: '/mcenter/lazy',icon: require('@static/picture/center/qipai.png'),effect:[]},
-                    {key: '4-9',label: '视频',path: '/mcenter/video',icon: require('@static/picture/center/qipai.png'),effect:[]},
-                    {key: '4-10',label: '文本编辑器',path: '/mcenter/editor',icon: require('@static/picture/center/qipai.png'),effect:[]},
-                    {key: '4-11',label: '二维码',path: '/mcenter/vueqr',icon: require('@static/picture/center/qipai.png'),effect:[]},
-                    {key: '4-12',label: '浏览器监听',path: '/mcenter/listener',icon: require('@static/picture/center/qipai.png'),effect:[]},
-                    {key: '4-13',label: 'websocket',path: '/mcenter/websocket',icon: require('@static/picture/center/qipai.png'),effect:[]},
-                    {key: '4-14',label: 'pc自适应',path: '/adaption',icon: require('@static/picture/center/qipai.png'),effect:[]},
-                    {key: '4-15',label: '水波',path: '/wave',icon: require('@static/picture/center/qipai.png'),effect:[]},
-                    {key: '4-16',label: '开新窗口',path: '/mcenter/window_tab',icon: require('@static/picture/center/qipai.png'),effect:[]},
-                    {key: '4-17',label: 'svg',path: '/mcenter/svgIcons',icon: require('@static/picture/center/qipai.png'),effect:[]},
-                    {key: '4-18',label: 'font-awesome',path: '/mcenter/awesomeIcons',icon: require('@static/picture/center/qipai.png'),effect:[]},
-                    {key: '4-19',label: '分步引导',path: '/mcenter/guide',icon: require('@static/picture/center/qipai.png'),effect:[]},
-                    {key: '4-20',label: '全屏',path: '/mcenter/screenfull',icon: require('@static/picture/center/qipai.png'),effect:[]}
+                {key: lodash.uniqueId('first_'), label: 'vue功能集', path: '', icon: require('@static/picture/center/qipai.png'), effect: [
+                    {key: lodash.uniqueId('second_'), label: '下载', path: '/mcenter/download_ex', icon: require('@static/picture/center/qipai.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: 'copy复制', path: '/mcenter/copy', icon: require('@static/picture/center/qipai.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: '字段变量', path: '/mcenter/field', icon: require('@static/picture/center/qipai.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: '返回顶部', path: '/mcenter/backtotop', icon: require('@static/picture/center/qipai.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: '分页封装', path: '/mcenter/pagination', icon: require('@static/picture/center/qipai.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: '上传图片列表', path: '/mcenter/upload', icon: require('@static/picture/center/qipai.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: '单个上传图片', path: '/mcenter/upload1', icon: require('@static/picture/center/qipai.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: '懒加载', path: '/mcenter/lazy', icon: require('@static/picture/center/qipai.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: '视频', path: '/mcenter/video', icon: require('@static/picture/center/qipai.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: '文本编辑器', path: '/mcenter/editor', icon: require('@static/picture/center/qipai.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: '二维码', path: '/mcenter/vueqr', icon: require('@static/picture/center/qipai.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: '浏览器监听', path: '/mcenter/listener', icon: require('@static/picture/center/qipai.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: 'websocket', path: '/mcenter/websocket', icon: require('@static/picture/center/qipai.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: 'pc自适应', path: '/adaption', icon: require('@static/picture/center/qipai.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: '水波', path: '/wave', icon: require('@static/picture/center/qipai.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: '开新窗口', path: '/mcenter/window_tab', icon: require('@static/picture/center/qipai.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: 'svg', path: '/mcenter/svgIcons', icon: require('@static/picture/center/qipai.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: 'font-awesome', path: '/mcenter/awesomeIcons', icon: require('@static/picture/center/qipai.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: '分步引导', path: '/mcenter/guide', icon: require('@static/picture/center/qipai.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: '全屏', path: '/mcenter/screenfull', icon: require('@static/picture/center/qipai.png'), effect:[]}
                 ]},
-                {key: '5',label: '项目报表',path: '',icon: require('@static/picture/center/tuiguang.png'),effect:[
-                    {key:'5-1',label: 'echart图表',path: '/mcenter/echartsDemo1',icon: require('@static/picture/center/daili.png'),effect:[]},
+                {key: lodash.uniqueId('first_'), label: '项目报表', path: '', icon: require('@static/picture/center/tuiguang.png'), effect:[
+                    {key: lodash.uniqueId('second_'), label: 'echart图表', path: '/mcenter/echartsDemo1', icon: require('@static/picture/center/daili.png'), effect:[]},
                 ]},
-                {key: '6',label: '拓展知识',path: '',icon: require('@static/picture/center/tuiguang.png'),effect:[
-                    {key:'6-1',label: 'canvas',path: '/mcenter/canvas',icon: require('@static/picture/center/caiwu.png'),effect:[]},
-                    {key:'6-2',label: 'base64解密',path: '/mcenter/base64',icon: require('@static/picture/center/caiwu.png'),effect:[]},
+                {key: lodash.uniqueId('first_'), label: '动画', path: '', icon: require('@static/picture/center/tuiguang.png'), effect:[
+
                 ]},
-                {key: '7',label: '面试要谈',path: '',icon: require('@static/picture/center/tuandui.png'),effect:[
-                    {key:'7-1',label: '要点1',path: '/mcenter/talk1',icon: require('@static/picture/center/tuiguang.png'),effect:[]},
+                {key: lodash.uniqueId('first_'), label: '拓展知识', path: '', icon: require('@static/picture/center/tuiguang.png'), effect:[
+                    {key: lodash.uniqueId('second_'), label: 'canvas', path: '/mcenter/canvas', icon: require('@static/picture/center/caiwu.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: 'base64解密', path: '/mcenter/base64', icon: require('@static/picture/center/caiwu.png'), effect:[]},
+                ]},
+                {key: lodash.uniqueId('first_'), label: '面试要谈', path: '', icon: require('@static/picture/center/tuandui.png'), effect:[
+                    {key: lodash.uniqueId('second_'), label: '要点1', path: '/mcenter/talk1', icon: require('@static/picture/center/tuiguang.png'), effect:[]},
                 ]},
             ],
         }

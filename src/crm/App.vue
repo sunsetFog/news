@@ -12,6 +12,7 @@ export default {
     return {};
   },
   created() {
+    console.log('---clientHeight---', document.documentElement.clientHeight)
     // window.addEventListener("beforeunload", (e) => this.beforeunloadFn(e));
   },
   mounted() {
@@ -46,56 +47,5 @@ export default {
   cursor: not-allowed;
 }
 /*公共样式--开始*/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html,
-body {
-  height: 100%;
-  overflow-x: hidden;
-  /* 不能触屏 */
-  -ms-touch-action: none;
-  /* HTML多次点击字体背景颜色变蓝
-    原因：变蓝是因为浏览器添加了默认的事件 */
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-ul,
-ol,
-li {
-  list-style: none;
-}
-
-img {
-  border: none;
-  -vertical-align: middle;
-}
-
-a {
-  text-decoration: none;
-  color: #232323;
-}
-
-table {
-  border-collapse: collapse;
-  table-layout: fixed;
-}
-
-input,
-textarea,
-button {
-  outline: none;
-  border: none;
-}
-
-textarea {
-  resize: none;
-  overflow: auto;
-}
+@import "~@static/capital/whole.less";
 </style>

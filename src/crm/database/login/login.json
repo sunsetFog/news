@@ -12,7 +12,7 @@
         {
             "id": "2",
             "parentId": null,
-            "title": "管理员设置",
+            "title": "表格",
             "path": "",
             "icon": null,
             "type": 0,
@@ -20,7 +20,7 @@
                 {
                     "id": "201",
                     "parentId": 0,
-                    "title": "管理员列表",
+                    "title": "原版el-table",
                     "path": "/administrators/setton",
                     "icon": null,
                     "type": 1,
@@ -29,7 +29,7 @@
                 {
                     "id": "202",
                     "parentId": 0,
-                    "title": "table组件",
+                    "title": "综合表格",
                     "path": "/tableEditor/crmTable",
                     "icon": null,
                     "type": 1,

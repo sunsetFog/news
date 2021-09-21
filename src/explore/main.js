@@ -19,7 +19,7 @@ import './database/index'; // 不能用if动态加载js
 // if (true) {
 //   require('./database/index') // 可以动态加载，不报错
 // }
-import '@static/capital/rem.js'
+// import '@static/capital/rem.js'
 
 
 import ElementUI from 'element-ui';

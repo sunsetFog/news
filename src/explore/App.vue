@@ -107,9 +107,10 @@ export default {
 
 <style lang="less">//为了全局样式有效，App.vue文件别用scoped
 @import "~@static/capital/app.less";
-@import "~@static/capital/whole1.less";
+@import "~@static/capital/whole.less";
 @import "~@static/capital/baidumap.less";
 #app {
+  min-width: 1200px;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -118,6 +119,7 @@ export default {
   color: #2c3e50;
   position: relative;
 }
+
 
 .advertisement {
   width: 100%;

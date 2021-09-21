@@ -1,7 +1,7 @@
 <template>
     <div id="setton">
         <!-- <div class="top">
-            <el-button type="primary">管理员列表</el-button>
+            <el-button type="primary">原版el-table</el-button>
         </div> -->
         <div class="add">
             <el-button type="primary" @click="dialogVisible=true" size="small">添加</el-button>
