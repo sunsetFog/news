@@ -12,7 +12,6 @@ export default {
     return {};
   },
   created() {
-    console.log('---clientHeight---', document.documentElement.clientHeight)
     // window.addEventListener("beforeunload", (e) => this.beforeunloadFn(e));
   },
   mounted() {

@@ -176,11 +176,9 @@ export default {
             this.$store.commit('addPane',{
                 title: '详情页',
                 path: '/administrators/detail',
-                id: sessionStorage.getItem('menuIndex'),
-                save_bread: JSON.parse(sessionStorage.getItem('bread')),
-                tab_active: false
+                menu_active: '/administrators/detail'
             })
-            this.$store.commit('chaActive', 'zuohou')
+            this.$store.commit('modifyTab', '/administrators/detail')
             this.$router.push({ path: '/administrators/detail' })
         },
         handleEdit(index, row) {

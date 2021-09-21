@@ -49,8 +49,14 @@ router.beforeEach((to, from, next) => {
     sessionStorage.removeItem('tabList');
   }
 
-  if(from.path == '/' && sessionStorage.getItem('bread')&& sessionStorage.getItem('tabList')){ // 刷新判断
-    store.commit('modifyTab',JSON.parse(sessionStorage.getItem('tabList')));
+  if(from.path == '/' && sessionStorage.getItem('tabList')){ // 刷新判断
+    let tabArr = JSON.parse(sessionStorage.getItem('tabList'));
+    tabArr = tabArr.filter(function(item){
+      return item.path == to.path;
+    })
+    store.commit('modifyTab',tabArr);
+    store.commit("menuValue", to.path);
+    store.commit("modifyTab", to.path);
   }
 
   if (sessionStorage.getItem('token')&&store.getters.addRouters.length == 0) {  //如果未匹配到路由
