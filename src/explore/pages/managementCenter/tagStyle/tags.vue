@@ -68,69 +68,7 @@
 		<!-- 12.换行 -->
 		<hr>
 		<span>换<br>行</span>
-
-        <hr><!-- 13.表格table -->
-		<table border="1" width="520px" height="550px">
-			<tr>
-				<td>姓名</td>
-				<td></td>
-				<td>性别</td>
-				<td></td>
-				<td rowspan="5">照片</td>
-			</tr>
-			<tr>
-				<td>生日</td>
-				<td></td>
-				<td>身高</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>籍贯</td>
-				<td></td>
-				<td>民族</td>
-				<td>汉</td>
-			</tr>
-			<tr>
-				<td>政治面貌</td>
-				<td>团员</td>
-				<td>毕业院校</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>学历</td>
-				<td>本科</td>
-				<td>专业</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>联系电话</td>
-				<td></td>
-				<td>电子邮箱</td>
-				<td colspan="2"></td>
-			</tr>
-			<tr>
-				<td>邮编</td>
-				<td></td>
-				<td>地址</td>
-				<td colspan="2"></td>
-			</tr>
-			<tr height="100px">
-				<td>个人简历</td>
-				<td colspan="4">简历</td>
-			</tr>
-			<tr height="100px">
-				<td>爱好特长</td>
-				<td colspan="4">特长</td>
-			</tr>
-			<tr height="100px">
-				<td>相关证书</td>
-				<td colspan="4">证书</td>
-			</tr>
-			<tr height="75px">
-				<td>社会实践</td>
-				<td colspan="4">实践</td>
-			</tr>
-		</table>
+		
 
         <div id="box1">这是box1</div>
     </section>
@@ -148,8 +86,5 @@ export default {
     a{
         color: red;
     }
-    table{
-		border-collapse: collapse;/*合并表格边框*/
-	}
 }
 </style>

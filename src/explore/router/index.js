@@ -47,6 +47,7 @@ export default new Router({
             { path: 'tags', name: 'tags', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/tagStyle/tags.vue'], resolve) },
             { path: 'flex', name: 'flex', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/tagStyle/flex.vue'], resolve) },
             { path: 'cssDemo', name: 'cssDemo', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/tagStyle/cssDemo.vue'], resolve) },
+            { path: 'table', name: 'table', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/tagStyle/table.vue'], resolve) },
 
             { path: 'learn1', name: 'learn1', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/javaScript/learn1.vue'], resolve) },
             { path: 'learn2', name: 'learn2', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/javaScript/learn2.vue'], resolve) },

@@ -89,6 +89,11 @@ export default {
                 console.log('H-token',res);
                 sessionStorage.setItem('loginJson',JSON.stringify(res.menu_list));
                 sessionStorage.setItem('buttonPermissions',JSON.stringify(res.buttonPermissions));
+                that.$store.commit("addPane", {
+                  title: '首页',
+                  path: '/world/world',
+                  menu_active: '/world/world'
+                });
                 that.$store.dispatch('GenerateRoutes',res.menu_list).then(function(result){
                   console.log('result===', result);
                   sessionStorage.setItem('token', 'txvb-8325487189');
