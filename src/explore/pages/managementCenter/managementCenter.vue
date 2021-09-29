@@ -191,7 +191,6 @@ export default{
             top: 0px;
             margin-left: -600px;
             padding: 45px 43px 0px 43px;
-            box-sizing: border-box;
             .manage-content-left{
                 .mixin_float(230px,auto,left);
                 background: #513663;

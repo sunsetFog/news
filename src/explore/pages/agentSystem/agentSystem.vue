@@ -75,7 +75,6 @@ export default{
             top: 0px;
             margin-left: -600px;
             padding: 45px 225px 0px 225px;
-            box-sizing: border-box;
             .map-frame{
                 width: 100%;
                 height: 100%;

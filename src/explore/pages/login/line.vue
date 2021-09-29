@@ -110,7 +110,6 @@ export default{
 #line{
     width: 100%;
     padding-bottom: 115px;
-    box-sizing: border-box;
     overflow: hidden;
     .mixin_image(url('~@static/picture/login/bg_denglu.jpg'));
     @color_violet: #3d1351;//字体
@@ -141,7 +140,6 @@ export default{
             left: 50%;
             margin-left: -330px;
             padding: 10px 30px 0px 30px;
-            box-sizing: border-box;
             .testing-header{
                 width: 100%;
                 height: 60px;
@@ -170,7 +168,6 @@ export default{
                 height: 350px;
                 margin: 5px 0px 0px 10px;
                 padding: 12px 0px 0px 22px;
-                box-sizing: border-box;
                 .line-content{
                     width: 100%;
                     height: 30px;

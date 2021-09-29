@@ -223,7 +223,6 @@ export default {
         .payment-content{
             .mixin_float(84%,620px,right);
             padding: 75px 45px 0px 45px;
-            box-sizing: border-box;
             .current-balance,.withdrawal-amount-s,.account-number{
                 width: 100%;
                 height: 45px;

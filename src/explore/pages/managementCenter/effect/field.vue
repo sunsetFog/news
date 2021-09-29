@@ -108,7 +108,6 @@ export default {
       float: right;
       text-align: right;
       padding-right: 20px;
-      box-sizing: border-box;
       cursor: pointer;
     }
   }
@@ -116,7 +115,6 @@ export default {
     width: 100%;
     height: 80px;
     padding: 5px 20px 0px 20px;
-    box-sizing: border-box;
     border-bottom: 1px solid #ebeef5;
     .praise {
       .active-praise {

@@ -174,7 +174,6 @@ export default {
             background: @color_tone20;
             font-size: @font_size20;
             padding: 40px 0px 0px 0px;
-            box-sizing: border-box;
             .user-info{
                 .mixin_div(100%,140px,none,@color_white,left);
                 position: relative;
@@ -226,7 +225,6 @@ export default {
         .picture-content{
             .mixin_float(84%,620px,right);
             padding: 30px 120px 0px 150px;
-            box-sizing: border-box;
             .head-example{
                 width: 100%;
                 height: 420px;

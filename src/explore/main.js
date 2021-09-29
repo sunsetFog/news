@@ -26,7 +26,7 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
 
-
+console.log('process.env==', process.env);
 
 import means from './public/index.js';
 Vue.prototype.$means = means;

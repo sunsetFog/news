@@ -48,7 +48,6 @@ export default {
         width: 100%;
         height: 295px;
         padding: 35px 35px 0px 35px;
-        box-sizing: border-box;
         .already-submit{
             .mixin_div(100%,45px,none,@color_white,center);
             font-size: @font_size24;
@@ -68,7 +67,6 @@ export default {
         .sure-btn{
             .mixin_div(100%,45px,none,@color_white,left);
             padding-left: 180px;
-            box-sizing: border-box;
             margin-top: 25px;
             button{
                 .mixin_button(112px,34px,@color_white2,@color_blueviolet);

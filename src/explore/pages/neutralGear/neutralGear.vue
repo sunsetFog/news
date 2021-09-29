@@ -78,7 +78,6 @@ export default {
         overflow: hidden;
         border-radius: 20px;
         padding: 5px 0px 0px 6px;
-        box-sizing: border-box;
         position: absolute;
         left: 50%;
         bottom: 50px;

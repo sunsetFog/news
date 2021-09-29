@@ -248,7 +248,6 @@ export default {
       height: 50px;
       line-height: 50px;
       padding: 0 20px;
-      box-sizing: border-box;
       box-shadow: 0 0.5px 2px #999999;
       .show-menu {
         font-size: 24px;
@@ -258,7 +257,6 @@ export default {
       width: 100%;
       height: 50px;
       padding: 5px 10px 0px 10px;
-      box-sizing: border-box;
       box-shadow: 0 0.5px 2px #999999;
       /deep/.el-tabs__header {
         border-bottom: 0px solid #E4E7ED;
@@ -272,7 +270,6 @@ export default {
       width: 100%;
       flex: 1;
       padding: 8px 10px 0px 10px;
-      box-sizing: border-box;
       overflow: hidden;
     }
   }

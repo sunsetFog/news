@@ -467,12 +467,10 @@ export default {
         .mixin_li(135px, 53px);
         cursor: pointer;
         padding: 15px 33px;
-        box-sizing: border-box;
       }
       li:nth-of-type(1) {
         height: 73px;
         padding: 5px 25px;
-        box-sizing: border-box;
         img {
           .mixin_img(100%, 100%);
           float: left;
@@ -509,7 +507,6 @@ export default {
       .reserve {
         .mixin_float(auto, 100%, left);
         padding: 17px 0px 0px 0px;
-        box-sizing: border-box;
         .reserve-border {
           border-right: 1px solid @color_tone1;
         }
@@ -518,12 +515,10 @@ export default {
           li {
             .mixin_li(auto, 15px);
             padding: 0px 12px;
-            box-sizing: border-box;
             cursor: pointer;
           }
           li:nth-of-type(1) {
             padding: 0px 12px 0px 0px;
-            box-sizing: border-box;
           }
           li:hover {
             color: #eb2020;

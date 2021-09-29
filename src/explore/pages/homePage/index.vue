@@ -177,7 +177,6 @@ export default{
             .game-frame{
                 .mixin_div(100%,100%,none,auto,left);
                 padding: 0px 80px;
-                box-sizing: border-box;
                 .carousel-header{
                     width: 100%;
                     height: 60px;

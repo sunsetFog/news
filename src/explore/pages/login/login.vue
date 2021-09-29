@@ -216,7 +216,6 @@ export default{
     width: 100%;
     height: 750px;
     padding-bottom: 115px;
-    box-sizing: border-box;
     overflow: hidden;
     .mixin_image(url('~@static/picture/login/bg_denglu.jpg'));
     @color_violet: #3d1351;//字体
@@ -275,7 +274,6 @@ export default{
                 width: 100%;
                 height: 360px;
                 padding: 20px 30px 0px 30px;
-                box-sizing: border-box;
                 .account,.password-enter{
                     width: 100%;
                     height: 50px;
@@ -289,7 +287,6 @@ export default{
                         float: left;
                         font-weight: 600;
                         padding: 0px 0px 0px 13px;
-                        box-sizing: border-box;
                     }
                     input{
                         .mixin_input(260px,48px);
@@ -339,7 +336,6 @@ export default{
                         left: 5px;
                         margin-top: -9px;
                         padding: 2px 0px 0px 2px;
-                        box-sizing: border-box;
                         cursor: pointer;
                         img{
                             .mixin_img(13px,13px);

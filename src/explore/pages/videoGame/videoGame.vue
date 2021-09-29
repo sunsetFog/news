@@ -1,5 +1,5 @@
 <template>
-<section style="color: #243851;padding: 50px 0px 0px 0px;box-sizing: border-box;text-align: center;">
+<section style="color: #243851;padding: 50px 0px 0px 0px;text-align: center;">
     <el-button @click="activity()">活动</el-button>
 </section>
 </template>

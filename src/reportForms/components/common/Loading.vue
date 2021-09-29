@@ -53,8 +53,6 @@ export default {
   text-align: center;
   color: #ffffff;
   .circle {
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     width: 90px;
     height: 90px;
     border: 8px solid rgba(255,255,255,0.8);

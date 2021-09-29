@@ -155,13 +155,11 @@ export default {
         .record-right{
             .mixin_float(84%,620px,right);
             padding: 30px 75px 0px 85px;
-            box-sizing: border-box;
             .record-example{
                 width: 100%;
                 height: 560px;
                 overflow-y: auto;
                 padding-right: 10px;
-                box-sizing: border-box;
                 .record-content{
                     .mixin_div(100%,120px,@color_white,@color_blueviolet,left);
                     margin-bottom: 15px;

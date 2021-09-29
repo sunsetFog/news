@@ -6,6 +6,19 @@
                 块元素：单独占一行，可以设宽高  例如div,p,h1-h6,table,ul-li,ol-li  
                 行内块元素：同一行显示,可以设宽高  例如img,input,button
             2.盒子模型: 内容content、内边距padding、边框border、外边距margin
+            box-sizing: border-box;使得：
+            设定的width宽 != 内容的width宽
+            设定的width宽 = border边框 + padding内边距 + 内容的width
+            设定的height高 != 内容的height高
+            设定的height高 = border边框 + padding内边距 + 内容的height
+
+            box-sizing: content-box;默认的，使得：
+            设定的width宽 = 内容的width宽
+            实际width宽 = border边框 + padding内边距 + 设定的width宽
+            设定的height高 = 内容的height高
+            实际height高 = border边框 + padding内边距 + 设定的height高 
+
+
             3.样式选择器
             三种常见选择器类型：
                 1.标签选择器  div{}
@@ -53,7 +66,10 @@
             内部式                                  2000
             伪元素                                  1
             伪类                                    10
+            /deep/深度选择器-父组件改变子组件样式    大于子组件样式
             width: 45px !important;                 9999最大
+
+            
         
         -->
         样式命名规范:
@@ -61,6 +77,10 @@
         1.用-：class="list-cell"
         <br>
         2.一个页面用一个id类，尽量有class类
+
+
+
+
         <!--
             img 元素的 srcset 属性用于浏览器根据宽、高和像素密度来加载相应的图片资源。
             属性格式：图片地址 宽度描述w 像素密度描述x，多个资源之间用逗号分隔
@@ -80,7 +100,7 @@ export default {
 <style lang="less" scoped>
     #css{
         color: #fff;
-        //width: calc(100% - 20px);//100%的宽度少20px
+        //width: calc(100% - 20px);//占父元素100%的宽度再减20px
         // .box{
         //     &.add-ys{}// 嵌套样式
         //     &:nth-child(2){}
@@ -129,7 +149,7 @@ export default {
 		// text-align: center;//文本水平居中
         // text-align: left;//文本靠左居中
         // text-align: right;//
-        // vertical-align: middle;// 垂直对齐（图片与文字对齐）.fu-img * {vertical-align: middle;}
+        // vertical-align: middle;// 垂直对齐（图片与文字对齐）实例：<img/> <span style="vertical-align: middle;">文字</span>
 
         // position: static;//静态定位  等价于不定位
         // position: relative;//相对定位  以自身为参考，不脱脱离文档
@@ -201,23 +221,6 @@ export default {
 		// 	100%{}
 		// }
 
-        // *{//通配符，代表网页中的所有标签
-        //     margin: 0;//清除外边距
-        //     padding: 0;//清除内边距
-        // }
-        // li{
-        //     list-style: none;//去掉小圆点
-        // }
-        // button{
-        //     border: none;//去掉边框
-        //     outline: none;//轮廓消失
-        // }
-        // table{
-		// 	border-collapse: collapse;/*合并表格边框*/
-        // }
-        // textarea{
-        //     resize: none;//大小缩放，不可拉伸
-        // }
 		      
     }
 </style>

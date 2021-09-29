@@ -138,7 +138,6 @@ export default {
       margin-right: 16px;
       line-height: 0px;
       padding-top: 5px;
-      box-sizing: border-box;
       position: absolute;
       top: 0px;
       left: 0px;

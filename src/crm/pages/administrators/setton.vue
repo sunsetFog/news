@@ -202,7 +202,6 @@ export default {
         width: 100%;
         height: 100%;
         padding: 0px 10px;
-        box-sizing: border-box;
         .top{
             width: 100%;
             height: 40px;
@@ -230,17 +229,14 @@ export default {
             width: 100%;
             height: 70px;
             padding: 30px 0 0 0;
-            box-sizing: border-box;
         }
         .bingo{
             padding: 10px 20px 0 40px;
             ul{
                 li{
-                    list-style: none;
                     width: 100%;
                     height: 40px;
                     padding-top: 10px;
-                    box-sizing: border-box;
                     // margin-bottom: 3px;
                     // background: orchid;
                     span{

@@ -42,14 +42,12 @@ export default{
             height: 100%;
             margin: 0 auto;
             padding: 35px 0px 35px 0px;
-            box-sizing: border-box;
             overflow: hidden;
             .copyright-example{
                 width: 100%;
                 height: 45px;
                 line-height: 45px;
                 padding: 0px 0px 0px 420px;
-                box-sizing: border-box;
                 font-size: @font_size12;
                 overflow: hidden;
                 span:nth-of-type(1){

@@ -304,7 +304,6 @@ export default{
             .user-contain{
                 .mixin_div(100%,731px,@color_purple,@color_white,left);
                 padding: 0px 20px;
-                box-sizing: border-box;
                 .user-info{
                     .mixin_div(100%,205px,none,@color_white,left);
                     position: relative;
@@ -347,7 +346,6 @@ export default{
                     span:nth-of-type(1){
                         .mixin_span(auto,30px,none,@color_white,center);
                         padding-top: 5px;
-                        box-sizing: border-box;
                         float: left;
                         img{
                             .mixin_img(15px,20px);
@@ -372,7 +370,6 @@ export default{
                         font-size: @font_size12;
                         border: 1px solid @color_blueviolet;
                         padding: 0px 5px 0px 5px;
-                        box-sizing: border-box;
                     }
                     button:hover{
                         background: @color_white2_hover;
@@ -413,7 +410,6 @@ export default{
                             float: right;
                             margin-left: 5px;
                             padding: 0px 5px 0px 5px;
-                            box-sizing: border-box;
                         }
                         button:nth-of-type(1):hover{
                             background: @color_white2_hover;
@@ -424,7 +420,6 @@ export default{
                             font-size: 12px;
                             float: right;
                             padding: 0px 5px 0px 5px;
-                            box-sizing: border-box;
                         }
                         button:nth-of-type(2):hover{
                             background: @color_indigo_hover;
@@ -437,7 +432,6 @@ export default{
         .information-right{
             .mixin_float(63.1%,100%,right);
             padding: 0px 0px 0px 20px;
-            box-sizing: border-box;
             .archives-list{
                 .mixin_div(100%,145px,none,auto,left);
                 float: left;

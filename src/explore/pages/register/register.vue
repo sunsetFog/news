@@ -158,7 +158,6 @@ export default{
     width: 100%;
     height: 750px;
     padding-bottom: 115px;
-    box-sizing: border-box;
     overflow: hidden;
     .mixin_image(url('~@static/picture/register/bg01.jpg'));
     .entertainment{
@@ -175,7 +174,6 @@ export default{
             .mixin_center(600px,550px);
             .mixin_image(url('~@static/picture/register/frame01.png'));
             padding: 20px 40px 0px 40px;
-            box-sizing: border-box;
             .heart-content{
                 .mixin_float(100%,100%,left);
                 .back-login{

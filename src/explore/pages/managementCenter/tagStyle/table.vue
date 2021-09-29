@@ -101,18 +101,6 @@ export default {
     height: 100%;
     background: white;
     padding: 10px;
-    table{
-		border-collapse: collapse;/* 合并表格边框，使border不会为2px */
-    }
-    // 设border
-    table tr th, table tr td {
-        border: 1px solid #ECECEC;
-    }
-    // 格加padding
-    table tr th, table tr td {
-        padding: 5px;
-        box-sizing: border-box;
-    }
 }
 </style>
 

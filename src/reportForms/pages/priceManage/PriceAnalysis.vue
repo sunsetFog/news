@@ -345,7 +345,6 @@ export default {
     .price-dynamic {
       width: 100%;
       padding: 8px 30px 5px 30px;
-      box-sizing: border-box;
       .where-dynamic {
         width: 100%;
         height: 35px;
@@ -415,7 +414,6 @@ export default {
     .house {
       display: flex;
       padding: 0 20px;
-      box-sizing: border-box;
       justify-content: space-between;
       margin: 15px 0 15px 0;
       position: relative;
@@ -503,7 +501,6 @@ export default {
       width: 100%;
       min-height: 415px;
       padding: 15px 0 0 0;
-      box-sizing: border-box;
     }
   }
 }

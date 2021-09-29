@@ -1,5 +1,8 @@
-/*公共样式--开始*/
-* {
+/*
+    公共样式 （全局样式）
+*/
+
+* { // 通配符，所有标签的样式
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,49 +11,68 @@
 html, body, #app {
     width: 100vw;// 满宽是100vw  -相当于- window.innerWidth 
     height: 100vh;// 满高是100vh  -相当于- window.innerHeight
+
     /* pc或移动端不能触屏 */
-    // -ms-touch-action: none;
+    -touch-action: none;
+
     /* 鼠标选择变蓝能复制 或 HTML多次点击字体背景颜色变蓝
     原因：变蓝是因为浏览器添加了默认的事件 */
-    // -webkit-user-select: none;
-    // -moz-user-select: none;
-    // -ms-user-select: none;
-    // user-select: none;
+    -user-select: none;
 }
 
 
-ul,
-ol,
-li {
-    list-style: none;
+hr {
+    height: 50px;
+    border-top: none;
+    margin-bottom: 20px;
+}
+
+ul,ol,li {
+    list-style: none;// 小圆点
+}
+
+dl {
+    text-align: left;
+    dt {
+
+    }
+    dd {
+        margin-left: 40px;// dd默认有margin的，*{margin:0}去掉了
+    }
 }
 
 img {
     border: none;
-    -vertical-align: middle;
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none;// 下划线
     color: #232323;
 }
 
+// table加边框，加圆角
 table {
-    border-collapse: collapse;
-    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;// 合并表格边框，使border不会为2px
+    border-radius: 10px;
+    border-style: hidden;// 消除外边框---为了圆角
+    box-shadow: 0 0 0 1px #ECECEC;// 加阴影替代边框---为了圆角
+    overflow: hidden;
+    th, td { // 设单元格border、padding
+        border: 1px solid #ECECEC;
+        padding: 5px;
+    }
 }
 
-input,
-textarea,
-button {
-    outline: none;
-    border: none;
-}
-button {
-    cursor: pointer;
+
+
+input,textarea,button {
+    outline: none;// 轮廓-边框边缘的外围
+    border: none;// 边框
+    cursor: pointer;// 鼠标手掌
 }
 
 textarea {
-    resize: none;
+    resize: none;// 是否由用户调整元素尺寸
     overflow: auto;
 }

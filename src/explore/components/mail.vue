@@ -105,7 +105,6 @@ export default {
         width: 100%;
         height: 710px;
         padding: 25px 35px 0px 35px;
-        box-sizing: border-box;
         .mail-content{
             width: 100%;
             height: 600px;

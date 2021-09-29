@@ -296,7 +296,6 @@ export default {
             /deep/ .input-with-select {
                 width: 350px;
                 padding: 5px 5px 5px 5px;
-                box-sizing: border-box;
                 border-radius: 8px;
                 background-color: #3385FF;
                 position: absolute;

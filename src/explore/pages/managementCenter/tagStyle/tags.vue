@@ -2,7 +2,7 @@
     <section id="tags">
 		<!-- 可以使用element-ui和iview-ui的 Layout 布局 -->
 
-        <!-- 1.标题h1-h6 -->
+        <!-- 1.标题h1~h6 -->
         <h1>一级标题</h1>
 
         <hr><!-- 2.正文p、span -->
@@ -27,23 +27,59 @@
 		<input type="button" name="button" id="" value="提交" />
 
         <hr><!-- 6.按钮button -->
-        <button>登&nbsp;&nbsp;录</button>
 
-        <hr><!-- 7.列表ul、ol、dl -->
+        <button class="picture-center-text">
+            <img src="@static/picture/breezy/icon_web.png" srcset="@static/picture/breezy/icon_web@2x.png 2x" alt="">
+            <span>登&nbsp;&nbsp;录</span>
+        </button>
+
+        <br>br换行
+
+        <hr><!-- 7.无序列表ul、有序列表ol、dl标题+内容 -->
         <ul>
-            <li>无序列表1</li>
-            <li>无序列表1</li>
+            <li>
+                <img src="@static/picture/breezy/icon_tiyu.png" srcset="@static/picture/breezy/icon_tiyu@2x.png 2x" alt="">
+                <span>体育</span>
+            </li>
+            <li>
+                <img src="@static/picture/breezy/icon_dianjing.png" srcset="@static/picture/breezy/icon_dianjing@2x.png 2x" alt="">
+                <span>电竞</span>
+            </li>
+            <li>
+                <img src="@static/picture/breezy/icon_qipai.png" srcset="@static/picture/breezy/icon_qipai@2x.png 2x" alt="">
+                <span>棋牌</span>
+            </li>
         </ul>
             
         <ol>
             <li>有序列表1</li>
-            <li>有序列表1</li>
+            <li>有序列表2</li>
         </ol>
-            
+            <!-- 
+                左图片右文字
+             -->
         <dl>
-            <dt>咖啡</dt>
-            <dd>咖啡是一种黑色饮料，味道偏枯</dd>
+            <dt>标题1</dt>
+            <dd>内容-长城旅游</dd>
+            <dd>内容-风景优美</dd>
+
+            <dt>标题2</dt>
+            <dd>内容-长城旅游</dd>
         </dl>
+        <!-- 水平线中间添加文字 -->
+        <div class="line-text-line">
+            <hr/>  水平线中间添加文字  <hr/>
+        </div>
+
+        <div class="picture-text">
+            <dl>
+                <dt>
+                    <img src="@static/image/AR.png"/>
+                </dt>
+                <dd>长城旅游</dd>
+                <dd>风景优美</dd>
+            </dl>
+        </div>
 
         <hr><!-- 8.表单form -->
         <form>
@@ -67,10 +103,10 @@
 		<b>这是粗体文本</b>
 		<!-- 12.换行 -->
 		<hr>
-		<span>换<br>行</span>
+		<span>span</span>
 		
 
-        <div id="box1">这是box1</div>
+        <div>div</div>
     </section>
 </template>
 
@@ -82,9 +118,93 @@ export default {
 
 <style lang="less" scoped>
 #tags{
-    color: white;
-    a{
-        color: red;
+    width: 100%;
+    background: #fff;
+
+    ul {
+        width: 9rem;
+        height: 3rem;
+        li {
+            width: 2.5rem;
+            height: 100%;
+            float: left;
+            margin-right: 0.5rem;
+            img {
+                width: 1.5rem;
+                height: 1.5rem;
+                margin: 0 0.5rem 0 0.5rem;
+            }
+            span {
+                width: 100%;
+                display: inline-block;
+                font-size: 0.8rem;
+                text-align: center;
+            }
+        }
     }
+
+    .picture-center-text {
+        color: #1D1D1D;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        img {
+            width: 1rem;
+            height: 1rem;
+        }
+        span {
+            margin-left: 0.3rem;
+        }
+    }
+
+    .line-text-line {
+        width:100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        hr {
+            margin: 0;
+            float: left;
+            flex: 1;
+            height: 1px;
+            border-right: 0;
+            border-left: 0;
+        }
+        hr:nth-of-type(1) {
+            margin-right: 15px;
+        }
+        hr:nth-of-type(2) {
+            margin-left: 15px;
+        }
+    }
+
+    .picture-text {
+        dl {
+            width: 9rem;
+            height: 3rem;
+            dt {
+                width: 3rem;
+                height: 100%;
+                float: left;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            dd {
+                height: 1.5rem;
+                line-height: 1.5rem;
+                float: left;
+                font-size: 0.7rem;
+                margin-left: 10px;
+            }
+            dd:nth-of-type(1){
+                color: yellowgreen;
+                font-size: 0.8rem;
+                font-weight: 600;
+            }
+        }
+    }
+        
 }
 </style>

@@ -26,7 +26,6 @@ export default {
         height: 500px;
         background: gold;
         padding: 0px 80px 0px 120px;
-        box-sizing: border-box;
         position: relative;
         .left{
             width: 120px;

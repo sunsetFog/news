@@ -76,7 +76,6 @@ export default {
         width: 100%;
         height: 465px;
         padding: 10px 40px 0px 40px;
-        box-sizing: border-box;
         .account-example{
             width: 100%;
             height: 330px;
@@ -96,7 +95,6 @@ export default {
                     float: left;
                     font-size: @font_size18;
                     padding-left: 10px;
-                    box-sizing: border-box;
                     span:nth-of-type(1){
                         .mixin_span(auto,43px,none,@color_blueviolet,right);
                         float: left;
@@ -123,7 +121,6 @@ export default {
             height: 35px;
             margin-top: 40px;
             padding: 0px 0px 0px 275px;
-            box-sizing: border-box;
             button{
                 .mixin_button(155px,34px,@color_white2,@color_blueviolet);
                 border: 1px solid @color_blueviolet;

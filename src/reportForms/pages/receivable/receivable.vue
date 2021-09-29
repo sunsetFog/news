@@ -835,7 +835,6 @@ export default {
     width: 100%;
     min-height: 650px;
     padding: 100px 15px 15px 15px;
-    box-sizing: border-box;
     .grid {
       display: flex;
       justify-content: space-between;
@@ -898,7 +897,6 @@ export default {
     background: #48566F;
     margin: 15px 0 0 0;
     padding: 0 0 5px 0;
-    box-sizing: border-box;
     .format {
       margin-top: 5px;
       display: flex;
@@ -1002,11 +1000,9 @@ export default {
     background: #48566F;
     margin-top: 15px;
     padding: 0 0 5px 0;
-    box-sizing: border-box;
     .house {
       display: flex;
       padding: 0 15px;
-      box-sizing: border-box;
       justify-content: space-between;
       margin-top: 10px;
       .house-cell {
@@ -1050,12 +1046,10 @@ export default {
       border: 1px solid #C9CACB;
       background: #586B8D;
       padding: 8px 0 0 0;
-      box-sizing: border-box;
     }
     .proportion1 {
       width: 100%;
       padding: 0 0 5px 0;
-      box-sizing: border-box;
       ul {
         background: #333B4B;
         color: #fff;
@@ -1091,7 +1085,6 @@ export default {
     .proportion2 {
       width: 100%;
       padding: 0 0 5px 0;
-      box-sizing: border-box;
       ul {
         font-size: 10px;
         background: #333B4B;
@@ -1121,7 +1114,6 @@ export default {
     .proportion3 {
       width: 100%;
       padding: 0 0 5px 0;
-      box-sizing: border-box;
       ul {
         font-size: 10px;
         background: #333B4B;
@@ -1158,7 +1150,6 @@ export default {
     .proportion4 {
       width: 100%;
       padding: 0 0 5px 0;
-      box-sizing: border-box;
       ul {
         font-size: 10px;
         background: #333B4B;
@@ -1230,8 +1221,6 @@ export default {
     .pie-box {
       width: 100%;
       min-height: 60px;
-      box-sizing: border-box;
-      -border: 1px solid blue;
     }
   }
 }

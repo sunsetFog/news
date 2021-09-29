@@ -44,7 +44,6 @@ export default {
                 width: 25px;
                 height: 25px;
                 padding: 5px;
-                box-sizing: border-box;
                 position: absolute;
                 top: 2px;
                 right: 8px;

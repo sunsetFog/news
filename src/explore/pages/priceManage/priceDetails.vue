@@ -311,7 +311,6 @@ export default {
         .price-dynamic {
             width: 100%;
             padding: 8px 30px 5px 30px;
-            box-sizing: border-box;
             .month-bidding {
                 text-align: left !important;
                 font-size: 14px !important;
@@ -373,7 +372,6 @@ export default {
         .house {
             display: flex;
             padding: 0 20px;
-            box-sizing: border-box;
             justify-content: space-between;
             margin: 5px 0 5px 0;
             position: relative;
@@ -462,7 +460,6 @@ export default {
             width: 100%;
             min-height: 385px;
             padding: 5px 0 0 0;
-            box-sizing: border-box;
         }
     }
 }

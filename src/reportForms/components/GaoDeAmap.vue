@@ -464,7 +464,6 @@ export default {
   width: 100%;
   height: 750px;
   padding: 50px 0 0 0;
-  box-sizing: border-box;
   color: black;
   -webkit-overflow-scrolling: touch;
   .navigation-bar {
@@ -533,13 +532,11 @@ export default {
       height: 50px;
       background: none;
       padding: 9px 5px 0 15px;
-      box-sizing: border-box;
       position: absolute;
       top: 0px;
       left: 0;
       .where-place {
         padding: 0 8px 0 8px;
-        box-sizing: border-box;
         height: 35px;
         background-color: #062E41;
         text-align: center;
@@ -633,7 +630,6 @@ export default {
         font-size: 10px;
         float: right;
         padding: 3px 0 0 0;
-        box-sizing: border-box;
       }
     }
   }

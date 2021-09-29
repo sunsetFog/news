@@ -225,7 +225,6 @@ export default {
         .safe-content{
             .mixin_float(84%,620px,right);
             padding: 75px 40px 0px 40px;
-            box-sizing: border-box;
             .account-balance,.amount-deposited,.input-deposit{
                 width: 100%;
                 height: 45px;

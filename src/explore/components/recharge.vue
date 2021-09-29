@@ -212,7 +212,6 @@ export default {
                 background: @color_tone20;
                 font-size: @font_size20;
                 padding-bottom: 115px;
-                box-sizing: border-box;
                 .type-active{
                     .mixin_image(url('~@static/picture/recharge/beijingkuang.png'));
                 }
@@ -246,12 +245,10 @@ export default {
         .payment-content{
             .mixin_float(82%,620px,right);
             padding: 0px 35px 0px 25px;
-            box-sizing: border-box;
             .payment-methods{
                 width: 100%;
                 height: 210px;
                 padding: 30px 0px 0px 0px;
-                box-sizing: border-box;
                 font-size: @font_size20;
                 .mode-active{
                     .mixin_image(url('~@static/picture/recharge/kuangkuang.png'));
@@ -260,7 +257,6 @@ export default {
                     li{
                         .mixin_li(auto,45px);
                         padding: 0px 20px 0px 20px;
-                        box-sizing: border-box;
                         margin: 25px 0px 0px 40px;
                         .mixin_image(url('~@static/picture/recharge/zhifufangshi.png'));
                         color: @color_white;
@@ -303,14 +299,12 @@ export default {
             .recharge-range{
                 .mixin_div(100%,50px,none,@color_blueviolet,center);
                 padding-right: 120px;
-                box-sizing: border-box;
                 font-size: @font_size16;
             }
             .money-example{
                 width: 100%;
                 height: 180px;
                 padding-left: 90px;
-                box-sizing: border-box;
                 border-bottom: 1px solid @color_blueviolet;
                 ul{
                     li{

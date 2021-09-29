@@ -81,7 +81,7 @@ export default {
 <style lang="less" scoped>
 #flex-index {
     width: 100%;
-    color: white;
+    background: #fff;
 
     .vertical-center {
         width: 100%;

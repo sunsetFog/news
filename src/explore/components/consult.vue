@@ -83,7 +83,6 @@ export default {
         width: 100%;
         height: 470px;
         padding: 50px;
-        box-sizing: border-box;
         .look-content{
             width: 100%;
             height: 320px;
@@ -96,7 +95,6 @@ export default {
             height: 35px;
             margin-top: 15px;
             padding-left: 270px;
-            box-sizing: border-box;
             button{
                 .mixin_button(155px,34px,@color_white2,@color_blueviolet);
                 border: 1px solid @color_blueviolet;

@@ -70,7 +70,6 @@ export default {
         width: 100%;
         height: 465px;
         padding: 45px 40px 0px 40px;
-        box-sizing: border-box;
         .account-name,.card-number{
             width: 100%;
             height: 45px;
@@ -99,14 +98,12 @@ export default {
             line-height: 90px;
             border-bottom: 1px solid @color_blueviolet;
             padding-left: 235px;
-            box-sizing: border-box;
         }
         .confirm-add{
             width: 100%;
             height: 35px;
             margin-top: 50px;
             padding: 0px 0px 0px 275px;
-            box-sizing: border-box;
             button{
                 .mixin_button(155px,34px,@color_white2,@color_blueviolet);
                 border: 1px solid @color_blueviolet;
