@@ -82,7 +82,25 @@
       </div>
     </div>
     <template>
-      <router-view></router-view>
+      <!-- 
+        keep-alive组件缓存，从而节省性能
+        keep-alive内路由跳转切换组件时，触发的生命周期钩子函数：activated创建、deactivated销毁
+        
+        局部组件缓存
+          1. keep-alive标签属性：
+            :include="['组件name']" 当前需要缓存的组件
+            :exclude="['组件name']" 当前不需要缓存的组件
+          2. v-if控制keep-alive出现        meta路由参数
+
+        全局缓存：别加keep-alive标签属性，别加v-if
+
+        注意：加了keep-alive组件缓存缓存后，created不再触发，activated触发
+      -->
+      <keep-alive>
+        <router-view v-if="!$route.meta.keepAlive"></router-view>
+      </keep-alive>
+      <router-view v-if="$route.meta.keepAlive"></router-view>
+
     </template>
 
     <div class="fixed-bar" v-show="fixed_state">

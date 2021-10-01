@@ -1,6 +1,10 @@
 <template>
   <div id="app">
     <router-view></router-view>
+
+    <!-- 
+      这里是全局标签元素
+     -->
     <game-theme ref="subject" :subject="false" v-show="subject" @interaction="setMove"></game-theme>
     <div class="advertisement" v-show="notice_active">
       <div class="message-tips">
@@ -105,7 +109,8 @@ export default {
 </script>
 
 
-<style lang="less">//为了全局样式有效，App.vue文件别用scoped
+<style lang="less">
+//为了全局样式有效，App.vue文件别用scoped
 @import "~@static/capital/app.less";
 @import "~@static/capital/whole.less";
 @import "~@static/capital/baidumap.less";

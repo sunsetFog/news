@@ -121,7 +121,9 @@ export default {
     beforeCreate(){//创建前-用于拦截跳转---少用
 
     },
-    created(){//创建后-无dom操作,用于创建数据---常用
+    // 创建后-无dom操作,用于创建数据---常用
+    // 注意：加了keep-alive组件缓存缓存后，created不再触发，activated触发
+    created() {
         /* 
             改值了，在控制台能打印出来，却没有更新到视图上时用$set解决:
             target：要更改的数据源(可以是对象或者数组)
@@ -145,14 +147,17 @@ export default {
     mounted(){//挂在前-用于dom操作---常用
 
     },
-    activated(){//页面缓存设置,当跳转created没触发时用---要有<keep-alive><router-view></router-view></keep-alive>
-
-    },
     beforeDestroy(){//销毁前-用于该页关闭后执行---用下面一个
 
     },
     destroyed() {//销毁后-用于该页关闭后执行---常用
 
+    },
+    activated(){//创建  keep-alive组件缓存，请看home.vue
+        console.log('---activated---');
+    },
+    deactivated() {//销毁  keep-alive组件缓存
+        console.log('---deactivated---');
     },
     computed:{//计算属性-用于vuex的getter
 

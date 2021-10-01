@@ -16,7 +16,7 @@
 
 
 
-keep-alive
+
 插件安装流程
 断点调试
 
@@ -66,10 +66,16 @@ let ul_height = li_height * arr.length
 vue-json-schema-form
 https://vue-json-schema-form.lljj.me/
 
-
+vue-photo-preview
+https://www.jianshu.com/p/775fb3784692
 
 
   码市，菜鸟教程，k发帮,我要自学网
+
+
+参数一:文件所在目录
+参数二: 是否要查询子文件夹
+参数三:要匹配的文件的后缀,是一个正则表达式
 
 
 

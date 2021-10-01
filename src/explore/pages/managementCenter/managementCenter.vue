@@ -155,6 +155,15 @@ export default{
             ],
         }
     },
+    created() {
+        console.log('---managementCenter-created---');
+    },
+    activated() {
+        console.log('---managementCenter-activated---');
+    },
+    deactivated() {
+        console.log('---managementCenter-deactivated---');
+    },
     methods:{
       handleOpen(key, keyPath) {
         // console.log(key, keyPath);
