@@ -90,7 +90,7 @@
           1. keep-alive标签属性：
             :include="['组件name']" 当前需要缓存的组件
             :exclude="['组件name']" 当前不需要缓存的组件
-          2. v-if控制keep-alive出现        meta路由参数
+          2. v-if控制keep-alive出现       在路由文件加参数meta: {keepAlive: true}
 
         全局缓存：别加keep-alive标签属性，别加v-if
 
