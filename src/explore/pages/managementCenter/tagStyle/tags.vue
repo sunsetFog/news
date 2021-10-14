@@ -74,7 +74,7 @@
         <div class="picture-text">
             <dl>
                 <dt>
-                    <img src="@static/image/AR.png"/>
+                    <img src="@static/reportForms/image/AR.png"/>
                 </dt>
                 <dd>长城旅游</dd>
                 <dd>风景优美</dd>

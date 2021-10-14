@@ -80,11 +80,16 @@ https://www.jianshu.com/p/775fb3784692
 :class="$style.leftCaret"
 
 
-
-
-
-http://miniactive.bobovip2.com/#/formwork?pageCode=1372816311683383296&inviteCode=null&relateType=10&relateId=1372816311683383296&isPc=0&isH5=1
+安装scss
 
 
 
 
+
+npm设置和取消代理的方法
+https://blog.csdn.net/yanzi1225627/article/details/80247758/
+
+npm config delete proxy
+电脑连不上网
+
+svn-- 还原

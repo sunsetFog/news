@@ -2,6 +2,8 @@
 <section id="filters">
 	<!-- 按需引入    多个过滤器{{item | A | B}}-->
 	<div class="rainbow" v-for="item in message">{{item | pain}}</div>
+
+	<div class="rainbow">{{profit | noThis(times)}}</div>
 	<hr />
 	<!-- 全局引入 -->
 	<div class="rainbow">{{profit | numPercent}}</div>
@@ -15,12 +17,21 @@
 		data(){
 			return{
 				message:[{ id: 1, flag: 'Y' },{ id: 2, flag: 'N' }],
-				profit: 45
+				profit: 45,
+				times: 98
 			}
 		},
 		filters:{
 			pain:function(val){
 				return val.flag == 'Y' ? '女' : '男';
+			},
+			/*
+				问题：filters里this为undefined
+				解决：noThis(times) 方法带参数进来
+			*/
+			noThis(value, isThis) {
+				console.log('--this--', value, isThis, this);
+				return isThis + '九九九';
 			}
 		},
 		methods: {

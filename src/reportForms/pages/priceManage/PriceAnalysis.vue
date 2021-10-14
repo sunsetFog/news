@@ -5,7 +5,7 @@
       <span class="where-place" @click="wherePlace"><van-icon name="location"/>{{where_place}}</span>
       <div class="open-menu" @click="cityEvent">
         切换项目
-        <img src="@static/image/menu.png">
+        <img src="@static/reportForms/image/menu.png">
       </div>
     </div>
     <div class="pen-content">
@@ -62,8 +62,8 @@
 </template>
 
 <script>
-import headerBar from '@/explore/components/headerBar.vue'
-import Loading from '@/explore/components/common/Loading'
+import headerBar from '@/reportForms/components/headerBar.vue'
+import Loading from '@/reportForms/components/common/Loading'
 import drawing from './echart.js'
 export default {
   name: 'PriceAnalysis',

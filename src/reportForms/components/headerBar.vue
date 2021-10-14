@@ -1,11 +1,11 @@
 <template>
     <section id="headerBar">
-        <img src="@static/image/NavigationBar02@2x.png" @click="goBack()">
+        <img src="@static/reportForms/image/NavigationBar02@2x.png" @click="goBack()">
         <div class="guide">
             {{title}}
         </div>
-        <img src="@static/image/refresh.png" @click="refreshPage">
-        <img src="@static/image/tip.png" @click="explain()">
+        <img src="@static/reportForms/image/refresh.png" @click="refreshPage">
+        <img src="@static/reportForms/image/tip.png" @click="explain()">
         <van-overlay :show="forum" @click.stop="forum = false">
             <div class="mechanism">
                 <div class="pen-header">
@@ -118,7 +118,7 @@ export default {
         .pen-footer {
             width: 100%;
             height: 70px;
-            background: url('~@static/image/tipfooter.png') no-repeat;
+            background: url('~@static/reportForms/image/tipfooter.png') no-repeat;
             background-size: 100% 100%;
         }
     }
