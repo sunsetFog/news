@@ -95,7 +95,16 @@ export default {
             console.log('attributes',attr);// 元素名.attributes   获取元素的所有属性
             console.log('attributes',attr[1].nodeValue);
             console.log('getAttribute',yuansu.getAttribute('name'));//元素名.getAttribute(属性名)    获取指定属性
-            yuansu.setAttribute('name','juice');//元素名.setAttribute('属性名','属性值')     修改指定属性
+
+            yuansu.setAttribute('name','juice');//元素名.setAttribute('属性名','属性值')     
+            
+            /*
+                或
+                let atr = document.createAttribute('name');//创建属性 name=""
+                atr.nodeValue = 'juice';// name="juice"
+                yuansu.setAttributeNode(atr);
+            */
+            
 
             let is_p = document.createElement("p");
             is_p.innerHTML = '嘿嘿嘿';

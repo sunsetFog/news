@@ -194,13 +194,13 @@ export default {
             console.log('匿名类',Example);
             // 命名类
             class means{
-                constructor(money,age) {// constructor 方法是类的默认方法，类的实例化对象时被调用
+                constructor(money,age) {// 构造器，类的实例化对象时执行
                     // super();
                     this.money = money;
                     this.age = age;
                     console.log('调用',this);
                 }
-                get money(){// getter函数随this.a变化而变化
+                get money(){// getter函数，随this._money改变而触发
                     console.log('getter');
                     return this._money;
                 }

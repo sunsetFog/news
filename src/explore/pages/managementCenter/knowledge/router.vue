@@ -25,7 +25,13 @@ export default {
             this.$router.push({path: '/mcenter/crux?id=100&status=九九'});//推荐用这个，没刷新问题
             // this.$router.go(-1);//返回上一页    参数1：数字，返回第几页
 
-            // vue 中新窗口打开vue页面 (this.$router.resolve)
+            // vue 中新窗口打开vue页面
+            // this.$router.resolve({
+            //     name: '',
+            //     query: {
+
+            //     }
+            // })
 
             // this.$router.push({name: 'crux',query: {id: 100,status: true}});
             // this.$router.push({name: 'crux',params: {id: 1010,status: true}});

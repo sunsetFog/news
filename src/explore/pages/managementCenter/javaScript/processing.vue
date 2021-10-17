@@ -9,7 +9,7 @@ export default {
     name: 'processing',
     data(){
         return{
-
+            num: 106
         }
     },
     mounted(){
@@ -68,9 +68,12 @@ export default {
             }
 
             let obj = {aaa: 102};
+            let that = this;
+            // err问题: forEach 的this指向改变了
             arr.forEach(function(item,index,arr){//参数1:数组项、参数2:数组索引(数组下标)、参数3:数组本身
-                console.log('this',this.aaa);
-            },obj);// this指向obj      去掉(,obj)  一般不需要
+                console.log('this',this.aaa, this.num);
+                console.log('that',that);
+            },this);// this指向obj
 
             // 遍历: 数组.map: 返回新的数组（必用return，返回新数组的每一项）
             let lyArr = [{title: '嘿嘿'},{title: '阚凯力'}]

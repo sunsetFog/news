@@ -216,7 +216,8 @@ export default {
     });
 
     this.publishUrl = this.$route.query.publishUrl
-    this.code = this.$route.query.fields
+    this.code = '{"schema":{"type":"object","required":[],"properties":{"logo":{"title":"logo","type":"string","ui:widget":"UploadWidget","ui:options":{"action":"http://oss.bobovip2.com/bobo/upload"}},"banner":{"title":"banner","type":"array","items":{"type":"string"},"ui:widget":"UploadWidget","ui:options":{"action":"http://oss.bobovip2.com/bobo/upload"}}},"ui:order":["logo","banner"]},"uiSchema":{},"formFooter":{},"formProps":{"labelWidth":"100px","labelSuffix":"："}}'
+    // this.code = this.$route.query.fields
     if (this.code) {
       this.changeSchema(this.code);
     }

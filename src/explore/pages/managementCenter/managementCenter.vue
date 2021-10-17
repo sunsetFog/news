@@ -137,7 +137,8 @@ export default{
                     {key: lodash.uniqueId('second_'), label: 'svg', path: '/mcenter/svgIcons', icon: require('@static/picture/center/qipai.png'), effect:[]},
                     {key: lodash.uniqueId('second_'), label: 'font-awesome', path: '/mcenter/awesomeIcons', icon: require('@static/picture/center/qipai.png'), effect:[]},
                     {key: lodash.uniqueId('second_'), label: '分步引导', path: '/mcenter/guide', icon: require('@static/picture/center/qipai.png'), effect:[]},
-                    {key: lodash.uniqueId('second_'), label: '全屏', path: '/mcenter/screenfull', icon: require('@static/picture/center/qipai.png'), effect:[]}
+                    {key: lodash.uniqueId('second_'), label: '全屏', path: '/mcenter/screenfull', icon: require('@static/picture/center/qipai.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: '音频', path: '/mcenter/isAudio', icon: require('@static/picture/center/qipai.png'), effect:[]}
                 ]},
                 {key: lodash.uniqueId('first_'), label: '项目报表', path: '', icon: require('@static/picture/center/tuiguang.png'), effect:[
                     {key: lodash.uniqueId('second_'), label: 'echart图表', path: '/mcenter/echartsDemo1', icon: require('@static/picture/center/daili.png'), effect:[]},

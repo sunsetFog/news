@@ -95,6 +95,7 @@ export default new Router({
             { path: 'awesomeIcons', name: 'awesomeIcons', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/effect/awesomeIcons.vue'], resolve) },
             { path: 'guide', name: 'guide', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/effect/guide.vue'], resolve) },
             { path: 'screenfull', name: 'screenfull', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/effect/screenfull.vue'], resolve) },
+            { path: 'isAudio', name: 'isAudio', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/effect/isAudio.vue'], resolve) },
 
             { path: 'echartsDemo1', name: 'echartsDemo1', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/reportForm/demo1.vue'], resolve) },
 
