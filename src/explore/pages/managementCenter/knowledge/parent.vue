@@ -1,11 +1,17 @@
 <template>
 	<section id="parent">
 		<!-- 引入子组件，以及数据的双向流动 -->
+		<el-input v-model="cosplay"></el-input>
 		<div class="rainbow">
 			{{design}}
 		</div>
-		<!-- myChildren大写转小写用 - 隔开     其中article和purple是props传参 -->
-		<my-children :article='design' @purple='get' ref="rainbow">
+		
+		<!-- 
+			myChildren大写转小写用 - 隔开
+			其中article和purple是props传参
+			v-model与props的value对应
+		-->
+		<my-children :article='design' @purple='get' ref="rainbow" v-model="cosplay">
 			<!-- 插槽内容 -->
 			<el-button slot="er">slot插槽</el-button>
 			<el-button slot="yaa" slot-scope="scenery">{{scenery.data}}</el-button>
@@ -29,7 +35,8 @@ export default{
 			equipment: [
 				{reply: 'cTitle',data: [{id: 2,title: '芒果',thumb: '',price: 1200,stock: 1000,virtual_sales: 500}]},
 				{reply: 'sMain',data: [{id: 1,title: '荔枝',thumb: '',price: 1100,stock: 1000,virtual_sales: 200}]}
-			]
+			],
+			cosplay: ''
 		}
 	},
 	mounted(){
@@ -50,6 +57,9 @@ export default{
 
 <style lang="less" scoped>
 #parent{
+	width: 100%;
+	background: #fff;
+	padding: 15px;
 	.rainbow{
 		.mixin_div(100%,50px,none,@color_blueviolet,center);
 	}

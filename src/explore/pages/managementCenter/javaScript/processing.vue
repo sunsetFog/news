@@ -33,7 +33,7 @@ export default {
 				]
             var jsonStr = '{"name": "Jhon","age":18}';//字符串Json   后台有时给这种，注意打印看清类型
             console.log('字符串解析为json对象',JSON.parse(jsonStr));// JSON.parse(必须是字符串)
-            console.log('将json对象转为json字符串',JSON.stringify(jsonObj));// JSON.stringify(必须是对象)
+            console.log('将json对象转为json字符串',JSON.stringify(jsonObj,null,4));// JSON.stringify(必须是对象)
             console.log('字符串解析为json对象',eval('('+jsonStr+')'));//不推荐，存在安全隐患
             let slogan = '标语'
             console.log('把字符串当变量使用', eval('slogan'))

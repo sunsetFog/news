@@ -119,7 +119,10 @@ export default new Router({
     { path: '/attachmentUpload', name: 'attachmentUpload', meta: { title: '发票识别',key: 404}, component: resolve => require(['@/explore/pages/managementCenter/effect/attachmentUpload.vue'], resolve) },
     { path: '/packageTable', name: 'packageTable', meta: { title: 'packageJson说明',key: 404}, component: resolve => require(['@/explore/pages/managementCenter/effect/packageTable.vue'], resolve) },
     { path: '/openTab', name: 'openTab', meta: { title: 'openTab',key: 404}, component: resolve => require(['@/explore/pages/managementCenter/effect/openTab.vue'], resolve) },
-    { path: '/priceManage', name: 'priceManage', meta: { title: '价格地图',key: 404}, component: resolve => require(['@/explore/pages/priceManage/index.vue'], resolve) }
+    { path: '/priceManage', name: 'priceManage', meta: { title: '价格地图',key: 404}, component: resolve => require(['@/explore/pages/priceManage/index.vue'], resolve) },
+    { path: '/vueForm', name: 'vueForm', meta: { title: '活动素材',key: 404}, component: resolve => require(['@/explore/pages/vueForm/index.vue'], resolve) },
+    { path: '/formDesign', name: 'formDesign', meta: { title: 'Schema生成器',key: 404}, component: resolve => require(['@/explore/pages/vueForm/formSchemaDesign/Editor.vue'], resolve) },
+    { path: '/activityEditor', name: 'activityEditor', meta: { title: '活动编辑器',key: 404}, component: resolve => require(['@/explore/pages/vueForm/activityEditor/Editor.vue'], resolve) }
 
   ]
 })

@@ -17,6 +17,10 @@
 				default: function () { // 没有值，默认为空字符串
 					return ''
 				}
+			},
+			value: {
+				type: String,
+				default: ''
 			}
 		},
 		data(){
@@ -24,7 +28,15 @@
 				son:'$emit子组件数据'
 			}
 		},
+		watch: {
+			value(cur, old) {
+				console.log('value', cur)
+			}
+		},
 		mounted(){
+			console.log('this.$props----', this.$props);
+			const { article, value } = this.$props;
+			console.log('this.$props++++', article, value);
 			this.$parent.initial('参数');
 		},
 		methods:{

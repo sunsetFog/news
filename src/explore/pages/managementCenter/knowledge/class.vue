@@ -59,6 +59,15 @@
 	}
 </script>
 
+<!--
+向this添加$style计算属性
+使用   :class="$style.returnClassA"
+<style module>
+
+向this添加命名cssModuleA计算属性
+使用   :class="cssModuleA.returnClassA"
+<style module="cssModuleA">
+-->
 <style lang="less" scoped>
 #class{
 	.class-name-01{
