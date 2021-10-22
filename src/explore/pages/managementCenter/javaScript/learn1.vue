@@ -17,7 +17,7 @@ export default {
         }
     },
     mounted(){//可以dom操作
-        this.demo5();
+        this.demo8();
     },
     methods: {
         demo1(){
@@ -382,14 +382,17 @@ export default {
         },
         demo8(){
             //流程控制
-            var i = 6;
-            if(i==5){//不管成立与否，都会往下执行，除非方法里用return
-                console.log("if=6");
-            }else if(i==7){//不管成立与否，都会往下执行，除非方法里用return
-                console.log("if=7");
+            // 成立就不会往下执行else if，可以return一起用，但return是结束方法，与if无关
+            if(true){
+                console.log("if00");
+            }else if(true){
+                console.log("if11");
+            }else if(true){
+                console.log("if22");
             }else{//以上都不成立才执行
-                console.log("什么都不是");
+                console.log("啥也不是");
             }
+            return
 
             var k = 7
 			switch(k){

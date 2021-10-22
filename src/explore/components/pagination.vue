@@ -17,11 +17,15 @@
     props: {
       pagination: {
         type: Object,
-        default: {}
+        default: function(){
+          return {}
+        }
       },
       pageStep: {
         type: Array,
-        default: [10]
+        default: function(){
+          return [10]
+        }
       }
     },
     data () {

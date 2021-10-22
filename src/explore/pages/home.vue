@@ -459,6 +459,8 @@ export default {
 
 <style lang="less" scoped>
 #home {
+  width: 100%;
+  overflow-x: hidden;
   .cover-up {
     width: 100%;
     position: fixed;

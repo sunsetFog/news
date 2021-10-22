@@ -9,8 +9,8 @@ Vue.use(Router)
 //重复点菜单，路由重复跳转报错问题
 const originalPush = Router.prototype.push
 Router.prototype.push = function push(location) {
-  // return originalPush.call(this, location).catch(err => err)
-  return originalPush.call(this, location)
+  return originalPush.call(this, location).catch(err => err)
+  // return originalPush.call(this, location)
 }
 
 
@@ -76,6 +76,7 @@ export default new Router({
             { path: 'axios', name: 'axios', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/knowledge/axios.vue'], resolve) },
             { path: 'relativePath', name: 'relativePath', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/knowledge/relativePath.vue'], resolve) },
             { path: 'sunMixin', name: 'sunMixin', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/knowledge/sunMixin.vue'], resolve) },
+            { path: 'vueExtend', name: 'vueExtend', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/knowledge/vueExtend.vue'], resolve) },
 
             { path: 'download_ex', name: 'download_ex', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/effect/download.vue'], resolve) },
             { path: 'copy', name: 'copy', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/effect/copy.vue'], resolve) },
