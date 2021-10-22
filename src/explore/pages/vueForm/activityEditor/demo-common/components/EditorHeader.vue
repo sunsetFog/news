@@ -1,25 +1,13 @@
 <template>
-    <div :class="$style.box">
-        <div :class="$style.headerMenuBox">
-            <h1>
-                <a
-                    :class="$style.menuLink"
-                    href="https://vue-json-schema-form.lljj.me/"
-                >
-                    <img
-                        :class="$style.logo"
-                        src="https://vue-json-schema-form.lljj.me/logo.png"
-                        alt="Vue JSON Schema Form"
-                    >
-                </a>
-            </h1>
-            <Menu
-                :class="$style.menu"
-                :version="version"
-                v-bind="$attrs"
-            ></Menu>
+    <div class="box">
+        <div class="headerMenuBox">
+            <img
+                class="logo"
+                src="https://vue-json-schema-form.lljj.me/logo.png"
+                alt="Vue JSON Schema Form"
+            >
         </div>
-        <div :class="$style.btns">
+        <div class="btns">
             <el-select
                 v-if="showVersion"
                 :model-value="version"
@@ -44,13 +32,10 @@
 </template>
 
 <script>
-import Menu from './Menu';
+
 
 export default {
     name: 'EditorHeader',
-    components: {
-        Menu
-    },
     props: {
         version: {
             default: 'vue2',
@@ -72,12 +57,9 @@ export default {
 };
 </script>
 
-<style module>
-    .btns {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+<style lang="less" scoped>
+
+    
     .box {
         position: relative;
         margin: 0 auto;
@@ -89,24 +71,19 @@ export default {
         align-items: center;
         box-shadow: 0 0 8px 1px rgba(0,0,0,.3);
         z-index: 3;
-    }
-    .headerMenuBox {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        h1 {
-            text-shadow: 0 0 40px #409EFF;
-            font-size: 26px;
-            text-transform: uppercase;
-            z-index: 10;
-            margin: 0;
+        .btns {
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .logo {
-            display: block;
-            height: 30px;
+        .headerMenuBox {
+            width: 200px;
+            height: 50px;
+            .logo {
+                width: 100px;
+                height: 50px;
+            }
         }
     }
-    .menu {
-        margin-left: 40px;
-    }
+    
 </style>
