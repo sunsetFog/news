@@ -2,7 +2,7 @@
     <section id="router">
         <!-- https://segmentfault.com/a/1190000012393587 -->
         <el-button>
-            <router-link to="/mcenter/crux?id=888&status=false">
+            <router-link to="/home/managementCenter/crux?id=888&status=false">
                 路由router-link跳转
             </router-link>
         </el-button>
@@ -22,7 +22,7 @@ export default {
     },
     methods: {
         jump(){
-            this.$router.push({path: '/mcenter/crux?id=100&status=九九'});//推荐用这个，没刷新问题
+            this.$router.push({path: '/home/managementCenter/crux?id=100&status=九九'});//推荐用这个，没刷新问题
             // this.$router.go(-1);//返回上一页    参数1：数字，返回第几页
 
             // vue 中新窗口打开vue页面
@@ -35,14 +35,14 @@ export default {
 
             // this.$router.push({name: 'crux',query: {id: 100,status: true}});
             // this.$router.push({name: 'crux',params: {id: 1010,status: true}});
-            // this.$router.push({path: '/mcenter/crux',query: {id: 100,status: true}});
-            // this.$router.push({path: '/mcenter/crux',params: {id: 1010,status: true}});
+            // this.$router.push({path: '/home/managementCenter/crux',query: {id: 100,status: true}});
+            // this.$router.push({path: '/home/managementCenter/crux',params: {id: 1010,status: true}});
 
 
             /*
             完整
                 this.$router.push({
-                    path: '/mcenter/crux', --- 可以拼接参数 --- 刷新不丢失
+                    path: '/home/managementCenter/crux', --- 可以拼接参数 --- 刷新不丢失
                     name: 'crux',
                     query: {id: 100,status: true},   --- 刷新不丢失 --- 推荐
                     params: {id: 1010,status: true}  --- 刷新丢失 --- 解决在路由path:'/router/:id'
@@ -65,15 +65,15 @@ encodeURIComponent(参数1)  语义字符之外，都可以转义
 谷歌地址栏显示中文，ie显示编码，location.href获取显示编码
             */
 
-            console.log('整条编码', encodeURI('http://localhost:1199/mcenter/router?title=您好')); // http://localhost:1199/mcenter/router?title=%E6%82%A8%E5%A5%BD
-            console.log('整条解码', decodeURI('http://localhost:1199/mcenter/router?title=%E6%82%A8%E5%A5%BD')); // http://localhost:1199/mcenter/router?title=您好
-            // this.$router.push({path: encodeURI('/mcenter/crux?id=100&city=广州')});
+            console.log('整条编码', encodeURI('http://localhost:1199/home/managementCenter/knowledge/router?title=您好')); // http://localhost:1199/home/managementCenter/knowledge/router?title=%E6%82%A8%E5%A5%BD
+            console.log('整条解码', decodeURI('http://localhost:1199/home/managementCenter/knowledge/router?title=%E6%82%A8%E5%A5%BD')); // http://localhost:1199/home/managementCenter/knowledge/router?title=您好
+            // this.$router.push({path: encodeURI('/home/managementCenter/crux?id=100&city=广州')});
 
             // url带的是中文参数，得用编码转换
             console.log('只有参数编码', '?title='+encodeURIComponent("究竟"));// ?title=%E7%A9%B6%E7%AB%9F
             console.log('只有参数解码', decodeURIComponent('%E7%A9%B6%E7%AB%9F'));
 
-            this.$router.push({path: '/mcenter/crux?id=100&name=' + encodeURIComponent('红雾君')});
+            this.$router.push({path: '/home/managementCenter/crux?id=100&name=' + encodeURIComponent('红雾君')});
         }
     }
 }

@@ -165,8 +165,8 @@ export default {
             // window.close()    关闭窗口
             
             // window.location:获取浏览器URL信息(window可省略)
-            console.log('URL的完整路径',location.href);// http://localhost:9090/root/mcenter/learn1?id=128  用于跳转 location.href = "http://www.jd.com";
-            console.log('URL的文件路径',location.pathname);// /root/mcenter/learn1
+            console.log('URL的完整路径',location.href);// http://localhost:9090/root/home/managementCenter/javaScript/learn1learn1?id=128  用于跳转 location.href = "http://www.jd.com";
+            console.log('URL的文件路径',location.pathname);// /root/home/managementCenter/javaScript/learn1learn1
             console.log('主机域名',location.hostname);// localhost
             console.log('URL中的端口号',location.port);// 9090
             console.log('主机域名和端口号',location.host);// localhost:9090

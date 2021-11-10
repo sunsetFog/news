@@ -1,6 +1,6 @@
 <template>
     <section id="relativePath">
-        <img src="../../../assets/lizhi.jpg"/>
+        <img src="@/explore/assets/lizhi.jpg"/>
         <!-- build\webpack.base.conf.js 设置的全局路径变量 -->
         <img src="@static/picture/breezy/2.jpg"/>
         <h3>src绑定变量时：import相对变量</h3>
@@ -29,7 +29,7 @@ background: url('~@/explore/assets/theme/logo_blue.png') no-repeat center center
 4.绝对路径，相对根目录的路径 "/assets/logo_blue.png" webpack不解析
 
 */
-import lizhi from '../../../assets/lizhi.jpg'
+import lizhi from '@/explore/assets/lizhi.jpg'
 export default {
     name: 'relativePath',
     data () {
@@ -48,10 +48,10 @@ export default {
             console.log('import=', this.import_ai)
         },
         requireAi(){
-            // this.require_ai = require('../../../assets/lizhi.jpg');
+            // this.require_ai = require('@/explore/assets/lizhi.jpg');
             let imgName = 'lizhi.jpg'
-            // this.require_ai = require('../../../assets/' + imgName);
-            this.require_ai = require(`../../../assets/${imgName}`);
+            // this.require_ai = require('@/explore/assets/' + imgName);
+            this.require_ai = require(`@/explore/assets/${imgName}`);
             console.log('require=', this.require_ai);
         }
     }

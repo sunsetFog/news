@@ -139,24 +139,24 @@ export default {
         { title: "线路检测" }
       ],
       tabs_bar: [
-        { title: "首页", active: false, exhibition: true, path: "/home" },
+        { title: "首页", active: false, exhibition: true, path: "/home/homeIndex" },
         {
           title: "电子竞技",
           active: false,
           exhibition: false,
-          path: "/lottery"
+          path: "/home/lottery"
         },
         {
           title: "真人娱乐",
           active: false,
           exhibition: false,
-          path: "/realperson"
+          path: "/home/realperson"
         },
         {
           title: "体育竞技",
           active: false,
           exhibition: false,
-          path: "/sports"
+          path: "/home/sports"
         },
         {
           title: "优惠活动",
@@ -168,9 +168,9 @@ export default {
           title: "代理系统",
           active: false,
           exhibition: true,
-          path: "/agentsystem"
+          path: "/home/agentsystem"
         },
-        { title: "管理中心", active: false, exhibition: true, path: "/mcenter/crux" }
+        { title: "管理中心", active: false, exhibition: true, path: "/home/managementCenter/crux" }
       ],
       fixed_bar: [
         { url: require("@static/picture/home/jiangyuan-nomal.png") },
