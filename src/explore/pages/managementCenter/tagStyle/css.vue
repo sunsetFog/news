@@ -28,17 +28,17 @@
                 属性选择器：input[type="password"]{}      p[class="ra"] {}
                 伪类选择器：
                     div:hover{}  --- 鼠标悬停
+                    写法等于
+                    div{
+                        &:hover{
+                        }
+                    }
                     div:focus{}
                     div:active{}
                     div:visitied{}
                     div:link{}
                     div:after{}
                     div:first-child{}  --- div里第一个子元素
-                    不同写法
-                    .box{
-                        &:first-child{
-                        }
-                    }
                     div:last-child{}  --- div里最后子元素
                     div:nth-of-type(2){}  --- div里第几个子元素--- 实用
                 伪元素选择器:

@@ -65,6 +65,9 @@ let ul_height = li_height * arr.length
 
 vue-json-schema-form
 https://vue-json-schema-form.lljj.me/
+自定义table
+
+path路径与本地名一致
 
 vue-photo-preview
 https://www.jianshu.com/p/775fb3784692

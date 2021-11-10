@@ -4,56 +4,18 @@ vue h5即是html5:
     1.<!DOCTYPE html>声明，这样浏览器才能获知文档类型
     2.<meta charset="utf-8">“utf-8”是一种字符编码，使浏览器做“翻译”工作
 
-app.vue:  
-    1.<router-view>路由视图
-    2.<keep-alive><router-view></router-view></keep-alive>实现页面缓存，加速页面加载
-    当引入keep-alive的时候，页面第一次进入，钩子的触发顺序created-> mounted-> activated，退出时触发deactivated.
-    当再次进入（前进或者后退）时，只触发activated。
-    3.多文件全局css，类级别最高,可覆盖类名作用,但是要有样式嵌套，不然影响全局
-    @import 'assets/index.less';
-    样式span:nth-of-type(1)虽然好用,但对子集span都有影响,注意使用就行
-    4.//全局接口
+
 
 main.js
     1.vue的原型
     Vue.prototype.$axios = axios;
     Vue.prototype.$domain = 'vue原型变量';
     Vue.prototype.$teacher = function(){}//全局方法--不推荐
-    2.路由拦截
-    router.beforeEach((to, from, next) => {
-    router.afterEach(transition => {
-    //在vue项目中使用Nprogress.js进度条，希望每次页面载入的时候，浏览器顶部有载入动画  npm install nprogress --save
-    3.Vue.config.productionTip = false
-    //阻止启动生产消息
-    4.创建和挂载vue实例
-    new Vue({
-        el: '#app',//绑定index.html的id
-        router,//路由
-        store,//vue原型的vuex
-        components: { App },
-        template: '<app/>'
-    })
+
+
     5.加载js或css
     import '@static/capital/flexible.js';
-    6.引入组件
-    //引入iview组件(不支持移动端)  npm install iview --save
-    import iView from 'iview'
-    import 'iview/dist/styles/iview.css'
-    Vue.use(iView);
-    //引入element-ui  npm install element-ui --save
-    import ElementUI from 'element-ui';
-    import 'element-ui/lib/theme-chalk/index.css';
-    Vue.use(ElementUI);
-    //使用mint-ui  npm install mint-ui --save
-    import MintUI from 'mint-ui'
-    import 'mint-ui/lib/style.css'
-    Vue.use(MintUI);
-    //引入ydui  npm install vue-ydui --save    npm install ydui-district --save
-    import YDUI from 'vue-ydui';
-    import 'vue-ydui/dist/ydui.rem.css';
-    import 'vue-ydui/dist/ydui.px.css';
-    import 'vue-ydui/dist/ydui.base.css';
-    Vue.use(YDUI);
+
     7.pc端适配(不好用)  https://blog.csdn.net/weixin_41257563/article/details/97266234
     utils.js
         // const px2remLoader = {
@@ -145,7 +107,7 @@ export default {
         });
     },
     mounted(){//挂在前-用于dom操作---常用
-
+        this.$forceUpdate();// 强制重新渲染当前组件
     },
     beforeDestroy(){//销毁前-用于该页关闭后执行---用下面一个
 

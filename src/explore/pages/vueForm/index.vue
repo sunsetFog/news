@@ -18,6 +18,7 @@
 
 <script>
 import VueForm from '@lljj/vue-json-schema-form';
+// import VueForm from "@goodgeek/vue-json-schema-form";
 import CodeEditor from './playground/CodeEditor.vue';
 import * as schemaTypes from './playground/schemaTypes';
 export default {
@@ -27,28 +28,16 @@ export default {
         return {
             formData: {},
             schema: {
-                type: 'object',
-                required: [
-                    'userName',
-                    'age',
-                ],
-                properties: {
-                    userName: {
-                        type: 'string',
-                        title: '用户名',
-                        default: 'Liu.Jun',
-                    },
-                    age: {
-                        type: 'number',
-                        title: '年龄'
-                    },
-                    bio: {
-                        type: 'string',
-                        title: '签名',
-                        minLength: 10,
-                        default: '知道的越多、就知道的越少',
+                type: "object",
+                required:[],
+                properties: { 
+                    is_table: {
+                        title: "表名",
+                        type: "table",
+                        "ui:widget": "TableWidget"
                     }
-                }
+                },
+                "ui:order": ["is_table"]
             },
             uiSchema: {
                 bio: {
@@ -63,9 +52,9 @@ export default {
     },
     created() {
         // const typeArr = Object.keys(schemaTypes.default);
-        console.log('--schemaTypes--', schemaTypes.default.Number.schema);
+        // console.log('--schemaTypes--', schemaTypes.default.Number.schema);
         // console.log('--typeArr--', typeArr);
-        this.schema = schemaTypes.default.Number.schema
+        // this.schema = schemaTypes.default.Number.schema
     },
     computed: {
         curFormDataCode: {

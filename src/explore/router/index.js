@@ -77,6 +77,8 @@ export default new Router({
             { path: 'relativePath', name: 'relativePath', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/knowledge/relativePath.vue'], resolve) },
             { path: 'sunMixin', name: 'sunMixin', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/knowledge/sunMixin.vue'], resolve) },
             { path: 'vueExtend', name: 'vueExtend', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/knowledge/vueExtend.vue'], resolve) },
+            { path: 'isLess', name: 'isLess', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/knowledge/isLess.vue'], resolve) },
+            { path: 'isSassScss', name: 'isSassScss', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/knowledge/isSassScss.vue'], resolve) },
 
             { path: 'download_ex', name: 'download_ex', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/effect/download.vue'], resolve) },
             { path: 'copy', name: 'copy', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/managementCenter/effect/copy.vue'], resolve) },
@@ -123,6 +125,7 @@ export default new Router({
     { path: '/openTab', name: 'openTab', meta: { title: 'openTab',key: 404}, component: resolve => require(['@/explore/pages/managementCenter/effect/openTab.vue'], resolve) },
     { path: '/priceManage', name: 'priceManage', meta: { title: '价格地图',key: 404}, component: resolve => require(['@/explore/pages/priceManage/index.vue'], resolve) },
     { path: '/vueForm', name: 'vueForm', meta: { title: '活动素材',key: 404}, component: resolve => require(['@/explore/pages/vueForm/index.vue'], resolve) },
+    { path: '/vueForm2', name: 'vueForm', meta: { title: '活动素材',key: 404}, component: resolve => require(['@/explore/pages/vueForm/index2.vue'], resolve) },
     { path: '/formDesign', name: 'formDesign', meta: { title: 'Schema生成器',key: 404}, component: resolve => require(['@/explore/pages/vueForm/formSchemaDesign/Editor.vue'], resolve) },
     { path: '/activityEditor', name: 'activityEditor', meta: { title: '活动编辑器',key: 404}, component: resolve => require(['@/explore/pages/vueForm/activityEditor/Editor.vue'], resolve) }
 

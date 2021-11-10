@@ -122,7 +122,7 @@ if (process.env.NODE_ENV === 'production') {
   }
 }
 
-import NProgress from 'nprogress'; // 路由变化的转圈进度条
+import NProgress from 'nprogress'; // 转圈进度条，路由变化触发
 import 'nprogress/nprogress.css'; // 加载转圈进度条样式
 // 路由拦截（路由守卫）   用来拦截改变跳转页
 router.beforeEach((to, from, next) => {
@@ -157,10 +157,10 @@ router.afterEach(transition => {
 });
 
 /* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  router,
-  store,
-  components: { App },//App.vue
-  template: '<App/>'
+new Vue({// 创建和挂载vue实例
+  el: '#app',// 绑定index.html的id
+  router,// 路由
+  store,// vue原型的vuex
+  components: { App },// 入口组件App.vue
+  template: '<App/>'// 模板名
 })

@@ -1,0 +1,66 @@
+{
+  "_args": [
+    [
+      "@goodgeek/vue2-form-core@1.9.5",
+      "C:\\Users\\USER\\Desktop\\yuanchen\\start\\webadmin"
+    ]
+  ],
+  "_from": "@goodgeek/vue2-form-core@1.9.5",
+  "_id": "@goodgeek/vue2-form-core@1.9.5",
+  "_inBundle": false,
+  "_integrity": "sha512-L9hcLtq679MjqetBg5Nw9Q7/aOkuC9XMpP5IysnesziAFBlnbL3Xs089TDuqXWtCsEtUm739nyZeXBQGQ50oyw==",
+  "_location": "/@goodgeek/vue2-form-core",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@goodgeek/vue2-form-core@1.9.5",
+    "name": "@goodgeek/vue2-form-core",
+    "escapedName": "@goodgeek%2fvue2-form-core",
+    "scope": "@goodgeek",
+    "rawSpec": "1.9.5",
+    "saveSpec": null,
+    "fetchSpec": "1.9.5"
+  },
+  "_requiredBy": [
+    "/@goodgeek/vue-json-schema-form"
+  ],
+  "_resolved": "https://registry.npmjs.org/@goodgeek/vue2-form-core/-/vue2-form-core-1.9.5.tgz",
+  "_spec": "1.9.5",
+  "_where": "C:\\Users\\USER\\Desktop\\yuanchen\\start\\webadmin",
+  "author": {
+    "name": "Liu.Jun"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "bugs": {
+    "url": "https://github.com/lljj-x/vue-json-schema-form/issues"
+  },
+  "dependencies": {
+    "@goodgeek/vjsf-utils": "1.9.5"
+  },
+  "description": "基于 Vue 、JsonSchema快速构建一个带完整校验的form表单，vue2版本基础框架",
+  "gitHead": "92795075169c879e1c1fabfe26f1d3c10b861060",
+  "homepage": "https://github.com/lljj-x/vue-json-schema-form",
+  "keywords": [
+    "vue",
+    "vuejs",
+    "form",
+    "jsonSchema"
+  ],
+  "license": "Apache-2.0",
+  "main": "src/index.js",
+  "module": "src/index.js",
+  "name": "@goodgeek/vue2-form-core",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lljj-x/vue-json-schema-form.git"
+  },
+  "version": "1.9.5"
+}

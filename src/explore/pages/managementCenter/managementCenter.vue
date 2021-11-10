@@ -116,7 +116,9 @@ export default{
                     {key: lodash.uniqueId('second_'), label: '图片相对路径', path: '/mcenter/relativePath', icon: require('@static/picture/center/caiwu.png'), effect:[]},
                     {key: lodash.uniqueId('second_'), label: 'mixins混合', path: '/mcenter/sunMixin', icon: require('@static/picture/center/caiwu.png'), effect:[]},
                     {key: lodash.uniqueId('second_'), label: 'packageJson说明', path: '/packageTable', icon: require('@static/picture/center/caiwu.png'), effect:[]},
-                    {key: lodash.uniqueId('second_'), label: '动态渲染组件', path: '/mcenter/vueExtend', icon: require('@static/picture/center/caiwu.png'), effect:[]}
+                    {key: lodash.uniqueId('second_'), label: '动态渲染组件', path: '/mcenter/vueExtend', icon: require('@static/picture/center/caiwu.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: 'less预处理样式', path: '/mcenter/isLess', icon: require('@static/picture/center/caiwu.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: 'scss预处理样式', path: '/mcenter/isSassScss', icon: require('@static/picture/center/caiwu.png'), effect:[]}
                 ]},
                 {key: lodash.uniqueId('first_'), label: 'vue功能集', path: '', icon: require('@static/picture/center/qipai.png'), effect: [
                     {key: lodash.uniqueId('second_'), label: '下载', path: '/mcenter/download_ex', icon: require('@static/picture/center/qipai.png'), effect:[]},
