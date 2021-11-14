@@ -51,10 +51,10 @@ const login = {
             let initial = [
                 {
                     path: '/home',
-                    component: resolve => require(['@/crm/pages/home'],resolve),
+                    component: resolve => require(['@/crm/pages/home/index'],resolve),
                     // component: () => import('@/crm/pages/home'),
                     children: [
-                        { path: '/', redirect: '/world/world' }
+                        { path: '/', redirect: '/home/world/world' }
                     ]
                 }
             ]
@@ -95,7 +95,7 @@ const login = {
                     })
                 }
             });
-            // console.log('homeChildren---',initial);
+            console.log('homeChildren---',initial);
             commit('setAddRouter', initial);
         }
     },

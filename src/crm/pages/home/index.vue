@@ -126,7 +126,7 @@ export default {
           this.addMenu[i].open_active = true;
         }
       }
-      if (path == "/world/world") {
+      if (path == "/home/world/world") {
         this.flower(path);
       }
     },
@@ -149,7 +149,7 @@ export default {
       this.$store.commit("menuValue", path);
       this.$router.push({ path: path });
       for (let i = 0; i < this.addMenu.length; i++) {
-        if (path.indexOf("no_path") != -1 || path == "/world/world") {
+        if (path.indexOf("no_path") != -1 || path == "/home/world/world") {
           this.$store.commit("addPane", {
             title: this.addMenu[i].title,
             path: this.addMenu[i].path,

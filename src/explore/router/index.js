@@ -66,7 +66,7 @@ export default new Router({
             { path: 'knowledge/vuex', name: 'vuex', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/knowledge/vuex.vue'], resolve) },
             { path: 'knowledge/router', name: 'router', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/knowledge/router.vue'], resolve) },
             { path: 'knowledge/class', name: 'class', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/knowledge/class.vue'], resolve) },
-            { path: 'knowledge/quote', name: 'quote', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/knowledge/quote.vue'], resolve) },
+            { path: 'knowledge/exportImport', name: 'exportImport', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/knowledge/exportImport.vue'], resolve) },
             { path: 'knowledge/parent', name: 'parent', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/knowledge/parent.vue'], resolve) },
             { path: 'knowledge/public', name: 'public', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/knowledge/public.vue'], resolve) },
             { path: 'knowledge/watch', name: 'watch', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/knowledge/watch.vue'], resolve) },
@@ -102,6 +102,7 @@ export default new Router({
             { path: 'effect/guide', name: 'guide', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/effect/guide.vue'], resolve) },
             { path: 'effect/screenfull', name: 'screenfull', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/effect/screenfull.vue'], resolve) },
             { path: 'effect/isAudio', name: 'isAudio', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/effect/isAudio.vue'], resolve) },
+            { path: 'effect/previewPictures', name: 'previewPictures', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/effect/previewPictures.vue'], resolve) },
 
             { path: 'reportForm/demo1', name: 'echartsDemo1', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/reportForm/demo1.vue'], resolve) },
 
@@ -109,7 +110,7 @@ export default new Router({
             { path: 'expand/base64', name: 'base64', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/expand/base64.vue'], resolve) },
 
             { path: 'talk/talk1', name: 'talk1', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/talk/talk1.vue'], resolve) },
-            { path: '/', redirect: '/managementCenter/crux' }
+            { path: '/', redirect: '/home/managementCenter/crux' }
           ]
         },
         { path: '/', redirect: '/home/homeIndex' }

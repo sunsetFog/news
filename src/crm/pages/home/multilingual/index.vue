@@ -38,7 +38,7 @@ export default {
     beforeCreate() {
         const lang = this.$i18n.locale;
         console.log("lang==", lang);
-        const locals = require(`../locals/${this.$options.name}_${lang}`).default;
+        const locals = require(`./locals/${this.$options.name}_${lang}`).default;
         this.$i18n.mergeLocaleMessage(lang, locals);// 动态添加语言
     },
     methods: {

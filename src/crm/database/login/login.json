@@ -4,7 +4,7 @@
             "id": "1",
             "parentId": null,
             "title": "首页",
-            "path": "/world/world",
+            "path": "/home/world/world",
             "icon": null,
             "type": 0,
             "children": []
@@ -21,7 +21,7 @@
                     "id": "201",
                     "parentId": 0,
                     "title": "原版el-table",
-                    "path": "/administrators/setton",
+                    "path": "/home/administrators/setton",
                     "icon": null,
                     "type": 1,
                     "children": []
@@ -30,7 +30,7 @@
                     "id": "202",
                     "parentId": 0,
                     "title": "综合表格",
-                    "path": "/tableEditor/crmTable",
+                    "path": "/home/tableEditor/crmTable",
                     "icon": null,
                     "type": 1,
                     "children": []
@@ -39,7 +39,7 @@
                     "id": "203",
                     "parentId": 0,
                     "title": "table说明",
-                    "path": "/tableEditor/explainTable",
+                    "path": "/home/tableEditor/explainTable",
                     "icon": null,
                     "type": 1,
                     "children": []
@@ -48,7 +48,7 @@
                     "id": "4",
                     "parentId": 0,
                     "title": "多语言翻译",
-                    "path": "/multilingual",
+                    "path": "/home/multilingual/index",
                     "icon": null,
                     "type": 1,
                     "children": []
@@ -67,7 +67,7 @@
                     "id": "301",
                     "parentId": 0,
                     "title": "角色列表",
-                    "path": "/jurisdiction/role",
+                    "path": "/home/jurisdiction/role",
                     "icon": null,
                     "type": 1,
                     "children": []
@@ -76,7 +76,7 @@
                     "id": "302",
                     "parentId": 0,
                     "title": "菜单列表",
-                    "path": "/jurisdiction/menu",
+                    "path": "/home/jurisdiction/menu",
                     "icon": null,
                     "type": 1,
                     "children": []
@@ -95,7 +95,7 @@
                     "id": "401",
                     "parentId": 0,
                     "title": "网站设置",
-                    "path": "/system/initial",
+                    "path": "/home/system/initial",
                     "icon": null,
                     "type": 1,
                     "children": []

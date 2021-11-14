@@ -91,14 +91,14 @@ export default {
                 sessionStorage.setItem('buttonPermissions',JSON.stringify(res.buttonPermissions));
                 that.$store.commit("addPane", {
                   title: '首页',
-                  path: '/world/world',
-                  menu_active: '/world/world'
+                  path: '/home/world/world',
+                  menu_active: '/home/world/world'
                 });
                 that.$store.dispatch('GenerateRoutes',res.menu_list).then(function(result){
                   console.log('result===', result);
                   sessionStorage.setItem('token', 'txvb-8325487189');
                   that.$router.addRoutes(result);//参数得是数组
-                  that.$router.push({path: '/world/world'});
+                  that.$router.push({path: '/home/world/world'});
                 })
             }).catch((err)=>{
                 console.log('error',err);

@@ -789,7 +789,7 @@ export default {
     },
     receive (value) {
       // let code = '15CF7AEB-FB72-4483-8F97-F6DFE86A36FA'
-      this.$router.push({ path: '/PriceAnalysis', query: { code: value } })
+      this.$router.push({ path: '/priceManage/PriceAnalysis', query: { code: value } })
     },
     setDate (val) {
       if (!val) {

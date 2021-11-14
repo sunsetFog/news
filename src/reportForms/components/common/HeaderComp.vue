@@ -4,9 +4,9 @@
     <div class="header-container">
       <img class="back-btn" @click.stop="backPage" src="../../assets/img/NavigationBar02@2x.png">
       <span class="header-title">{{title}}</span>
-      <img v-show="tipsShow && $route.path !== '/PriceAnalysis'" src="../../assets/img/tip.png" class="open-menu tips1" @click="showAlert">
-      <span v-show="$route.path === '/PriceAnalysis'" class="explain-price" @click="showAlert">口径说明</span>
-      <img :class="{'open-menu': true, 'explain-refresh': $route.path === '/PriceAnalysis'}" @click="refresh" v-show="$route.path !== '/' && $route.path !== '/treeSelect' && $route.path !== '/tips'" src="../../assets/img/refresh.png">
+      <img v-show="tipsShow && $route.path !== '/priceManage/PriceAnalysis'" src="../../assets/img/tip.png" class="open-menu tips1" @click="showAlert">
+      <span v-show="$route.path === '/priceManage/PriceAnalysis'" class="explain-price" @click="showAlert">口径说明</span>
+      <img :class="{'open-menu': true, 'explain-refresh': $route.path === '/priceManage/PriceAnalysis'}" @click="refresh" v-show="$route.path !== '/' && $route.path !== '/treeSelect' && $route.path !== '/tips'" src="../../assets/img/refresh.png">
       <!-- <img class="open-menu tips" @click="showAlert" v-show="$route.path === '/'" src="../../assets/img/tip.png"> -->
     </div>
     <van-overlay :show="show" @click.stop="show = false">
@@ -64,7 +64,7 @@
             <p>本月库存去化-签约：签约归属日期在当月的签约数据</p>
             <p>超龄面积占比：超龄面积/库存面积</p>
           </div>
-          <div class="tips tip-container" v-show="$route.path == '/PriceAnalysis'">
+          <div class="tips tip-container" v-show="$route.path == '/priceManage/PriceAnalysis'">
             <h5>口径说明</h5>
             <p>1、项目范围：全口径项目</p>
             <p>2、更新频率：每6小时</p>
@@ -92,7 +92,7 @@ export default {
   computed: {
     tipsShow () {
       const path = this.$route.path
-      return path === '/storage' || path === '/RemovalRate' || path === '/productivity' || path === '/INVAGE' || path === '/PriceAnalysis'
+      return path === '/storage' || path === '/RemovalRate' || path === '/productivity' || path === '/INVAGE' || path === '/priceManage/PriceAnalysis'
     }
   },
   methods: {
@@ -109,7 +109,7 @@ export default {
       this.$router.push('/tips')
     },
     showAlert () {
-      if (this.$route.path === '/PriceManage') {
+      if (this.$route.path === '/priceManage/priceManage') {
         this.$parent.intermediary()
       }
       this.show = true
