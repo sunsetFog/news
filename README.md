@@ -91,28 +91,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 
 
-改了项目配置和改图片文件名记得重新运行
-有时可能是依赖包问题，删除再重新下载
 
-
-vue-cli（vue脚手架）详细教程     https://www.cnblogs.com/fengzhenxiong/p/10213198.html
-1.全局安装vue-cli
-cnpm install --global vue-cli
-    看vue版本号（注意是大写“V”）
-    vue -V
-2.用vue-cli来构建项目
-vue init webpack item_name
-    Install vue-router? (Y/n)y回车   路由
-    Use ESLint to lint your code? (Y/n)n    代码风格   要是yes：Vue如何关闭eslint  webpack.base.conf.js  注释createLintingRule成空对象   npm run dev重新启动
-    Setup unit tests with Karma + Mocha? (Y/n)n     单元测试npm run unit
-    Setup e2e tests with Nightwatch? (Y/n)n    e2e测试npm run e2e
-3.对的路径
-cd item_name
-4.启动项目
-npm run dev
-    建议:先将build 里的assetsPublicPath: '/',改为assetsPublicPath: './',    确保打包路径没问题
-5.打包上线
-npm run build
 
 
 
