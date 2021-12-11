@@ -100,7 +100,10 @@ export default {
     },
     // vue应用async
     async cause(params) {
-      // 应用接口的执行步骤: 如先获取id，再用该id传别的接口   http请求就是用这个封装的
+      /*
+          应用接口的执行步骤: 如先获取id，再用该id传别的接口   http请求就是用这个封装的
+          await的是接口时，接口需要时间，顺序：先渲染dom，执行完，再次渲染dom
+       */
       let guide = await this.cause1(params);
       await this.cause2(guide); // 步骤1获取的id，传给步骤2
       await this.cause3();

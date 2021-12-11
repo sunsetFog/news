@@ -79,7 +79,7 @@ const pool = {
 				{bank_id: "131",bank_name: "支付宝",cardholder: "樱桃园",cardno: "166877"},
 				{bank_id: "132",bank_name: "支付宝",cardholder: "哩哩啦啦",cardno: "777777"}
 			],
-			agent_url: "http://10.1.101.120:501/#/?token=SESS_400d4d607c5dc003ba2b71042818bc38&loginname=test23",//代理
+			agent_url: "https://element.eleme.cn/#/?token=SESS_400d4d607c5dc003ba2b71042818bc38&loginname=test23",//代理
 			safe_take: {balance: 380018129, deposit: 546000000},//保险箱-存入金额-取出金额
     },
     mutations: {

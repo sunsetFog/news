@@ -1,19 +1,30 @@
 
 <template>
-<!-- 在main.ja引入了index.less样式，看upload-function -->
-    <section id="upload-function">
+    <section id="upload-unit">
             <div style="text-align: left;">
-				<el-upload class="upload-demo" name="upload" :data="{'attach':'upload'}" :on-change="handleChange" :action="uploadUrl" :on-remove="handleAptiRemove" :file-list="fileList1" list-type="picture-card" :before-upload="beforeUpload" :on-success="handleAptiSuccess">
-					<div style="width: 100%;height: 100%;background: rgba(45,45,45,0);position: relative;">
-                        <i class="el-icon-plus"></i>
-                        <div style="width: 100%;height: 100%;background: rgba(45,45,45,0);position: absolute;left: 0rem;top:0rem;z-index: 2;" @click.stop="occlusion()" v-if="upNumMax>=3"></div>
-					</div>
+				<el-upload
+					class="upload-demo"
+					name="upload"
+					:data="{'attach':'upload'}"
+					:on-change="handleChange"
+					action="https://jsonplaceholder.typicode.com/posts/"
+					:on-remove="handleAptiRemove"
+					list-type="picture-card"
+					:before-upload="beforeUpload"
+					:on-success="handleAptiSuccess"
+					:limit="limitNum"
+					:on-exceed="limitWay"
+				>
+                    <i class="el-icon-plus"></i>
+					<!-- 遮罩层: 达限制上传数量用 -->
+                    <div class="atmosphere" @click.stop="limitWay()" v-if="upNum >= limitNum"></div>
 				</el-upload>
 			</div>
 			<!-- 
 				action 后台请求url 
 				name="upload" 后台绑定的节点，必须有
 				:data="{'attach':'upload'}" 传参给后台，要遍历必须传，不遍历传也没事
+				:file-list="imgArr" 不需要这个,绑定imgList影响上传效果，独立绑定imgArr就没事
 			-->
     </section>
 </template>
@@ -22,23 +33,16 @@
 export default {
     data(){
         return{
-			uploadUrl:'',//后台请求url
-			fileList1: [],//获取后台url,格式为[{url:'图片路径'},{url: '图片路径'}]
-			fileList2: [],//仅仅是保存url,传后台用
-      		upNumMax: 0//图片数量
+			imgArr: [],
+			imgList: [],// 格式为[{url:'图片路径'},{url: '图片路径'}]
+			limitNum: 1,  // 限制上传数量
+			upNum: 0 // 已上传数量
         }
     },
-    created(){
-        this.urlUp();
-    },
     methods:{
-        //后台接口url
-		urlUp(){
-            //不需要请求头
-			this.uploadUrl = "https://jsonplaceholder.typicode.com/posts/";
-        },
         //上传前设置
         beforeUpload(file) {
+			console.log('-beforeUpload-', file)
             const isPNG = (file.type === 'image/png' || file.type === 'image/jpeg');
             const isLt2M = file.size / 1024 / 1024 < 2;
 
@@ -52,47 +56,49 @@ export default {
 		},
         //上传成功
 		handleAptiSuccess(res, file) {
-            console.log('------param-----',res,file);
+            console.log('-handleAptiSuccess-',res,file);
             //res是后台返回的数据
-			if (res.result == 1) {//判断后台成功状态,才拿数据
-				this.fileList2.push({
-					url: res.data.img
-				})
-			} else {
-                //this.$message.error('上传失败!');
-			}
+			this.imgList.push({
+				url: file.url
+			})
 		  },
 		  //删除上传
 		  handleAptiRemove(file, fileList) {
-				console.log('handleStoreRemove:',file, fileList);
-				this.upNumMax = fileList.length;
-				let f = file.url;
-				if (f) {						
-					let delIndex = '';
-					this.fileList2.forEach(function(val, index, arr){
-						if (val.url == f) {
-						delIndex = index;
-						}
-					});
-					this.fileList2.splice(delIndex, 1);
-				}
-		  },
-		  //遮挡上传
-		  occlusion(){
-			this.$message.error('图片数量已达到上限');
+				console.log('-handleAptiRemove-',file, fileList);
+				this.imgList.filter(function(item, index){
+					return file.url != item.url;
+				})
+				this.upNum = fileList.length;
 		  },
 		  //上传监听
 		  handleChange(file, fileList) {
-			  console.log('change--u',file,fileList);
-			  this.upNumMax = fileList.length;
-          }
+			  console.log('-handleChange-',file,fileList);
+			  console.log('-imgList-', this.imgList)
+			  this.upNum = fileList.length;
+		  },
+		  // 超出个数限制
+		  limitWay(files, fileList) {
+			  console.log('-limitWay-',files,fileList);
+			  this.$message.error('图片数量已达到上限');
+		  }
     }
 }
 </script>
 
 <style lang="less" scoped>
-#upload-function{
-	
+#upload-unit{
+	/deep/ .el-upload {
+		position: relative;
+	}
+	.atmosphere {
+		width: 100%;
+		height: 100%;
+		background: rgba(45,45,45,0);
+		position: absolute;
+		left: 0rem;
+		top:0rem;
+		z-index: 2;
+	}
 }
 </style>
 

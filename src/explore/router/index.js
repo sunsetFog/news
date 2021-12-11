@@ -103,6 +103,7 @@ export default new Router({
             { path: 'effect/screenfull', name: 'screenfull', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/effect/screenfull.vue'], resolve) },
             { path: 'effect/isAudio', name: 'isAudio', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/effect/isAudio.vue'], resolve) },
             { path: 'effect/previewPictures', name: 'previewPictures', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/effect/previewPictures.vue'], resolve) },
+            { path: 'effect/inputeCheck', name: 'inputeCheck', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/effect/inputeCheck.vue'], resolve) },
 
             { path: 'reportForm/demo1', name: 'echartsDemo1', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/reportForm/demo1.vue'], resolve) },
 

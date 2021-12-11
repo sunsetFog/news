@@ -5,7 +5,7 @@
                 name="upload"
                 class="avatar-uploader"
                 action="https://jsonplaceholder.typicode.com/posts/"
-                :show-file-list="false"
+                :show-file-list="true"
                 :on-success="handleAvatarSuccess"
                 :before-upload="beforeAvatarUpload">
                     <img v-if="imageUrl" :src="imageUrl" class="avatar">
@@ -30,7 +30,10 @@ export default {
     methods:{
         //上传成功
         handleAvatarSuccess(res, file) {
+            
             this.imageUrl = URL.createObjectURL(file.raw);
+
+            console.log('-handleAvatarSuccess-', res, file, '---', this.imageUrl);
             // res是后台返回的数据
             if (res.result == 1) {
                 this.imageUrl = res.data.img;
@@ -55,7 +58,6 @@ export default {
 </script>
 
 <style lang="less" rel="stylesheet/less">
-// 这样式建议放在全局里，index.less里
 #upload1{
     .avatar-uploader .el-upload {
         border: 1px dashed #d9d9d9;

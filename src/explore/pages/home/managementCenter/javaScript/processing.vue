@@ -69,13 +69,28 @@ export default {
 
             let obj = {aaa: 102};
             let that = this;
-            // err问题: forEach 的this指向改变了
-            arr.forEach(function(item,index,arr){//参数1:数组项、参数2:数组索引(数组下标)、参数3:数组本身
+            /*
+                数组.forEach(
+                    方法(数组项, 数组下标, 数组本身){
+                        用return指的是此方法
+                    },
+                    this指向
+                )
+                err问题: forEach的this指向改变了
+            */
+            arr.forEach(function(item,index,arr){
                 console.log('this',this.aaa, this.num);
                 console.log('that',that);
             },this);// this指向obj
 
-            // 遍历: 数组.map: 返回新的数组（必用return，返回新数组的每一项）
+            /*
+                返回新的数组: 必用return，返回新数组的每一项
+                let newArr = 数组.map(
+                    方法(数组项, 数组下标, 数组本身){
+                        用return指的是此方法
+                    }
+                )
+             */
             let lyArr = [{title: '嘿嘿'},{title: '阚凯力'}]
             let newArr = lyArr.map(function(item){
                 item.title = 'hk-' + item.title;// 修改
@@ -89,19 +104,38 @@ export default {
             })
             console.log('新数组',newArr);
 
-            // 遍历: 数组.filter: 返回每项符合条件的新数组
+            /*
+                返回每项符合条件的新数组
+                let newArr = 数组.filter(
+                    方法(数组项, 数组下标, 数组本身){
+                        return 条件（return指的是此方法）
+                    }
+                )
+             */
             let newArr2 = arr.filter(function(item){
                 return item>1&&item<3;
             })
             console.log('filter',newArr2);
-
-            // 遍历: 数组.some: 检测数组中的元素是否满足指定条件,返回true,false
+            /*
+                检测数组中的元素是否满足指定条件,返回true,false
+                let isTrue = 数组.some(
+                    方法(数组项, 数组下标, 数组本身){
+                        return 条件（return指的是此方法）
+                    }
+                )
+             */
             let active = arr.some(function(item,index,arr){
                 return item == 1;
             })
             console.log('some',active);
-
-            // 遍历: 数组.find()  查找符合条件的元素，则返回第一个元素
+            /*
+                查找符合条件的元素，则返回第一个元素
+                let firstItem = 数组.find(
+                    方法(数组项, 数组下标, 数组本身){
+                        return 条件（return指的是此方法）
+                    }
+                )
+             */
             let content = arr.find(function(item){
                 return item>0;
             })
@@ -309,6 +343,9 @@ export default {
             let field = new Date().getTime();
             console.log('当前时间转时间戳', field);// 1608003110000
             console.log('时间戳转时间', new Date(field));// 格式未处理
+
+            let biaozhun = "2021-11-03T18:00:00.000Z"; // 中国标准时间
+            console.log('时间戳转时间', new Date(biaozhun));
             
 
 
