@@ -43,9 +43,9 @@
     "vue-luck-draw": "^3.4.11",
     "vue-qr": "^2.2.1",
     "vue-router": "^3.0.1",
-    "vueditor": "^0.3.1",
     "vuedraggable": "^2.24.3",
-    "vuex": "^3.5.1"
+    "vuex": "^3.5.1",
+    "wangeditor": "^4.7.11"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

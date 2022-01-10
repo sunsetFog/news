@@ -79,7 +79,6 @@ export default{
             manage_state: true,//管理中心
             menuList: [
                 {key: lodash.uniqueId('first_'), label: '标签样式', path: '', icon: require('@static/picture/center/shouyi.png'), effect:[
-                    {key: lodash.uniqueId('second_'), label: '代码规范', path: '/home/managementCenter/tagStyle/standard', icon: require('@static/picture/center/gonggao.png'), effect:[]},
                     {key: lodash.uniqueId('second_'), label: '样式', path: '/home/managementCenter/tagStyle/css', icon: require('@static/picture/center/gonggao.png'), effect:[]},
                     {key: lodash.uniqueId('second_'), label: '标签', path: '/home/managementCenter/tagStyle/tags', icon: require('@static/picture/center/gonggao.png'), effect:[]},
                     {key: lodash.uniqueId('second_'), label: 'flex弹性布局', path: '/home/managementCenter/tagStyle/flex', icon: require('@static/picture/center/gonggao.png'), effect:[]},

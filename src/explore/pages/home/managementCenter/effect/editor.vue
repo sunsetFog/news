@@ -1,51 +1,60 @@
 <template>
-    <section id="editor">
-        <div class="editorContainer"></div>
+    <section id="editorUnit">
+        <div :class="'editorBox'+countIndex"></div>
     </section>
 </template>
 
 <script>
-// npm install vueditor --save
-import { createEditor } from 'vueditor'
-import 'vueditor/dist/style/vueditor.min.css'
-import lang from "vueditor/dist/language/lang.cn.js"
-export default {
-    data(){
-        return{
+/*
 
+https://github.com/wangeditor-team/wangEditor
+官网：www.wangEditor.com
+文档：www.wangeditor.com/doc
+
+ */
+import wangEditor from 'wangeditor'
+export default {
+    name: "wangEditor",
+    props: {
+        countIndex: {
+            type: String,
+            default: '0'
         }
     },
-    mounted(){
-        this.editor();
+    data() {
+        return {
+            isEditor: null,
+            config: {
+                menus: ['undo', 'redo', 'list', 'table']
+            }
+        }
     },
-    methods:{
-		//文本编辑器
-		editor() {
-			this.inst = createEditor('.editorContainer', {
-				toolbar: [
-					'removeFormat', 'undo', 'redo', '|', 'element', 'fontName', 'fontSize', 'foreColor', 'backColor', 'divider', 'bold', 'italic', 'underline', 'strikeThrough',
-					'link', 'unLink', 'divider', 'subscript', 'superscript', 'divider', 'justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull',
-					'|', 'indent', 'outdent', 'insertOrderedList', 'insertUnorderedList', '|', 'emoji', 'picture', 'table', '|', 'fullscreen', 'sourceCode', 'markdown'
-				],
-				fontName: [
-                    {val: 'arial black'},
-					{val: 'times new roman'},
-					{val: 'Courier New'},
-                    {val: '微软雅黑'}
-                    ],
-				fontSize: ['12px', '14px', '16px', '18px', '0.8rem', '1.0rem', '1.2rem', '1.5rem', '2.0rem'],
-				uploadUrl: '',
-				id: '',
-				classList: ["editor-eara"],
-			});
-		},
+    mounted () {
+        this.isEditor = new wangEditor('.editorBox'+this.countIndex);
+        // this.isEditor.config.menus = this.config.menus;
+        this.isEditor.create();
+    },
+    methods: {
+        setContent(value) {
+            this.isEditor.txt.html(value);
+        },
+        getContent() {
+            console.log('---this.isEditor---', this.isEditor.txt.html());
+            return this.isEditor.txt.html();
+        }
+    },
+    beforeDestroy() {
+        this.isEditor.destroy();
+        this.isEditor = null;
     }
 }
 </script>
 
 <style lang="less" scoped>
-#editor{
+#editorUnit{
     width: 100%;
-    height: 600px;
+    height: 400px;
+    text-align: left;
 }
 </style>
+

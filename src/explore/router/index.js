@@ -27,6 +27,9 @@ export default new Router({
       children是用来搭建路由视图，包有{ path: '/', redirect: '/home' }  默认值：children里的重定向
       children里的path前没有/，表示path叠加，若加了/就不会叠加
       meta路由元信息，是用来存路由参数，比如title
+
+      redirect重定：A找B要图片资源，B说C那才有，最后A改找C-------url的path变化了   302
+      转发：A找B要图片资源，B没有，B去问C要到了，最后B发给了A------url的path没变  307
     */
     { path: '*', name: 'error', meta: { title: '找不到该页',key: 404}, component: resolve => require(['@/explore/pages/404.vue'], resolve) },
     { path: '/noPermission', name: 'noPermission', meta: { title: '无权限访问该页',key: 401}, component: resolve => require(['@/explore/pages/401.vue'], resolve) },
@@ -45,7 +48,6 @@ export default new Router({
           children: [
             { path: 'crux', name: 'crux', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/crux.vue'], resolve) },
 
-            { path: 'tagStyle/standard', name: 'standard', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/tagStyle/standard.vue'], resolve) },
             { path: 'tagStyle/css', name: 'css', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/tagStyle/css.vue'], resolve) },
             { path: 'tagStyle/tags', name: 'tags', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/tagStyle/tags.vue'], resolve) },
             { path: 'tagStyle/flex', name: 'flex', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/tagStyle/flex.vue'], resolve) },
