@@ -53,6 +53,7 @@ export default new Router({
             { path: 'tagStyle/flex', name: 'flex', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/tagStyle/flex.vue'], resolve) },
             { path: 'tagStyle/cssDemo', name: 'cssDemo', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/tagStyle/cssDemo.vue'], resolve) },
             { path: 'tagStyle/table', name: 'table', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/tagStyle/table.vue'], resolve) },
+            { path: 'tagStyle/cssDemo2', name: 'cssDemo2', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/tagStyle/cssDemo2.vue'], resolve) },
 
             { path: 'javaScript/learn1', name: 'learn1', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/javaScript/learn1.vue'], resolve) },
             { path: 'javaScript/learn2', name: 'learn2', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/javaScript/learn2.vue'], resolve) },

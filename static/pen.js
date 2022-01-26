@@ -107,3 +107,6 @@ npm config delete proxy
 svn-- 还原
 
 &&
+
+最小高度占父元素100%高
+背景图大小不占padding

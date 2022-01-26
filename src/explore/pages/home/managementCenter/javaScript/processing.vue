@@ -1,6 +1,8 @@
 <template>
-    <section>
-
+    <section style="color: #fff;">
+        <div>嘿嘿<br>99</div>
+        <div>{{scenery}}</div>
+        <div v-html="scenery"></div>
     </section>
 </template>
 
@@ -9,7 +11,8 @@ export default {
     name: 'processing',
     data(){
         return{
-            num: 106
+            num: 106,
+            scenery: '嘿嘿<br>66'
         }
     },
     mounted(){
@@ -153,7 +156,7 @@ export default {
                     注意：如果只有一个参数，表示从当前下标一直删到最后
                     参数1: 删除下标，是负数，从数组末尾开始算起
                     参数2: 删除的个数，0代表不删，1代表删除一个....
-                    参数3: 添加的内容
+                    参数3: 在参数1的下标后添加的内容
                 7  数组.indexOf("值")     获取数组中指定值的下标，如果未找到，返回-1
                 8  数组.reverse()     将数组中的内容倒序排列
                 9  数组.concat(数组)     拼接数组,arr1.concat(arr2,arr3,....);
@@ -253,7 +256,21 @@ export default {
 			console.log('toUpperCase',str1.toUpperCase());//HELLO WORLD
 			console.log('split',str.split(""));//["今", "天", "好", "是", "好", "个", "好", "日", "子"]
 			console.log('split',str.split("好"));//["今天", "是", "个", "日子"]
-			console.log('split',str.split("好",2));//["今天", "是"]
+            console.log('split',str.split("好",2));//["今天", "是"]
+            
+            let apple = 'water092'
+            console.log('---后三位---', apple.substring(apple.length-3));
+            console.log('---非后三位---', apple.substring(0, apple.length-3));
+
+            let section = "2aaa888fff1";
+            section = section.match(/aaa(\S*)fff/);// 有返回数组，没有返回null
+            if (section) {
+                section = section[1]
+            }
+            console.log('js截取两个字符串之间的内容', section);
+            let insert = '776积极001'
+            insert = insert.replace('积极', '积极响应');
+            console.log('js在字符串中插入某个新符号', insert);
         },
         demo7(){
             //正则表达式: 验证指定字符串合法与否

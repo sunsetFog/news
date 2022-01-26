@@ -84,6 +84,7 @@ export default{
                     {key: lodash.uniqueId('second_'), label: 'flex弹性布局', path: '/home/managementCenter/tagStyle/flex', icon: require('@static/picture/center/gonggao.png'), effect:[]},
                     {key: lodash.uniqueId('second_'), label: '样式例子', path: '/home/managementCenter/tagStyle/cssDemo', icon: require('@static/picture/center/gonggao.png'), effect:[]},
                     {key: lodash.uniqueId('second_'), label: '完整table', path: '/home/managementCenter/tagStyle/table', icon: require('@static/picture/center/gonggao.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: '样式例子2', path: '/home/managementCenter/tagStyle/cssDemo2', icon: require('@static/picture/center/gonggao.png'), effect:[]},
                 ]},
                 {key: lodash.uniqueId('first_'), label: 'javaScript', path: '', icon: require('@static/picture/center/caiwu.png'), effect:[
                     {key: lodash.uniqueId('second_'), label: '必学1', path: '/home/managementCenter/javaScript/learn1?id=128', icon: require('@static/picture/center/wanjia.png'), effect:[]},
