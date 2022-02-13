@@ -10,7 +10,7 @@
          -->
         <table width="520px" height="550px">
             <thead>
-                <tr style="height: 60px;background: #909399;color: #fff;">
+                <tr>
                     <th colspan="5">个人应聘信息</th>
                 </tr>
             </thead>
@@ -101,6 +101,7 @@ export default {
     height: 100%;
     background: white;
     padding: 10px;
+    // table样式看whole.less
 }
 </style>
 

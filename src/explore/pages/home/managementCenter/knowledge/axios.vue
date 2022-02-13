@@ -1,6 +1,6 @@
 <template>
     <section>
-
+        <el-button @click="http2">调用接口</el-button>
     </section>
 </template>
 
@@ -16,7 +16,6 @@ export default {
         }
     },
     created(){
-        // this.interface();
         this.http2();
     },
     methods: {
@@ -36,16 +35,40 @@ export default {
         },
         //推荐
         http2(){
+            // let that = this;
+            // let json = {
+            //     username: "admin",
+            //     password: "123456"
+            // }
+            // that.$apihttp({
+            //     url: 'http://localhost:1199/mock/geoJson',
+            //     method: 'post',
+            //     params: json // 不管get还是post，这个都是拼接参数到url上
+            //     // data: json // 不管get还是post，这个都不拼接参数到url上
+            // }).then((res) => {
+            //     console.log('H-token',res);
+            // }).catch((err)=>{
+            //     console.log('error',err);
+            // })
+
             let that = this;
             let json = {
-                username: "admin",
-                password: "123456"
+                id: 156,
+                goodsName: "苹果"
             }
+            // that.$apihttp({
+            //     url: 'http://192.168.1.102:8081/agentApi/sys/login',
+            //     method: 'post',
+            //     params: json
+            // }).then((res) => {
+            //     console.log('H-token',res);
+            // }).catch((err)=>{
+            //     console.log('error',err);
+            // })
             that.$apihttp({
-                url: 'http://localhost:1199/mock/geoJson',
-                method: 'post',
-                params: json // 不管get还是post，这个都是拼接参数到url上
-                // data: json // 不管get还是post，这个都不拼接参数到url上
+                url: 'http://localhost:8062/sky/xiaoyue/apple',
+                method: 'get',
+                params: json
             }).then((res) => {
                 console.log('H-token',res);
             }).catch((err)=>{

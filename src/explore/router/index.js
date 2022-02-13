@@ -55,6 +55,9 @@ export default new Router({
             { path: 'tagStyle/table', name: 'table', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/tagStyle/table.vue'], resolve) },
             { path: 'tagStyle/cssDemo2', name: 'cssDemo2', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/tagStyle/cssDemo2.vue'], resolve) },
 
+            { path: 'javaScript/isString', name: 'isString', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/javaScript/isString.vue'], resolve) },
+            { path: 'javaScript/isObject', name: 'isObject', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/javaScript/isObject.vue'], resolve) },
+            { path: 'javaScript/isArray', name: 'isArray', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/javaScript/isArray.vue'], resolve) },
             { path: 'javaScript/learn1', name: 'learn1', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/javaScript/learn1.vue'], resolve) },
             { path: 'javaScript/learn2', name: 'learn2', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/javaScript/learn2.vue'], resolve) },
             { path: 'javaScript/learn3', name: 'learn3', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/javaScript/learn3.vue'], resolve) },

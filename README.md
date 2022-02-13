@@ -24,6 +24,7 @@ npm run build --report
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
+# 目录结构
 |- .git ----------------------------------------------- git本地配置
 |- build/
     |- build.js --------------------------------------- 打包构建脚本
@@ -78,7 +79,8 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
     |- favicon.ico ------------------------------------ 浏览器title的ico图标
     |- .gitkeep --------------------------------------- git上传忽略的文件，与.gitignore一样
 |- .babelrc ------------------------------------------- babel-loader解释es6
-|- .editorconfig -------------------------------------- vscode安装editorConfig for vs Code插件才会起作用
+|- .editorconfig -------------------------------------- vscode编辑器配置文件
+|- .eslintignore -------------------------------------- 校验忽视文件
 |- .gitignore ----------------------------------------- git上传忽略的文件
 |- .postcssrc.js -------------------------------------- 解决浏览器加css前缀  css不用写-webkit...
 |- index.html ----------------------------------------- html5模板

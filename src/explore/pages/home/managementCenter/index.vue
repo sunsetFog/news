@@ -87,6 +87,10 @@ export default{
                     {key: lodash.uniqueId('second_'), label: '样式例子2', path: '/home/managementCenter/tagStyle/cssDemo2', icon: require('@static/picture/center/gonggao.png'), effect:[]},
                 ]},
                 {key: lodash.uniqueId('first_'), label: 'javaScript', path: '', icon: require('@static/picture/center/caiwu.png'), effect:[
+                    {key: lodash.uniqueId('second_'), label: '字符串', path: '/home/managementCenter/javaScript/isString', icon: require('@static/picture/center/wanjia.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: '对象', path: '/home/managementCenter/javaScript/isObject', icon: require('@static/picture/center/wanjia.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: '数组', path: '/home/managementCenter/javaScript/isArray', icon: require('@static/picture/center/wanjia.png'), effect:[]},
+
                     {key: lodash.uniqueId('second_'), label: '必学1', path: '/home/managementCenter/javaScript/learn1?id=128', icon: require('@static/picture/center/wanjia.png'), effect:[]},
                     {key: lodash.uniqueId('second_'), label: '必学2', path: '/home/managementCenter/javaScript/learn2', icon: require('@static/picture/center/wanjia.png'), effect:[]},
                     {key: lodash.uniqueId('second_'), label: '必学3', path: '/home/managementCenter/javaScript/learn3', icon: require('@static/picture/center/wanjia.png'), effect:[]},
@@ -224,6 +228,7 @@ export default{
             .manage-content-right{
                 .mixin_float(840px,1130px,right);
                 overflow-x: hidden;
+                color: #fff;
             }
         }
     }
