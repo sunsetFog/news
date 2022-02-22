@@ -65,6 +65,7 @@ export default new Router({
             { path: 'javaScript/es6', name: 'es6', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/javaScript/es6.vue'], resolve) },
             { path: 'javaScript/jsDemo', name: 'jsDemo', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/javaScript/jsDemo.vue'], resolve) },
             { path: 'javaScript/research', name: 'research', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/javaScript/research.vue'], resolve) },
+            { path: 'javaScript/url_base64_blob', name: 'url_base64_blob', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/javaScript/url_base64_blob.vue'], resolve) },
 
             { path: 'knowledge/v_tag', name: 'v_tag', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/knowledge/v_tag.vue'], resolve) },
             { path: 'knowledge/modifier', name: 'modifier', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/knowledge/modifier.vue'], resolve) },
@@ -110,6 +111,7 @@ export default new Router({
             { path: 'effect/isAudio', name: 'isAudio', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/effect/isAudio.vue'], resolve) },
             { path: 'effect/previewPictures', name: 'previewPictures', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/effect/previewPictures.vue'], resolve) },
             { path: 'effect/inputeCheck', name: 'inputeCheck', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/effect/inputeCheck.vue'], resolve) },
+            { path: 'effect/customAvatar', name: 'customAvatar', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/effect/customAvatar.vue'], resolve) },
 
             { path: 'reportForm/demo1', name: 'echartsDemo1', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/reportForm/demo1.vue'], resolve) },
 

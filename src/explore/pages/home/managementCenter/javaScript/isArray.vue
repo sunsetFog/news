@@ -13,16 +13,16 @@ export default {
         }
     },
     created() {
-
+        this.demo2();
     },
     methods: {
-        demo2(){
+        demo1(){
             //数组概念：用来存储一系列数据的集合,下标从0开始，下标最大值为length-1
             // 定义数组   一维数组
             var arr1 = new Array(5);//构造方法
             var arr2 = new Array(1,'哈哈',3);
             var arr3 = [1,2,3];
-            console.log('数组的长度',arr3.length);
+            console.log('数组的长度', arr3.length);
             // 二维数组
             var arr4 = [[1,2,3,4],[5,6,7,8],[9,10,11,12]];
 
@@ -31,37 +31,46 @@ export default {
             console.log('arguments特性',arguments[0],arguments.length);//可以用下标，可以用长度，也能for循环，但不能用数组中的常用方法，比如push()...
             console.log('把arguments转换成真正的数组',Array.prototype.slice.call(arguments));
         },
-        demo4(){
+        demo2(){
             /*
                 数组中的常用方法 (注意返回内容，不能赋值)
                 1  数组.join("")      将数组中的值拼接为字符串显示  参数1:拼接内容
                 2  数组.pop()       删除并返回数组的最后一个元素
                 3  数组.shift()      删除并返回数组的第一个元素
-                4  数组.push(可以是对象)     在数组末尾添加元素,并且返回数组长度
-                5  数组.unshift(可以是对象)     在数组的前面添加元素，并且返回数组长度
+                4  数组.push(可以是对象)     在数组末尾添加元素,返回数组长度
+                5  数组.unshift(可以是对象)     在数组的前面添加元素，返回数组长度
                 6  数组.splice(下标,1)     删除或者添加指定的元素、、、删除并返回删除元素
                     注意：如果只有一个参数，表示从当前下标一直删到最后
                     参数1: 删除下标，是负数，从数组末尾开始算起
                     参数2: 删除的个数，0代表不删，1代表删除一个....
                     参数3: 在参数1的下标后添加的内容
-                7  数组.indexOf("值")     获取数组中指定值的下标，如果未找到，返回-1
+                7  数组.indexOf("值")     返回数组中指定值的下标，如果未找到，返回-1
                 8  数组.reverse()     将数组中的内容倒序排列
-                9  数组.concat(数组)     拼接数组,arr1.concat(arr2,arr3,....);
+                9  数组.concat(数组)     拼接数组  arr1.concat(arr2,arr3,....);
                 10  数组.sort(函数)     数组排序，默认从小到大排而且是按照字符编码排列
                 11  数组.slice(开始下标,结束下标) 留头不留尾
 
-                12 数组.includes('指定的值')   判断数组是否包含指定的值，如果是返回 true，否则false
+                12 数组.includes('指定的值')   元素是否存在，返回true或false
+                13 Array.isArray(数组)  是否为数组，返回true或false
             */
 
             var arr=[10,6,-2,1];
-            console.log('判断数组是否有该值', arr.indexOf(6)); // 大于1有，等于-1没有
-            console.log('数组拼接',arr.join(""));
+            
+            console.log('判断数组是否有该值', arr.indexOf(-2));
+            console.log('数组拼接',arr.join(",")); // 10,6,-2,1
             console.log('数组后添加',arr.push(9));
+            console.log('元素是否存在',arr.includes(9));
 			arr.sort(function(a,b){
 //				return a-b;//从小到大排
 				return b-a//从大到小排
             })
             console.log('数组排序',arr);
+
+
+            arr = [];// 清空数组
+            if(arr.length == 0) {
+                console.log("判断是否空数组");
+            }
         },
         demo3(){
             //遍历数组

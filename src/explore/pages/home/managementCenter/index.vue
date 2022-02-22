@@ -98,6 +98,7 @@ export default{
                     {key: lodash.uniqueId('second_'), label: 'es6', path: '/home/managementCenter/javaScript/es6', icon: require('@static/picture/center/wanjia.png'), effect:[]},
                     {key: lodash.uniqueId('second_'), label: 'js例子', path: '/home/managementCenter/javaScript/jsDemo', icon: require('@static/picture/center/wanjia.png'), effect:[]},
                     {key: lodash.uniqueId('second_'), label: '赋值-浅拷贝-深拷贝', path: '/home/managementCenter/javaScript/research', icon: require('@static/picture/center/wanjia.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: 'url_base64_blob', path: '/home/managementCenter/javaScript/url_base64_blob', icon: require('@static/picture/center/wanjia.png'), effect:[]},
                 ]},
                 {key: lodash.uniqueId('first_'), label: 'vue知识点', path: '', icon: require('@static/picture/center/pai.png'), effect:[
                     {key: lodash.uniqueId('second_'), label: 'vue指令', path: '/home/managementCenter/knowledge/v_tag', icon: require('@static/picture/center/qipai.png'), effect:[]},
@@ -147,7 +148,8 @@ export default{
                     {key: lodash.uniqueId('second_'), label: '全屏', path: '/home/managementCenter/effect/screenfull', icon: require('@static/picture/center/qipai.png'), effect:[]},
                     {key: lodash.uniqueId('second_'), label: '音频', path: '/home/managementCenter/effect/isAudio', icon: require('@static/picture/center/qipai.png'), effect:[]},
                     {key: lodash.uniqueId('second_'), label: '图片预览', path: '/home/managementCenter/effect/previewPictures', icon: require('@static/picture/center/qipai.png'), effect:[]},
-                    {key: lodash.uniqueId('second_'), label: '表单校验', path: '/home/managementCenter/effect/inputeCheck', icon: require('@static/picture/center/qipai.png'), effect:[]}
+                    {key: lodash.uniqueId('second_'), label: '表单校验', path: '/home/managementCenter/effect/inputeCheck', icon: require('@static/picture/center/qipai.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: '头像裁切上传', path: '/home/managementCenter/effect/customAvatar', icon: require('@static/picture/center/qipai.png'), effect:[]}
                 ]},
                 {key: lodash.uniqueId('first_'), label: '项目报表', path: '', icon: require('@static/picture/center/tuiguang.png'), effect:[
                     {key: lodash.uniqueId('second_'), label: 'echart图表', path: '/home/managementCenter/reportForm/demo1', icon: require('@static/picture/center/daili.png'), effect:[]},

@@ -16,11 +16,13 @@ export default {
     mounted(){//在dom操作的生命周期里添加监听
         window.addEventListener("resize", this.renderResize, false);
         window.addEventListener("scroll", this.handleScroll);
-        this.keyboard();
+        window.addEventListener("keyup", this.keyUpBoard);
+        // this.keyboard();
     },
     destroyed:function(){//在销毁的生命周期里删除监听
         window.removeEventListener("resize", this.renderResize, false);
         window.removeEventListener("scroll", this.handleScroll);
+        window.removeEventListener("keyup", this.keyUpBoard);
     },
     methods: {
         renderResize(){//1.
@@ -38,6 +40,12 @@ export default {
             }else{
                 this.roll_ios = false;
                 // console.log('0000000000')
+            }
+        },
+        keyUpBoard(e){//3.监听电脑键盘
+            console.log('--键码--', e.keyCode);
+            if(e.keyCode == 27) {
+
             }
         },
         keyboard(){//3.监听电脑键盘

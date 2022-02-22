@@ -66,7 +66,7 @@ export default {
             //     console.log('error',err);
             // })
             that.$apihttp({
-                url: 'http://localhost:8062/sky/xiaoyue/apple',
+                url: 'http://localhost:8066/sky/xiaoyue/apple',
                 method: 'get',
                 params: json
             }).then((res) => {

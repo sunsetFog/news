@@ -7,7 +7,9 @@
                 action="https://jsonplaceholder.typicode.com/posts/"
                 :show-file-list="true"
                 :on-success="handleAvatarSuccess"
-                :before-upload="beforeAvatarUpload">
+                :before-upload="beforeAvatarUpload"
+                accept="image/jpeg,image/jpg,image/png"
+            >
                     <img v-if="imageUrl" :src="imageUrl" class="avatar">
                     <i v-else class="el-icon-plus avatar-uploader-icon"></i>
             </el-upload>
@@ -30,8 +32,12 @@ export default {
     methods:{
         //上传成功
         handleAvatarSuccess(res, file) {
-            
+            // file转blob图片
             this.imageUrl = URL.createObjectURL(file.raw);
+
+            this.fileToBase64(file.raw).then(data => {
+                console.log('---fileToBase64--', data);
+            })
 
             console.log('-handleAvatarSuccess-', res, file, '---', this.imageUrl);
             // res是后台返回的数据
@@ -52,6 +58,19 @@ export default {
                 this.$message.error('上传头像图片大小不能超过 2MB!');
             }
             return isPNG && isLt2M;
+        },
+        // file转base64图片
+        fileToBase64(data) {
+            return new Promise((resolve, reject) => {
+                const fileReader = new FileReader();
+                fileReader.onload = (e) => {
+                    resolve(e.target.result);
+                };
+                fileReader.readAsDataURL(data);
+                fileReader.onerror = () => {
+                    reject(new Error('文件流异常'));
+                };
+            });
         }
     }  
 }
