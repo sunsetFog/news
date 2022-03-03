@@ -66,6 +66,7 @@ export default new Router({
             { path: 'javaScript/jsDemo', name: 'jsDemo', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/javaScript/jsDemo.vue'], resolve) },
             { path: 'javaScript/research', name: 'research', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/javaScript/research.vue'], resolve) },
             { path: 'javaScript/url_base64_blob', name: 'url_base64_blob', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/javaScript/url_base64_blob.vue'], resolve) },
+            { path: 'javaScript/isDate', name: 'isDate', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/javaScript/isDate.vue'], resolve) },
 
             { path: 'knowledge/v_tag', name: 'v_tag', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/knowledge/v_tag.vue'], resolve) },
             { path: 'knowledge/modifier', name: 'modifier', meta: { title: '管理中心',key: 6}, component: resolve => require(['@/explore/pages/home/managementCenter/knowledge/modifier.vue'], resolve) },

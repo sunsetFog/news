@@ -17,7 +17,7 @@ export default {
         }
     },
     mounted(){//可以dom操作
-        this.demo8();
+        this.demo4();
     },
     methods: {
         demo1(){
@@ -223,6 +223,9 @@ export default {
             1.全局变量：从变量被定义直到程序被关闭而终止
             2.局部变量：从变量被定义直到函数被关闭而终止 */
             var i = "yi";//局部变量
+
+            var re1 = 1, re2 = '雯雯', re3 = {};
+            console.log('--声明多个变量--', re1, '---', re2, '---', re3);
         },
         demo5(){
             /* 五种基本数据类型，数字（number),字符串（string)，布尔(boolean）,空（null），未定义（undefined）

@@ -60,6 +60,21 @@ export default {
             //     return v;
             // }
             console.log('箭头函数',f(1));
+
+            /*
+                e => this.isWay(e)
+                等价于
+                function(e){
+                    return this.isWay(e);
+                }
+
+                用法
+                @click="a => this.isWay(a, b)"  elemen ui组件：参数a是组件返回的参数，参数b是v-for里的参数
+                等价于
+                @click="function(a){
+                    return this.isWay(a, b);
+                }"
+            */ 
         },
         demo4(){
             // 简写

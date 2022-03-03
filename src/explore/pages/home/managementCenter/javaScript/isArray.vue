@@ -78,6 +78,7 @@ export default {
             // forEach不能使用break,continue,不能用arr.splice(),索引index不会被重置,相反for可以
             let arr = [1,2,3];
             for(let i=0;i<arr.length;i++){
+                let item = arr[i]
                 if(arr[i] == 2){
                     break;//直接终止循环
                 }

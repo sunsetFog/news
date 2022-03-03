@@ -106,56 +106,7 @@ export default {
             console.log('余弦',Math.cos(deg60));
             console.log('正切',Math.tan(deg60));
         },
-        demo9(){
-            //Date对象
-            var nowTime = new Date();//Date构造函数，时间从1970 年 1 月 1开始算
-            console.log('当前时间',nowTime);
-            var futureTime = new Date(2050,0,1);
-            console.log('目标时间',futureTime);
-
-            
-            console.log('当月几号(1 ~ 31)',nowTime.getDate());
-            console.log('星期几(0 ~ 6)',nowTime.getDay()+1); // 加一是因为从零开始
-            console.log('月份 (0 ~ 11)',nowTime.getMonth()+1);
-            console.log('年份',nowTime.getFullYear());
-            console.log('小时 (0 ~ 23)',nowTime.getHours()+1);
-            console.log('分钟 (0 ~ 59)',nowTime.getMinutes()+1);
-            console.log('秒数 (0 ~ 59)',nowTime.getSeconds()+1);
-
-            console.log('2020/7/26===',nowTime.toLocaleDateString());
-            console.log('2020/7/26 下午11:54:30===',nowTime.toLocaleString());
-            console.log('下午11:54:30===',nowTime.toLocaleTimeString());
-
-            let field = new Date().getTime();
-            console.log('当前时间转时间戳', field);// 1608003110000
-            console.log('时间戳转时间', new Date(field));// 格式未处理
-
-            let biaozhun = "2021-11-03T18:00:00.000Z"; // 中国标准时间
-            console.log('时间戳转时间', new Date(biaozhun));
-            
-
-
-            var millisecond= futureTime.getTime() - nowTime.getTime();// getTime() 1970 年 1 月 1 日至今的毫秒数       
-            console.log('剩余所有毫秒数',millisecond);
-
-            var surplusSecond = parseInt(millisecond/1000);
-            console.log('剩余所有秒数',surplusSecond);
-
-            var days = Math.floor(surplusSecond/(24*60*60));
-            console.log('剩余天数',days);
-
-            var hours = Math.floor((surplusSecond-days*24*60*60)/3600);
-            console.log('剩余小时',hours);
-
-            var minutes = Math.floor((surplusSecond-days*24*60*60-hours*60*60)/60);
-            console.log('剩余分钟',minutes);
-
-            var seconds = Math.floor((surplusSecond-days*24*60*60-hours*60*60-minutes*60));
-            console.log('剩余秒数',seconds);
-
-            console.log("距离2050年元旦还有："+days+"天"+hours+"时"+minutes+"分"+seconds+"秒");
-            // setInterval(this.demo7,1000);//倒计时
-        },
+        
         // 时间戳1608003110000    -转-   2021-12-22 18:45:08
         timeTransformation(time) {
             let date = new Date(time*1000);
@@ -167,6 +118,8 @@ export default {
             let ss = (date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds());
             return YY+MM + DD +" " + hh +mm + ss
         },
+        
+        
         demo10 (params = []) {
             console.log('方法默认值', params);
             let key = null;

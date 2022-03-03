@@ -13,22 +13,33 @@ export default {
             roll_ios: true
         }
     },
-    mounted(){//在dom操作的生命周期里添加监听
-        window.addEventListener("resize", this.renderResize, false);
-        window.addEventListener("scroll", this.handleScroll);
+    created () {
+        // 监听浏览器窗口大小
+        window.addEventListener("resize", this.renderResize);
+        // 监听浏览器键盘
         window.addEventListener("keyup", this.keyUpBoard);
+        // 监听浏览器关闭和刷新
+        window.addEventListener('beforeunload', this.beforeunloadHandler)
+    },
+    mounted(){
+        // 监听浏览器滚动
+        window.addEventListener("scroll", this.handleScroll);
         // this.keyboard();
     },
-    destroyed:function(){//在销毁的生命周期里删除监听
-        window.removeEventListener("resize", this.renderResize, false);
+    destroyed:function(){// 在销毁的生命周期里删除监听
+        window.removeEventListener("resize", this.renderResize);
         window.removeEventListener("scroll", this.handleScroll);
         window.removeEventListener("keyup", this.keyUpBoard);
+        window.removeEventListener('beforeunload', this.beforeunloadHandler)
     },
     methods: {
-        renderResize(){//1.
+        beforeunloadHandler() {
+            console.log('--value--')
+        },
+        renderResize(){
             console.log('监听浏览器窗口大小变化');
         },
-        handleScroll(){//2.
+        handleScroll(){
             console.log('监听滚动变化');
             var big_box_scroll = document.getElementById('app');
             // console.log('app++999',big_box_scroll)
@@ -48,7 +59,7 @@ export default {
 
             }
         },
-        keyboard(){//3.监听电脑键盘
+        keyboard(){// 监听电脑键盘 这个有些键无效
             let that = this;
             document.onkeypress = function(e) {
                 var keycode = document.all ? event.keyCode : e.which;

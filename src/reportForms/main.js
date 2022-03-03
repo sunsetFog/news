@@ -15,8 +15,13 @@ import '@static/capital/rem.js';
 
 import Vant from 'vant';
 import 'vant/lib/index.css';
-
 Vue.use(Vant);
+
+
+import MintUI from 'mint-ui'
+import 'mint-ui/lib/style.css'
+Vue.use(MintUI)
+
 /**
  * 事件的发生顺序: touchstart---touchmove---touchend,大约过300ms触发click事件，用来判断是否有双击事件
  * 在混合使用touch与click时，会导致点击穿透！

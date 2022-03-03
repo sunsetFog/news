@@ -99,6 +99,7 @@ export default{
                     {key: lodash.uniqueId('second_'), label: 'js例子', path: '/home/managementCenter/javaScript/jsDemo', icon: require('@static/picture/center/wanjia.png'), effect:[]},
                     {key: lodash.uniqueId('second_'), label: '赋值-浅拷贝-深拷贝', path: '/home/managementCenter/javaScript/research', icon: require('@static/picture/center/wanjia.png'), effect:[]},
                     {key: lodash.uniqueId('second_'), label: 'url_base64_blob', path: '/home/managementCenter/javaScript/url_base64_blob', icon: require('@static/picture/center/wanjia.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: '时间日期', path: '/home/managementCenter/javaScript/isDate', icon: require('@static/picture/center/wanjia.png'), effect:[]},
                 ]},
                 {key: lodash.uniqueId('first_'), label: 'vue知识点', path: '', icon: require('@static/picture/center/pai.png'), effect:[
                     {key: lodash.uniqueId('second_'), label: 'vue指令', path: '/home/managementCenter/knowledge/v_tag', icon: require('@static/picture/center/qipai.png'), effect:[]},

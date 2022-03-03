@@ -4,7 +4,7 @@
             url、base64、blob相互转换方法
             https://zhuanlan.zhihu.com/p/57700185
 
-            file转base64图片 和 file转blob图片：在这项目的上传图片里
+            file互转base64图片 和 file转blob图片：在这项目的上传图片里
          -->
     </section>
 </template>
@@ -101,6 +101,25 @@ export default {
                     reject(new Error('blobToBase64 error'));
                 };
             });
+        },
+        /*
+            Vue 读取后台二进制文件流转为图片显示
+            接口返回文件流
+         */
+        wenjianliuImg() {
+            this.$http({
+            url: '请求的接口',
+            method: 'get',   // get请求，post改为post
+            responseType: 'blob',
+            params: {   // 这是提交的参数，如果是post 的就是 data
+                id: '123456',
+                index: 'img'
+            }
+            }).then(({ data }) => {
+                let blob = new Blob([data]);   // 返回的文件流数据
+                let url = window.URL.createObjectURL(blob);  // 将他转化为路径
+                let mapSrc = url  // 将转换出来的路径赋值给变量，其实和上一步结合就可以
+            })
         }
     }
 }

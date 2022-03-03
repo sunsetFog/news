@@ -5,7 +5,7 @@
          -->
         <el-dialog
             title="头像裁切"
-            :visible.sync="dialogVisible"
+            :visible.sync="dialogPortrait"
             width="1000px">
                 <div class="isContent">
                     <vueCropper
@@ -40,7 +40,7 @@
                 </div>
 
                 <div slot="footer" class="dialog-footer">
-                    <el-button @click="dialogVisible = false">取 消</el-button>
+                    <el-button @click="dialogPortrait = false">取 消</el-button>
                     <el-button type="primary" @click="isSure">确 定</el-button>
                 </div>
         </el-dialog>
@@ -82,7 +82,7 @@ export default {
                 token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhcHAiLCJuYmYiOjE2NDU0MjQ5ODYsImRhdGEiOiJ7XCJjYXJkUGhvdG9Qb3NpdGl2ZVwiOlwiXCIsXCJjYXJkUGhvdG9SZXZlcnNlXCI6XCJcIixcImNoYW5uZWxcIjowLFwiY3JlYXRlQnlcIjpcInN5c1wiLFwiY3JlYXRlVGltZVwiOjE2NDQxMjk2OTQzMjAsXCJkZWxldGVkXCI6MCxcImZha2VMaWtlXCI6MCxcImZvcmJpZGRlblN0YXRlXCI6MSxcImhvdEFuY2hvclwiOjAsXCJob3ROdW1cIjowLFwiaWRcIjpcIjBhNTUwNzhkYzJiYTRmM2NhYzEwNTM3ZGE5ZGJlYzk0XCIsXCJpZENhcmRcIjpcIlwiLFwiaW52aXRlQ29kZVwiOlwiejY4NDIzN1wiLFwiaXBcIjpcIjk0LjIwNC44Ny4xNzRcIixcImxhc3RMb2dpblRpbWVcIjoxNjQ1NDI0OTg2OTQyLFwibGV2ZWxcIjoxLFwib25MaW5lXCI6MSxcInBhc3N3b3JkXCI6XCJiYjIxYzVhMGMxMWUyNmQ5NWQ2YzM1MzlhYjU0OGY2NVwiLFwicGhvbmVcIjpcIjE5ODA1MDYwMDAxXCIsXCJyb2xlXCI6MCxcInNleFwiOjAsXCJzb3J0XCI6MCxcInR5cGVcIjowLFwidXBkYXRlVGltZVwiOjE2NDUxMDYzNTMwNzksXCJ1c2VyQ29kZVwiOjEwMTY3MixcInVzZXJJY29uXCI6XCJwaG90b18yMDIxLTA0LTE2XzEwLTM5LTA3LmpwZ1wiLFwidXNlck5hbWVcIjpcIjE5OCoqKiowMDAxXCJ9IiwiaXNzIjoiQ2hhdC1BUEkiLCJleHAiOjE2NzY5NjA5ODYsImlhdCI6MTY0NTQyNDk4NiwianRpIjoiOTI2M2JiNDItNDNhNy00ZDc5LWI3M2MtZGI4NjFjNzI5NjI3In0.Dc_BA2o0Qn7PA92zHBsa80933yTgIHXmE7vQMun9BWU"
             },
             imageUrl: "",
-            dialogVisible: false
+            dialogPortrait: false
         }
     },
     methods: {
@@ -102,8 +102,10 @@ export default {
             console.log('--file--', JSON.stringify(file.raw))
 
             this.fileToBase64(file.raw).then(data => {
-                this.dialogVisible = true;
+                this.dialogPortrait = true;
                 this.option.img = data;
+                this.base64ToFile(data, file.raw.name)
+                // this.base64Toerjinzhi(data)
                 console.log('---fileToBase64--', data);
             })
             
@@ -116,6 +118,7 @@ export default {
             }
             return true;
         },
+        // file 转 base64
         fileToBase64(data) {
             return new Promise((resolve, reject) => {
                 const fileReader = new FileReader();
@@ -134,7 +137,7 @@ export default {
                 // do something
                 console.log('do something', data);
                 this.imageUrl = data;
-                this.dialogVisible = false;
+                this.dialogPortrait = false;
             })
         },
         rotateLeft() {
@@ -142,7 +145,57 @@ export default {
         },
         rotateRight() {
             this.$refs.cropper.rotateRight();
-        }
+        },
+        // base64转file
+        base64ToFile(urlData, fileName) {
+            let arr = urlData.split(',');
+            let mime = arr[0].match(/:(.*?);/)[1];
+            let bytes = atob(arr[1]); // 解码base64
+            let n = bytes.length
+            let ia = new Uint8Array(n);
+            while (n--) {
+                ia[n] = bytes.charCodeAt(n);
+            }
+            let fileImg = new File([ia], fileName, { type: mime })
+            console.log('--fileImg--', fileImg)
+            return fileImg;
+        },
+        //base64  转  二进制数组
+        base64Toerjinzhi(res) {
+           
+            var bytes = window.atob(res.split(',')[1]);    //去掉url的头，并转换为byte
+
+            //处理异常,将ascii码小于0的转换为大于0
+            var ab = new ArrayBuffer(bytes.length);
+            var ia = new Uint8Array(ab);
+            for (var i = 0; i < bytes.length; i++) {
+              ia[i] = bytes.charCodeAt(i);
+            }
+            // this.downFile(ia)
+            console.log("ia", ia)
+        },
+        // 上传图片接口
+        uploadPicture (fileImg) {
+            let params = {
+                file: fileImg
+            }
+            // this.$apihttp('post', '/file/fileUpload', param)
+            this.$apihttp({
+                url: 'http://192.168.1.103:2021/excuse/file/fileUpload',
+                method: 'post',
+                params: params
+            })
+            .then((res) => {
+                if (res.code === 200) {
+                console.log('---tutu---', res)
+                } else {
+                this.$message({
+                    type: 'warning',
+                    message: res.msg
+                })
+                }
+            })
+        },
     }
 }
 </script>

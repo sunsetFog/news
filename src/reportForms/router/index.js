@@ -25,6 +25,7 @@ export default new Router({
     { path: '/priceManage/priceManage', name: 'priceManage', meta: { title: '价格地图',key: 1}, component: resolve => require(['@/reportForms/pages/priceManage/priceManage'], resolve) },
     { path: '/priceManage/PriceAnalysis', name: 'PriceAnalysis', meta: { title: '价格详情',key: 1}, component: resolve => require(['@/reportForms/pages/priceManage/PriceAnalysis'], resolve) },
     { path: '/receivable/AR', name: 'AR', meta: { title: '应收账款',key: 1}, component: resolve => require(['@/reportForms/pages/receivable/AR'], resolve) },
-    { path: '/luckDraw', name: 'luckDraw', meta: { title: '抽奖活动',key: 1}, component: resolve => require(['@/reportForms/pages/luckDraw/index'], resolve) }
+    { path: '/luckDraw', name: 'luckDraw', meta: { title: '抽奖活动',key: 1}, component: resolve => require(['@/reportForms/pages/luckDraw/index'], resolve) },
+    { path: '/loadmore', name: 'loadmore', meta: { title: '下拉刷新',key: 1}, component: resolve => require(['@/reportForms/pages/loadmore/index'], resolve) }
   ]
 })

@@ -112,8 +112,11 @@ export default {
     beforeDestroy(){//销毁前-用于该页关闭后执行---用下面一个
 
     },
-    destroyed() {//销毁后-用于该页关闭后执行---常用
-
+    destroyed() {
+        /*
+            销毁后-用于该页关闭后执行---常用
+            跳转后执行，this.$route路由参数找不到的，但this指向没变，能拿到data数据
+        */
     },
     activated(){//创建  keep-alive组件缓存，请看home.vue
         console.log('---activated---');
