@@ -50,7 +50,7 @@ https://www.jianshu.com/p/2823f27f9dd7
 版本问题
 
 
-抽奖：https://100px.net/
+新抽奖：https://100px.net/
 
 vue实现九宫格抽奖
 https://www.jq22.com/jquery-info22357
@@ -92,9 +92,6 @@ https://www.jianshu.com/p/775fb3784692
 锚点
 yarn下载与lock
 
-class类
-less,scss
-
 
 
 
@@ -114,8 +111,15 @@ svn-- 还原
 
 下拉图片懒加载
 移动端真机调试
-悬浮图片
 
 
+
+
+div高度占满整个屏幕
+position: absolute;
+left: 0;
+top: 0;
+bottom: 0;
+right: 0;
 
 

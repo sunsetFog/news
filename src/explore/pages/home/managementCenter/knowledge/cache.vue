@@ -18,9 +18,11 @@ export default {
     methods: {
         //浏览器开启都存在，关闭就删除   运行在服务器端
         sessionStorage(){
-            sessionStorage.setItem('test_session',JSON.stringify(['2021']));//设置    参数2要是数组或对象，请转化成字符串
-            let wa = sessionStorage.getItem('test_session');//获取
-            let te = JSON.parse(wa); // 字符串再转回数组或对象
+            // ---要点要点---
+            //设置    参数2要是数组或对象，请转化成字符串
+            sessionStorage.setItem('test_session',JSON.stringify(['2021']));
+            //获取  字符串再转回数组或对象
+            let te = JSON.parse(sessionStorage.getItem('test_session'));
             // sessionStorage.removeItem('test_session');//删除
         },
         //永久，除非浏览器上手动删除

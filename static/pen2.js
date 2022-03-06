@@ -23,17 +23,7 @@ menuId: 11120783
     
 
     
-    
-    //Vue实例化注册自定义过滤器
-    
-    
-    import '@/explore/ierp/index' // 加载ierp应用初始化文件
-    import './styles/common.css'
-    import './router'
-    import './store'
-    import './lang'
-    import * as filters from './filters'
-    import * as directives from '@/explore/ierp/directive/iedi'
+
     
 
     

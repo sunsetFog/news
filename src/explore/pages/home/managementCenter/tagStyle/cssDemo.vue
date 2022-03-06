@@ -14,11 +14,18 @@
             </el-scrollbar>
         </div>
         <h3>清除浮动</h3>
+        <!-- 
+            为啥要清楚浮动？
+            因为float的浮动无法撑起父级元素宽高
+           
+            解决办法1：在最后一个li元素后面加上一个div，加上clear: both;样式
+            解决办法2：父级元素加样式overflow: hidden;
+            解决办法3：li元素加样式display:inline-block;
+         -->
         <div class="pen-float">
-            <div class="pen-left">左浮动盒子</div>
-            <div class="pen-right">右浮动盒子</div>
+            <li v-for="(item,index) in ['a','b','c','d','e']"></li>
             <!-- 第一种 -->
-            <div class="pen-clear"></div>
+            <!-- <div style="clear: both;"></div> -->
         </div>
         <h3>px,rem,em</h3>
         <!-- 
@@ -91,22 +98,22 @@ export default {
 
     .pen-float {
         width: 100%;
-        height: 100px;
-        -overflow: hidden; // 第二种给父元素这个
-        .pen-left {
-            width: 40%;
-            height: 100px;
+        -height: 100px; // 别写死高度，因为li元素数量是动态的，数量不限
+        overflow: hidden; // 第二种给父元素这个
+        background: #F0F3F5;
+        li {
+            width: 48%;
+            height: 50px;
+            border-radius: 5px;
+            margin-bottom: 6px;
+            background: #FFFFFF;
+            list-style: none;
+        }
+        li:nth-of-type(odd) { // 奇数行
             float: left;
-            background: royalblue;
         }
-        .pen-right {
-            width: 60%;
-            height: 100px;
+        li:nth-of-type(even) { // 偶数行
             float: right;
-            background: salmon;
-        }
-        .pen-clear {
-            clear: both;
         }
     }
     .pen-cat {

@@ -150,7 +150,8 @@ export default{
                     {key: lodash.uniqueId('second_'), label: '音频', path: '/home/managementCenter/effect/isAudio', icon: require('@static/picture/center/qipai.png'), effect:[]},
                     {key: lodash.uniqueId('second_'), label: '图片预览', path: '/home/managementCenter/effect/previewPictures', icon: require('@static/picture/center/qipai.png'), effect:[]},
                     {key: lodash.uniqueId('second_'), label: '表单校验', path: '/home/managementCenter/effect/inputeCheck', icon: require('@static/picture/center/qipai.png'), effect:[]},
-                    {key: lodash.uniqueId('second_'), label: '头像裁切上传', path: '/home/managementCenter/effect/customAvatar', icon: require('@static/picture/center/qipai.png'), effect:[]}
+                    {key: lodash.uniqueId('second_'), label: '头像裁切上传', path: '/home/managementCenter/effect/customAvatar', icon: require('@static/picture/center/qipai.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: '悬浮图片', path: '/home/managementCenter/effect/suspension', icon: require('@static/picture/center/qipai.png'), effect:[]}
                 ]},
                 {key: lodash.uniqueId('first_'), label: '项目报表', path: '', icon: require('@static/picture/center/tuiguang.png'), effect:[
                     {key: lodash.uniqueId('second_'), label: 'echart图表', path: '/home/managementCenter/reportForm/demo1', icon: require('@static/picture/center/daili.png'), effect:[]},
