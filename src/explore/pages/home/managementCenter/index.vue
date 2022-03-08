@@ -121,7 +121,6 @@ export default{
                     {key: lodash.uniqueId('second_'), label: 'axios配置', path: '/home/managementCenter/knowledge/axios', icon: require('@static/picture/center/caiwu.png'), effect:[]},
                     {key: lodash.uniqueId('second_'), label: '图片相对路径', path: '/home/managementCenter/knowledge/relativePath', icon: require('@static/picture/center/caiwu.png'), effect:[]},
                     {key: lodash.uniqueId('second_'), label: 'mixins混合', path: '/home/managementCenter/knowledge/vueMixin', icon: require('@static/picture/center/caiwu.png'), effect:[]},
-                    {key: lodash.uniqueId('second_'), label: 'packageJson说明', path: '/packageTable', icon: require('@static/picture/center/caiwu.png'), effect:[]},
                     {key: lodash.uniqueId('second_'), label: '动态渲染组件', path: '/home/managementCenter/knowledge/vueExtend', icon: require('@static/picture/center/caiwu.png'), effect:[]},
                     {key: lodash.uniqueId('second_'), label: 'less预处理样式', path: '/home/managementCenter/knowledge/isLess', icon: require('@static/picture/center/caiwu.png'), effect:[]},
                     {key: lodash.uniqueId('second_'), label: 'scss预处理样式', path: '/home/managementCenter/knowledge/isSassScss', icon: require('@static/picture/center/caiwu.png'), effect:[]}
@@ -150,7 +149,7 @@ export default{
                     {key: lodash.uniqueId('second_'), label: '音频', path: '/home/managementCenter/effect/isAudio', icon: require('@static/picture/center/qipai.png'), effect:[]},
                     {key: lodash.uniqueId('second_'), label: '图片预览', path: '/home/managementCenter/effect/previewPictures', icon: require('@static/picture/center/qipai.png'), effect:[]},
                     {key: lodash.uniqueId('second_'), label: '表单校验', path: '/home/managementCenter/effect/inputeCheck', icon: require('@static/picture/center/qipai.png'), effect:[]},
-                    {key: lodash.uniqueId('second_'), label: '头像裁切上传', path: '/home/managementCenter/effect/customAvatar', icon: require('@static/picture/center/qipai.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: '头像上传裁切', path: '/home/managementCenter/effect/customAvatar', icon: require('@static/picture/center/qipai.png'), effect:[]},
                     {key: lodash.uniqueId('second_'), label: '悬浮图片', path: '/home/managementCenter/effect/suspension', icon: require('@static/picture/center/qipai.png'), effect:[]}
                 ]},
                 {key: lodash.uniqueId('first_'), label: '项目报表', path: '', icon: require('@static/picture/center/tuiguang.png'), effect:[
@@ -164,7 +163,7 @@ export default{
                     {key: lodash.uniqueId('second_'), label: 'base64解密', path: '/home/managementCenter/expand/base64', icon: require('@static/picture/center/caiwu.png'), effect:[]},
                 ]},
                 {key: lodash.uniqueId('first_'), label: '面试要谈', path: '', icon: require('@static/picture/center/tuandui.png'), effect:[
-                    {key: lodash.uniqueId('second_'), label: '要点1', path: '/home/managementCenter/talk/talk1', icon: require('@static/picture/center/tuiguang.png'), effect:[]},
+                    {key: lodash.uniqueId('second_'), label: '面试要点1', path: '/home/managementCenter/talk/talk1', icon: require('@static/picture/center/tuiguang.png'), effect:[]},
                 ]},
             ],
         }

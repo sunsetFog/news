@@ -1,6 +1,13 @@
 <template>
 <section id="transition">
-	<!--transition 的封装组件-->
+	<!--
+		transition动画
+		
+		<transition name="fade">
+			不是组transition标签，子标签只能一个
+			<div></div>
+		</transition>
+	-->
 	<!--https://cn.vuejs.org/v2/guide/transitions.html-->
 	<div id="demo">
 			<el-button v-on:click="show = !show">Toggle</el-button>

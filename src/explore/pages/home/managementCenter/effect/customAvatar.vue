@@ -30,11 +30,11 @@
 
                     <div class="magic-box">
                         <el-button type="primary" @click="rotateLeft">
-                            <span style="font-weight: 600;">↺</span>
+                            ↺
                         </el-button>
 
                         <el-button type="primary" @click="rotateRight">
-                            <span style="font-weight: 600;">↻</span>
+                            ↻
                         </el-button>
                     </div>
                 </div>
@@ -105,6 +105,9 @@ export default {
                 this.dialogPortrait = true;
                 this.option.img = data;
                 this.base64ToFile(data, file.raw.name)
+                this.$nextTick(function() {
+                    this.$refs.cropper.startCrop();
+                })
                 // this.base64Toerjinzhi(data)
                 console.log('---fileToBase64--', data);
             })
@@ -222,6 +225,7 @@ export default {
             width: 100%;
             height: 50px;
             margin-top: 20px;
+            font-weight: 600;
         }
     }
     

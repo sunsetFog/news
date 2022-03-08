@@ -89,7 +89,7 @@ export default{
     methods: {
         fishMeans(){
             // this.$router.push({path: '/home/managementCenter/crux'});
-            // var value = "赌圣<font color='#23f0fd'> 机器人2828 </font>出手不凡，在<font color='#ffe400'> 百家乐彩票场 </font>赢得<font color='#070707'> 11619 </font>奖金，大吉大利 今晚吃鸡!";
+            // var value = "赌圣<font color='#23f0fd'> 机器人2828 </font>出手不凡，在<font color='#ffe400'> 百家乐福气场 </font>赢得<font color='#070707'> 11619 </font>奖金，大吉大利 今晚吃鸡!";
             // errorCodeGame.move = value;
         },
         enterTheGame(index,keys){
