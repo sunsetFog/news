@@ -15,7 +15,7 @@ import 'font-awesome/css/font-awesome.min.css';
 
 
 
-import './database/index'; // 不能用if动态加载js
+import '@/explore/database/index'; // 不能用if动态加载js
 // if (true) {
 //   require('./database/index') // 可以动态加载，不报错
 // }
@@ -28,9 +28,9 @@ Vue.use(ElementUI);
 
 console.log('process.env==', process.env);
 
-import means from './public/index.js';
+import means from '@/explore/public/index.js';
 Vue.prototype.$means = means;
-import store from './vuex/index.js';
+import store from '@/explore/vuex/index.js';
 // Vue.prototype.$store = store;
 
 // https://www.cnblogs.com/zhaojunhao/p/9622299.html
@@ -53,7 +53,7 @@ Viewer.setDefaults({
 
 
 
-/* 全局注册子组件 */
+/* 全局注册子组件：用的不多就局部注册，全局注册会消耗性能 */
 import cloudEchart from '@/explore/components/echarts/cloudEchart.vue'
 import recharge from '@/explore/components/recharge.vue';
 import withdrawal from '@/explore/components/withdrawal.vue';
@@ -112,8 +112,8 @@ Vue.filter("numPercent", function(value) {
 用法:{{num | numPercent}}
 */
 
-import penCache from './vuex/index.js';
-import penMeans from './public/index.js';
+import penCache from '@/explore/vuex/index.js';
+import penMeans from '@/explore/public/index.js';
 
 //vuex 中保存错误日志数组,展示table里
 if (process.env.NODE_ENV === 'production') {
@@ -129,7 +129,8 @@ if (process.env.NODE_ENV === 'production') {
     })
   }
 }
-
+penCache.dispatch('routerApple')
+console.log('--end00--')
 import NProgress from 'nprogress'; // 转圈进度条，路由变化触发
 import 'nprogress/nprogress.css'; // 加载转圈进度条样式
 // 路由拦截（路由守卫）   用来拦截改变跳转页
