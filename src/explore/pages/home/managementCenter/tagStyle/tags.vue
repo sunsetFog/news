@@ -9,8 +9,13 @@
         <p>正文1</p>
         <span>正文span1</span>
 
-        <hr><!-- 3.图片img -->
-        <img src="img/20160923162150990653.jpg" title="这是图片" alt="哎呀，图片加载失败"/>
+        <hr>
+        <!-- 3.图片img
+            title 鼠标悬浮显示文字
+            alt="哎呀，图片加载失败" 图像无法显示时的替代文本
+            @error="imgDefault" 图片加载错误时显示默认图片
+         -->
+        <img :src="imgUrl ? imgUrl : '111'" title="这是图片" alt="哎呀，图片加载失败" @error="imgDefault"/>
 
         <hr><!-- 4.链接a -->
         <a href="http://www.jd.com" target="_blank">跳转京东商城</a>
@@ -112,7 +117,17 @@
 
 <script>
 export default {
-    name: "tags"
+    name: "tags",
+    data() {
+        return {
+            imgUrl: null
+        }
+    },
+    methods: {
+        imgDefault(e) {
+            e.target.src = require('@static/reportForms/image/AR.png')
+        }
+    }
 }
 </script>
 

@@ -1,9 +1,6 @@
 <template>
     <section id="cssDemo2">
-        <div class="cartoon">
-            <div class="box1"></div>
-            <div class="box2"></div>
-        </div>
+
 
           <el-table
     :data="tableData"
@@ -107,29 +104,6 @@
 #cssDemo2 {
     width: 100%;
     min-height: 100%;
-    .cartoon {
-        width: 100%;
-        height: 200px;
-        background: yellowgreen;
-        position: relative;
-        overflow: hidden;
-        overflow-x: scroll;
-        .box1 {
-            width: 1200px;
-            height: 100%;
-            background: tomato;
-        }
-        .box2 {
-            width: 80px;
-            height: 100%;
-            background: aqua;
-            position: absolute;
-            left: auto;
-            -bottom: 0px;
-            top: 0px;
-            right: 0px;
-        }
-    }
 }
 </style>
 

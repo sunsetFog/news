@@ -43,7 +43,7 @@ const login = {
         routerApple({state, commit, dispatch}, params) {
 
             apiHttp({
-                url: 'http://localhost:8061/sky/newsRouterList',
+                url: 'http://localhost:8062/sky/newsRouterList',
                 method: 'get',
                 params: {}
             }).then((res) => {

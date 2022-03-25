@@ -53,8 +53,8 @@ export default {
 
             let that = this;
             let json = {
-                id: 156,
-                goodsName: "苹果"
+                pageNum: 1,
+                pageSize: 2
             }
             // that.$apihttp({
             //     url: 'http://192.168.1.102:8081/agentApi/sys/login',
@@ -66,9 +66,9 @@ export default {
             //     console.log('error',err);
             // })
             that.$apihttp({
-                url: 'http://localhost:8066/sky/xiaoyue/apple',
-                method: 'get',
-                params: json
+                url: 'http://localhost:8064/sky/shop/list',
+                method: 'post',
+                data: json
             }).then((res) => {
                 console.log('H-token',res);
             }).catch((err)=>{

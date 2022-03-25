@@ -2,10 +2,11 @@
     <section id="upload1">
         <div>
             <el-upload
-                name="upload"
+                name="file"
                 class="avatar-uploader"
-                action="https://jsonplaceholder.typicode.com/posts/"
+                action="http://localhost:8062/sky/shop/upload"
                 :show-file-list="true"
+                :data="{'id': 1}"
                 :on-success="handleAvatarSuccess"
                 :before-upload="beforeAvatarUpload"
                 accept="image/jpeg,image/jpg,image/png"
@@ -14,6 +15,8 @@
                     <i v-else class="el-icon-plus avatar-uploader-icon"></i>
             </el-upload>
             <!-- 
+                action="https://jsonplaceholder.typicode.com/posts/"
+                action="http://localhost:8063/sky/file/upload"
 				action 后台请求url 
 				name="upload" 后台绑定的节点，必须有
 				:data="{'attach':'upload'}" 传参给后台，要遍历必须传，不遍历传也没事
@@ -49,15 +52,15 @@ export default {
         },
         //上传前设置
         beforeAvatarUpload(file) {
-            const isPNG = (file.type === 'image/png' || file.type === 'image/jpeg');
-            const isLt2M = file.size / 1024 / 1024 < 2;
-            if (!isPNG) {
-                this.$message.error('上传头像图片只能是 JPG或PNG 格式!');
-            }
-            if (!isLt2M) {
-                this.$message.error('上传头像图片大小不能超过 2MB!');
-            }
-            return isPNG && isLt2M;
+            // const isPNG = (file.type === 'image/png' || file.type === 'image/jpeg');
+            // const isLt2M = file.size / 1024 / 1024 < 2;
+            // if (!isPNG) {
+            //     this.$message.error('上传头像图片只能是 JPG或PNG 格式!');
+            // }
+            // if (!isLt2M) {
+            //     this.$message.error('上传头像图片大小不能超过 2MB!');
+            // }
+            // return isPNG && isLt2M;
         },
         // file转base64图片
         fileToBase64(data) {
