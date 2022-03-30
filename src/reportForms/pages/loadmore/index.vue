@@ -8,8 +8,9 @@
             :finished="finished"
             finished-text="没有更多了"
             @load="onLoad"
+            :immediate-check="false"
         >
-            <li v-for="item in stores">{{ item }}</li>
+            <li v-for="item in stores">{{ item.name }}</li>
         </van-list>
     </ul>
     
@@ -26,36 +27,53 @@ export default {
             pageNum: 1 // 第几页
         }
     },
+    created() {
+        this.getStores()
+    },
     methods:{
+        /*
+            vant List列表使用踩坑总结：https://www.cnblogs.com/willsoo/p/14784129.html
+            list初始化后会加载一次onLoad事件，但是当第一次不足以填满一个屏幕时候，会一直加载知道填满一屏幕
+            :immediate-check="false" 属性关闭初始化调用onLoad
+         */
         onLoad () {
             console.log('--onLoad--')
-            this.pageNum += 1
             this.getStores()
         },
         getStores() {
-                var that = this;
-                // var json = {page: this.pageNum}//传给后台的页数
-                // $http.get('plugin.get-store-list-to-page', json).then((response) => {
-                        var response = {list: [1,2,3,4,5,6,7,8,9,10],
-                                        total: 20,
-                                        current_page: 1,
-                                        total_page: 2
-                                        }//模拟的后台数据
+                let that = this;
+                let params = {
+                    pageNum: that.pageNum,
+                    pageSize: 3
+                }
+
+                that.$apihttp({
+                    url: process.env.core_url + '/sky/shop/list',
+                    method: 'post',
+                    data: params
+                }).then((res) => {
+                        this.pageNum += 1
+                        let response = res.data;
+                        // let response = {content: [1,2,3,4,5,6,7,8,9,10],
+                        //                 totalSize: 20,
+                        //                 pageNum: 1,
+                        //                 totalPages: 2
+                        //                 }//模拟的后台数据
 
                         that.loading = false;// 停止加载
                         /*
                             第一页赋值（或清空数组），以下页拼接数组
                          */
-                        that.stores = response.current_page == 1 ? response.list : that.stores.concat(response.list);
+                        that.stores = response.pageNum == 1 ? response.content : that.stores.concat(response.content);
                         /*
                             最后一页和没数据，不再触发 load 事件
                         */
-						if (response.current_page == response.total_page || response.total == 0) {
+						if (response.pageNum == response.totalPages || response.totalSize == 0) {
 							that.finished = true;
 						}
-                // }), (err) => {
-                //      console.log(err);
-                // }
+                }).catch((err)=>{
+                     console.log('error',err);
+                })
         }
     }
 }
@@ -64,19 +82,20 @@ export default {
 <style lang="less" scoped>
 #loadmore{
     width: 100%;
-    height: 700px;
     .task-box {
         width: 100%;
-        height: 22.1875rem;
-        padding: 0.625rem 0.9375rem 0rem 0.9375rem;
+        height: 300px;
+        padding: 10px 15px 0px 15px;
         box-sizing: border-box;
         overflow-y: auto;
+        border: 1px solid #fff;
         li {
             width: 100%;
-            height: 4.125rem;
+            height: 120px;
             background: #30364E;
-            border-radius: 0.625rem;
+            border-radius: 10px;
             color: #fff;
+            margin-bottom: 10px;
         }
     }
 }
