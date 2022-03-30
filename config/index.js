@@ -14,13 +14,13 @@ module.exports = {
     // npm install http-proxy-middleware --save 使用代理解决跨域
     // 这方法还要配置生产环境域名
     // proxyTable: {// http二次封装，baseURL: 'http://water0s.com/web',
-    //   '/excuse': {
-    //       target: 'http://zbqd.zb335.com', // 接口域名
+    //   '/sky': {
+    //       target: 'http://localhost:8064', // 接口域名
     //       changeOrigin: true, // 允许跨域(创建本地虚拟服务端，接受了域名，就请求后端服务器)
     //       secure: true, // 设置支持https协议的代理
     //       // ws: true, //如果要代理 websockets，配置这个参数
     //       pathRewrite: {
-    //       '^/excuse': '/excuse' // 重写接口
+    //       '^/sky': '/sky' // 重写接口
     //       }
     //   }
     // },

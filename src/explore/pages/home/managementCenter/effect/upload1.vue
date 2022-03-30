@@ -4,7 +4,7 @@
             <el-upload
                 name="file"
                 class="avatar-uploader"
-                action="http://localhost:8062/sky/shop/upload"
+                :action="process.env.core_url + '/sky/shop/upload'"
                 :show-file-list="true"
                 :data="{'id': 1}"
                 :on-success="handleAvatarSuccess"

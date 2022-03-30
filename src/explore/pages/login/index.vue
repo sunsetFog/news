@@ -141,35 +141,59 @@ export default{
             }
         },
         signIn(res){
-                var that = this;
-                if(that.account_number==''&&that.password_number==''){
-                    that.$message.error('请输入账号和密码!');
-                    return;
-                }else if(that.account_number == ''){
-                    that.$message.error('请输入账号!');
-                    return;
-                }else if(that.password_number == ''){
-                    that.$message.error('请输入密码!');
-                    return;
-                }
-                if(refreshWeb.state=='init'){
-                    that.$means.amateur_login(that.account_number,that.password_number,window.location.host,function() { 
-                        that.$store.dispatch('getPlayerInfo',that.$means.amateur_getPlayer());
-                        if(that.remember_checked==true){
-                            that.$cookies.set("account",that.account_number,"1m");
-                            that.$cookies.set("password",that.password_number,"1m");
-                        }else{
-                            that.$cookies.remove("account");
-                            that.$cookies.remove("password");
-                        }
-                        sessionStorage.setItem('account_number',that.account_number);
-                        sessionStorage.setItem('password_number',that.password_number);
+            var that = this;
+            if(that.account_number==''&&that.password_number==''){
+                that.$message.error('请输入账号和密码!');
+                return;
+            }else if(that.account_number == ''){
+                that.$message.error('请输入账号!');
+                return;
+            }else if(that.password_number == ''){
+                that.$message.error('请输入密码!');
+                return;
+            }
+
+            let params = {
+                username: that.account_number,
+                password: that.password_number
+            }
+
+            that.$apihttp({
+                url: process.env.core_url + '/sky/user/login',
+                method: 'post',
+                params: params
+            }).then((res) => {
+                console.log('--login--', res);
+                if(res.code == "200") {
+                    that.$store.dispatch('routerApple').then(function(value){
+                        console.log("--then结束--", value);
+                        that.$router.addRoutes(value);
+                        that.$cookies.set("token", res.data.token, "1d");
                         that.$router.push({path: '/home'});
-                    });
-                }else{
-                    that.$message.error('加载游戏中,稍后为你登陆操作！');
-                    sessionStorage.setItem('sign_in','up');
-                }
+                    })
+                } 
+            }).catch((err)=>{
+                console.log('error',err);
+            })
+
+            // if(refreshWeb.state=='init'){
+            //     that.$means.amateur_login(that.account_number,that.password_number,window.location.host,function() { 
+            //         that.$store.dispatch('getPlayerInfo',that.$means.amateur_getPlayer());
+            //         if(that.remember_checked==true){
+            //             that.$cookies.set("account",that.account_number,"1m");
+            //             that.$cookies.set("password",that.password_number,"1m");
+            //         }else{
+            //             that.$cookies.remove("account");
+            //             that.$cookies.remove("password");
+            //         }
+            //         sessionStorage.setItem('account_number',that.account_number);
+            //         sessionStorage.setItem('password_number',that.password_number);
+            //         that.$router.push({path: '/home'});
+            //     });
+            // }else{
+            //     that.$message.error('加载游戏中,稍后为你登陆操作！');
+            //     sessionStorage.setItem('sign_in','up');
+            // }
         },
         rememberMeans(){
             if(this.remember_checked==false){

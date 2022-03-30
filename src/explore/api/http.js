@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { Message, MessageBox } from 'element-ui'
 import router from '@/explore/router' // 用于路由跳转 router.push({path: '/login'})
-import means from '../public/modular/accumulation01'
+import VueCookies from 'vue-cookies'
 
 
 // 创建axios实例
@@ -21,7 +21,7 @@ service.interceptors.request.use(config => {
     config.cancelToken = axios.CancelToken.source().token;// 取消重复请求
     // header里存token参数,每一次服务器收到请求，都要验证有效期，有效期为一天(token可以判断登陆的状态,不能存中文)
     // token的获取：1.访问链接上的参数 2.浏览器缓存里 3.直接在登录接口获取
-    config.headers['tgticket'] = means.getQuery('tgticket');
+    config.headers['token'] = VueCookies.get("token");
     return config
 }, error => {
     Promise.reject(error)

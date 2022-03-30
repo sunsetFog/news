@@ -129,13 +129,24 @@ if (process.env.NODE_ENV === 'production') {
     })
   }
 }
-penCache.dispatch('routerApple')
+
 console.log('--end00--')
+
 import NProgress from 'nprogress'; // 转圈进度条，路由变化触发
 import 'nprogress/nprogress.css'; // 加载转圈进度条样式
 // 路由拦截（路由守卫）   用来拦截改变跳转页
 router.beforeEach((to, from, next) => {
     document.title = to.meta.title;
+    // 刷新执行，且不是登录页，且要有token
+    if (from.path == '/' && to.path != '/login' && VueCookies.get("token")) {
+      penCache.dispatch('routerApple').then(function(value){
+        console.log("--then结束--", value);
+        router.addRoutes(value);
+      })
+    }
+
+
+
     // if (to.path == '/login') { // 登录页面，删除token缓存
     //     sessionStorage.removeItem('token');
     // }

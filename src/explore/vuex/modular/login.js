@@ -1,6 +1,5 @@
 import apiHttp from '@/explore/api/http.js';
 import lodash from 'lodash'
-import router from '@/explore/router'
 
 function routerOptions(item) {
     // console.log('--选项--', item)
@@ -40,10 +39,11 @@ const login = {
         menuList: state => state.menuList
     },
     actions: {
-        routerApple({state, commit, dispatch}, params) {
+        async routerApple({state, commit, dispatch}, params) {
+            console.log("--routerApple-1-");
 
-            apiHttp({
-                url: 'http://localhost:8062/sky/newsRouterList',
+            await apiHttp({
+                url: process.env.core_url + '/sky/newsRouterList',
                 method: 'get',
                 params: {}
             }).then((res) => {
@@ -54,6 +54,12 @@ const login = {
             }).catch((err)=>{
                 console.log('error',err);
             })
+            console.log("--routerApple-2-");
+
+            return new Promise((resolve) => {
+                console.log("new Promise是同步任务", params);
+                resolve(state.routerList);
+            });
             
         },
         dynamicRouter({state, commit, dispatch}, params) {
@@ -116,7 +122,6 @@ const login = {
             }
             console.log('--routerList--', routerArr)
             state.routerList = routerArr
-            router.addRoutes(routerArr)
         },
         dynamicMenu({state, commit, dispatch}, params) {
             console.log('--dynamicMenu--', params)

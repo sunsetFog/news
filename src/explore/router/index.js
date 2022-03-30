@@ -36,7 +36,7 @@ export default new Router({
       redirect重定：A找B要图片资源，B说C那才有，最后A改找C-------url的path变化了   302
       转发：A找B要图片资源，B没有，B去问C要到了，最后B发给了A------url的path没变  307
     */
-
+   { path: '/login', name: 'Login', meta: { title: '登陆',key: -1}, component: resolve => require(['@/explore/pages/login/index'], resolve) }
 
   ]
 })
