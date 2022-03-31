@@ -2,12 +2,14 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'//引入App.vue
-import iView from 'iview'
-import 'iview/dist/styles/iview.css'
+
 import router from './router'// 引入路由
 import 'babel-polyfill'// 浏览器兼容 IE8
 Vue.config.productionTip = false //生产提示
 // es6Promise .polyfill();
+
+import iView from 'iview'
+import 'iview/dist/styles/iview.css'
 Vue.use(iView);
 
 // font-awesome图标

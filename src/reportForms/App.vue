@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="watermark"></div>
+    <div class="watermark" v-if="$route.path == '/home'"></div>
     <router-view></router-view>
   </div>
 </template>
@@ -32,8 +32,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   font-size: 12px;
-  -color: #2c3e50;
-  color: white;
+  color: #2c3e50;
+  -color: white;
   height: 100%;
   .watermark {
     width: 100%;

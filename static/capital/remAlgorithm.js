@@ -3,6 +3,9 @@
   mixins混合使用
   全局设置：与App.vue混合
   局部设置：与局部vue混合
+  
+  import algorithm from '@/pages/luckyDraw/algorithm.js'
+  mixins: [ algorithm ],
 */
 export default {
     data() {

@@ -16,6 +16,17 @@ Vue.use(ElementUI, {
 
 import store from './vuex/index'
 
+import iView from 'iview'
+import 'iview/dist/styles/iview.css'
+Vue.use(iView);
+
+import Viewer from 'v-viewer'
+import 'viewerjs/dist/viewer.css'
+Vue.use(Viewer)
+Viewer.setDefaults({
+  Options: { 'inline': true, 'button': true, 'navbar': true, 'title': true, 'toolbar': true, 'tooltip': true, 'movable': true, 'zoomable': true, 'rotatable': true, 'scalable': true, 'transition': true, 'fullscreen': true, 'keyboard': true, 'url': 'data-source' }
+})
+
 import './database/index'; // 不能用if动态加载js
 
 import apiHttp from '@/explore/api/http.js';

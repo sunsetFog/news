@@ -270,7 +270,7 @@ export default {
       width: 100%;
       flex: 1;
       padding: 8px 10px 0px 10px;
-      overflow: hidden;
+      overflow: auto;
     }
   }
 }

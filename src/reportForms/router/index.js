@@ -26,6 +26,10 @@ export default new Router({
     { path: '/priceManage/PriceAnalysis', name: 'PriceAnalysis', meta: { title: '价格详情',key: 1}, component: resolve => require(['@/reportForms/pages/priceManage/PriceAnalysis'], resolve) },
     { path: '/receivable/AR', name: 'AR', meta: { title: '应收账款',key: 1}, component: resolve => require(['@/reportForms/pages/receivable/AR'], resolve) },
     { path: '/luckDraw', name: 'luckDraw', meta: { title: '抽奖活动',key: 1}, component: resolve => require(['@/reportForms/pages/luckDraw/index'], resolve) },
-    { path: '/loadmore', name: 'loadmore', meta: { title: '下拉刷新',key: 1}, component: resolve => require(['@/reportForms/pages/loadmore/index'], resolve) }
+    { path: '/luckDraw2', name: 'luckDraw2', meta: { title: '抽奖活动2',key: 1}, component: resolve => require(['@/reportForms/pages/luckDraw/index2'], resolve) },
+    { path: '/loadmore', name: 'loadmore', meta: { title: '下拉刷新',key: 1}, component: resolve => require(['@/reportForms/pages/loadmore/index'], resolve) },
+    { path: '/privacy', name: 'privacy', meta: { title: '隐私政策',key: 1}, component: resolve => require(['@/reportForms/pages/privacy/index'], resolve) },
+    { path: '/searchFor', name: 'searchFor', meta: { title: '搜索页',key: 1}, component: resolve => require(['@/reportForms/pages/searchFor/index'], resolve) },
+    { path: '/customAvatar', name: 'customAvatar', meta: { title: '裁切头像',key: 1}, component: resolve => require(['@/reportForms/pages/customAvatar/index'], resolve) },
   ]
 })

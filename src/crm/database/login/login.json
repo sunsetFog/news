@@ -45,10 +45,19 @@
                     "children": []
                 },
                 {
-                    "id": "4",
+                    "id": "204",
                     "parentId": 0,
                     "title": "多语言翻译",
                     "path": "/home/multilingual/index",
+                    "icon": null,
+                    "type": 1,
+                    "children": []
+                },
+                {
+                    "id": "205",
+                    "parentId": 0,
+                    "title": "活动管理",
+                    "path": "/home/activityCenter/activityCenter",
                     "icon": null,
                     "type": 1,
                     "children": []

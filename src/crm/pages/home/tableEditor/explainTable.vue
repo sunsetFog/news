@@ -262,8 +262,31 @@ export default {
 <style lang="less" scoped>
 section {
     padding: 20px 0px;
+    // table加边框，加圆角
     table {
         margin: 0 auto;
+        width: 100%;
+        border-collapse: collapse;// 合并表格边框，使border不会为2px
+        border-radius: 10px;
+        border-style: hidden;// 消除外边框---为了圆角
+        box-shadow: 0 0 0 1px #ECECEC;// 加阴影替代边框---为了圆角
+        overflow: hidden;
+        th, td { // 设单元格border、padding
+            border: 1px solid #ECECEC;
+            padding: 5px;
+        }
+        thead th {
+            height: 48px;
+            font-weight: 400;
+            font-size: 14px;
+            background: #909399;
+            color: #fff;
+        }
+        tbody td {
+            height: 40px;
+            font-size: 13px;
+            color: #495060;
+        }
     }
 }
 
