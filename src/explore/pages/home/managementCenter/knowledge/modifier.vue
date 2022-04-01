@@ -26,7 +26,10 @@
                 <Button @click="test(2)">capture</Button>
             </div>
         <hr>
-        <!-- 组件事件无效，需要用native才能触发，注意ui组件的使用  -->
+        <!-- 
+            组件事件无效，需要用native才能触发，注意ui组件的使用
+            报错时用：Unable to preventDefault inside passive event listener due to target being treated as passive. See
+        -->
             <!-- <My-component @click.native="shout(3)"></My-component> -->
 
         <!-- prevent 阻止浏览器默认动作 ，相当于原生的event.preventDefault() -->

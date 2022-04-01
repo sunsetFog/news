@@ -31,5 +31,6 @@ export default new Router({
     { path: '/privacy', name: 'privacy', meta: { title: '隐私政策',key: 1}, component: resolve => require(['@/reportForms/pages/privacy/index'], resolve) },
     { path: '/searchFor', name: 'searchFor', meta: { title: '搜索页',key: 1}, component: resolve => require(['@/reportForms/pages/searchFor/index'], resolve) },
     { path: '/customAvatar', name: 'customAvatar', meta: { title: '裁切头像',key: 1}, component: resolve => require(['@/reportForms/pages/customAvatar/index'], resolve) },
+    { path: '/liveBroadcast', name: 'liveBroadcast', meta: { title: '直播间',key: 1}, component: resolve => require(['@/reportForms/pages/liveBroadcast/index'], resolve) },
   ]
 })

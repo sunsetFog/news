@@ -1,5 +1,6 @@
 <template>
     <section id="suspension">
+        <!-- 方法1：  -->
         <div class="portrait-center" @mouseover="mouseover" @mouseleave="mouseleave">
             <div>
                 <img src="@static/reportForms/image/invoice.png"/>
@@ -7,6 +8,12 @@
             <div v-show="show_plus">
                 <i class="el-icon-plus"></i>
             </div>
+        </div>
+
+        <br><br>
+        <!-- 方法2： -->
+        <div class="domineering">
+            <img src="@static/video/play-open.png"/>
         </div>
     </section>
 </template>
@@ -67,6 +74,27 @@ export default {
                 color: #8c939d;
             }
         }
+    }
+
+    .domineering {
+        width: 288px;
+        height: 160px;
+        background-image: url("~@static/video/yujie.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 25px;
+            height: 25px;
+            opacity: 0;
+        }
+    }
+    .domineering:hover img {
+        opacity: 1;
+        transform: scale(2.5);// 放大
+        transition: all 0.25s ease-out;// 过渡特效
     }
 }
 </style>
