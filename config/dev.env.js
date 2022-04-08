@@ -9,5 +9,5 @@ module.exports = merge(prodEnv, {
   prod_url_test: '"https://pricemapif_test.mideazy.com"',
   prod_url_ok: '"https://pricemapif.mideazy.com"',
   mock_url: '"http://mock-api-success.com"',
-  core_url: '"http://localhost:8065"'
+  core_url: '"http://localhost:8062"'
 })

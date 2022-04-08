@@ -165,10 +165,10 @@ export default{
             }).then((res) => {
                 console.log('--login--', res);
                 if(res.code == "200") {
+                    that.$cookies.set("token", res.data.token, "1d");
                     that.$store.dispatch('routerApple').then(function(value){
                         console.log("--then结束--", value);
                         that.$router.addRoutes(value);
-                        that.$cookies.set("token", res.data.token, "1d");
                         that.$router.push({path: '/home'});
                     })
                 } 

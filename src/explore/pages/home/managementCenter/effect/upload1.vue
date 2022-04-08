@@ -1,12 +1,14 @@
 <template>
     <section id="upload1">
+        <el-button @click="downloadUrl(download_url)">URL下载</el-button>
         <div>
             <el-upload
                 name="file"
                 class="avatar-uploader"
-                :action="process.env.core_url + '/sky/shop/upload'"
+                :action="yuming + '/sky/shop/upload'"
                 :show-file-list="true"
                 :data="{'id': 1}"
+                :headers="{'token': $cookies.get('token')}"
                 :on-success="handleAvatarSuccess"
                 :before-upload="beforeAvatarUpload"
                 accept="image/jpeg,image/jpg,image/png"
@@ -26,13 +28,63 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
     data(){
         return{
-            imageUrl: ''
+            imageUrl: '',
+            yuming: process.env.core_url,
+            download_url: ''
         }
     },
     methods:{
+        downloadUrl(path) {
+            let urls = path.split('/');
+            console.log('path===', urls);
+            axios({
+                method: 'get',
+                url: this.yuming+'/sky/download',
+                data: {path: path},
+                responseType: 'blob'
+            }).then(res => {
+                let a = document.createElement('a');
+                    a.download = urls[urls.length-1];
+                    a.href = window.URL.createObjectURL(new Blob([res.data]))
+                    document.body.appendChild(a)
+                    a.click();
+                    document.body.removeChild(a)
+            }).catch(err => {
+                
+            })
+        },
+        // downloadUrl(url) {
+        //     let that = this;
+        //     let params = {
+        //         path: url
+        //     }
+
+        //     that.$apihttp({
+        //         url: process.env.core_url + '/sky/download',
+        //         method: 'post',
+        //         params: params
+        //     }).then((res) => {
+        //         console.log('--login--', res);
+        //     }).catch((err)=>{
+        //         console.log('error',err);
+        //     })
+        // },
+        // downloadUrl(url) {
+        //     console.log('--url--', url);
+        //     let arr = url.split('/');
+        //     let link = document.createElement('a');// 创建a标签
+        //         link.style.display = "none";// 使其隐藏
+        //         // link.download = arr[arr.length-1];// 设置下载属性，以及文件名
+        //         link.setAttribute("download", arr[arr.length-1]);
+        //         link.href = url;// 赋予文件下载地址
+        //         document.body.appendChild(link);// a标签插入页面里
+        //         link.click();// 强制触发a标签事件
+        //         document.body.removeChild(link);
+        // },
         //上传成功
         handleAvatarSuccess(res, file) {
             // file转blob图片
@@ -43,6 +95,7 @@ export default {
             })
 
             console.log('-handleAvatarSuccess-', res, file, '---', this.imageUrl);
+            this.download_url = this.yuming + '/sky' + res.data;
             // res是后台返回的数据
             if (res.result == 1) {
                 this.imageUrl = res.data.img;
