@@ -46,10 +46,17 @@
         </el-dialog>
 
 
-        <el-upload class="upload" :action="'/excuse/file/fileUpload'" :headers="headers" :show-file-list="false"
-                    :on-success="handleAvatarSuccess" :before-upload="beforeAvatarUpload"
-                    accept="image/jpeg,image/jpg,image/png">
-            <!-- <img src="../../assets/image/upload.png" /> -->
+        <el-upload
+            name="file"
+            class="upload"
+            :action="yuming + '/sky/shop/upload'"
+            :data="{'id': 1}"
+            :headers="{'token': $cookies.get('token')}"
+            :show-file-list="false"
+            :on-success="handleAvatarSuccess"
+            :before-upload="beforeAvatarUpload"
+            accept="image/jpeg,image/jpg,image/png"
+        >
             <img v-if="imageUrl" :src="imageUrl" class="avatar"/>
             <i v-else class="el-icon-plus avatar-uploader-icon"></i>
         </el-upload>
@@ -78,9 +85,7 @@ export default {
                 autoCropHeight: 200,
                 fixedBox: true
             },
-            headers: {
-                token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhcHAiLCJuYmYiOjE2NDU0MjQ5ODYsImRhdGEiOiJ7XCJjYXJkUGhvdG9Qb3NpdGl2ZVwiOlwiXCIsXCJjYXJkUGhvdG9SZXZlcnNlXCI6XCJcIixcImNoYW5uZWxcIjowLFwiY3JlYXRlQnlcIjpcInN5c1wiLFwiY3JlYXRlVGltZVwiOjE2NDQxMjk2OTQzMjAsXCJkZWxldGVkXCI6MCxcImZha2VMaWtlXCI6MCxcImZvcmJpZGRlblN0YXRlXCI6MSxcImhvdEFuY2hvclwiOjAsXCJob3ROdW1cIjowLFwiaWRcIjpcIjBhNTUwNzhkYzJiYTRmM2NhYzEwNTM3ZGE5ZGJlYzk0XCIsXCJpZENhcmRcIjpcIlwiLFwiaW52aXRlQ29kZVwiOlwiejY4NDIzN1wiLFwiaXBcIjpcIjk0LjIwNC44Ny4xNzRcIixcImxhc3RMb2dpblRpbWVcIjoxNjQ1NDI0OTg2OTQyLFwibGV2ZWxcIjoxLFwib25MaW5lXCI6MSxcInBhc3N3b3JkXCI6XCJiYjIxYzVhMGMxMWUyNmQ5NWQ2YzM1MzlhYjU0OGY2NVwiLFwicGhvbmVcIjpcIjE5ODA1MDYwMDAxXCIsXCJyb2xlXCI6MCxcInNleFwiOjAsXCJzb3J0XCI6MCxcInR5cGVcIjowLFwidXBkYXRlVGltZVwiOjE2NDUxMDYzNTMwNzksXCJ1c2VyQ29kZVwiOjEwMTY3MixcInVzZXJJY29uXCI6XCJwaG90b18yMDIxLTA0LTE2XzEwLTM5LTA3LmpwZ1wiLFwidXNlck5hbWVcIjpcIjE5OCoqKiowMDAxXCJ9IiwiaXNzIjoiQ2hhdC1BUEkiLCJleHAiOjE2NzY5NjA5ODYsImlhdCI6MTY0NTQyNDk4NiwianRpIjoiOTI2M2JiNDItNDNhNy00ZDc5LWI3M2MtZGI4NjFjNzI5NjI3In0.Dc_BA2o0Qn7PA92zHBsa80933yTgIHXmE7vQMun9BWU"
-            },
+            yuming: process.env.core_url,
             imageUrl: "",
             dialogPortrait: false
         }
@@ -176,29 +181,7 @@ export default {
             }
             // this.downFile(ia)
             console.log("ia", ia)
-        },
-        // 上传图片接口
-        uploadPicture (fileImg) {
-            let params = {
-                file: fileImg
-            }
-            // this.$apihttp('post', '/file/fileUpload', param)
-            this.$apihttp({
-                url: 'http://192.168.1.103:2021/excuse/file/fileUpload',
-                method: 'post',
-                params: params
-            })
-            .then((res) => {
-                if (res.code === 200) {
-                console.log('---tutu---', res)
-                } else {
-                this.$message({
-                    type: 'warning',
-                    message: res.msg
-                })
-                }
-            })
-        },
+        }
     }
 }
 </script>

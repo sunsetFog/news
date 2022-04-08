@@ -65,8 +65,8 @@ encodeURIComponent(参数1)  语义字符之外，都可以转义
 谷歌地址栏显示中文，ie显示编码，location.href获取显示编码
             */
 
-            console.log('整条编码', encodeURI('http://localhost:1199/home/managementCenter/knowledge/router?title=您好')); // http://localhost:1199/home/managementCenter/knowledge/router?title=%E6%82%A8%E5%A5%BD
-            console.log('整条解码', decodeURI('http://localhost:1199/home/managementCenter/knowledge/router?title=%E6%82%A8%E5%A5%BD')); // http://localhost:1199/home/managementCenter/knowledge/router?title=您好
+            console.log('整条编码', encodeURI('http://localhost:2021/home/managementCenter/knowledge/router?title=您好')); // http://localhost:2021/home/managementCenter/knowledge/router?title=%E6%82%A8%E5%A5%BD
+            console.log('整条解码', decodeURI('http://localhost:2021/home/managementCenter/knowledge/router?title=%E6%82%A8%E5%A5%BD')); // http://localhost:2021/home/managementCenter/knowledge/router?title=您好
             // this.$router.push({path: encodeURI('/home/managementCenter/crux?id=100&city=广州')});
 
             // url带的是中文参数，得用编码转换

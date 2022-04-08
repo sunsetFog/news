@@ -40,12 +40,12 @@ export default {
                 data: '空',
                 responseType: 'blob'
             }).then(res => {
-                let a = document.createElement('a');
-                    a.download = urls[urls.length-1];
-                    a.href = window.URL.createObjectURL(new Blob([res.data]))
-                    document.body.appendChild(a)
-                    a.click();
-                    document.body.removeChild(a)
+                let aTag = document.createElement('a');// 创建a标签
+                    aTag.download = urls[urls.length-1];// 设置下载属性
+                    aTag.href = window.URL.createObjectURL(new Blob([res.data]));// 赋予文件下载地址
+                    document.body.appendChild(aTag);// a标签插入页面里
+                    aTag.click();// 强制触发a标签事件
+                    document.body.removeChild(aTag);// 删除a标签
             }).catch(err => {
                 
             })

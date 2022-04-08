@@ -24,9 +24,15 @@ let store = new Vuex.Store({
     getters: getters
 })
 
-//动态导入文件--require.context( )
-//  正则: /\.js$/   获取modular文件下所有js文件
-//  正则: /\.vuex\.js$/      文件取名test.vuex.js    获取以 `.vuex.js` 结尾的文件
+/*
+动态导入文件--require.context( )
+参数一:文件所在目录
+参数二: 是否要查询子文件夹
+参数三:要匹配的文件的后缀,是一个正则表达式
+
+正则: /\.js$/   获取modular文件下所有js文件
+正则: /\.vuex\.js$/      文件取名test.vuex.js    获取以 `.vuex.js` 结尾的文件
+ */
 const files = require.context('./modular', false, /\.js$/);
 console.log('context===', files,'-转数组-',files.keys());// ["./player.js", "./pool.js"]
 files.keys().forEach(key => {

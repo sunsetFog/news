@@ -39,19 +39,14 @@ https://www.jianshu.com/p/2823f27f9dd7
 vue实现九宫格抽奖
 https://www.jq22.com/jquery-info22357
 
-向上滚动动画
-数组：两份一样的内容
-let ul_height = li_height * arr.length
-起点：top: -(ul_height / 2 - div_height); 两格的中间
-终点：top: 起点 + -ul_height / 2
-移动距离：ul_height / 2
+
 
 
 vue-json-schema-form
 https://vue-json-schema-form.lljj.me/
 自定义table
 
-path路径与本地名一致
+
 
 vue-photo-preview
 https://www.jianshu.com/p/775fb3784692
@@ -60,9 +55,7 @@ https://www.jianshu.com/p/775fb3784692
   码市，菜鸟教程，k发帮,我要自学网
 
 
-参数一:文件所在目录
-参数二: 是否要查询子文件夹
-参数三:要匹配的文件的后缀,是一个正则表达式
+
 
 :class="$style.leftCaret"
 
@@ -106,12 +99,5 @@ top: 0;
 bottom: 0;
 right: 0;
 
-原生js上传图片
 
-H5隐私政策
-H5头像
-H5抽奖
-H5搜索
-H5环信
-微信支付
-支付宝支付
+

@@ -3,9 +3,9 @@ import request from '@/explore/api/http'
 
 export function login(params) {
   return request({
-    url: '/user/login',
-    method: 'get',
-    data:params
+    url: process.env.core_url + '/sky/shop/list',
+    method: 'post',
+    data: params
   })
 }
 export function logout(params) {
