@@ -39,6 +39,20 @@ export default{
 			cosplay: ''
 		}
 	},
+	created() {
+		/*
+			$eventBus.$emit后，$on和$once才触发
+			添加自定义事件监听器
+			$eventBus作用：能直接子传爷爷，或爷爷传子。解决子传父，再父传爷爷的麻烦
+		*/
+		this.$eventBus.$on('airWater',  function(value){
+			console.log('--$on--', value);
+		});
+		// 添加自定义事件监听器,只能触发一次，触发后随即被移除监听
+		this.$eventBus.$once('airWater',  function(value){
+			console.log('--$once--', value);
+		});
+	},
 	mounted(){
 		this.$refs.rainbow.praise('参数');//调用子组件方法
 	},
@@ -51,6 +65,9 @@ export default{
 			console.log('调用子组件方法---',value);
 		}
 	},
+	beforeDestroy() {
+		this.$eventBus.$off('airWater');// 移除$on自定义事件监听器
+	}
 	
 }
 </script>

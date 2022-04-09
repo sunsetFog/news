@@ -36,11 +36,7 @@ menuId: 11120783
 
 
 
-import Vue from 'vue';
-let eventBus = new Vue()
-eventBus.$on('editEcEmployeeTab', this.addTabs)
-eventBus.$emit('refreshEcEmpIsDisabled',  false)
-eventBus.$off('editEcEmployeeTab')
+
 
 
 

@@ -1,6 +1,7 @@
 <template>
 <section id="children">
 	<el-button @click='secret()'>child:{{article}}</el-button>
+	<el-button @click='bean()'>--eventBus--</el-button>
 	<!-- 具名插槽 -->
 	<slot name="er"></slot>
 	<!-- 作用域插槽(或叫:带数据的插槽)-->
@@ -47,6 +48,9 @@
 			},
 			praise(value){
 				console.log('调用父组件方法---',value);
+			},
+			bean() {
+				this.$eventBus.$emit('airWater',  666);
 			}
 		}
 	}
