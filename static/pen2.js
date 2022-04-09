@@ -29,23 +29,8 @@ menuId: 11120783
     
 
     数据字典、多种动态换肤、多环境发布、导入导出日志
-- 错误页面
-  - 401
-  - 404
 
-导入
-const blob = res.data
-        // for IE
-        if (window.navigator && window.navigator.msSaveOrOpenBlob) {
-          window.navigator.msSaveOrOpenBlob(res.data, _this.templateName + '.xlsx');
-        } else {
-          const a = document.createElement('a')
-          a.download = _this.templateName + '.xlsx'
-          a.href = window.URL.createObjectURL(new Blob([blob]))
-          document.body.appendChild(a)
-          a.click()
-          document.body.removeChild(a)
-        }
+
 
 
 

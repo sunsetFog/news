@@ -1,10 +1,11 @@
 <template>
     <section>
-        kkkfk
+        --日期时间--
     </section>
 </template>
 
 <script>
+import dayjs from 'dayjs';
 export default {
     name: "isDate",
     data() {
@@ -20,7 +21,7 @@ export default {
         this.dateFormat(-7, '第几天')
 
 
-        this.demo1()
+        this.demo2()
         this.countDown()
     },
     methods: {
@@ -109,6 +110,18 @@ export default {
         },
         guolv (value) {
             return value < 10 ? '0' + value : value
+        },
+        demo2() {
+            /*
+                dayjs官网：https://dayjs.fenxianglu.cn/
+                JavaScript 实用工具库：日期和时间（解析、验证、操作、显示）
+             */
+            console.log('--获取今天日期时间--', dayjs().format());// 2022-04-09T13:29:37+08:00
+            console.log('今天日期时间：显示--格式化--', dayjs().format('YYYY-MM-DD HH:mm:ss'));// 2022-04-09 13:41:41
+
+            console.log('七天后：操作--加上--', dayjs().add(7, 'day').format('YYYY-MM-DD HH:mm:ss'));// 2022-04-16 13:57:22
+            console.log('三天前：操作--减去--', dayjs().subtract(3, 'day').format('YYYY-MM-DD HH:mm:ss'));// 2022-04-06 14:02:06
+
         }
     }
 }

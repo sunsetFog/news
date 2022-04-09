@@ -11,6 +11,10 @@
 </template>
 
 <script>
+/*
+vue-photo-preview
+https://www.jianshu.com/p/775fb3784692
+*/
 export default {
     name: "previewPictures",
     data () {

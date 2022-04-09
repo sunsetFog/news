@@ -6,9 +6,7 @@
 vue.config.js
 typescript
 
-dayjs
-一个轻量的处理时间和日期的 JavaScript 库
-dayjs().format('YYYY-MM-DD HH:mm:ss')
+
 yarn.lock
 cordova  跨平台App开发
 
@@ -33,23 +31,19 @@ https://www.jianshu.com/p/2823f27f9dd7
 版本问题
 
 
-新抽奖：https://100px.net/
-搜索页
-
-vue实现九宫格抽奖
-https://www.jq22.com/jquery-info22357
 
 
 
 
-vue-json-schema-form
-https://vue-json-schema-form.lljj.me/
-自定义table
 
 
 
-vue-photo-preview
-https://www.jianshu.com/p/775fb3784692
+
+
+
+
+
+
 
 
   码市，菜鸟教程，k发帮,我要自学网
@@ -66,21 +60,16 @@ https://www.jianshu.com/p/775fb3784692
 
   }
 }
-锚点
+
 yarn下载与lock
 
 
 
 
-npm设置和取消代理的方法
-https://blog.csdn.net/yanzi1225627/article/details/80247758/
 
-npm config delete proxy
-电脑连不上网
 
-svn-- 还原
 
-&&
+
 
 最小高度占父元素100%高
 背景图大小不占padding

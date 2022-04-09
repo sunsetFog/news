@@ -16,7 +16,7 @@ export default {
         }
     },
     mounted(){
-        this.demo1();
+        this.demo10();
     },
     methods: {
         demo1(){
@@ -113,6 +113,26 @@ export default {
             console.log('定义默认值', sky);
             let purpose = '?id=128';
             console.log('括号连续拼写', (purpose.split('id='))[1]);
+
+            let flag = true, bean = '土豆';// 定义多个变量
+            flag && (bean = '香蕉');
+            /*
+            记得加括号
+            等价于  if(flag) {
+                bean = '香蕉';
+            }
+            */
+            console.log('--bean--', bean)
+
+            if(true) console.log('--bean-2-', bean),bean = '苹果';
+            /*
+            等价于  if(true) {
+                console.log('--bean-2-', bean);
+                bean = '苹果';
+            }
+            */
+            console.log('--bean-3-', bean)
+            
         },
         demo11 () {
             let ly = 867;

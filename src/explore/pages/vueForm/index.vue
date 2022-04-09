@@ -17,6 +17,11 @@
 </template>
 
 <script>
+/*
+vue-json-schema-form
+https://vue-json-schema-form.lljj.me/
+自定义table
+*/
 import VueForm from '@lljj/vue-json-schema-form';
 // import VueForm from "@goodgeek/vue-json-schema-form";
 import CodeEditor from './playground/CodeEditor.vue';
