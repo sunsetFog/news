@@ -4,6 +4,7 @@
             <div style="text-align: left;">
 				<el-upload
 					class="upload-demo"
+					ref="upload"
 					name="upload"
 					:data="{'attach':'upload'}"
 					:on-change="handleChange"
@@ -25,7 +26,10 @@
 				action 后台请求url 
 				name="upload" 后台需要绑定的节点，就必须有
 				:data="{'attach':'upload'}" 传参给后台
-				:file-list="imgArr" 用于编辑回显
+				1.清空已上传的文件列表
+				this.$refs.upload.clearFiles()
+				2.用于编辑回显
+				:file-list="imgArr"
 			-->
     </section>
 </template>

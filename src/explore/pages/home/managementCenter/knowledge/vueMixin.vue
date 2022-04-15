@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import lyMixin from './quote/lyMixin'
+import lyMixin from '@/explore/mixins/lyMixin'
 export default {
     name: 'sunMixin',
     mixins: [ lyMixin ],// 混入，合并的意思
