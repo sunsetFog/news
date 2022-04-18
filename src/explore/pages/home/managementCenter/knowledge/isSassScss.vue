@@ -14,6 +14,8 @@
 <script>
 /*
     scss官网：https://www.sass.hk/guide/
+
+    如何在VUE项目中使用SCSS: https://www.jianshu.com/p/2823f27f9dd7
     
     npm install node-sass sass-loader -D       注意版本报错
     {

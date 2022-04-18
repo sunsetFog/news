@@ -1,6 +1,5 @@
 <template>
 <section id="VueForm">
-    <CodeEditor v-model="curFormDataCode"></CodeEditor>
     <el-card>
         <div slot="header" class="clearfix">
             <span>活动素材</span>
@@ -18,13 +17,17 @@
         >
         </VueForm>
     </el-card>
+
+    <div class="code-right">
+        <CodeEditor v-model="curFormDataCode"></CodeEditor>
+    </div>
 </section>
 </template>
 
 <script>
 
 import VueForm from "./@goodgeek/vue-json-schema-form";
-import CodeEditor from './playground/CodeEditor.vue';
+import CodeEditor from '@/explore/components/printEditor/index.vue';
 export default {
     name: 'vueForm',
     components: { VueForm, CodeEditor },
@@ -87,16 +90,23 @@ export default {
 <style lang="less" scoped>
 #VueForm {
     width: 1100px;
+    height: 700px;
     padding: 10px 10px;
     margin: 0 auto;
     /deep/.el-card {
         width: 500px;
+        margin-top: 10px;
         float: left;
     }
     /deep/.el-card__header {
         padding: 10px 10px 10px 10px;
         font-size: 14px;
         font-weight: bold;
+    }
+    .code-right {
+        width: 500px;
+        height: 700px;
+        float: right;
     }
 }
 </style>

@@ -18,9 +18,6 @@ export default {
     computed: {
         prettyString() {
             try {
-                this.jsonString = {
-                    title: '帅气'
-                }
                 const string = String(this.jsonString) === this.jsonString ? this.jsonString : JSON.stringify(this.jsonString, null, 2);
                 const handleString = string.replace(/&/g, '&').replace(/</g, '<').replace(/>/g, '>');
                 const regex = /("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+-]?\d+)?)/g;

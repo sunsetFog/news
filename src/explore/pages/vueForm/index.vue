@@ -1,6 +1,5 @@
 <template>
 <section id="VueForm">
-    <CodeEditor v-model="curFormDataCode"></CodeEditor>
     <el-card>
         <div slot="header" class="clearfix">
             <span>活动素材</span>
@@ -13,6 +12,9 @@
         >
         </VueForm>
     </el-card>
+    <div class="code-right">
+        <CodeEditor v-model="curFormDataCode"></CodeEditor>
+    </div>
 </section>
 </template>
 
@@ -24,7 +26,7 @@ https://vue-json-schema-form.lljj.me/
 */
 import VueForm from '@lljj/vue-json-schema-form';
 // import VueForm from "@goodgeek/vue-json-schema-form";
-import CodeEditor from './playground/CodeEditor.vue';
+import CodeEditor from '@/explore/components/printEditor/index.vue';
 import * as schemaTypes from './playground/schemaTypes';
 export default {
     name: 'vueForm',
@@ -33,16 +35,28 @@ export default {
         return {
             formData: {},
             schema: {
-                type: "object",
-                required:[],
-                properties: { 
-                    is_table: {
-                        title: "表名",
-                        type: "table",
-                        "ui:widget": "TableWidget"
+                type: 'object',
+                required: [
+                    'userName',
+                    'age',
+                ],
+                properties: {
+                    userName: {
+                        type: 'string',
+                        title: '用户名',
+                        default: 'Liu.Jun',
+                    },
+                    age: {
+                        type: 'number',
+                        title: '年龄'
+                    },
+                    bio: {
+                        type: 'string',
+                        title: '签名',
+                        minLength: 10,
+                        default: '知道的越多、就知道的越少',
                     }
-                },
-                "ui:order": ["is_table"]
+                }
             },
             uiSchema: {
                 bio: {
@@ -76,17 +90,24 @@ export default {
 
 <style lang="less" scoped>
 #VueForm {
-    width: 1100px;
+    width: 1200px;
+    height: 700px;
     padding: 10px 10px;
     margin: 0 auto;
     /deep/.el-card {
         width: 500px;
+        margin-top: 10px;
         float: left;
     }
     /deep/.el-card__header {
         padding: 10px 10px 10px 10px;
         font-size: 14px;
         font-weight: bold;
+    }
+    .code-right {
+        width: 680px;
+        height: 700px;
+        float: right;
     }
 }
 </style>

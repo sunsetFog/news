@@ -36,6 +36,7 @@ const login = {
         
     },
     getters: {
+        routerList: state => state.routerList,
         menuList: state => state.menuList
     },
     actions: {
@@ -77,13 +78,13 @@ const login = {
                 item.redirect = item.importPath
 
 
-                if(item.id > 100 && item.id < 200) {
+                if(item.id > 1000000 && item.id < 2000000) {
                     oneLevel.push(item)
                 }
-                if(item.id > 200 && item.id < 300) {
+                if(item.id > 2000000 && item.id < 3000000) {
                     twoLevel.push(item)
                 }
-                if(item.id > 300 && item.id < 400) {
+                if(item.id > 3000000 && item.id < 4000000) {
                     threeLevel.push(item)
                 }
             }

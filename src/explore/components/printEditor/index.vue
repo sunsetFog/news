@@ -2,13 +2,13 @@
 <section id="CodeEditor">
     <el-card>
         <div slot="header" class="clearfix">
-            <span>{{ title }}</span>
+            <span>{{ isTitle }}</span>
         </div>
 
         <div
             ref="monacoEditor"
             class="achievement"
-            :style="{ width, height }"
+            :style="{ width: isWidth, height: isHeight }"
         >
         </div>
     </el-card>
@@ -29,7 +29,7 @@ export default {
             type: Boolean, // 是否在失焦点才同步数据
             default: false
         },
-        title: {
+        isTitle: {
             type: String,
             default: 'FormData'
         },
@@ -37,13 +37,13 @@ export default {
             type: String,
             default: '{}'
         },
-        width: {
+        isWidth: {
             type: String,
             default: 'auto'
         },
-        height: {
+        isHeight: {
             type: String,
-            default: '520px'
+            default: '620px'
         },
         language: {
             type: String,
@@ -86,11 +86,11 @@ export default {
             if (!this.editor) return;
             monaco.editor.setTheme(theme);
         },
-        width() {
+        isWidth() {
             if (!this.editor) return;
             this.editor.layout();
         },
-        height() {
+        isHeight() {
             if (!this.editor) return;
             this.editor.layout();
         },
@@ -129,7 +129,7 @@ export default {
         },
         init() {
                 const {
-                    value, language, theme, height, options, width
+                    value, language, theme, isHeight, options, isWidth
                 } = this.$props;
                 console.log('this.$props', this.$props);
                 console.log('window.monaco', window.monaco);
@@ -146,8 +146,8 @@ export default {
                         ...options,
                         value,
                         language,
-                        height,
-                        width,
+                        height: isHeight,
+                        width: isWidth,
                         ...(theme ? { theme } : {}),
                     },
                 );
@@ -159,10 +159,13 @@ export default {
 
 <style lang="less" scoped>
 #CodeEditor {
-    float: right;
+    width: 100%;
+    height: 700px;
     padding: 10px 10px 10px 10px;
     /deep/.el-card {
-        width: 500px;
+        width: 90%;
+        height: 100%;
+        margin: 0 auto;
     }
     /deep/.el-card__header {
         padding: 10px 10px 10px 10px;
