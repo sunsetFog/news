@@ -1,27 +1,35 @@
 'use strict'
+// 构建css和style
+
+
+// 引入nodejs路径模块
 const path = require('path')
+// 引入文件
 const config = require('../config')
+// 用来将css提取到单独的css文件中
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+// 引入文件
 const packageConfig = require('../package.json')
 
 exports.assetsPath = function (_path) {
   const assetsSubDirectory = process.env.NODE_ENV === 'production'
     ? config.build.assetsSubDirectory
     : config.dev.assetsSubDirectory
-
+  // 返回完整路径的相对根路径
   return path.posix.join(assetsSubDirectory, _path)
 }
 
+// 导出cssLoaders的相关配置
 exports.cssLoaders = function (options) {
   options = options || {}
-
+  // cssLoader的基本配置
   const cssLoader = {
     loader: 'css-loader',
     options: {
       sourceMap: options.sourceMap
     }
   }
-
+  // postcss-loader的基本配置
   const postcssLoader = {
     loader: 'postcss-loader',
     options: {
@@ -53,6 +61,12 @@ exports.cssLoaders = function (options) {
       return ['vue-style-loader'].concat(loaders)
     }
   }
+
+
+  /*
+    vue全局使用less样式文件：https://www.jianshu.com/p/2b1cd98c3062
+    vue全局使用scss样式文件
+  */
 
   // https://vue-loader.vuejs.org/en/configurations/extract-css.html
   return {

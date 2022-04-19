@@ -1,20 +1,30 @@
 'use strict'
+// node.js路径模块
 const path = require('path')
+// 引入文件
 const utils = require('./utils')
+// 引入webpack
 const webpack = require('webpack')
 const config = require('../config')
+// webpack合并
 const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base.conf')
+// webpack复制
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+// html插件
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+// 提取文件
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+// 压缩css
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
+// 压缩js
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 // const env = require('../config/prod.env')
 const envName = process.env.env_config ? process.env.env_config : 'prod'
 const env = require('../config/' + envName + '.env')
 
+// 合并文件
 const webpackConfig = merge(baseWebpackConfig, {
   module: {
     rules: utils.styleLoaders({
@@ -37,7 +47,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     new UglifyJsPlugin({
       uglifyOptions: {
         compress: {
-          warnings: false,
+          warnings: false,// 禁止压缩时候的警告信息
           drop_console: true // 打包之后关闭console.log
         }
       },
@@ -125,7 +135,7 @@ const webpackConfig = merge(baseWebpackConfig, {
 
 if (config.build.productionGzip) {
   const CompressionWebpackPlugin = require('compression-webpack-plugin')
-
+  // 压缩
   webpackConfig.plugins.push(
     new CompressionWebpackPlugin({
       asset: '[path].gz[query]',

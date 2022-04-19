@@ -1,19 +1,27 @@
 'use strict'
+// 引入文件
 const utils = require('./utils')
+// 引入webpack
 const webpack = require('webpack')
 const config = require('../config')
+// webpack合并
 const merge = require('webpack-merge')
+// node.js路径模块
 const path = require('path')
 const baseWebpackConfig = require('./webpack.base.conf')
+// webpack复制
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+// html的插件
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+// 收集错误和日志
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
-
+// 域名
 const HOST = process.env.HOST
+// 端口
 const PORT = process.env.PORT && Number(process.env.PORT)
 
-// -------vue-cli3 本地数据模拟后台接口-------
+// -------vue-cli3 本地数据模拟后台接口，不能增删改-------
 const express = require('express')
 const app = express()
 let apiRoutes = express.Router()
@@ -78,6 +86,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       // favicon: path.resolve('static/favicon.ico'), // 浏览器title的ico图标
       inject: true
     }),
+    // 复制static
     // copy custom static assets
     new CopyWebpackPlugin([
       {

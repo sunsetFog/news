@@ -1,4 +1,5 @@
 'use strict'
+// **环境变量
 module.exports = {
   NODE_ENV: '"notes"',
   title: '"钻石娱乐"',
