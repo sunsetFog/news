@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import moon from './quote/children';
+import moon from './parent/children';
 	export default{
 		components: {moon},
 		data(){

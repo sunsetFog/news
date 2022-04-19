@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import designDialog from './quote/renderDialog';
+import designDialog from './renderDialog';
 import pagination from '@/explore/components/pagination.vue';
 export default {
     name: 'vueExtend',

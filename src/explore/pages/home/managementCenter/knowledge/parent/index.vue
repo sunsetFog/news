@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import myChildren from './quote/children';
+import myChildren from './children';
 import cTitle from "@/explore/components/footer.vue";
 import sMain from "@/explore/components/footer.vue";
 export default{
