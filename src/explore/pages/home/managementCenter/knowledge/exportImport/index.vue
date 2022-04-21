@@ -27,7 +27,13 @@ console.log('导入---取对象属性', gogo)
 import { gogo as mingming } from './exportImport'
 console.log('导入---as重命名', mingming)
 
-// 对应---导出：export 和 默认导出
+/*
+    对应---导出：export 和 默认导出
+    误解：
+        1.获取的是js文件里的所有导出，而不是文件夹里的所有导出
+        2.会合并一个对象的，vuex里的js里有四个状态不能合并的
+
+ */
 import * as suoyou from './exportImport'
 console.log('获取所有导出并合并成一个对象', suoyou)
 

@@ -142,11 +142,15 @@ import 'nprogress/nprogress.css'; // 加载转圈进度条样式
 router.beforeEach((to, from, next) => {
     document.title = to.meta.title;
     // 刷新执行，且不是登录页，且要有token
-    if (from.path == '/' && to.path != '/login' && VueCookies.get("token")) {
-      penCache.dispatch('routerApple').then(function(value){
-        console.log("--then结束--", value);
-        router.addRoutes(value);
-      })
+    if (from.path == '/' && to.path != '/login') {
+      if (VueCookies.get("token")) {
+        penCache.dispatch('routerApple').then(function(value){
+          console.log("--then结束--", value);
+          router.addRoutes(value);
+        })
+      } else {
+        next({path: '/login'});
+      }
     }
 
 

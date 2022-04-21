@@ -82,8 +82,8 @@ export default{
             this.password_number = this.$cookies.get("password");
             this.remember_checked = true;
         }else{
-            this.account_number = 'admin';
-            this.password_number = 'admin';
+            this.account_number = '';
+            this.password_number = '';
             this.remember_checked = false;
         }
         

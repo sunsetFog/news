@@ -16,7 +16,7 @@ export default {
         }
     },
     mounted(){
-        this.demo10();
+        this.demo1();
     },
     methods: {
         demo1(){
@@ -40,6 +40,14 @@ export default {
             console.log('字符串解析为json对象',eval('('+jsonStr+')'));//不推荐，存在安全隐患
             let slogan = '标语'
             console.log('把字符串当变量使用', eval('slogan'))
+
+            let dhhd = {}
+            // json出现转义符，是正常的json格式，不用改
+            dhhd.sky = JSON.stringify(jsonObj);
+            dhhd.water = jsonObj;
+            let kdkdk = JSON.parse(dhhd.sky);
+            console.log("---dss----", dhhd);
+            console.log("---转化回对象----", kdkdk);
         },
         demo7(){
             //正则表达式: 验证指定字符串合法与否
