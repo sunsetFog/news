@@ -50,6 +50,7 @@ export default {
   },
   mounted () {
     const self = this
+    // 图表宽别设固定，设百分比才有用
     window.onresize = function () {
       if (self.drawing) {
         self.drawing.resize()

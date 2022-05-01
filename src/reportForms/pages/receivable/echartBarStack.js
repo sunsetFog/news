@@ -12,7 +12,7 @@ export default {
     })
     const wordColor = '#fff'
     const seriesColor = self.$means.colorFlowers(4)
-    const textStyle01 = { color: wordColor, fontSize: self.$means.typefaceSize(10) }
+    const textStyle01 = { color: wordColor, fontSize: self.$means.pxAndRem(10) }
     return {
       tooltip: {
         trigger: 'axis',
@@ -32,9 +32,9 @@ export default {
         y: 'bottom',
         padding: 10,
         // icon: 'circle', // 形状  类型包括 circle rect roundRect triangle diamond pin arrow none
-        itemWidth: self.$means.typefaceSize(12), // 宽度
-        itemHeight: self.$means.typefaceSize(7), // 高度
-        itemGap: self.$means.typefaceSize(6), // 间距
+        itemWidth: self.$means.pxAndRem(12), // 宽度
+        itemHeight: self.$means.pxAndRem(7), // 高度
+        itemGap: self.$means.pxAndRem(6), // 间距
         data: legendData
       },
       grid: {
@@ -106,7 +106,7 @@ export default {
     })
     const wordColor = '#fff'
     const seriesColor = self.$means.colorFlowers(8)
-    const textStyle01 = { color: wordColor, fontSize: self.$means.typefaceSize(10) }
+    const textStyle01 = { color: wordColor, fontSize: self.$means.pxAndRem(10) }
     return {
       tooltip: {
         trigger: 'axis',
@@ -126,9 +126,9 @@ export default {
         y: 'bottom',
         padding: 10,
         // icon: 'circle', // 形状  类型包括 circle rect roundRect triangle diamond pin arrow none
-        itemWidth: self.$means.typefaceSize(12), // 宽度
-        itemHeight: self.$means.typefaceSize(7), // 高度
-        itemGap: self.$means.typefaceSize(5), // 间距
+        itemWidth: self.$means.pxAndRem(12), // 宽度
+        itemHeight: self.$means.pxAndRem(7), // 高度
+        itemGap: self.$means.pxAndRem(5), // 间距
         data: legendData
       },
       grid: {
@@ -201,7 +201,7 @@ export default {
     })
     const wordColor = '#fff'
     const seriesColor = self.$means.colorFlowers(1)
-    const textStyle01 = { color: wordColor, fontSize: self.$means.typefaceSize(10) }
+    const textStyle01 = { color: wordColor, fontSize: self.$means.pxAndRem(10) }
     return {
       tooltip: {
         trigger: 'axis',
@@ -222,9 +222,9 @@ export default {
         y: 'bottom',
         padding: 10,
         // icon: 'circle', // 形状  类型包括 circle rect roundRect triangle diamond pin arrow none
-        itemWidth: self.$means.typefaceSize(12), // 宽度
-        itemHeight: self.$means.typefaceSize(7), // 高度
-        itemGap: self.$means.typefaceSize(5), // 间距
+        itemWidth: self.$means.pxAndRem(12), // 宽度
+        itemHeight: self.$means.pxAndRem(7), // 高度
+        itemGap: self.$means.pxAndRem(5), // 间距
         data: legendData
       },
       grid: {
@@ -288,7 +288,7 @@ export default {
     })
     const wordColor = '#fff'
     const seriesColor = self.$means.colorFlowers(3)
-    const textStyle01 = { color: wordColor, fontSize: self.$means.typefaceSize(10) }
+    const textStyle01 = { color: wordColor, fontSize: self.$means.pxAndRem(10) }
     return {
       tooltip: {
         trigger: 'axis',
@@ -309,9 +309,9 @@ export default {
         top: '5%',
         padding: 10,
         // icon: 'circle', // 形状  类型包括 circle rect roundRect triangle diamond pin arrow none
-        itemWidth: self.$means.typefaceSize(12), // 宽度
-        itemHeight: self.$means.typefaceSize(7), // 高度
-        itemGap: self.$means.typefaceSize(15), // 间距
+        itemWidth: self.$means.pxAndRem(12), // 宽度
+        itemHeight: self.$means.pxAndRem(7), // 高度
+        itemGap: self.$means.pxAndRem(15), // 间距
         data: legendData
       },
       grid: {
@@ -380,7 +380,7 @@ export default {
       name: name,
       type: 'bar',
       stack: stack,
-      barMaxWidth: self.$means.typefaceSize(15),
+      barMaxWidth: self.$means.pxAndRem(15),
       label: {
         show: false,
         position: 'insideRight'
@@ -388,7 +388,7 @@ export default {
       itemStyle: {
         normal: {
           color: color,
-          lineStyle: { width: self.$means.typefaceSize(1.5), color: color }
+          lineStyle: { width: self.$means.pxAndRem(1.5), color: color }
         }
       },
       data: data

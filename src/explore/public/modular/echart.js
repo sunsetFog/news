@@ -15,7 +15,7 @@ export default {
     /**
      * echarts在移动端要转rem
      */
-    typefaceSize (num) {
+    pxAndRem (num) {
         return num
     },
     /**

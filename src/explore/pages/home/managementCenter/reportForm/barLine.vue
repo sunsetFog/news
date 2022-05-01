@@ -83,17 +83,15 @@ export default {
         };
     },
     created () {
-        let self = this;
-        self.dateSort();
+        this.dateSort();
     },
     mounted () {
-        let self = this
-        self.option_01 = self.demo01(
-            self.house_list[0].MANAGER_AVG,
-            self.house_list[0].PLAN_AVG,
-            self.house_list[0].ACT_AVG,
-            self.house_list[0].AREA,
-            self.xJson
+        this.option_01 = this.demo01(
+            this.house_list[0].MANAGER_AVG,
+            this.house_list[0].PLAN_AVG,
+            this.house_list[0].ACT_AVG,
+            this.house_list[0].AREA,
+            this.xJson
         );
     },
     methods: {

@@ -13,8 +13,8 @@ export default {
     const color01 = '#fff'
     const seriesColor = self.$means.colorFlowers(2)
     const gradients = self.$means.colorFlowers(2)
-    const textStyle01 = { color: color01, fontSize: self.$means.typefaceSize(10) }
-    const textStyle02 = { color: color01, fontSize: self.$means.typefaceSize(12), fontWeight: 'normal' }
+    const textStyle01 = { color: color01, fontSize: self.$means.pxAndRem(10) }
+    const textStyle02 = { color: color01, fontSize: self.$means.pxAndRem(12), fontWeight: 'normal' }
     return {
       backgroundColor: '', // 背景颜色
       title: { // 标题
@@ -22,7 +22,7 @@ export default {
         // subtext: '副标题',
         textStyle: textStyle02,
         x: 0,
-        y: self.$means.typefaceSize(1)
+        y: self.$means.pxAndRem(1)
       },
       tooltip: { // 提示弹窗
         trigger: 'axis', // 触发类型,'item'散点图,'axis'柱状图，折线图
@@ -38,9 +38,9 @@ export default {
         y: 'bottom', // top bottom center 填写数字
         padding: 10,
         icon: 'circle', // 形状  类型包括 circle rect roundRect triangle diamond pin arrow none
-        itemWidth: self.$means.typefaceSize(12), // 宽度
-        itemHeight: self.$means.typefaceSize(10), // 高度
-        itemGap: self.$means.typefaceSize(30), // 间距
+        itemWidth: self.$means.pxAndRem(12), // 宽度
+        itemHeight: self.$means.pxAndRem(10), // 高度
+        itemGap: self.$means.pxAndRem(30), // 间距
         data: legendData
       },
       grid: { // 位置
@@ -96,7 +96,7 @@ export default {
           }
         },
         nameTextStyle: {
-          fontSize: self.$means.typefaceSize(9),
+          fontSize: self.$means.pxAndRem(9),
           color: [color01]
         },
         axisLine: {
@@ -127,17 +127,17 @@ export default {
       type: 'line',
       // stack: '总量', // 去掉可以重叠线，数值正常
       // areaStyle: { normal: { color: '' } }, // 区域颜色
-      symbolSize: self.$means.typefaceSize(3), // 折线点的大小
+      symbolSize: self.$means.pxAndRem(3), // 折线点的大小
       itemStyle: {
         color: color // 折线点的颜色
       },
-      lineStyle: { width: self.$means.typefaceSize(1.5), color: color }, // 折线
+      lineStyle: { width: self.$means.pxAndRem(1.5), color: color }, // 折线
       label: {
         show: true,
         position: 'top',
         rotate: 40,
         offset: [20, -15],
-        textStyle: { fontSize: self.$means.typefaceSize(9) },
+        textStyle: { fontSize: self.$means.pxAndRem(9) },
         formatter: function (value) {
           value = value.value
           return self.$means.conversion(value, '亿', '', 2)

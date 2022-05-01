@@ -16,8 +16,8 @@ export default {
     seriesColor.push('#FFA362')
     let gradients = self.$means.colorFlowers(2)
     gradients.push('#FFA362')
-    const textStyle01 = { color: wordColor, fontSize: self.$means.typefaceSize(12), fontStyle: 'normal', fontWeight: 'normal' }
-    const textStyle02 = { color: wordColor, fontSize: self.$means.typefaceSize(10) }
+    const textStyle01 = { color: wordColor, fontSize: self.$means.pxAndRem(12), fontStyle: 'normal', fontWeight: 'normal' }
+    const textStyle02 = { color: wordColor, fontSize: self.$means.pxAndRem(10) }
     return {
       title: {
         text: '',
@@ -35,9 +35,9 @@ export default {
         // left: '6%'
         x: 'center',
         // icon: 'circle', // 形状  类型包括 circle rect roundRect triangle diamond pin arrow none
-        itemWidth: self.$means.typefaceSize(12), // 宽度
-        itemHeight: self.$means.typefaceSize(7), // 高度
-        itemGap: self.$means.typefaceSize(15), // 间距
+        itemWidth: self.$means.pxAndRem(12), // 宽度
+        itemHeight: self.$means.pxAndRem(7), // 高度
+        itemGap: self.$means.pxAndRem(15), // 间距
         data: legendData
       },
       xAxis: [{
@@ -151,8 +151,8 @@ export default {
     seriesColor.push('#FFA362')
     let gradients = self.$means.colorFlowers(2)
     gradients.push('#FFA362')
-    const textStyle01 = { color: '#94BFF1', fontSize: self.$means.typefaceSize(10), fontStyle: 'normal', fontWeight: '500' }
-    const textStyle02 = { color: wordColor, fontSize: self.$means.typefaceSize(10) }
+    const textStyle01 = { color: '#94BFF1', fontSize: self.$means.pxAndRem(10), fontStyle: 'normal', fontWeight: '500' }
+    const textStyle02 = { color: wordColor, fontSize: self.$means.pxAndRem(10) }
     return {
       title: {
         text: '',
@@ -170,9 +170,9 @@ export default {
         // left: '6%'
         x: 'center',
         // icon: 'circle', // 形状  类型包括 circle rect roundRect triangle diamond pin arrow none
-        itemWidth: self.$means.typefaceSize(12), // 宽度
-        itemHeight: self.$means.typefaceSize(7), // 高度
-        itemGap: self.$means.typefaceSize(5), // 间距
+        itemWidth: self.$means.pxAndRem(12), // 宽度
+        itemHeight: self.$means.pxAndRem(7), // 高度
+        itemGap: self.$means.pxAndRem(5), // 间距
         data: legendData
       },
       xAxis: [{
@@ -278,15 +278,15 @@ export default {
     let res = {
       name: name,
       type: 'bar',
-      barWidth: self.$means.typefaceSize(6),
+      barWidth: self.$means.pxAndRem(6),
       label: {
         show: false,
         position: 'top',
-        textStyle: { color: '', fontSize: self.$means.typefaceSize(9) }
+        textStyle: { color: '', fontSize: self.$means.pxAndRem(9) }
       },
       itemStyle: {
         color: self.$means.colorGradient(color, gradients)
-        // barBorderRadius: self.$means.typefaceSize(4)
+        // barBorderRadius: self.$means.pxAndRem(4)
       },
       data: data
     }
@@ -301,12 +301,12 @@ export default {
       type: 'line',
       smooth: true,
       yAxisIndex: 1,
-      symbolSize: self.$means.typefaceSize(4),
+      symbolSize: self.$means.pxAndRem(4),
       itemStyle: {
         color: color
       },
       lineStyle: {
-        width: self.$means.typefaceSize(2)
+        width: self.$means.pxAndRem(2)
       },
       label: {
         normal: {
@@ -315,14 +315,14 @@ export default {
           formatter: function (value) {
             return Number(value.value).toFixed(1) + '%'
           },
-          textStyle: { color: '', fontSize: self.$means.typefaceSize(9) }
+          textStyle: { color: '', fontSize: self.$means.pxAndRem(9) }
         }
       },
       markLine: {
         label: {
           show: true,
           position: 'insideEndTop',
-          textStyle: { color: '', fontSize: self.$means.typefaceSize(10) }
+          textStyle: { color: '', fontSize: self.$means.pxAndRem(10) }
         },
         data: [
           average

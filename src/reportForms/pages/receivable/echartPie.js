@@ -4,7 +4,7 @@ export default {
       return { message: '暂无数据' }
     }
     const wordColor = '#C9CACB'
-    const textStyle01 = { color: wordColor, fontSize: self.$means.typefaceSize(10) }
+    const textStyle01 = { color: wordColor, fontSize: self.$means.pxAndRem(10) }
     const seriesColor = self.$means.colorFlowers(2)
     return {
       backgroundColor: '',
@@ -42,7 +42,7 @@ export default {
           label: { // 标签
             formatter: '{d}%', // 格式化程序
             color: '#fff',
-            fontSize: self.$means.typefaceSize(12)
+            fontSize: self.$means.pxAndRem(12)
           },
           labelLine: { // 线
             lineStyle: {

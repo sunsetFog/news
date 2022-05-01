@@ -13,8 +13,8 @@ export default {
     const wordColor = '#fff'
     const seriesColor = self.$means.colorFlowers(2)
     const gradients = self.$means.colorFlowers(2)
-    const textStyle01 = { color: '#94BFF1', fontSize: self.$means.typefaceSize(10), fontStyle: 'normal', fontWeight: '500' }
-    const textStyle02 = { color: wordColor, fontSize: self.$means.typefaceSize(10) }
+    const textStyle01 = { color: '#94BFF1', fontSize: self.$means.pxAndRem(10), fontStyle: 'normal', fontWeight: '500' }
+    const textStyle02 = { color: wordColor, fontSize: self.$means.pxAndRem(10) }
     return {
       title: {
         text: self.$means.title,
@@ -32,9 +32,9 @@ export default {
         // left: '6%'
         x: 'center',
         // icon: 'circle', // 形状  类型包括 circle rect roundRect triangle diamond pin arrow none
-        itemWidth: self.$means.typefaceSize(12), // 宽度
-        itemHeight: self.$means.typefaceSize(7), // 高度
-        itemGap: self.$means.typefaceSize(15), // 间距
+        itemWidth: self.$means.pxAndRem(12), // 宽度
+        itemHeight: self.$means.pxAndRem(7), // 高度
+        itemGap: self.$means.pxAndRem(15), // 间距
         data: legendData
       },
       xAxis: [{
@@ -124,8 +124,8 @@ export default {
     const wordColor = '#fff'
     const seriesColor = self.$means.colorFlowers(4)
     const gradients = self.$means.colorFlowers(4)
-    const textStyle01 = { color: '#94BFF1', fontSize: self.$means.typefaceSize(10), fontStyle: 'normal', fontWeight: '500' }
-    const textStyle02 = { color: wordColor, fontSize: self.$means.typefaceSize(10) }
+    const textStyle01 = { color: '#94BFF1', fontSize: self.$means.pxAndRem(10), fontStyle: 'normal', fontWeight: '500' }
+    const textStyle02 = { color: wordColor, fontSize: self.$means.pxAndRem(10) }
     return {
       title: {
         text: self.$means.title,
@@ -143,9 +143,9 @@ export default {
         // left: '6%'
         x: 'center',
         // icon: 'circle', // 形状  类型包括 circle rect roundRect triangle diamond pin arrow none
-        itemWidth: self.$means.typefaceSize(12), // 宽度
-        itemHeight: self.$means.typefaceSize(7), // 高度
-        itemGap: self.$means.typefaceSize(12), // 间距
+        itemWidth: self.$means.pxAndRem(12), // 宽度
+        itemHeight: self.$means.pxAndRem(7), // 高度
+        itemGap: self.$means.pxAndRem(12), // 间距
         data: legendData
       },
       xAxis: [{
@@ -233,15 +233,15 @@ export default {
       name: name,
       type: 'bar',
       stack: stack,
-      barWidth: self.$means.typefaceSize(8),
+      barWidth: self.$means.pxAndRem(8),
       label: {
         show: false,
         position: 'top',
-        textStyle: { color: '', fontSize: self.$means.typefaceSize(9) }
+        textStyle: { color: '', fontSize: self.$means.pxAndRem(9) }
       },
       itemStyle: {
         color: self.$means.colorGradient(color, gradients)
-        // barBorderRadius: self.$means.typefaceSize(radius)
+        // barBorderRadius: self.$means.pxAndRem(radius)
       },
       data: data
     }

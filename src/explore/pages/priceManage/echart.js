@@ -22,16 +22,16 @@ export default {
     const wordColor = 'black'
     const seriesColor = ['#00AAAF', '#D04286', '#0066CC', '#5BD6D2']
     const gradients = ['#00AAAF', '#D04286', '#0066CC', '#3FE366']
-    const textStyle01 = { color: wordColor, fontSize: self.$means.typefaceSize(13), fontWeight: 'normal' }
-    const textStyle02 = { color: '#fff', fontSize: self.$means.typefaceSize(13), fontWeight: 'normal' }
+    const textStyle01 = { color: wordColor, fontSize: self.$means.pxAndRem(13), fontWeight: 'normal' }
+    const textStyle02 = { color: '#fff', fontSize: self.$means.pxAndRem(13), fontWeight: 'normal' }
     return {
       backgroundColor: '', // 背景颜色
       title: { // 标题
         text: company, // 主标题
         // subtext: '元/㎡',
         textStyle: textStyle01,
-        x: self.$means.typefaceSize(10),
-        y: self.$means.typefaceSize(35)
+        x: self.$means.pxAndRem(10),
+        y: self.$means.pxAndRem(35)
       },
       tooltip: { // 提示弹窗
         trigger: 'axis', // 触发类型,'item'散点图,'axis'柱状图，折线图
@@ -49,9 +49,9 @@ export default {
         y: 'top', // top bottom center 填写数字
         padding: 10,
         icon: 'circle', // 形状  类型包括 circle rect roundRect triangle diamond pin arrow none
-        itemWidth: self.$means.typefaceSize(12), // 宽度
-        itemHeight: self.$means.typefaceSize(10), // 高度
-        itemGap: self.$means.typefaceSize(5), // 间距
+        itemWidth: self.$means.pxAndRem(12), // 宽度
+        itemHeight: self.$means.pxAndRem(10), // 高度
+        itemGap: self.$means.pxAndRem(5), // 间距
         data: legendData
       },
       grid: { // 位置
@@ -75,7 +75,7 @@ export default {
         axisLabel: {
           show: true,
           interval: 0, // 显示全部
-          margin: self.$means.typefaceSize(5),
+          margin: self.$means.pxAndRem(5),
           // rotate: -40, // 倾斜40角度
           // showMaxLabel: true, // 最后一个刻度显示
           textStyle: textStyle01,
@@ -92,7 +92,7 @@ export default {
         nameLocation: 'end', // 坐标位置，支持start,end，middle
         nameTextStyle: {
           color: wordColor,
-          fontSize: self.$means.typefaceSize(12),
+          fontSize: self.$means.pxAndRem(12),
           fontWeight: 'bold',
           padding: [0, 0, 0, 0]
         }
@@ -103,7 +103,7 @@ export default {
           scale: true, // 自适应，不从0开始
           axisLabel: {
             show: true,
-            margin: self.$means.typefaceSize(5),
+            margin: self.$means.pxAndRem(5),
             textStyle: textStyle01,
             // formatter: '{value} (万)', // 单位
             formatter: function (value, index) {
@@ -133,13 +133,13 @@ export default {
           nameGap: 25,
           nameTextStyle: {
             color: wordColor,
-            fontSize: self.$means.typefaceSize(12),
+            fontSize: self.$means.pxAndRem(12),
             fontWeight: 'bold',
             padding: [0, 0, 0, 0]
           },
           axisLabel: {
             show: true,
-            margin: self.$means.typefaceSize(5),
+            margin: self.$means.pxAndRem(5),
             textStyle: textStyle01,
             formatter: function (value, index) {
               if (type === 'car') {
@@ -182,7 +182,7 @@ export default {
           yAxisIndex: 1,
           // data: [12000, 13200, 19100, 23400, 19000, 23000, 21000, 19000, 15000, 16000, 23000, 11000],
           data: item4,
-          barWidth: self.$means.typefaceSize(6),
+          barWidth: self.$means.pxAndRem(6),
           label: {
             show: false,
             position: 'top',
@@ -190,7 +190,7 @@ export default {
           },
           itemStyle: {
             color: self.$means.colorGradient(seriesColor[3], gradients[3]),
-            barBorderRadius: self.$means.typefaceSize(4)
+            barBorderRadius: self.$means.pxAndRem(4)
           }
         }
       ]
@@ -209,17 +209,17 @@ export default {
       type: 'line',
       // stack: '总量', // 去掉可以重叠线，数值正常
       // areaStyle: { normal: { color: '' } }, // 区域颜色
-      symbolSize: self.$means.typefaceSize(3), // 折线点的大小
+      symbolSize: self.$means.pxAndRem(3), // 折线点的大小
       itemStyle: {
         color: color // 折线点的颜色
       },
-      lineStyle: { width: self.$means.typefaceSize(1.5), color: color }, // 折线
+      lineStyle: { width: self.$means.pxAndRem(1.5), color: color }, // 折线
       label: {
         show: true,
         position: 'top',
         rotate: 40,
         offset: [20, -15],
-        textStyle: { fontSize: self.$means.typefaceSize(size) },
+        textStyle: { fontSize: self.$means.pxAndRem(size) },
         formatter: function (value) {
           value = value.value
           if (Number(value) === 0) {

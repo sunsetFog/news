@@ -23,7 +23,7 @@ export default {
     /**
      * echarts在移动端要转rem
      */
-    typefaceSize (num) {
+    pxAndRem (num) {
         num = num / Number(sessionStorage.getItem('pixelSize'))
         return num * Number(sessionStorage.getItem('pixelSize'))
     },
