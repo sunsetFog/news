@@ -1,5 +1,5 @@
 <template>
-    <section id="demo1">
+    <section id="barLine">
         <cloud-echart
             dynamic_width="375px"
             dynamic_height="380px"
@@ -11,7 +11,8 @@
 <script>
 import drawing from "./echart.js";
 export default {
-    name: "demo1",
+    name: "barLine",
+    mixins: [ drawing ],
     data() {
         return {
         xJson: [],
@@ -87,8 +88,7 @@ export default {
     },
     mounted () {
         let self = this
-        self.option_01 = drawing.demo01(
-            self,
+        self.option_01 = self.demo01(
             self.house_list[0].MANAGER_AVG,
             self.house_list[0].PLAN_AVG,
             self.house_list[0].ACT_AVG,
@@ -124,7 +124,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-#demo1 {
+#barLine {
   width: 378px;
   height: 400px;
   background: rgba(255, 255, 255, 1);

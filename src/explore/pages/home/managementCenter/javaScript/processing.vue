@@ -117,7 +117,7 @@ export default {
         demo10 (params = []) {
             console.log('方法默认值', params);
             let key = null;
-            let sky = key || '默认值';
+            let sky = key || [];
             console.log('定义默认值', sky);
             let purpose = '?id=128';
             console.log('括号连续拼写', (purpose.split('id='))[1]);
