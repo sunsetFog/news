@@ -6,22 +6,11 @@
  * @binding 一个对象   value：指令的绑定值
  * @vnode 虚拟节点
  */
-// function getOperationAuth(value) {
-//     let buttonPermissions = JSON.parse(sessionStorage.getItem('buttonPermissions'))
-//     for(let i=0;i<buttonPermissions.length;i++){
-//         if(buttonPermissions[i].code == value){
-//             if(buttonPermissions[i].disabled == 'Y'){
-//                 return 'disabled'
-//             }
-//         }
-//     }
-//     return 'show'
-// }
 
 const operationAuth = {}
 
 const install = function (Vue) {
-    Vue.directive('operation-auth', {
+    Vue.directive('operation-auth', {// v-operation-auth
         // 只调用一次，指令与元素绑定时调用
         bind: function (el, binding, vnode) {
             console.log('---bind---', el, binding, vnode);
@@ -30,7 +19,7 @@ const install = function (Vue) {
                 return
             }
 
-            let buttonPermissions = JSON.parse(sessionStorage.getItem('buttonPermissions'))
+            let buttonPermissions = JSON.parse(sessionStorage.getItem('buttonPermissions')) || [];
             for(let i=0;i<buttonPermissions.length;i++){
                 if(buttonPermissions[i].code == key){
                     if(buttonPermissions[i].disabled == 'Y'){

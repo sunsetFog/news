@@ -134,6 +134,7 @@ const login = {
                     { name: 'javaScript', file: 'javaScript' },
                     { name: 'vue知识点', file: 'knowledge' },
                     { name: 'vue功能集', file: 'effect' },
+                    { name: 'vue插件', file: 'plugin' },
                     { name: '项目报表', file: 'reportForm' },
                     { name: '动画', file: 'animation' },
                     { name: '拓展知识', file: 'expand' },

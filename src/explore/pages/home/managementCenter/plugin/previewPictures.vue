@@ -14,6 +14,8 @@
 /*
 vue-photo-preview
 https://www.jianshu.com/p/775fb3784692
+
+main.js全局引入了
 */
 export default {
     name: "previewPictures",
