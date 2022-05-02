@@ -8,7 +8,7 @@
 
 <script>
 export default {
-    name: 'processing',
+    name: 'learn3',
     data(){
         return{
             num: 106,

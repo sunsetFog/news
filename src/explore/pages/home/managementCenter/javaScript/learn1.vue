@@ -34,24 +34,7 @@ export default {
             let src2 = `../img/${imgName}.png`
             console.log('两种变量与字符串拼接写法', src, src2);
 
-            /* 事件
-			1.onload:用户打开页面执行该事件，放在body内部
-			2.onchange：当表单内容发生改变时触发该事件,div,p等非表单元素没有改属性
-			3.onfocus：表单获取焦点事件
-			4.onblur：表单失去焦点事件
-			5.onmouseover：鼠标悬浮事件
-			6.onmouseout: 鼠标离开事件
-			7.onmousedown：鼠标按下时触发该事件
-			8.onmouseup：鼠标抬起事件
-			9.onclick：鼠标点击完毕事件
-            10.ondblclick：双击事件
-            移动端事件
-            ontouchstart
-            ontouchmove
-            ontouchend
-
-            在某情况会去掉on，或用@代替on
-
+            /* 
             html中的节点类型：
 			1.元素节点：html、div、p、span等这些元素
 			2.属性节点：src、href、type、id等
