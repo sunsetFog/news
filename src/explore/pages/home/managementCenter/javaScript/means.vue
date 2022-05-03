@@ -13,7 +13,7 @@ export default {
         }
     },
     created() {
-
+        this.demo7();
     },
     methods: {
         demo1(){
@@ -129,6 +129,7 @@ export default {
         demo7(){
             // this：指针，虚拟的替代品，谁调用，this就指向谁
             console.log("vue普通方法中,this指向在使用的Vue实例", this);
+            console.log("直接用window对象", window);
 
 			var obj = {
 				name:"星星",
