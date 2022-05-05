@@ -77,7 +77,7 @@ export default {
                 });
             }
             is_promise('bingo').then(result => {
-                console.log('promise.then是异步-微任务');
+                console.log('promise.then是异步-微任务', result);
             });
         },
         /*
@@ -94,7 +94,7 @@ export default {
             await this.cause2(guide); // 步骤1获取的id，传给步骤2
             await this.cause3();
             console.log('await-4');
-            return { message: '回调成功' };
+            return { message: '回调成功' };// async自带then回调，而reture返回的值是then里的参数
         },
         cause1(params) {
             console.log('await-1', params);

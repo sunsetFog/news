@@ -9,8 +9,17 @@ export default {
     name: 'jsDemo',
     data(){
         return{
-
+            newArr: [1,1],
+            count: 0
         }
+    },
+    created() {
+        this.bean(100);
+        console.log("递归---数组长度---", this.newArr.length)
+        console.log("递归---数组---", this.newArr)
+        console.log("递归---第100个---", this.newArr[99])
+
+        // console.log("---画好后---", this.fibonacci(100))
     },
     mounted(){
         this.demo4();
@@ -131,6 +140,48 @@ export default {
                 }
             });
             console.log("遍历树", tree);
+        },
+        // 方法一：遍历
+        demo5() {
+            /*
+                第一个值 + 第二个值 = 第三个值
+                1,1,2,3,5,8,*,*,*
+                求第100个？
+            */
+
+            let arr = [1,1]
+            for(let i = 0; i < (100 - 2); i++) {
+                arr.push(arr[i] + arr[i+1])
+                /*
+                    i = 0
+                    arr[2] = arr[0] + arr[1]
+                    arr[2] = 1 + 1 = 2
+                    arr = [1,1,2]
+
+                    i = 1
+                    arr[3] = arr[1] + arr[2]
+                    arr[3] = 1 + 2 = 3
+                    arr = [1,1,2,3]
+
+                    i = 2
+                    arr[4] = arr[2] + arr[3]
+                    arr[4] = 2 + 3 = 5
+                    arr = [1,1,2,3,5]
+                */
+            }
+            console.log("---数组长度---", arr.length)
+            console.log("---数组---", arr)
+            console.log("---第100个---", arr[99])
+        },
+        // 方法一：递归
+        bean(num) {
+            if(this.newArr.length >= num) {
+                return
+            }
+            this.newArr.push(this.newArr[this.count] + this.newArr[this.count+1]);
+            this.count++;
+
+            return this.bean(num);
         }
     }
 }

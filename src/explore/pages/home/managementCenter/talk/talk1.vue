@@ -29,7 +29,7 @@ export default {
                 二. 用浏览器缓存时: 参数2要是数组或对象，请转化成字符串,用时再字符串再转回数组或对象   看src\pages\managementCenter\knowledge\cache.vue
                 三.对接后台不一定用请求头:
                     1. 下载文档：window.open("后台请求url?id="+传参数后台);
-                    2. element图片上传: （查看vue功能集）
+                    2. element图片上传: http应该在子组件里
                 四. rem自动转换，转换不了内联样式(style里的样式),需要手动计算转换
                 五.pc端的自适应如何实现    看src\pages\managementCenter\effect\adaption.vue
                 六.vue的拦截: 路由拦截(看src\main.js)，请求拦截(看src\api\http.js)
@@ -251,6 +251,7 @@ export default {
                 5.按需加载资源
                 6.压缩和模块打包
                 7.图片编码优化
+                8.销毁监听事件，定时器
             */
         },
         demo24(){

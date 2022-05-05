@@ -56,11 +56,6 @@ const login = {
                 console.log('error',err);
             })
             console.log("--routerApple-2-");
-            // 不需要用Promise, async也自带then回调
-            // return new Promise((resolve) => {
-            //     console.log("new Promise是同步任务", params);
-            //     resolve(state.routerList);
-            // });
             return state.routerList;
             
         },
