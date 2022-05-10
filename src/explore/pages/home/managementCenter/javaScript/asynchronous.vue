@@ -19,7 +19,13 @@ export default {
             });
     },
     mounted() {
-        // this.demo2();
+        this.demo3().then(function(res) {
+            // 可以省略then,catch
+            console.log('--仅仅是--', res);
+        })
+        .catch(err => {
+            console.log('--error--', err); //语法错误会触发catch方法
+        });
         // this.comeBack1('参数1', '参数2', function(res){
         //     console.log('最终执行', res);
         // });// 传参3是个方法
@@ -71,9 +77,10 @@ export default {
         作用：保证执行成功后then回调
       */
             function is_promise(value) {
-                return new Promise(resolve => {
+                return new Promise((resolve, reject) => {
                     console.log('new Promise是同步任务', value);
-                    resolve({ message: 'then参数' });
+                    resolve({ message: 'then参数' });// then回调
+                    // reject(res);// catch回调
                 });
             }
             is_promise('bingo').then(result => {
@@ -107,8 +114,12 @@ export default {
         },
         cause3() {
             console.log('await-3');
+        },
+        demo3() {
+            return Promise.resolve("then回调");
+            // return Promise.reject("catch回调");
         }
-    },
+     },
 };
 </script>
 

@@ -24,7 +24,7 @@ service.interceptors.request.use(config => {
     config.headers['token'] = VueCookies.get("token");
     return config
 }, error => {
-    Promise.reject(error)
+    return Promise.reject(error)
 })
 
 // 接口拦截器 (可以控制成功回调和失败回调)
