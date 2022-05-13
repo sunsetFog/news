@@ -23,7 +23,7 @@ import '@/explore/database/index'; // 不能用if动态加载js
 
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
-Vue.use(ElementUI);
+Vue.use(ElementUI, { size: 'small', zIndex: 3000 });
 
 console.log('process.env==', process.env);
 

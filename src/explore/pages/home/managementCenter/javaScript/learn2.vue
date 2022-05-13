@@ -86,21 +86,19 @@ export default {
                 ]
                 }
             ];
-            function recursion(arr, value, callback) {
-                // 参数3callback是个方法
+            function recursion(arr) {
+                arr = arr || [];//退出遍历1. 空数组不会遍历，就不会调用自己了
                 for (let i = 0; i < arr.length; i++) {
-                //   arr[i].hidden = false; // 添加属性，实现改造自身数组
-                //   delete arr[i]["title"]; // 删除属性
-                if (arr[i].code == value) {
-                    callback(arr[i].children); // 有return结束方法作用
-                }
-                recursion(arr[i].children, value, callback); // 传children数组
+                    let item = arr[i];
+                    //   item.hidden = false; // 添加属性，实现改造自身数组
+                    //   delete item["title"]; // 删除属性
+                    if (!item.children) {//退出遍历2. 结束一次循环，就不会调用自己了
+                        continue;
+                    }
+                    recursion(item.children); // 传children数组
                 }
             }
-            // 找出code："10000420"的children
-            recursion(list, "10000420", function(children) {
-                console.log(children);
-            }); // 传参3是个方法
+            recursion(list);
         }
     }
 }

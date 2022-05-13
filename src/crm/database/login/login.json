@@ -67,6 +67,25 @@
         {
             "id": "3",
             "parentId": null,
+            "title": "用户管理",
+            "path": "",
+            "icon": null,
+            "type": 0,
+            "children": [
+                {
+                    "id": "301",
+                    "parentId": 0,
+                    "title": "账号管理",
+                    "path": "/home/userField/userAccount",
+                    "icon": null,
+                    "type": 1,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "parentId": null,
             "title": "权限管理",
             "path": "",
             "icon": null,
@@ -93,7 +112,7 @@
             ]
         },
         {
-            "id": "4",
+            "id": "5",
             "parentId": null,
             "title": "系统设置",
             "path": "",
