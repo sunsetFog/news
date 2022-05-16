@@ -49,7 +49,7 @@ const login = {
                 params: {}
             }).then((res) => {
                 console.log('--Router--', res);
-                params = res.data
+                params = res.data.routerList
                 
                 dispatch('dynamicRouter', params);
             }).catch((err)=>{
