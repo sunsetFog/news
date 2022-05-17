@@ -37,6 +37,9 @@ import store from '@/explore/vuex/index.js';
 import md5 from 'js-md5';
 Vue.prototype.$md5 = md5;
 
+
+sessionStorage.setItem("entry_config", "explore");
+
 // 使用vue-cookies
 import VueCookies from 'vue-cookies';
 Vue.use(VueCookies);

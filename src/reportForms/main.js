@@ -7,7 +7,7 @@ import 'babel-polyfill'
 Vue.config.productionTip = false
 // es6Promise .polyfill();
 
-
+sessionStorage.setItem("entry_config", "reportForms");
 
 import './database/index';
 import '@static/capital/rem.js';

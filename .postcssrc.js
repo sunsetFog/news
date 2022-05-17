@@ -3,7 +3,7 @@ let pxtorem = {
   "rootValue": 16,
   "propList": ["*"]
 }
-pxtorem = process.env.entry_config == './src/reportForms/main.js' ? pxtorem : {};
+pxtorem = process.env.entry_config == 'reportForms' ? pxtorem : {};
 module.exports = {
   "plugins": {
     "postcss-import": {},

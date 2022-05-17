@@ -12,12 +12,11 @@ function resolve (dir) {
 }
 
 
-
 module.exports = {
   context: path.resolve(__dirname, '../'),
   // 入口js
   entry: {
-    app: process.env.entry_config?process.env.entry_config:''
+    app: process.env.entry_config ? './src/' + process.env.entry_config + '/main.js' : ''
   },
   output: {
     path: config.build.assetsRoot,

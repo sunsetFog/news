@@ -94,7 +94,7 @@ export default {
                   path: '/home/world/world',
                   menu_active: '/home/world/world'
                 });
-                that.$store.dispatch('GenerateRoutes',res.menu_list).then(function(result){
+                that.$store.dispatch('routerApple', res.menu_list).then(function(result){
                   console.log('result===', result);
                   sessionStorage.setItem('token', 'txvb-8325487189');
                   that.$router.addRoutes(result);//参数得是数组

@@ -17,7 +17,7 @@ export default {
         }
     },
     mounted(){//可以dom操作
-        this.demo4();
+        this.demo7();
     },
     methods: {
         demo1(){
@@ -343,6 +343,8 @@ export default {
 
             科学计数法    800000 = 8e5       0.00008 = 8e-5 
             */
+           console.log("==", "2" == 2)
+           console.log("===", "2" === 2)
             var a=16;
             var b=3;
             console.log('%',a%b);

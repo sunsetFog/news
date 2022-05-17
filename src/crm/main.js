@@ -43,7 +43,7 @@ Object.keys(filters).forEach(key => {
   Vue.filter(key, filters[key])
 })
 
-
+sessionStorage.setItem("entry_config", "crm");
 
 Vue.config.productionTip = false
 
@@ -70,17 +70,19 @@ router.beforeEach((to, from, next) => {
     store.commit("modifyTab", to.path);
   }
 
-  if (sessionStorage.getItem('token')&&store.getters.addRouters.length == 0) {  //如果未匹配到路由
-    let loginJson = JSON.parse(sessionStorage.getItem('loginJson'));
-    store.dispatch('GenerateRoutes',loginJson).then(function(res){
-      console.log('动态添加菜单路由---',res)
-      router.addRoutes(res);//参数得是数组
-      next({ path: sessionStorage.getItem('currentPath') });
-      // next({ ...to, replace: true })
-    })
-  } else {
-    next();    //如果匹配到正确跳转
-  }
+  // if (sessionStorage.getItem('token')&&store.getters.addRouters.length == 0) {  //如果未匹配到路由
+  //   let loginJson = JSON.parse(sessionStorage.getItem('loginJson'));
+  //   store.dispatch('routerApple',loginJson).then(function(res){
+  //     console.log('动态添加菜单路由---',res)
+  //     router.addRoutes(res);//参数得是数组
+  //     next({ path: sessionStorage.getItem('currentPath') });
+  //     // next({ ...to, replace: true })
+  //   })
+  // } else {
+  //   next();    //如果匹配到正确跳转
+  // }
+
+  next();
     
 }); 
 router.afterEach(transition => {

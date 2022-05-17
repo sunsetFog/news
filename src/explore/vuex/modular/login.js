@@ -48,10 +48,22 @@ const login = {
                 method: 'get',
                 params: {}
             }).then((res) => {
-                console.log('--Router--', res);
-                params = res.data.routerList
                 
-                dispatch('dynamicRouter', params);
+                params = res.data.routerList;
+                let newArr = [];
+                for (let index = 0; index < params.length; index++) {
+                    let item = params[index];
+                    let level = item.id;
+                        level = String(level).charAt(0);
+                    if (sessionStorage.getItem("entry_config") == 'explore' && level == 1) {
+                        newArr.push(item);
+                    } else if (sessionStorage.getItem("entry_config") == 'crm' && level == 2) {
+                        newArr.push(item);
+                    }
+                }
+                console.log('--Router--', newArr);
+                
+                dispatch('dynamicRouter', newArr);
             }).catch((err)=>{
                 console.log('error',err);
             })
@@ -69,18 +81,25 @@ const login = {
                 let item = params[i]
                 item.children = []
                 item.meta = { title: item.metaTitle, key: item.metaKey }
-                item.component = resolve => require([ '@/explore/pages' + item.importPath + '.vue' ],resolve)
+
+                if (sessionStorage.getItem("entry_config") == 'explore') {
+                    item.component = resolve => require([ '@/explore/pages' + item.importPath + '.vue' ],resolve)
+                } else if (sessionStorage.getItem("entry_config") == 'crm') {
+                    item.component = resolve => require([ '@/crm/pages' + item.importPath + '.vue' ],resolve)
+                }
+                
                 item.name = lodash.uniqueId('mark-')
                 item.redirect = item.importPath
 
-
-                if(item.id > 1000000 && item.id < 2000000) {
+                let level = item.id;
+                    level = String(level).charAt(2);
+                if(level == 1) {
                     oneLevel.push(item)
                 }
-                if(item.id > 2000000 && item.id < 3000000) {
+                if(level == 2) {
                     twoLevel.push(item)
                 }
-                if(item.id > 3000000 && item.id < 4000000) {
+                if(level == 3) {
                     threeLevel.push(item)
                 }
             }
@@ -117,7 +136,7 @@ const login = {
                 let item = oneLevel[i]
                 routerArr.push(routerOptions(item))
             }
-            console.log('--routerList--', routerArr)
+            console.log('--routerList--', routerArr);
             state.routerList = routerArr
         },
         dynamicMenu({state, commit, dispatch}, params) {

@@ -6,12 +6,12 @@
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "dev:explore": "cross-env NODE_ENV=development env_config=notes entry_config=./src/explore/main.js webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "dev:reportForms": "cross-env NODE_ENV=development env_config=notes entry_config=./src/reportForms/main.js webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "dev:crm": "cross-env NODE_ENV=development env_config=notes entry_config=./src/crm/main.js webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev:explore": "cross-env NODE_ENV=development env_config=notes entry_config=explore webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev:reportForms": "cross-env NODE_ENV=development env_config=notes entry_config=reportForms webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev:crm": "cross-env NODE_ENV=development env_config=notes entry_config=crm webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "build": "node build/build.js",
-    "build:notes": "cross-env NODE_ENV=production env_config=notes entry_config=./src/explore/main.js node build/build.js"
+    "build:notes": "cross-env NODE_ENV=production env_config=notes entry_config=explore node build/build.js"
   },
   "dependencies": {
     "@goodgeek/vue-json-schema-form": "^1.9.5",
