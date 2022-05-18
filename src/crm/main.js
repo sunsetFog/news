@@ -70,9 +70,9 @@ router.beforeEach((to, from, next) => {
     store.commit("modifyTab", to.path);
   }
 
+  // sessionStorage.getItem('token')
   // if (sessionStorage.getItem('token')&&store.getters.addRouters.length == 0) {  //如果未匹配到路由
-  //   let loginJson = JSON.parse(sessionStorage.getItem('loginJson'));
-  //   store.dispatch('routerApple',loginJson).then(function(res){
+  //   store.dispatch('routerApple').then(function(res){
   //     console.log('动态添加菜单路由---',res)
   //     router.addRoutes(res);//参数得是数组
   //     next({ path: sessionStorage.getItem('currentPath') });
@@ -81,6 +81,21 @@ router.beforeEach((to, from, next) => {
   // } else {
   //   next();    //如果匹配到正确跳转
   // }
+
+
+  // 刷新执行，且不是登录页，且要有token
+    if (from.path == '/' && to.path != '/login') {
+        if (sessionStorage.getItem('token')) {
+          store.dispatch('routerApple').then(function(value) {
+                console.log('--then结束--', value);
+                router.addRoutes(value);
+                // next({ path: sessionStorage.getItem('currentPath') });
+                next();
+            });
+        } else {
+            next({ path: '/login' });
+        }
+    }
 
   next();
     

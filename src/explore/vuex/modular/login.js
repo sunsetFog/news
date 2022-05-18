@@ -106,7 +106,12 @@ const login = {
             console.log('--oneLevel--', oneLevel)
             console.log('--twoLevel--', twoLevel)
             console.log('--threeLevel--', threeLevel)
-            dispatch('dynamicMenu', threeLevel)
+            
+            if (sessionStorage.getItem("entry_config") == 'explore') {
+                dispatch('dynamicMenu', threeLevel)
+            } else if (sessionStorage.getItem("entry_config") == 'crm') {
+                dispatch('dynamicMenu', twoLevel)
+            }
 
             for (let i = 0; i < threeLevel.length; i++) {
                 let item3 = threeLevel[i]
@@ -142,9 +147,11 @@ const login = {
         dynamicMenu({state, commit, dispatch}, params) {
             console.log('--dynamicMenu--', params)
             let menuArr = []
-            let nice =  { key: '', label: '', path: '', icon: require('@static/picture/center/shouyi.png'), effect:[] }
+            let nice =  { key: '', label: '', path: '', icon: require('@static/picture/center/shouyi.png'), children: [] }
 
-            let titleArr = [
+            let titleArr = []
+            if (sessionStorage.getItem("entry_config") == 'explore') {
+                titleArr = [
                     { name: '标签样式', file: 'tagStyle' },
                     { name: 'javaScript', file: 'javaScript' },
                     { name: 'vue知识点', file: 'knowledge' },
@@ -155,12 +162,23 @@ const login = {
                     { name: '拓展知识', file: 'expand' },
                     { name: '面试要谈', file: 'talk' }
                 ]
+            } else if (sessionStorage.getItem("entry_config") == 'crm') {
+                titleArr = [
+                    { name: '首页', file: 'world' },
+                    { name: '季节', file: 'season' },
+                    { name: '用户管理', file: 'customer' },
+                    { name: '权限管理', file: 'jurisdiction' },
+                    { name: '系统设置', file: 'system' }
+                ]
+            }
+
 
             for (let i = 0; i < titleArr.length; i++) {
                 let strip = titleArr[i];
                 let first = JSON.parse(JSON.stringify(nice));
                 first.key = lodash.uniqueId('menu-');
-                first.label = strip.name;
+                first.open_active = false;
+                first.title = strip.name;
 
                 for (let k = 0; k < params.length; k++) {
                     let item = params[k];
@@ -168,9 +186,10 @@ const login = {
                     if(type == strip.file) {
                         let second = JSON.parse(JSON.stringify(nice));
                         second.key = lodash.uniqueId('menu-');
-                        second.label = item.metaTitle;
                         second.path = item.importPath;
-                        first.effect.push(second);
+                        second.open_active = false;
+                        second.title = item.metaTitle;
+                        first.children.push(second);
                     }
                 }
                 menuArr.push(first)

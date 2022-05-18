@@ -17,7 +17,7 @@
         mode="vertical"
         :collapse="isCollapse"
       >
-        <div v-for="(item,index) in addMenu" :key="index+'w'">
+        <div v-for="(item,index) in menuList" :key="index+'w'">
           <el-submenu :index="item.path?item.path:'no_path'+index">
             <template slot="title">
               <i class="el-icon-arrow-right" v-if="!item.open_active&&item.children.length!=0"></i>
@@ -76,7 +76,7 @@ export default {
     };
   },
   created() {
-    console.log("loca===", lodash.uniqueId("contact_"), this.addMenu);
+    console.log("loca===", lodash.uniqueId("contact_"), this.menuList);
     console.log("tabList===", this.tabList);
   },
   watch: {
@@ -90,7 +90,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(["tabList", "addMenu", "menuValue", "tabsValue"])
+    ...mapGetters(["tabList", "menuList", "menuValue", "tabsValue"])
   },
   mounted() {},
   methods: {
@@ -121,9 +121,9 @@ export default {
     openMenu(path) {
       console.log("openMenu", path);
       this.initialization();
-      for (let i = 0; i < this.addMenu.length; i++) {
-        if (path == this.addMenu[i].id) {
-          this.addMenu[i].open_active = true;
+      for (let i = 0; i < this.menuList.length; i++) {
+        if (path == this.menuList[i].id) {
+          this.menuList[i].open_active = true;
         }
       }
       if (path == "/home/world/world") {
@@ -135,8 +135,8 @@ export default {
       this.initialization();
     },
     initialization() {
-      for (let i = 0; i < this.addMenu.length; i++) {
-        this.addMenu[i].open_active = false;
+      for (let i = 0; i < this.menuList.length; i++) {
+        this.menuList[i].open_active = false;
       }
     },
     // 选中菜单
@@ -148,20 +148,20 @@ export default {
       this.$store.commit("modifyTab", path);
       this.$store.commit("menuValue", path);
       this.$router.push({ path: path });
-      for (let i = 0; i < this.addMenu.length; i++) {
+      for (let i = 0; i < this.menuList.length; i++) {
         if (path.indexOf("no_path") != -1 || path == "/home/world/world") {
           this.$store.commit("addPane", {
-            title: this.addMenu[i].title,
-            path: this.addMenu[i].path,
+            title: this.menuList[i].title,
+            path: this.menuList[i].path,
             menu_active: path
           });
           return;
         }
-        for (let j = 0; j < this.addMenu[i].children.length; j++) {
-          if (path == this.addMenu[i].children[j].path) {
+        for (let j = 0; j < this.menuList[i].children.length; j++) {
+          if (path == this.menuList[i].children[j].path) {
             this.$store.commit("addPane", {
-              title: this.addMenu[i].children[j].title,
-              path: this.addMenu[i].children[j].path,
+              title: this.menuList[i].children[j].title,
+              path: this.menuList[i].children[j].path,
               menu_active: path
             });
           }

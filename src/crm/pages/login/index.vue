@@ -87,7 +87,6 @@ export default {
                 data: json
             }).then((res) => {
                 console.log('H-token',res);
-                sessionStorage.setItem('loginJson',JSON.stringify(res.menu_list));
                 sessionStorage.setItem('buttonPermissions',JSON.stringify(res.buttonPermissions));
                 that.$store.commit("addPane", {
                   title: '首页',
