@@ -2,7 +2,7 @@
 <template>
 <section :style="{height: sunHeight+'px'}" class="sun-water">
     <div style="width: 100%;height: 100px;">
-        <el-button v-operation-auth="'iadmin_message'" @click="sunSearch()" style="min-width: 80px;margin-left: 5px;" v-for="(item, index) in crmBtn" :key="index">
+        <el-button @click="sunSearch()" style="min-width: 80px;margin-left: 5px;" v-for="(item, index) in crmBtn" :key="index">
             <i :class="item.icon" style="margin-right: 8px;"></i>{{item.label}}
         </el-button>
     </div>

@@ -48,12 +48,16 @@ sessionStorage.setItem("entry_config", "crm");
 Vue.config.productionTip = false
 
 
+// 使用vue-cookies
+import VueCookies from 'vue-cookies';
+Vue.use(VueCookies);
+
 
 
 router.beforeEach((to, from, next) => {
   console.log('beforeEach--3983', to,from);
   document.title = to.meta.title;
-  sessionStorage.setItem('currentPath',to.path);
+
   if(to.path == '/login'){
     sessionStorage.removeItem('token');
     sessionStorage.removeItem('bread');
@@ -70,22 +74,10 @@ router.beforeEach((to, from, next) => {
     store.commit("modifyTab", to.path);
   }
 
-  // sessionStorage.getItem('token')
-  // if (sessionStorage.getItem('token')&&store.getters.addRouters.length == 0) {  //如果未匹配到路由
-  //   store.dispatch('routerApple').then(function(res){
-  //     console.log('动态添加菜单路由---',res)
-  //     router.addRoutes(res);//参数得是数组
-  //     next({ path: sessionStorage.getItem('currentPath') });
-  //     // next({ ...to, replace: true })
-  //   })
-  // } else {
-  //   next();    //如果匹配到正确跳转
-  // }
-
 
   // 刷新执行，且不是登录页，且要有token
     if (from.path == '/' && to.path != '/login') {
-        if (sessionStorage.getItem('token')) {
+        if (VueCookies.get('token')) {
           store.dispatch('routerApple').then(function(value) {
                 console.log('--then结束--', value);
                 router.addRoutes(value);

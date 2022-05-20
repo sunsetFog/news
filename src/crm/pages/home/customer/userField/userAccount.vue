@@ -2,6 +2,7 @@
   <section id="userAccount">
     <section class="header-box">
         <el-button type="primary" @click="addWay()">添加</el-button>
+        <el-button type="primary" v-operation-auth="'user:add'">二哈</el-button>
     </section>
     <el-table :data="tableData" style="width: 100%" height="250">
       <el-table-column width="50" type="index" label="序号"></el-table-column>

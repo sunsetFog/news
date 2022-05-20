@@ -2,7 +2,7 @@
     <section id="download">
         <el-button @click="downloadTxt()">下载添加内容的文本</el-button>
         <el-button @click="downloadFile('@static/capital/rem.js')">下载静态资源</el-button>
-        <el-button type="primary" icon="el-icon-download" @click="exportExcel()" v-operation-auth="'ly-002'">导出Excel</el-button>
+        <el-button type="primary" icon="el-icon-download" @click="exportExcel()">导出Excel</el-button>
         <!-- 
             编辑，保存，重置，删除，批量删除，***查看，附件上传，查询，提交，新增，文件预览
 

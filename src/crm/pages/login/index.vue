@@ -32,13 +32,13 @@ export default {
   data() {
     var phonetest = /^1(3|4|5|7|8)\d{9}$/;
     var phonerules = (rule, value, callback) => {
-      if (!value) {
-        callback(new Error("请输入手机号"));
-      } else if (!phonetest.test(value)) {
-        callback(new Error("请输入正确的手机号"));
-      } else {
+      // if (!value) {
+      //   callback(new Error("请输入手机号"));
+      // } else if (!phonetest.test(value)) {
+      //   callback(new Error("请输入正确的手机号"));
+      // } else {
         callback();
-      }
+      // }
     };
 
     var specialReg = /[^A-z0-9]/;
@@ -54,8 +54,8 @@ export default {
 
     return {
       form_data: {
-        phone: "17817836856",
-        pwd: "4165456421",
+        phone: "",
+        pwd: "",
       },
       form_rules: {
         phone: [{ required: true, validator: phonerules, trigger: "blur" }],
@@ -77,28 +77,31 @@ export default {
       that.$refs.refForm.validate(function (valid) {
         if (valid) {
 
-            let json = {
-                username: "admin",
-                password: "123456"
+            let params = {
+                username: that.form_data.phone,
+                password: that.form_data.pwd
             }
+
             that.$apihttp({
-                url: 'http://mock-api-success.com/crm/login',
+                url: process.env.core_url + '/sky/user/login',
                 method: 'post',
-                data: json
+                params: params
             }).then((res) => {
-                console.log('H-token',res);
-                sessionStorage.setItem('buttonPermissions',JSON.stringify(res.buttonPermissions));
-                that.$store.commit("addPane", {
+                console.log('--login--', res);
+                if(res.code == "200") {
+                  that.$store.commit("addPane", {
                   title: '首页',
                   path: '/home/world/world',
                   menu_active: '/home/world/world'
                 });
-                that.$store.dispatch('routerApple', res.menu_list).then(function(result){
-                  console.log('result===', result);
-                  sessionStorage.setItem('token', 'txvb-8325487189');
-                  that.$router.addRoutes(result);//参数得是数组
-                  that.$router.push({path: '/home/world/world'});
-                })
+
+                    that.$cookies.set("token", res.data.token, "1d");
+                    that.$store.dispatch('routerApple').then(function(value){
+                        console.log("--then结束--", value);
+                        that.$router.addRoutes(value);
+                        that.$router.push({path: '/home/world/world'});
+                    })
+                } 
             }).catch((err)=>{
                 console.log('error',err);
             })

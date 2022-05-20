@@ -48,6 +48,7 @@ const login = {
                 method: 'get',
                 params: {}
             }).then((res) => {
+                sessionStorage.setItem('buttonPermissions',JSON.stringify(res.data.operationList));
                 
                 params = res.data.routerList;
                 let newArr = [];

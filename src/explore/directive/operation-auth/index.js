@@ -21,22 +21,22 @@ const install = function (Vue) {
 
             let buttonPermissions = JSON.parse(sessionStorage.getItem('buttonPermissions')) || [];
             for(let i=0;i<buttonPermissions.length;i++){
-                if(buttonPermissions[i].code == key){
-                    if(buttonPermissions[i].disabled == 'Y'){
+                if(buttonPermissions[i].operation_code == key){
+                    if(buttonPermissions[i].disabled){
                         el.style.visibility = 'visible';
                         el.style.cursor = 'not-allowed';
                         el.style.color = '#c0c4cc';
                         el.setAttribute('disabled', true);
                         break
-                    }else if(buttonPermissions[i].disabled == 'N'){
+                    }else if(!buttonPermissions[i].disabled && !buttonPermissions[i].hidden){
                         el.style.visibility = 'visible';
                         el.setAttribute('disabled', false);
                         break
-                    }else if(buttonPermissions[i].displayed == 'Y'){
-                        el.style.visibility = 'visible';
-                        break
-                    }else if(buttonPermissions[i].displayed == 'N'){
+                    }else if(buttonPermissions[i].hidden){
                         el.style.visibility = 'hidden';
+                        break
+                    }else if(!buttonPermissions[i].hidden){
+                        el.style.visibility = 'visible';
                         break
                     }else{
                         el.parentNode.removeChild(el)
