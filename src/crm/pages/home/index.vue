@@ -18,7 +18,7 @@
         :collapse="isCollapse"
       >
         <div v-for="(item,index) in menuList" :key="index+'w'">
-          <el-submenu :index="item.path?item.path:'no_path'+index">
+          <el-submenu :index="'sign'+index">
             <template slot="title">
               <i class="el-icon-arrow-right" v-if="!item.open_active&&item.children.length!=0"></i>
               <i class="el-icon-arrow-down" v-if="item.open_active&&item.children.length!=0"></i>
@@ -119,16 +119,10 @@ export default {
     },
     // 展开菜单
     openMenu(path) {
+      let index = Number(path.split("sign")[1])
       console.log("openMenu", path);
       this.initialization();
-      for (let i = 0; i < this.menuList.length; i++) {
-        if (path == this.menuList[i].id) {
-          this.menuList[i].open_active = true;
-        }
-      }
-      if (path == "/home/world/world") {
-        this.flower(path);
-      }
+      this.menuList[index].open_active = true;
     },
     closeMenu(path) {
       console.log("closeMenu", path);

@@ -49,8 +49,9 @@
 <style lang="less" scoped>
 #nicePager{
   width: 100%;
-  height: 45px;
-  padding: 6px 0 0 0;
+  height: 50px;
+  display: flex;
+  align-items: center;
 }
 </style>
 

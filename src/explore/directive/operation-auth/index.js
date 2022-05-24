@@ -13,7 +13,7 @@ const install = function (Vue) {
     Vue.directive('operation-auth', {// v-operation-auth
         // 只调用一次，指令与元素绑定时调用
         bind: function (el, binding, vnode) {
-            console.log('---bind---', el, binding, vnode);
+            // console.log('---bind---', el, binding, vnode);
             const key = binding.value
             if (!key) {// 不带值，结束方法
                 return
@@ -47,19 +47,19 @@ const install = function (Vue) {
         },
         // 被绑定元素插入父节点时调用
         inserted(el, binding, vnode) {
-            console.log('---inserted---', el, binding, vnode);
+            // console.log('---inserted---', el, binding, vnode);
         },
         // 更新时调用
         update(el, binding, vnode) {
-            console.log('---update---', el, binding, vnode);
+            // console.log('---update---', el, binding, vnode);
         },
         // 更新后调用
         componentUpdated(el, binding, vnode) {
-            console.log('---componentUpdated---', el, binding, vnode);
+            // console.log('---componentUpdated---', el, binding, vnode);
         },
         // 只调用一次，指令与元素解绑时调用
         unbind(el, binding, vnode) {
-            console.log('---unbind---', el, binding, vnode);
+            // console.log('---unbind---', el, binding, vnode);
         }
     })
 }
