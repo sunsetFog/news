@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import upload1 from './upload1.vue';
+import upload1 from '@/explore/pages/home/managementCenter/effect/upload/upload1.vue';
 import upload2 from './upload2.vue';
 import upload3 from './upload3.vue';
 import customAvatar from './customAvatar.vue';

@@ -46,7 +46,7 @@ export default {
             })
 
             console.log('-handleAvatarSuccess-', res, file, '---', this.imageUrl);
-            this.download_url = this.yuming + '/sky' + res.data;
+            this.download_url = res.data;
             // res是后台返回的数据
             if (res.result == 1) {
                 this.imageUrl = res.data.img;
