@@ -8,7 +8,7 @@
         <div slot="title">邮件</div>
         <div class="varieties-content">
             <div class="mail-content">
-                <div class="mail-example" v-for="(item,index) in mail_list.slice((pagination.page-1)*pagination.pagesize,pagination.page*pagination.pagesize)" @click="consult(index,false)">
+                <div class="mail-example" v-for="(item,index) in mail_list.slice((pagingObj.pageNum-1)*pagingObj.pageSize,pagingObj.pageNum*pagingObj.pageSize)" @click="consult(index,false)">
                     <div class="picture-example">
                         <img v-show="!item.is_readed" src="@static/picture/recharge/weidu.png"/>
                         <img v-show="item.is_readed" src="@static/picture/recharge/yidu.png"/>
@@ -24,7 +24,7 @@
                 <div class="no-time" v-show="no_have">暂无邮件</div>
              </div>
              <div class="page-example">
-                <pagination :pagination="pagination" @emitWay="getJson"></pagination>
+                <pagination :pagingObj="pagingObj" @emitWay="getJson"></pagination>
              </div>
         </div>
         <div slot="footer" class="example-footer">
@@ -41,7 +41,7 @@ export default {
         return{
             rechargeActive: false,
             mail_list: [],
-            pagination: {page: 1,pagesize: 10,total: 0},
+            pagingObj: {pageNum: 1,pageSize: 10,total: 0},
             no_have: false
         }
     },
@@ -77,7 +77,7 @@ export default {
 
                 that.mail_list = res.list;
 
-                that.pagination.total = res.totalrows;
+                that.pagingObj.total = res.totalrows;
                 if(that.mail_list.length==0){
                     that.no_have = true;
                 }else{

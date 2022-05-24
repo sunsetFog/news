@@ -187,7 +187,7 @@
         </el-table-column>
       </el-table>
 
-      <pagination :pagination="queryData" :pageStep="[10,15]" @emitWay="sunQuery"></pagination>
+      <pagination :pagingObj="queryData" :pageStep="[10,15]" @emitWay="sunQuery"></pagination>
 </section>
 </template>
 <script>
@@ -326,7 +326,7 @@ export default {
           { sex: '女', address: "上海市普陀区金沙江路", date: "2017-08-16 ~ 2017-08-20", country: "中国", province: "上海", Operation: "操作" }
         ]
       };
-      let list = data.list.slice((this.queryData.page-1)*this.queryData.pagesize,this.queryData.page*this.queryData.pagesize)
+      let list = data.list.slice((this.queryData.pageNum-1)*this.queryData.pageSize,this.queryData.pageNum*this.queryData.pageSize)
       this.queryData.total = data.total
       this.tableData.splice(0);
       for (const item of list) {

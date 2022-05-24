@@ -24,7 +24,7 @@
                 <div class="no-time" v-show="no_have">暂无公告</div>
              </div>
              <div class="page-example">
-                <pagination :pagination="pagination" @emitWay="getJson"></pagination>
+                <pagination :pagingObj="pagingObj" @emitWay="getJson"></pagination>
              </div>
         </div>
         <div slot="footer" class="example-footer">
@@ -41,7 +41,7 @@ export default {
         return{
             rechargeActive: false,
             mail_list: [],
-            pagination: {page: 1,pagesize: 25,total: 0},
+            pagingObj: {pageNum: 1,pageSize: 25,total: 0},
             no_have: false
         }
     },
@@ -66,7 +66,7 @@ export default {
                     // let yearData = yearArr[0]+'.'+yearArr[1]+'.'+yearArr[2]+' '+time.split(' ')[0];
                     // res.list[i].created_at = yearData;
                 }
-                if(that.pagination.page==1){
+                if(that.pagingObj.pageNum==1){
                     if(9<=res.list.length-1){
                         var start = 0;
                         var end = 9;
@@ -74,7 +74,7 @@ export default {
                         var start = 0;
                         var end = res.list.length-1;
                     }
-                }else if(that.pagination.page==2){
+                }else if(that.pagingObj.pageNum==2){
                     if(19<=res.list.length-1){
                         var start = 10;
                         var end = 19;
@@ -82,7 +82,7 @@ export default {
                         var start = 10;
                         var end = res.list.length-1;
                     }
-                }else if(that.pagination.page==3){
+                }else if(that.pagingObj.pageNum==3){
                     if(29<=res.list.length-1){
                         var start = 20;
                         var end = 29;
@@ -90,7 +90,7 @@ export default {
                         var start = 20;
                         var end = res.list.length-1;
                     }
-                }else if(that.pagination.page==4){
+                }else if(that.pagingObj.pageNum==4){
                     if(39<=res.list.length-1){
                         var start = 30;
                         var end = 39;
@@ -98,7 +98,7 @@ export default {
                         var start = 30;
                         var end = res.list.length-1;
                     }
-                }else if(that.pagination.page==5){
+                }else if(that.pagingObj.pageNum==5){
                     if(49<=res.list.length-1){
                         var start = 40;
                         var end = 49;
@@ -111,11 +111,11 @@ export default {
                 for(let k=start;k<=end;k++){
                     that.mail_list.push(res.list[k]);
                 }
-                that.pagination.pagesize = 10;
+                that.pagingObj.pageSize = 10;
                 if(res.totalrows<=50){
-                    that.pagination.total = res.totalrows;
+                    that.pagingObj.total = res.totalrows;
                 }else{
-                    that.pagination.total = 50;
+                    that.pagingObj.total = 50;
                 }
                 if(that.mail_list.length==0){
                     that.no_have = true;

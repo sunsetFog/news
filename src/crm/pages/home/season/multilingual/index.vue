@@ -17,7 +17,7 @@
         ----{{$t("button.assignRole")}}-----{{$t("home.title")}}-----
             <el-button @click="translate('zh')">中文翻译</el-button>----<el-button@click="translate('en')">英文翻译</el-button>
         <h3>ui组件多语言翻译:</h3>
-        <pagination :pagination="queryData" :pageStep="[10,15]" @emitWay="sunQuery"></pagination>
+        <pagination :pagingObj="queryData" :pageStep="[10,15]" @emitWay="sunQuery"></pagination>
     </section>
 </template>
 
@@ -29,8 +29,8 @@ export default {
     data(){
         return {
             queryData: {
-                page: 1,
-                pagesize: 15,
+                pageNum: 1,
+                pageSize: 15,
                 total: 0
             }
         }

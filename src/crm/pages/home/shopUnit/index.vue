@@ -4,7 +4,7 @@
       <el-button type="primary" @click="addWay('新建用户')">添加</el-button>
       <el-button type="primary" v-operation-auth="'user:add'">二哈</el-button>
     </section>
-    <el-table :data="tableData" style="width: 100%" height="450">
+    <el-table :data="tableData" border style="width: 100%" height="450">
       <el-table-column width="50" type="index" label="序号"></el-table-column>
       <el-table-column prop="name" label="商品名" min-width="120"></el-table-column>
       <el-table-column min-width="180">
@@ -27,7 +27,7 @@
       </el-table-column>
     </el-table>
 
-    <pagination :pagination="pagination" @emitWay="getJson"></pagination>
+    <pagination :pagingObj="pagingObj" @emitWay="getJson"></pagination>
 
     <el-dialog
       :title="dialog_title"
@@ -69,7 +69,7 @@ export default {
             },
             rules: {},
             tableData: [],
-            pagination: {page: 1, pagesize: 10, total: 60},
+            pagingObj: { pageNum: 1, pageSize: 10, total: 60},
         };
     },
     created() {

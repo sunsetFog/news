@@ -3,11 +3,11 @@
     <el-pagination
       @size-change="sizeChange"
       @current-change="currentChange"
-      :current-page="pagination.page"
+      :current-page="pagingObj.pageNum"
       :page-sizes="pageStep"
-      :page-size="pagination.pagesize"
+      :page-size="pagingObj.pageSize"
       layout="total, sizes, prev, pager, next, jumper"
-      :total="pagination.total">
+      :total="pagingObj.total">
     </el-pagination>
 </section>
 </template>
@@ -15,7 +15,7 @@
   export default {
     name: 'page',
     props: {
-      pagination: {
+      pagingObj: {
         type: Object,
         default: function(){
           return {}
@@ -35,12 +35,12 @@
     methods: {
       sizeChange (val) {
         //console.log('pagesize+++', val)
-        this.pagination.pagesize = val
+        this.pagingObj.pageSize = val
         this.$emit('emitWay')
       },
       currentChange (val) {
         //console.log('currentPage++', val)
-        this.pagination.page = val
+        this.pagingObj.pageNum = val
         this.$emit('emitWay')
       }
     }

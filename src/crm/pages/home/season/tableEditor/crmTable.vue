@@ -41,8 +41,8 @@ export default {
             queryData: {
                 bankName: '',
                 bankNameCond: 'cn',
-                page: 1,
-                pagesize: 15,
+                pageNum: 1,
+                pageSize: 15,
                 total: 0
             },
             crmBtn: [
