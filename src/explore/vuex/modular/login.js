@@ -179,7 +179,6 @@ const login = {
                 let strip = titleArr[i];
                 let first = JSON.parse(JSON.stringify(nice));
                 first.key = lodash.uniqueId('menu-');
-                first.open_active = false;
                 first.title = strip.name;
 
                 for (let k = 0; k < params.length; k++) {
@@ -189,7 +188,6 @@ const login = {
                         let second = JSON.parse(JSON.stringify(nice));
                         second.key = lodash.uniqueId('menu-');
                         second.path = item.importPath;
-                        second.open_active = false;
                         second.title = item.metaTitle;
                         first.children.push(second);
                     }

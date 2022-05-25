@@ -16,8 +16,7 @@
         <!-- index绑定的字符串是@open事件的参数 -->
         <el-submenu :index="'sign'+index">
           <template slot="title">
-            <i class="el-icon-arrow-right" v-if="!item.open_active&&item.children.length!=0"></i>
-            <i class="el-icon-arrow-down" v-if="item.open_active&&item.children.length!=0"></i>
+            <i class="el-icon-menu"></i>
             <span>{{item.title}}</span>
           </template>
           <el-menu-item-group v-if="item.children.length!=0">
@@ -64,10 +63,6 @@ export default {
         that.$store.commit('addTabs', tabArr);
         that.$store.commit("menuOfValue", sessionStorage.getItem('menu_value'));
         that.$store.commit("tabsOfValue", sessionStorage.getItem('tabs_value'));
-
-
-        let index = sessionStorage.getItem("menu_index");
-        that.menuList[index].open_active = true;
     },
     methods: {
         // 选中菜单
@@ -104,29 +99,25 @@ export default {
         // 展开菜单
         openMenu(index) {
             index = Number(index.split('sign')[1]);
-            sessionStorage.setItem("menu_index", index);
             console.log('openMenu', index);
-            this.initMenu();
-            this.menuList[index].open_active = true;
         },
         // 关闭菜单
         closeMenu(path) {
             console.log('closeMenu', path);
-            this.initMenu();
-        },
-        // 初始化菜单
-        initMenu() {
-            for (let i = 0; i < this.menuList.length; i++) {
-                this.menuList[i].open_active = false;
-            }
-        },
+        }
     },
 };
 </script>
 
 <style lang="less" scoped>
 #menuDesign {
-
+    /*水平折叠收起菜单,隐藏文字和标签*/
+    /deep/.el-menu--collapse .el-submenu__title span {
+      display: none;
+    }
+    /deep/.el-menu--collapse .el-submenu__title .el-submenu__icon-arrow {
+        display: none;
+    }
 }
 </style>
 

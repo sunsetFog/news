@@ -70,6 +70,7 @@ export default {
         box-shadow: 0 1px 2px #999999;
         display: flex;
         flex-direction: column;
+        overflow: hidden;
         .logo-name {
             width: 100%;
             height: 50px;

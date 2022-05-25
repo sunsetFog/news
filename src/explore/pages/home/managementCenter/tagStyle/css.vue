@@ -41,6 +41,7 @@
                     div:first-child{}  --- div里第一个子元素
                     div:last-child{}  --- div里最后子元素
                     div:nth-of-type(2){}  --- div里第几个子元素--- 实用
+                    div:not([class]){} 没有class属性的元素设置为...
                 伪元素选择器:
                     p::first-line{} ---- 内容首行添加样式
                     div::before {content: url(smiley.gif);} ---- div内容之前插入一幅图像

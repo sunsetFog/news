@@ -3,8 +3,8 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 Vue.use(Vuex);
 
-import menu from './panama/menu.js'
-import tabs from './panama/tabs.js'
+import menu from './modular/menu.js'
+import tabs from './modular/tabs.js'
 import login from '@/explore/vuex/modular/login.js'
 
 
