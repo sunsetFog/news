@@ -63,17 +63,6 @@ router.beforeEach((to, from, next) => {
     sessionStorage.removeItem('tabList');
   }
 
-  if(from.path == '/' && sessionStorage.getItem('tabList')){ // 刷新判断
-    let tabArr = JSON.parse(sessionStorage.getItem('tabList'));
-    tabArr = tabArr.filter(function(item){
-      return item.path == to.path;
-    })
-    store.commit('addTabs',tabArr);
-    store.commit("menuOfValue", sessionStorage.getItem('menu_value'));
-    store.commit("tabsOfValue", sessionStorage.getItem('tabs_value'));
-  }
-
-
   // 刷新执行，且不是登录页，且要有token
     if (from.path == '/' && to.path != '/login') {
         if (VueCookies.get('token')) {

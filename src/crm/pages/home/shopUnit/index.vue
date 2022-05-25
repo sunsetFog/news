@@ -23,11 +23,7 @@
       <el-table-column min-width="1080">
         <template slot="header">商品图片</template>
         <template slot-scope="scope">
-          <viewer :images="[scope.row.imgUrl]">
-            <span v-for="(item,index) in [scope.row.imgUrl]" :key="index">
-              <img style="width: 30px;height: 25px;margin-right:8px;" v-if="item" :src="item">
-            </span>
-          </viewer>
+          <previewPictures :photoList="[scope.row.imgUrl]"></previewPictures>
         </template>
       </el-table-column>
 
@@ -68,10 +64,11 @@
 
 <script>
 import upload1 from '@/explore/pages/home/managementCenter/effect/upload/upload1.vue';
+import previewPictures from '@/explore/pages/home/managementCenter/plugin/previewPictures.vue';
 import pagination from '@/explore/components/pagination.vue';
 export default {
     name: 'shopUnit',
-    components: { upload1, pagination },
+    components: { upload1, pagination, previewPictures },
     data() {
         return {
             queryData: {

@@ -1,9 +1,11 @@
 <template>
     <section id="previewPictures">
-        <viewer :images="photo">
+        <viewer :images="photoList">
             <img
-                v-for="(src,index) in photo"
-                :src="src"
+                :style="{ width: imgwh, height: imgwh }"
+                v-for="(item,index) in photoList"
+                :src="item"
+                v-if="item"
                 :key="index"
             />
         </viewer>
@@ -19,13 +21,27 @@ main.js全局引入了
 */
 export default {
     name: "previewPictures",
+    props: {
+        photoList: {
+            type: Array,
+            default: function() {
+                return [
+                    require('@static/reportForms/image/AheadVenus.png'),
+                    require('@static/reportForms/image/sale.png'),
+                    require('@static/reportForms/image/invoice.png')
+                ]
+            }
+        },
+        imgwh: {
+            type: String,
+            default: function() {
+                return '40px';
+            }
+        }
+    },
     data () {
         return {
-            photo: [
-                require('@static/reportForms/image/AheadVenus.png'),
-                require('@static/reportForms/image/sale.png'),
-                require('@static/reportForms/image/invoice.png')
-            ]
+
         }
     },
     methods: {
@@ -35,7 +51,14 @@ export default {
 </script>
 
 <style lang="less" scoped>
-
+#previewPictures {
+    img {
+        margin-right: 10px;
+    }
+    img:last-child{
+       margin-right: 0px;
+    }
+}
 </style>
 
 

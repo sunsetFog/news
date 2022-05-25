@@ -1,6 +1,5 @@
 <template>
   <section id="menuDesign">
-      --{{menuValue}}--
     <el-menu
       @select="selectMenu"
       @open="openMenu"
@@ -55,6 +54,21 @@ export default {
     computed: {
         ...mapGetters(['menuList', 'menuValue'])
     },
+    created() {
+        // 刷新初始化赋值
+        let that = this;
+        let tabArr = JSON.parse(sessionStorage.getItem('tabList'));
+        tabArr = tabArr.filter(function(item){
+            return item.path == that.$route.path;
+        })
+        that.$store.commit('addTabs', tabArr);
+        that.$store.commit("menuOfValue", sessionStorage.getItem('menu_value'));
+        that.$store.commit("tabsOfValue", sessionStorage.getItem('tabs_value'));
+
+
+        let index = sessionStorage.getItem("menu_index");
+        that.menuList[index].open_active = true;
+    },
     methods: {
         // 选中菜单
         selectMenu(key) {
@@ -88,9 +102,10 @@ export default {
             }
         },
         // 展开菜单
-        openMenu(path) {
-            let index = Number(path.split('sign')[1]);
-            console.log('openMenu', path);
+        openMenu(index) {
+            index = Number(index.split('sign')[1]);
+            sessionStorage.setItem("menu_index", index);
+            console.log('openMenu', index);
             this.initMenu();
             this.menuList[index].open_active = true;
         },
@@ -111,31 +126,7 @@ export default {
 
 <style lang="less" scoped>
 #menuDesign {
-    /deep/.el-menu {
-            flex: 1;
-        }
-        /*由于 element-ui 的<el-menu>标签本身希望里面嵌套的是<el-menu-item>,<el-submenu>,<el-menu-item-group>之一，但是却嵌套了<div>,而导致收折就隐藏不了文字*/
-        /*隐藏文字*/
-        /deep/.el-menu--collapse .el-submenu__title span {
-            display: none;
-        }
-        /*隐藏 > */
-        /deep/.el-menu--collapse .el-submenu__title .el-submenu__icon-arrow {
-            display: none;
-        }
 
-        /*菜单关闭*/
-        /deep/.el-submenu > .el-submenu__title .el-submenu__icon-arrow {
-            -webkit-transform: rotateZ(-90deg);
-            -ms-transform: rotate(-90deg);
-            transform: rotateZ(-90deg);
-        }
-        /*菜单展开*/
-        /deep/.el-submenu.is-opened > .el-submenu__title .el-submenu__icon-arrow {
-            -webkit-transform: rotateZ(0deg);
-            -ms-transform: rotate(0deg);
-            transform: rotateZ(0deg);
-        }
 }
 </style>
 

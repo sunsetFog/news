@@ -85,21 +85,13 @@
         <el-table-column min-width="180">
           <template slot="header"> 移动入口/详情头部图 </template>
           <template slot-scope="scope">
-            <viewer :images="[scope.row.appIndexImg, scope.row.appHeadImg]">
-              <span v-for="(item,index) in [scope.row.appIndexImg, scope.row.appHeadImg]" :key="index">
-                <img style="width: 30px;height: 25px;margin-right:8px;" v-if="item" :src="item" />
-              </span>
-            </viewer>
+            <previewPictures :photoList="[scope.row.appIndexImg, scope.row.appHeadImg]"></previewPictures>
           </template>
         </el-table-column>
         <el-table-column min-width="180">
           <template slot="header"> PC入口/详情头部图 </template>
           <template slot-scope="scope">
-              <viewer :images="[scope.row.pcIndexImg, scope.row.pcHeadImg]">
-                <span v-for="(item,index) in [scope.row.pcIndexImg, scope.row.pcHeadImg]" :key="index">
-                  <img style="width: 30px;height: 25px;margin-right:8px;" v-if="item" :src="item" />
-                </span>
-            </viewer>
+            <previewPictures :photoList="[scope.row.pcIndexImg, scope.row.pcHeadImg]"></previewPictures>
           </template>
         </el-table-column>
         <el-table-column min-width="100">
@@ -424,6 +416,7 @@
 </template>
 
 <script>
+import previewPictures from '@/explore/pages/home/managementCenter/plugin/previewPictures.vue';
 // import API from "@/api/port/api";
 import Sortable from 'sortablejs'
 import uploadMixin from "./uploadMixin.js";
@@ -431,7 +424,7 @@ import vueditor from "./wangEditor.vue"
 export default {
   name: "activityManagement",
   mixins: [uploadMixin],
-  components: { vueditor },
+  components: { vueditor, previewPictures },
   data() {
     let that = this
     var validateDe1 = (rule, value, callback) => {
