@@ -164,9 +164,9 @@ router.beforeEach((to, from, next) => {
         }
     }
 
-    // if (to.path == '/login') { // 登录页面，删除token缓存
-    //     sessionStorage.removeItem('token');
-    // }
+    if (to.path == '/login') { // 登录页面，删除token缓存
+        VueCookies.remove("token");
+    }
     // // to.path != '/login' 判断要加这个，否则会死循环
     // if (to.path != '/login' && !sessionStorage.getItem('token')) { // 检查有无token，无则跳回登录
     //   next({path: '/login'}); // next页面跳转

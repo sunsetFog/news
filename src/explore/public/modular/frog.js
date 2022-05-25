@@ -57,13 +57,6 @@ const comic = {
     isMoblie: function (value) {
 		return !/^1\d{10}$/.test(value);
     },
-    //是否有某值
-    judgeToken(){
-        if(!sessionStorage.getItem('token')){
-            Message.error('请先登录');
-            return false;
-        }
-    },
     //当前时间转时间戳（精确到毫秒）
     timeStamp(){
         return new Date().getTime();

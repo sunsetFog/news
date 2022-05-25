@@ -228,7 +228,10 @@ export default {
             this.cover_height = cover + 'px';
         },
         judgeToken() {
-            this.$means.judgeToken();
+            if(!this.$cookies.get("token")){
+                this.$message.error('请先登录');
+                return false;
+            }
         },
         hostMeans(value, response, count) {
             if (value == 'managebank') {
@@ -406,7 +409,7 @@ export default {
                 that.account_number = '';
                 that.password_number = '';
                 that.safeActive = true;
-                sessionStorage.removeItem('token');
+                that.$cookies.remove("token");
                 that.cover_active = true;
                 that.coverMeans();
             });
@@ -445,15 +448,6 @@ export default {
         },
         lineMeans(index) {
             this.$message.success('敬请期待！');
-            // this.$means.judgeToken();
-            // if (index == 2 && this.$means.judgeToken() != false) {
-            //   this.$message.success("敬请期待！");
-            //   // this.$router.push({ path: "/line" });
-            // }else if (index == 1 && this.$means.judgeToken() != false) {
-            //   this.$router.push({ path: "/download" });
-            // }else{
-            //   this.$message.success("敬请期待！");
-            // }
         },
     },
 };

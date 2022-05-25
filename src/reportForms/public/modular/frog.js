@@ -61,12 +61,6 @@ const comic = {
     trim(str) {  //str表示要转换的字符串
         return str.replace(/\n|\r\n/g,"<br/>");
     },
-    judgeToken(){
-        if(!sessionStorage.getItem('token')){
-            Message.error('请先登录');
-            return false;
-        }
-    },
     //当前时间转时间戳（精确到毫秒）
     timeStamp(){
         return new Date().getTime();

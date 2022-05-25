@@ -59,8 +59,7 @@ router.beforeEach((to, from, next) => {
   document.title = to.meta.title;
 
   if(to.path == '/login'){
-    sessionStorage.removeItem('token');
-    sessionStorage.removeItem('bread');
+    VueCookies.remove("token");
     sessionStorage.removeItem('tabList');
   }
 
@@ -69,9 +68,9 @@ router.beforeEach((to, from, next) => {
     tabArr = tabArr.filter(function(item){
       return item.path == to.path;
     })
-    store.commit('modifyTab',tabArr);
-    store.commit("menuValue", to.path);
-    store.commit("modifyTab", to.path);
+    store.commit('addTabs',tabArr);
+    store.commit("menuOfValue", sessionStorage.getItem('menu_value'));
+    store.commit("tabsOfValue", sessionStorage.getItem('tabs_value'));
   }
 
 
