@@ -369,8 +369,12 @@ export default {
             console.log('++u',u,m);//u为10，m为-5   这里先算u=u+1，再算m=5-10
         },
         demo8(){
-            //流程控制
-            // 成立就不会往下执行else if，可以return一起用，但return是结束方法，与if无关
+            /*
+                流程控制
+                if...else if...else 语句只执行一个，其他不执行
+                可以有若干个 else if 语句
+                可以return一起用，但return是结束方法，与if无关
+            */
             if(true){
                 console.log("if00");
             }else if(true){
@@ -386,7 +390,7 @@ export default {
 			switch(k){
 				case 5:
                     console.log("小于6");
-				    break;//break结束以下流程,如果不使用break，不管上面一个条件是否成立都继续向下判断
+				    break;//break结束以下流程,如果不使用break，上面条件成立也往下执行判断
 				case 0:
                     console.log("小于5");
 				    break;
@@ -398,12 +402,14 @@ export default {
             }
             // 无需判断，直接遍历
             var arr = [1,2,3,4,5,6];
+            // 快捷键：敲for显示提示，选第二个
             for(let i=0;i<arr.length;i++){
-                if(arr[i] == 3){
-                    break;//直接终止循环
-                }
-                if(arr[i] == 3){
+                let item = arr[i];
+                if(item == 3){
                     continue;//终止本次循环，进行下一次
+                }
+                if(item == 4){
+                    break;//直接终止循环
                 }
             }
             // 先判断，true才遍历

@@ -84,17 +84,20 @@
     <template>
       <!-- 
         keep-alive组件缓存，从而节省性能
-        keep-alive内路由跳转切换组件时，触发的生命周期钩子函数：activated创建、deactivated销毁
+        keep-alive添加生命周期钩子函数：
+            activated创建，可替换created用、
+            deactivated销毁，可替换destroyed用
+
+        路由跳转时，activated能打印就缓存成功了，跳回来后，inpute输入框敲的内容不会初始化
+        created只触发一次，activated都触发
+        刷新才能缓存初始化
         
-        局部组件缓存
-          1. keep-alive标签属性：
-            :include="['组件name']" 当前需要缓存的组件
-            :exclude="['组件name']" 当前不需要缓存的组件
-          2. v-if控制keep-alive出现       在路由文件加参数meta: {keepAlive: true}
+        区分缓存与不缓存：
+          方式1. keep-alive标签属性：
+            :include="['组件name']" 需要缓存的组件名单   注意vue文件name 必须等于 include数组项
+            :exclude="['组件name']" 不需要缓存的组件名单
 
-        全局缓存：别加keep-alive标签属性，别加v-if
-
-        注意：加了keep-alive组件缓存缓存后，created不再触发，activated触发
+          方式2. v-if控制keep-alive出现       在路由文件加参数meta: {keepAlive: true}
       -->
       <keep-alive>
         <router-view v-if="!$route.meta.keepAlive"></router-view>

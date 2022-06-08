@@ -42,7 +42,7 @@ export default{
 	created() {
 		/*
 			$eventBus.$emit后，$on和$once才触发
-			添加自定义事件监听器
+			添加自定义事件监听器   $on订阅事件  $eventBus.$emit发布事件
 			$eventBus作用：能直接子传爷爷，或爷爷传子。解决子传父，再父传爷爷的麻烦
 		*/
 		this.$eventBus.$on('airWater',  function(value){

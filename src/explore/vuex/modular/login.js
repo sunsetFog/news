@@ -148,7 +148,7 @@ const login = {
         dynamicMenu({state, commit, dispatch}, params) {
             console.log('--dynamicMenu--', params)
             let menuArr = []
-            let nice =  { key: '', label: '', path: '', icon: require('@static/picture/center/shouyi.png'), children: [] }
+            let nice =  { key: '', title: '', path: '', icon: require('@static/picture/center/shouyi.png'), children: [] }
 
             let titleArr = []
             if (sessionStorage.getItem("entry_config") == 'explore') {
