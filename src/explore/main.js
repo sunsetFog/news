@@ -149,9 +149,17 @@ console.log('--end00--');
 
 import NProgress from 'nprogress'; // 转圈进度条，路由变化触发
 import 'nprogress/nprogress.css'; // 加载转圈进度条样式
-// 路由拦截（路由守卫）   用来拦截改变跳转页
+
+/*
+    路由拦截（路由守卫）   用来拦截改变跳转页  next做判断不能死循环
+    不一定要在这做刷新判断的，用created生命周期就行
+*/
 router.beforeEach((to, from, next) => {
     document.title = to.meta.title;
+
+    penCache.dispatch('getPlayerInfo', penMeans.amateur_getPlayer()); //调用vuex和全局方法
+
+
     // 刷新执行，且不是登录页，且要有token
     if (from.path == '/' && to.path != '/login') {
         if (VueCookies.get('token')) {
@@ -164,16 +172,7 @@ router.beforeEach((to, from, next) => {
         }
     }
 
-    if (to.path == '/login') { // 登录页面，删除token缓存
-        VueCookies.remove("token");
-    }
-    // // to.path != '/login' 判断要加这个，否则会死循环
-    // if (to.path != '/login' && !sessionStorage.getItem('token')) { // 检查有无token，无则跳回登录
-    //   next({path: '/login'}); // next页面跳转
-    // }
-    // if(from.path == '/' && sessionStorage.getItem('token')){ // 刷新判断，vuex刷新丢失数据，需要重新赋值
-    penCache.dispatch('getPlayerInfo', penMeans.amateur_getPlayer()); //调用vuex和全局方法
-    // }
+
 
     // 通过刷新判断，跳转至/neutralgear页面
     // let routeScreen = ['/login','/neutralgear'];
@@ -188,6 +187,7 @@ router.beforeEach((to, from, next) => {
 
     NProgress.start(); // 开始动画
     next(); // next默认跳转
+    
 });
 router.afterEach(transition => {
     NProgress.done(); // 结束动画

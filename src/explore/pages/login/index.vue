@@ -71,6 +71,8 @@ export default{
         }
     },
     created(){
+        this.$cookies.remove("token");// 登录页面，删除token缓存
+
         this.catchMice();
         if(refreshWeb.state==''){
             // flashGameplayer();

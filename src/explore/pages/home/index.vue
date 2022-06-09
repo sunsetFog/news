@@ -189,7 +189,8 @@ export default {
         };
     },
     created() {
-        this.sailKey(this.$route.meta.key);
+        let navIndex = sessionStorage.getItem("navIndex");
+        this.sailKey(navIndex);
     },
     mounted() {
         var that = this;
@@ -205,8 +206,6 @@ export default {
     },
     watch: {
         $route(to, from) {
-            this.tabEmptyActive();
-            this.sailKey(to.meta.key);
             if (to.path == '/game') {
                 this.fixed_state = false;
             } else {
@@ -221,10 +220,16 @@ export default {
         },
     },
     methods: {
-        sailKey(value) {
-            if (value != 404) {
-                this.tabs_bar[value].active = true;
+        sailKey(index) {
+            console.log("--sailKey--", index);
+            for (let i = 0; i < this.tabs_bar.length; i++) {
+                this.tabs_bar[i].active = false;
             }
+
+            index = index || 0;
+            index = Number(index);
+            sessionStorage.setItem("navIndex", index);
+            this.tabs_bar[index].active = true;
         },
         coverMeans() {
             let cover = document.body.clientHeight - 50;
@@ -286,16 +291,10 @@ export default {
         },
         tabBarChange(index, show, value) {
             if (show) {
-                this.tabEmptyActive();
-                this.tabs_bar[index].active = true;
+                this.sailKey(index);
                 this.$router.push({ path: value });
             } else {
                 this.$message.success('敬请期待！');
-            }
-        },
-        tabEmptyActive() {
-            for (let i = 0; i < this.tabs_bar.length; i++) {
-                this.tabs_bar[i].active = false;
             }
         },
         //返回顶部
@@ -453,6 +452,9 @@ export default {
             this.$message.success('敬请期待！');
         },
     },
+    destroyed() {
+        sessionStorage.removeItem("navIndex");
+    }
 };
 </script>
 

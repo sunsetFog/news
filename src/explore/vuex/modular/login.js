@@ -1,5 +1,7 @@
 import apiHttp from '@/explore/api/http.js';
 import lodash from 'lodash'
+import finalRouter1 from '@/explore/router/modules/finalRouter.js'
+import finalRouter2 from '@/crm/router/modules/finalRouter.js'
 
 function routerOptions(item) {
     // console.log('--选项--', item)
@@ -69,7 +71,14 @@ const login = {
                 console.log('error',err);
             })
             console.log("--routerApple-2-");
-            return state.routerList;
+
+            let finalArr = []
+            if (sessionStorage.getItem("entry_config") == 'explore') {
+                finalArr = [...state.routerList, ...finalRouter1]
+            } else if (sessionStorage.getItem("entry_config") == 'crm') {
+                finalArr = [...state.routerList, ...finalRouter2]
+            }
+            return finalArr;
             
         },
         dynamicRouter({state, commit, dispatch}, params) {
@@ -81,7 +90,7 @@ const login = {
             for (let i = 0; i < params.length; i++) {
                 let item = params[i]
                 item.children = []
-                item.meta = { title: item.metaTitle, key: item.metaKey }
+                item.meta = { title: item.metaTitle }
 
                 if (sessionStorage.getItem("entry_config") == 'explore') {
                     item.component = resolve => require([ '@/explore/pages' + item.importPath + '.vue' ],resolve)
