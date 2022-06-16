@@ -111,7 +111,7 @@ export default {
             that.$apihttp({
                 url: process.env.core_url + '/sky/shop/list',
                 method: 'post',
-                data: params,
+                params: params
             })
                 .then(res => {
                     if (res.code == '200') {
