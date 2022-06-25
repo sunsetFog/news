@@ -19,14 +19,14 @@ export default {
     methods: {
         addWay() {
             this.dialog_title = "添加用户";
-            this.initForm();
             this.dialogVisible = true;
+            this.initForm();
         },
         editWay(row) {
             this.editSaveRow = row
             this.dialog_title = "编辑用户";
-            this.initForm(row);
             this.dialogVisible = true;
+            this.initForm(row);
         },
         initForm(row = {}) {
             let that = this;

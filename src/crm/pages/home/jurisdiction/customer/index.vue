@@ -42,11 +42,12 @@
                 </template>
             </el-table-column>
 
-            <el-table-column width="120" fixed="right">
+            <el-table-column width="180" fixed="right">
                 <template slot="header">操作</template>
                 <template slot-scope="scope">
-                <el-button type="text" @click="editWay(scope.row)">编辑</el-button>
-                <el-button type="text" @click="deleteWay(scope.row)">删除</el-button>
+                    <el-button type="text" @click="roleWay(scope.row)">分配角色</el-button>
+                    <el-button type="text" @click="editWay(scope.row)">编辑</el-button>
+                    <el-button type="text" @click="deleteWay(scope.row)">删除</el-button>
                 </template>
             </el-table-column>
         </el-table>
@@ -91,14 +92,37 @@
                 <el-button type="primary" @click="sureWay">确 定</el-button>
             </section>
         </el-dialog>
+
+        <el-dialog
+            title="分配角色"
+            :visible.sync="dialogRole"
+            width="500px"
+            :close-on-click-modal="false"
+            >
+            <section class="mercury">
+                <el-select v-model="role_value" multiple placeholder="请选择" style="width: 320px;">
+                    <el-option
+                    v-for="item in role_list"
+                    :key="item.id"
+                    :label="item.name"
+                    :value="item.id">
+                    </el-option>
+                </el-select>
+            </section>
+            <section slot="footer" class="dialog-footer">
+                <el-button @click="cancelRoleWay">取 消</el-button>
+                <el-button type="primary" @click="sureRoleWay">确 定</el-button>
+            </section>
+        </el-dialog>
     </section>
 </template>
 
 <script>
 import addEdit from "./addEdit"
+import userOfRole from "./userOfRole"
 export default {
     name: "customer",
-    mixins: [addEdit],
+    mixins: [addEdit, userOfRole],
     data() {
         return {
             queryData: {

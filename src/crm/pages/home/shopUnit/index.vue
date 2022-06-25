@@ -127,8 +127,8 @@ export default {
         },
         addWay(value) {
             this.dialog_title = value;
-            this.initForm();
             this.dialogVisible = true;
+            this.initForm();
         },
         initForm(row = {}) {
             let that = this;
@@ -141,8 +141,8 @@ export default {
         },
         editWay(value, row) {
             this.dialog_title = value;
-            this.initForm(row);
             this.dialogVisible = true;
+            this.initForm(row);
         },
         deleteWay(row) {
             let that = this;
