@@ -42,7 +42,7 @@ export default {
             this.imageUrl = URL.createObjectURL(file.raw);
 
             this.fileToBase64(file.raw).then(data => {
-                console.log('---fileToBase64--', data);
+                // console.log('---fileToBase64--', data);
             })
 
             console.log('-handleAvatarSuccess-', res, file, '---', this.imageUrl);

@@ -42,6 +42,15 @@ Viewer.setDefaults({
     },
 });
 
+import searchDesign from '@/crm/components/searchDesign.vue';
+Vue.component('searchDesign', searchDesign);
+import pagination from '@/explore/components/pagination.vue';
+Vue.component('pagination', pagination);
+import upload1 from '@/explore/pages/home/managementCenter/effect/upload/upload1.vue';
+Vue.component('upload1', upload1);
+import previewPictures from '@/explore/pages/home/managementCenter/plugin/previewPictures.vue';
+Vue.component('previewPictures', previewPictures);
+
 import './database/index'; // 不能用if动态加载js
 
 import apiHttp from '@/explore/api/http.js';

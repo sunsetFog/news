@@ -110,7 +110,7 @@ export default {
         box-shadow: 0 0 0 1px #ECECEC;// 加阴影替代边框---为了圆角
         overflow: hidden;
         th, td { // 设单元格border、padding
-            border: 1px solid #ECECEC;
+            border: 0.5px solid #ECECEC;
             padding: 5px;
         }
         thead th {

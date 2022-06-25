@@ -63,12 +63,9 @@
 </template>
 
 <script>
-import upload1 from '@/explore/pages/home/managementCenter/effect/upload/upload1.vue';
-import previewPictures from '@/explore/pages/home/managementCenter/plugin/previewPictures.vue';
-import pagination from '@/explore/components/pagination.vue';
+
 export default {
     name: 'shopUnit',
-    components: { upload1, pagination, previewPictures },
     data() {
         return {
             queryData: {
@@ -130,8 +127,8 @@ export default {
         },
         addWay(value) {
             this.dialog_title = value;
-            this.dialogVisible = true;
             this.initForm();
+            this.dialogVisible = true;
         },
         initForm(row = {}) {
             let that = this;
@@ -144,8 +141,8 @@ export default {
         },
         editWay(value, row) {
             this.dialog_title = value;
-            this.dialogVisible = true;
             this.initForm(row);
+            this.dialogVisible = true;
         },
         deleteWay(row) {
             let that = this;
