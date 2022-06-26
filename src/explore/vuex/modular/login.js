@@ -182,6 +182,8 @@ const login = {
                     { name: '系统设置', file: 'system' }
                 ]
             }
+            // 不是菜单的数组
+            let noMenu = ["jurisdiction/role/assignMenu", "jurisdiction/role/allocateResources"]
 
 
             for (let i = 0; i < titleArr.length; i++) {
@@ -193,7 +195,7 @@ const login = {
                 for (let k = 0; k < params.length; k++) {
                     let item = params[k];
                     let type = item.path.split('/')[0];
-                    if(type == strip.file) {
+                    if(type == strip.file && noMenu.indexOf(item.path) == -1) {
                         let second = JSON.parse(JSON.stringify(nice));
                         second.key = lodash.uniqueId('menu-');
                         second.path = item.importPath;

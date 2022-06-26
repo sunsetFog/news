@@ -64,7 +64,7 @@ export default {
                 roleIds: that.role_value.join(",")
             };
             that.$apihttp({
-                url: process.env.core_url + '/sky/admin_role/update',
+                url: process.env.core_url + '/sky/admin_role/deleteAdd',
                 method: 'get',
                 params: params
             })

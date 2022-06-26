@@ -1,20 +1,17 @@
 <template>
-    <section id="customer" ref="refUnit">
+    <section id="roleUnit" ref="refUnit">
         <searchDesign @queryWay="queryWay" ref="refHeader" @addWay="addWay">
             <el-form ref="form" :model="queryData" label-width="100px">
                 <el-row :gutter="20">
                     <el-col :span="12">
-                        <el-form-item label="账号/姓名：">
-                            <el-input v-model="queryData.keyword" placeholder="请输入账号/姓名"></el-input>
+                        <el-form-item label="角色名称：">
+                            <el-input v-model="queryData.keyword" placeholder="请输入角色名称"></el-input>
                         </el-form-item>
                     </el-col>
                 </el-row>
             </el-form>
         </searchDesign>
-        <!-- 
-            1.table的滚动条是height值影响的
-            2.要是table在mouted生命周期不重新渲染了，强制刷新渲染也没用，那么用v-if="tableHeight != 0"控制渲染延后
-        -->
+
         <el-table
             :data="tableData"
             border
@@ -24,17 +21,10 @@
             ref="refTable"
         >
             <el-table-column width="50" type="index" label="序号"></el-table-column>
-            <el-table-column prop="username" label="账号" min-width="80"></el-table-column>
-            <el-table-column min-width="80">
-                <template slot="header">头像</template>
-                <template slot-scope="scope">
-                    <previewPictures :photoList="[scope.row.icon]"></previewPictures>
-                </template>
-            </el-table-column>
-            <el-table-column prop="nickName" label="姓名" min-width="80"></el-table-column>
-            <el-table-column prop="email" label="邮箱" min-width="100"></el-table-column>
+            <el-table-column prop="name" label="角色名称" min-width="100"></el-table-column>
+            <el-table-column prop="description" label="描述" min-width="120"></el-table-column>
+            <el-table-column prop="adminCount" label="用户数" min-width="80"></el-table-column>
             <el-table-column prop="createTime" label="添加时间" min-width="100"></el-table-column>
-            <el-table-column prop="loginTime" label="最后登录" min-width="100"></el-table-column>
             <el-table-column min-width="80">
                 <template slot="header">是否启用</template>
                 <template slot-scope="scope">
@@ -42,10 +32,11 @@
                 </template>
             </el-table-column>
 
-            <el-table-column width="180" fixed="right">
+            <el-table-column width="250" fixed="right">
                 <template slot="header">操作</template>
                 <template slot-scope="scope">
-                    <el-button type="text" @click="roleWay(scope.row)">分配角色</el-button>
+                    <el-button type="text" @click="assignMenu(scope.row)">分配菜单</el-button>
+                    <el-button type="text" @click="allocateResources(scope.row)">分配资源</el-button>
                     <el-button type="text" @click="editWay(scope.row)">编辑</el-button>
                     <el-button type="text" @click="deleteWay(scope.row)">删除</el-button>
                 </template>
@@ -53,7 +44,6 @@
         </el-table>
 
         <pagination :pagingObj="pagingObj" @emitWay="queryWay"></pagination>
-
 
 
         <el-dialog
@@ -64,23 +54,11 @@
             >
             <section class="mercury">
                 <el-form :model="addAndEditForm" :rules="rulesCheck" ref="addAndEditForm" label-width="100px">
-                    <el-form-item label="账号:" prop="username">
-                        <el-input v-model="addAndEditForm.username" placeholder="请输入账号"></el-input>
+                    <el-form-item label="角色名称:" prop="name">
+                        <el-input v-model="addAndEditForm.name" placeholder="请输入角色名称"></el-input>
                     </el-form-item>
-                    <el-form-item label="头像:">
-                        <upload1 ref="refUpload"></upload1>
-                    </el-form-item>
-                    <el-form-item label="姓名:" prop="nickName">
-                        <el-input v-model="addAndEditForm.nickName" placeholder="请输入姓名"></el-input>
-                    </el-form-item>
-                    <el-form-item label="邮箱:" prop="email">
-                        <el-input v-model="addAndEditForm.email" placeholder="请输入邮箱"></el-input>
-                    </el-form-item>
-                    <el-form-item label="密码:" prop="password">
-                        <el-input v-model="addAndEditForm.password" placeholder="请输入密码"></el-input>
-                    </el-form-item>
-                    <el-form-item label="备注:" prop="note">
-                        <el-input type="textarea" v-model="addAndEditForm.note" maxlength="100" show-word-limit></el-input>
+                    <el-form-item label="描述:" prop="description">
+                        <el-input type="textarea" v-model="addAndEditForm.description" maxlength="100" show-word-limit></el-input>
                     </el-form-item>
                     <el-form-item label="是否启用:" prop="status">
                         <el-switch v-model="addAndEditForm.status"></el-switch>
@@ -92,37 +70,14 @@
                 <el-button type="primary" @click="sureWay">确 定</el-button>
             </section>
         </el-dialog>
-
-        <el-dialog
-            title="分配角色"
-            :visible.sync="dialogRole"
-            width="500px"
-            :close-on-click-modal="false"
-            >
-            <section class="mercury">
-                <el-select v-model="role_value" multiple placeholder="请选择" style="width: 320px;">
-                    <el-option
-                    v-for="item in role_list"
-                    :key="item.id"
-                    :label="item.name"
-                    :value="item.id">
-                    </el-option>
-                </el-select>
-            </section>
-            <section slot="footer" class="dialog-footer">
-                <el-button @click="cancelRoleWay">取 消</el-button>
-                <el-button type="primary" @click="sureRoleWay">确 定</el-button>
-            </section>
-        </el-dialog>
     </section>
 </template>
 
 <script>
 import addEdit from "./addEdit"
-import userOfRole from "./userOfRole"
 export default {
-    name: "customer",
-    mixins: [addEdit, userOfRole],
+    name: "roleUnit",
+    mixins: [addEdit],
     data() {
         return {
             queryData: {
@@ -156,7 +111,7 @@ export default {
                 pageSize: that.pagingObj.pageSize
             };
             that.$apihttp({
-                url: process.env.core_url + '/sky/admin/list',
+                url: process.env.core_url + '/sky/role/list',
                 method: 'post',
                 params: params
             })
@@ -166,8 +121,6 @@ export default {
                         that.tableData = res.data.content;
                         for (let index = 0; index < that.tableData.length; index++) {
                             let item = that.tableData[index];
-                            item.download_url = item.icon;
-                            item.icon = process.env.core_url + '/sky' + item.icon;
                             if (item.status == 1) {
                                 item.status = true
                             } else {
@@ -194,7 +147,7 @@ export default {
                         status: value ? 1 : 0
                     };
                     that.$apihttp({
-                        url: process.env.core_url + '/sky/admin/update',
+                        url: process.env.core_url + '/sky/role/update',
                         method: 'post',
                         data: params
                     })
@@ -221,7 +174,7 @@ export default {
         },
         deleteWay(row) {
             let that = this;
-            that.$confirm('是否要删除该角色?', '提示', {
+            that.$confirm('确定删除此商品吗?', '提示', {
                 confirmButtonText: '确定',
                 cancelButtonText: '取消',
                 type: 'warning'
@@ -231,9 +184,9 @@ export default {
 
                     };
                     that.$apihttp({
-                        url: process.env.core_url + '/sky/admin/delete/' + row.id,
+                        url: process.env.core_url + '/sky/role/delete/' + row.id,
                         method: 'get',
-                        params: params
+                        params: params,
                     })
                         .then(res => {
                             if (res.code == '200') {
@@ -254,14 +207,21 @@ export default {
                         message: '已取消删除'
                     });
                 });
+        },
+        assignMenu(row) {
+            this.$router.push({ path: "/home/jurisdiction/role/assignMenu?roleId=" + row.id })
+        },
+        allocateResources(row) {
+            this.$router.push({ path: "/home/jurisdiction/role/allocateResources?roleId=" + row.id })
         }
     }
 }
 </script>
 
 <style lang="less" scoped>
-#customer {
+#roleUnit {
     height: 100%;
 }
 </style>
+
 

@@ -1,15 +1,11 @@
 export default {
     data() {
         return {
-            dialog_title: '添加用户',
+            dialog_title: '添加角色',
             dialogVisible: false,
             addAndEditForm: {
-                username: '',
-                icon: '',
-                nickName: '',
-                email: '',
-                password: '',
-                note: '',
+                name: '',
+                description: '',
                 status: true
             },
             rulesCheck: {},
@@ -18,53 +14,41 @@ export default {
     },
     methods: {
         addWay() {
-            this.dialog_title = "添加用户";
+            this.dialog_title = "添加角色";
             this.dialogVisible = true;
             this.initForm();
         },
         editWay(row) {
             this.editSaveRow = row
-            this.dialog_title = "编辑用户";
+            this.dialog_title = "编辑角色";
             this.dialogVisible = true;
             this.initForm(row);
         },
         initForm(row = {}) {
             let that = this;
-            that.addAndEditForm.username = row.username || '';
-            that.addAndEditForm.icon = row.icon || '';
-            that.addAndEditForm.nickName = row.nickName || '';
-            that.addAndEditForm.email = row.email || '';
-            that.addAndEditForm.password = row.password || '';
-            that.addAndEditForm.note = row.note || '';
+            that.addAndEditForm.name = row.name || '';
+            that.addAndEditForm.description = row.description || '';
             that.addAndEditForm.status = row.status || true;
-            that.$nextTick(function() {
-                that.$refs.refUpload.download_url = row.download_url || '';
-                that.$refs.refUpload.imageUrl = row.icon || '';
-            });
         },
         cancelWay() {
             this.dialogVisible = false;
         },
         sureWay() {
-            if (this.dialog_title == '添加用户') {
+            if (this.dialog_title == '添加角色') {
                 this.addSure();
-            } else if (this.dialog_title == '编辑用户') {
+            } else if (this.dialog_title == '编辑角色') {
                 this.editSure();
             }
         },
         addSure() {
             let that = this;
             let params = {
-                username: that.addAndEditForm.username,
-                icon: that.$refs.refUpload.download_url,
-                nickName: that.addAndEditForm.nickName,
-                email: that.addAndEditForm.email,
-                password: that.addAndEditForm.password,
-                note: that.addAndEditForm.note,
+                name: that.addAndEditForm.name,
+                description: that.addAndEditForm.description,
                 status: that.addAndEditForm.status ? 1 : 0
             }
             that.$apihttp({
-                url: process.env.core_url + '/sky/admin/register',
+                url: process.env.core_url + '/sky/role/add',
                 method: 'post',
                 data: params
             })
@@ -86,16 +70,12 @@ export default {
             let that = this;
             let params = {
                 id: that.editSaveRow.id,
-                username: that.addAndEditForm.username,
-                icon: that.$refs.refUpload.download_url,
-                nickName: that.addAndEditForm.nickName,
-                email: that.addAndEditForm.email,
-                password: that.addAndEditForm.password,
-                note: that.addAndEditForm.note,
+                name: that.addAndEditForm.name,
+                description: that.addAndEditForm.description,
                 status: that.addAndEditForm.status ? 1 : 0
             }
             that.$apihttp({
-                url: process.env.core_url + '/sky/admin/update',
+                url: process.env.core_url + '/sky/role/update',
                 method: 'post',
                 data: params
             })
