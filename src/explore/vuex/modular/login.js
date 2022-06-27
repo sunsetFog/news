@@ -176,14 +176,14 @@ const login = {
                 titleArr = [
                     { name: '首页', file: 'world' },
                     { name: '季节', file: 'season' },
-                    { name: '商店管理', file: 'shopUnit' },
+                    { name: '商品', file: 'shopUnit' },
                     { name: '用户管理', file: 'customer' },
                     { name: '权限管理', file: 'jurisdiction' },
                     { name: '系统设置', file: 'system' }
                 ]
             }
             // 不是菜单的数组
-            let noMenu = ["jurisdiction/role/assignMenu", "jurisdiction/role/allocateResources"]
+            let noMenu = ["jurisdiction/role/assignMenu", "jurisdiction/role/allocateResources", "jurisdiction/resource/resourceCategory/index"]
 
 
             for (let i = 0; i < titleArr.length; i++) {

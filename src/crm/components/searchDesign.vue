@@ -14,9 +14,11 @@
                             <slot></slot>
                         </td>
                         <td style="text-align: center;">
+                            <el-button v-if="chongzhi" @click="resetWay()">重置</el-button>
                             <el-button type="primary" icon="el-icon-search" @click="queryWay" v-if="sousuo">搜索</el-button>
                             <el-button type="primary" v-if="tianjia" @click="addWay()">添加</el-button>
                             <el-button type="primary" v-if="piliangshanchu">批量删除</el-button>
+                            <slot name="apple"></slot>
                         </td>
                     </tr>
                 </tbody>
@@ -29,6 +31,10 @@
 export default {
     name: "searchDesign",
     props: {
+        chongzhi: {
+            type: Boolean,
+            default: false
+        },
         sousuo: {
             type: Boolean,
             default: true
@@ -48,6 +54,9 @@ export default {
         }
     },
     methods: {
+        resetWay() {
+            this.$emit("resetWay");
+        },
         queryWay() {
             this.$emit("queryWay");
         },
@@ -61,7 +70,8 @@ export default {
 <style lang="less" scoped>
 #searchDesign {
     width: 100%;
-    height: 100px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
     /deep/.el-card__body {
         padding: 5px 5px 5px 5px;
         box-sizing: border-box;
@@ -83,7 +93,6 @@ export default {
             height: 30px;
         }
         tbody td {
-            height: 40px;
             font-size: 13px;
             color: #495060;
         }

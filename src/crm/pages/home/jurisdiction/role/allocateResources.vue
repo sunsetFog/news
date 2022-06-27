@@ -34,6 +34,7 @@ export default {
         this.resourceCategoryWay();
     },
     methods: {
+        // 资源分类
         resourceCategoryWay() {
             let that = this;
             let params = {
@@ -75,6 +76,7 @@ export default {
                     console.log('error', err);
                 });
         },
+        // 资源
         resourceWay() {
             let that = this;
             let params = {

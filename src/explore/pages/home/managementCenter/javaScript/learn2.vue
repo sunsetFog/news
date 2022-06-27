@@ -53,6 +53,7 @@ export default {
         },
         demo5() {
             /*
+                问题：children级数相同，可以for循环嵌套循环，要是children级数不相同呢？
                 高级遍历：递归，调用自身方法
                 树形结构数据，用递归遍历
              */
@@ -113,7 +114,7 @@ export default {
                     //   item.hidden = false; // 添加属性，实现改造自身数组
                     //   delete item["title"]; // 删除属性
                     if (!item.children) {
-                        //退出递归2. 结束一次循环，就不会调用自己了
+                        //退出递归2. 结束一次循环，没有children字段，就不会调用自己了
                         continue;
                     }
                     recursion(item.children); // 传children数组
