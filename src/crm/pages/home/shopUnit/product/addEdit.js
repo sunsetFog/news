@@ -145,13 +145,43 @@ export default {
         },
         initForm(row = {}) {
             let that = this;
-            // that.formOf01.username = row.username || '';
-            // that.formOf01.icon = row.icon || '';
-            // that.formOf01.nickName = row.nickName || '';
-            // that.formOf01.email = row.email || '';
-            // that.formOf01.password = row.password || '';
-            // that.formOf01.note = row.note || '';
-            // that.formOf01.status = row.status || true;
+            let productCategoryId = []
+            for (let i = 0; i < that.product_category_list.length; i++) {
+                let item = that.product_category_list[i];
+                for (let y = 0; y < item.children.length; y++) {
+                    let element = item.children[y];
+                    if(element.id == row.productCategoryId) {
+                        productCategoryId.push(item.id, element.id)
+                    }
+                }
+            }
+            that.formOf01.productCategoryId = row.productCategoryId ? productCategoryId : [];
+            that.formOf01.name = row.name || '';
+            that.formOf01.subtitle = row.subTitle || '';
+            that.formOf01.brandId = row.brandId || '';
+            that.formOf01.introduce = row.description || '';
+            that.formOf01.productSn = row.productSn || '';
+            that.formOf01.price = row.price || 0;
+            that.formOf01.market_value = row.originalPrice || 0;
+            that.formOf01.stock = row.stock || 0;
+            that.formOf01.company = row.unit || '';
+            that.formOf01.weight = row.weight || '';
+            that.formOf01.sort = row.sort || 0;
+
+            that.formOf02.integral = row.giftPoint || 0;
+            that.formOf02.grow = row.giftGrowth || 0;
+            that.formOf02.buyLimit = row.usePointLimit || 0;
+            that.formOf02.advanceNotice = row.previewStatus == 1 ? true : false;
+            that.formOf02.putOn = row.publishStatus == 1 ? true : false;
+            that.formOf02.newProduct = row.newStatus == 1 ? true : false;
+            that.formOf02.recommend = row.recommandStatus == 1 ? true : false;
+            that.formOf02.serviceList = [];
+            that.formOf02.detailTitle = row.detailTitle || '';
+            that.formOf02.description = row.detailDesc || '';
+            that.formOf02.keyword = row.keywords || '';
+            that.formOf02.remarks = row.note || '';
+
+            that.formOf03.productAttributeCategoryId = row.productAttributeCategoryId || '';
         },
         backWay() {
             if(this.guide_active != 0) {
@@ -173,7 +203,7 @@ export default {
                 this.editSure();
             }
         },
-        addSure() {
+        paramsWay() {
             let that = this;
             let brandName = '';
             for (let index = 0; index < that.brand_list.length; index++) {
@@ -192,7 +222,21 @@ export default {
                     }
                 }
             }
-            let params = {
+            let subjectProductRelationList = []
+            for (let i = 0; i < that.subject_value.length; i++) {
+                let item = that.subject_value[i];
+                subjectProductRelationList.push({
+                    subjectId: item
+                })
+            }
+            let prefrenceAreaProductRelationList = []
+            for (let index = 0; index < that.optimization_value.length; index++) {
+                let item = that.optimization_value[index];
+                prefrenceAreaProductRelationList.push({
+                    prefrenceAreaId: item
+                })
+            }
+            return {
                 "albumPics": that.$refs.refUpload.download_url, // @ApiModelProperty(value = "画册图片，连产品图片限制为5张，以逗号分割")
                 "brandId": that.formOf01.brandId, // 品牌id
                 "brandName": brandName, // @ApiModelProperty(value = "品牌名称")
@@ -245,7 +289,7 @@ export default {
                 ], 
                 "previewStatus": that.formOf02.advanceNotice ? 1 : 0, // @ApiModelProperty(value = "是否为预告商品：0->不是；1->是")
                 "price": that.formOf01.price, // 商品售价
-                "productAttributeCategoryId": 1, // 属性分类id
+                "productAttributeCategoryId": that.formOf03.productAttributeCategoryId, // 属性分类id
                 "productAttributeValueList": [ // @ApiModelProperty("商品参数及自定义规格属性")
                     // {
                     //     "productAttributeId": 24, 
@@ -269,12 +313,14 @@ export default {
                     // }
                 ], 
                 "skuStockList": [ ], // @ApiModelProperty("商品的sku库存信息")
-                "subjectProductRelationList": [ // @ApiModelProperty("专题和商品关系")
-                    // { "subjectId": 1 }
-                ],
-                "prefrenceAreaProductRelationList": [ // @ApiModelProperty("优选专区和商品的关系")
-                    // { "prefrenceAreaId": 1 }
-                ],
+                "subjectProductRelationList": subjectProductRelationList, // @ApiModelProperty("专题和商品关系")
+                // [ 
+                //     { "subjectId": 1 }
+                // ],
+                "prefrenceAreaProductRelationList": prefrenceAreaProductRelationList, // @ApiModelProperty("优选专区和商品的关系")
+                // [
+                //     { "prefrenceAreaId": 1 }
+                // ],
                 "productCategoryId": that.formOf01.productCategoryId[1], // 商品分类id
                 "productCategoryName": productCategoryName, // @ApiModelProperty(value = "商品分类名称")
                 "productSn": that.formOf01.productSn, // @ApiModelProperty(value = "货号")
@@ -295,6 +341,10 @@ export default {
                 "verifyStatus": 0, // @ApiModelProperty(value = "审核状态：0->未审核；1->审核通过")
                 "weight": that.formOf01.weight // @ApiModelProperty(value = "商品重量，默认为克")
             }
+        },
+        addSure() {
+            let that = this;
+            let params = that.paramsWay();
             that.$apihttp({
                 url: process.env.core_url + '/sky/product/add',
                 method: 'post',
@@ -316,16 +366,8 @@ export default {
         },
         editSure() {
             let that = this;
-            let params = {
-                id: that.editSaveRow.id,
-                username: that.formOf01.username,
-                icon: that.$refs.refUpload.download_url,
-                nickName: that.formOf01.nickName,
-                email: that.formOf01.email,
-                password: that.formOf01.password,
-                note: that.formOf01.note,
-                status: that.formOf01.status ? 1 : 0
-            }
+            let params = that.paramsWay();
+            params.id = that.editSaveRow.id;
             that.$apihttp({
                 url: process.env.core_url + '/sky/product/update',
                 method: 'post',

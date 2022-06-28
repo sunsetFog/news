@@ -119,7 +119,6 @@
             <el-table-column width="180" fixed="right">
                 <template slot="header">操作</template>
                 <template slot-scope="scope">
-                    <el-button type="text" @click="roleWay(scope.row)">分配角色</el-button>
                     <el-button type="text" @click="editWay(scope.row)">编辑</el-button>
                     <el-button type="text" @click="deleteWay(scope.row)">删除</el-button>
                 </template>
@@ -320,8 +319,8 @@ export default {
     data() {
         return {
             queryData: {
-                keyword: "华为 HUAWEI P2",
-                productSn: "6946605",
+                keyword: '',
+                productSn: '',
                 productCategoryId: [],
                 brandId: '',
                 publishStatus: '',
@@ -498,17 +497,17 @@ export default {
         },
         deleteWay(row) {
             let that = this;
-            that.$confirm('是否要删除该角色?', '提示', {
+            that.$confirm('是否要进行删除操作?', '提示', {
                 confirmButtonText: '确定',
                 cancelButtonText: '取消',
                 type: 'warning'
             })
                 .then(() => {
                     let params = {
-
+                        ids: row.id
                     };
                     that.$apihttp({
-                        url: process.env.core_url + '/sky/admin/delete/' + row.id,
+                        url: process.env.core_url + '/sky/product/deleteStatus',
                         method: 'get',
                         params: params
                     })
