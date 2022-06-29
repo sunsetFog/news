@@ -104,7 +104,7 @@
             <el-table-column min-width="60">
                 <template slot="header">SKU库存</template>
                 <template slot-scope="scope">
-                    <i class="el-icon-edit"></i>
+                    <i class="el-icon-edit" @click="skuStockShow(scope.row)"></i>
                 </template>
             </el-table-column>
             <el-table-column prop="sale" label="销量" min-width="60"></el-table-column>
@@ -308,14 +308,82 @@
             </section>
         </el-dialog>
 
+
+        <el-dialog
+            title="编辑货品信息"
+            :visible.sync="dialogGoods"
+            width="800px"
+            :close-on-click-modal="false"
+            >
+            <section class="mercury-box">
+                <el-row :gutter="20" style="margin-bottom: 20px;">
+                    <el-col :span="3">商品货号:</el-col>
+                    <el-col :span="7">{{save_goods.productSn}}</el-col>
+                    <el-col :span="3">sku编号:</el-col>
+                    <el-col :span="11">
+                        <el-input placeholder="sku编号" v-model="sku_value">
+                            <el-button slot="append" icon="el-icon-search" @click="skuList()"></el-button>
+                        </el-input>
+                    </el-col>
+                </el-row>
+                <el-table
+                    :data="sku_list"
+                    border
+                    style="width: 100%"
+                >
+                    <el-table-column min-width="120">
+                        <template slot="header">sku编号</template>
+                        <template slot-scope="scope">
+                            <el-input v-model="scope.row.skuCode" placeholder="请输入内容"></el-input>
+                        </template>
+                    </el-table-column>
+                    <el-table-column min-width="50">
+                        <template slot="header">颜色</template>
+                        <template slot-scope="scope">
+                            {{scope.row.spData[0].value}}
+                        </template>
+                    </el-table-column>
+                    <el-table-column min-width="50">
+                        <template slot="header">容量</template>
+                        <template slot-scope="scope">
+                            {{scope.row.spData[1].value}}
+                        </template>
+                    </el-table-column>
+                    <el-table-column min-width="100">
+                        <template slot="header">销售价格</template>
+                        <template slot-scope="scope">
+                            <el-input v-model="scope.row.price" placeholder="请输入内容"></el-input>
+                        </template>
+                    </el-table-column>
+                    <el-table-column min-width="100">
+                        <template slot="header">商品库存</template>
+                        <template slot-scope="scope">
+                            <el-input v-model="scope.row.stock" placeholder="请输入内容"></el-input>
+                        </template>
+                    </el-table-column>
+                    <el-table-column min-width="100">
+                        <template slot="header">库存预警值</template>
+                        <template slot-scope="scope">
+                            <el-input v-model="scope.row.lowStock" placeholder="请输入内容"></el-input>
+                        </template>
+                    </el-table-column>
+                </el-table>
+            </section>
+            <section slot="footer" class="dialog-footer">
+                <el-button @click="cancelGoodsWay">取 消</el-button>
+                <el-button type="primary" @click="sureGoodsWay">确 定</el-button>
+            </section>
+        </el-dialog>
+
     </section>
 </template>
 
 <script>
 import addEdit from "./addEdit"
+import skuStock from "./skuStock"
 export default {
     name: "customer",
-    mixins: [addEdit],
+    mixins: [addEdit, skuStock],
     data() {
         return {
             queryData: {
