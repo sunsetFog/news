@@ -183,7 +183,12 @@ const login = {
                 ]
             }
             // 不是菜单的数组
-            let noMenu = ["jurisdiction/role/assignMenu", "jurisdiction/role/allocateResources", "jurisdiction/resource/resourceCategory/index"]
+            let noMenu = [
+                "jurisdiction/role/assignMenu",
+                "jurisdiction/role/allocateResources",
+                "jurisdiction/resource/resourceCategory/index",
+                "shopUnit/productAttr/productAttrList/index"
+            ]
 
 
             for (let i = 0; i < titleArr.length; i++) {

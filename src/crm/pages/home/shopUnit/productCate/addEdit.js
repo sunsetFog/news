@@ -65,6 +65,10 @@ export default {
             })
                 .then(res => {
                     if (res.code == '200') {
+                        that.editSaveRow = row
+                        that.dialog_title = "编辑菜单";
+                        that.dialogVisible = true;
+                        that.initForm(row);
                         for (let index = 0; index < res.data.length; index++) {
                             let element = res.data[index];
                             for (let i = 0; i < that.product_category_list.length; i++) {
@@ -91,10 +95,6 @@ export default {
             this.initForm();
         },
         editWay(row) {
-            this.editSaveRow = row
-            this.dialog_title = "编辑菜单";
-            this.dialogVisible = true;
-            this.initForm(row);
             this.productCategoryAttributeRelationWay(row)
         },
         initForm(row = {}) {
