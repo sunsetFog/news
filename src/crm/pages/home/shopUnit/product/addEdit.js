@@ -33,7 +33,16 @@ export default {
                 detailTitle: '',
                 description: '',
                 keyword: '',
-                remarks: ''
+                remarks: '',
+
+                time_value: [],
+                promotion_price: '',
+
+                gold: '',
+                platinum: '',
+                diamonds: '',
+
+                ladder_list: []
             },
             // ------------
             formOf03: {
@@ -66,6 +75,17 @@ export default {
         this.optimizationWay();
     },
     methods: {
+        addLadderWay(row) {
+            console.log("--row--", row)
+            this.formOf02.ladder_list.push({
+                quantity: '',
+                discount: ''
+            })
+        },
+        deleteLadderWay(scope) {
+            console.log("--scope--", scope)
+            this.formOf02.ladder_list.splice(scope.$index, 1);
+        },
         // 商品属性分类
         attributeWay() {
             let that = this;

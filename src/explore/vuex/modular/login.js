@@ -177,7 +177,7 @@ const login = {
                     { name: '首页', file: 'world' },
                     { name: '季节', file: 'season' },
                     { name: '商品', file: 'shopUnit' },
-                    { name: '用户管理', file: 'customer' },
+                    { name: '订单', file: 'orderUnit' },
                     { name: '权限管理', file: 'jurisdiction' },
                     { name: '系统设置', file: 'system' }
                 ]
@@ -187,7 +187,8 @@ const login = {
                 "jurisdiction/role/assignMenu",
                 "jurisdiction/role/allocateResources",
                 "jurisdiction/resource/resourceCategory/index",
-                "shopUnit/productAttr/productAttrList/index"
+                "shopUnit/productAttr/productAttrList/index",
+                "orderUnit/orderList/orderDetail/index"
             ]
 
 

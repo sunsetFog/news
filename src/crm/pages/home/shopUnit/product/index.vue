@@ -136,7 +136,7 @@
             :close-on-click-modal="false"
             >
             <section class="mercury">
-                <el-steps :active="guide_active" finish-status="success" style="margin-bottom: 25px;">
+                <el-steps :active="guide_active" finish-status="success" align-center style="margin-bottom: 25px;">
                     <el-step title="填写商品信息"></el-step>
                     <el-step title="填写商品促销"></el-step>
                     <el-step title="填写商品属性"></el-step>
@@ -238,9 +238,81 @@
                     <el-form-item label="选择优惠方式:">
                         <el-tabs type="border-card">
                             <el-tab-pane label="无优惠">无优惠</el-tab-pane>
-                            <el-tab-pane label="特惠促销">特惠促销</el-tab-pane>
-                            <el-tab-pane label="会员价格">会员价格</el-tab-pane>
-                            <el-tab-pane label="阶梯价格">阶梯价格</el-tab-pane>
+                            <el-tab-pane label="特惠促销">
+
+                               <el-row :gutter="20" style="margin-bottom: 15px;">
+                                    <el-col :span="4">时间：</el-col>
+                                    <el-col :span="20">
+                                        <el-date-picker
+                                        v-model="formOf02.time_value"
+                                        type="datetimerange"
+                                        range-separator="至"
+                                        start-placeholder="开始日期"
+                                        end-placeholder="结束日期">
+                                        </el-date-picker>
+                                    </el-col>
+                                </el-row>
+                                <el-row :gutter="20">
+                                    <el-col :span="4">促销价格：</el-col>
+                                    <el-col :span="20">
+                                        <el-input v-model="formOf02.promotion_price" placeholder=""></el-input>
+                                    </el-col>
+                                </el-row>
+
+                            </el-tab-pane>
+                            <el-tab-pane label="会员价格">
+
+                                <el-row :gutter="20" style="margin-bottom: 15px;">
+                                    <el-col :span="4">黄金会员：</el-col>
+                                    <el-col :span="20">
+                                        <el-input v-model="formOf02.gold" placeholder=""></el-input>
+                                    </el-col>
+                                </el-row>
+                                <el-row :gutter="20" style="margin-bottom: 15px;">
+                                    <el-col :span="4">白金会员：</el-col>
+                                    <el-col :span="20">
+                                        <el-input v-model="formOf02.platinum" placeholder=""></el-input>
+                                    </el-col>
+                                </el-row>
+                                <el-row :gutter="20">
+                                    <el-col :span="4">钻石会员：</el-col>
+                                    <el-col :span="20">
+                                        <el-input v-model="formOf02.diamonds" placeholder=""></el-input>
+                                    </el-col>
+                                </el-row>
+
+                            </el-tab-pane>
+                            <el-tab-pane label="阶梯价格">
+
+                                <el-table
+                                    :data="formOf02.ladder_list"
+                                    border
+                                    style="width: 100%"
+                                >
+                                    <el-table-column min-width="100">
+                                        <template slot="header">数量</template>
+                                        <template slot-scope="scope">
+                                            <el-input v-model="scope.row.quantity" placeholder=""></el-input>
+                                        </template>
+                                    </el-table-column>
+                                    <el-table-column min-width="100">
+                                        <template slot="header">折扣</template>
+                                        <template slot-scope="scope">
+                                            <el-input v-model="scope.row.discount" placeholder=""></el-input>
+                                        </template>
+                                    </el-table-column>
+                                    <el-table-column width="180">
+                                        <template slot="header">
+                                            操作：<el-button type="primary" @click="addLadderWay()">添加</el-button>
+                                        </template>
+                                        <template slot-scope="scope">
+                                            
+                                            <el-button type="text" @click="deleteLadderWay(scope)">删除</el-button>
+                                        </template>
+                                    </el-table-column>
+                                </el-table>
+
+                            </el-tab-pane>
                             <el-tab-pane label="满减价格">满减价格</el-tab-pane>
                         </el-tabs>
                     </el-form-item>
