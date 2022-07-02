@@ -1,6 +1,6 @@
 <template>
     <section id="orderDetailUnit">
-        <el-steps :active="guide_active" finish-status="success" align-center style="margin-bottom: 25px;">
+        <el-steps :active="order_obj.status | formatStepStatus" finish-status="success" align-center style="margin-bottom: 25px;">
             <el-step title="提交订单"></el-step>
             <el-step title="支付订单"></el-step>
             <el-step title="平台发货"></el-step>
@@ -17,7 +17,7 @@
                 <div class="order-status">当前订单状态：{{order_obj.status | formatStatus}}</div>
 
                 <div class="operate-box" v-show="order_obj.status===0">
-                    <el-button @click="showUpdateReceiverDialog">修改收货人信息</el-button>
+                    <el-button @click="consigneeWay">修改收货人信息</el-button>
                     <el-button>修改商品信息</el-button>
                     <el-button @click="showUpdateMoneyDialog">修改费用信息</el-button>
                     <el-button @click="showMessageDialog">发送站内信</el-button>
@@ -25,7 +25,7 @@
                     <el-button @click="showMarkOrderDialog">备注订单</el-button>
                 </div>
                 <div class="operate-box" v-show="order_obj.status===1">
-                    <el-button @click="showUpdateReceiverDialog">修改收货人信息</el-button>
+                    <el-button @click="consigneeWay">修改收货人信息</el-button>
                     <el-button @click="showMessageDialog">发送站内信</el-button>
                     <el-button>取消订单</el-button>
                     <el-button @click="showMarkOrderDialog">备注订单</el-button>
@@ -204,15 +204,18 @@
                 </el-table>
             </section>
         </el-card>
+
+        <consignee ref="consignee"></consignee>
     </section>
 </template>
 
 <script>
+import consignee from "./consignee.vue";
 export default {
     name: 'orderDetailUnit',
+    components: { consignee },
     data() {
         return {
-            guide_active: 0,
             order_obj: {}
         }
     },
@@ -220,6 +223,21 @@ export default {
         this.detailWay();
     },
     filters: {
+        formatStepStatus(value) {
+            if (value === 1) {
+            //待发货
+            return 2;
+            } else if (value === 2) {
+            //已发货
+            return 3;
+            } else if (value === 3) {
+            //已完成
+            return 4;
+            }else {
+            //待付款、已关闭、无限订单
+            return 1;
+            }
+        },
         formatDeliverStatus(value) {
             if (value === 0||value === 1) {
                 return '未发货';
@@ -334,8 +352,9 @@ export default {
                     console.log('error', err);
                 });
         },
-        showUpdateReceiverDialog() {
-
+        // 修改收货人信息
+        consigneeWay() {
+            this.$refs.consignee.initForm(this.order_obj);
         },
         showUpdateMoneyDialog() {
 
