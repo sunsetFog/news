@@ -1,7 +1,7 @@
 <template>
     <section id="consignee">
         <el-dialog
-            :title="dialog_title"
+            title="修改收货人信息"
             :visible.sync="dialogVisible"
             width="800px"
             :close-on-click-modal="false"
@@ -44,7 +44,6 @@ export default {
     components: { VDistpicker },
     data() {
         return {
-            dialog_title: '修改收货人信息',
             dialogVisible: false,
             // ----------
             withForm: {
@@ -63,7 +62,6 @@ export default {
             rulesCheck: {
 
             }
-            // ----------
         }
     },
     methods: {
@@ -100,6 +98,7 @@ export default {
             })
                 .then(res => {
                     if (res.code == '200') {
+                        that.$emit("sureWay");
                         that.dialogVisible = false;
                         that.$message({
                             type: 'success',

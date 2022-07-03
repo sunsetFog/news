@@ -19,25 +19,25 @@
                 <div class="operate-box" v-show="order_obj.status===0">
                     <el-button @click="consigneeWay">修改收货人信息</el-button>
                     <el-button>修改商品信息</el-button>
-                    <el-button @click="showUpdateMoneyDialog">修改费用信息</el-button>
-                    <el-button @click="showMessageDialog">发送站内信</el-button>
-                    <el-button @click="showCloseOrderDialog">关闭订单</el-button>
-                    <el-button @click="showMarkOrderDialog">备注订单</el-button>
+                    <el-button @click="costWay">修改费用信息</el-button>
+                    <el-button @click="messageWay">发送站内信</el-button>
+                    <el-button @click="closeWay">关闭订单</el-button>
+                    <el-button @click="remarksWay">备注订单</el-button>
                 </div>
                 <div class="operate-box" v-show="order_obj.status===1">
                     <el-button @click="consigneeWay">修改收货人信息</el-button>
-                    <el-button @click="showMessageDialog">发送站内信</el-button>
+                    <el-button @click="messageWay">发送站内信</el-button>
                     <el-button>取消订单</el-button>
-                    <el-button @click="showMarkOrderDialog">备注订单</el-button>
+                    <el-button @click="remarksWay">备注订单</el-button>
                 </div>
                 <div class="operate-box" v-show="order_obj.status===2||order_obj.status===3">
-                    <el-button @click="showLogisticsDialog">订单跟踪</el-button>
-                    <el-button @click="showMessageDialog">发送站内信</el-button>
-                    <el-button @click="showMarkOrderDialog">备注订单</el-button>
+                    <el-button @click="followUpWay">订单跟踪</el-button>
+                    <el-button @click="messageWay">发送站内信</el-button>
+                    <el-button @click="remarksWay">备注订单</el-button>
                 </div>
                 <div class="operate-box" v-show="order_obj.status===4">
-                    <el-button @click="handleDeleteOrder">删除订单</el-button>
-                    <el-button @click="showMarkOrderDialog">备注订单</el-button>
+                    <el-button @click="deleteWay">删除订单</el-button>
+                    <el-button @click="remarksWay">备注订单</el-button>
                 </div>
             </section>
 
@@ -205,15 +205,25 @@
             </section>
         </el-card>
 
-        <consignee ref="consignee"></consignee>
+        <consigneeDialog ref="consignee" @sureWay="detailWay"></consigneeDialog>
+        <messageDialog ref="message"></messageDialog>
+        <remarksDialog ref="remarks" @sureWay="detailWay"></remarksDialog>
+        <followUpDialog ref="followUp"></followUpDialog>
+        <closeDialog ref="close" @sureWay="detailWay"></closeDialog>
+        <costDialog ref="cost" @sureWay="detailWay"></costDialog>
     </section>
 </template>
 
 <script>
-import consignee from "./consignee.vue";
+import consigneeDialog from "./consigneeDialog.vue";
+import messageDialog from "./messageDialog.vue";
+import remarksDialog from "./remarksDialog.vue";
+import followUpDialog from "./followUpDialog.vue";
+import closeDialog from "./closeDialog.vue";
+import costDialog from "./costDialog.vue";
 export default {
     name: 'orderDetailUnit',
-    components: { consignee },
+    components: { consigneeDialog, messageDialog, remarksDialog, followUpDialog, closeDialog, costDialog },
     data() {
         return {
             order_obj: {}
@@ -356,22 +366,28 @@ export default {
         consigneeWay() {
             this.$refs.consignee.initForm(this.order_obj);
         },
-        showUpdateMoneyDialog() {
-
+        // 修改费用信息
+        costWay() {
+            this.$refs.cost.initForm(this.order_obj);
         },
-        showMessageDialog() {
-
+        // 发送站内信
+        messageWay() {
+            this.$refs.message.initForm();
         },
-        showCloseOrderDialog() {
-
+        // 关闭订单
+        closeWay() {
+            this.$refs.close.initForm(this.order_obj);
         },
-        showMarkOrderDialog() {
-
+        // 备注订单
+        remarksWay() {
+            this.$refs.remarks.initForm(this.order_obj);
         },
-        showLogisticsDialog() {
-
+        // 订单跟踪
+        followUpWay() {
+            this.$refs.followUp.initForm();
         },
-        handleDeleteOrder() {
+        // 删除订单
+        deleteWay() {
 
         }
     }
