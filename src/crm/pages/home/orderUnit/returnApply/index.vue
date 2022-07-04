@@ -77,7 +77,7 @@
             <el-table-column width="100" fixed="right">
                 <template slot="header">操作</template>
                 <template slot-scope="scope">
-                    <el-button type="text" @click="deleteWay(scope.row)">删除</el-button>
+                    <el-button type="text" @click="detailsWay(scope.row)">查看详情</el-button>
                 </template>
             </el-table-column>
         </el-table>
@@ -182,41 +182,10 @@ export default {
                     console.log('error', err);
                 });
         },
-        deleteWay(row) {
-            let that = this;
-            that.$confirm('是否要删除该类型?', '提示', {
-                confirmButtonText: '确定',
-                cancelButtonText: '取消',
-                type: 'warning'
+        detailsWay(row) {
+            this.$router.push({
+                path: "/home/orderUnit/returnApply/applyDetail?id=" + row.id
             })
-                .then(() => {
-                    let params = {
-
-                    };
-                    that.$apihttp({
-                        url: process.env.core_url + '/sky/PmsProductAttributeCategory/delete/' + row.id,
-                        method: 'get',
-                        params: params
-                    })
-                        .then(res => {
-                            if (res.code == '200') {
-                                that.queryWay();
-                                that.$message({
-                                    type: 'success',
-                                    message: '删除成功!'
-                                });
-                            }
-                        })
-                        .catch(err => {
-                            console.log('error', err);
-                        });
-                })
-                .catch(() => {
-                    that.$message({
-                        type: 'info',
-                        message: '已取消删除'
-                    });
-                });
         }
     }
 }

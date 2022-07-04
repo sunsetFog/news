@@ -178,17 +178,19 @@ const login = {
                     { name: '季节', file: 'season' },
                     { name: '商品', file: 'shopUnit' },
                     { name: '订单', file: 'orderUnit' },
+                    { name: '营销', file: 'marketingUnit' },
                     { name: '权限管理', file: 'jurisdiction' },
                     { name: '系统设置', file: 'system' }
                 ]
             }
-            // 不是菜单的数组
+            // 不是菜单的数组，path字段
             let noMenu = [
                 "jurisdiction/role/assignMenu",
                 "jurisdiction/role/allocateResources",
                 "jurisdiction/resource/resourceCategory/index",
                 "shopUnit/productAttr/productAttrList/index",
-                "orderUnit/orderList/orderDetail/index"
+                "orderUnit/orderList/orderDetail/index",
+                "orderUnit/returnApply/applyDetail"
             ]
 
 

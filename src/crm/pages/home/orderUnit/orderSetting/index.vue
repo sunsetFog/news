@@ -109,7 +109,7 @@ export default {
 <style lang="less" scoped>
 #orderSetting {
     width: 700px;
-    margin: 0 auto;
+    margin: 10px auto;
     .input-width {
         width: 50%;
     }
