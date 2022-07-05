@@ -7,27 +7,25 @@
             :close-on-click-modal="false"
             >
             <section class="mercury">
-                <el-form :model="withForm" :rules="rulesCheck" ref="withForm" label-width="100px">
-                    <el-form-item label="活动标题:" prop="title">
-                        <el-input v-model="withForm.title"></el-input>
+                <el-form :model="withForm" :rules="rulesCheck" ref="withForm" label-width="120px">
+                    <el-form-item label="秒杀时间段名称:" prop="name">
+                        <el-input v-model="withForm.name"></el-input>
                     </el-form-item>
-                    <el-form-item label="开始时间:" prop="startDate">
-                        <el-date-picker
-                        v-model="withForm.startDate"
-                        type="date"
-                        value-format="yyyy-MM-dd"
-                        placeholder="选择日期">
-                        </el-date-picker>
+                    <el-form-item label="每日开始时间:" prop="startTime">
+                        <el-time-picker
+                            v-model="withForm.startTime"
+                            value-format="hh:mm:ss"
+                            placeholder="请选择时间">
+                        </el-time-picker>
                     </el-form-item>
-                    <el-form-item label="结束时间:" prop="endDate">
-                        <el-date-picker
-                        v-model="withForm.endDate"
-                        type="date"
-                        value-format="yyyy-MM-dd"
-                        placeholder="选择日期">
-                        </el-date-picker>
+                    <el-form-item label="每日结束时间:" prop="endTime">
+                        <el-time-picker
+                            v-model="withForm.endTime"
+                            value-format="hh:mm:ss"
+                            placeholder="请选择时间">
+                        </el-time-picker>
                     </el-form-item>
-                    <el-form-item label="上线/下线:" prop="status">
+                    <el-form-item label="是否启用:" prop="status">
                         <el-switch v-model="withForm.status" :active-value="1" :inactive-value="0"></el-switch>
                     </el-form-item>
                 </el-form>
@@ -45,13 +43,13 @@ export default {
     name: "addDialog",
     data() {
         return {
-            dialog_title: '添加活动',
+            dialog_title: '添加时间段',
             dialogVisible: false,
             // ----------
             withForm: {
-                title: null,
-                startDate: '',
-                endDate: '',
+                name: '',
+                startTime: '',
+                endTime: '',
                 status: 1
             },
             rulesCheck: {
@@ -62,12 +60,12 @@ export default {
     },
     methods: {
         initForm(row = {}) {
-            this.dialog_title = JSON.stringify(row) == "{}" ? "添加活动" : "编辑活动";
+            this.dialog_title = JSON.stringify(row) == "{}" ? "添加时间段" : "编辑时间段";
             this.dialogVisible = true;
             this.withForm = {
-                title: row.title || null,
-                startDate: row.startDate || '',
-                endDate: row.endDate || '',
+                name: row.name || '',
+                startTime: row.startTime || '',
+                endTime: row.endTime || '',
                 status: JSON.stringify(row) == "{}" ? 1 : row.status
             }
             this.save_row = row
@@ -76,9 +74,9 @@ export default {
             this.dialogVisible = false;
         },
         sureWay() {
-            if (this.dialog_title == '添加活动') {
+            if (this.dialog_title == '添加时间段') {
                 this.addSure();
-            } else if (this.dialog_title == '编辑活动') {
+            } else if (this.dialog_title == '编辑时间段') {
                 this.editSure();
             }
         },
@@ -86,7 +84,7 @@ export default {
             let that = this;
             let params = that.withForm;
             that.$apihttp({
-                url: process.env.core_url + '/sky/flashPromotion/add',
+                url: process.env.core_url + '/sky/flashPromotionSession/add',
                 method: 'post',
                 data: params
             })
@@ -111,7 +109,7 @@ export default {
                 ...that.withForm
             }
             that.$apihttp({
-                url: process.env.core_url + '/sky/flashPromotion/update',
+                url: process.env.core_url + '/sky/flashPromotionSession/update',
                 method: 'post',
                 data: params
             })

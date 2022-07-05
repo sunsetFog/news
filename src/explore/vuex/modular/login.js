@@ -190,7 +190,10 @@ const login = {
                 "jurisdiction/resource/resourceCategory/index",
                 "shopUnit/productAttr/productAttrList/index",
                 "orderUnit/orderList/orderDetail/index",
-                "orderUnit/returnApply/applyDetail"
+                "orderUnit/returnApply/applyDetail",
+                "marketingUnit/flash/flashSession",
+                "marketingUnit/flash/flashProductRelation/index",
+                "marketingUnit/flash/flashSession/index"
             ]
 
 

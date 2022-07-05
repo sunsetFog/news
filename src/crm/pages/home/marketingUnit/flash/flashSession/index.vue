@@ -1,17 +1,6 @@
 <template>
-    <section id="returnReason" ref="refUnit">
-        <searchDesign @queryWay="queryWay" ref="refHeader" @addWay="addWay" :chongzhi="true" @resetWay="resetWay">
-            <el-form ref="form" :model="queryData" label-width="100px">
-                <el-row :gutter="20">
-                    <el-col :span="12">
-                        <el-form-item label="活动名称：">
-                            <el-input v-model="queryData.keyword" placeholder=""></el-input>
-                        </el-form-item>
-                    </el-col>
-                </el-row>
-            </el-form>
-            <el-button type="primary" slot="apple" @click="flashSession">秒杀时间段列表</el-button>
-        </searchDesign>
+    <section id="flashSessionUnit" ref="refUnit">
+        <searchDesign ref="refHeader" :sousuo="false" @addWay="addWay"></searchDesign>
         <!-- 
             1.table的滚动条是height值影响的
             2.要是table在mouted生命周期不重新渲染了，强制刷新渲染也没用，那么用v-if="tableHeight != 0"控制渲染延后
@@ -25,40 +14,33 @@
             ref="refTable"
         >
             <el-table-column width="50" type="index" label="序号"></el-table-column>
-            <el-table-column prop="title" label="活动标题" min-width="120"></el-table-column>
-            <el-table-column label="活动状态" min-width="100">
-                <template slot-scope="scope">{{scope.row |formatActiveStatus}}</template>
-            </el-table-column>
-            <el-table-column prop="startDate" label="开始时间" min-width="120"></el-table-column>
-            <el-table-column prop="endDate" label="结束时间" min-width="120"></el-table-column>
+            <el-table-column prop="name" label="秒杀时间段名称" min-width="120"></el-table-column>
+            <el-table-column prop="startTime" label="每日开始时间" min-width="120"></el-table-column>
+            <el-table-column prop="endTime" label="每日结束时间" min-width="120"></el-table-column>
             <el-table-column min-width="80">
-                <template slot="header">上线/下线</template>
+                <template slot="header">启用</template>
                 <template slot-scope="scope">
                     <el-switch v-model="scope.row.status" :active-value="1" :inactive-value="0" @change="(val)=>{switchChange(val, scope.row)}"></el-switch>
                 </template>
             </el-table-column>
 
-            <el-table-column width="180" fixed="right">
+            <el-table-column width="100" fixed="right">
                 <template slot="header">操作</template>
                 <template slot-scope="scope">
-                    <el-button type="text" @click="goodsWay(scope.row)">设置商品</el-button>
                     <el-button type="text" @click="addWay(scope.row)">编辑</el-button>
                     <el-button type="text" @click="deleteWay(scope.row)">删除</el-button>
                 </template>
             </el-table-column>
         </el-table>
 
-        <pagination :pagingObj="pagingObj" @emitWay="queryWay"></pagination>
-
         <addDialog ref="add" @sureWay="queryWay"></addDialog>
-
     </section>
 </template>
 
 <script>
-import addDialog from "./addDialog.vue"
+import addDialog from './addDialog';
 export default {
-    name: "returnReason",
+    name: "flashSessionUnit",
     components: { addDialog },
     data() {
         return {
@@ -67,21 +49,7 @@ export default {
             },
             // -----------------
             tableData: [],
-            tableHeight: 0,
-            // -----------------
-            pagingObj: { pageNum: 1, pageSize: 10, total: 0 },
-        }
-    },
-    filters: {
-        formatActiveStatus(row) {
-            let nowTime = new Date().getTime();
-            if (nowTime >= row.startDate && nowTime <= row.endDate) {
-                return '活动进行中';
-            } else if (nowTime > row.endDate) {
-                return '活动已结束';
-            } else {
-                return '活动未开始';
-            }
+            tableHeight: 0
         }
     },
     created() {
@@ -96,21 +64,6 @@ export default {
         console.log('--tableHeight--', this.tableHeight);
     },
     methods: {
-        flashSession() {
-            this.$router.push({
-                path: '/home/marketingUnit/flash/flashSession/index'
-            })
-        },
-        goodsWay(row) {
-            this.$router.push({
-                path: '/home/marketingUnit/flash/flashSession?flashPromotionId=' + row.id
-            })
-        },
-        resetWay() {
-            this.queryData = {
-                keyword: ''
-            }
-        },
         addWay(row) {
             this.$refs.add.initForm(row);
         },
@@ -118,19 +71,16 @@ export default {
             console.log("---搜索---");
             let that = this;
             let params = {
-                ...that.queryData,
-                pageNum: that.pagingObj.pageNum,
-                pageSize: that.pagingObj.pageSize
+
             };
             that.$apihttp({
-                url: process.env.core_url + '/sky/flashPromotion/list',
+                url: process.env.core_url + '/sky/flashPromotionSession/list',
                 method: 'get',
                 params: params
             })
                 .then(res => {
                     if (res.code == '200') {
-                        that.pagingObj.total = res.data.totalSize;
-                        that.tableData = res.data.content;
+                        that.tableData = res.data;
                         for (let index = 0; index < that.tableData.length; index++) {
                             let item = that.tableData[index];
                         }
@@ -154,7 +104,7 @@ export default {
                         status: value
                     };
                     that.$apihttp({
-                        url: process.env.core_url + '/sky/flashPromotion/update',
+                        url: process.env.core_url + '/sky/flashPromotionSession/update',
                         method: 'post',
                         data: params
                     })
@@ -181,7 +131,7 @@ export default {
         },
         deleteWay(row) {
             let that = this;
-            that.$confirm('是否要删除该类型?', '提示', {
+            that.$confirm('是否要删除该时间段?', '提示', {
                 confirmButtonText: '确定',
                 cancelButtonText: '取消',
                 type: 'warning'
@@ -191,7 +141,7 @@ export default {
  
                     };
                     that.$apihttp({
-                        url: process.env.core_url + '/sky/flashPromotion/delete/' + row.id,
+                        url: process.env.core_url + '/sky/flashPromotionSession/delete/' + row.id,
                         method: 'get',
                         params: params
                     })
@@ -220,7 +170,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-#returnReason {
+#flashSessionUnit {
     height: 100%;
 }
 </style>

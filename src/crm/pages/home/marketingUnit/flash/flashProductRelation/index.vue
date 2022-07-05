@@ -1,17 +1,6 @@
 <template>
-    <section id="returnReason" ref="refUnit">
-        <searchDesign @queryWay="queryWay" ref="refHeader" @addWay="addWay" :chongzhi="true" @resetWay="resetWay">
-            <el-form ref="form" :model="queryData" label-width="100px">
-                <el-row :gutter="20">
-                    <el-col :span="12">
-                        <el-form-item label="活动名称：">
-                            <el-input v-model="queryData.keyword" placeholder=""></el-input>
-                        </el-form-item>
-                    </el-col>
-                </el-row>
-            </el-form>
-            <el-button type="primary" slot="apple" @click="flashSession">秒杀时间段列表</el-button>
-        </searchDesign>
+    <section id="flashProductRelation" ref="refUnit">
+        <searchDesign @queryWay="queryWay" ref="refHeader" @addWay="addWay" :sousuo="false"></searchDesign>
         <!-- 
             1.table的滚动条是height值影响的
             2.要是table在mouted生命周期不重新渲染了，强制刷新渲染也没用，那么用v-if="tableHeight != 0"控制渲染延后
@@ -25,24 +14,29 @@
             ref="refTable"
         >
             <el-table-column width="50" type="index" label="序号"></el-table-column>
-            <el-table-column prop="title" label="活动标题" min-width="120"></el-table-column>
-            <el-table-column label="活动状态" min-width="100">
-                <template slot-scope="scope">{{scope.row |formatActiveStatus}}</template>
+            <el-table-column label="商品名称" min-width="120">
+                <template slot-scope="scope">{{scope.row.product.name}}</template>
             </el-table-column>
-            <el-table-column prop="startDate" label="开始时间" min-width="120"></el-table-column>
-            <el-table-column prop="endDate" label="结束时间" min-width="120"></el-table-column>
-            <el-table-column min-width="80">
-                <template slot="header">上线/下线</template>
-                <template slot-scope="scope">
-                    <el-switch v-model="scope.row.status" :active-value="1" :inactive-value="0" @change="(val)=>{switchChange(val, scope.row)}"></el-switch>
-                </template>
+            <el-table-column label="货号" min-width="80">
+                <template slot-scope="scope">NO.{{scope.row.product.productSn}}</template>
             </el-table-column>
+            <el-table-column label="商品价格" min-width="80">
+                <template slot-scope="scope">NO.{{scope.row.product.price}}</template>
+            </el-table-column>
+            <el-table-column label="剩余数量" min-width="80">
+                <template slot-scope="scope">NO.{{scope.row.product.stock}}</template>
+            </el-table-column>
+            <el-table-column label="秒杀价格" min-width="60">
+                <template slot-scope="scope">NO.{{scope.row.flashPromotionPrice}}</template>
+            </el-table-column>
+            <el-table-column prop="flashPromotionCount" label="秒杀数量" min-width="80"></el-table-column>
+            <el-table-column prop="flashPromotionLimit" label="限购数量" min-width="80"></el-table-column>
+            <el-table-column prop="sort" label="排序" min-width="60"></el-table-column>
 
-            <el-table-column width="180" fixed="right">
+            <el-table-column width="100" fixed="right">
                 <template slot="header">操作</template>
                 <template slot-scope="scope">
-                    <el-button type="text" @click="goodsWay(scope.row)">设置商品</el-button>
-                    <el-button type="text" @click="addWay(scope.row)">编辑</el-button>
+                    <el-button type="text" @click="editWay(scope.row)">编辑</el-button>
                     <el-button type="text" @click="deleteWay(scope.row)">删除</el-button>
                 </template>
             </el-table-column>
@@ -51,15 +45,17 @@
         <pagination :pagingObj="pagingObj" @emitWay="queryWay"></pagination>
 
         <addDialog ref="add" @sureWay="queryWay"></addDialog>
+        <editDialog ref="edit" @sureWay="queryWay"></editDialog>
 
     </section>
 </template>
 
 <script>
 import addDialog from "./addDialog.vue"
+import editDialog from "./editDialog.vue"
 export default {
-    name: "returnReason",
-    components: { addDialog },
+    name: "flashProductRelation",
+    components: { addDialog, editDialog },
     data() {
         return {
             queryData: {
@@ -69,19 +65,7 @@ export default {
             tableData: [],
             tableHeight: 0,
             // -----------------
-            pagingObj: { pageNum: 1, pageSize: 10, total: 0 },
-        }
-    },
-    filters: {
-        formatActiveStatus(row) {
-            let nowTime = new Date().getTime();
-            if (nowTime >= row.startDate && nowTime <= row.endDate) {
-                return '活动进行中';
-            } else if (nowTime > row.endDate) {
-                return '活动已结束';
-            } else {
-                return '活动未开始';
-            }
+            pagingObj: { pageNum: 1, pageSize: 10, total: 0 }
         }
     },
     created() {
@@ -96,34 +80,23 @@ export default {
         console.log('--tableHeight--', this.tableHeight);
     },
     methods: {
-        flashSession() {
-            this.$router.push({
-                path: '/home/marketingUnit/flash/flashSession/index'
-            })
+        addWay() {
+            this.$refs.add.initForm();
         },
-        goodsWay(row) {
-            this.$router.push({
-                path: '/home/marketingUnit/flash/flashSession?flashPromotionId=' + row.id
-            })
-        },
-        resetWay() {
-            this.queryData = {
-                keyword: ''
-            }
-        },
-        addWay(row) {
-            this.$refs.add.initForm(row);
+        editWay(row) {
+            this.$refs.edit.initForm(row);
         },
         queryWay() {
             console.log("---搜索---");
             let that = this;
             let params = {
-                ...that.queryData,
+                flashPromotionId: that.$route.query.flashPromotionId,
+                flashPromotionSessionId: that.$route.query.flashPromotionSessionId,
                 pageNum: that.pagingObj.pageNum,
                 pageSize: that.pagingObj.pageSize
             };
             that.$apihttp({
-                url: process.env.core_url + '/sky/flashPromotion/list',
+                url: process.env.core_url + '/sky/flashPromotionProductRelation/list',
                 method: 'get',
                 params: params
             })
@@ -154,7 +127,7 @@ export default {
                         status: value
                     };
                     that.$apihttp({
-                        url: process.env.core_url + '/sky/flashPromotion/update',
+                        url: process.env.core_url + '/sky/flashProductRelation/update',
                         method: 'post',
                         data: params
                     })
@@ -181,17 +154,17 @@ export default {
         },
         deleteWay(row) {
             let that = this;
-            that.$confirm('是否要删除该类型?', '提示', {
+            that.$confirm('是否要删除该商品关联?', '提示', {
                 confirmButtonText: '确定',
                 cancelButtonText: '取消',
                 type: 'warning'
             })
                 .then(() => {
                     let params = {
- 
+
                     };
                     that.$apihttp({
-                        url: process.env.core_url + '/sky/flashPromotion/delete/' + row.id,
+                        url: process.env.core_url + '/sky/flashPromotionProductRelation/delete/' + row.id,
                         method: 'get',
                         params: params
                     })
@@ -220,7 +193,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-#returnReason {
+#flashProductRelation {
     height: 100%;
 }
 </style>
