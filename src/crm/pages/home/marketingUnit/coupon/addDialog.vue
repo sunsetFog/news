@@ -51,12 +51,12 @@
                         </el-input>
                     </el-form-item>
                     <el-form-item label="领取日期：" prop="enableTime">
-                        <el-date-picker type="date" placeholder="选择日期" v-model="withForm.enableTime"></el-date-picker>
+                        <el-date-picker type="date" value-format="yyyy-MM-dd" placeholder="选择日期" v-model="withForm.enableTime"></el-date-picker>
                     </el-form-item>
                     <el-form-item label="有效期：">
-                        <el-date-picker type="date" placeholder="选择日期" v-model="withForm.startTime" style="width: 150px"></el-date-picker>
+                        <el-date-picker type="date" value-format="yyyy-MM-dd" placeholder="选择日期" v-model="withForm.startTime" style="width: 150px"></el-date-picker>
                         <span style="margin-left: 20px;margin-right: 20px">至</span>
-                        <el-date-picker type="date" placeholder="选择日期" v-model="withForm.endTime" style="width: 150px"></el-date-picker>
+                        <el-date-picker type="date" value-format="yyyy-MM-dd" placeholder="选择日期" v-model="withForm.endTime" style="width: 150px"></el-date-picker>
                     </el-form-item>
                     <el-form-item label="可使用商品：">
                         <el-radio-group v-model="withForm.useType">
@@ -70,69 +70,64 @@
                     <el-form-item v-show="withForm.useType===1">
                         <el-cascader
                             v-model="productCategoryId"
-                            :options="product_category_list"
+                            :options="product_category_arr"
                             :props="defaultProps">
                         </el-cascader>
 
-                        <!-- <el-button @click="handleAddProductCategoryRelation()">添加</el-button>
-                        <el-table ref="productCateRelationTable"
-                                :data="withForm.productCategoryRelationList"
+                        <el-button @click="addCategory()">添加</el-button>
+                        <el-table
+                                ref="productCateRelationTable"
+                                :data="category_list"
                                 style="width: 100%;margin-top: 20px"
                                 border>
-                        <el-table-column label="分类名称" align="center">
-                            <template slot-scope="scope">{{scope.row.parentCategoryName}}>{{scope.row.productCategoryName}}</template>
-                        </el-table-column>
-                        <el-table-column label="操作" align="center" width="100">
-                            <template slot-scope="scope">
-                            <el-button size="mini"
-                                        type="text"
-                                        @click="handleDeleteProductCateRelation(scope.$index, scope.row)">删除
-                            </el-button>
-                            </template>
-                        </el-table-column>
-                        </el-table> -->
+                            <el-table-column label="分类名称" align="center">
+                                <template slot-scope="scope">{{scope.row.parentCategoryName}}>{{scope.row.productCategoryName}}</template>
+                            </el-table-column>
+                            <el-table-column label="操作" align="center" width="100">
+                                <template slot-scope="scope">
+                                <el-button type="text" @click="deleteCategory(scope.$index, scope.row)">删除</el-button>
+                                </template>
+                            </el-table-column>
+                        </el-table>
 
 
                     </el-form-item>
                     <el-form-item v-show="withForm.useType===2">
-                        8888
-                        <!-- <el-select
-                        v-model="selectProduct"
+                        <el-select
+                        v-model="product_value"
                         filterable
                         remote
                         reserve-keyword
                         placeholder="商品名称/商品货号"
-                        :remote-method="searchProductMethod"
-                        :loading="selectProductLoading">
-                        <el-option
-                            v-for="item in selectProductOptions"
-                            :key="item.productId"
-                            :label="item.productName"
-                            :value="item.productId">
-                            <span style="float: left">{{ item.productName }}</span>
-                            <span style="float: right; color: #8492a6; font-size: 13px">NO.{{ item.productSn }}</span>
-                        </el-option>
-                        </el-select> -->
-                        <!-- <el-button @click="handleAddProductRelation()">添加</el-button>
-                        <el-table ref="productRelationTable"
-                                :data="withForm.productRelationList"
-                                style="width: 100%;margin-top: 20px"
-                                border>
-                        <el-table-column label="商品名称" align="center">
-                            <template slot-scope="scope">{{scope.row.productName}}</template>
-                        </el-table-column>
-                        <el-table-column label="货号" align="center"  width="120" >
-                            <template slot-scope="scope">NO.{{scope.row.productSn}}</template>
-                        </el-table-column>
-                        <el-table-column label="操作" align="center" width="100">
-                            <template slot-scope="scope">
-                            <el-button size="mini"
-                                        type="text"
-                                        @click="handleDeleteProductRelation(scope.$index, scope.row)">删除
-                            </el-button>
-                            </template>
-                        </el-table-column>
-                        </el-table> -->
+                        :remote-method="queryWay"
+                        :loading="loading">
+                            <el-option
+                                v-for="item in productOptions"
+                                :key="item.productId"
+                                :label="item.productName"
+                                :value="item.productId">
+                                <span style="float: left;margin-right: 100px;">{{ item.productName }}</span>
+                                <span style="float: right; color: #8492a6; font-size: 13px">NO.{{ item.productSn }}</span>
+                            </el-option>
+                        </el-select>
+                        <el-button @click="addProduct()">添加</el-button>
+                        <el-table
+                            ref="productRelationTable"
+                            :data="productRelationList"
+                            style="width: 100%;margin-top: 20px"
+                            border>
+                                <el-table-column label="商品名称" align="center">
+                                    <template slot-scope="scope">{{scope.row.productName}}</template>
+                                </el-table-column>
+                                <el-table-column label="货号" align="center"  width="120" >
+                                    <template slot-scope="scope">NO.{{scope.row.productSn}}</template>
+                                </el-table-column>
+                                <el-table-column label="操作" align="center" width="100">
+                                    <template slot-scope="scope">
+                                    <el-button type="text" @click="deleteProduct(scope.$index, scope.row)">删除</el-button>
+                                    </template>
+                                </el-table-column>
+                        </el-table>
 
                     </el-form-item>
 
@@ -170,7 +165,6 @@ export default {
                 startTime: '',
                 endTime: '',
                 useType: 0,
-
                 note: ''
             },
             rulesCheck: {
@@ -210,20 +204,116 @@ export default {
                 }
             ],
             // ----------------
-            productCategoryId: '',
-            product_category_list: [],
+            productCategoryId: [],
+            product_category_arr: [],
             defaultProps: {// 替换结构字段，不用处理数据
                 children: 'children',
                 value: 'id',
                 label: 'name'
             },
+            category_list: [],
             // ----------------
+            product_value: null,
+            loading: false,
+            productOptions: [],
+            productRelationList: []
+            // ---------------
         }
     },
     created() {
         this.categoryWay();
     },
     methods: {
+        // 添加产品
+        addProduct() {
+            console.log("--product_value---", this.product_value);
+            for (let index = 0; index < this.productOptions.length; index++) {
+                let item = this.productOptions[index];
+                if(item.productId == this.product_value) {
+                    // 防止重复推进数组
+                    let flag = true;
+                    for(let y = 0; y < this.productRelationList.length; y++) {
+                        let row = this.productRelationList[y];
+                        if(row.productId == item.productId) {
+                            flag = false;
+                        }
+                    }
+                    if(flag) {
+                        this.productRelationList.push(item);
+                    }
+                    
+                }
+            }
+        },
+        // 删除产品
+        deleteProduct(index, row) {
+            this.productRelationList.splice(index, 1);
+        },
+        // 远程搜索
+        queryWay(value) {
+            console.log("--queryWay--", value);
+            let that = this;
+            let params = {
+                keyword: value,
+                pageNum: 1,
+                pageSize: 9999
+            };
+            that.loading = true
+            that.$apihttp({
+                url: process.env.core_url + '/sky/product/list',
+                method: 'post',
+                data: params
+            })
+                .then(res => {
+                    that.loading = false
+                    if (res.code == '200') {
+                        let arr = res.data.content;
+                        that.productOptions = []
+                        for (let index = 0; index < arr.length; index++) {
+                            let item = arr[index];
+                            that.productOptions.push({
+                                productId: item.id,
+                                productName: item.name,
+                                productSn: item.productSn
+                            })
+                        }
+                    }
+                })
+                .catch(err => {
+                    console.log('error', err);
+                });
+        },
+        // 添加分类
+        addCategory() {
+            console.log("--productCategoryId--", this.productCategoryId)
+            for (let i = 0; i < this.product_category_arr.length; i++) {
+                let item = this.product_category_arr[i];
+                for (let y = 0; y < item.children.length; y++) {
+                    let element = item.children[y];
+                    if(element.id == this.productCategoryId[1]) {
+                        // 防止重复推进数组
+                        let flag = true;
+                        for(let h = 0; h < this.category_list.length; h++) {
+                            let wee = this.category_list[h];
+                            if(wee.productCategoryId == element.id) {
+                                flag = false;
+                            }
+                        }
+                        if(flag) {
+                            this.category_list.push({
+                                productCategoryId: element.id,
+                                parentCategoryName: item.name,
+                                productCategoryName: element.name
+                            })
+                        }
+                    }
+                }
+            }
+        },
+        // 删除分类
+        deleteCategory(index, row) {
+            this.category_list.splice(index, 1);
+        },
         // 商品分类
         categoryWay() {
             let that = this;
@@ -236,9 +326,9 @@ export default {
             })
                 .then(res => {
                     if (res.code == '200') {
-                        that.product_category_list = res.data;
-                        for (let i = 0; i < that.product_category_list.length; i++) {
-                            let item = that.product_category_list[i];
+                        that.product_category_arr = res.data;
+                        for (let i = 0; i < that.product_category_arr.length; i++) {
+                            let item = that.product_category_arr[i];
                             for (let y = 0; y < item.children.length; y++) {
                                 let element = item.children[y];
                                 delete element["children"];
@@ -263,11 +353,15 @@ export default {
                 minPoint: row.minPoint || 0,
                 enableTime: row.enableTime || '',
                 startTime: row.startTime || '',
-                endTime: row.endTime || 0,
+                endTime: row.endTime || '',
                 useType: row.useType || 0,
                 note: row.note || ''
             }
             this.save_row = row
+            this.category_list = row.productCategoryRelationList || []
+            this.productRelationList = row.productRelationList || []
+            this.productCategoryId = []
+            this.product_value = null
         },
         cancelWay() {
             this.dialogVisible = false;
@@ -279,9 +373,15 @@ export default {
                 this.editSure();
             }
         },
+        paramsWay() {
+            let params = this.withForm;
+            params.productCategoryRelationList = this.category_list;
+            params.productRelationList = this.productRelationList;
+            return params;
+        },
         addSure() {
             let that = this;
-            let params = that.withForm;
+            let params = that.paramsWay();
             that.$apihttp({
                 url: process.env.core_url + '/sky/coupon/add',
                 method: 'post',
@@ -303,10 +403,8 @@ export default {
         },
         editSure() {
             let that = this;
-            let params = {
-                id: that.save_row.id,
-                ...that.withForm
-            }
+            let params = that.paramsWay();
+            params.id = that.save_row.id;
             that.$apihttp({
                 url: process.env.core_url + '/sky/coupon/update',
                 method: 'post',
@@ -332,6 +430,6 @@ export default {
 
 <style lang="less" scoped>
 #addDialog {
-
+    
 }
 </style>

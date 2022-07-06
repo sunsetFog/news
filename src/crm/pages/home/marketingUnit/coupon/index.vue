@@ -60,9 +60,10 @@
                 <template slot-scope="scope">{{scope.row.endTime | formatStatus}}</template>
             </el-table-column>
 
-            <el-table-column width="100" fixed="right">
+            <el-table-column width="150" fixed="right">
                 <template slot="header">操作</template>
                 <template slot-scope="scope">
+                    <el-button type="text" @click="detailsWay(scope.row)">领取详情</el-button>
                     <el-button type="text" @click="addWay(scope.row)">编辑</el-button>
                     <el-button type="text" @click="deleteWay(scope.row)">删除</el-button>
                 </template>
@@ -153,6 +154,11 @@ export default {
         console.log('--tableHeight--', this.tableHeight);
     },
     methods: {
+        detailsWay(row) {
+            this.$router.push({
+                path: '/home/marketingUnit/coupon/couponHistory?id=' + row.id
+            })
+        },
         resetWay() {
             this.queryData = {
                 name: '',
@@ -194,59 +200,20 @@ export default {
                     console.log('error', err);
                 });
         },
-        switchChange(value, row) {
-            console.log("--switchChange--", value, row);
-            let that = this;
-            that.$confirm('是否要修改该状态?', '提示', {
-                confirmButtonText: '确定',
-                cancelButtonText: '取消',
-                type: 'warning'
-            })
-                .then(() => {
-                    let params = {
-                        id: row.id,
-                        status: value
-                    };
-                    that.$apihttp({
-                        url: process.env.core_url + '/sky/coupon/update',
-                        method: 'post',
-                        data: params
-                    })
-                        .then(res => {
-                            if (res.code == '200') {
-                                that.queryWay();
-                                that.$message({
-                                    type: 'success',
-                                    message: '修改成功!'
-                                });
-                            }
-                        })
-                        .catch(err => {
-                            console.log('error', err);
-                        });
-                })
-                .catch(() => {
-                    that.queryWay();
-                    that.$message({
-                        type: 'info',
-                        message: '已取消删除'
-                    });
-                });
-        },
         deleteWay(row) {
             let that = this;
-            that.$confirm('是否要删除该类型?', '提示', {
+            that.$confirm('是否进行删除操作?', '提示', {
                 confirmButtonText: '确定',
                 cancelButtonText: '取消',
                 type: 'warning'
             })
                 .then(() => {
                     let params = {
-                        ids: row.id
+
                     };
                     that.$apihttp({
-                        url: process.env.core_url + '/sky/coupon/delete',
-                        method: 'post',
+                        url: process.env.core_url + '/sky/coupon/delete/' + row.id,
+                        method: 'get',
                         params: params
                     })
                         .then(res => {

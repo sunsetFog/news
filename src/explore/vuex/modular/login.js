@@ -193,7 +193,8 @@ const login = {
                 "orderUnit/returnApply/applyDetail",
                 "marketingUnit/flash/flashSession",
                 "marketingUnit/flash/flashProductRelation/index",
-                "marketingUnit/flash/flashSession/index"
+                "marketingUnit/flash/flashSession/index",
+                "marketingUnit/coupon/couponHistory"
             ]
 
 
