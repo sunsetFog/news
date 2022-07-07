@@ -116,10 +116,10 @@
                 </template>
             </el-table-column>
 
-            <el-table-column width="180" fixed="right">
+            <el-table-column width="100" fixed="right">
                 <template slot="header">操作</template>
                 <template slot-scope="scope">
-                    <el-button type="text" @click="editWay(scope.row)">编辑</el-button>
+                    <el-button type="text" @click="addWay(scope.row)">编辑</el-button>
                     <el-button type="text" @click="deleteWay(scope.row)">删除</el-button>
                 </template>
             </el-table-column>
@@ -127,335 +127,20 @@
 
         <pagination :pagingObj="pagingObj" @emitWay="queryWay"></pagination>
 
-
-
-        <el-dialog
-            :title="dialog_title"
-            :visible.sync="dialogVisible"
-            width="800px"
-            :close-on-click-modal="false"
-            >
-            <section class="mercury">
-                <el-steps :active="guide_active" finish-status="success" align-center style="margin-bottom: 25px;">
-                    <el-step title="填写商品信息"></el-step>
-                    <el-step title="填写商品促销"></el-step>
-                    <el-step title="填写商品属性"></el-step>
-                    <el-step title="选择商品关联"></el-step>
-                </el-steps>
-
-                <el-form v-if="guide_active == 0" :model="formOf01" :rules="rulesCheck" ref="formOf01" label-width="100px">
-                    <el-form-item label="商品分类:" prop="productCategoryId">
-                        <el-cascader
-                        v-model="formOf01.productCategoryId"
-                        :options="product_category_list"
-                        :props="defaultProps">
-                        </el-cascader>
-                    </el-form-item>
-                    <el-form-item label="商品名称:" prop="name">
-                        <el-input v-model="formOf01.name" placeholder="请输入商品名称"></el-input>
-                    </el-form-item>
-                    <el-form-item label="副标题:" prop="subtitle">
-                        <el-input v-model="formOf01.subtitle" placeholder="请输入副标题"></el-input>
-                    </el-form-item>
-                    <el-form-item label="商品品牌:" prop="brandId">
-                        <el-select v-model="formOf01.brandId" placeholder="请选择">
-                            <el-option
-                            v-for="item in brand_list"
-                            :key="item.id"
-                            :label="item.name"
-                            :value="item.id">
-                            </el-option>
-                        </el-select>
-                    </el-form-item>
-                    <el-form-item label="商品介绍:" prop="introduce">
-                        <el-input type="textarea" v-model="formOf01.introduce" maxlength="100" show-word-limit></el-input>
-                    </el-form-item>
-                    <el-form-item label="商品货号:" prop="productSn">
-                        <el-input v-model="formOf01.productSn" placeholder="请输入商品货号"></el-input>
-                    </el-form-item>
-                    <el-form-item label="商品售价:" prop="price">
-                        <el-input v-model="formOf01.price" placeholder="请输入商品售价"></el-input>
-                    </el-form-item>
-                    <el-form-item label="市场价:" prop="market_value">
-                        <el-input v-model="formOf01.market_value" placeholder="请输入市场价"></el-input>
-                    </el-form-item>
-                    <el-form-item label="商品库存:" prop="stock">
-                        <el-input v-model="formOf01.stock" placeholder="请输入商品库存"></el-input>
-                    </el-form-item>
-                    <el-form-item label="计算单位:" prop="company">
-                        <el-input v-model="formOf01.company" placeholder="请输入计算单位"></el-input>
-                    </el-form-item>
-                    <el-form-item label="商品重量:" prop="weight">
-                        <el-input v-model="formOf01.weight" placeholder="请输入商品重量">
-                            <div slot="suffix">克</div>
-                        </el-input>
-                    </el-form-item>
-                    <el-form-item label="排序:" prop="sort">
-                        <el-input v-model="formOf01.sort" placeholder="请输入排序"></el-input>
-                    </el-form-item>
-                </el-form>
-
-
-                <el-form v-if="guide_active == 1" :model="formOf02" :rules="rulesCheck" ref="formOf02" label-width="100px">
-                    <el-form-item label="赠送积分:" prop="integral">
-                        <el-input v-model="formOf02.integral" placeholder="请输入赠送积分"></el-input>
-                    </el-form-item>
-                    <el-form-item label="赠送成长值:" prop="grow">
-                        <el-input v-model="formOf02.grow" placeholder="请输入赠送成长值"></el-input>
-                    </el-form-item>
-                    <el-form-item label="积分购买限制:" prop="buyLimit">
-                        <el-input v-model="formOf02.buyLimit" placeholder="请输入积分购买限制"></el-input>
-                    </el-form-item>
-                    <el-form-item label="预告商品:" prop="advanceNotice">
-                        <el-switch v-model="formOf02.advanceNotice"></el-switch>
-                    </el-form-item>
-                    <el-form-item label="商品上架:" prop="putOn">
-                        <el-switch v-model="formOf02.putOn"></el-switch>
-                    </el-form-item>
-                    <el-form-item label="商品推荐:">
-                        新品&nbsp;&nbsp;<el-switch v-model="formOf02.newProduct"></el-switch>&nbsp;&nbsp;&nbsp;
-                        推荐&nbsp;&nbsp;<el-switch v-model="formOf02.recommend"></el-switch>
-                    </el-form-item>
-                    <el-form-item label="服务保证:" prop="price">
-                        <el-checkbox-group v-model="formOf02.serviceList">
-                            <el-checkbox label="无忧退货"></el-checkbox>
-                            <el-checkbox label="快速退款"></el-checkbox>
-                            <el-checkbox label="免费包邮"></el-checkbox>      
-                        </el-checkbox-group>
-                    </el-form-item>
-                    <el-form-item label="详细页标题:" prop="detailTitle">
-                        <el-input v-model="formOf02.detailTitle" placeholder="请输入详细页标题"></el-input>
-                    </el-form-item>
-                    <el-form-item label="详细页描述:" prop="description">
-                        <el-input v-model="formOf02.description" placeholder="请输入详细页描述"></el-input>
-                    </el-form-item>
-                    <el-form-item label="商品关键字:" prop="keyword">
-                        <el-input v-model="formOf02.keyword" placeholder="请输入商品关键字"></el-input>
-                    </el-form-item>
-                    <el-form-item label="商品备注:" prop="remarks">
-                        <el-input type="textarea" v-model="formOf02.remarks" maxlength="100" show-word-limit></el-input>
-                    </el-form-item>
-                    <el-form-item label="选择优惠方式:">
-                        <el-tabs type="border-card">
-                            <el-tab-pane label="无优惠">无优惠</el-tab-pane>
-                            <el-tab-pane label="特惠促销">
-
-                               <el-row :gutter="20" style="margin-bottom: 15px;">
-                                    <el-col :span="4">时间：</el-col>
-                                    <el-col :span="20">
-                                        <el-date-picker
-                                        v-model="formOf02.time_value"
-                                        type="datetimerange"
-                                        range-separator="至"
-                                        start-placeholder="开始日期"
-                                        end-placeholder="结束日期">
-                                        </el-date-picker>
-                                    </el-col>
-                                </el-row>
-                                <el-row :gutter="20">
-                                    <el-col :span="4">促销价格：</el-col>
-                                    <el-col :span="20">
-                                        <el-input v-model="formOf02.promotion_price" placeholder=""></el-input>
-                                    </el-col>
-                                </el-row>
-
-                            </el-tab-pane>
-                            <el-tab-pane label="会员价格">
-
-                                <el-row :gutter="20" style="margin-bottom: 15px;">
-                                    <el-col :span="4">黄金会员：</el-col>
-                                    <el-col :span="20">
-                                        <el-input v-model="formOf02.gold" placeholder=""></el-input>
-                                    </el-col>
-                                </el-row>
-                                <el-row :gutter="20" style="margin-bottom: 15px;">
-                                    <el-col :span="4">白金会员：</el-col>
-                                    <el-col :span="20">
-                                        <el-input v-model="formOf02.platinum" placeholder=""></el-input>
-                                    </el-col>
-                                </el-row>
-                                <el-row :gutter="20">
-                                    <el-col :span="4">钻石会员：</el-col>
-                                    <el-col :span="20">
-                                        <el-input v-model="formOf02.diamonds" placeholder=""></el-input>
-                                    </el-col>
-                                </el-row>
-
-                            </el-tab-pane>
-                            <el-tab-pane label="阶梯价格">
-
-                                <el-table
-                                    :data="formOf02.ladder_list"
-                                    border
-                                    style="width: 100%"
-                                >
-                                    <el-table-column min-width="100">
-                                        <template slot="header">数量</template>
-                                        <template slot-scope="scope">
-                                            <el-input v-model="scope.row.quantity" placeholder=""></el-input>
-                                        </template>
-                                    </el-table-column>
-                                    <el-table-column min-width="100">
-                                        <template slot="header">折扣</template>
-                                        <template slot-scope="scope">
-                                            <el-input v-model="scope.row.discount" placeholder=""></el-input>
-                                        </template>
-                                    </el-table-column>
-                                    <el-table-column width="180">
-                                        <template slot="header">
-                                            操作：<el-button type="primary" @click="addLadderWay()">添加</el-button>
-                                        </template>
-                                        <template slot-scope="scope">
-                                            
-                                            <el-button type="text" @click="deleteLadderWay(scope)">删除</el-button>
-                                        </template>
-                                    </el-table-column>
-                                </el-table>
-
-                            </el-tab-pane>
-                            <el-tab-pane label="满减价格">满减价格</el-tab-pane>
-                        </el-tabs>
-                    </el-form-item>
-                </el-form>
-
-
-                <el-form v-show="guide_active == 2" :model="formOf03" :rules="rulesCheck" ref="formOf03" label-width="100px">
-                    <el-form-item label="属性类型:" prop="productAttributeCategoryId">
-                        <el-select v-model="formOf03.productAttributeCategoryId" placeholder="请选择">
-                            <el-option
-                            v-for="item in attribute_type_list"
-                            :key="item.id"
-                            :label="item.name"
-                            :value="item.id">
-                            </el-option>
-                        </el-select>
-                    </el-form-item>
-                    <el-form-item label="商品规格:"></el-form-item>
-                    <el-form-item label="商品参数:"></el-form-item>
-                    <el-form-item label="商品相册:">
-                        <upload1 ref="refUpload"></upload1>
-                    </el-form-item>
-                    <el-form-item label="规格参数:">
-                        <el-tabs type="border-card">
-                            <el-tab-pane label="电脑端详情">电脑端详情</el-tab-pane>
-                            <el-tab-pane label="移动端详情">移动端详情</el-tab-pane>
-                        </el-tabs>
-                    </el-form-item>
-                </el-form>
-
-
-                <el-form v-if="guide_active == 3" :model="formOf04" :rules="rulesCheck" ref="formOf04" label-width="100px">
-                    <el-form-item label="关联专题:">
-                        <el-transfer
-                            filterable
-                            :filter-method="filterMethod1"
-                            filter-placeholder="请输入"
-                            v-model="subject_value"
-                            :data="subject_list"
-                            :titles="['待选择', '已选择']"
-                            :props="asProps1">
-                        </el-transfer>
-                    </el-form-item>
-                    <el-form-item label="关联优选:">
-                        <el-transfer
-                            filterable
-                            :filter-method="filterMethod2"
-                            filter-placeholder="请输入"
-                            v-model="optimization_value"
-                            :data="optimization_list"
-                            :titles="['待选择', '已选择']"
-                            :props="asProps2">
-                        </el-transfer>
-                    </el-form-item>
-                </el-form>
-
-
-
-            </section>
-            <section slot="footer" class="dialog-footer">
-                <el-button @click="cancelWay">取 消</el-button>
-                <el-button type="primary" @click="backWay" v-if="guide_active != 0">上一步</el-button>
-                <el-button type="primary" @click="nextWay"  v-if="guide_active != 3">下一步</el-button>
-                <el-button type="primary" @click="sureWay">确 定</el-button>
-            </section>
-        </el-dialog>
-
-
-        <el-dialog
-            title="编辑货品信息"
-            :visible.sync="dialogGoods"
-            width="800px"
-            :close-on-click-modal="false"
-            >
-            <section class="mercury-box">
-                <el-row :gutter="20" style="margin-bottom: 20px;">
-                    <el-col :span="3">商品货号:</el-col>
-                    <el-col :span="7">{{save_goods.productSn}}</el-col>
-                    <el-col :span="3">sku编号:</el-col>
-                    <el-col :span="11">
-                        <el-input placeholder="sku编号" v-model="sku_value">
-                            <el-button slot="append" icon="el-icon-search" @click="skuList()"></el-button>
-                        </el-input>
-                    </el-col>
-                </el-row>
-                <el-table
-                    :data="sku_list"
-                    border
-                    style="width: 100%"
-                >
-                    <el-table-column min-width="120">
-                        <template slot="header">sku编号</template>
-                        <template slot-scope="scope">
-                            <el-input v-model="scope.row.skuCode" placeholder="请输入内容"></el-input>
-                        </template>
-                    </el-table-column>
-                    <el-table-column min-width="50">
-                        <template slot="header">颜色</template>
-                        <template slot-scope="scope">
-                            {{scope.row.spData[0].value}}
-                        </template>
-                    </el-table-column>
-                    <el-table-column min-width="50">
-                        <template slot="header">容量</template>
-                        <template slot-scope="scope">
-                            {{scope.row.spData[1].value}}
-                        </template>
-                    </el-table-column>
-                    <el-table-column min-width="100">
-                        <template slot="header">销售价格</template>
-                        <template slot-scope="scope">
-                            <el-input v-model="scope.row.price" placeholder="请输入内容"></el-input>
-                        </template>
-                    </el-table-column>
-                    <el-table-column min-width="100">
-                        <template slot="header">商品库存</template>
-                        <template slot-scope="scope">
-                            <el-input v-model="scope.row.stock" placeholder="请输入内容"></el-input>
-                        </template>
-                    </el-table-column>
-                    <el-table-column min-width="100">
-                        <template slot="header">库存预警值</template>
-                        <template slot-scope="scope">
-                            <el-input v-model="scope.row.lowStock" placeholder="请输入内容"></el-input>
-                        </template>
-                    </el-table-column>
-                </el-table>
-            </section>
-            <section slot="footer" class="dialog-footer">
-                <el-button @click="cancelGoodsWay">取 消</el-button>
-                <el-button type="primary" @click="sureGoodsWay">确 定</el-button>
-            </section>
-        </el-dialog>
-
+        <addDialog ref="add" @sureWay="queryWay"></addDialog>
+        <skuStockDialog ref="skuStock" @sureWay="queryWay"></skuStockDialog>
+        
     </section>
 </template>
 
 <script>
-import addEdit from "./addEdit"
-import skuStock from "./skuStock"
+import addDialog from "./addDialog"
+import skuStockDialog from "./skuStockDialog"
+import apple from "./apple"
 export default {
     name: "customer",
-    mixins: [addEdit, skuStock],
+    components: { addDialog, skuStockDialog },
+    mixins: [apple],
     data() {
         return {
             queryData: {
@@ -466,13 +151,6 @@ export default {
                 publishStatus: '',
                 verifyStatus: ''
             },
-            product_category_list: [],
-            defaultProps: {// 替换结构字段，不用处理数据
-                children: 'children',
-                value: 'id',
-                label: 'name'
-            },
-            brand_list: [],
             publish_list: [
                 { value: 1, label: '上架' },
                 { value: 0, label: '下架'}
@@ -490,8 +168,6 @@ export default {
     },
     created() {
         this.queryWay();
-        this.categoryWay();
-        this.brandWay();
     },
     mounted() {
         console.log('--refUnit-', this.$refs.refUnit.offsetHeight);
@@ -502,6 +178,14 @@ export default {
         console.log('--tableHeight--', this.tableHeight);
     },
     methods: {
+        // 添加，编辑
+        addWay(row) {
+            this.$refs.add.initForm(row);
+        },
+        // SKU库存
+        skuStockShow(row) {
+            this.$refs.skuStock.initForm(row);
+        },
         resetWay() {
             this.queryData.keyword = ''
             this.queryData.productSn = ''
@@ -509,54 +193,6 @@ export default {
             this.queryData.brandId = ''
             this.queryData.publishStatus = ''
             this.queryData.verifyStatus = ''
-        },
-        // 商品分类
-        categoryWay() {
-            let that = this;
-            let params = {
-            };
-            that.$apihttp({
-                url: process.env.core_url + '/sky/productCategory/treeList',
-                method: 'get',
-                params: params
-            })
-                .then(res => {
-                    if (res.code == '200') {
-                        that.product_category_list = res.data;
-                        for (let i = 0; i < that.product_category_list.length; i++) {
-                            let item = that.product_category_list[i];
-                            for (let y = 0; y < item.children.length; y++) {
-                                let element = item.children[y];
-                                delete element["children"];
-                            }
-                        }
-                    }
-                })
-                .catch(err => {
-                    console.log('error', err);
-                });
-        },
-        // 商品品牌
-        brandWay() {
-            let that = this;
-            let params = {
-                keyword: '',
-                pageNum: 1,
-                pageSize: 9999
-            };
-            that.$apihttp({
-                url: process.env.core_url + '/sky/brand/list',
-                method: 'get',
-                params: params
-            })
-                .then(res => {
-                    if (res.code == '200') {
-                        that.brand_list = res.data.content;
-                    }
-                })
-                .catch(err => {
-                    console.log('error', err);
-                });
         },
         queryWay() {
             console.log("---搜索---");
