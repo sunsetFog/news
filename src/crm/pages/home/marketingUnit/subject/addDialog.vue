@@ -1,14 +1,14 @@
 <template>
     <section id="addDialog">
         <el-dialog
-            title="选择商品"
+            title="选择专题"
             :visible.sync="dialogVisible"
             width="700px"
             :close-on-click-modal="false"
             >
             <section class="mercury">
                 <el-row :gutter="20" style="margin-bottom: 20px;">
-                    <el-col :span="3">商品名称:</el-col>
+                    <el-col :span="3">专题名称:</el-col>
                     <el-col :span="11">
                         <el-input placeholder="" v-model="keyword">
                             <el-button slot="append" icon="el-icon-search" @click="queryWay()"></el-button>
@@ -30,21 +30,15 @@
                     @select="tickSelect"
                 >
                     <el-table-column type="selection" :reserve-selection="true" width="60" align="center"></el-table-column>
-                    <el-table-column prop="name" label="商品名称" min-width="120"></el-table-column>
-                    <el-table-column label="货号" min-width="100">
-                        <template slot-scope="scope">NO.{{scope.row.productSn}}</template>
-                    </el-table-column>
-                    <el-table-column label="价格" min-width="100">
-                        <template slot-scope="scope">￥{{scope.row.price}}</template>
-                    </el-table-column>
+                    <el-table-column prop="title" label="专题名称" min-width="120"></el-table-column>
+                    <el-table-column prop="categoryName" label="所属分类" min-width="120"></el-table-column>
+                    <el-table-column prop="createTime" label="添加时间" min-width="120"></el-table-column>
                 </el-table>
                 <pagination :pagingObj="pagingObj" @emitWay="queryWay"></pagination>
             </section>
             <section slot="footer" class="dialog-footer">
                 <el-button @click="cancelWay">取 消</el-button>
-                <el-button type="primary" v-if="sure_active == 1" @click="sureWay1">确 定</el-button>
-                <el-button type="primary" v-if="sure_active == 2" @click="sureWay2">确 定</el-button>
-                <el-button type="primary" v-if="sure_active == 3" @click="sureWay3">确 定</el-button>
+                <el-button type="primary" @click="sureWay">确 定</el-button>
             </section>
         </el-dialog>
     </section>
@@ -53,12 +47,6 @@
 <script>
 export default {
     name: "addDialog",
-    props: {
-        sure_active: {
-            type: Number,
-            default: 1
-        }
-    },
     data() {
         return {
             dialogVisible: false,
@@ -88,9 +76,9 @@ export default {
                 pageSize: that.pagingObj.pageSize
             };
             that.$apihttp({
-                url: process.env.core_url + '/sky/product/list',
-                method: 'post',
-                data: params
+                url: process.env.core_url + '/sky/subject/list',
+                method: 'get',
+                params: params
             })
                 .then(res => {
                     if (res.code == '200') {
@@ -109,77 +97,18 @@ export default {
         cancelWay() {
             this.dialogVisible = false;
         },
-        sureWay1() {
+        sureWay() {
             let that = this;
             let params = [];
             for (let index = 0; index < that.tick_arr.length; index++) {
                 let item = that.tick_arr[index];
                 params.push({
-                    productId: item.id,
-                    flashPromotionId: that.$route.query.flashPromotionId,
-                    flashPromotionSessionId: that.$route.query.flashPromotionSessionId
+                    subjectId: item.id,
+                    subjectName: item.title
                 })
             }
             that.$apihttp({
-                url: process.env.core_url + '/sky/flashPromotionProductRelation/add',
-                method: 'post',
-                data: params
-            })
-                .then(res => {
-                    if (res.code == '200') {
-                        that.$emit("sureWay");
-                        that.dialogVisible = false;
-                        that.$message({
-                            type: 'success',
-                            message: '添加成功!'
-                        });
-                    }
-                })
-                .catch(err => {
-                    console.log('error', err);
-                });
-        },
-        sureWay2() {
-            let that = this;
-            let params = [];
-            for (let index = 0; index < that.tick_arr.length; index++) {
-                let item = that.tick_arr[index];
-                params.push({
-                    productId: item.id,
-                    productName: item.name
-                })
-            }
-            that.$apihttp({
-                url: process.env.core_url + '/sky/homeNewProduct/add',
-                method: 'post',
-                data: params
-            })
-                .then(res => {
-                    if (res.code == '200') {
-                        that.$emit("sureWay");
-                        that.dialogVisible = false;
-                        that.$message({
-                            type: 'success',
-                            message: '添加成功!'
-                        });
-                    }
-                })
-                .catch(err => {
-                    console.log('error', err);
-                });
-        },
-        sureWay3() {
-            let that = this;
-            let params = [];
-            for (let index = 0; index < that.tick_arr.length; index++) {
-                let item = that.tick_arr[index];
-                params.push({
-                    productId: item.id,
-                    productName: item.name
-                })
-            }
-            that.$apihttp({
-                url: process.env.core_url + '/sky/homeRecommendProduct/add',
+                url: process.env.core_url + '/sky/homeRecommendSubject/add',
                 method: 'post',
                 data: params
             })

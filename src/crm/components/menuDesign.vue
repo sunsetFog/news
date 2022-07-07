@@ -1,35 +1,39 @@
 <template>
   <section id="menuDesign">
-    <el-menu
-      @select="selectMenu"
-      @open="openMenu"
-      @close="closeMenu"
-      :default-active="menuValue"
-      background-color="#fff"
-      text-color="black"
-      unique-opened
-      active-text-color="#ffd04b"
-      mode="vertical"
-      :collapse="isCollapse"
-    >
-      <div v-for="(item,index) in menuList" :key="index+'w'">
-        <!-- index绑定的字符串是@open事件的参数 -->
-        <el-submenu :index="'sign'+index">
-          <template slot="title">
-            <i class="el-icon-menu"></i>
-            <span>{{item.title}}</span>
-          </template>
-          <el-menu-item-group v-if="item.children.length!=0">
-            <div v-for="(val,ind) in item.children" :key="index+ind+'v'">
-                <!-- index绑定的对象是@select事件的参数,也是:default-active的参数 -->
-              <el-menu-item :index="val.key">
-                <div style="width: 100%;height: 100%;text-indent: 25px;">{{val.title}}</div>
-              </el-menu-item>
-            </div>
-          </el-menu-item-group>
-        </el-submenu>
-      </div>
-    </el-menu>
+      <el-scrollbar style="width:100%;height:90%;">
+
+        <el-menu
+        @select="selectMenu"
+        @open="openMenu"
+        @close="closeMenu"
+        :default-active="menuValue"
+        background-color="#fff"
+        text-color="black"
+        unique-opened
+        active-text-color="#ffd04b"
+        mode="vertical"
+        :collapse="isCollapse"
+        >
+        <div v-for="(item,index) in menuList" :key="index+'w'">
+            <!-- index绑定的字符串是@open事件的参数 -->
+            <el-submenu :index="'sign'+index">
+            <template slot="title">
+                <i class="el-icon-menu"></i>
+                <span>{{item.title}}</span>
+            </template>
+            <el-menu-item-group v-if="item.children.length!=0">
+                <div v-for="(val,ind) in item.children" :key="index+ind+'v'">
+                    <!-- index绑定的对象是@select事件的参数,也是:default-active的参数 -->
+                <el-menu-item :index="val.key">
+                    <div style="width: 100%;height: 100%;text-indent: 25px;">{{val.title}}</div>
+                </el-menu-item>
+                </div>
+            </el-menu-item-group>
+            </el-submenu>
+        </div>
+        </el-menu>
+
+    </el-scrollbar>
   </section>
 </template>
 
@@ -111,6 +115,10 @@ export default {
 
 <style lang="less" scoped>
 #menuDesign {
+    height: calc(100% - 50px);
+    /deep/.el-scrollbar__wrap{
+        overflow-x: hidden !important;
+    }
     /*水平折叠收起菜单,隐藏文字和标签*/
     /deep/.el-menu--collapse .el-submenu__title span {
       display: none;

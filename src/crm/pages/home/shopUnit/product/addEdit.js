@@ -117,7 +117,9 @@ export default {
         subjectWay() {
             let that = this;
             let params = {
-
+                keyword: '',
+                pageNum: 1,
+                pageSize: 9999
             };
             that.$apihttp({
                 url: process.env.core_url + '/sky/subject/list',
@@ -126,7 +128,7 @@ export default {
             })
                 .then(res => {
                     if (res.code == '200') {
-                        that.subject_list = res.data;
+                        that.subject_list = res.data.content;
                     }
                 })
                 .catch(err => {
