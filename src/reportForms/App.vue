@@ -42,5 +42,7 @@ export default {
     background: #001018;
     z-index: -1;
   }
+  // 输入框滑动或多次点击时警告
+  * { touch-action: pan-y; }
 }
 </style>
