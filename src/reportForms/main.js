@@ -18,6 +18,11 @@ import 'vant/lib/index.css';
 Vue.use(Vant);
 
 
+
+import headDesign from '@/reportForms/components/headDesign.vue';
+Vue.component('headDesign', headDesign);
+
+
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 Vue.use(MintUI)

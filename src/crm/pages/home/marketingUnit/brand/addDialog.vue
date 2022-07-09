@@ -16,6 +16,7 @@
                     </el-col>
                 </el-row>
                 <!-- 
+                    Created by rafael.
                     如何解决分页使勾选消失的问题？
                     加上
                     :row-key="getRowKeys"

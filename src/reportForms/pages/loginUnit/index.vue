@@ -14,11 +14,11 @@
             <van-switch class="mercury-apt" v-model="checked" size="20" />
         </div>
         <div class="undercurrent-apt">
-            <span>忘记密码</span>
+            <span @click="forgetPasswordWay">忘记密码</span>
         </div>
         <button class="cosplay-apt">登录</button>
         <div class="rainbow-apt">
-            <span>创建账号</span>
+            <span @click="registerWay()">创建账号</span>
         </div>
         <div class="line-text-line">
             <hr/>  OR  <hr/>
@@ -44,6 +44,18 @@ export default {
                 password: ''
             },
             checked: false
+        }
+    },
+    methods: {
+        registerWay() {
+            this.$router.push({
+                path: "/register"
+            })
+        },
+        forgetPasswordWay() {
+            this.$router.push({
+                path: "/forgetPassword"
+            })
         }
     }
 }
@@ -74,7 +86,7 @@ export default {
     .mars-apt {
         width: 100%;
         height: 45px;
-        border-bottom: 1px solid #D5D5D5;
+        border-bottom: 1px solid @color_edge;
         position: relative;
         .u2839 {
             width: 25px;
@@ -95,7 +107,7 @@ export default {
     .saturn-apt {
         width: 100%;
         height: 45px;
-        border-bottom: 1px solid #D5D5D5;
+        border-bottom: 1px solid @color_edge;
         margin-top: 25px;
         position: relative;
         .u2843 {
@@ -126,7 +138,7 @@ export default {
         margin-top: 20px;
         span {
             float: right;
-            color: #2AB795;
+            color: @color_lv;
             font-size: 13px;
         }
     }
@@ -134,7 +146,7 @@ export default {
         width: 100%;
         height: 45px;
         color: #fff;
-        background: #2AB795;
+        background: @color_lv;
         line-height: 45px;
         margin-top: 25px;
         border-radius: 10px;
@@ -147,7 +159,7 @@ export default {
         line-height: 20px;
         margin-top: 20px;
         span {
-            color: #2AB795;
+            color: @color_lv;
             font-size: 13px;
         }
     }
@@ -164,7 +176,7 @@ export default {
             height: 1px;
             border-right: 0;
             border-left: 0;
-            color: #D5D5D5;
+            color: @color_edge;
         }
         hr:nth-of-type(1) {
             margin-right: 15px;
@@ -179,7 +191,7 @@ export default {
         font-size: 16px;
         text-align: center;
         position: relative;
-        border: 1px solid #D5D5D5;
+        border: 1px solid @color_edge;
         border-radius: 10px;
         margin: 10px 0;
         img {

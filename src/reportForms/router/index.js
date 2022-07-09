@@ -35,5 +35,8 @@ export default new Router({
 
 
     { path: '/login', name: 'login', meta: { title: '登录',key: 1}, component: resolve => require(['@/reportForms/pages/loginUnit/index'], resolve) },
+    { path: '/register', name: 'register', meta: { title: '注册',key: 1}, component: resolve => require(['@/reportForms/pages/registerUnit/index'], resolve) },
+    { path: '/forgetPassword', name: 'forgetPassword', meta: { title: '忘记密码',key: 1}, component: resolve => require(['@/reportForms/pages/forgetPasswordUnit/index'], resolve) },
+    { path: '/essentials', name: 'essentials', meta: { title: '主页',key: 1}, component: resolve => require(['@/reportForms/pages/essentialsUnit/index'], resolve) },
   ]
 })
