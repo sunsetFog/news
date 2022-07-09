@@ -1,7 +1,7 @@
 <template>
     <section id="flex-index">
         <!-- 问题：高为百分比时，文字垂直居中？     line-height: 100%;和字体大小一样大，不能用 -->
-        <hr>1.flex---盒子和文字垂直居中</hr>
+        <hr>1.flex---盒子和文字垂直居中---好用</hr>
         <div class="vertical-center">
             文字垂直居中
             <p></p>
@@ -32,7 +32,7 @@
             <div class="percentage-cell04">4/10</div>
             <div class="percentage-cell04">1/10</div>
         </div>
-        <hr>5.水平间隔</hr>
+        <hr>5.剩余宽均匀水平间隔---好用</hr>
         <div class="format">
             <div class="format-cell05">5/10</div>
             <div class="format-cell05">4/10</div>
@@ -47,6 +47,7 @@
             <div class="flowing-cell06"></div>
         </div>
         <!-- 
+            ---好用
             flex: 1;某盒子划分剩余空间--（兄弟盒子中，只有一个盒子加flex: 1;）
             flex: 1;  flex: 2; flex: 3;按照倍数划分
 

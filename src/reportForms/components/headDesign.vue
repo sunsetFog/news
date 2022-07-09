@@ -33,7 +33,7 @@ export default {
     height: 45px;
     text-align: center;
     line-height: 45px;
-    background: #F8F8F8;
+    background: @color_beijing;
     position: fixed;
     left: 0px;
     top: 0px;

@@ -6,18 +6,81 @@
             <span>customer</span>
             <button>黄金会员</button>
         </div>
+        <div class="cartoon-apt">
+            <ul>
+                <li v-for="(item, index) in with_list">
+                    <span>{{item.title}}</span>
+                    <span>{{item.value}}</span>
+                </li>
+            </ul>
+        </div>
+        <div class="order-service">
+            <ul>
+                <li v-for="(item, index) in comic_list" @click="appleWay(item, index)">
+                    <div>
+                        <img v-if="!item.active" :src="item.icon"/>
+                        <img v-else :src="item.url"/>
+                    </div>
+                    <span :class="{'to-active': item.active}">{{item.title}}</span>
+                </li>
+            </ul>
+        </div>
+        <div class="rainbow-apt" v-for="(item,index) in mercury_list" :style="{ marginTop: item.margin }">
+            <img :src="item.icon"/>
+            <span class="venus">{{item.title}}</span>
+            <span class="saturn">{{item.note}}</span>
+            <img src="@static/mall/customer/u286.png"/>
+        </div>
     </section>
 </template>
 
 <script>
 export default {
-    name: "customer"
+    name: "customer",
+    data() {
+        return {
+            with_list: [
+                { title: '积分', value: 100 },
+                { title: '优惠券', value: 100 },
+                { title: '关注', value: 100 }
+            ],
+            comic_list: [
+                { title: '我的订单', icon: 'u227', active: false, path: '/essentials/homePage' },
+                { title: '待付款', icon: 'u233', active: false, path: '/essentials/classify' },
+                { title: '待收货', icon: 'u245', active: false, path: '/essentials/special' },
+                { title: '待评价', icon: 'u252', active: false, path: '/essentials/customer' },
+                { title: '售后服务', icon: 'u256', active: false, path: '/essentials/customer' }
+            ],
+            mercury_list: [
+                { title: '我的收藏', icon: 'u262', note: '', margin: '20px', path: ''},
+                { title: '我的足迹', icon: 'u282', note: 10, margin: '15px', path: ''},
+                { title: '我的评价', icon: 'u293', note: 10, margin: '', path: ''},
+                { title: '地址管理', icon: 'u298', note: '', margin: '', path: ''},
+                { title: '我的会员', icon: 'u305', note: '黄金会员', margin: '15px', path: ''},
+                { title: '服务中心', icon: 'u313', note: '', margin: '', path: ''},
+                { title: '系统设置', icon: 'u318', note: '', margin: '', path: ''}
+            ]
+        }
+    },
+    created() {
+        for (let index = 0; index < this.comic_list.length; index++) {
+            let item = this.comic_list[index];
+            item.icon = require('@static/mall/customer/' + item.icon + '.png');
+        }
+        for (let index = 0; index < this.mercury_list.length; index++) {
+            let item = this.mercury_list[index];
+            item.icon = require('@static/mall/customer/' + item.icon + '.png');
+        }
+    }
 }
 </script>
 
 <style lang="less" scoped>
 #customer {
     width: 100%;
+    background: @color_beijing;
+    padding: 0 0 15px 0;
+    box-sizing: border-box;
     .yong-hu {
         width: 100%;
         height: 170px;
@@ -55,6 +118,113 @@ export default {
             position: absolute;
             left: 158px;
             top: 88px;
+        }
+    }
+    .cartoon-apt {
+        width: 100%;
+        height: 60px;
+        background: #fff;
+        border: 1px solid @color_edge;
+        ul {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            li {
+                width: 18%;
+                height: 100%;
+                float: left;
+                span {
+                    width: 100%;
+                    height: 15px;
+                    line-height: 15px;
+                    margin: 4px 0;
+                    display: inline-block;
+                    font-size: 13px;
+                }
+                span:nth-of-type(1) {
+                    margin-top: 10px;
+                }
+                span:nth-of-type(2) {
+                    font-size: 15px;
+                    color: @color_lv;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    .order-service {
+        width: 100%;
+        height: 70px;
+        background: #fff;
+        border-top: 1px solid @color_edge;
+        border-bottom: 1px solid @color_edge;
+        margin-top: 12px;
+        ul {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            li {
+                width: 14%;
+                height: 100%;
+                float: left;
+                div {
+                    width: 100%;
+                    height: 43px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img {
+                        width: 28px;
+                        height: 28px;
+                    }
+                }
+                span {
+                    width: 100%;
+                    height: 15px;
+                    text-align: center;
+                    line-height: 15px;
+                    font-size: 13px;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    .rainbow-apt {
+        width: 100%;
+        height: 48px;
+        border-top: 1px solid @color_edge;
+        border-bottom: 1px solid @color_edge;
+        background: #fff;
+        position: relative;
+        img:nth-of-type(1) {
+            width: 28px;
+            height: 28px;
+            position: absolute;
+            left: 20px;
+            top: 9px;
+        }
+        .venus {
+            font-size: 14px;
+            position: absolute;
+            left: 58px;
+            top: 12px;
+        }
+        .saturn {
+            height: 15px;
+            line-height: 15px;
+            display: inline-block;
+            font-size: 12px;
+            position: absolute;
+            right: 42px;
+            top: 14px;
+        }
+        img:nth-of-type(2) {
+            height: 26px;
+            position: absolute;
+            right: 14px;
+            top: 9px;
         }
     }
 }

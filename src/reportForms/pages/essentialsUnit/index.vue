@@ -75,10 +75,11 @@ export default {
         height: 45px;
         text-align: center;
         line-height: 45px;
-        background: #F8F8F8;
+        background: @color_beijing;
         position: fixed;
         left: 0px;
         top: 0px;
+        z-index: 100;
         .u13 {
             height: 28px;
             position: absolute;
@@ -124,11 +125,12 @@ export default {
     .footerDesign {
         width: 100%;
         height: 50px;
-        background: #F8F8F8;
+        background: @color_beijing;
         border-top: 1px solid @color_edge;
         position: fixed;
         left: 0px;
         bottom: 0px;
+        z-index: 100;
         ul {
             width: 100%;
             height: 100%;
