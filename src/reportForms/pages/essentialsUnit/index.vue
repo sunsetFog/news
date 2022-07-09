@@ -1,10 +1,19 @@
 <template>
     <section id="essentialsUnit">
-        essentialsUnit
+        <section class="headDesign">
+            <img class="u13" src="@static/mall/essentials/u13.png"/>
+            <img class="u17" src="@static/mall/essentials/u17.png"/>
+            <span>夕阳商城</span>
+            <img class="u14" src="@static/mall/essentials/u14.png"/>
+            <img class="u15" src="@static/mall/essentials/u15.png"/>
+            <div>66</div>
+        </section>
+
+        <router-view></router-view>
 
         <section class="footerDesign">
             <ul>
-                <li v-for="(item, index) in with_list" @click="appleWay(index)">
+                <li v-for="(item, index) in with_list" @click="appleWay(item, index)">
                     <div>
                         <img v-if="!item.active" :src="item.icon"/>
                         <img v-else :src="item.url"/>
@@ -22,10 +31,10 @@ export default {
     data() {
         return {
             with_list: [
-                { title: '首页', icon: 'u35', url: '', active: false },
-                { title: '分类', icon: 'u31', url: '', active: false },
-                { title: '专题', icon: 'u27', url: '', active: false },
-                { title: '我的', icon: 'u23', url: '', active: false }
+                { title: '首页', icon: 'u35', url: '', active: false, path: '/essentials/homePage' },
+                { title: '分类', icon: 'u31', url: '', active: false, path: '/essentials/classify' },
+                { title: '专题', icon: 'u27', url: '', active: false, path: '/essentials/special' },
+                { title: '我的', icon: 'u23', url: '', active: false, path: '/essentials/customer' }
             ]
         }
     },
@@ -35,14 +44,22 @@ export default {
             item.url = require('@static/mall/essentials/' + item.icon + '_selected.png');
             item.icon = require('@static/mall/essentials/' + item.icon + '.png');
         }
+        console.log("--$router-1-", this.$route);
+        this.with_list[this.$route.meta.key].active = true;
     },
     methods: {
-        appleWay(index) {
+        appleWay(item, index) {
             for (let i = 0; i < this.with_list.length; i++) {
                 let item = this.with_list[i];
                 item.active = false;
             }
             this.with_list[index].active = true;
+            
+            if(this.$route.path == item.path) return;
+            console.log("--$router-2-", this.$route);
+            this.$router.push({
+                path: item.path
+            });
         }
     }
 }
@@ -51,8 +68,59 @@ export default {
 <style lang="less" scoped>
 #essentialsUnit {
     width: 100%;
-    padding: 0 0 60px 0;
+    padding: 45px 0 50px 0;
     box-sizing: border-box;
+    .headDesign {
+        width: 100%;
+        height: 45px;
+        text-align: center;
+        line-height: 45px;
+        background: #F8F8F8;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        .u13 {
+            height: 28px;
+            position: absolute;
+            left: 20px;
+            top: 8px;
+        }
+        .u17 {
+            height: 9px;
+            position: absolute;
+            left: 40px;
+            top: 5px;
+        }
+        .u14 {
+            height: 28px;
+            position: absolute;
+            right: 50px;
+            top: 8px;
+        }
+        .u15 {
+            height: 28px;
+            position: absolute;
+            right: 10px;
+            top: 8px;
+        }
+        span {
+            font-size: 15px;
+        }
+        div {
+            width: 18px;
+            height: 18px;
+            text-align: center;
+            line-height: 18px;
+            color: #fff;
+            font-size: 12px;
+            background: url("~@static/mall/essentials/u16.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            position: absolute;
+            right: 8px;
+            top: 1px;
+        }
+    }
     .footerDesign {
         width: 100%;
         height: 50px;

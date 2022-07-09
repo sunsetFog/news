@@ -23,7 +23,7 @@
             <img @click="readWay(false)" v-else src="@static/mall/register/u2601.png"/>
             <span>已阅读并同意《用户服务协议》</span>
         </div>
-        <button class="cosplay-apt">确定</button>
+        <button class="cosplay-apt" @click="submitWay">确定</button>
     </section>
 </template>
 
@@ -43,6 +43,11 @@ export default {
     methods: {
         readWay(value) {
             this.read_active = value;
+        },
+        submitWay() {
+            this.$router.push({
+                path: "/login"
+            });
         }
     }
 }

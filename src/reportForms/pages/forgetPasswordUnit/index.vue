@@ -18,7 +18,7 @@
             <input class="venus-apt" type="text" v-model="withForm.password" placeholder="输入新的登录密码"/>
             <van-switch class="mercury-apt" v-model="checked" size="20" />
         </div>
-        <button class="cosplay-apt">确定</button>
+        <button class="cosplay-apt" @click="submitWay">确定</button>
     </section>
 </template>
 
@@ -38,6 +38,11 @@ export default {
     methods: {
         readWay(value) {
             this.read_active = value;
+        },
+        submitWay() {
+            this.$router.push({
+                path: "/login"
+            });
         }
     }
 }

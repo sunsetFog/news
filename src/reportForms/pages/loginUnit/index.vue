@@ -16,7 +16,7 @@
         <div class="undercurrent-apt">
             <span @click="forgetPasswordWay">忘记密码</span>
         </div>
-        <button class="cosplay-apt">登录</button>
+        <button class="cosplay-apt" @click="submitWay()">登录</button>
         <div class="rainbow-apt">
             <span @click="registerWay()">创建账号</span>
         </div>
@@ -50,12 +50,17 @@ export default {
         registerWay() {
             this.$router.push({
                 path: "/register"
-            })
+            });
         },
         forgetPasswordWay() {
             this.$router.push({
                 path: "/forgetPassword"
-            })
+            });
+        },
+        submitWay() {
+            this.$router.push({
+                path: "/essentials/homePage"
+            });
         }
     }
 }
