@@ -14,17 +14,9 @@
                 </li>
             </ul>
         </div>
-        <div class="order-service">
-            <ul>
-                <li v-for="(item, index) in comic_list" @click="appleWay(item, index)">
-                    <div>
-                        <img v-if="!item.active" :src="item.icon"/>
-                        <img v-else :src="item.url"/>
-                    </div>
-                    <span :class="{'to-active': item.active}">{{item.title}}</span>
-                </li>
-            </ul>
-        </div>
+
+        <specialServices></specialServices>
+
         <div class="rainbow-apt" v-for="(item,index) in mercury_list" :style="{ marginTop: item.margin }">
             <img :src="item.icon"/>
             <span class="venus">{{item.title}}</span>
@@ -35,21 +27,16 @@
 </template>
 
 <script>
+import specialServices from "./specialServices";
 export default {
     name: "customer",
+    components: { specialServices },
     data() {
         return {
             with_list: [
                 { title: '积分', value: 100 },
                 { title: '优惠券', value: 100 },
                 { title: '关注', value: 100 }
-            ],
-            comic_list: [
-                { title: '我的订单', icon: 'u227', active: false, path: '/essentials/homePage' },
-                { title: '待付款', icon: 'u233', active: false, path: '/essentials/classify' },
-                { title: '待收货', icon: 'u245', active: false, path: '/essentials/special' },
-                { title: '待评价', icon: 'u252', active: false, path: '/essentials/customer' },
-                { title: '售后服务', icon: 'u256', active: false, path: '/essentials/customer' }
             ],
             mercury_list: [
                 { title: '我的收藏', icon: 'u262', note: '', margin: '20px', path: ''},
@@ -63,10 +50,6 @@ export default {
         }
     },
     created() {
-        for (let index = 0; index < this.comic_list.length; index++) {
-            let item = this.comic_list[index];
-            item.icon = require('@static/mall/customer/' + item.icon + '.png');
-        }
         for (let index = 0; index < this.mercury_list.length; index++) {
             let item = this.mercury_list[index];
             item.icon = require('@static/mall/customer/' + item.icon + '.png');
@@ -149,44 +132,6 @@ export default {
                     font-size: 15px;
                     color: @color_lv;
                     font-weight: 600;
-                }
-            }
-        }
-    }
-    .order-service {
-        width: 100%;
-        height: 70px;
-        background: #fff;
-        border-top: 1px solid @color_edge;
-        border-bottom: 1px solid @color_edge;
-        margin-top: 12px;
-        ul {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: space-around;
-            li {
-                width: 14%;
-                height: 100%;
-                float: left;
-                div {
-                    width: 100%;
-                    height: 43px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    img {
-                        width: 28px;
-                        height: 28px;
-                    }
-                }
-                span {
-                    width: 100%;
-                    height: 15px;
-                    text-align: center;
-                    line-height: 15px;
-                    font-size: 13px;
-                    display: inline-block;
                 }
             }
         }

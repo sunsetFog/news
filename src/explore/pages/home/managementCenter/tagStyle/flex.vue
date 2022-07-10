@@ -32,7 +32,7 @@
             <div class="percentage-cell04">4/10</div>
             <div class="percentage-cell04">1/10</div>
         </div>
-        <hr>5.剩余宽均匀水平间隔---好用</hr>
+        <hr>5.水平间隔:用margin分配剩余空间---大盒子固定宽，好用</hr>
         <div class="format">
             <div class="format-cell05">5/10</div>
             <div class="format-cell05">4/10</div>
