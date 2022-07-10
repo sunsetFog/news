@@ -31,11 +31,23 @@ export default {
     overflow: hidden;
     border-bottom: 1px solid @color_edge;
     .venus {
+        margin-top: 5px;
         margin-right: 15px;
+        .u76 {
+            width: 22px;
+            height: 21px;
+        }
     }
     .notice-swipe {
-        height: 40px;
-        line-height: 40px;
+        height: 36px;
+        line-height: 36px;
+    }
+    /deep/.van-notice-bar {
+       height: 36px; 
+    }
+    /deep/.van-swipe-item {
+        height: 36px;
+        line-height: 36px;
     }
 }
 </style>

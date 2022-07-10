@@ -4,6 +4,11 @@
         <specialServices></specialServices>
         <noticeBar></noticeBar>
         <brandSupplier></brandSupplier>
+        <timeLimit></timeLimit>
+        <fresh></fresh>
+        <popularityHot></popularityHot>
+        <subject></subject>
+        <guessLike></guessLike>
     </section>
 </template>
 
@@ -12,9 +17,14 @@ import bannerRotation from "./bannerRotation";
 import specialServices from "./specialServices";
 import noticeBar from "./noticeBar";
 import brandSupplier from "./brandSupplier";
+import timeLimit from "./timeLimit";
+import fresh from "./fresh";
+import popularityHot from "./popularityHot";
+import subject from "./subject";
+import guessLike from "./guessLike";
 export default {
     name: "homePage",
-    components: { bannerRotation, specialServices, noticeBar, brandSupplier },
+    components: { bannerRotation, specialServices, noticeBar, brandSupplier, timeLimit, fresh, popularityHot, subject, guessLike },
     data() {
         return {
 
@@ -29,7 +39,6 @@ export default {
 <style lang="less" scoped>
 #homePage {
     width: 100%;
-    height: 800px;
     background: @color_beijing;
     
 }
