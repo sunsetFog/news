@@ -1,6 +1,6 @@
 <template>
     <section id="customer">
-        <div class="yong-hu">
+        <div class="yong-hu" @click="personalCenter">
             <img class="u208" src="@static/mall/customer/u208.png"/>
             <img class="u211" src="@static/mall/customer/u211.png"/>
             <span>customer</span>
@@ -54,6 +54,13 @@ export default {
             let item = this.mercury_list[index];
             item.icon = require('@static/mall/customer/' + item.icon + '.png');
         }
+    },
+    methods: {
+        personalCenter() {
+            this.$router.push({
+                path: "/personalCenter"
+            })
+        }
     }
 }
 </script>
@@ -61,7 +68,7 @@ export default {
 <style lang="less" scoped>
 #customer {
     width: 100%;
-    background: @color_beijing;
+    background: @color_qianlan;
     padding: 0 0 15px 0;
     box-sizing: border-box;
     .yong-hu {

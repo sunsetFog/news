@@ -39,6 +39,7 @@ export default {
     border-top: 1px solid @color_edge;
     border-bottom: 1px solid @color_edge;
     margin-top: 15px;
+    background: #fff;
     .fabulous {
         width: 100%;
         height: 50px;

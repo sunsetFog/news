@@ -39,7 +39,7 @@ export default {
 <style lang="less" scoped>
 #homePage {
     width: 100%;
-    background: @color_beijing;
+    background: @color_qianlan;
     
 }
 </style>

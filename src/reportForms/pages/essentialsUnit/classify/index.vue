@@ -9,7 +9,16 @@
         </section>
 
         <section class="comic-apt" ref="box0">
-            <div id="box1" ref="box1"></div>
+            <div id="box1" ref="box1">
+                <ul>
+                    <li v-for="(item, index) in mercury_list">
+                        <div class="honey">
+                            <img :src="item.icon"/>
+                        </div>
+                        <span>{{item.title}}</span>
+                    </li>
+                </ul>
+            </div>
             <div id="box2" ref="box2"></div>
             <div id="box3" ref="box3"></div>
         </section>
@@ -21,24 +30,28 @@ export default {
     name: "classify",
     data() {
         return {
-            venus_active: 0
+            venus_active: 0,
+            mercury_list: [
+                { title: '内裤', icon: 'p0', path: '' },
+                { title: '内衣', icon: 'p1', path: '' },
+                { title: '袜子', icon: 'p2', path: '' },
+                { title: '大衣', icon: 'p3', path: '' },
+                { title: '家居服', icon: 'p4', path: '' },
+                { title: '衬衫', icon: 'p5', path: '' },
+                { title: '外套', icon: 'p6', path: '' }
+            ]
+        }
+    },
+    created() {
+        for (let index = 0; index < this.mercury_list.length; index++) {
+            let item = this.mercury_list[index];
+            item.icon = require('@static/mall/classify/' + item.icon + '.png');
         }
     },
     methods: {
         winChange(value, item) {
             console.log("--value--", value)
             console.log("--item--", item)
-            this.gundong()
-        },
-        gundong() {
-            let tata = this.$refs.box0;
-            // let scrollHight = tata.documentElement.scrollTop || tata.body.scrollTop;
-            console.log("-----7766-----", tata);
-
-            let yyaa = this.$refs.box2;
-            // let yatw = yyaa.documentElement.scrollTop || yyaa.body.scrollTop;
-            console.log("-----5522-----", yyaa);
-            
         }
     }
 }
@@ -59,10 +72,39 @@ export default {
         float: right;
         overflow-y: auto;
         background: yellowgreen;
-        div:nth-of-type(1) {
+        #box1 {
             width: 100%;
             height: 500px;
             background: hotpink;
+            ul {
+                width: 100%;
+                li {
+                    width: 102px;
+                    height: 102px;
+                    background: #fff;
+                    float: left;
+                    margin: 6px 17.5px;
+                    .honey {
+                        width: 100%;
+                        height: 70px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        img {
+                            width: 42px;
+                            height: 42px;
+                        }
+                    }
+                    span {
+                        width: 100%;
+                        height: 15px;
+                        text-align: center;
+                        line-height: 15px;
+                        font-size: 13px;
+                        display: inline-block;
+                    }
+                }
+            }
         }
         div:nth-of-type(2) {
             width: 100%;

@@ -2,6 +2,7 @@
     <section id="headDesign">
         <img @click="backWay" class="u333" src="@static/mall/register/u333.png"/>
         <span>{{title}}</span>
+        <slot></slot>
     </section>
 </template>
 
@@ -37,6 +38,7 @@ export default {
     position: fixed;
     left: 0px;
     top: 0px;
+    z-index: 999;
     .u333 {
         height: 28px;
         position: absolute;

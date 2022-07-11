@@ -79,7 +79,7 @@ export default {
         position: fixed;
         left: 0px;
         top: 0px;
-        z-index: 100;
+        z-index: 999;
         .u13 {
             height: 28px;
             position: absolute;
