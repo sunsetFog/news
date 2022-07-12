@@ -50,5 +50,9 @@ export default new Router({
         { path: '/personalInfo', name: 'personalInfo', meta: { title: '个人信息', key: 1 }, component: resolve => require(['@/reportForms/pages/personalCenterUnit/personalInfo/index'], resolve) },
         { path: '/changePassword', name: 'changePassword', meta: { title: '修改密码', key: 1 }, component: resolve => require(['@/reportForms/pages/personalCenterUnit/changePassword/index'], resolve) },
         { path: '/changePhone', name: 'changePhone', meta: { title: '修改手机', key: 1 }, component: resolve => require(['@/reportForms/pages/personalCenterUnit/changePhone/index'], resolve) },
+        { path: '/memberCenter', name: 'memberCenter', meta: { title: '会员中心', key: 1 }, component: resolve => require(['@/reportForms/pages/personalCenterUnit/memberCenter/index'], resolve) },
+        { path: '/integral', name: 'integral', meta: { title: '我的积分', key: 1 }, component: resolve => require(['@/reportForms/pages/integralUnit/index'], resolve) },
+        { path: '/coupon', name: 'coupon', meta: { title: '我的优惠券', key: 1 }, component: resolve => require(['@/reportForms/pages/couponUnit/index'], resolve) },
+        { path: '/couponDetails', name: 'couponDetails', meta: { title: '优惠券详情', key: 1 }, component: resolve => require(['@/reportForms/pages/couponUnit/couponDetails/index'], resolve) },
     ]
 })

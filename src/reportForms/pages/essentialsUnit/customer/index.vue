@@ -6,18 +6,11 @@
             <span>customer</span>
             <button>黄金会员</button>
         </div>
-        <div class="cartoon-apt">
-            <ul>
-                <li v-for="(item, index) in with_list">
-                    <span>{{item.title}}</span>
-                    <span>{{item.value}}</span>
-                </li>
-            </ul>
-        </div>
+        <cartoon></cartoon>
 
         <specialServices></specialServices>
 
-        <div class="rainbow-apt" v-for="(item,index) in mercury_list" :style="{ marginTop: item.margin }">
+        <div class="rainbow-apt" v-for="(item,index) in mercury_list" :style="{ marginTop: item.margin, borderTop: item.borderTop }" @click="pathWay(item,index)">
             <img :src="item.icon"/>
             <span class="venus">{{item.title}}</span>
             <span class="saturn">{{item.note}}</span>
@@ -28,24 +21,21 @@
 
 <script>
 import specialServices from "./specialServices";
+import cartoon from "./cartoon";
 export default {
     name: "customer",
-    components: { specialServices },
+    components: { specialServices, cartoon },
     data() {
+        let haha = '1px solid #D5D5D5'
         return {
-            with_list: [
-                { title: '积分', value: 100 },
-                { title: '优惠券', value: 100 },
-                { title: '关注', value: 100 }
-            ],
             mercury_list: [
-                { title: '我的收藏', icon: 'u262', note: '', margin: '20px', path: ''},
-                { title: '我的足迹', icon: 'u282', note: 10, margin: '15px', path: ''},
-                { title: '我的评价', icon: 'u293', note: 10, margin: '', path: ''},
-                { title: '地址管理', icon: 'u298', note: '', margin: '', path: ''},
-                { title: '我的会员', icon: 'u305', note: '黄金会员', margin: '15px', path: ''},
-                { title: '服务中心', icon: 'u313', note: '', margin: '', path: ''},
-                { title: '系统设置', icon: 'u318', note: '', margin: '', path: ''}
+                { title: '我的收藏', icon: 'u262', note: '', margin: '20px', borderTop: haha, path: ''},
+                { title: '我的足迹', icon: 'u282', note: 10, margin: '15px', borderTop: haha, path: ''},
+                { title: '我的评价', icon: 'u293', note: 10, margin: '', borderTop: '', path: ''},
+                { title: '地址管理', icon: 'u298', note: '', margin: '', borderTop: '', path: ''},
+                { title: '我的会员', icon: 'u305', note: '黄金会员', margin: '15px', borderTop: haha, path: '/memberCenter'},
+                { title: '服务中心', icon: 'u313', note: '', margin: '', borderTop: '', path: ''},
+                { title: '系统设置', icon: 'u318', note: '', margin: '', borderTop: '', path: ''}
             ]
         }
     },
@@ -59,6 +49,11 @@ export default {
         personalCenter() {
             this.$router.push({
                 path: "/personalCenter"
+            })
+        },
+        pathWay(item, index) {
+            this.$router.push({
+                path: item.path
             })
         }
     }
@@ -110,43 +105,9 @@ export default {
             top: 88px;
         }
     }
-    .cartoon-apt {
-        width: 100%;
-        height: 60px;
-        background: #fff;
-        border: 1px solid @color_edge;
-        ul {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: space-around;
-            li {
-                width: 18%;
-                height: 100%;
-                float: left;
-                span {
-                    width: 100%;
-                    height: 15px;
-                    line-height: 15px;
-                    margin: 4px 0;
-                    display: inline-block;
-                    font-size: 13px;
-                }
-                span:nth-of-type(1) {
-                    margin-top: 10px;
-                }
-                span:nth-of-type(2) {
-                    font-size: 15px;
-                    color: @color_lv;
-                    font-weight: 600;
-                }
-            }
-        }
-    }
     .rainbow-apt {
         width: 100%;
         height: 48px;
-        border-top: 1px solid @color_edge;
         border-bottom: 1px solid @color_edge;
         background: #fff;
         position: relative;

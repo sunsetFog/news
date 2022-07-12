@@ -27,7 +27,7 @@ export default {
                 { title: '个人信息', note: '', margin: '30px', borderTop: haha, path: '/personalInfo'},
                 { title: '修改密码', note: '', margin: '', borderTop: '', path: '/changePassword'},
                 { title: '修改手机', note: '180******3672', margin: '', borderTop: '', path: '/changePhone'},
-                { title: '我的会员', note: '普通会员', margin: '20px', borderTop: haha, path: ''}
+                { title: '我的会员', note: '普通会员', margin: '20px', borderTop: haha, path: '/memberCenter'}
             ]
         }
     },
