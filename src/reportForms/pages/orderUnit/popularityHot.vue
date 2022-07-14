@@ -1,16 +1,15 @@
 <template>
-    <section id="fresh">
-        <titleBox with_name="新鲜好物"></titleBox>
+    <section id="popularityHot">
         <div class="saturn">
             <ul>
                 <li v-for="(item,index) in venus_list">
-                    <div class="shang-xin">上新</div>
                     <div class="shang-pin">
                         <img class="u88" src="@static/mall/homePage/u88.png"/>
                     </div>
                     <span class="summer">银色星芒刺绣网纱底裤</span>
-                    <span class="honey">薄如蝉翼，丝滑如肌肤</span>
-                    <p class="rainbow">￥99</p>
+                    <span class="honey">肤色/M</span>
+                    <span class="rainbow">￥99</span>
+                    <span class="mars">x1</span>
                 </li>
             </ul>
         </div>
@@ -18,10 +17,8 @@
 </template>
 
 <script>
-import titleBox from "./titleBox"
 export default {
-    name: "fresh",
-    components: { titleBox },
+    name: "popularityHot",
     data() {
         return {
             venus_list: [
@@ -34,49 +31,31 @@ export default {
 </script>
 
 <style lang="less" scoped>
-#fresh {
+#popularityHot {
     width: 100%;
-    height: 252px;
-    border-top: 1px solid @color_edge;
-    border-bottom: 1px solid @color_edge;
-    margin-top: 15px;
     background: #fff;
     .saturn {
         width: 100%;
-        height: 210px;
         ul {
             width: 100%;
             li {
-                width: 145px;
-                height: 185px;
+                width: 100%;
+                height: 85px;
                 position: relative;
-                float: left;
-                margin: 12.5px 21.2px;
-                .shang-xin {
-                    width: 45px;
-                    height: 32px;
-                    text-align: center;
-                    line-height: 26px;
-                    color: #fff;
-                    font-size: 13px;
-                    background: url("~@static/mall/homePage/u89.png");
-                    background-size: 100% 100%;
-                    background-repeat: no-repeat;
-                    position: absolute;
-                    right: 0px;
-                    top: 0px;
-                    z-index: 2;
+                border-bottom: 1px solid @color_edge;
+                li:last-child {
+                    border-bottom: none;
                 }
                 .shang-pin {
-                    width: 100px;
-                    height: 82px;
+                    width: 80px;
+                    height: 68px;
                     background: @color_qianqing;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     position: absolute;
-                    left: 22.5px;
-                    top: 29px;
+                    left: 20px;
+                    top: 8px;
                     .u88 {
                         width: 52px;
                         height: 39px;
@@ -85,29 +64,33 @@ export default {
                 .summer {
                     font-size: 13px;
                     position: absolute;
-                    left: 0px;
-                    bottom: 48px;
+                    left: 111px;
+                    top: 10px;
                 }
                 .honey {
                     font-size: 12px;
                     color: @color_huise;
                     position: absolute;
-                    left: 0px;
-                    bottom: 27px;
+                    left: 111px;
+                    top: 35px;
                 }
                 .rainbow {
-                    width: 100%;
-                    text-align: center;
                     font-size: 13px;
                     color: #FB051B;
                     position: absolute;
-                    left: 0px;
-                    bottom: 5px;
+                    left: 111px;
+                    top: 59px;
+                }
+                .mars {
+                    font-size: 13px;
+                    color: @color_lv;
+                    position: absolute;
+                    right: 38px;
+                    top: 20px;
                 }
             }
         }
     }
 }
 </style>
-
 

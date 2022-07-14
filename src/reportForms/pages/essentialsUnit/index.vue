@@ -38,6 +38,12 @@ export default {
             ]
         }
     },
+    watch: {
+        $route(to, from) {
+            console.log("-$route-", to);
+            this.beanWay(to.meta.key);
+        }
+    },
     created() {
         for (let index = 0; index < this.with_list.length; index++) {
             let item = this.with_list[index];
@@ -49,17 +55,20 @@ export default {
     },
     methods: {
         appleWay(item, index) {
-            for (let i = 0; i < this.with_list.length; i++) {
-                let item = this.with_list[i];
-                item.active = false;
-            }
-            this.with_list[index].active = true;
+            this.beanWay(index);
             
             if(this.$route.path == item.path) return;
             console.log("--$router-2-", this.$route);
             this.$router.push({
                 path: item.path
             });
+        },
+        beanWay(index) {
+            for (let i = 0; i < this.with_list.length; i++) {
+                let item = this.with_list[i];
+                item.active = false;
+            }
+            this.with_list[index].active = true;
         }
     }
 }

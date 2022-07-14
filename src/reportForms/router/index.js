@@ -56,5 +56,6 @@ export default new Router({
         { path: '/couponDetails', name: 'couponDetails', meta: { title: '优惠券详情', key: 1 }, component: resolve => require(['@/reportForms/pages/couponUnit/couponDetails/index'], resolve) },
         { path: '/follow', name: 'follow', meta: { title: '关注', key: 1 }, component: resolve => require(['@/reportForms/pages/followUnit/index'], resolve) },
         { path: '/followDetails', name: 'followDetails', meta: { title: '关注详情', key: 1 }, component: resolve => require(['@/reportForms/pages/followUnit/followDetails/index'], resolve) },
+        { path: '/order', name: 'order', meta: { title: '订单', key: 1 }, component: resolve => require(['@/reportForms/pages/orderUnit/index'], resolve) },
     ]
 })

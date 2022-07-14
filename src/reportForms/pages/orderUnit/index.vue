@@ -1,17 +1,21 @@
 <template>
-    <section id="couponUnit">
-        <headDesign title="我的优惠券">
-            <img class="summer" src="@static/mall/memberCenter/u2518.png"/>
-        </headDesign>
+    <section id="orderUnit">
+        <headDesign title="我的订单"></headDesign>
         <van-tabs v-model:active="tab_active">
-            <van-tab title="未使用">
+            <van-tab title="全部">
                 <fabulous :tab_active="0"></fabulous>
             </van-tab>
-            <van-tab title="已使用">
+            <van-tab title="待付款">
                 <fabulous :tab_active="1"></fabulous>
             </van-tab>
-            <van-tab title="已过期">
+            <van-tab title="待收货">
                 <fabulous :tab_active="2"></fabulous>
+            </van-tab>
+            <van-tab title="已完成">
+                <fabulous :tab_active="3"></fabulous>
+            </van-tab>
+            <van-tab title="已取消">
+                <fabulous :tab_active="4"></fabulous>
             </van-tab>
         </van-tabs>
     </section>
@@ -20,33 +24,27 @@
 <script>
 import fabulous from "./fabulous";
 export default {
-    name: "couponUnit",
+    name: "orderUnit",
     components: { fabulous },
     data() {
         return {
-            tab_active: 0
+            tab_active: 1
         }
+    },
+    created() {
+        console.log("-status-", this.$route.query.status);
+        this.tab_active = Number(this.$route.query.status);
     }
 }
 </script>
 
 <style lang="less" scoped>
-#couponUnit {
+#orderUnit {
     width: 100%;
     min-height: 100%;
     background: @color_qianlan;
     padding: 45px 0 0 0;
     box-sizing: border-box;
-    .summer {
-        width: 25px;
-        height: 25px;
-        position: absolute;
-        right: 10px;
-        top: 10px;
-    }
-    /deep/ .van-tabs__content {
-        padding: 5px 15px;
-    }
 }
 </style>
 

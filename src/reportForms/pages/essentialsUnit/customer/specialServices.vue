@@ -17,11 +17,11 @@ export default {
     data() {
         return {
             comic_list: [
-                { title: '我的订单', icon: 'u227', path: '/essentials/homePage' },
-                { title: '待付款', icon: 'u233', path: '/essentials/classify' },
-                { title: '待收货', icon: 'u245', path: '/essentials/special' },
-                { title: '待评价', icon: 'u252', path: '/essentials/customer' },
-                { title: '售后服务', icon: 'u256', path: '/essentials/customer' }
+                { title: '我的订单', icon: 'u227', path: '/order?status=0' },
+                { title: '待付款', icon: 'u233', path: '/order?status=1' },
+                { title: '待收货', icon: 'u245', path: '/order?status=2' },
+                { title: '待评价', icon: 'u252', path: '/essentials/classify' },
+                { title: '售后服务', icon: 'u256', path: '/essentials/homePage' }
             ]
         }
     },
@@ -29,6 +29,13 @@ export default {
         for (let index = 0; index < this.comic_list.length; index++) {
             let item = this.comic_list[index];
             item.icon = require('@static/mall/customer/' + item.icon + '.png');
+        }
+    },
+    methods: {
+        appleWay(item, index) {
+            this.$router.push({
+                path: item.path
+            })
         }
     }
 }
