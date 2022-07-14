@@ -63,7 +63,7 @@ export default {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background: #E6E5EB;
+                    background: @color_qianqing;
                     img {
                         width: 26px;
                         height: 22px;

@@ -70,7 +70,7 @@ export default {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background: #E6E5EB;
+                background: @color_qianqing;
                 position: absolute;
                 left: 15px;
                 top: 7px;
@@ -96,7 +96,7 @@ export default {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background: #E6E5EB;
+                background: @color_qianqing;
                 position: absolute;
                 left: 0px;
                 top: 0px;

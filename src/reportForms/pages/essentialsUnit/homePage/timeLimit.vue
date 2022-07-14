@@ -130,7 +130,7 @@ export default {
                 .shang-pin {
                     width: 100px;
                     height: 82px;
-                    background: #E6E5EB;
+                    background: @color_qianqing;
                     display: flex;
                     align-items: center;
                     justify-content: center;

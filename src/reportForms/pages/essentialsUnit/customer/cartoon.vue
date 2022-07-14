@@ -17,7 +17,7 @@ export default {
             with_list: [
                 { title: '积分', value: 100, path: '/integral' },
                 { title: '优惠券', value: 100, path: '/coupon' },
-                { title: '关注', value: 100, path: '' }
+                { title: '关注', value: 100, path: '/follow' }
             ],
         }
     },

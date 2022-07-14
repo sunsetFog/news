@@ -23,7 +23,7 @@ export default {
 #bannerRotation {
     width: 100%;
     height: 170px;
-    background: #E6E5EB;
+    background: @color_qianqing;
     .mei-you {
         width: 100%;
         height: 100%;
