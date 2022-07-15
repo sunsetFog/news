@@ -57,5 +57,11 @@ export default new Router({
         { path: '/follow', name: 'follow', meta: { title: '关注', key: 1 }, component: resolve => require(['@/reportForms/pages/followUnit/index'], resolve) },
         { path: '/followDetails', name: 'followDetails', meta: { title: '关注详情', key: 1 }, component: resolve => require(['@/reportForms/pages/followUnit/followDetails/index'], resolve) },
         { path: '/order', name: 'order', meta: { title: '订单', key: 1 }, component: resolve => require(['@/reportForms/pages/orderUnit/index'], resolve) },
+        { path: '/payOrder', name: 'payOrder', meta: { title: '支付订单', key: 1 }, component: resolve => require(['@/reportForms/pages/orderUnit/payOrder/index'], resolve) },
+        { path: '/paySuccess', name: 'paySuccess', meta: { title: '支付成功', key: 1 }, component: resolve => require(['@/reportForms/pages/orderUnit/paySuccess/index'], resolve) },
+        { path: '/logistics', name: 'logistics', meta: { title: '订单跟踪', key: 1 }, component: resolve => require(['@/reportForms/pages/orderUnit/logistics/index'], resolve) },
+        { path: '/shoppingCart', name: 'shoppingCart', meta: { title: '购物车', key: 1 }, component: resolve => require(['@/reportForms/pages/orderUnit/shoppingCart/index'], resolve) },
+        { path: '/fillOrder', name: 'fillOrder', meta: { title: '填写订单', key: 1 }, component: resolve => require(['@/reportForms/pages/orderUnit/fillOrder/index'], resolve) },
+        { path: '/address', name: 'address', meta: { title: '地址管理', key: 1 }, component: resolve => require(['@/reportForms/pages/orderUnit/address/index'], resolve) },
     ]
 })

@@ -40,10 +40,10 @@ export default {
     top: 0px;
     z-index: 999;
     .u333 {
-        height: 28px;
+        height: 20px;
         position: absolute;
         left: 20px;
-        top: 8px;
+        top: 12px;
     }
     span {
         font-size: 15px;

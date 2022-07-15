@@ -134,10 +134,10 @@ export default {
             top: 14px;
         }
         img:nth-of-type(2) {
-            height: 26px;
+            height: 20px;
             position: absolute;
             right: 14px;
-            top: 9px;
+            top: 13px;
         }
     }
 }

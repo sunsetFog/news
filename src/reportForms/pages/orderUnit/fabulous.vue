@@ -10,32 +10,71 @@
         <popularityHot></popularityHot>
         <div class="undercurrent">
             <span class="jupiter">应付金额：￥180.00</span>
-            <button v-if="tab_active == 1" class="saturn venus">立即付款</button>
-            <button v-if="tab_active == 1" class="saturn">取消订单</button>
+            <button v-if="tab_active == 1" class="saturn venus" @click="payWay">立即付款</button>
+            <button v-if="tab_active == 1" class="saturn" @click="cancelWay">取消订单</button>
 
-            <button v-if="tab_active == 2" class="saturn">确认收货</button>
-            <button v-if="tab_active == 2" class="saturn">查看物流</button>
+            <button v-if="tab_active == 2" class="saturn" @click="receivedWay">确认收货</button>
+            <button v-if="tab_active == 2" class="saturn" @click="logisticsWay">查看物流</button>
 
-            <button v-if="tab_active == 3" class="saturn">再次购买</button>
+            <button v-if="tab_active == 3" class="saturn" @click="buyWay">再次购买</button>
             <button v-if="tab_active == 3" class="saturn">查看评价</button>
 
             <button v-if="tab_active == 4" class="saturn">删除订单</button>
             <button v-if="tab_active == 4" class="saturn">重新购买</button>
         </div>
+
+        <cancelOrder ref="cancelDom"></cancelOrder>
     </section>
 </template>
 
 <script>
-import popularityHot from "./popularityHot"
+import cancelOrder from "./cancelOrder";
+import popularityHot from "./popularityHot";
+import { Dialog } from 'vant';
+import { Toast } from 'vant';
 export default {
     name: "fabulous",
-    components: { popularityHot },
+    components: { popularityHot, cancelOrder },
     props: {
         tab_active: {
             type: Number,
             default: 0
         }
     },
+    methods: {
+        cancelWay() {
+            this.$refs.cancelDom.initWay()
+        },
+        payWay() {
+            this.$router.push({
+                path: "/payOrder"
+            });
+        },
+        receivedWay() {
+            Dialog.confirm({
+            title: '提示',
+            message: '是否确认收货',
+            })
+            .then(() => {
+                // on confirm
+                Toast.success('已确认收货');
+            })
+            .catch(() => {
+                // on cancel
+            });
+        },
+        logisticsWay() {
+            this.$router.push({
+                path: "/logistics"
+            });
+        },
+        // 跳至购物车
+        buyWay() {
+            this.$router.push({
+                path: "/shoppingCart"
+            });
+        }
+    }
 }
 </script>
 
