@@ -17,10 +17,11 @@
             <button v-if="tab_active == 2" class="saturn" @click="logisticsWay">查看物流</button>
 
             <button v-if="tab_active == 3" class="saturn" @click="buyWay">再次购买</button>
-            <button v-if="tab_active == 3" class="saturn">查看评价</button>
+            <button v-if="tab_active == 3" class="saturn" @click="evaluateDetails">查看评价</button>
+            <button v-if="tab_active == 3" class="saturn" @click="evaluateWay">评价商品</button>
 
-            <button v-if="tab_active == 4" class="saturn">删除订单</button>
-            <button v-if="tab_active == 4" class="saturn">重新购买</button>
+            <button v-if="tab_active == 4" class="saturn" @click="deleteWay">删除订单</button>
+            <button v-if="tab_active == 4" class="saturn" @click="buyWay">重新购买</button>
         </div>
 
         <cancelOrder ref="cancelDom"></cancelOrder>
@@ -73,6 +74,29 @@ export default {
             this.$router.push({
                 path: "/shoppingCart"
             });
+        },
+        evaluateWay() {
+            this.$router.push({
+                path: "/evaluate"
+            });
+        },
+        evaluateDetails() {
+            this.$router.push({
+                path: "/evaluateDetails"
+            });
+        },
+        deleteWay() {
+            Dialog.confirm({
+            title: '提示',
+            message: '是否删除订单',
+            })
+            .then(() => {
+                // on confirm
+                Toast.success('订单删除成功');
+            })
+            .catch(() => {
+                // on cancel
+            });
         }
     }
 }
@@ -112,7 +136,7 @@ export default {
             float: left;
         }
         .saturn {
-            width: 66px;
+            width: 62px;
             height: 28px;
             text-align: center;
             line-height: 28px;
@@ -121,7 +145,7 @@ export default {
             float: right;
             border: 1px solid @color_huise;
             border-radius: 5px;
-            margin: 9px 0 0 10px;
+            margin: 9px 0 0 6px;
         }
         .venus {
             color: @color_hong;

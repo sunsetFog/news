@@ -63,5 +63,7 @@ export default new Router({
         { path: '/shoppingCart', name: 'shoppingCart', meta: { title: '购物车', key: 1 }, component: resolve => require(['@/reportForms/pages/orderUnit/shoppingCart/index'], resolve) },
         { path: '/fillOrder', name: 'fillOrder', meta: { title: '填写订单', key: 1 }, component: resolve => require(['@/reportForms/pages/orderUnit/fillOrder/index'], resolve) },
         { path: '/address', name: 'address', meta: { title: '地址管理', key: 1 }, component: resolve => require(['@/reportForms/pages/orderUnit/address/index'], resolve) },
+        { path: '/evaluate', name: 'evaluate', meta: { title: '发布评价', key: 1 }, component: resolve => require(['@/reportForms/pages/orderUnit/evaluate/index'], resolve) },
+        { path: '/evaluateDetails', name: 'evaluateDetails', meta: { title: '评价详情', key: 1 }, component: resolve => require(['@/reportForms/pages/orderUnit/evaluate/evaluateDetails/index'], resolve) },
     ]
 })
