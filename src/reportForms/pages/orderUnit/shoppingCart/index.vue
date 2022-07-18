@@ -124,9 +124,6 @@ export default {
                 position: relative;
                 border-top: 1px solid @color_edge;
                 border-bottom: 1px solid @color_edge;
-                li:last-child {
-                    border-bottom: none;
-                }
                 .mercury {
                     position: absolute;
                     left: 9px;
@@ -173,6 +170,9 @@ export default {
                     right: 0px;
                     bottom: 0px;
                 }
+            }
+            li:last-child {
+                border-bottom: none;
             }
         }
     }

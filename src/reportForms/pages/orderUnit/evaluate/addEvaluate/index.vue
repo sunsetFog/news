@@ -31,11 +31,12 @@
         <div class="cosplay">
             <van-uploader v-model="fileList" multiple :max-count="9" />
         </div>
-        <button class="rainbow">提交</button>
+        <button class="rainbow" @click="submitWay">提交</button>
     </section>
 </template>
 
 <script>
+import { Toast } from 'vant';
 export default {
     name: "evaluate",
     data() {
@@ -44,6 +45,11 @@ export default {
             message: '',
             integral_active: false,
             fileList: []
+        }
+    },
+    methods: {
+        submitWay() {
+            Toast.success('评价提交成功');
         }
     }
 }

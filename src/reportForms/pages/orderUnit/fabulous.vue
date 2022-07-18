@@ -77,7 +77,7 @@ export default {
         },
         evaluateWay() {
             this.$router.push({
-                path: "/evaluate"
+                path: "/addEvaluate"
             });
         },
         evaluateDetails() {

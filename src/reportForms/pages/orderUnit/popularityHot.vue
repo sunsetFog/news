@@ -43,9 +43,6 @@ export default {
                 height: 85px;
                 position: relative;
                 border-bottom: 1px solid @color_edge;
-                li:last-child {
-                    border-bottom: none;
-                }
                 .shang-pin {
                     width: 80px;
                     height: 68px;
@@ -88,6 +85,9 @@ export default {
                     right: 38px;
                     top: 20px;
                 }
+            }
+            li:last-child {
+                border-bottom: none;
             }
         }
     }
