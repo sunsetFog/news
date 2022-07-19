@@ -85,12 +85,6 @@ export default {
                         .then(res => {
                             console.log('--login--', res);
                             if (res.code == '200') {
-                                that.$store.commit('addPane', {
-                                    title: '首页',
-                                    path: '/home/world/world',
-                                    menu_active: '/home/world/world',
-                                });
-
                                 that.$cookies.set('token', res.data.token, '1d');
                                 that.$store.dispatch('routerApple').then(function(value) {
                                     console.log('--then结束--', value);

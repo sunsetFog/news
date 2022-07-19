@@ -105,12 +105,13 @@ export default {
     .summer {
         width: 30px;
         height: 25px;
+        font-size: 13px;
         text-align: center;
         line-height: 25px;
         color: @color_lv;
         position: absolute;
         right: 15px;
-        top: 8px;
+        top: 10px;
     }
     .saturn {
         width: 100%;

@@ -63,11 +63,17 @@ export default new Router({
         { path: '/shoppingCart', name: 'shoppingCart', meta: { title: '购物车', key: 1 }, component: resolve => require(['@/reportForms/pages/orderUnit/shoppingCart/index'], resolve) },
         { path: '/fillOrder', name: 'fillOrder', meta: { title: '填写订单', key: 1 }, component: resolve => require(['@/reportForms/pages/orderUnit/fillOrder/index'], resolve) },
         { path: '/address', name: 'address', meta: { title: '地址管理', key: 1 }, component: resolve => require(['@/reportForms/pages/orderUnit/address/index'], resolve) },
+        { path: '/addressEdit', name: 'addressEdit', meta: { title: '新增收货人', key: 1 }, component: resolve => require(['@/reportForms/pages/orderUnit/address/addressEdit/index'], resolve) },
         { path: '/addEvaluate', name: 'addEvaluate', meta: { title: '发布评价', key: 1 }, component: resolve => require(['@/reportForms/pages/orderUnit/evaluate/addEvaluate/index'], resolve) },
         { path: '/evaluateDetails', name: 'evaluateDetails', meta: { title: '评价详情', key: 1 }, component: resolve => require(['@/reportForms/pages/orderUnit/evaluate/evaluateDetails/index'], resolve) },
         { path: '/evaluateList', name: 'evaluateList', meta: { title: '我的评价', key: 1 }, component: resolve => require(['@/reportForms/pages/orderUnit/evaluate/evaluateList/index'], resolve) },
         { path: '/afterSalesList', name: 'afterSalesList', meta: { title: '退换售后', key: 1 }, component: resolve => require(['@/reportForms/pages/orderUnit/afterSales/afterSalesList/index'], resolve) },
         { path: '/applyReturn', name: 'applyReturn', meta: { title: '申请退货', key: 1 }, component: resolve => require(['@/reportForms/pages/orderUnit/afterSales/applyReturn/index'], resolve) },
         { path: '/applyReturnDetails', name: 'applyReturnDetails', meta: { title: '记录详情', key: 1 }, component: resolve => require(['@/reportForms/pages/orderUnit/afterSales/applyReturnDetails/index'], resolve) },
+        { path: '/collection', name: 'collection', meta: { title: '我的收藏', key: 1 }, component: resolve => require(['@/reportForms/pages/collectionUnit/index'], resolve) },
+        { path: '/productDetails', name: 'productDetails', meta: { title: '商品信息', key: 1 }, component: resolve => require(['@/reportForms/pages/productDetails/index'], resolve) },
+        { path: '/subjectDetails', name: 'subjectDetails', meta: { title: '专题详情', key: 1 }, component: resolve => require(['@/reportForms/pages/subjectDetails/index'], resolve) },
+        { path: '/topicDetails', name: 'topicDetails', meta: { title: '参与话题', key: 1 }, component: resolve => require(['@/reportForms/pages/topicDetails/index'], resolve) },
+        { path: '/footprintUnit', name: 'footprintUnit', meta: { title: '我的足迹', key: 1 }, component: resolve => require(['@/reportForms/pages/footprintUnit/index'], resolve) },
     ]
 })

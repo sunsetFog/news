@@ -60,7 +60,7 @@ export default {
     created() {
         // 刷新初始化赋值
         let that = this;
-        let tabArr = JSON.parse(sessionStorage.getItem('tabList'));
+        let tabArr = JSON.parse(sessionStorage.getItem('tabList')) || [];
         tabArr = tabArr.filter(function(item){
             return item.path == that.$route.path;
         })
