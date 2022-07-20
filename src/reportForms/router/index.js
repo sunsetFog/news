@@ -81,5 +81,7 @@ export default new Router({
         { path: '/feedback', name: 'feedback', meta: { title: '意见反馈', key: 1 }, component: resolve => require(['@/reportForms/pages/systemSettings/feedback/index'], resolve) },
         { path: '/aboutUs', name: 'aboutUs', meta: { title: '关于我们', key: 1 }, component: resolve => require(['@/reportForms/pages/systemSettings/aboutUs/index'], resolve) },
         { path: '/versionDescription', name: 'versionDescription', meta: { title: '版本说明', key: 1 }, component: resolve => require(['@/reportForms/pages/systemSettings/versionDescription/index'], resolve) },
+        { path: '/messageCenter', name: 'messageCenter', meta: { title: '消息中心', key: 1 }, component: resolve => require(['@/reportForms/pages/messageCenter/index'], resolve) },
+        { path: '/searchUnit', name: 'searchUnit', meta: { title: '搜索', key: 1 }, component: resolve => require(['@/reportForms/pages/searchUnit/index'], resolve) },
     ]
 })

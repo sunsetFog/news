@@ -1,12 +1,12 @@
 <template>
     <section id="essentialsUnit">
         <section class="headDesign">
-            <img class="u13" src="@static/mall/essentials/u13.png"/>
-            <img class="u17" src="@static/mall/essentials/u17.png"/>
+            <img class="u13" src="@static/mall/essentials/u13.png" @click="magicWay"/>
+            <img class="u17" src="@static/mall/essentials/u17.png" @click="magicWay"/>
             <span>夕阳商城</span>
-            <img class="u14" src="@static/mall/essentials/u14.png"/>
-            <img class="u15" src="@static/mall/essentials/u15.png"/>
-            <div>66</div>
+            <img class="u14" src="@static/mall/essentials/u14.png" @click="searchWay"/>
+            <img class="u15" src="@static/mall/essentials/u15.png" @click="comicWay"/>
+            <div @click="comicWay">66</div>
         </section>
 
         <router-view></router-view>
@@ -54,6 +54,22 @@ export default {
         this.with_list[this.$route.meta.key].active = true;
     },
     methods: {
+        searchWay() {
+            this.$router.push({
+                path: '/searchUnit'
+            });
+        },
+        magicWay() {
+            this.$router.push({
+                path: '/messageCenter'
+            });
+        },
+        // 购物车
+        comicWay() {
+            this.$router.push({
+                path: '/shoppingCart'
+            });
+        },
         appleWay(item, index) {
             this.beanWay(index);
             
