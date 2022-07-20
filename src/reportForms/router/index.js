@@ -75,5 +75,11 @@ export default new Router({
         { path: '/subjectDetails', name: 'subjectDetails', meta: { title: '专题详情', key: 1 }, component: resolve => require(['@/reportForms/pages/subjectDetails/index'], resolve) },
         { path: '/topicDetails', name: 'topicDetails', meta: { title: '参与话题', key: 1 }, component: resolve => require(['@/reportForms/pages/topicDetails/index'], resolve) },
         { path: '/footprintUnit', name: 'footprintUnit', meta: { title: '我的足迹', key: 1 }, component: resolve => require(['@/reportForms/pages/footprintUnit/index'], resolve) },
+        { path: '/serviceCenter', name: 'serviceCenter', meta: { title: '服务中心', key: 1 }, component: resolve => require(['@/reportForms/pages/serviceCenter/index'], resolve) },
+        { path: '/problem', name: 'problem', meta: { title: '问题详情', key: 1 }, component: resolve => require(['@/reportForms/pages/serviceCenter/problem/index'], resolve) },
+        { path: '/systemSettings', name: 'systemSettings', meta: { title: '系统设置', key: 1 }, component: resolve => require(['@/reportForms/pages/systemSettings/index'], resolve) },
+        { path: '/feedback', name: 'feedback', meta: { title: '意见反馈', key: 1 }, component: resolve => require(['@/reportForms/pages/systemSettings/feedback/index'], resolve) },
+        { path: '/aboutUs', name: 'aboutUs', meta: { title: '关于我们', key: 1 }, component: resolve => require(['@/reportForms/pages/systemSettings/aboutUs/index'], resolve) },
+        { path: '/versionDescription', name: 'versionDescription', meta: { title: '版本说明', key: 1 }, component: resolve => require(['@/reportForms/pages/systemSettings/versionDescription/index'], resolve) },
     ]
 })

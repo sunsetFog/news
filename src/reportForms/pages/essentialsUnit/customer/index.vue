@@ -34,8 +34,8 @@ export default {
                 { title: '我的评价', icon: 'u293', note: 10, margin: '', borderTop: '', path: '/evaluateList'},
                 { title: '地址管理', icon: 'u298', note: '', margin: '', borderTop: '', path: '/address'},
                 { title: '我的会员', icon: 'u305', note: '黄金会员', margin: '15px', borderTop: haha, path: '/memberCenter'},
-                { title: '服务中心', icon: 'u313', note: '', margin: '', borderTop: '', path: ''},
-                { title: '系统设置', icon: 'u318', note: '', margin: '', borderTop: '', path: ''}
+                { title: '服务中心', icon: 'u313', note: '', margin: '', borderTop: '', path: '/serviceCenter'},
+                { title: '系统设置', icon: 'u318', note: '', margin: '', borderTop: '', path: '/systemSettings'}
             ]
         }
     },
