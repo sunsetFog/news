@@ -40,10 +40,36 @@ export default {
                 4  数组.push(可以是对象)     在数组末尾添加元素,返回数组长度
                 5  数组.unshift(可以是对象)     在数组的前面添加元素，返回数组长度
                 6  数组.splice(下标,1)     删除或者添加指定的元素、、、删除并返回删除元素
-                    注意：如果只有一个参数，表示从当前下标一直删到最后
                     参数1: 删除下标，是负数，从数组末尾开始算起
                     参数2: 删除的个数，0代表不删，1代表删除一个....
                     参数3: 在参数1的下标后添加的内容
+
+                    注意：
+                    1.如果只有一个参数，表示从当前下标一直删到最后
+                    Created by rafael.
+                    2.arr循环中，用arr.splice会造成循环异常
+                        for(let i=0;i<arr.length;i++){
+                            if(true) {
+                                arr.splice(下标,1)
+                            }
+                        }
+                        ---循环不要用splice，它在下标位置按顺序删除多少个的---
+                        解决方法：
+                        保存要删的id
+                        let saveIndex = []
+                        for(let i=0;i<arr.length;i++){
+                            let item = arr[i]
+                            if(true) {
+                                saveIndex.push(item.id)
+                            }
+                        }
+                        for(let i=0;i<saveIndex.length;i++){
+                            let row = saveIndex[i]
+                            arr = arr.filter(function(item, index){
+                                return item !=  row;
+                            });
+                        }
+
                 7  数组.indexOf("数组项")     返回数组中指定值的下标，如果未找到，返回-1
                 8  数组.reverse()     将数组中的内容倒序排列
                 9  数组.concat(数组)     拼接数组  arr1.concat(arr2,arr3,....);

@@ -17,7 +17,8 @@
                 </el-row>
                 <!-- 
                     Created by rafael.
-                    如何解决分页使勾选消失的问题？
+                    如何解决el-table分页使勾选消失的问题？
+                    https://blog.csdn.net/LingSnow1019/article/details/119569621
                     加上
                     :row-key="getRowKeys"
                     :reserve-selection="true"

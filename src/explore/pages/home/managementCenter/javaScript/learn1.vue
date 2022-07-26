@@ -17,7 +17,7 @@ export default {
         }
     },
     mounted(){//可以dom操作
-        this.demo7();
+        this.demo2();
     },
     methods: {
         demo1(){
@@ -79,7 +79,13 @@ export default {
             console.log('attributes',attr[1].nodeValue);
             console.log('getAttribute',yuansu.getAttribute('name'));//元素名.getAttribute(属性名)    获取指定属性
 
-            yuansu.setAttribute('name','juice');//元素名.setAttribute('属性名','属性值')     
+            yuansu.setAttribute('name','juice');//元素名.setAttribute('属性名','属性值')   
+            // 添加一个类名  
+            yuansu.setAttribute('class','category sky');// 这个是赋值，原来的类名不写上会没有
+            yuansu.classList.add('henghadajiang01');// 向后多加类名
+            yuansu.className = 'henghadajiang02';// 赋值
+            // 移出类名
+            // yuansu.classList.remove('henghadajiang');
             
             /*
                 或

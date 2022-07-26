@@ -69,15 +69,6 @@
             伪类                                    10
             /deep/深度选择器-父组件改变子组件样式    大于子组件样式
             width: 45px !important;                 9999最大
-
-            Created by rafael.
-            问题：用/deep/和!important样式都无效？
-            解决方案：
-                把提样式到全局App.vue里，为了不影响全局样式，子vue的mounted里用js操作DOM，body标签添加一个类名apple
-                .apple .改的样式名 {
-
-                }
-            无效原因：使用固定定位，标签提到最外，使标签嵌套改变
         -->
         样式命名规范:
         <br>
