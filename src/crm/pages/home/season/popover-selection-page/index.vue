@@ -35,7 +35,7 @@
 <el-popover
   placement="bottom"
   width="600"
-  @after-enter="waterWay"
+  @after-enter="afterEnter"
   trigger="manual"
   v-model="box_visible"
   >
@@ -125,7 +125,7 @@ export default {
                     if (res.code == '200') {
                         that.pagingObj.total = res.data.totalSize;
                         that.table_data = res.data.content;
-                        that.waterWay();
+                        that.afterEnter();
                     }
                 })
                 .catch(err => {
@@ -162,7 +162,7 @@ export default {
         },
         // 下拉框删除标签
         removeTag() {
-            this.waterWay();
+            this.afterEnter();
         },
         // 勾选和全选
         handleSelection(selection) {
@@ -201,7 +201,7 @@ export default {
         getRowKeys(row) {
             return row.id
         },
-        waterWay() {
+        afterEnter() {
             // 清空所有勾选
             this.$refs.multipleTable.clearSelection();
             // 当前页勾选

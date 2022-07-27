@@ -175,12 +175,11 @@ const login = {
             } else if (sessionStorage.getItem("entry_config") == 'crm') {
                 titleArr = [
                     { name: '首页', file: 'world' },
-                    { name: '季节', file: 'season' },
+                    { name: '季节知识', file: 'season' },
                     { name: '商品', file: 'shopUnit' },
                     { name: '订单', file: 'orderUnit' },
                     { name: '营销', file: 'marketingUnit' },
-                    { name: '权限管理', file: 'jurisdiction' },
-                    { name: '系统设置', file: 'system' }
+                    { name: '权限管理', file: 'jurisdiction' }
                 ]
             }
             // 不是菜单的数组，path字段

@@ -1,5 +1,5 @@
 <template>
-  <section id="shopUnit" ref="refUnit">
+  <section id="exampleUnit" ref="refUnit">
     <section class="header-box" ref="refHeader">
       <el-input v-model="queryData.isName" placeholder="请输入内容" style="width: 200px;"></el-input>
       <el-button type="primary" @click="addWay('新建用户')">添加</el-button>
@@ -65,7 +65,7 @@
 <script>
 
 export default {
-    name: 'shopUnit',
+    name: 'exampleUnit',
     data() {
         return {
             queryData: {
@@ -242,7 +242,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-#shopUnit {
+#exampleUnit {
     height: 100%;
     .header-box {
         padding: 0 0 8px 0;
