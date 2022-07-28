@@ -5,17 +5,22 @@ export default {
             dialogVisible: false,
             addAndEditForm: {
                 title: '',
-                parentId: null,
+                parentId: [],
                 name: '',
                 icon: '',
-                status: true,
+                path: '',// +
+                hidden: 0,
+                cache: 0,// +
                 sort: 0
             },
             rulesCheck: {},
             editSaveRow: {},
-            level_list: [
-                { id: 0, title: "无上级菜单" }
-            ]
+            level_list: [],
+            defaultProps: {// 替换结构字段，不用处理数据
+                children: 'children',
+                value: 'id',
+                label: 'title'
+            }
         }
     },
     methods: {
@@ -32,20 +37,17 @@ export default {
         },
         initForm(row = {}) {
             let that = this;
-            that.addAndEditForm.title = row.title || '';
-            that.addAndEditForm.parentId = row.parentId;
-            that.addAndEditForm.name = row.name || '';
-            that.addAndEditForm.icon = row.icon || '';
-            that.addAndEditForm.status = row.status || true;
-            that.addAndEditForm.sort = row.sort || 0;
-            
-            for (let index = 0; index < that.saveData.length; index++) {
-                let item = that.saveData[index];
-                that.level_list.push({
-                    id: item.id,
-                    title: item.title
-                })
+            that.addAndEditForm = {
+                title: row.title || '',
+                parentId: [row.parentId],
+                name: row.name || '',
+                icon: row.icon || '',
+                path: row.path || '',
+                hidden: row.hidden || 0,
+                cache: row.cache || 0,
+                sort: row.sort || 0
             }
+            console.log("11--", that.addAndEditForm)
         },
         cancelWay() {
             this.dialogVisible = false;
@@ -57,16 +59,23 @@ export default {
                 this.editSure();
             }
         },
-        addSure() {
+        paramsWay() {
             let that = this;
-            let params = {
+            console.log("--22", that.addAndEditForm.parentId)
+            return {
                 title: that.addAndEditForm.title,
-                parentId: that.addAndEditForm.parentId,
+                parentId: that.addAndEditForm.parentId[0],
                 name: that.addAndEditForm.name,
                 icon: that.addAndEditForm.icon,
-                hidden: that.addAndEditForm.status ? 0 : 1,
+                path: that.addAndEditForm.path,
+                hidden: that.addAndEditForm.hidden,
+                cache: that.addAndEditForm.cache,
                 sort: that.addAndEditForm.sort
-            }
+            };
+        },
+        addSure() {
+            let that = this;
+            let params = that.paramsWay();
             that.$apihttp({
                 url: process.env.core_url + '/sky/menu/add',
                 method: 'post',
@@ -74,7 +83,7 @@ export default {
             })
                 .then(res => {
                     if (res.code == '200') {
-                        that.queryWay();
+                        that.menuWay();
                         that.dialogVisible = false;
                         that.$message({
                             type: 'success',
@@ -88,15 +97,8 @@ export default {
         },
         editSure() {
             let that = this;
-            let params = {
-                id: that.editSaveRow.id,
-                title: that.addAndEditForm.title,
-                parentId: that.addAndEditForm.parentId,
-                name: that.addAndEditForm.name,
-                icon: that.addAndEditForm.icon,
-                hidden: that.addAndEditForm.status ? 0 : 1,
-                sort: that.addAndEditForm.sort
-            }
+            let params = that.paramsWay();
+            params.id = that.editSaveRow.id;
             that.$apihttp({
                 url: process.env.core_url + '/sky/menu/update',
                 method: 'post',
@@ -104,7 +106,7 @@ export default {
             })
                 .then(res => {
                     if (res.code == '200') {
-                        that.queryWay();
+                        that.menuWay();
                         that.dialogVisible = false;
                         that.$message({
                             type: 'success',

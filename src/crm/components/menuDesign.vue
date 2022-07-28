@@ -22,7 +22,7 @@
                 <span>{{item.title}}</span>
             </template>
             <el-menu-item-group v-if="item.children.length!=0">
-                <div v-for="(val,ind) in item.children" :key="index+ind+'v'">
+                <div v-for="(val,ind) in item.children" :key="index+ind+'v'" v-if="val.hidden != 1">
                     <!-- index绑定的对象是@select事件的参数,也是:default-active的参数 -->
                 <el-menu-item :index="val.key">
                     <div style="width: 100%;height: 100%;text-indent: 25px;">{{val.title}}</div>

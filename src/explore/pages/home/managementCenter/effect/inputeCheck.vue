@@ -2,9 +2,13 @@
     <section id="inputeCheck">
 
         <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="150px" class="demo-ruleForm">
-            <!-- 只能输入数字，不能负数       最大值999999999，限制输入9个长度-->
+            <!-- 只能输入数字，不能负数       最大值999999999，限制输入9个长度
+                加type="number" v-model的值还是字符串，右边出现加减
+                v-model.number v-model的值是数字了
+                两者都限制只输入数字
+            -->
             <el-form-item label="充值金额:" prop="rechargeAmount">
-                <el-input v-model="ruleForm.rechargeAmount" size="small" placeholder="请输入充值金额" class="purpose" type="number" :min="0" onkeypress="this.value = this.value.slice(0, 8)" onkeyup="this.value=this.value.replace(/e/,'');"></el-input>
+                <el-input v-model.number="ruleForm.rechargeAmount" size="small" placeholder="请输入充值金额" class="purpose" type="number" :min="0" onkeypress="this.value = this.value.slice(0, 8)" onkeyup="this.value=this.value.replace(/e/,'');"></el-input>
             </el-form-item>
             <el-form-item label="彩金金额:" prop="lotteryAmount">
                 <el-input-number v-model="ruleForm.lotteryAmount" size="small" :min="0" :max="999999999" label="请输入彩金金额" class="purpose" @input.native="inputChange" onKeypress="return (/[\d\.]/.test(String.fromCharCode(event.keyCode)))"></el-input-number>
