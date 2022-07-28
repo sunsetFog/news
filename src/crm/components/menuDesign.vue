@@ -15,20 +15,26 @@
         :collapse="isCollapse"
         >
         <div v-for="(item,index) in menuList" :key="index+'w'">
-            <!-- index绑定的字符串是@open事件的参数 -->
-            <el-submenu :index="'sign'+index">
-            <template slot="title">
+            <!-- 只有一级 -->
+            <el-menu-item :index="item.key" v-if="item.children.length == 0">
                 <i class="el-icon-menu"></i>
                 <span>{{item.title}}</span>
-            </template>
-            <el-menu-item-group v-if="item.children.length!=0">
-                <div v-for="(val,ind) in item.children" :key="index+ind+'v'" v-if="val.hidden != 1">
-                    <!-- index绑定的对象是@select事件的参数,也是:default-active的参数 -->
-                <el-menu-item :index="val.key">
-                    <div style="width: 100%;height: 100%;text-indent: 25px;">{{val.title}}</div>
-                </el-menu-item>
-                </div>
-            </el-menu-item-group>
+            </el-menu-item>
+
+            <!-- index绑定的字符串是@open事件的参数 -->
+            <el-submenu :index="'sign'+index" v-else>
+                <template slot="title">
+                    <i class="el-icon-menu"></i>
+                    <span>{{item.title}}</span>
+                </template>
+                <el-menu-item-group>
+                    <div v-for="(val,ind) in item.children" :key="index+ind+'v'" v-if="val.hidden != 1">
+                        <!-- index绑定的对象是@select事件的参数,也是:default-active的参数 -->
+                    <el-menu-item :index="val.key">
+                        <div style="width: 100%;height: 100%;text-indent: 25px;">{{val.title}}</div>
+                    </el-menu-item>
+                    </div>
+                </el-menu-item-group>
             </el-submenu>
         </div>
         </el-menu>
