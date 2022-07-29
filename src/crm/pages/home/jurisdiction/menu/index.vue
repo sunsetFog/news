@@ -233,7 +233,13 @@ export default {
                         
                         for (let i = 0; i < that.router_level.length; i++) {
                             let item = that.router_level[i];
-                            delete item["children"];
+                            for (let y = 0; y < item.children.length; y++) {
+                                let row = item.children[y];
+                                delete row["children"];
+                            }
+                            if(item.children.length == 0) {
+                                delete item["children"];
+                            }
                         }
                         that.router_level.unshift({ id: -1, title: "不是路由" });
                         that.router_level.unshift({ id: 0, title: "第一级路由" });

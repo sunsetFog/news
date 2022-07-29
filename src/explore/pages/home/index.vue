@@ -137,24 +137,24 @@ export default {
         return {
             header_list: [{ title: '优惠活动大厅' }, { title: '下载中心' }, { title: '线路检测' }],
             tabs_bar: [
-                { title: '首页', active: false, exhibition: true, path: '/home/homeIndex' },
+                { title: '首页', active: false, exhibition: true, path: '/home/homeIndex/index' },
                 {
                     title: '电子竞技',
                     active: false,
                     exhibition: false,
-                    path: '/home/lottery',
+                    path: '/home/lottery/index',
                 },
                 {
                     title: '真人娱乐',
                     active: false,
                     exhibition: false,
-                    path: '/home/realperson',
+                    path: '/home/realPerson/index',
                 },
                 {
                     title: '体育竞技',
                     active: false,
                     exhibition: false,
-                    path: '/home/sports',
+                    path: '/home/sports/index',
                 },
                 {
                     title: '优惠活动',
@@ -166,7 +166,7 @@ export default {
                     title: '代理系统',
                     active: false,
                     exhibition: true,
-                    path: '/home/agentsystem',
+                    path: '/home/agentSystem/index',
                 },
                 {
                     title: '管理中心',
@@ -206,7 +206,7 @@ export default {
     },
     watch: {
         $route(to, from) {
-            if (to.path == '/game') {
+            if (to.path == '/game/index') {
                 this.fixed_state = false;
             } else {
                 this.fixed_state = true;
@@ -417,7 +417,7 @@ export default {
             });
         },
         registerMeans() {
-            this.$router.push({ path: '/register' });
+            this.$router.push({ path: '/register/index' });
         },
         signIn() {
             var that = this;

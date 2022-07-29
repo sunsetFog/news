@@ -132,14 +132,14 @@ export default{
         rapidRegistration(value){
             if(value=='register'){
                 if(refreshWeb.state=='init'){
-                    this.$router.push({path: '/register'});
+                    this.$router.push({path: '/register/index'});
                 }else{
                     this.$message.error('加载游戏中,稍后为你进入快速注册！');
                     sessionStorage.setItem('register','up');
                 }
             }else if(value=='line'){
                 this.$message.success("敬请期待！");
-                // this.$router.push({path: '/line'});
+                // this.$router.push({path: '/login/line'});
             }
         },
         signIn(res){
@@ -171,7 +171,7 @@ export default{
                     that.$store.dispatch('routerApple').then(function(value){
                         console.log("--then结束--", value);
                         that.$router.addRoutes(value);
-                        that.$router.push({path: '/home'});
+                        that.$router.push({path: '/home/index'});
                     })
                 } 
             }).catch((err)=>{
@@ -190,7 +190,7 @@ export default{
             //         }
             //         sessionStorage.setItem('account_number',that.account_number);
             //         sessionStorage.setItem('password_number',that.password_number);
-            //         that.$router.push({path: '/home'});
+            //         that.$router.push({path: '/home/index'});
             //     });
             // }else{
             //     that.$message.error('加载游戏中,稍后为你登陆操作！');

@@ -19,6 +19,7 @@ export default {
             menu_level: [],
             router_level: [],
             defaultProps: {// 替换结构字段，不用处理数据
+                checkStrictly: true,
                 children: 'children',
                 value: 'id',
                 label: 'title'
@@ -37,12 +38,31 @@ export default {
             this.dialogVisible = true;
             this.initForm(row);
         },
+        levelValue(arr, id) {
+            arr = arr || []; //退出递归1. 空数组不会遍历，就不会调用自己了
+            for (let i = 0; i < arr.length; i++) {
+                let item = arr[i];
+                if (item.id == id) {
+                    // console.log("-dui-", item);
+                    if(item.routerParentId == 0 || item.routerParentId == -1) {
+                        this.addAndEditForm.routerParentId = [item.id];
+                    } else {
+                        this.addAndEditForm.routerParentId = [item.routerParentId, item.id];
+                    }
+                    return
+                }
+                this.levelValue(item.children, id);
+            }
+        },
         initForm(row = {}) {
             let that = this;
+            that.levelValue(that.router_level, row.routerParentId);
+            let list = this.addAndEditForm.routerParentId
+            console.log("-nana-", list);
             that.addAndEditForm = {
                 title: row.title || '',
                 menuParentId: [row.menuParentId],
-                routerParentId: [row.routerParentId],
+                routerParentId: list,
                 name: row.name || '',
                 icon: row.icon || '',
                 path: row.path || '',
@@ -64,11 +84,11 @@ export default {
         },
         paramsWay() {
             let that = this;
-            console.log("--22", that.addAndEditForm.menuParentId)
+            console.log("--22", that.addAndEditForm.routerParentId)
             return {
                 title: that.addAndEditForm.title,
-                menuParentId: that.addAndEditForm.menuParentId[0],
-                routerParentId: that.addAndEditForm.routerParentId[0],
+                menuParentId: that.addAndEditForm.menuParentId[that.addAndEditForm.menuParentId.length - 1],
+                routerParentId: that.addAndEditForm.routerParentId[that.addAndEditForm.routerParentId.length - 1],
                 name: that.addAndEditForm.name,
                 icon: that.addAndEditForm.icon,
                 path: that.addAndEditForm.path,

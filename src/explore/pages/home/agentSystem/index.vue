@@ -39,7 +39,7 @@ export default{
                 e = e||event;
                 //console.log('回调参数',e);
                 if (e.data == 'back') {
-                    that.$router.push({path: '/home'});
+                    that.$router.push({path: '/home/index'});
                 }
            
             }

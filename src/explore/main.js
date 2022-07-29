@@ -174,15 +174,15 @@ router.beforeEach((to, from, next) => {
 
 
 
-    // 通过刷新判断，跳转至/neutralgear页面
-    // let routeScreen = ['/login','/neutralgear'];
+    // 通过刷新判断，跳转至/neutralGear/index页面
+    // let routeScreen = ['/login','/neutralGear/index'];
     // if(routeScreen.indexOf(to.path)==-1&&from.path == '/'){ // 刷新判断
-    //     if(to.path=='/game'){
-    //         sessionStorage.setItem('save_path','/home');
+    //     if(to.path=='/game/index'){
+    //         sessionStorage.setItem('save_path','/home/index');
     //     }else{
     //         sessionStorage.setItem('save_path',to.path);
     //     }
-    //     next({path: '/neutralgear'}); // next页面跳转
+    //     next({path: '/neutralGear/index'}); // next页面跳转
     // }
 
     NProgress.start(); // 开始动画

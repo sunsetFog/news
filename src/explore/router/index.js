@@ -27,7 +27,7 @@ export default new Router({
       命名：最好path与文件夹路径一致
       path: '*'找不到路径， 相当于if的else判断
       path: '/'  默认路由
-      children是用来搭建路由视图，要有{ path: '/', redirect: '/home' }  默认值：children里的重定向
+      children是用来搭建路由视图，要有{ path: '/', redirect: '/home/index' }  默认值：children里的重定向
       children里的path前没有/，表示path叠加，若加了/就不会叠加
       meta路由元信息，是用来存路由参数，比如title
 

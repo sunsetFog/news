@@ -39,7 +39,7 @@ export default {
   },
   watch: {
     $route(to, from) {
-      if (to.path == "/neutralgear") {
+      if (to.path == "/neutralGear/index") {
         this.subject = false;
       } else {
         this.subject = true;
@@ -51,14 +51,14 @@ export default {
         this.notice_active = false;
       }
       // console.log('watch~~~',to,from);
-      if (to.path == "/game") {
+      if (to.path == "/game/index") {
         // purpleMagic(3);
         window.dispatchEvent(new Event("resize"));
       } else {
         // purpleMagic(2);
       }
 
-      if (from.path == "/register") {
+      if (from.path == "/register/index") {
         //console.log('退出注册');
         let that = this;
         that.$means.amateur_register_exit();

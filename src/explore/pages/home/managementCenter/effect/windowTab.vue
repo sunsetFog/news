@@ -52,7 +52,7 @@ export default {
                 currencyArr: []
             }
             window.ocrParams = JSON.stringify(ocrParams)
-            window.open(location.protocol + "//" +location.host + '/#/openTab', "tabWinOcrEec");
+            window.open(location.protocol + "//" +location.host + '/#/home/managementCenter/effect/openTab', "tabWinOcrEec");
         },
         updateOcr(data){
             console.log('updateOcr',data)

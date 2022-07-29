@@ -53,23 +53,6 @@ const login = {
     actions: {
         async routerApple({state, commit, dispatch}, params) {
             console.log("--routerApple-1-");
-
-            // await apiHttp({
-            //     url: process.env.core_url + '/sky/menu/routerList',
-            //     method: 'post',
-            //     params: {
-            //         subject: 'crm'
-            //     }
-            // }).then((res) => {
-            //     let list = res.data;
-            //     list = list.filter(function(item, index) {
-            //         return item.path;
-            //     });
-            //     dispatch('dynamicRouter', list);
-            // }).catch((err) => {
-            //     console.log('error',err);
-            // })
-
             await apiHttp({
                 url: process.env.core_url + '/sky/menu/treeRouter',
                 method: 'get',
@@ -101,31 +84,6 @@ const login = {
             return state.routerList;
             
         },
-        // dynamicRouter({state, commit, dispatch}, params) {
-        //     let flower = [
-        //         { path: '/home', name: 'Home', meta: { title: '主页' }, component: resolve => require([ '@/crm/pages/home/index.vue' ],resolve), children: [] },
-        //         ...finalRouter
-        //     ];
-        //     for (let index = 0; index < params.length; index++) {
-        //         let item = params[index];
-        //         flower[0].children.push({
-        //             path: item.path,
-        //             name: lodash.uniqueId('mark-'),
-        //             meta: { 
-        //                 title: item.title,
-        //                 hidden: item.hidden,
-        //                 icon: item.icon,
-        //                 cache: item.cache
-        //             },
-        //             component: resolve => require([ '@/crm/pages' + item.path + '.vue' ],resolve)
-        //         })
-        //     }
-        //     flower[0].children.push({
-        //         path: '/',
-        //         redirect: params[0].path
-        //     });
-        //     state.routerList = flower;
-        // },
         dynamicRouter({state, commit, dispatch}, params) {
             luyou(params);
             console.log("--dynamicRouter--", params);

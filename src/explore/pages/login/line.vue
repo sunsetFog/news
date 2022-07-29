@@ -100,7 +100,7 @@ export default{
   },
   methods: {
       rapidRegistration(value){
-          this.$router.push({path: '/home'});
+          this.$router.push({path: '/home/index'});
       }
   }
 }

@@ -38,17 +38,17 @@ export default {
                 },
                 set: function(value) {
                     //console.log('changjing%%%%%',value,that.$route.path);
-                    if(that.$route.path=='/register'){
+                    if(that.$route.path=='/register/index'){
                         return;
                     }
                     if(value=='999992'){
                         // console.log('99222',that.$route.path)
-                        if(that.$route.path!='/neutralgear'){
-                            that.$router.push({path: '/home'});
+                        if(that.$route.path!='/neutralGear/index'){
+                            that.$router.push({path: '/home/index'});
                         }
                         that.$means.amateur_exit_scene(function(value){});
                     }else if(value=='999991'||value=='999993'||value=='999994'||value=='999995'){
-                        that.$router.push({path: '/game'});
+                        that.$router.push({path: '/game/index'});
                         that.openFullScreen().close();
                     }
                 }
@@ -64,7 +64,7 @@ export default {
                     },
                     set:function(value){
                         if(value==1001||value==1002||value==1101||value==1102||value==1103||value==1104||value==1105||value==1201||value==1203||value==1204||value==1301||value==1302||value==1303||value==1||value==2){
-                            that.$router.push({path: '/home'});
+                            that.$router.push({path: '/home/index'});
                             that.openFullScreen().close();
                             that.$means.amateur_exit_scene(function(value){});
                         }else if(value==1202){
@@ -78,7 +78,7 @@ export default {
 
                     },
                     set:function(value){
-                        that.$router.push({path: '/home'});
+                        that.$router.push({path: '/home/index'});
                         that.openFullScreen().close();
                         that.$means.amateur_exit_scene(function(value){});
                         // that.$message.error('请求超时!');

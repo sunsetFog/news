@@ -11,7 +11,7 @@ export default {
         }
     },
     beforeCreate() {
-        this.$router.push({ path: "/home/homeIndex"})
+        this.$router.push({ path: "/home/homeIndex/index"})
     }
 }
 </script>
