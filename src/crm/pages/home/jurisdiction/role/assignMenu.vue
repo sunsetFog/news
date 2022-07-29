@@ -44,7 +44,7 @@ export default {
 
             };
             that.$apihttp({
-                url: process.env.core_url + '/sky/menu/treeList',
+                url: process.env.core_url + '/sky/menu/treeMenu',
                 method: 'get',
                 params: params
             })

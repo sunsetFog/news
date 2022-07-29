@@ -1,6 +1,29 @@
 <template>
     <section id="menuUnit" ref="refUnit">
-        <searchDesign ref="refHeader" @addWay="addWay" :sousuo="false"></searchDesign>
+        <searchDesign ref="refHeader" @addWay="addWay" :sousuo="false">
+            <el-form ref="form" :model="queryData" label-width="100px">
+                <el-row :gutter="20">
+                    <el-col :span="12">
+                        <el-form-item label="切换项目：">
+                            <el-select v-model="queryData.subject" placeholder="请选择" @change="subjectChange">
+                                <el-option
+                                v-for="item in subject_list"
+                                :key="item.value"
+                                :label="item.label"
+                                :value="item.value">
+                                </el-option>
+                            </el-select>
+                        </el-form-item>
+                    </el-col>
+                    <el-col :span="12">
+                        <el-form-item label="切换类型：">
+                            <el-radio v-model="queryData.type" label="1" @change="typeWay">菜单</el-radio>
+                            <el-radio v-model="queryData.type" label="2" @change="typeWay">路由</el-radio>
+                        </el-form-item>
+                    </el-col>
+                </el-row>
+            </el-form>
+        </searchDesign>
 
         <el-table
             :data="tableData"
@@ -62,8 +85,15 @@
                     </el-form-item>
                     <el-form-item label="上级菜单:">
                         <el-cascader
-                            v-model="addAndEditForm.parentId"
-                            :options="level_list"
+                            v-model="addAndEditForm.menuParentId"
+                            :options="menu_level"
+                            :props="defaultProps">
+                            </el-cascader>
+                    </el-form-item>
+                    <el-form-item label="上级路由:">
+                        <el-cascader
+                            v-model="addAndEditForm.routerParentId"
+                            :options="router_level"
                             :props="defaultProps">
                             </el-cascader>
                     </el-form-item>
@@ -104,8 +134,13 @@ export default {
     data() {
         return {
             queryData: {
-
+                subject: 'crm',
+                type: '1'
             },
+            subject_list: [
+                { value: 'crm', label: 'crm项目' },
+                { value: 'explore', label: 'explore项目' }
+            ],
             // -----------------
             tableData: [],
             tableHeight: 0,
@@ -115,7 +150,7 @@ export default {
         }
     },
     created() {
-        this.menuWay();
+        this.subjectChange();
     },
     mounted() {
         console.log('--refUnit-', this.$refs.refUnit.offsetHeight);
@@ -126,28 +161,82 @@ export default {
         console.log('--tableHeight--', this.tableHeight);
     },
     methods: {
+        typeWay(value) {
+            console.log("--typeWay--", value);
+            this.playWay();
+        },
+        subjectChange(value) {
+            console.log("--subjectChange--", value);
+            this.menuWay();
+            this.routerWay();
+        },
+        playWay() {
+            if(this.queryData.type == '1') {
+                this.menuWay();
+            } else if(this.queryData.type == '2') {
+                this.routerWay();
+            }
+        },
         menuWay() {
             let that = this;
             let params = {
-
+                subject: that.queryData.subject
             };
             that.$apihttp({
-                url: process.env.core_url + '/sky/menu/treeList',
+                url: process.env.core_url + '/sky/menu/treeMenu',
                 method: 'get',
                 params: params
             })
                 .then(res => {
                     if (res.code == '200') {
-                        that.tableData = res.data;
-                        that.recursion(that.tableData);
-                        that.level_list = JSON.parse(JSON.stringify(that.tableData));
-                        // console.log("--level_list--", that.level_list);
+                        let list = res.data;
+                        if(that.queryData.type == '1') {
+                            that.tableData = list;
+                            that.recursion(that.tableData);
+                        }
                         
-                        for (let i = 0; i < that.level_list.length; i++) {
-                            let item = that.level_list[i];
+                        that.menu_level = JSON.parse(JSON.stringify(list));
+                        // console.log("--menu_level--", that.menu_level);
+                        
+                        for (let i = 0; i < that.menu_level.length; i++) {
+                            let item = that.menu_level[i];
                             delete item["children"];
                         }
-                        that.level_list.unshift({ id: 0, title: "无上级菜单" });
+                        that.menu_level.unshift({ id: -1, title: "不是菜单" });
+                        that.menu_level.unshift({ id: 0, title: "第一级菜单" });
+                    }
+                })
+                .catch(err => {
+                    console.log('error', err);
+                });
+        },
+        routerWay() {
+            let that = this;
+            let params = {
+                subject: that.queryData.subject
+            };
+            that.$apihttp({
+                url: process.env.core_url + '/sky/menu/treeRouter',
+                method: 'get',
+                params: params
+            })
+                .then(res => {
+                    if (res.code == '200') {
+                        let list = res.data;
+                        if(that.queryData.type == '2') {
+                            that.tableData = list;
+                            that.recursion(that.tableData);
+                        }
+                        
+                        that.router_level = JSON.parse(JSON.stringify(list));
+                        // console.log("--router_level--", that.router_level);
+                        
+                        for (let i = 0; i < that.router_level.length; i++) {
+                            let item = that.router_level[i];
+                            delete item["children"];
+                        }
+                        that.router_level.unshift({ id: -1, title: "不是路由" });
+                        that.router_level.unshift({ id: 0, title: "第一级路由" });
                     }
                 })
                 .catch(err => {
@@ -158,10 +247,19 @@ export default {
             arr = arr || []; //退出递归1. 空数组不会遍历，就不会调用自己了
             for (let i = 0; i < arr.length; i++) {
                 let item = arr[i];
-                if(item.level == 0) {
-                    item.levelName = "一级"
-                } else if (item.level == 1) {
-                    item.levelName = "二级"
+                if(item.menuLevel == 0 && this.queryData.type == '1') {
+                    item.levelName = "一级";
+                } else if (item.menuLevel == 1 && this.queryData.type == '1') {
+                    item.levelName = "二级";
+                } else if (item.menuLevel == 2 && this.queryData.type == '1') {
+                    item.levelName = "三级";
+                }
+                if(item.routerLevel == 0 && this.queryData.type == '2') {
+                    item.levelName = "一级";
+                } else if (item.routerLevel == 1 && this.queryData.type == '2') {
+                    item.levelName = "二级";
+                } else if (item.routerLevel == 2 && this.queryData.type == '2') {
+                    item.levelName = "三级";
                 }
                 this.recursion(item.children);
             }
@@ -177,7 +275,8 @@ export default {
                 .then(() => {
                     let params = {
                         id: row.id,
-                        parentId: row.parentId,
+                        menuParentId: row.menuParentId,
+                        routerParentId: row.routerParentId,
                         [key]: value
                     };
                     that.$apihttp({
@@ -187,7 +286,8 @@ export default {
                     })
                         .then(res => {
                             if (res.code == '200') {
-                                that.menuWay();
+                                that.playWay();
+                                
                                 that.$message({
                                     type: 'success',
                                     message: '修改成功!'
@@ -199,7 +299,7 @@ export default {
                         });
                 })
                 .catch(() => {
-                    that.menuWay();
+                    that.playWay();
                     that.$message({
                         type: 'info',
                         message: '已取消删除'
@@ -245,7 +345,7 @@ export default {
                     })
                         .then(res => {
                             if (res.code == '200') {
-                                that.menuWay();
+                                that.playWay();
                                 that.$message({
                                     type: 'success',
                                     message: '删除成功!'
