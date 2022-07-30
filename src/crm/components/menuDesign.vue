@@ -15,24 +15,25 @@
         :collapse="isCollapse"
         >
         <div v-for="(item,index) in menuList" :key="index+'w'">
-            <!-- 只有一级 -->
+            <!-- 第一级 -->
             <el-menu-item :index="item.key" v-if="item.children.length == 0">
                 <i class="el-icon-menu"></i>
                 <span>{{item.title}}</span>
             </el-menu-item>
 
-            <!-- index绑定的字符串是@open事件的参数 -->
+            <!-- el-menu-item的index绑定是@open事件的参数 -->
             <el-submenu :index="'sign'+index" v-else>
                 <template slot="title">
                     <i class="el-icon-menu"></i>
                     <span>{{item.title}}</span>
                 </template>
                 <el-menu-item-group>
-                    <div v-for="(val,ind) in item.children" :key="index+ind+'v'" v-if="val.hidden != 1">
-                        <!-- index绑定的对象是@select事件的参数,也是:default-active的参数 -->
-                    <el-menu-item :index="val.key">
-                        <div style="width: 100%;height: 100%;text-indent: 25px;">{{val.title}}</div>
-                    </el-menu-item>
+                    <div v-for="(val,ind) in item.children" :key="val.key" v-if="val.hidden != 1">
+                        <!-- 第二级 -->
+                        <!-- el-submenu的index绑定是@select事件的参数,也是:default-active的参数 -->
+                        <el-menu-item :index="val.key">
+                            <div style="width: 100%;height: 100%;text-indent: 25px;">{{val.title}}</div>
+                        </el-menu-item>
                     </div>
                 </el-menu-item-group>
             </el-submenu>
@@ -86,18 +87,18 @@ export default {
                 let item = arr[i];
 
                 if(item.key == key) {
-                    // 修改tabs数组或选中值
-                    this.$store.commit('tabsOfValue', item.key);
                     // 菜单选中值
                     this.$store.commit('menuOfValue', item.key);
                     // 跳转
                     this.$router.push({ path: item.path });
-                    // 修改tabs数组
+                    // 修改tabs数组和选中值
+                    this.$store.commit('tabsOfValue', item.key);
                     this.$store.commit('addTabs', {
                         title: item.title,
                         path: item.path,
                         key: item.key
                     });
+                    break;
                 }
 
                 if (!item.children) {//退出遍历2. 结束一次循环，就不会调用自己了

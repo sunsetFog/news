@@ -14,6 +14,10 @@ function luyou(arr) {
     arr = arr || []; //退出递归1. 空数组不会遍历，就不会调用自己了
     for (let i = 0; i < arr.length; i++) {
         let item = arr[i];
+        // 有重定向，跳过一次循环
+        if(item.redirect) {
+            continue;
+        }
         item.name = lodash.uniqueId('mark-');
         item.meta = { 
             title: item.title,
@@ -34,6 +38,13 @@ function luyou(arr) {
         delete item.sort;
         delete item.subject;
         delete item.title;
+        // 推路由重定向
+        if(item.children && item.children.length != 0) {
+            item.children.push({
+                path: '/',
+                redirect: item.children[0].path
+            })
+        }
         luyou(item.children);
     }
 }
@@ -41,18 +52,24 @@ function luyou(arr) {
 const login = {
     state: {
         routerList: [],
-        menuList: []
+        menuList: [],
+        menu_value: null
     },
     mutations: {
-        
+        // 菜单选中值
+        menuOfValue(state,value){
+            console.log("--menuOfValue--", value);
+            sessionStorage.setItem('menu_value', value);
+            state.menu_value = value
+        }
     },
     getters: {
         routerList: state => state.routerList,
-        menuList: state => state.menuList
+        menuList: state => state.menuList,
+        menuValue: state => state.menu_value
     },
     actions: {
         async routerApple({state, commit, dispatch}, params) {
-            console.log("--routerApple-1-");
             await apiHttp({
                 url: process.env.core_url + '/sky/menu/treeRouter',
                 method: 'get',
@@ -79,19 +96,18 @@ const login = {
             }).catch((err) => {
                 console.log('error',err);
             })
-            console.log("--routerApple-2-", state);
+
+            console.log("--routerApple--", JSON.parse(JSON.stringify(state)));
 
             return state.routerList;
             
         },
         dynamicRouter({state, commit, dispatch}, params) {
             luyou(params);
-            console.log("--dynamicRouter--", params);
             params = [...params, ...finalRouter];
             state.routerList = params;
         },
         dynamicMenu({state, commit, dispatch}, params) {
-            console.log("--dynamicMenu--", params);
             state.menuList = params
         }
     }

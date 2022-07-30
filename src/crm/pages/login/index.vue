@@ -87,7 +87,7 @@ export default {
                             if (res.code == '200') {
                                 that.$cookies.set('token', res.data.token, '1d');
                                 that.$store.dispatch('routerApple').then(function(value) {
-                                    console.log('--then结束--', value);
+                                    console.log('--then结束--');
                                     that.$router.addRoutes(value);
                                     that.$router.push({ path: '/home/world/world' });
                                 });

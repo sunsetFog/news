@@ -164,7 +164,7 @@ router.beforeEach((to, from, next) => {
     if (from.path == '/' && to.path != '/login') {
         if (VueCookies.get('token')) {
             penCache.dispatch('routerApple').then(function(value) {
-                console.log('--then结束--', value);
+                console.log('--then结束--');
                 router.addRoutes(value);
             });
         } else {

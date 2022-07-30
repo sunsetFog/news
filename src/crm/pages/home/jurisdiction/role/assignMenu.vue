@@ -41,7 +41,7 @@ export default {
         menuWay() {
             let that = this;
             let params = {
-
+                subject: 'crm'
             };
             that.$apihttp({
                 url: process.env.core_url + '/sky/menu/treeMenu',
