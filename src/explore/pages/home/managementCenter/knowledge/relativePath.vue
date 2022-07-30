@@ -2,7 +2,7 @@
     <section id="relativePath">
         <img src="@/explore/assets/lizhi.jpg"/>
         <!-- build\webpack.base.conf.js 设置的全局路径变量 -->
-        <img src="@static/picture/breezy/2.jpg"/>
+        <img src="@static/picture/breezy/mangguo.jpg"/>
         <h3>src绑定变量时：import相对变量</h3>
         <img :src="import_ai"/>
         <!-- <h3>src绑定变量时：require准确路径</h3>

@@ -67,7 +67,6 @@ Object.keys(filters).forEach(key => {
     Vue.filter(key, filters[key]);
 });
 
-sessionStorage.setItem('entry_config', 'crm');
 
 Vue.config.productionTip = false;
 

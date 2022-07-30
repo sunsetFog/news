@@ -1,6 +1,6 @@
 <template>
   <section>
-      <img style="width: 100px;height: 45px;" src="@static/picture/breezy/1.jpg"/>
+      <img style="width: 100px;height: 45px;" src="@static/picture/breezy/mangguo.jpg"/>
   </section>
 </template>
 

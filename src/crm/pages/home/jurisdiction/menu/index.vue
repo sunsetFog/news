@@ -36,9 +36,9 @@
             :tree-props="{children: 'children', hasChildren: 'hasChildren'}"
         >
             <el-table-column width="50" type="index" label="序号"></el-table-column>
-            <el-table-column prop="title" label="菜单名称" min-width="120"></el-table-column>
+            <el-table-column prop="title" label="标题" min-width="120"></el-table-column>
             <!-- <el-table-column prop="path" label="组件路径" min-width="200"></el-table-column> -->
-            <el-table-column prop="levelName" label="菜单级数" min-width="80"></el-table-column>
+            <el-table-column prop="levelName" label="级数" min-width="80"></el-table-column>
             <el-table-column prop="name" label="路由名称" min-width="80"></el-table-column>
             <el-table-column min-width="80">
                 <template slot="header">图标</template>
@@ -80,8 +80,8 @@
             >
             <section class="mercury">
                 <el-form :model="addAndEditForm" :rules="rulesCheck" ref="addAndEditForm" label-width="100px">
-                    <el-form-item label="菜单名称:" prop="title">
-                        <el-input v-model="addAndEditForm.title" placeholder="请输入菜单名称"></el-input>
+                    <el-form-item label="标题:" prop="title">
+                        <el-input v-model="addAndEditForm.title" placeholder="请输入标题"></el-input>
                     </el-form-item>
                     <el-form-item label="上级菜单:">
                         <el-cascader

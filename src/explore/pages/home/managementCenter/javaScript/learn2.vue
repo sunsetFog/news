@@ -127,6 +127,12 @@ export default {
                 转树形结构，用递归
                 已封装好，删arr，调用this.demo6(arr)就行
                 其实两个map循环就可以了的，加入filter能减少遍历，优化性能
+
+                方法：有规律的，可以先得出初始值，再往后推算
+
+                最简单做法：
+                    分第一级数组，第二级数组，第三级数组
+                    3和2循环得出2含chidren，2和1循环得出1含children
              */
             arr = [
                 { id: 1, parentId: 0, title: '商品' },
@@ -175,8 +181,9 @@ export default {
                 item.children = children;
                 return item; // 返回对象给map的return值
             }
-            let result = [];
 
+            // 先得出第一级
+            let result = [];
             arr = arr.filter(function(item, index) {
                 let flag = item.parentId == 0;
                 if (flag) {
@@ -184,6 +191,7 @@ export default {
                 }
                 return !flag;
             });
+            // 后面级递归
             result = result.map(function(item, index) {
                 return cucumber(item);
             });
