@@ -38,20 +38,22 @@ export default {
             ]
         }
     },
-    watch: {
-        $route(to, from) {
-            console.log("-$route-", to);
-            this.beanWay(to.meta.key);
-        }
-    },
+    // watch: {
+    //     $route(to, from) {
+    //         console.log("-$route-", to);
+    //         this.beanWay(to.meta.key);
+    //     }
+    // },
     created() {
         for (let index = 0; index < this.with_list.length; index++) {
             let item = this.with_list[index];
             item.url = require('@static/mall/essentials/' + item.icon + '_selected.png');
             item.icon = require('@static/mall/essentials/' + item.icon + '.png');
+            item.active = false;
+            if(this.$route.path == item.path) {
+                item.active = true;
+            }
         }
-        console.log("--$router-1-", this.$route);
-        this.with_list[this.$route.meta.key].active = true;
     },
     methods: {
         searchWay() {

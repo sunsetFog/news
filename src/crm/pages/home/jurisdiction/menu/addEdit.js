@@ -62,7 +62,7 @@ export default {
             that.addAndEditForm = {
                 title: row.title || '',
                 menuParentId: [row.menuParentId],
-                routerParentId: list,
+                routerParentId: row.routerParentId ? list : [],
                 name: row.name || '',
                 icon: row.icon || '',
                 path: row.path || '',

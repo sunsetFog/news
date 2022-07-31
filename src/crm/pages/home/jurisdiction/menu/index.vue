@@ -203,8 +203,8 @@ export default {
                             let item = that.menu_level[i];
                             delete item["children"];
                         }
-                        that.menu_level.unshift({ id: -1, title: "不是菜单" });
-                        that.menu_level.unshift({ id: 0, title: "第一级菜单" });
+                        that.menu_level.unshift({ id: -1, title: "不是菜单", menuParentId: 0 });
+                        that.menu_level.unshift({ id: 0, title: "第一级菜单", menuParentId: 0 });
                     }
                 })
                 .catch(err => {
@@ -242,8 +242,8 @@ export default {
                                 delete item["children"];
                             }
                         }
-                        that.router_level.unshift({ id: -1, title: "不是路由" });
-                        that.router_level.unshift({ id: 0, title: "第一级路由" });
+                        that.router_level.unshift({ id: -1, title: "不是路由", routerParentId: 0 });
+                        that.router_level.unshift({ id: 0, title: "第一级路由", routerParentId: 0 });
                     }
                 })
                 .catch(err => {

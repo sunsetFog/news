@@ -189,8 +189,13 @@ export default {
         };
     },
     created() {
-        let navIndex = sessionStorage.getItem("navIndex");
-        this.sailKey(navIndex);
+        for (let index = 0; index < this.tabs_bar.length; index++) {
+            let item = this.tabs_bar[index];
+            item.active = false;
+            if(this.$route.path == item.path) {
+                item.active = true;
+            }
+        }
     },
     mounted() {
         var that = this;
@@ -225,10 +230,6 @@ export default {
             for (let i = 0; i < this.tabs_bar.length; i++) {
                 this.tabs_bar[i].active = false;
             }
-
-            index = index || 0;
-            index = Number(index);
-            sessionStorage.setItem("navIndex", index);
             this.tabs_bar[index].active = true;
         },
         coverMeans() {
@@ -453,7 +454,7 @@ export default {
         },
     },
     destroyed() {
-        sessionStorage.removeItem("navIndex");
+
     }
 };
 </script>
