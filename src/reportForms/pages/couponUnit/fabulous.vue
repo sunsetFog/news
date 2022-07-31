@@ -35,7 +35,7 @@ export default {
         appleWay() {
             if(this.tab_active != 0) return;
             this.$router.push({
-                path: "/couponDetails"
+                path: "/couponUnit/couponDetails/index"
             });
         }
     }

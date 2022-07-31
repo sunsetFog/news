@@ -19,10 +19,10 @@ export default {
     data() {
         return {
             comic_list: [
-                { title: '全部专题', icon: 'u88', path: '/essentials/homePage' },
-                { title: '服装专题', icon: 'u88', path: '/essentials/classify' },
-                { title: '餐厨专题', icon: 'u88', path: '/essentials/special' },
-                { title: '配件专题', icon: 'u88', path: '/essentials/customer' }
+                { title: '全部专题', icon: 'u88', path: '/essentialsUnit/homePage/index' },
+                { title: '服装专题', icon: 'u88', path: '/essentialsUnit/classify/index' },
+                { title: '餐厨专题', icon: 'u88', path: '/essentialsUnit/special/index' },
+                { title: '配件专题', icon: 'u88', path: '/essentialsUnit/customer/index' }
             ]
         }
     },

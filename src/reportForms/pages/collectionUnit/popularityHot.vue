@@ -56,15 +56,15 @@ export default {
         appleWay() {
             if(this.tab_active == 0) {
                 this.$router.push({
-                    path: "/productDetails"
+                    path: "/productDetails/index"
                 })
             } else if(this.tab_active == 1) {
                 this.$router.push({
-                    path: "/subjectDetails"
+                    path: "/subjectDetails/index"
                 })
             } else if(this.tab_active == 2) {
                 this.$router.push({
-                    path: "/topicDetails"
+                    path: "/topicDetails/index"
                 })
             }
         }

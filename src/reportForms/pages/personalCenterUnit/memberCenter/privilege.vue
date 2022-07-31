@@ -18,12 +18,12 @@ export default {
     data() {
         return {
             comic_list: [
-                { title: '满免运费', icon: 'p16', path: '/essentials/homePage', active: false },
-                { title: '签到奖励', icon: 'p17', path: '/essentials/classify', active: false },
-                { title: '评价奖励', icon: 'p18', path: '/essentials/special', active: false },
-                { title: '专享活动', icon: 'p19', path: '/essentials/customer', active: false },
-                { title: '会员特价', icon: 'p20', path: '/essentials/special', active: true },
-                { title: '生日礼包', icon: 'p21', path: '/essentials/customer', active: true }
+                { title: '满免运费', icon: 'p16', path: '/essentialsUnit/homePage/index', active: false },
+                { title: '签到奖励', icon: 'p17', path: '/essentialsUnit/classify/index', active: false },
+                { title: '评价奖励', icon: 'p18', path: '/essentialsUnit/special/index', active: false },
+                { title: '专享活动', icon: 'p19', path: '/essentialsUnit/customer/index', active: false },
+                { title: '会员特价', icon: 'p20', path: '/essentialsUnit/special/index', active: true },
+                { title: '生日礼包', icon: 'p21', path: '/essentialsUnit/customer/index', active: true }
             ]
         }
     },

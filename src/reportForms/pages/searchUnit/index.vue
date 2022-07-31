@@ -71,7 +71,7 @@ export default {
         },
         hotWay(item) {
             this.$router.push({
-                path: '/searchProducts'
+                path: '/searchUnit/searchProducts/index'
             })
         },
         setRecord(value) {

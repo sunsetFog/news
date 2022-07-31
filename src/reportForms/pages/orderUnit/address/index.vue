@@ -35,7 +35,7 @@ export default {
         },
         addWay(value) {
             this.$router.push({
-                path: "/addressEdit?title=" + value
+                path: "/orderUnit/address/addressEdit/index?title=" + value
             })
         }
     }

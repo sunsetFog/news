@@ -64,7 +64,7 @@ export default {
         submitWay() {
             Toast.success('申请提交成功');
             this.$router.push({
-                path: "/afterSalesList"
+                path: "/orderUnit/afterSales/afterSalesList/index"
             });
         }
     }

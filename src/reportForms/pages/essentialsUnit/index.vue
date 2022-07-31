@@ -31,10 +31,10 @@ export default {
     data() {
         return {
             with_list: [
-                { title: '首页', icon: 'u35', url: '', active: false, path: '/essentials/homePage' },
-                { title: '分类', icon: 'u31', url: '', active: false, path: '/essentials/classify' },
-                { title: '专题', icon: 'u27', url: '', active: false, path: '/essentials/special' },
-                { title: '我的', icon: 'u23', url: '', active: false, path: '/essentials/customer' }
+                { title: '首页', icon: 'u35', url: '', active: false, path: '/essentialsUnit/homePage/index' },
+                { title: '分类', icon: 'u31', url: '', active: false, path: '/essentialsUnit/classify/index' },
+                { title: '专题', icon: 'u27', url: '', active: false, path: '/essentialsUnit/special/index' },
+                { title: '我的', icon: 'u23', url: '', active: false, path: '/essentialsUnit/customer/index' }
             ]
         }
     },
@@ -56,18 +56,18 @@ export default {
     methods: {
         searchWay() {
             this.$router.push({
-                path: '/searchUnit'
+                path: '/searchUnit/index'
             });
         },
         magicWay() {
             this.$router.push({
-                path: '/messageCenter'
+                path: '/messageCenter/index'
             });
         },
         // 购物车
         comicWay() {
             this.$router.push({
-                path: '/shoppingCart'
+                path: '/orderUnit/shoppingCart/index'
             });
         },
         appleWay(item, index) {

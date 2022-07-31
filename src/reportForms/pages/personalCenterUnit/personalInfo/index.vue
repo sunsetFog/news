@@ -94,7 +94,7 @@ export default {
     methods: {
         saveWay() {
             this.$router.push({
-                path: '/personalCenter'
+                path: '/personalCenterUnit/index'
             });
         }
     }

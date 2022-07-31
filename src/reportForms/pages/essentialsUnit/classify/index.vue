@@ -55,7 +55,7 @@ export default {
         },
         rainbow() {
             this.$router.push({
-                path: '/searchProducts'
+                path: '/searchUnit/searchProducts/index'
             })
         }
     }

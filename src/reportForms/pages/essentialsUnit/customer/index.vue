@@ -29,13 +29,13 @@ export default {
         let haha = '1px solid #D5D5D5'
         return {
             mercury_list: [
-                { title: '我的收藏', icon: 'u262', note: '', margin: '20px', borderTop: haha, path: '/collection'},
-                { title: '我的足迹', icon: 'u282', note: 10, margin: '15px', borderTop: haha, path: '/footprintUnit'},
-                { title: '我的评价', icon: 'u293', note: 10, margin: '', borderTop: '', path: '/evaluateList'},
-                { title: '地址管理', icon: 'u298', note: '', margin: '', borderTop: '', path: '/address'},
-                { title: '我的会员', icon: 'u305', note: '黄金会员', margin: '15px', borderTop: haha, path: '/memberCenter'},
-                { title: '服务中心', icon: 'u313', note: '', margin: '', borderTop: '', path: '/serviceCenter'},
-                { title: '系统设置', icon: 'u318', note: '', margin: '', borderTop: '', path: '/systemSettings'}
+                { title: '我的收藏', icon: 'u262', note: '', margin: '20px', borderTop: haha, path: '/collectionUnit/index'},
+                { title: '我的足迹', icon: 'u282', note: 10, margin: '15px', borderTop: haha, path: '/footprintUnit/index'},
+                { title: '我的评价', icon: 'u293', note: 10, margin: '', borderTop: '', path: '/orderUnit/evaluate/evaluateList/index'},
+                { title: '地址管理', icon: 'u298', note: '', margin: '', borderTop: '', path: '/orderUnit/address/index'},
+                { title: '我的会员', icon: 'u305', note: '黄金会员', margin: '15px', borderTop: haha, path: '/personalCenterUnit/memberCenter/index'},
+                { title: '服务中心', icon: 'u313', note: '', margin: '', borderTop: '', path: '/serviceCenter/index'},
+                { title: '系统设置', icon: 'u318', note: '', margin: '', borderTop: '', path: '/systemSettings/index'}
             ]
         }
     },
@@ -48,7 +48,7 @@ export default {
     methods: {
         personalCenter() {
             this.$router.push({
-                path: "/personalCenter"
+                path: "/personalCenterUnit/index"
             })
         },
         pathWay(item, index) {

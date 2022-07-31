@@ -73,12 +73,12 @@ export default {
     methods: {
         submitWay() {
             this.$router.push({
-                path: "/payOrder"
+                path: "/orderUnit/payOrder/index"
             });
         },
         addressWay() {
             this.$router.push({
-                path: "/address"
+                path: "/orderUnit/address/index"
             });
         }
     }

@@ -139,7 +139,8 @@ export default {
             },
             subject_list: [
                 { value: 'crm', label: 'crm项目' },
-                { value: 'explore', label: 'explore项目' }
+                { value: 'explore', label: 'explore项目' },
+                { value: 'reportForms', label: 'reportForms项目' }
             ],
             // -----------------
             tableData: [],

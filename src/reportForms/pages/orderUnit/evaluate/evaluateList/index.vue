@@ -59,7 +59,7 @@ export default {
     methods: {
         detailWay() {
             this.$router.push({
-                path: "/evaluateDetails"
+                path: "/orderUnit/evaluate/evaluateDetails/index"
             });
         }
     }

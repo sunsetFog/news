@@ -57,12 +57,12 @@ export default {
     methods: {
         applyWay() {
             this.$router.push({
-                path: "/applyReturn"
+                path: "/orderUnit/afterSales/applyReturn/index"
             })
         },
         detailsWay() {
             this.$router.push({
-                path: "/applyReturnDetails"
+                path: "/orderUnit/afterSales/applyReturnDetails/index"
             })
         }
     }

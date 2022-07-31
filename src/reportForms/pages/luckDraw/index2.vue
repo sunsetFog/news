@@ -366,7 +366,7 @@ export default {
     },
     earnWay (value, taskName) {
       if (!this.token && !value) {
-        this.$router.push({path: '/login'})
+        this.$router.push({path: '/loginUnit/index'})
         return
       }
 
@@ -494,7 +494,7 @@ export default {
     },
     myAward () {
       if (!this.token) {
-        this.$router.push({path: '/login'})
+        this.$router.push({path: '/loginUnit/index'})
         return
       }
       this.dessert_box = true
@@ -505,7 +505,7 @@ export default {
     },
     startCallBack () {
       if (!this.token) {
-        this.$router.push({path: '/login'})
+        this.$router.push({path: '/loginUnit/index'})
         return
       }
       if (this.luckyNum == 0) {

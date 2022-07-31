@@ -19,9 +19,9 @@ export default {
         return {
             cartoon_list: [
                 { title: '清除缓存', path: '' },
-                { title: '意见反馈', path: '/feedback' },
-                { title: '关于我们', path: '/aboutUs' },
-                { title: '版本说明', path: '/versionDescription' },
+                { title: '意见反馈', path: '/systemSettings/feedback/index' },
+                { title: '关于我们', path: '/systemSettings/aboutUs/index' },
+                { title: '版本说明', path: '/systemSettings/versionDescription/index' },
                 { title: '好评鼓励', path: '' }
             ]
         }
@@ -34,7 +34,7 @@ export default {
         },
         signOut() {
             this.$router.push({
-                path: '/login'
+                path: '/loginUnit/index'
             })
         }
     }

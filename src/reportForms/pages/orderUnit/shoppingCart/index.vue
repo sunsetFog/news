@@ -88,7 +88,7 @@ export default {
         },
         settlementWay() {
             this.$router.push({
-                path: "/fillOrder"
+                path: "/orderUnit/fillOrder/index"
             });
         }
     }

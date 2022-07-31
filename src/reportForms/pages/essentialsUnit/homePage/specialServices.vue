@@ -17,10 +17,10 @@ export default {
     data() {
         return {
             comic_list: [
-                { title: '话题', icon: 'u60', path: '/essentials/homePage' },
-                { title: '优选', icon: 'u65', path: '/essentials/classify' },
-                { title: '特惠', icon: 'u69', path: '/essentials/special' },
-                { title: '签到', icon: 'u73', path: '/essentials/customer' }
+                { title: '话题', icon: 'u60', path: '/essentialsUnit/homePage/index' },
+                { title: '优选', icon: 'u65', path: '/essentialsUnit/classify/index' },
+                { title: '特惠', icon: 'u69', path: '/essentialsUnit/special/index' },
+                { title: '签到', icon: 'u73', path: '/essentialsUnit/customer/index' }
             ]
         }
     },

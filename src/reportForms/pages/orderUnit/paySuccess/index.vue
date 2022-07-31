@@ -29,12 +29,12 @@ export default {
     methods: {
         okWay() {
             this.$router.push({
-                path: "/order?status=0"
+                path: "/orderUnit/index?status=0"
             })
         },
         homeWay() {
             this.$router.push({
-                path: "/essentials/homePage"
+                path: "/essentialsUnit/homePage/index"
             })
         }
     }

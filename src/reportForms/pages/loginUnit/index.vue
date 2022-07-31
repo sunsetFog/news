@@ -49,17 +49,17 @@ export default {
     methods: {
         registerWay() {
             this.$router.push({
-                path: "/register"
+                path: "/registerUnit/index"
             });
         },
         forgetPasswordWay() {
             this.$router.push({
-                path: "/forgetPassword"
+                path: "/forgetPasswordUnit/index"
             });
         },
         submitWay() {
             this.$router.push({
-                path: "/essentials/homePage"
+                path: "/essentialsUnit/homePage/index"
             });
         }
     }

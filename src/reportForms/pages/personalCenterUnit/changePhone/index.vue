@@ -51,7 +51,7 @@ export default {
         },
         sureWay() {
             this.$router.push({
-                path: '/personalCenter'
+                path: '/personalCenterUnit/index'
             });
         }
     }

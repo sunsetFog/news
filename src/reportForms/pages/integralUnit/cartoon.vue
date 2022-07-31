@@ -15,7 +15,7 @@ export default {
     data() {
         return {
             with_list: [
-                { title: '累计获得', value: 1000, path: '/integral' },
+                { title: '累计获得', value: 1000, path: '/integralUnit/index' },
                 { title: '累计使用', value: 800, path: '' },
                 { title: '累计节省', value: '￥8.00', path: '' }
             ],

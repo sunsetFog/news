@@ -17,11 +17,11 @@ export default {
     data() {
         return {
             comic_list: [
-                { title: '我的订单', icon: 'u227', path: '/order?status=0' },
-                { title: '待付款', icon: 'u233', path: '/order?status=1' },
-                { title: '待收货', icon: 'u245', path: '/order?status=2' },
-                { title: '待评价', icon: 'u252', path: '/evaluateList' },
-                { title: '售后服务', icon: 'u256', path: '/afterSalesList' }
+                { title: '我的订单', icon: 'u227', path: '/orderUnit/index?status=0' },
+                { title: '待付款', icon: 'u233', path: '/orderUnit/index?status=1' },
+                { title: '待收货', icon: 'u245', path: '/orderUnit/index?status=2' },
+                { title: '待评价', icon: 'u252', path: '/orderUnit/evaluate/evaluateList/index' },
+                { title: '售后服务', icon: 'u256', path: '/orderUnit/afterSales/afterSalesList/index' }
             ]
         }
     },

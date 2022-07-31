@@ -38,7 +38,7 @@ export default {
     methods: {
         okWay() {
             this.$router.push({
-                path: '/personalCenter'
+                path: '/personalCenterUnit/index'
             });
         }
     }

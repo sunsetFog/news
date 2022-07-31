@@ -60,7 +60,7 @@ export default {
                 
             } else if(index == 1) {
                 this.$router.push({
-                    path: '/shoppingCart'
+                    path: '/orderUnit/shoppingCart/index'
                 });
             }
         },
@@ -69,7 +69,7 @@ export default {
         },
         buyWay() {
             this.$router.push({
-                path: '/fillOrder'
+                path: '/orderUnit/fillOrder/index'
             });
         }
     }

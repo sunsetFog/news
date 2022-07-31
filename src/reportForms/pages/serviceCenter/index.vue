@@ -44,7 +44,7 @@ export default {
     methods: {
         problemWay(item) {
             this.$router.push({
-                path: "/problem?title=" + item.title
+                path: "/serviceCenter/problem/index?title=" + item.title
             })
         }
     }

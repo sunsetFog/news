@@ -30,7 +30,7 @@ export default {
     methods: {
         addWay() {
             this.$router.push({
-                path: "/addEvaluate"
+                path: "/orderUnit/evaluate/addEvaluate/index"
             });
         }
     }

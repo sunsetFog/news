@@ -25,10 +25,10 @@ export default {
         let haha = '1px solid #D5D5D5'
         return {
             mercury_list: [
-                { title: '支付宝支付', icon: 'k12', note: '', margin: '', borderTop: '', path: '/paySuccess'},
-                { title: '微信支付', icon: 'k13', note: 10, margin: '', borderTop: '', path: '/paySuccess'},
-                { title: '银联支付', icon: 'k14', note: 10, margin: '', borderTop: '', path: '/paySuccess'},
-                { title: 'Apple Pay支付', icon: 'k15', note: '', margin: '', borderTop: '', path: '/paySuccess'}
+                { title: '支付宝支付', icon: 'k12', note: '', margin: '', borderTop: '', path: '/orderUnit/paySuccess/index'},
+                { title: '微信支付', icon: 'k13', note: 10, margin: '', borderTop: '', path: '/orderUnit/paySuccess/index'},
+                { title: '银联支付', icon: 'k14', note: 10, margin: '', borderTop: '', path: '/orderUnit/paySuccess/index'},
+                { title: 'Apple Pay支付', icon: 'k15', note: '', margin: '', borderTop: '', path: '/orderUnit/paySuccess/index'}
             ]
         }
     },

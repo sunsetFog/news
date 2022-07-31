@@ -41,7 +41,7 @@ export default {
         },
         submitWay() {
             this.$router.push({
-                path: "/login"
+                path: "/loginUnit/index"
             });
         }
     }

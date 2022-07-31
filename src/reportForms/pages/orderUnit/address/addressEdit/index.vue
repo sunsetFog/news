@@ -46,7 +46,7 @@ export default {
     methods: {
         saveWay() {
             this.$router.push({
-                path: "/address"
+                path: "/orderUnit/address/index"
             })
         }
     }

@@ -34,7 +34,7 @@ export default {
     methods: {
         pathWay() {
             this.$router.push({
-                path: "/followDetails"
+                path: "/followUnit/followDetails/index"
             })
         },
         rainWay(index) {

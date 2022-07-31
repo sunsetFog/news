@@ -48,7 +48,7 @@ export default {
         },
         payWay() {
             this.$router.push({
-                path: "/payOrder"
+                path: "/orderUnit/payOrder/index"
             });
         },
         receivedWay() {
@@ -66,23 +66,23 @@ export default {
         },
         logisticsWay() {
             this.$router.push({
-                path: "/logistics"
+                path: "/orderUnit/logistics/index"
             });
         },
         // 跳至购物车
         buyWay() {
             this.$router.push({
-                path: "/shoppingCart"
+                path: "/orderUnit/shoppingCart/index"
             });
         },
         evaluateWay() {
             this.$router.push({
-                path: "/addEvaluate"
+                path: "/orderUnit/evaluate/addEvaluate/index"
             });
         },
         evaluateDetails() {
             this.$router.push({
-                path: "/evaluateDetails"
+                path: "/orderUnit/evaluate/evaluateDetails/index"
             });
         },
         deleteWay() {
