@@ -83,5 +83,6 @@ export default new Router({
         { path: '/versionDescription', name: 'versionDescription', meta: { title: '版本说明', key: 1 }, component: resolve => require(['@/reportForms/pages/systemSettings/versionDescription/index'], resolve) },
         { path: '/messageCenter', name: 'messageCenter', meta: { title: '消息中心', key: 1 }, component: resolve => require(['@/reportForms/pages/messageCenter/index'], resolve) },
         { path: '/searchUnit', name: 'searchUnit', meta: { title: '搜索', key: 1 }, component: resolve => require(['@/reportForms/pages/searchUnit/index'], resolve) },
+        { path: '/searchProducts', name: 'searchProducts', meta: { title: '搜索商品', key: 1 }, component: resolve => require(['@/reportForms/pages/searchUnit/searchProducts/index'], resolve) },
     ]
 })

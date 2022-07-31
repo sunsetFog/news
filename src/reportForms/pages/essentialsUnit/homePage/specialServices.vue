@@ -29,6 +29,11 @@ export default {
             let item = this.comic_list[index];
             item.icon = require('@static/mall/homePage/' + item.icon + '.png');
         }
+    },
+    methods: {
+        appleWay(item, index) {
+
+        }
     }
 }
 </script>

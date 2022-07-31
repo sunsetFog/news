@@ -11,7 +11,7 @@
         <section class="comic-apt" ref="box0">
             <div id="box1" ref="box1">
                 <ul>
-                    <li v-for="(item, index) in mercury_list">
+                    <li v-for="(item, index) in mercury_list" @click="rainbow(item, index)">
                         <div class="honey">
                             <img :src="item.icon"/>
                         </div>
@@ -52,6 +52,11 @@ export default {
         winChange(value, item) {
             console.log("--value--", value)
             console.log("--item--", item)
+        },
+        rainbow() {
+            this.$router.push({
+                path: '/searchProducts'
+            })
         }
     }
 }

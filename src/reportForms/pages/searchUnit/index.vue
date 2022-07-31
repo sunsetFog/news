@@ -70,7 +70,9 @@ export default {
             this.$router.go(-1);
         },
         hotWay(item) {
-
+            this.$router.push({
+                path: '/searchProducts'
+            })
         },
         setRecord(value) {
             let recordList = []
@@ -175,6 +177,7 @@ export default {
                 display: inline-block;
                 border-radius: 20px;
                 border: 1px solid @color_edge;
+                font-size: 13px;
             }
         }
     }
