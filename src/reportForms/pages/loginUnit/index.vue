@@ -46,6 +46,9 @@ export default {
             checked: false
         }
     },
+    created() {
+        this.$cookies.remove('token');
+    },
     methods: {
         registerWay() {
             this.$router.push({
@@ -58,8 +61,12 @@ export default {
             });
         },
         submitWay() {
-            this.$router.push({
-                path: "/essentialsUnit/homePage/index"
+            let that = this
+            that.$cookies.set('token', "XH-000887", '1d');
+            that.$store.dispatch('routerApple').then(function(value) {
+                console.log('--then结束--');
+                that.$router.addRoutes(value);
+                that.$router.push({ path: '/essentialsUnit/homePage/index' });
             });
         }
     }

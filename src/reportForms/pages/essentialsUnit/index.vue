@@ -76,7 +76,6 @@ export default {
             this.beanWay(index);
             
             if(this.$route.path == item.path) return;
-            console.log("--$router-2-", this.$route);
             this.$router.push({
                 path: item.path
             });

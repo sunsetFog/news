@@ -67,6 +67,9 @@ export default {
             },
         };
     },
+    created() {
+        this.$cookies.remove('token');
+    },
     methods: {
         formSubmit: function() {
             var that = this;

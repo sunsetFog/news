@@ -16,8 +16,8 @@ Router.prototype.push = function push(location) {
 
 
 import firstFloor from './modules/firstFloor'
-import homeChildren from './modules/homeChildren'
 
+// 实例路由
 const createRouter = () => new Router({
   // mode: 'history', // require service support
   scrollBehavior: () => ({ y: 0 }),
@@ -31,14 +31,10 @@ export function resetRouter() {
   const newRouter = createRouter()
   router.matcher = newRouter.matcher // reset router
 }
-
+// 暴露
 export default router
 
-export const asyncRouterMap = [
-  { type: 'homeChildren', router: homeChildren }
-]
-
-
+// 实例路由并暴露
 // export default new Router({
 //   mode: 'history',//路由路径#
 //   routes: [
