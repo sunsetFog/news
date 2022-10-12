@@ -38,6 +38,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
 
   // these devServer options should be customized in /config/index.js
   devServer: {
+    disableHostCheck: true,// nginx报错Invalid Host header
 // --------------
     before (app) {
       /* 基年数据列表接口 */

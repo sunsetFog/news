@@ -2,7 +2,11 @@
     <section id="download">
         <el-button @click="downloadTxt()">下载添加内容的文本</el-button>
         <el-button @click="downloadFile('@static/capital/rem.js')">下载静态资源</el-button>
-        <el-button type="primary" icon="el-icon-download" @click="exportExcel()">导出Excel</el-button>
+        <el-button type="primary" icon="el-icon-download" @click="exportExcel1()">导出Excel1</el-button>
+        <el-button type="primary" icon="el-icon-download" @click="exportExcel2()">导出Excel2</el-button>
+        <el-button @click="xiazai1">下载1</el-button>
+        <el-button @click="xiazai2">下载2</el-button>
+        <el-button @click="xiazai3">下载3</el-button>
         <!-- 
             编辑，保存，重置，删除，批量删除，***查看，附件上传，查询，提交，新增，文件预览
 
@@ -50,7 +54,7 @@ export default {
                 
             })
         },
-        exportExcel(){
+        exportExcel1(){
             let params = {
                 fileName: "数据导出",
                 params: { page: 1,pagesize: 15 },
@@ -74,6 +78,91 @@ export default {
                 }
             }).catch(err => {
                 
+            })
+        },
+        exportExcel2() {
+            // window.open(process.env.core_url + '/sky/excel/file')
+            let that = this;
+
+            let params = {
+
+            }
+
+            that.$apihttp({
+                url: process.env.core_url + '/sky/excel/file',
+                method: 'get',
+                params: params,
+                responseType: 'blob'// 关键
+            }).then((res) => {
+                console.log('--res0--', res);
+                if (window.navigator && window.navigator.msSaveOrOpenBlob) { // IE浏览器
+                    console.log(1111)
+                    window.navigator.msSaveOrOpenBlob(res, 'test.xlsx');
+                } else {
+                    console.log(2222)
+                    const a = document.createElement('a');
+                    a.download = 'test.xlsx';
+                    a.href = window.URL.createObjectURL(new Blob([res]))
+                    document.body.appendChild(a)
+                    a.click()
+                    document.body.removeChild(a)
+                }
+            }).catch((err)=>{
+                console.log('error',err);
+            })
+        },
+        xiazai1() {
+            let that = this;
+
+            let params = {
+                path: 'D:\goods.txt'
+            }
+
+            axios({
+                url: process.env.core_url + '/sky/download/files',
+                method: 'get',
+                params: params,
+                responseType: 'blob'// 关键
+            }).then((res) => {
+                console.log('--res1--', res);
+            }).catch((err)=>{
+                console.log('error',err);
+            })
+        },
+        xiazai2() {
+            let that = this;
+
+            let params = {
+                path: 'D:\goods.txt'
+            }
+
+            axios({
+                url: process.env.core_url + '/sky/downloadLocal',
+                method: 'post',
+                params: params,
+                responseType: 'blob'// 关键
+            }).then((res) => {
+                console.log('--res1--', res);
+            }).catch((err)=>{
+                console.log('error',err);
+            })
+        },
+        xiazai3() {
+            let that = this;
+
+            let params = {
+                path: 'D:\goods.txt'
+            }
+
+            axios({
+                url: process.env.core_url + '/sky/netDownloadLocal',
+                method: 'post',
+                params: params,
+                responseType: 'blob'// 关键
+            }).then((res) => {
+                console.log('--res1--', res);
+            }).catch((err)=>{
+                console.log('error',err);
             })
         }
     }

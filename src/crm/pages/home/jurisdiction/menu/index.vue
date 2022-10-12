@@ -63,7 +63,7 @@
                 <template slot="header">操作</template>
                 <template slot-scope="scope">
                     <el-button type="text" @click="editWay(scope.row)">编辑</el-button>
-                    <el-button type="text" @click="deleteWay(scope.row)">删除</el-button>
+                    <el-button type="text" :disabled="scope.row.children.length != 0" @click="deleteWay(scope.row)">删除</el-button>
                 </template>
             </el-table-column>
         </el-table>
@@ -197,7 +197,7 @@ export default {
                         }
                         
                         that.menu_level = JSON.parse(JSON.stringify(list));
-                        // console.log("--menu_level--", that.menu_level);
+                        console.log("-menu-tableData--", that.tableData);
                         
                         for (let i = 0; i < that.menu_level.length; i++) {
                             let item = that.menu_level[i];

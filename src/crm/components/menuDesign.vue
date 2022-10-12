@@ -127,7 +127,7 @@ export default {
         overflow-x: hidden !important;
     }
     /*水平折叠收起菜单,隐藏文字和标签*/
-    /deep/.el-menu--collapse .el-submenu__title span {
+    /deep/.el-menu--collapse span {
       display: none;
     }
     /deep/.el-menu--collapse .el-submenu__title .el-submenu__icon-arrow {
