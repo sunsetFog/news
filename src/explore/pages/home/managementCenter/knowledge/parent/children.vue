@@ -44,6 +44,7 @@
 			secret(){
 				//子传父
 				this.$emit('purple',this.son);
+				this.$emit('update:syncValue', "sync值");
 				console.log('secret_9939',this.son);
 			},
 			praise(value){

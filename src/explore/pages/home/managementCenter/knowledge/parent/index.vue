@@ -11,7 +11,7 @@
 			其中article和purple是props传参
 			v-model与props的value对应
 		-->
-		<my-children :article='design' @purple='get' ref="rainbow" v-model="cosplay">
+		<my-children :article='design' @purple='get' ref="rainbow" v-model="cosplay" :syncValue.sync="syncValue">
 			<!-- 插槽内容 -->
 			<el-button slot="er">slot插槽</el-button>
 			<el-button slot="yaa" slot-scope="scenery">{{scenery.data}}</el-button>
@@ -20,6 +20,7 @@
 		<template v-for="item in equipment">
 			<component :is="item.reply" :vip_props="item.data"></component>
 		</template>
+		===={{syncValue}}====
 	</section>
 </template>
 
@@ -36,7 +37,8 @@ export default{
 				{reply: 'cTitle',data: [{id: 2,title: '芒果',thumb: '',price: 1200,stock: 1000,virtual_sales: 500}]},
 				{reply: 'sMain',data: [{id: 1,title: '荔枝',thumb: '',price: 1100,stock: 1000,virtual_sales: 200}]}
 			],
-			cosplay: ''
+			cosplay: '',
+			syncValue: '默认sync'
 		}
 	},
 	created() {
@@ -76,6 +78,7 @@ export default{
 #parent{
 	width: 100%;
 	background: #fff;
+	color: black;
 	padding: 15px;
 	.rainbow{
 		.mixin_div(100%,50px,none,@color_blueviolet,center);

@@ -1,13 +1,16 @@
 <template>
     <section>
         --日期时间--
+        <datePicker></datePicker>
     </section>
 </template>
 
 <script>
+import datePicker from "./datePicker.vue";
 import dayjs from 'dayjs';
 export default {
     name: "isDate",
+    components: { datePicker },
     data() {
         return {
 

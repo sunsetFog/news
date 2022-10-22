@@ -7,6 +7,7 @@
         <el-button @click="xiazai1">下载1</el-button>
         <el-button @click="xiazai2">下载2</el-button>
         <el-button @click="xiazai3">下载3</el-button>
+        <el-button @click="excelWay">导出</el-button>
         <!-- 
             编辑，保存，重置，删除，批量删除，***查看，附件上传，查询，提交，新增，文件预览
 
@@ -161,6 +162,46 @@ export default {
                 responseType: 'blob'// 关键
             }).then((res) => {
                 console.log('--res1--', res);
+            }).catch((err)=>{
+                console.log('error',err);
+            })
+        },
+        excelWay() {
+            let that = this;
+
+            let params = {
+    
+            }
+
+            axios({
+                url: 'http://localhost:8060/sky/exportXls',
+                method: 'post',
+                params: params,
+                responseType: 'blob'// 关键
+            }).then((res) => {
+                console.log('--res1--', res);
+                let name = '导出文件';
+                let file01 = {
+                    fileSuffix: '.xls',
+                    blobOptions: { type: 'application/vnd.ms-excel' }
+                }
+                let file02 = {
+                    fileSuffix: '.xlsx',
+                    blobOptions: { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' }
+                }
+                if (typeof window.navigator.msSaveBlob !== 'undefined') {
+                    window.navigator.msSaveBlob(new Blob([res.data], file01.blobOptions), name + file01.fileSuffix);
+                } else {
+                    let url = window.URL.createObjectURL(new Blob([res.data], file01.blobOptions));
+                    let link = document.createElement('a');
+                    link.style.display = 'none';
+                    link.href = url;
+                    link.setAttribute('download', name + file01.fileSuffix);
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link); //下载完成移除元素
+                    window.URL.revokeObjectURL(url); //释放掉blob对象
+                }
             }).catch((err)=>{
                 console.log('error',err);
             })
