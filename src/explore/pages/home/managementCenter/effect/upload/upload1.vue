@@ -4,9 +4,9 @@
             <el-upload
                 name="file"
                 class="avatar-uploader"
-                :action="yuming + '/sky/shop/upload'"
+                :action="yuming"
                 :show-file-list="false"
-                :data="{'id': 1}"
+                :data="{'id': 1,'biz': 'ok'}"
                 :headers="{'token': $cookies.get('token')}"
                 :on-success="handleAvatarSuccess"
                 :before-upload="beforeAvatarUpload"
@@ -28,10 +28,17 @@
 <script>
 export default {
     name: "upload1",
+    props: {
+        yuming: {
+            type: String,
+            default: ''
+        }
+    },
     data(){
         return{
             imageUrl: '',
-            yuming: process.env.core_url,
+            // yuming: process.env.core_url + '/sky/shop/upload',
+            // yuming: 'http://localhost:8069/sky/sys/oss/file/upload',
             download_url: ''
         }
     },

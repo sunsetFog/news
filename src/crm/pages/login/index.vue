@@ -88,6 +88,7 @@ export default {
                         .then(res => {
                             console.log('--login--', res);
                             if (res.code == '200') {
+                                that.btnList();
                                 that.$cookies.set('token', res.data.token, '1d');
                                 that.$store.dispatch('routerApple').then(function(value) {
                                     console.log('--then结束--');
@@ -104,6 +105,20 @@ export default {
                 }
             });
         },
+        btnList() {
+            let that = this;
+            that.$apihttp({
+                url: process.env.core_url + '/sky/menu/btnList',
+                method: 'get',
+                params: {}
+            })
+                .then(res => {
+                    sessionStorage.setItem('buttonPermissions', JSON.stringify(res.data));
+                })
+                .catch(err => {
+                    console.log('error', err);
+                });
+        }
     },
 };
 </script>

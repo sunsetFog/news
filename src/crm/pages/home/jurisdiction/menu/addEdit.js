@@ -1,10 +1,12 @@
 export default {
     data() {
         return {
-            dialog_title: '添加菜单',
+            dialog_title: '添加',
             dialogVisible: false,
             addAndEditForm: {
+                varieties: '1',
                 title: '',
+                perms: null,
                 menuParentId: [],
                 routerParentId: [],
                 name: '',
@@ -28,14 +30,20 @@ export default {
     },
     methods: {
         addWay() {
-            this.dialog_title = "添加菜单";
+            this.dialog_title = "添加";
             this.dialogVisible = true;
+            this.addAndEditForm.varieties = '1';
             this.initForm();
         },
         editWay(row) {
             this.editSaveRow = row
-            this.dialog_title = "编辑菜单";
+            this.dialog_title = "编辑";
             this.dialogVisible = true;
+            if (row.perms) {
+                this.addAndEditForm.varieties = '2';
+            } else {
+                this.addAndEditForm.varieties = '1';
+            }
             this.initForm(row);
         },
         levelValue(arr, id) {
@@ -60,7 +68,9 @@ export default {
             let list = this.addAndEditForm.routerParentId
             console.log("-nana-", list);
             that.addAndEditForm = {
+                varieties: that.addAndEditForm.varieties,
                 title: row.title || '',
+                perms: row.perms || null,
                 menuParentId: [row.menuParentId],
                 routerParentId: Object.keys(row).length == 0 ? [] : list,
                 name: row.name || '',
@@ -76,9 +86,9 @@ export default {
             this.dialogVisible = false;
         },
         sureWay() {
-            if (this.dialog_title == '添加菜单') {
+            if (this.dialog_title == '添加') {
                 this.addSure();
-            } else if (this.dialog_title == '编辑菜单') {
+            } else if (this.dialog_title == '编辑') {
                 this.editSure();
             }
         },
@@ -87,6 +97,7 @@ export default {
             console.log("--22", that.addAndEditForm.routerParentId)
             return {
                 title: that.addAndEditForm.title,
+                perms: that.addAndEditForm.perms,
                 menuParentId: that.addAndEditForm.menuParentId[that.addAndEditForm.menuParentId.length - 1],
                 routerParentId: that.addAndEditForm.routerParentId[that.addAndEditForm.routerParentId.length - 1],
                 name: that.addAndEditForm.name,

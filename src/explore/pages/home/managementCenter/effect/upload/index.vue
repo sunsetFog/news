@@ -2,7 +2,7 @@
 <template>
     <section id="upload-unit">
         <h1>单个上传图片</h1>
-		<upload1></upload1>
+		<upload1 yuming="http://localhost:8062/sky/shop/upload"></upload1>
 
 		<br><br>
 		<h1>上传图片列表</h1>
@@ -15,6 +15,14 @@
 		<br><br>
 		<h1>头像上传裁切</h1>
 		<customAvatar></customAvatar>
+
+		<br><br>
+		<h1>阿里云对象存储OSS</h1>
+		<upload1 yuming="http://localhost:8069/sky/sys/oss/file/upload"></upload1>
+
+        <br><br>
+		<h1>Minio对象存储</h1>
+		<upload1 yuming="http://localhost:8069/sky/sys/upload/uploadMinio"></upload1>
     </section>
 </template>
 
@@ -30,9 +38,27 @@ export default {
         return{
 
         }
-    },
+	},
+	created() {
+		this.ossList();
+	},
     methods:{
+		ossList() {
+            let that = this;
+            let json = {
 
+            }
+            that.$apihttp({
+                url: 'http://localhost:8069/sky/sys/oss/file/list',
+                method: 'get',
+                data: json
+            }).then((res) => {
+                console.log('H-token',res);
+            }).catch((err)=>{
+                console.log('error',err);
+            })
+
+        },
     }
 }
 </script>

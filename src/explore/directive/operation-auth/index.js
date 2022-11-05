@@ -21,7 +21,7 @@ const install = function (Vue) {
 
             let buttonPermissions = JSON.parse(sessionStorage.getItem('buttonPermissions')) || [];
             for(let i=0;i<buttonPermissions.length;i++){
-                if(buttonPermissions[i].operation_code == key){
+                if(buttonPermissions[i].perms == key){
                     if(buttonPermissions[i].disabled){
                         el.style.visibility = 'visible';
                         el.style.cursor = 'not-allowed';

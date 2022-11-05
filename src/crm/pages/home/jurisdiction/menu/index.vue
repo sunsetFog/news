@@ -80,10 +80,19 @@
             >
             <section class="mercury">
                 <el-form :model="addAndEditForm" :rules="rulesCheck" ref="addAndEditForm" label-width="100px">
+                    <el-form-item label="添加类型">
+                        <el-radio-group v-model="addAndEditForm.varieties">
+                            <el-radio label="1" @change="initForm">添加菜单</el-radio>
+                            <el-radio label="2" @change="initForm">按钮权限</el-radio>
+                        </el-radio-group>
+                    </el-form-item>
                     <el-form-item label="标题:" prop="title">
                         <el-input v-model="addAndEditForm.title" placeholder="请输入标题"></el-input>
                     </el-form-item>
-                    <el-form-item label="上级菜单:">
+                    <el-form-item label="按钮编码:" prop="perms" v-if="addAndEditForm.varieties=='2'">
+                        <el-input v-model="addAndEditForm.perms" placeholder="请输入按钮编码"></el-input>
+                    </el-form-item>
+                    <el-form-item label="上级菜单:" v-if="addAndEditForm.varieties=='1'">
                         <el-cascader
                             v-model="addAndEditForm.menuParentId"
                             :options="menu_level"
@@ -97,19 +106,19 @@
                             :props="defaultProps">
                             </el-cascader>
                     </el-form-item>
-                    <el-form-item label="路由名称:" prop="name">
+                    <el-form-item label="路由名称:" prop="name" v-if="addAndEditForm.varieties=='1'">
                         <el-input v-model="addAndEditForm.name" placeholder="请输入路由名称"></el-input>
                     </el-form-item>
-                    <el-form-item label="图标:" prop="icon">
+                    <el-form-item label="图标:" prop="icon" v-if="addAndEditForm.varieties=='1'">
                         <el-input v-model="addAndEditForm.icon" placeholder="请输入图标"></el-input>
                     </el-form-item>
-                    <el-form-item label="路由路径:" prop="path">
+                    <el-form-item label="路由路径:" prop="path" v-if="addAndEditForm.varieties=='1'">
                         <el-input v-model="addAndEditForm.path" placeholder="请输入路由路径"></el-input>
                     </el-form-item>
-                    <el-form-item label="菜单隐藏:" prop="hidden">
+                    <el-form-item label="菜单隐藏:" prop="hidden" v-if="addAndEditForm.varieties=='1'">
                         <el-switch v-model="addAndEditForm.hidden" :active-value="1" :inactive-value="0"></el-switch>
                     </el-form-item>
-                    <el-form-item label="是否缓存:" prop="cache">
+                    <el-form-item label="是否缓存:" prop="cache" v-if="addAndEditForm.varieties=='1'">
                         <el-switch v-model="addAndEditForm.cache" :active-value="1" :inactive-value="0"></el-switch>
                     </el-form-item>
                     <el-form-item label="排序:" prop="sort">
