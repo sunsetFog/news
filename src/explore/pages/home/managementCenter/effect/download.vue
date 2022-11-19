@@ -170,36 +170,62 @@ export default {
             let that = this;
 
             let params = {
-    
+                filename: "商品信息统计报表"
             }
 
             axios({
                 url: 'http://localhost:8060/sky/exportXls',
-                method: 'post',
+                method: 'get',
                 params: params,
-                responseType: 'blob'// 关键
-            }).then((res) => {
+                responseType: 'blob',// 表明返回服务器返回的数据类型
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }).then((res) => {// 处理返回的文件流
+                /*
+                    下载的excel文件打开为乱码,postman下载正常,前端问题
+                    https://www.cnblogs.com/stcweb/articles/16066788.html
+                    打印res显示：request: MockXMLHttpRequest
+                    需要main.js关闭Mock
+                    打印res显示：request: XMLHttpRequest
+                
+                */
                 console.log('--res1--', res);
-                let name = '导出文件';
+                // 后端设置content-disposition中文乱码，放弃这个方式了
+                let contentDisposition = res.headers['content-disposition'].split('filename=')[1];
+                let filename = decodeURI(contentDisposition);
+                console.log("----filename---", filename);
+                let blobOptions = res.headers['content-type'];
+                console.log("----blobOptions---", blobOptions);
+
+
                 let file01 = {
-                    fileSuffix: '.xls',
+                    name: params.filename,
+                    suffix: '.xls',
                     blobOptions: { type: 'application/vnd.ms-excel' }
                 }
                 let file02 = {
-                    fileSuffix: '.xlsx',
+                    name: params.filename,
+                    suffix: '.xlsx',
                     blobOptions: { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' }
                 }
+                file01.title = file01.name + file01.suffix;
+
+                let bolbData = new Blob([res.data], file01.blobOptions);
+
                 if (typeof window.navigator.msSaveBlob !== 'undefined') {
-                    window.navigator.msSaveBlob(new Blob([res.data], file01.blobOptions), name + file01.fileSuffix);
+                    console.log("IE浏览器", file01.title);
+                    window.navigator.msSaveBlob(bolbData, file01.title);
                 } else {
-                    let url = window.URL.createObjectURL(new Blob([res.data], file01.blobOptions));
-                    let link = document.createElement('a');
-                    link.style.display = 'none';
-                    link.href = url;
-                    link.setAttribute('download', name + file01.fileSuffix);
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link); //下载完成移除元素
+                    console.log("非IE浏览器", file01.title);
+                    let url = window.URL.createObjectURL(bolbData);
+                    let aTag = document.createElement('a');
+                    aTag.style.display = 'none';
+                    aTag.href = url;
+                    aTag.setAttribute('download', file01.title);
+                    document.body.appendChild(aTag);
+                    aTag.click();
+                    document.body.removeChild(aTag); //下载完成移除元素
                     window.URL.revokeObjectURL(url); //释放掉blob对象
                 }
             }).catch((err)=>{
