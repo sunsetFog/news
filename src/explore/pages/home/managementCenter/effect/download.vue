@@ -8,6 +8,10 @@
         <el-button @click="xiazai2">下载2</el-button>
         <el-button @click="xiazai3">下载3</el-button>
         <el-button @click="excelWay">导出</el-button>
+
+		<upload4 ref="cloud" yuming="http://localhost:8060/sky/importExcel"></upload4>
+
+        
         <!-- 
             编辑，保存，重置，删除，批量删除，***查看，附件上传，查询，提交，新增，文件预览
 
@@ -19,10 +23,12 @@
 
 <script>
 import axios from 'axios';
+import upload4 from '@/explore/pages/home/managementCenter/effect/upload/upload4.vue';
 export default {
+    components: { upload4 },
     data(){
         return{
-
+            
         }
     },
     methods: {
@@ -178,9 +184,9 @@ export default {
                 method: 'get',
                 params: params,
                 responseType: 'blob',// 表明返回服务器返回的数据类型
-                headers: {
-                    'Content-Type': 'application/json'
-                }
+                // headers: {
+                //     'Content-Type': 'application/json'
+                // }
             }).then((res) => {// 处理返回的文件流
                 /*
                     下载的excel文件打开为乱码,postman下载正常,前端问题

@@ -150,7 +150,7 @@ export default {
 		// text-align: center;//文本水平居中
         // text-align: left;//文本靠左居中
         // text-align: right;//
-        // vertical-align: middle;// 垂直对齐（图片与文字对齐）实例：<img/> <span style="vertical-align: middle;">文字</span>
+        // vertical-align: middle;// 垂直对齐（图片与文字对齐）两个子标签都加上这个
 
         // position: static;//静态定位  等价于不定位
         // position: relative;//相对定位  以自身为参考，不脱脱离文档
