@@ -2,14 +2,15 @@
     <section id="download">
         <el-button @click="downloadTxt()">下载添加内容的文本</el-button>
         <el-button @click="downloadFile('@static/capital/rem.js')">下载静态资源</el-button>
-        <el-button type="primary" icon="el-icon-download" @click="exportExcel1()">导出Excel1</el-button>
-        <el-button type="primary" icon="el-icon-download" @click="exportExcel2()">导出Excel2</el-button>
-        <el-button @click="xiazai1">下载1</el-button>
-        <el-button @click="xiazai2">下载2</el-button>
-        <el-button @click="xiazai3">下载3</el-button>
-        <el-button @click="excelWay">导出</el-button>
-
-		<upload4 ref="cloud" yuming="http://localhost:8060/sky/importExcel"></upload4>
+        <el-button type="primary" icon="el-icon-download" @click="exportExcel()">EasyExcel导出</el-button>
+        <br><br>
+        <el-button @click="excelWay">jeecgboot导出</el-button>
+        <br><br>
+		<upload4 yuming="http://localhost:8060/sky/importExcel" title_grain="导入"></upload4>
+        <br><br>
+        <upload4 yuming="http://localhost:8060/sky/uploadFile" title_grain="文件上传"></upload4>
+        <br><br>
+        <upload4 yuming="http://localhost:8060/sky/uploadLinux" title_grain="文件上传Linux"></upload4>
 
         
         <!-- 
@@ -61,38 +62,14 @@ export default {
                 
             })
         },
-        exportExcel1(){
-            let params = {
-                fileName: "数据导出",
-                params: { page: 1,pagesize: 15 },
-                templateCode: "Tax"//模板编码
-            }
-            axios({
-                method: 'get',
-                url: 'http://url.com',
-                data: params,
-                responseType: 'blob'// 关键
-            }).then(res => { // res返回数据流
-                if (window.navigator && window.navigator.msSaveOrOpenBlob) { // IE浏览器
-                    window.navigator.msSaveOrOpenBlob(res.data, this.exportFileName + '.xlsx');
-                } else {
-                    const a = document.createElement('a')
-                    a.download = this.exportFileName + '.xlsx'
-                    a.href = window.URL.createObjectURL(new Blob([res.data]))
-                    document.body.appendChild(a)
-                    a.click()
-                    document.body.removeChild(a)
-                }
-            }).catch(err => {
-                
-            })
-        },
-        exportExcel2() {
+        exportExcel() {
             // window.open(process.env.core_url + '/sky/excel/file')
             let that = this;
 
             let params = {
-
+                // fileName: "数据导出",
+                // pageObj: { page: 1,pagesize: 15 },
+                // templateCode: "Tax"//模板编码
             }
 
             that.$apihttp({
@@ -114,60 +91,6 @@ export default {
                     a.click()
                     document.body.removeChild(a)
                 }
-            }).catch((err)=>{
-                console.log('error',err);
-            })
-        },
-        xiazai1() {
-            let that = this;
-
-            let params = {
-                path: 'D:\goods.txt'
-            }
-
-            axios({
-                url: process.env.core_url + '/sky/download/files',
-                method: 'get',
-                params: params,
-                responseType: 'blob'// 关键
-            }).then((res) => {
-                console.log('--res1--', res);
-            }).catch((err)=>{
-                console.log('error',err);
-            })
-        },
-        xiazai2() {
-            let that = this;
-
-            let params = {
-                path: 'D:\goods.txt'
-            }
-
-            axios({
-                url: process.env.core_url + '/sky/downloadLocal',
-                method: 'post',
-                params: params,
-                responseType: 'blob'// 关键
-            }).then((res) => {
-                console.log('--res1--', res);
-            }).catch((err)=>{
-                console.log('error',err);
-            })
-        },
-        xiazai3() {
-            let that = this;
-
-            let params = {
-                path: 'D:\goods.txt'
-            }
-
-            axios({
-                url: process.env.core_url + '/sky/netDownloadLocal',
-                method: 'post',
-                params: params,
-                responseType: 'blob'// 关键
-            }).then((res) => {
-                console.log('--res1--', res);
             }).catch((err)=>{
                 console.log('error',err);
             })

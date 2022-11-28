@@ -14,7 +14,7 @@
         :on-success="handleAvatarSuccess"
         :before-upload="beforeAvatarUpload"
       >
-        <el-button size="small" type="primary">导入</el-button>
+        <el-button size="small" type="primary">{{title_grain}}</el-button>
       </el-upload>
 
       
@@ -37,7 +37,7 @@
             <a :href="txt_url" :download="txt_name" style="color: #1890ff;">点击下载</a>
         </div>
         <span slot="footer" class="dialog-footer">
-            <el-button type="primary" @click="dialogVisible = false">确 定</el-button>
+            <el-button type="primary" @click="sureWay">确 定</el-button>
         </span>
     </el-dialog>
   </section>
@@ -52,6 +52,10 @@ export default {
             type: String,
             default: '',
         },
+        title_grain: {
+            type: String,
+            default: '***'
+        }
     },
     data() {
         return {
@@ -64,6 +68,12 @@ export default {
         };
     },
     methods: {
+        sureWay() {
+            this.dialogVisible = false;
+            this.downloadFile();
+            this.downloadNetFile();
+            this.netDownLoadNet();
+        },
         // 文件列表移除文件时的钩子
         handleRemove(file, fileList) {
             console.log(file, fileList);
@@ -99,8 +109,7 @@ export default {
                     }
                 });
             }
-            
-            this.downloadFile();
+        
         },
         //上传前设置
         beforeAvatarUpload(file) {
@@ -110,11 +119,11 @@ export default {
             let that = this;
             
             let params = {
-                filename: "goodsImportExcelErrorLog4590.txt"
+                filename: this.txt_name
             }
 
             axios({
-                url: 'http://localhost:8060/sky/downloadFile',
+                url: 'http://localhost:8060/sky/downloadFile2',
                 method: 'get',
                 params: params,
                 responseType: 'blob',// 表明返回服务器返回的数据类型
@@ -123,6 +132,71 @@ export default {
                 // }
             }).then((res) => {// 处理返回的文件流
                 console.log('--下载接口--', res);
+            }).catch((err)=>{
+                console.log('error',err);
+            })
+        },
+        downloadNetFile() {
+            let that = this;
+            
+            let params = {
+                netAddress: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.win4000.com%2Fmobile%2F2020-05-20%2F5ec4c771b5044.jpg&refer=http%3A%2F%2Fpic1.win4000.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1672209011&t=77eb65e03a05b87570642512f8d93810"
+            }
+
+            axios({
+                url: 'http://localhost:8062/sky/netDownloadLocal',
+                method: 'get',
+                params: params,
+                responseType: 'blob',// 表明返回服务器返回的数据类型
+                // headers: {
+                //     'Content-Type': 'application/json'
+                // }
+            }).then((res) => {// 处理返回的文件流
+                console.log('--下载网络图片-111-', res);
+            }).catch((err)=>{
+                console.log('error',err);
+            })
+        },
+        netDownLoadNet() {
+            let that = this;
+            
+            let params = {
+                netAddress: "https://img1.baidu.com/it/u=3844628686,3106826718&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=1422",
+                isOnLine: true
+            }
+
+            axios({
+                url: 'http://localhost:8062/sky/netDownLoadNet',
+                method: 'get',
+                params: params,
+                responseType: 'blob',// 表明返回服务器返回的数据类型
+                // headers: {
+                //     'Content-Type': 'application/json'
+                // }
+            }).then((res) => {// 处理返回的文件流
+                console.log('--下载网络图片-222-', res);
+                let file01 = {
+                    name: res.headers['content-disposition'].split('filename=')[1],
+                    suffix: '.jpg'
+                }
+                file01.title = file01.name + file01.suffix;
+                let bolbData = new Blob([res.data]);
+
+                if (typeof window.navigator.msSaveBlob !== 'undefined') {
+                    console.log("IE浏览器", file01.title);
+                    window.navigator.msSaveBlob(bolbData, file01.title);
+                } else {
+                    console.log("非IE浏览器", file01.title);
+                    let url = window.URL.createObjectURL(bolbData);
+                    let aTag = document.createElement('a');
+                    aTag.style.display = 'none';
+                    aTag.href = url;
+                    aTag.setAttribute('download', file01.title);
+                    document.body.appendChild(aTag);
+                    aTag.click();
+                    document.body.removeChild(aTag); //下载完成移除元素
+                    window.URL.revokeObjectURL(url); //释放掉blob对象
+                }
             }).catch((err)=>{
                 console.log('error',err);
             })
