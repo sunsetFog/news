@@ -11,6 +11,9 @@
         <upload4 yuming="http://localhost:8060/sky/uploadFile" title_grain="文件上传"></upload4>
         <br><br>
         <upload4 yuming="http://localhost:8060/sky/uploadLinux" title_grain="文件上传Linux"></upload4>
+        <br><br>
+        <el-button @click="previewToDownload">图片预览转图片下载</el-button>
+        <el-button @click="DocumentPreview">文件预览</el-button>
 
         
         <!-- 
@@ -157,6 +160,39 @@ export default {
                     document.body.removeChild(aTag); //下载完成移除元素
                     window.URL.revokeObjectURL(url); //释放掉blob对象
                 }
+            }).catch((err)=>{
+                console.log('error',err);
+            })
+        },
+        previewToDownload() {
+            let that = this;
+            let json = {
+                fileUrl: "http://localhost:8062/sky/img/avatorImages/1647277665830invoice.png"
+            }
+            that.$apihttp({
+                url: 'http://localhost:8060/sky/previewToDownload',
+                method: 'get',
+                params: json
+            }).then((res) => {
+                console.log('下载图片路径=',res);
+            }).catch((err)=>{
+                console.log('error',err);
+            })
+        },
+        // study: 文档预览
+        DocumentPreview() {
+            let that = this;
+            let json = {
+
+            }
+            that.$apihttp({
+                url: 'http://localhost:8062/sky/getFileViewDomain',
+                method: 'get',
+                params: json
+            }).then((res) => {
+                console.log('文档预览=',res);
+                let url = "http://localhost:8062/sky/profile/1.pdf";
+                window.open(res+'?officePreviewType=pdf&url='+encodeURIComponent(url));
             }).catch((err)=>{
                 console.log('error',err);
             })

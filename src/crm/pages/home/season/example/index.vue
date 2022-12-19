@@ -50,7 +50,7 @@
             <el-input v-model="ruleForm.tradeName" placeholder="请输入商品名称"></el-input>
           </el-form-item>
           <el-form-item label="商品图片:">
-            <upload1 ref="refUpload"></upload1>
+            <upload1 ref="refUpload" yuming="http://localhost:8062/sky/shop/upload"></upload1>
           </el-form-item>
         </el-form>
       </section>
@@ -117,7 +117,7 @@ export default {
                         for (let index = 0; index < that.tableData.length; index++) {
                             let item = that.tableData[index];
                             item.download_url = item.imgUrl;
-                            item.imgUrl = process.env.core_url + '/sky' + item.imgUrl;
+                            item.imgUrl = process.env.core_url + '/sky/' + item.imgUrl;
                         }
                     }
                 })

@@ -11,6 +11,29 @@
     <div class="home-right">
       <div class="header">
         <i class="el-icon-menu show-menu" @click="collapseEvent"></i>
+        <el-popover
+        placement="bottom"
+        width="100px"
+        trigger="hover">
+            <div class="system-box">
+                <ul>
+                    <li @click="exitTheSystem">
+                        <i class="el-icon-switch-button"></i>
+                        <span>退出系统</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="user-box" slot="reference">
+                <div>
+                    <img src="@static/reportForms/image/AheadVenus.png">
+                </div>
+                <div>
+                    <span>Rafael</span>
+                </div>
+            </div>
+        </el-popover>
+        
+
       </div>
       <div class="navigation-tab">
           <tabsDesign></tabsDesign>
@@ -54,6 +77,27 @@ export default {
                 this.left_width = '63px';
             }
         },
+        exitTheSystem() {
+            let that = this;
+            let params = {};
+            that.$apihttp({
+                url: process.env.core_url + '/sky/user/logout',
+                method: 'get',
+                data: params
+            })
+                .then(res => {
+                    if (res.code == '200') {
+                        that.$router.push({path: "/login"});
+                        that.$message({
+                            type: 'success',
+                            message: '退出登录成功!'
+                        });
+                    }
+                })
+                .catch(err => {
+                    console.log('error', err);
+                });
+        }
     },
 };
 </script>
@@ -113,6 +157,32 @@ export default {
             box-shadow: 0 0.5px 2px #999999;
             .show-menu {
                 font-size: 24px;
+            }
+            
+            .user-box {
+                height: 100%;
+                float: right;
+                div:nth-of-type(1) {
+                    width: 35px;
+                    height: 100%;
+                    float: left;
+                    margin-right: 10px;
+                    img {
+                        width: 35px;
+                        height: 35px;
+                        margin-top: 8px;
+                    }
+                }
+                div:nth-of-type(2) {
+                    float: right;
+                    height: 100%;
+                    span {
+                        height: 25px;
+                        line-height: 25px;
+                        font-size: 14px;
+                        margin-top: 14px;
+                    }
+                }
             }
         }
         .navigation-tab {

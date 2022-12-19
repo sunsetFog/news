@@ -48,6 +48,36 @@ export default {
 .cool-dropdown {
     display: none !important;
 }
+.system-box {
+    width: 100%;
+    ul {
+        width: 100%;
+        li {
+            width: 100%;
+            height: 30px;
+            float: left;
+            position: relative;
+            i {
+                font-size: 20px;
+                cursor: pointer;
+                cursor: pointer;
+                position: absolute;
+                left: 8px;
+                top: 6px;
+            }
+            span {
+                font-size: 14px;
+                cursor: pointer;
+                position: absolute;
+                left: 35px;
+                top: 7px;
+            }
+        }
+        li:hover {
+            background: #EBEEF5;
+        }
+    }
+}
 /*公共样式--开始*/
 @import '~@static/capital/whole.less';
 </style>
