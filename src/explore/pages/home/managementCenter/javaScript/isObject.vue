@@ -18,7 +18,7 @@ export default {
     methods: {
         demo5(){
             /*
-                对象概念：一个对象可包含多个属性    {key(键): 'value值'}
+                对象概念：一个对象可包含多个属性    键值对 {key(键): 'value值'}
                 获取或添加新属性语法：obj.key或者obj["key"],因为key是字符串
                 删除对象中的某个属性: delete obj["key"];
              */

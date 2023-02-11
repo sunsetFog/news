@@ -114,7 +114,7 @@ import * as directives from '@/explore/directive';
 Object.keys(directives).forEach(key => {
     directives[key].install(Vue);
 });
-// 全局注册过滤器
+// study: 全局注册过滤器
 import filters from '@/explore/filters';
 Object.keys(filters).forEach(key => {
     Vue.filter(key, filters[key]);

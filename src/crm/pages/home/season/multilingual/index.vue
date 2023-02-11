@@ -1,6 +1,7 @@
 <template>
     <section>
         <!-- 
+            study: 国际多语言
             $tc , $t , $te , v-t
             1.$tc 用于复数，例如英文一般分单复数
             apple: 'no apples | one apple | {count} apples',

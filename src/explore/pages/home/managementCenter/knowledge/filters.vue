@@ -5,7 +5,7 @@
 
 	<div class="rainbow">{{profit | noThis(times)}}</div>
 	<hr />
-	<!-- 全局引入 -->
+	<!-- 全局引入   study: 全局注册过滤器 -->
 	<div class="rainbow">{{profit | numPercent}}</div>
 	<hr />
 	<el-button type="warning" @click="deleteFilters">删除与过滤</el-button>

@@ -9,7 +9,7 @@ import elementZhLocale from 'element-ui/lib/locale/lang/zh-CN'
 
 Vue.use(VueI18n)
 
-
+// study: 国际多语言
 const i18n = new VueI18n({
     // set locale
     // options: en | zh | ja

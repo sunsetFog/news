@@ -3,7 +3,7 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
-
+// study: 国际多语言
 import i18n from '@/crm/i18n/lang';
 
 import ElementUI from 'element-ui';
