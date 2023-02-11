@@ -42,7 +42,7 @@ export default {
     openDB(dbname, version, newStore, callback) {
     	let db
         version = version || 1;
-        // 打开数据库
+        // 打开数据库   window.indexedDB.open()
         const request = this.indexedDB.open(dbname, version);
         // 打开失败
         request.onerror = function () {
@@ -105,12 +105,12 @@ export default {
     /**
      * 删除数据
      * @param {*} db 
-     * @param {*} storename 
+     * @param {*} table_name 
      * @param {*} key 
      * @param {*} callback 
      */
-    deleteData(db, storename, key, callback) {
-        const store = db.transaction(storename, 'readwrite').objectStore(storename);
+    deleteData(db, table_name, key, callback) {
+        const store = db.transaction(table_name, 'readwrite').objectStore(table_name);
         const request = store.delete(key);
         request.onsuccess = function () {
             if (callback && (typeof callback === 'function')) {
@@ -127,11 +127,11 @@ export default {
     /**
      * 清空数据
      * @param {*} db 
-     * @param {*} storename 
+     * @param {*} table_name 
      * @param {*} callback 
      */
-    clearData(db, storename, callback) {
-        const store = db.transaction(storename, 'readwrite').objectStore(storename);
+    clearData(db, table_name, callback) {
+        const store = db.transaction(table_name, 'readwrite').objectStore(table_name);
         const request = store.clear();
         request.onsuccess = function () {
             if (callback && (typeof callback === 'function')) {
@@ -147,13 +147,13 @@ export default {
     /**
      * 添加数据
      * @param {*} db 
-     * @param {*} storename 
+     * @param {*} table_name 
      * @param {*} obj 
      */
-    addData(db, storename, list) {
+    addData(db, table_name, list) {
         // console.log("本地数据库-添加", list);
         // 新建事务 涉及对象 和 类型     链式调用选中表
-        const store = db.transaction(storename, 'readwrite').objectStore(storename);
+        const store = db.transaction(table_name, 'readwrite').objectStore(table_name);
         list.forEach(ls => {
             // 添加数据
             const request = store.add(ls);
@@ -168,11 +168,11 @@ export default {
     /**
      * 更新数据
      * @param {*} db 
-     * @param {*} storename 
+     * @param {*} table_name 
      * @param {*} obj 
      */
-    updateData(db, storename, list) {
-        const store = db.transaction(storename, 'readwrite').objectStore(storename);
+    updateData(db, table_name, list) {
+        const store = db.transaction(table_name, 'readwrite').objectStore(table_name);
         list.forEach(ls => {
             // 修改数据
             const request = store.put(ls);
@@ -187,12 +187,12 @@ export default {
     /**
      * 根据主键获取数据
      * @param {*} db 
-     * @param {*} storeName 
+     * @param {*} table_name 
      * @param {*} key 
      * @returns 
      */
-    getData(db, storeName, key){
-        var objectStore = db.transaction(storeName).objectStore(storeName);
+    getData(db, table_name, key){
+        var objectStore = db.transaction(table_name).objectStore(table_name);
         var request = objectStore.get(key);
         request.onerror = function(event) {
             console.log('事务失败');
@@ -206,12 +206,12 @@ export default {
     /**
      * 根据索引获取数据
      * @param {*} db 
-     * @param {*} storeName 
+     * @param {*} table_name 
      * @param {*} field 
      * @param {*} val 
      */
-    getDataByIndex(db, storeName, field, val) {
-        const objectStore = db.transaction(storeName).objectStore(storeName);
+    getDataByIndex(db, table_name, field, val) {
+        const objectStore = db.transaction(table_name).objectStore(table_name);
         const index = objectStore.index(field + '_index');
         const request = index.get(val);
         return new Promise((resolve, reject) => {
@@ -223,11 +223,11 @@ export default {
     /**
      * 获取全部数据
      * @param {*} db 
-     * @param {*} storeName 
+     * @param {*} table_name 
      * @returns 
      */
-    getAllData(db, storeName) {
-        const objectStore = db.transaction(storeName).objectStore(storeName);
+    getAllData(db, table_name) {
+        const objectStore = db.transaction(table_name).objectStore(table_name);
         const request = objectStore.openCursor();
 
         let data = [];
@@ -253,7 +253,7 @@ export default {
         let flagIndex
         allDbData.then(res => { 
             flagIndex = res.findIndex(val=>{
-                return (val.menuid == list[0].menuid)
+                return (val.id == list[0].id)
             })
         })
         return flagIndex

@@ -128,7 +128,6 @@ Vue.filter("numPercent", function(value) {
 */
 
 import penCache from '@/explore/vuex/index.js';
-import penMeans from '@/explore/public/index.js';
 
 //vuex 中保存错误日志数组,展示table里
 if (process.env.NODE_ENV === 'production') {
@@ -144,16 +143,13 @@ if (process.env.NODE_ENV === 'production') {
         });
     };
 }
-
 // study: indexDb缓存(本地数据库)
-import indexDb from '@/explore/indexDb/index.js';
 let storeName  = { index: ['ex_table_name'], name: 'ex_table_name', key: 'id' }; //index:索引、name:表名、key:主键
 // 打开数据库
-indexDb.openDB('ex_dbname', 1, storeName, function(db){
+means.openDB('ex_dbname', 1, storeName, function(db){
   // 全局保存数据库
   Vue.prototype.$database = db;
 });
-Vue.prototype.$indexDb = indexDb;
 
 
 
@@ -169,7 +165,7 @@ import 'nprogress/nprogress.css'; // 加载转圈进度条样式
 router.beforeEach((to, from, next) => {
     document.title = to.meta.title;
 
-    penCache.dispatch('getPlayerInfo', penMeans.amateur_getPlayer()); //调用vuex和全局方法
+    penCache.dispatch('getPlayerInfo', means.amateur_getPlayer()); //调用vuex和全局方法
 
 
     // 刷新执行，且不是登录页，且要有token

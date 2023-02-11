@@ -1,6 +1,11 @@
 <template>
     <section id="cache">
 <!-- 浏览器缓存 -->
+        <el-button type="text" @click="addData">添加数据</el-button>
+        <br>
+        <el-button type="text" @click="updateData">修改数据</el-button>
+        <br>
+        <el-button type="text" @click="deleteData">删除数据</el-button>
     </section>
 </template>
 
@@ -14,7 +19,6 @@ export default {
     created(){
         this.cookies();
         this.cookies2();
-        this.addData();
     },
     methods: {
         //浏览器开启都存在，关闭就删除   运行在服务器端
@@ -58,10 +62,22 @@ export default {
         // 添加数据
         addData() {
             let list = [
-                { id: 2, name: '张三', age: 24, email: 'zhangsan@example.com' }
+                { id: 1, name: '张三', age: 24, email: 'zhangsan@example.com' }
             ]
-            console.log("数据库名=", this.$indexDb);
-            this.$indexDb.addData(this.$database, 'ex_table_name', list);
+            this.$means.addData(this.$database, 'ex_table_name', list);
+        },
+        // 修改数据
+        updateData() {
+            let list = [
+                { id: 2, name: '九九', age: 22, email: 'jiujiu@example.com' }
+            ]
+            this.$means.updateData(this.$database, 'ex_table_name', list);
+        },
+        // 删除数据
+        deleteData() {
+            this.$means.deleteData(this.$database, 'ex_table_name', 2, function(value) {
+                console.log("--deleteData--", value);
+            });
         }
     }
 }
