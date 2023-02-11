@@ -145,6 +145,18 @@ if (process.env.NODE_ENV === 'production') {
     };
 }
 
+// study: indexDb缓存(本地数据库)
+import indexDb from '@/explore/indexDb/index.js';
+let storeName  = { index: ['ex_table_name'], name: 'ex_table_name', key: 'id' }; //index:索引、name:表名、key:主键
+// 打开数据库
+indexDb.openDB('ex_dbname', 1, storeName, function(db){
+  // 全局保存数据库
+  Vue.prototype.$database = db;
+});
+Vue.prototype.$indexDb = indexDb;
+
+
+
 console.log('--end00--');
 
 import NProgress from 'nprogress'; // 转圈进度条，路由变化触发

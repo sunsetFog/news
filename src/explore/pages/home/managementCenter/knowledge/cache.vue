@@ -14,6 +14,7 @@ export default {
     created(){
         this.cookies();
         this.cookies2();
+        this.addData();
     },
     methods: {
         //浏览器开启都存在，关闭就删除   运行在服务器端
@@ -52,6 +53,15 @@ export default {
                 date: '2h'
             }
             window.document.cookie = json.name + "=" + json.value + ";path=/;expires=" + json.date;
+        },
+        // study: indexDb缓存(本地数据库)
+        // 添加数据
+        addData() {
+            let list = [
+                { id: 2, name: '张三', age: 24, email: 'zhangsan@example.com' }
+            ]
+            console.log("数据库名=", this.$indexDb);
+            this.$indexDb.addData(this.$database, 'ex_table_name', list);
         }
     }
 }
