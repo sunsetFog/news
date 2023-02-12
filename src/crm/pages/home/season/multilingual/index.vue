@@ -19,6 +19,10 @@
             <el-button @click="translate('zh')">中文翻译</el-button>----<el-button@click="translate('en')">英文翻译</el-button>
         <h3>ui组件多语言翻译:</h3>
         <pagination :pagingObj="queryData" :pageStep="[10,15]" @emitWay="sunQuery"></pagination>
+        <!-- study: 皮肤切换 -->
+        <el-button @click="changeTheme('white')">白色</el-button>
+        <el-button @click="changeTheme('black')">黑色</el-button>
+        <el-button @click="changeTheme('blue')">蓝色</el-button>
     </section>
 </template>
 
@@ -43,6 +47,11 @@ export default {
         this.$i18n.mergeLocaleMessage(lang, locals);// 动态添加语言
     },
     methods: {
+        changeTheme(type) {
+            console.log("-切换主题-0=", type);
+            this.$means.changeTheme(type);
+
+        },
         sunQuery(){
 
         },

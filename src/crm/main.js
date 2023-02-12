@@ -51,6 +51,11 @@ Vue.component('upload1', upload1);
 import previewPictures from '@/explore/pages/home/managementCenter/plugin/previewPictures.vue';
 Vue.component('previewPictures', previewPictures);
 
+import means from '@/explore/public/index.js';
+Vue.prototype.$means = means;
+// 刷新皮肤保持不变   study: 皮肤切换
+means.initTheme();
+
 import './database/index'; // 不能用if动态加载js
 
 import apiHttp from '@/explore/api/http.js';

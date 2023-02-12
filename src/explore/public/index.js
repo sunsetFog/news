@@ -4,6 +4,7 @@ import accumulation01 from './modular/accumulation01'
 import regs from './modular/regular'
 import callback from './modular/callback'
 import indexDb from './modular/indexDb'
+import themeSkin from './modular/themeSkin'
 
 const comic = { // es6合并对象
     ...frog,
@@ -11,6 +12,7 @@ const comic = { // es6合并对象
     ...accumulation01,
     ...regs,
     ...callback,
-    ...indexDb
+    ...indexDb,
+    ...themeSkin
 }
 export default comic

@@ -41,12 +41,18 @@ export default {
 <style lang="less">
 /* @import 加载 */
 @import './assets/app.less';
+// 加载样式   study: 皮肤切换
+@import "~@static/themeSkin/index.less";
 .pen-is-disabled {
     color: #c0c4cc;
     cursor: not-allowed;
 }
 .cool-dropdown {
     display: none !important;
+}
+// var()使用root:样式变量   study: 皮肤切换
+#app {
+  background: var(--background);
 }
 .system-box {
     width: 100%;
