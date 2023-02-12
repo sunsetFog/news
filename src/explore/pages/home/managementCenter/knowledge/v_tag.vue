@@ -18,8 +18,8 @@
         </div>
 
         <hr>
-        <!-- v-for     index是下标，可以绑定事件上传-->
-        <div v-for="(item,index) in for_list">
+        <!-- v-for     index是下标，key保证唯一 -->
+        <div v-for="(item,index) in for_list" :key="item.id">
             <p class="line-color">
                 {{item.title}}===
                 <span v-if="item.state==0">状态0</span>

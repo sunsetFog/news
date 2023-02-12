@@ -419,6 +419,24 @@ https是HTTP运行在SSL/TLS之上，SSL/TLS运行在TCP之上。所有传输的
             函数节流：只执行一次
                 function throttle(){}   注意函数名
              */
+        },
+        demo42() {
+            /*
+                vue组件更新机制
+                在父组件上任意触发监听，调用方法resize()
+                resize()调用callResize()
+
+                如何避免浏览器卡顿，实现性能优化cdn
+                https://blog.csdn.net/weixin_43523043/article/details/126743180
+                jpg图片太大, 用png，并用压缩图片工具
+                http响应时间长
+                页面采用keep-alive缓存组件
+                不要连用v-if 和 v-for
+                使用路由懒加载、异步组件
+                第三方模块按需导入
+                长列表滚动到可视区域动态加载
+                图片懒加载
+             */
         }
     }
 }

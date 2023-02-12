@@ -7,12 +7,12 @@
 		</div>
 		
 		<!-- 
-			myChildren大写转小写用 - 隔开
+			myChildren大写转小写用 - 隔开  变  my-children
 			其中article和purple是props传参
 			v-model与props的value对应
 		-->
 		<my-children :article='design' @purple='get' ref="rainbow" v-model="cosplay" :syncValue.sync="syncValue">
-			<!-- 插槽内容 -->
+			<!-- study: slot插槽 -->
 			<el-button slot="er">slot插槽</el-button>
 			<el-button slot="yaa" slot-scope="scenery">{{scenery.data}}</el-button>
 		</my-children>
