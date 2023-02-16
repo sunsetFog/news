@@ -65,7 +65,38 @@
             
             </div>
             <div class="manage-content-right" v-if="manage_state">
-                <router-view></router-view>
+
+
+                <!-- 
+                    study: keep-alive组件缓存
+
+                    keep-alive组件缓存，页面加载快，从而节省性能
+                    注意：keep-alive包含的<router-view>有效，下一级的<router-view>无效
+
+                    keep-alive添加生命周期钩子函数：
+                        activated创建，可替换created用、
+                        deactivated销毁，可替换destroyed用
+
+                    路由跳转时，activated能打印就缓存成功了，跳回来后，inpute输入框敲的内容不会初始化
+                    created只触发一次，activated都触发
+                    刷新才能缓存初始化
+                    
+                    区分缓存与不缓存：
+                    方式1. keep-alive标签属性：
+                        :include="['组件name']" 需要缓存的组件名单   注意vue文件name 必须等于 include数组项
+                        :exclude="['组件name']" 不需要缓存的组件名单
+
+                    方式2. v-if控制keep-alive出现       在路由文件加参数meta: {keepAlive: true}
+
+
+                    测试：输入框改变内容，跳转组件，输入框内容不变就缓存ok了
+                -->
+                <keep-alive :include="['lifeCycle']">
+                    <router-view></router-view>
+                </keep-alive>
+                <!-- <router-view v-if="$route.meta.keepAlive"></router-view> -->
+
+
             </div>
         </div>
     </div>

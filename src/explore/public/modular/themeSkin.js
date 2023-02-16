@@ -23,7 +23,7 @@ export default {
                 break;
             default:
                 document.documentElement.classList.remove('white');
-            break;
+                break;
         }
     }
 }

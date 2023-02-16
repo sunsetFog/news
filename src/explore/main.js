@@ -206,7 +206,7 @@ new Vue({
     // 创建和挂载vue实例
     el: '#app', // 绑定index.html的id
     router, // 路由
-    store, // vue原型的vuex
+    store, // vue原型的vuex    study: vuex状态管理
     components: { App }, // 入口组件App.vue
     template: '<App/>', // 模板名
 });

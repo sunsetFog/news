@@ -1,7 +1,9 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 Vue.use(Vuex);
-
+/*
+    study: vuex状态管理
+*/
 import getters from './getters';
 // 方法一：固定写法----缺点：要一个个文件导入，麻烦
 // import pool from './modular/pool';

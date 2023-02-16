@@ -1,6 +1,8 @@
 <template>
 <div>
-	<!--用了methods与computed-->
+	<!--
+		study: vuex状态管理
+	-->
 	<el-button type="info">mapGetters:{{money}}---{{seed}}</el-button>
 	<el-button type="success" @click="playerInfo({title: 'money',params: 9966666888})">...mapMutations</el-button>
 	<el-button type="error" @click="submit_mutation">调用_mutation</el-button>
@@ -13,6 +15,7 @@
 	// import store from '@/explore/vuex/vuex';//@代表'/src',看build/webpack.base.conf.js
 	import { mapMutations, mapGetters, mapActions } from 'vuex';// 用了这三个变量，请引入
 	export default{
+		name: "ex-vuex",
 		data(){
 			return{
 			}

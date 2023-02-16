@@ -52,16 +52,20 @@ router/index.js
     favicon.ico在线制作
     http://www.faviconico.org/favicon -->
     <section id="lifeCycle">
-        <div ref="tissue" @click="texture">
+        <div ref="tissue" @click="texture" class="cucumber">
             {{title}}
             <span ref="exquisite" v-if="student.age">{{student.age}}</span>
         </div>
+        <h1>
+            study: keep-alive组件缓存--{{!$route.meta.keepAlive}}
+        </h1>
+        <el-input v-model="cabbage" placeholder="请输入内容"></el-input>
     </section>
 </template>
 
 <script>
 export default {
-    name: 'lifeCycle',//组件名，用Vue.component时name相当于id
+    name: 'lifeCycle',//组件名  study: keep-alive组件缓存
     props: ['importance'],//数据-父传子的绑定值
     components: {},//子父组件
     data(){//数据
@@ -77,7 +81,8 @@ export default {
             },
             list: [
                 { id: 1, name: '看来' }
-            ]
+            ],
+            cabbage: "大白菜"
         }
     },
     beforeCreate(){//创建前-用于拦截跳转---少用
@@ -86,6 +91,7 @@ export default {
     // 创建后-无dom操作,用于创建数据---常用
     // 注意：加了keep-alive组件缓存缓存后，created不再触发，activated触发
     created() {
+        console.log("--created--");
         /* 
             改值了，在控制台能打印出来，却没有更新到视图上时用$set解决:
             target：要更改的数据源(可以是对象或者数组)
@@ -118,6 +124,7 @@ export default {
             跳转后执行，this.$route路由参数找不到的，但this指向没变，能拿到data数据
         */
     },
+    // study: keep-alive组件缓存
     activated(){//创建  keep-alive组件缓存，请看home.vue
         console.log('---activated---');
     },
@@ -149,7 +156,10 @@ export default {
 
 <style lang="less" scoped>
 #lifeCycle{
-    .mixin_div(100%,50px,none,@color_blueviolet,center);
+    color: #b00cb3;
+    .cucumber {
+        .mixin_div(100%,50px,none,@color_blueviolet,center);
+    }
 }
 </style>
 
