@@ -22,14 +22,14 @@
     }
     两者都是自定义类名，使不影响全局
 
-    Created by rafael.
+    遇到的问题: Created by rafael.
     如何解决el-table分页使勾选消失的问题？
     https://blog.csdn.net/LingSnow1019/article/details/119569621
     加上
     :row-key="getRowKeys"
     :reserve-selection="true"
 
-    Created by rafael.
+    遇到的问题: Created by rafael.
     回显勾选只勾选当前页，而不是所有分页一起勾选
 -->
 <el-popover

@@ -168,6 +168,10 @@ export default{
                 console.log('--login--', res);
                 if(res.code == "200") {
                     that.$cookies.set("token", res.data.token, "1d");
+                    /*
+                        study: 动态添加路由
+                        登录时调用
+                     */
                     that.$store.dispatch('routerApple').then(function(value){
                         console.log("--then结束--");
                         that.$router.addRoutes(value);

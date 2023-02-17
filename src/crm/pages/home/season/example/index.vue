@@ -3,6 +3,9 @@
     <section class="header-box" ref="refHeader">
       <el-input v-model="queryData.isName" placeholder="请输入内容" style="width: 200px;"></el-input>
       <el-button type="primary" @click="addWay('新建用户')">添加</el-button>
+      <!-- 
+          study: 自定义指令
+       -->
       <el-button type="primary" v-operation-auth="'user:add'">二哈</el-button>
       <el-button type="primary" size="small" icon="el-icon-search" @click="queryWay">搜索</el-button>
     </section>

@@ -88,7 +88,7 @@ export default {
                         .then(res => {
                             console.log('--login--', res);
                             if (res.code == '200') {
-                                that.btnList();
+                                that.btnList();// study: 自定义指令
                                 that.$cookies.set('token', res.data.token, '1d');
                                 that.$store.dispatch('routerApple').then(function(value) {
                                     console.log('--then结束--');
@@ -105,6 +105,7 @@ export default {
                 }
             });
         },
+        // 登录时，缓存的后端数据
         btnList() {
             let that = this;
             that.$apihttp({

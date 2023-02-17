@@ -5,7 +5,7 @@
     // { path: '/', name: 'defaultPath', meta: { title: '默认路由',key: 0}, component: resolve => require(['@/explore/pages/defaultPath'], resolve) },
     // {
     //   path: '/home', component: resolve => require(['@/explore/pages/home/index.vue'], resolve),
-    //   children: [
+    //   children: [// study: 路由视图
     //     { path: 'homeIndex', name: 'homeIndex', meta: { title: '首页',key: 0}, component: resolve => require(['@/explore/pages/home/homeIndex/index.vue'], resolve) },
     //     { path: 'lottery', meta: { title: '福气',key: 1}, component: resolve => require(['@/explore/pages/home/lottery/index.vue'], resolve) },
     //     { path: 'realPerson', name: 'realPerson', meta: { title: '真人',key: 2}, component: resolve => require(['@/explore/pages/home/realPerson/index.vue'], resolve) },

@@ -70,6 +70,10 @@ const login = {
         menuValue: state => state.menu_value
     },
     actions: {
+        /*
+            study: 动态添加路由
+            后台管理添加路由：启动crm项目，权限》菜单&路由
+         */
         async routerApple({state, commit, dispatch}, params) {
             await apiHttp({
                 url: process.env.core_url + '/sky/menu/treeRouter',
@@ -100,7 +104,7 @@ const login = {
 
             console.log("--routerApple--", JSON.parse(JSON.stringify(state)));
 
-            return state.routerList;
+            return state.routerList;// async的then回调函数的参数
             
         },
         dynamicRouter({state, commit, dispatch}, params) {

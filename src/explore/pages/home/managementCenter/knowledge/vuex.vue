@@ -2,6 +2,9 @@
 <div>
 	<!--
 		study: vuex状态管理
+		执行过程：通过dispatch调用action方法，再commit调用mutations方法，
+		从而修改了state数据，getters监听到了state修改，最后computed也监听到state修改，
+		dom渲染，完成
 	-->
 	<el-button type="info">mapGetters:{{money}}---{{seed}}</el-button>
 	<el-button type="success" @click="playerInfo({title: 'money',params: 9966666888})">...mapMutations</el-button>

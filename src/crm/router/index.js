@@ -15,9 +15,15 @@ Router.prototype.push = function push(location) {
 
 
 
-import firstFloor from './modules/firstFloor'
 
-// 实例路由
+
+/*
+  study: 动态添加路由
+  实例路由
+  默认路由
+  modules是模块化路由文件
+ */
+import firstFloor from './modules/firstFloor'
 const createRouter = () => new Router({
   // mode: 'history', // require service support
   scrollBehavior: () => ({ y: 0 }),
@@ -34,7 +40,7 @@ export function resetRouter() {
 // 暴露
 export default router
 
-// 实例路由并暴露
+// 原来：实例路由并暴露
 // export default new Router({
 //   mode: 'history',//路由路径#
 //   routes: [

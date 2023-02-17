@@ -9,6 +9,7 @@ Vue.config.productionTip = false; //生产提示
 // es6Promise .polyfill();
 
 import iView from 'iview';
+// 全局加载样式
 import 'iview/dist/styles/iview.css';
 Vue.use(iView);
 

@@ -82,6 +82,10 @@
       </div>
     </div>
     <template>
+        <!-- 
+            study: 路由视图
+            测试：用路由跳转，显示在<router-view>里，测试ok
+         -->
       <router-view></router-view>
     </template>
 

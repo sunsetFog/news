@@ -61,7 +61,10 @@ import './database/index'; // 不能用if动态加载js
 import apiHttp from '@/explore/api/http.js';
 Vue.prototype.$apihttp = apiHttp;
 
-// 全局注册自定义指令
+/*
+全局注册自定义指令    study: 自定义指令
+Object.keys(directives)  对象转数组  ['对象key', '对象key']
+*/
 import * as directives from '@/explore/directive';
 Object.keys(directives).forEach(key => {
     directives[key].install(Vue);
@@ -88,7 +91,11 @@ router.beforeEach((to, from, next) => {
         sessionStorage.removeItem('tabList');
     }
 
-    // 刷新执行，且不是登录页，且要有token
+    /*
+        study: 动态添加路由
+        刷新执行，且不是登录页，且要有token
+        刷新会重新执行main.js,放上面可以，就是这里需要判断跳回登录页
+    */
     if (from.path == '/' && to.path != '/login') {
         if (VueCookies.get('token')) {
             store.dispatch('routerApple').then(function(value) {
