@@ -7,7 +7,7 @@ https://blog.csdn.net/yw00yw/article/details/81272632
 https://blog.csdn.net/yw00yw/article/details/81328126
 
 学习生成随机数据就行
-http://mockjs.com/examples.html
+mock.js官网: http://mockjs.com
 
 前端关于自己模拟接口做测试
 https://blog.csdn.net/w_s_x_b/article/details/92613421

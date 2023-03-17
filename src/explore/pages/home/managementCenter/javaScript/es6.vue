@@ -2,6 +2,7 @@
     <section id="es6">
         <!-- 
             菜鸟教程：https://www.runoob.com/w3cnote/es6-tutorial.html
+            ES6 入门教程:  https://es6.ruanyifeng.com/
          -->
     </section>
 </template>

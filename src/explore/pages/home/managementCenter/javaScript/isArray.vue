@@ -42,7 +42,7 @@ export default {
                 6  数组.splice(下标,1)     删除或者添加指定的元素、、、删除并返回删除元素
                     参数1: 删除下标，是负数，从数组末尾开始算起
                     参数2: 删除的个数，0代表不删，1代表删除一个....
-                    参数3: 在参数1的下标后添加的内容
+                    参数3: 在参数1的下标后添加的内容，有替换作用  数组.splice(下标,1,{})
 
                     注意：
                     1.如果只有一个参数，表示从当前下标一直删到最后
@@ -161,7 +161,7 @@ export default {
             let newArr2 = arr.filter(function(item){
                 return item>1&&item<3;
             })
-            console.log('filter',newArr2);
+            console.log('filter=',newArr2);
             /*
                 检测数组中的元素是否满足指定条件,返回true,false
                 let isTrue = 数组.some(
@@ -173,7 +173,7 @@ export default {
             let active = arr.some(function(item,index,arr){
                 return item == 1;
             })
-            console.log('some',active);
+            console.log('some=',active);
             /*
                 查找符合条件的元素，则返回第一个元素
                 let firstItem = 数组.find(
@@ -185,7 +185,14 @@ export default {
             let content = arr.find(function(item){
                 return item>0;
             })
-            console.log('find',content);
+            console.log('find=',content);
+            /*
+                符合条件，返回下标
+             */
+            let is_index = arr.findIndex(function(item){
+                return item == 2;
+            });
+            console.log('findIndex=', is_index);
         },
     }
 }
