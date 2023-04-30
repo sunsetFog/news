@@ -16,7 +16,7 @@ export default {
         }
     },
     mounted(){
-        this.demo1();
+        this.demo10();
     },
     methods: {
         demo1(){
@@ -32,7 +32,7 @@ export default {
                 }
             var jsonArr = [
 					{"name":"Deo","age":18},
-					{"name":"Jhon","age":20} 
+					{"name":"Jhon","age":20}
 				]
             var jsonStr = '{"name": "Jhon","age":18}';//字符串Json   后台有时给这种，注意打印看清类型
             console.log('字符串解析为json对象',JSON.parse(jsonStr));// JSON.parse(必须是字符串)
@@ -103,7 +103,7 @@ export default {
             let min = 10;
 			console.log('两数之间的随机数',Math.random()*(max-min)+min);
             console.log('两数之间的随机整数',Math.floor(Math.random()*(max-min)+min));
-            
+
 			var arr=[1,2,3,4,5];
 			console.log('最高值',Math.max(3,1,8,66,9));
 			console.log('最低值',Math.min(3,1,2,0,-8,97));
@@ -114,33 +114,56 @@ export default {
             console.log('余弦',Math.cos(deg60));
             console.log('正切',Math.tan(deg60));
         },
+        /*
+            js语法技巧
+         */
         demo10 (params = []) {
             console.log('方法默认值', params);
+
+
             let key = null;
             let sky = key || [];
-            console.log('定义默认值', sky);
-            let purpose = '?id=128';
-            console.log('括号连续拼写', (purpose.split('id='))[1]);
+            console.log('前面false才执行后面代码---定义默认值', sky);
+
 
             let flag = true, bean = '土豆';// 定义多个变量
             flag && (bean = '香蕉');
-            /*
-            记得加括号
-            等价于  if(flag) {
-                bean = '香蕉';
-            }
-            */
-            console.log('--bean--', bean)
+            console.log("前面true才执行后面代码", bean)
+
+
+            let purpose = '?id=128';
+            console.log('括号连续拼写', (purpose.split('id='))[1]);
+
+
 
             if(true) console.log('--bean-2-', bean),bean = '苹果';
             /*
-            等价于  if(true) {
-                console.log('--bean-2-', bean);
-                bean = '苹果';
-            }
+                等价于  if(true) {
+                    console.log('--bean-2-', bean);
+                    bean = '苹果';
+                }
             */
-            console.log('--bean-3-', bean)
-            
+            console.log('--if简写--', bean)
+
+
+            let obj = {
+                state: {
+                    cabbage: '白菜',
+                },
+                props: {
+                    pumpkin: '南瓜',
+                },
+                peach: '桃子',
+                banana: '香蕉'
+            }
+            // 这里不能用as
+            const {
+                state: { cabbage },
+                props: { pumpkin },
+                ...residue
+            } = obj
+            console.log('--对象取值--', cabbage, '---', pumpkin, '-剩余值的对象-', residue)
+
         },
         demo11 () {
             let ly = 867;

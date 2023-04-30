@@ -5,17 +5,23 @@
 		<div class="rainbow">
 			{{design}}
 		</div>
-		
-		<!-- 
+
+		<!--
 			myChildren大写转小写用 - 隔开  变  my-children
 			其中article和purple是props传参
 			v-model与props的value对应
 		-->
 		<my-children :article='design' @purple='get' ref="rainbow" v-model="cosplay" :syncValue.sync="syncValue">
 			<!-- study: slot插槽 -->
-			<el-button slot="er">slot插槽</el-button>
-			<el-button slot="yaa" slot-scope="scenery">{{scenery.data}}</el-button>
+                        <el-button>默认插槽</el-button>
+
+                        <el-button v-slot:er>具名插槽--指令无效写法</el-button>
+                        <el-button #er>具名插槽--简写无效写法</el-button>
+			<el-button slot="er">具名插槽</el-button>
+
+			<el-button slot="yaa" slot-scope="scenery">作用域插槽: {{scenery.data}}</el-button>
 		</my-children>
+                <br/><br/><br/>
 		<!-- 遍历-动态组件    is是组件名   props传参 -->
 		<template v-for="item in equipment">
 			<component :is="item.reply" :vip_props="item.data"></component>
@@ -70,7 +76,7 @@ export default{
 	beforeDestroy() {
 		this.$eventBus.$off('airWater');// 移除$on自定义事件监听器
 	}
-	
+
 }
 </script>
 

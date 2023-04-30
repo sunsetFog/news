@@ -5,7 +5,7 @@
             <span>活动素材</span>
         </div>
 
-        <VueForm
+        <!-- <VueForm
             v-model="value"
             :ui-schema="uiSchema"
             :schema="schema"
@@ -15,22 +15,22 @@
             @on-cancel="aaa"
             @on-submit="aaa"
         >
-        </VueForm>
+        </VueForm> -->
     </el-card>
 
     <div class="code-right">
-        <CodeEditor v-model="curFormDataCode"></CodeEditor>
+        <!-- <CodeEditor v-model="curFormDataCode"></CodeEditor> -->
     </div>
 </section>
 </template>
 
 <script>
 
-import VueForm from "./@goodgeek/vue-json-schema-form";
+// import VueForm from "./@goodgeek/vue-json-schema-form";
 import CodeEditor from '@/explore/components/printEditor/index.vue';
 export default {
     name: 'vueForm',
-    components: { VueForm, CodeEditor },
+    // components: { VueForm, CodeEditor },
     data() {
         return {
             formData: {},

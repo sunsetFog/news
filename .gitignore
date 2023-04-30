@@ -8,6 +8,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# 去掉ESLint语法校验   写上src文件名就可以了
+
 # Editor directories and files
 .idea
 .vscode
