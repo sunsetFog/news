@@ -154,7 +154,8 @@ export default {
                     pumpkin: '南瓜',
                 },
                 peach: '桃子',
-                banana: '香蕉'
+                banana: '香蕉',
+                list: [ 6, 6 ]
             }
             // 这里不能用as
             const {
@@ -162,7 +163,14 @@ export default {
                 props: { pumpkin },
                 ...residue
             } = obj
-            console.log('--对象取值--', cabbage, '---', pumpkin, '-剩余值的对象-', residue)
+            console.log('--对象的解构赋值--', cabbage, '---', pumpkin, '-剩余值的对象-', residue)
+            const { list: butterfly = [] } = obj
+            console.log("--取值、赋值、默认值--", butterfly)
+
+            let listArr = [ 5, 6 ]
+            const [ aaa, bbb, ccc = '噢' ] = listArr
+            console.log("--数组的解构赋值--", aaa, "---", bbb, "---", ccc)
+
 
         },
         demo11 () {
