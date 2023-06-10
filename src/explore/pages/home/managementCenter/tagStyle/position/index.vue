@@ -89,20 +89,21 @@
 
     main {
         width: 1485px;
-        position: relative;
+        min-width: 1485px;
+        position: relative;// lotus要绝对定位，所以加相对定位
 
         .mercury {
             width: 100%;
-            padding: 419px 0 230px 0;// 上下用padding，然后上下用绝对定位
+            padding: 419px 0 0 0;// 上用padding，然后上用绝对定位
             box-sizing: border-box;
             position: relative;
             left: 0px;
             top: 0px;
-            z-index: 2;
+            z-index: 2;// 要比lotus层次大，所以加相对定位
 
             .header {
                 width: 100%;
-                height: 545px;
+                height: 545px;// 相对定位高度撑开545，所以用绝对定位
                 background: url('~@/explore/assets/position/box_top.png');
                 background-size: 100% 490px;
                 background-repeat: no-repeat;
@@ -132,7 +133,7 @@
                 position: relative;
                 left: 0px;
                 top: 0px;
-                z-index: 2;
+                z-index: 2;// 要比header层次大，所以加相对定位
             }
 
             .footer {
@@ -141,10 +142,6 @@
                 background-image: url('~@/explore/assets/position/box_bom.png');
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
-                position: absolute;
-                left: 0px;
-                bottom: 0px;
-                z-index: 3;
             }
         }
 
