@@ -1,9 +1,9 @@
 <template>
     <section id="css">
-        <!-- 
+        <!--
             1.三种元素:
                 行内元素：同一行显示,不能设宽高  例如 b,span,a,i,strong
-                块元素：单独占一行，可以设宽高  例如div,p,h1-h6,table,ul-li,ol-li  
+                块元素：单独占一行，可以设宽高  例如div,p,h1-h6,table,ul-li,ol-li
                 行内块元素：同一行显示,可以设宽高  例如img,input,button
             2.盒子模型: 内容content、内边距padding、边框border、外边距margin
             box-sizing: border-box;使得：
@@ -16,7 +16,7 @@
             设定的width宽 = 内容的width宽
             实际width宽 = border边框 + padding内边距 + 设定的width宽
             设定的height高 = 内容的height高
-            实际height高 = border边框 + padding内边距 + 设定的height高 
+            实际height高 = border边框 + padding内边距 + 设定的height高
 
 
             3.样式选择器
@@ -45,7 +45,7 @@
                 伪元素选择器:
                     p::first-line{} ---- 内容首行添加样式
                     div::before {content: url(smiley.gif);} ---- div内容之前插入一幅图像
-                子代选择器： div > p{}  
+                子代选择器： div > p{}
                 后代选择器： div p{}
                 相邻兄弟选择器：  p + span{}
             4.引入css的三种方式
@@ -106,7 +106,7 @@ export default {
         //     &.add-ys{}// 嵌套样式
         //     &:nth-child(2){}
         // }
-        
+
 		// width: 800px;//宽
         // height: 200px;//高
 
@@ -138,24 +138,24 @@ export default {
         // padding-right: 20px;
         // padding: 10px 10px 10px 10px;//上右下左
 		// box-sizing: border-box;//封闭盒子
-        
+
         // color: green;//字体颜色
 		// font-size: 14px;//字体大小，默认16px
 		// font-style: italic;//斜体
         // font-weight: bold;//字体加粗
         // letter-spacing: 10px;//字符间距
         // font-family: "微软雅黑";//字体系列，谷歌默认微软雅黑
-        
+
         // text-align: justify;//两端对齐
 		// text-align: center;//文本水平居中
         // text-align: left;//文本靠左居中
         // text-align: right;//
         // vertical-align: middle;// 垂直对齐（图片与文字对齐）两个子标签都加上这个
 
-        // position: static;//静态定位  等价于不定位
-        // position: relative;//相对定位  以自身为参考，不脱脱离文档
-        // position: absolute;//绝对定位  以父元素为参考，脱离文档  默认以左上角为起点
-        // position: fixed;//固定定位
+        // position: static;//静态定位/常规定位/自然定位  作用：使元素定位于常规流/自然流中   忽视top、bottom、left、right、z-index，是这些关键字作用失效
+        // position: relative;//相对定位  以自身为参考，不脱脱离文档（能撑开父盒子高度）
+        // position: absolute;//绝对定位  以父元素为参考，脱离文档（不能撑开父盒子高度）  默认以左上角为起点
+        // position: fixed;//固定定位  以浏览器窗口大小为参考，脱离文档
         // top: 100px;
         // bottom: 100px;
         // left: 100px;
@@ -165,16 +165,16 @@ export default {
         // background: aqua;//背景颜色
         // background: url(../img/icon_home.png) no-repeat;
         // background-size: 200px 200px;//背景大小
-        
+
 		// line-height: 200px;//文本垂直居中
 		// letter-spacing: 10px;//字符间距
 		// word-spacing: 20px;//单词间距
         // overflow: hidden;//溢出隐藏
-        
+
 		// overflow: scroll;//溢出出现滚动条
         // overflow-y: scroll;//y轴出现滚动条
         // overflow-x: scroll;//x轴出现滚动条
-        
+
         // box-shadow: 1px 1px 10px 0 #C9CACB; // 阴影
 
 		// text-indent: 30px;//首行缩进
@@ -222,6 +222,6 @@ export default {
 		// 	100%{}
 		// }
 
-		      
+
     }
 </style>
