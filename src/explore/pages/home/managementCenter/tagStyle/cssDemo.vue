@@ -14,10 +14,10 @@
             </el-scrollbar>
         </div>
         <h3>清除浮动</h3>
-        <!-- 
-            为啥要清楚浮动？
+        <!--
+            为啥要清除浮动？
             因为float的浮动无法撑起父级元素宽高
-           
+
             解决办法1：在最后一个li元素后面加上一个div，加上clear: both;样式
             解决办法2：父级元素加样式overflow: hidden;
             解决办法3：li元素加样式display:inline-block;
@@ -28,7 +28,7 @@
             <!-- <div style="clear: both;"></div> -->
         </div>
         <h3>px,rem,em</h3>
-        <!-- 
+        <!--
             px相对屏幕分辨率  固定单位
             em相对父元素font-size： 1em=(父元素font-size)px   默认值16px  4em*(父元素font-size)=？px
             rem相对html的font-size: 1rem=(html的font-size)px  默认值16px  4rem*(html的font-size)=？px
