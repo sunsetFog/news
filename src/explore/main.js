@@ -8,6 +8,8 @@ import 'babel-polyfill'; // 浏览器兼容 IE8
 Vue.config.productionTip = false; //生产提示
 // es6Promise .polyfill();
 
+import "@static/capital/rootVariable.css";
+
 import iView from 'iview';
 // 全局加载样式
 import 'iview/dist/styles/iview.css';
@@ -196,7 +198,7 @@ router.beforeEach((to, from, next) => {
 
     NProgress.start(); // 开始动画
     next(); // next默认跳转
-    
+
 });
 router.afterEach(transition => {
     NProgress.done(); // 结束动画
