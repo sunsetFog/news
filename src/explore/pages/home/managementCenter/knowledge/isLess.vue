@@ -4,13 +4,15 @@
             isLess<span class="milk">---</span>
         </el-button>
         <button>apple</button>
+        <br/><br/><br/>
+        <div class="sanjiao">--哈喽--</div>
     </section>
 </template>
 
 <script>
 /*
     less官网: https://less.bootcss.com/
-    
+
     npm install less less-loader --save      注意版本报错
 
     build\webpack.base.conf.js  配置
@@ -83,6 +85,8 @@ export default {
 }
 
 #isLess {
+    width: 100%;
+    height: 100%;
     .is-variable {
         color: @text-color;
         .circle-1;
@@ -94,6 +98,15 @@ export default {
             #orange.milk();
         }
     }
+}
+
+
+
+
+.sanjiao {
+    height: 60px;
+    .actionFb();
+    .hoverShadow();
 }
 </style>
 
