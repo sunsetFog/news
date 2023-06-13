@@ -92,10 +92,6 @@
             <dd>内容-长城旅游</dd>
         </dl>
 
-        <div class="line-text-line">
-            <hr /> hr分割线:水平线中间添加文字
-            <hr />
-        </div>
 
         <div class="picture-text">
             <dl>
@@ -221,29 +217,6 @@ export default {
         }
     }
 
-    .line-text-line {
-        width: 100%;
-        height: 50px;
-        display: flex;
-        align-items: center;
-
-        hr {
-            margin: 0;
-            float: left;
-            flex: 1;
-            height: 1px;
-            border-right: 0;
-            border-left: 0;
-        }
-
-        hr:nth-of-type(1) {
-            margin-right: 15px;
-        }
-
-        hr:nth-of-type(2) {
-            margin-left: 15px;
-        }
-    }
 
     .picture-text {
         dl {

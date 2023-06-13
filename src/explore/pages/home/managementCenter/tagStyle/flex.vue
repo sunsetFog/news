@@ -1,44 +1,51 @@
 <template>
     <section id="flex-index">
         <!-- 问题：高为百分比时，文字垂直居中？     line-height: 100%;和字体大小一样大，不能用 -->
-        <hr>1.flex---盒子和文字垂直居中---好用</hr>
+        <LineTextLine>1.flex---盒子和文字垂直居中---好用</LineTextLine>
         <div class="vertical-center">
             文字垂直居中
             <p></p>
         </div>
-        <hr>1.定位---盒子垂直居中</hr>
+
+        <LineTextLine>1.定位---盒子垂直居中</LineTextLine>
         <div class="pen-scenery">
             <p></p>
         </div>
-        <hr>1.高为百分比时，display:table-cell文字垂直居中</hr>
+
+        <LineTextLine>1.高为百分比时，display:table-cell文字垂直居中</LineTextLine>
         <div class="height-percentage">
             <span>文字垂直居中</span>
         </div>
-        <hr>2.行和列</hr>
+
+        <LineTextLine>2.行和列</LineTextLine>
         <div class="list">
             <div class="list-cell02"></div>
             <div class="list-cell02"></div>
             <div class="list-cell02"></div>
         </div>
-        <hr>3.等比伸缩</hr>
+
+        <LineTextLine>3.等比伸缩</LineTextLine>
         <div class="grid">
             <div class="grid-cell03">1/3</div>
             <div class="grid-cell03">1/3</div>
             <div class="grid-cell03">1/3</div>
         </div>
-        <hr>4.百分比布局</hr>
+
+        <LineTextLine>4.百分比布局</LineTextLine>
         <div class="percentage">
             <div class="percentage-cell04">5/10</div>
             <div class="percentage-cell04">4/10</div>
             <div class="percentage-cell04">1/10</div>
         </div>
-        <hr>5.水平间隔:用margin分配剩余空间---大盒子固定宽，好用</hr>
+
+        <LineTextLine>5.水平间隔:用margin分配剩余空间---大盒子固定宽，好用</LineTextLine>
         <div class="format">
             <div class="format-cell05">5/10</div>
             <div class="format-cell05">4/10</div>
             <div class="format-cell05">1/10</div>
         </div>
-        <hr>6.流式布局---水平换行</hr>
+
+        <LineTextLine>6.流式布局---水平换行</LineTextLine>
         <div class="flowing">
             <div class="flowing-cell06"></div>
             <div class="flowing-cell06"></div>
@@ -46,7 +53,7 @@
             <div class="flowing-cell06"></div>
             <div class="flowing-cell06"></div>
         </div>
-        <!-- 
+        <!--
             ---好用
             flex: 1;某盒子划分剩余空间--（兄弟盒子中，只有一个盒子加flex: 1;）
             flex: 1;  flex: 2; flex: 3;按照倍数划分
@@ -57,13 +64,14 @@
             flex-grow 用来指定父容器多余空间的分配比率，默认值为0
             flex-shrink 用来指定父容器空间不够时子元素的缩小比例，默认为1，0不压缩
          -->
-        <hr>7.高---划分剩余空间---大盒子固定高</hr>
+         <LineTextLine>7.高---划分剩余空间---大盒子固定高</LineTextLine>
         <div class="surplus01">
             <div class="surplus-cell17"></div>
             <div class="surplus-cell27"></div>
             <div class="surplus-cell37"></div>
         </div>
-        <hr>7.宽---划分剩余空间---大盒子固定宽</hr>
+
+        <LineTextLine>7.宽---划分剩余空间---大盒子固定宽</LineTextLine>
         <div class="surplus02">
             <div class="surplus-cell17">恍恍惚惚</div>
             <div class="surplus-cell27"></div>
@@ -82,7 +90,7 @@ export default {
 <style lang="less" scoped>
 #flex-index {
     width: 100%;
-    background: #fff;
+    color: #fff;
 
     .vertical-center {
         width: 100%;

@@ -13,7 +13,7 @@ charset = utf-8
 # 缩进风格，可选"space"、"tab"
 indent_style = space
 # 使用Tab 4 个空格来缩进
-indent_size = 8
+indent_size = 4
 # 结尾换行符，可选"lf"、"cr"、"crlf"
 end_of_line = lf
 # 在文件结尾插入新行

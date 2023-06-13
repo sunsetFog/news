@@ -72,6 +72,7 @@ Viewer.setDefaults({
 Vue.prototype.$eventBus = new Vue();
 
 /* 全局注册子组件：用的不多就局部注册，全局注册会消耗性能 */
+import LineTextLine from '@/explore/components/lineTextLine.vue';
 import cloudEchart from '@/explore/components/echarts/cloudEchart.vue';
 import recharge from '@/explore/components/recharge.vue';
 import withdrawal from '@/explore/components/withdrawal.vue';
@@ -90,6 +91,7 @@ import gameTheme from '@/explore/components/game_theme.vue';
 import safeDeposit from '@/explore/components/safeDeposit.vue';
 import portrait from '@/explore/components/portrait.vue';
 import rechargeRecord from '@/explore/components/rechargeRecord.vue';
+Vue.component('LineTextLine', LineTextLine);
 Vue.component('cloudEchart', cloudEchart);
 Vue.component('recharge', recharge);
 Vue.component('withdrawal', withdrawal);
