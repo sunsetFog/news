@@ -1,6 +1,6 @@
 <template>
     <section>
-        <!-- 
+        <!--
             study: 国际多语言
             $tc , $t , $te , v-t
             1.$tc 用于复数，例如英文一般分单复数
@@ -16,13 +16,12 @@
             <p v-t="path"></p >
          -->
         ----{{$t("button.assignRole")}}-----{{$t("home.title")}}-----
-            <el-button @click="translate('zh')">中文翻译</el-button>----<el-button@click="translate('en')">英文翻译</el-button>
-        <h3>ui组件多语言翻译:</h3>
+        <br/><br/>
+        <h3>插件多语言翻译:</h3>
         <pagination :pagingObj="queryData" :pageStep="[10,15]" @emitWay="sunQuery"></pagination>
-        <!-- study: 皮肤切换 -->
-        <el-button @click="changeTheme('white')">白色</el-button>
-        <el-button @click="changeTheme('black')">黑色</el-button>
-        <el-button @click="changeTheme('blue')">蓝色</el-button>
+        <br/><br/><br/><br/>
+        切换翻译：<br/>
+        <el-button @click="translate('zh')">中文翻译</el-button>----<el-button@click="translate('en')">英文翻译</el-button>
     </section>
 </template>
 
@@ -47,11 +46,6 @@ export default {
         this.$i18n.mergeLocaleMessage(lang, locals);// 动态添加语言
     },
     methods: {
-        changeTheme(type) {
-            console.log("-切换主题-0=", type);
-            this.$means.changeTheme(type);
-
-        },
         sunQuery(){
 
         },

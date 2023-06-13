@@ -25,5 +25,9 @@ export default {
                 document.documentElement.classList.remove('white');
                 break;
         }
+    },
+    changeTheme2(type) {
+        // html设置属性
+        document.documentElement.setAttribute('data-theme', type);
     }
 }

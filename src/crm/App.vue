@@ -42,7 +42,7 @@ export default {
 /* @import 加载 */
 @import './assets/app.less';
 // 加载样式   study: 皮肤切换
-@import "~@static/themeSkin/index.less";
+@import "~@static/crm/themeUnit/themeSkin1/index.less";
 .pen-is-disabled {
     color: #c0c4cc;
     cursor: not-allowed;

@@ -84,7 +84,7 @@ exports.cssLoaders = function (options) {
     scss: generateLoaders('sass').concat({
       loader: 'sass-resources-loader',
       options: {
-        resources: path.resolve(__dirname, '../static/capital/variable.scss')
+        resources: path.resolve(__dirname, '../static/crm/themeUnit/themeSkin2/index.scss')
       }
     }),
 

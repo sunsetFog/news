@@ -47,11 +47,12 @@ module.exports = {
         loader: 'vue-loader',
         options: vueLoaderConfig
       },
-      // scss
-      {
-        test: /\.scss$/,
-        loaders: ["style", "css", "sass"]
-      },
+      // bug: scss默认已经配置，重复配置了
+      // 【踩坑，VUE项目中，MAIN.JS引入SCSS文件时报错】 https://blog.csdn.net/Mrchai521/article/details/116905529
+//       {
+//         test: /\.scss$/,
+//         loaders: ["style", "css", "sass"]
+//       },
       // less
       {
         test: /\.less$/,

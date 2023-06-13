@@ -92,6 +92,9 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 vue2、elementUI
 
 
+# 查找索引
+study:
+bug:
 
 
 
