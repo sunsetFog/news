@@ -1,5 +1,5 @@
 <template>
-    <section id="price-baidumap" :style="{height: set_height}">
+    <section id="price-baidumap">
         <div class="container">
             <div class="container-right">
                 <price-map @mapEmit="mapEmit" ref="map" :take_list="take_list"></price-map>
@@ -44,7 +44,6 @@ export default {
     name: 'PriceManage',
     data () {
         return {
-            set_height: document.documentElement.clientHeight + 'px',
             title: '价格地图',
             substance: '',
             details: false,
@@ -103,7 +102,7 @@ export default {
                 t = dv.offsetTop;
                 //开关打开
                 isDown = true;
-                //设置样式  
+                //设置样式
                 dv.style.cursor = 'move';
             }
             //鼠标移动
@@ -281,7 +280,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.price-baidumap {
+#price-baidumap {
     width: 100%;
     height: 100%;
     overflow: hidden;

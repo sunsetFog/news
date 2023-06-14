@@ -111,4 +111,7 @@ const env = require('../config/' + process.env.env_config + '.env')
 新建文件   notes.env.js
 
 
+https://huawei-testbqzb.obs.myhuaweicloud.com/live%2F76099113904244.png 404 (Not Found)
+
+
 
