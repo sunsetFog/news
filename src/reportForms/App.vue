@@ -2,12 +2,15 @@
   <div id="app">
     <div class="watermark" v-if="$route.path == '/home'"></div>
     <router-view></router-view>
+    <PopupUnit></PopupUnit>
   </div>
 </template>
 
 <script>
+import PopupUnit from '@/reportForms/components/popupUnit/index';
 export default {
   name: "App",
+  components: { PopupUnit },
   data() {
     return {
 
