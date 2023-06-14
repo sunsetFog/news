@@ -30,12 +30,12 @@ export default {
             activeIndex: 0,
             treeList: [
                 { text: '浙江', children: [
-                    { id: 1, text: '杭州' },
-                    { id: 2, text: '温州' }
+                    { id: 1, text: '杭州', path: '/home' },
+                    { id: 2, text: '温州', path: '/login' }
                 ] },
                 { text: '江苏', children: [
-                    { id: 3, text: '南京' },
-                    { id: 4, text: '苏州' }
+                    { id: 3, text: '南京', path: '/home' },
+                    { id: 4, text: '苏州', path: '/login' }
                 ] },
             ]
         }
@@ -56,7 +56,7 @@ export default {
             console.log("--goWay--", item);
             this.showLeft = false;
             this.$router.push({
-                path: '/login'
+                path: item.path
             })
         }
     }
