@@ -69,7 +69,7 @@ WebIM.conn.listen({
     Vue.$router.push({ path: redirectUrl })
   },
   onClosed: function (message) {
-    Vue.$router.push({ path: '/loginUnit/index' })
+    Vue.$router.push({ path: '/login' })
   }, // 连接关闭回调
   onTextMessage: function (message) {
     console.log('onTextMessage', message)
@@ -458,7 +458,7 @@ WebIM.conn.listen({
       Message.error('消息撤回失败')
     }
 		// 报错返回到登录页面
-		// Vue.$router.push({ path: '/loginUnit/index' });
+		// Vue.$router.push({ path: '/login' });
   }, // 失败回调
   onRecallMessage: message => {
     console.log('撤回消息', message)

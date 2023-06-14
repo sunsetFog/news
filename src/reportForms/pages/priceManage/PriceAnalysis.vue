@@ -301,7 +301,7 @@ export default {
       this.option_01 = drawing.demo01(this, this.card_list[index].MANAGER_AVG, this.card_list[index].PLAN_AVG, this.card_list[index].ACT_AVG, this.card_list[index].AREA, this.xJson)
     },
     wherePlace () {
-      this.$router.push({ path: '/priceManage/priceManage', query: { place: this.where_place, project_long: this.center[0], project_lat: this.center[1], project_id: this.$route.query.code, location: true } })
+      this.$router.push({ path: '/priceManage/index', query: { place: this.where_place, project_long: this.center[0], project_lat: this.center[1], project_id: this.$route.query.code, location: true } })
     }
   },
   components: {

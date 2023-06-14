@@ -34,7 +34,7 @@
                     "code": "MSTART_PriceManage",
                     "full": "启明星-项目价格地图",
                     "name": "项目价格地图",
-                    "path": "/priceManage/priceManage",
+                    "path": "/priceManage/index",
                     "icon": "PriceManage.png",
                     "desc": "全国各项目成交均价走势、各版本定价分析",
                     "flag": "Y",

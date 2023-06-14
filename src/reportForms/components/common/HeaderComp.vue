@@ -109,7 +109,7 @@ export default {
       this.$router.push('/tips')
     },
     showAlert () {
-      if (this.$route.path === '/priceManage/priceManage') {
+      if (this.$route.path === '/priceManage/index') {
         this.$parent.intermediary()
       }
       this.show = true

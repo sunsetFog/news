@@ -34,7 +34,7 @@ export default {
         },
         signOut() {
             this.$router.push({
-                path: '/loginUnit/index'
+                path: '/login'
             })
         }
     }

@@ -22,7 +22,7 @@ export default new Router({
     // [
     //     { path: '*', name: 'error', meta: { title: '找不到该页', key: 404 }, component: resolve => require(['@/reportForms/pages/404.vue'], resolve) },
     //     { path: '/home', name: 'home', meta: { title: '首页', key: 1 }, component: resolve => require(['@/reportForms/pages/home'], resolve) },
-    //     { path: '/priceManage/priceManage', name: 'priceManage', meta: { title: '价格地图', key: 1 }, component: resolve => require(['@/reportForms/pages/priceManage/priceManage'], resolve) },
+    //     { path: '/priceManage/index', name: 'priceManage', meta: { title: '价格地图', key: 1 }, component: resolve => require(['@/reportForms/pages/priceManage/index'], resolve) },
     //     { path: '/priceManage/PriceAnalysis', name: 'PriceAnalysis', meta: { title: '价格详情', key: 1 }, component: resolve => require(['@/reportForms/pages/priceManage/PriceAnalysis'], resolve) },
     //     { path: '/receivable/AR', name: 'AR', meta: { title: '应收账款', key: 1 }, component: resolve => require(['@/reportForms/pages/receivable/AR'], resolve) },
     //     { path: '/luckDraw/index', name: 'luckDraw', meta: { title: '抽奖活动', key: 1 }, component: resolve => require(['@/reportForms/pages/luckDraw/index'], resolve) },
@@ -34,7 +34,7 @@ export default new Router({
     //     { path: '/liveBroadcast/index', name: 'liveBroadcast', meta: { title: '直播间', key: 1 }, component: resolve => require(['@/reportForms/pages/liveBroadcast/index'], resolve) },
 
 
-    //     { path: '/loginUnit/index', name: 'login', meta: { title: '登录', key: 1 }, component: resolve => require(['@/reportForms/pages/loginUnit/index'], resolve) },
+    //     { path: '/login', name: 'login', meta: { title: '登录', key: 1 }, component: resolve => require(['@/reportForms/pages/login'], resolve) },
     //     { path: '/registerUnit/index', name: 'register', meta: { title: '注册', key: 1 }, component: resolve => require(['@/reportForms/pages/registerUnit/index'], resolve) },
     //     { path: '/forgetPasswordUnit/index', name: 'forgetPassword', meta: { title: '忘记密码', key: 1 }, component: resolve => require(['@/reportForms/pages/forgetPasswordUnit/index'], resolve) },
     //     { path: '/essentials', name: 'essentials', meta: { title: '主页', key: 1 }, component: resolve => require(['@/reportForms/pages/essentialsUnit/index'], resolve),

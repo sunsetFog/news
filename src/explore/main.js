@@ -19,7 +19,7 @@ Vue.use(iView);
 import 'font-awesome/css/font-awesome.min.css';
 
 // 关闭Mock
-// import '@/explore/database/index'; // 不能用if动态加载js
+import '@/explore/database/index'; // 不能用if动态加载js
 // if (true) {
 //   require('./database/index') // 可以动态加载，不报错
 // }

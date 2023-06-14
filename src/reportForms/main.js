@@ -96,9 +96,10 @@ Object.keys(filters).forEach(key => {
 });
 
 router.beforeEach((to, from, next) => {
+    // console.log("---黄鹤楼楼---", to, "---", from);
     document.title = to.meta.title;
     // 刷新执行，且不是登录页，且要有token
-    if (from.path == '/' && to.path != '/loginUnit/index') {
+    if (from.path == '/' && to.path != '/login') {
         if (VueCookies.get('token')) {
             store.dispatch('routerApple').then(function(value) {
                 console.log('--then结束--');
@@ -106,7 +107,7 @@ router.beforeEach((to, from, next) => {
                 next();
             });
         } else {
-            next({ path: '/loginUnit/index' });
+            next({ path: '/login' });
         }
     }
     next();

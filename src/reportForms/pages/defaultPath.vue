@@ -13,7 +13,7 @@ export default {
         }
     },
     beforeCreate() {
-        // this.$router.push({ path: "/home/world/world"})
+        this.$router.push({ path: "/login"})
     }
 }
 </script>

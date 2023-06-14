@@ -149,7 +149,7 @@
               <img v-if="luckyNum != 0" src="@static/reportForms/reward/1/gongxizhongjiang.png"/>
               <img v-else src="@static/reportForms/reward/1/meiyou.png"/>
             </div>
-            
+
             <img v-if="luckyNum != 0" class="ki-content" :src="awardImgUrl"/>
             <img v-if="luckyNum == 0" class="ki-content" src="@static/reportForms/reward/1/pic_notmes.png"/>
             <p v-if="luckyNum != 0 && (awardName500 != '500鲨豆' && awardName500 != '100鲨豆')">有效期至：{{pastTime}}</p>
@@ -366,7 +366,7 @@ export default {
     },
     earnWay (value, taskName) {
       if (!this.token && !value) {
-        this.$router.push({path: '/loginUnit/index'})
+        this.$router.push({path: '/login'})
         return
       }
 
@@ -494,7 +494,7 @@ export default {
     },
     myAward () {
       if (!this.token) {
-        this.$router.push({path: '/loginUnit/index'})
+        this.$router.push({path: '/login'})
         return
       }
       this.dessert_box = true
@@ -505,7 +505,7 @@ export default {
     },
     startCallBack () {
       if (!this.token) {
-        this.$router.push({path: '/loginUnit/index'})
+        this.$router.push({path: '/login'})
         return
       }
       if (this.luckyNum == 0) {
