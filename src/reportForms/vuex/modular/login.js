@@ -2,6 +2,17 @@ import apiHttp from '@/explore/api/http.js';
 import lodash from 'lodash'
 import finalRouter from '@/reportForms/router/modules/finalRouter.js'
 
+function recursion(arr) {
+    arr = arr || []; //退出递归1. 空数组不会遍历，就不会调用自己了
+    for (let i = 0; i < arr.length; i++) {
+        let item = arr[i];
+        item.text = item.title;
+        item.key = lodash.uniqueId('menu-');
+        item.icon = require('@static/picture/center/shouyi.png');
+        recursion(item.children);
+    }
+}
+
 function luyou(arr) {
     arr = arr || []; //退出递归1. 空数组不会遍历，就不会调用自己了
     for (let i = 0; i < arr.length; i++) {
@@ -11,7 +22,7 @@ function luyou(arr) {
             continue;
         }
         item.name = lodash.uniqueId('mark-');
-        item.meta = { 
+        item.meta = {
             title: item.title,
             hidden: item.hidden,
             icon: item.icon,
@@ -43,13 +54,15 @@ function luyou(arr) {
 
 const login = {
     state: {
-        routerList: []
+        routerList: [],
+        menuList: [],
     },
     mutations: {
 
     },
     getters: {
-        routerList: state => state.routerList
+        routerList: state => state.routerList,
+        menuList: state => state.menuList
     },
     actions: {
         async routerApple({state, commit, dispatch}, params) {
@@ -65,17 +78,34 @@ const login = {
             }).catch((err) => {
                 console.log('error',err);
             })
+
+
+            await apiHttp({
+                url: process.env.core_url + '/sky/menu/treeMenu',
+                method: 'get',
+                params: {
+                    subject: 'reportForms'
+                }
+            }).then((res) => {
+                let list = res.data;
+                recursion(list);
+                dispatch('dynamicMenu', list);
+            }).catch((err) => {
+                console.log('error',err);
+            })
             // 深拷贝看不到component字段的
-            // console.log("--routerApple--", JSON.parse(JSON.stringify(state)));
-            console.log("--routerApple--", state);
+            console.log("--routerApple--", JSON.parse(JSON.stringify(state)));
 
             return state.routerList;
-            
+
         },
         dynamicRouter({state, commit, dispatch}, params) {
             luyou(params);
             params = [...params, ...finalRouter];
             state.routerList = params;
+        },
+        dynamicMenu({state, commit, dispatch}, params) {
+            state.menuList = params
         }
     }
 }
