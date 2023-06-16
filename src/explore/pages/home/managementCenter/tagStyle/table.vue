@@ -1,17 +1,44 @@
 <template>
     <section class="pen-table">
-        <!-- 
-            table表格
-            colspan 占用多少列
-            rowspan 占用多少行
+        <!--
+            table表格-属性
+                border="0" 边框
+                align="center"
+                width="500px" 宽度
+                height="200px" 高度
+                cellspacing="0" 单元格之间的距离
+                cellpadding="10px" 单元格内容与其边框之间的距离
+                bgcolor="aquamarine" 设置背景颜色
+                valign="bottom" 内容的垂直对齐方式
+                background="../img/2.jpg" 背景图片，背景图片的优先级高于背景颜色
+            tr行-属性
+                width="500px" 宽度
+                height="200px" 高度
+                bgcolor="aquamarine" 设置背景颜色
+                align="right" 水平对齐
+                valign="bottom" 内容的垂直对齐方式
+            td列-属性
+                width="500px" 宽度
+                height="200px" 高度
+                bgcolor="aquamarine" 设置背景颜色
+                background="../img/2.jpg" 背景图片，背景图片的优先级高于背景颜色
+                align="right" 水平对齐
+                valign="bottom" 内容的垂直对齐方式
+                colspan="5" 合并列
+                rowspan="5" 合并行
+            caption:表格标题
             thead 表头
-            tbody 表体
-            tfoot 表尾
+                th:列标题
+            tbody 表格的主体，表体
+            tfoot 表格的尾部，表尾
+
          -->
         <table width="520px" height="550px">
+            <caption>个人应聘信息</caption>
             <thead>
                 <tr>
-                    <th colspan="5">个人应聘信息</th>
+                    <th colspan="2">列标题</th>
+                    <th colspan="3">列标题</th>
                 </tr>
             </thead>
             <tbody>
@@ -112,6 +139,14 @@ export default {
         th, td { // 设单元格border、padding
             border: 0.5px solid #ECECEC;
             padding: 5px;
+        }
+        caption {
+            height: 48px;
+            line-height: 48px;
+            color: chartreuse;
+            background: #7b8b9d;
+            font-weight: 400;
+            font-size: 14px;
         }
         thead th {
             height: 48px;

@@ -21,7 +21,7 @@
 /*
 
 锚点
-跳至指定位置
+定位跳至指定位置
 滚动不精确 document.documentElement.scrollTop = document.body.scrollTop = 500
 标记点id、name属性都行
 

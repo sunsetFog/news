@@ -9,7 +9,15 @@
     <footers :vip_foot="false"></footers>
 </section>
 </template>
-
+<!--
+    iframe框架
+        src="访问域名"
+        width="100%" 宽度
+        height="600px" 高度
+        scrolling="" 是否出现滚动条，yes，no，auto
+        frameborder="0" 框架的边框  0表示没有，1表示有
+        align="bottom" 垂直对齐   和img的align相同，也表示float
+ -->
 <script>
 import footers from '@/explore/components/footer.vue';
 export default{
@@ -30,7 +38,7 @@ export default{
     },
     methods:{
         fishMeans(){
-             
+
         },
         systemMeans(){
             // 子vue:给其他window对象发送消息 parent.postMessage('back',"*");
@@ -41,11 +49,11 @@ export default{
                 if (e.data == 'back') {
                     that.$router.push({path: '/home/index'});
                 }
-           
+
             }
         }
     }
-    
+
 }
 </script>
 
