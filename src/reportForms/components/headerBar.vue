@@ -92,9 +92,13 @@ export default {
         top: 0px;
     }
     /deep/ .van-overlay {
-        top: 50%;
-        left: 30px;
-        margin-top: -270px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .mechanism {
         width: 315px;

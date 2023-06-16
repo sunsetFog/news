@@ -1,5 +1,5 @@
 <template>
-  <section class="page page-index">
+  <section class="price-manage">
     <header-bar title="项目价格动态分析"></header-bar>
     <gaode-amap @receive="receive" ref="gaode"></gaode-amap>
   </section>
@@ -53,7 +53,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.page-index {
+.price-manage {
   position: relative;
   width: 100%;
   background-color: #001018;

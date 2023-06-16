@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="watermark" v-if="$route.path == '/home'"></div>
+    <div class="watermark" v-if="watermark_list.indexOf($route.path) != -1"></div>
     <router-view></router-view>
     <PopupUnit></PopupUnit>
   </div>
@@ -13,7 +13,12 @@ export default {
   components: { PopupUnit },
   data() {
     return {
-
+        watermark_list: [
+        '/home',
+        '/priceManage/PriceAnalysis',
+        '/priceManage/index',
+        '/receivable/AR'
+        ]
     };
   },
   watch: {
@@ -39,9 +44,11 @@ export default {
   -color: white;
   height: 100%;
   .watermark {
-    width: 100%;
-    height: 100%;
     position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
     background: #001018;
     z-index: -1;
   }

@@ -1,5 +1,5 @@
 <template>
-  <section class="page page-index" v-show="immortal">
+  <section class="price-analysis" v-show="immortal">
     <header-bar title="项目价格动态分析"></header-bar>
     <div class="location-box">
       <span class="where-place" @click="wherePlace"><van-icon name="location"/>{{where_place}}</span>
@@ -178,7 +178,7 @@ export default {
       })
     },
     cityEvent () {
-      this.$router.push({ path: '/treeSelect', query: { backPath: this.$route.name } })
+      this.$router.push({ path: '/priceManage/index', query: { backPath: this.$route.name } })
     },
     getEcharts () {
       const self = this
@@ -312,7 +312,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.page-index {
+.price-analysis {
   width: 100%;
   .location-box {
     height: 100px;
