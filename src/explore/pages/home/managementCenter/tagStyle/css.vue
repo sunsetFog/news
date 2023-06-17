@@ -186,6 +186,8 @@ export default {
         // display: none;//元素消失
         // display: block;//元素出现
 
+        // text-decoration: underline; 文字带下划线
+
         // border-radius: 10px;//圆角
         // cursor: pointer;//鼠标小手
         // cursor: not-allowed;// 鼠标禁用图标

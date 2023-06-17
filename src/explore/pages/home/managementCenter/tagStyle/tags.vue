@@ -1,6 +1,12 @@
 <template>
     <section id="tags">
-        <!-- 可以使用element-ui和iview-ui的 Layout 布局 -->
+        <!--
+            可以使用element-ui和iview-ui的 Layout 布局
+
+            HTML的语义化?
+            根据内容的结构化(内容语义化)，选择合适的标签(代码语义化)便于开发者阅读和写出更优雅的代码的同时让浏览器的爬虫和机器很好地解析。
+
+        -->
         <LineTextLine>标题h1~h6</LineTextLine>
         <h1>h1一级标题</h1>
         <h2>h2二级标题</h2>
@@ -23,6 +29,8 @@
         <br/>
         分割线
         <hr/>
+        <br/>
+        <u>u自带下划线</u>
 
         <LineTextLine>br换行标签</LineTextLine>
         <br/><br/>
