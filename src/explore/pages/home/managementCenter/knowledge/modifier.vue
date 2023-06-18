@@ -1,62 +1,82 @@
 <template>
     <section id="modifier">
-        <!-- .trim过滤首尾的空格 -->
-            <input type="text" v-model.trim="value">
-        <hr>
-        <!-- .lazy鼠标离开input框才会更新数据 -->
-            <input type="text" v-model.lazy="value">
-        <hr>
-        <!-- 限制输入只能是数字 -->
-            <input type="text" v-model.number="value">
-        <hr>
-        <!-- 阻止事件冒泡1 -->
-            <Button @click.stop="test">test</Button>
-        <hr>
-        <!-- 阻止默认行为 比如表单的提交、a标签的跳转就是默认事件-->
-            <a @click.prevent="test">a标签</a>
-        <hr>
-        <!-- 阻止事件冒泡2 -->
-            <Button @click.self="test">self</Button>
-        <hr>
-        <!-- 只执行一次之后都不会再执行 -->
-            <Button @click.once="test">once</Button>
-        <hr>
-        <!-- 事件触发是目标往外冒泡,先1 后2 -->
-            <div @click.capture="test(1)">
-                <Button @click="test(2)">capture</Button>
+        <LineTextLine>.trim 过滤首尾的空格</LineTextLine>
+        <input type="text" v-model.trim="trimValue">
+        &nbsp;&nbsp;&nbsp;
+        +{{ trimValue }}+
+        <LineTextLine>.lazy 失去焦点才会更新数据</LineTextLine>
+        <input type="text" v-model.lazy="lazyValue">
+        &nbsp;&nbsp;&nbsp;
+        +{{ lazyValue }}+
+        <LineTextLine>.number 限制输入只能是数字，失去焦点才过滤</LineTextLine>
+        <input type="text" v-model.number="numberValue">
+        &nbsp;&nbsp;&nbsp;
+        +{{ numberValue }}+
+        <LineTextLine>.stop 阻止事件冒泡</LineTextLine>
+        <div @click="stopParent">
+            <Button @click.stop="stopSon">阻止事件冒泡</Button>
+        </div>
+        <LineTextLine>.prevent 阻止默认行为 a标签的跳转就是默认事件</LineTextLine>
+        <a @click.prevent="preventWay">a标签不跳转</a>
+        <LineTextLine>.self 事件冒泡和捕获事件不能引起触发，跳过了</LineTextLine>
+        <div @click.self="stopParent">
+            <Button @click="stopSon">子事件触发，父跳过事件冒泡不触发</Button>
+        </div>
+        <LineTextLine>.once 只执行一次，之后都不会再执行</LineTextLine>
+        <Button @click.once="onceWay">只执行一次</Button>
+        <LineTextLine>.capture事件顺序控制 先从外到里的捕获只执行.capture修饰的事件，然后从里到外的冒泡只执行没.capture修饰的事件</LineTextLine>
+        <div @click="captureWay(1)">
+            <div @click.capture="captureWay(2)">
+                <Button @click="captureWay(3)">事件顺序控制</Button>
             </div>
-        <hr>
-        <!-- 
-            组件事件无效，需要用native才能触发，注意ui组件的使用
-            报错时用：Unable to preventDefault inside passive event listener due to target being treated as passive. See
-        -->
-            <!-- <My-component @click.native="shout(3)"></My-component> -->
-
-        <!-- prevent 阻止浏览器默认动作 ，相当于原生的event.preventDefault() -->
-            <!-- <My-component @click.native.prevent="shout(3)"></My-component> -->
-        <hr>
-        <!-- 监听enter键的指令,要先input焦点，再按enter键才有效 -->
-            <input type="text" @keyup.enter="test(1)">
-            <Button @click.enter="test(1)">enter</Button>
+        </div>
+        <LineTextLine>.native 组件标签加事件,可以多个修饰符</LineTextLine>
+        <footers @click.native.prevent="nativeWay"></footers>
+        <LineTextLine>@keyup.enter 监听enter键的指令,要先input焦点，再按enter键才有效</LineTextLine>
+        <input type="text" @keyup.enter="enterWay">
     </section>
 </template>
 
 <script>
+import footers from '@/explore/components/footer.vue';
 export default {
     name: "modifier",
-    data(){
-        return{
-            value: 0
+    components: { footers },
+    data() {
+        return {
+            trimValue: ' 哈喽 ',
+            lazyValue: '懒更新',
+            numberValue: 666,
         }
     },
     methods: {
-        test(index){
-            console.log('触发事件',index);
+        enterWay() {
+            console.log('enter回车事件');
+        },
+        stopParent() {
+            console.log("父盒子事件");
+        },
+        stopSon() {
+            console.log("子盒子事件");
+        },
+        preventWay(event) {
+            console.log("a标签不跳转了", event);
+        },
+        onceWay() {
+            console.log("只执行一次");
+        },
+        captureWay(index) {
+            console.log("事件顺序控制", index);
+        },
+        nativeWay() {
+            console.log("组件标签加事件")
         }
     }
 }
 </script>
 
 <style lang="less" scoped>
+#modifier {
 
+}
 </style>

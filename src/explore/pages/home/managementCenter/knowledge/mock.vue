@@ -10,9 +10,9 @@
         template的作用是模板占位符，可帮助我们包裹元素，但在循环过程当中，template不会被渲染到页面上 -->
         <h2>2.template模板渲染</h2>
         <template v-for="item,index in 2">
-            <div>{{index}}===={{item}}</div>
+            <p>{{index}}===={{item}}</p>
         </template>
-        
+
         <h2>3.slot插槽渲染</h2>
 
 

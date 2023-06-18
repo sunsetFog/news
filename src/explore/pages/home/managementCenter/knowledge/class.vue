@@ -1,25 +1,26 @@
 <template>
 <section id="class">
 	<!-- v-bind等于: -->
-	<!-- 属性绑定class -->
+    <LineTextLine>属性绑定class</LineTextLine>
 	<div :class="{ 'class-name-01': isActive, 'class-name-02': true }">vue class</div>
 	<div v-bind:class="[ arrClass1, arrClass2 ]">vue arrClass</div>
 	<!--数组与对象写法-->
 	<div v-bind:class="[{ 'class-name-01': isActive }, arrClass1]">lljj</div>
-	
-	<!--属性绑定style-->
+
+    <LineTextLine>属性绑定style</LineTextLine>
 	<div v-bind:style="{ color: styleColor01, fontSize: styleSize01}">vue style</div>
 	<div v-bind:style="[ styleColor02, styleSize02 ]">vue arrStyle</div>
 	<!-- a链接 -->
 	<a :href="link">百度链接</a>
 
-	<!-- 根据状态，返回不同的类名 -->
+    <LineTextLine>根据状态，返回不同的类名</LineTextLine>
 	<div>
 		<ul v-for="item in payData">
 			<li :class="[ btnClass(item.value) ]">{{item.name}}</li>
 		</ul>
 	</div>
-	<!-- 三目运算 -->
+
+    <LineTextLine>三目运算</LineTextLine>
 	<div :style="{ color: (styleNum == 20) ? 'blue' : 'red' }">Success</div>
 </section>
 </template>
@@ -41,7 +42,7 @@
 				payData: [{id: 1,name: '类一按钮',value: 10},{id: 2,name: '类二按钮',value: 20},{id: 3,name: '类三按钮',value: 30}],
 				styleNum: 20,
 
-				
+
 			}
 		},
 		methods: {
@@ -54,8 +55,8 @@
 
 			},
 		}
-		
-		
+
+
 	}
 </script>
 
