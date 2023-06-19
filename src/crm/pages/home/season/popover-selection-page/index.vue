@@ -1,10 +1,10 @@
 <template>
     <section id="popover-selection-page">
 <!--
-   slot="reference" 手动触发 Popover 
+   slot="reference" 手动触发 Popover
    下拉框v-model和el-option的数组有关联的，此时要全部数据
-   
-    Created by rafael.
+
+    bug: ***
     问题：使该页的el-select下拉框隐藏，不能影响全局，用/deep/和!important样式都无效？
     失效原因：等级提最高都没生效，因为样式有嵌套关系的，要到适当位置写
     解决方案1：
@@ -22,14 +22,14 @@
     }
     两者都是自定义类名，使不影响全局
 
-    遇到的问题: Created by rafael.
+    遇到的问题: bug: ***
     如何解决el-table分页使勾选消失的问题？
     https://blog.csdn.net/LingSnow1019/article/details/119569621
     加上
     :row-key="getRowKeys"
     :reserve-selection="true"
 
-    遇到的问题: Created by rafael.
+    遇到的问题: bug: ***
     回显勾选只勾选当前页，而不是所有分页一起勾选
 -->
 <el-popover

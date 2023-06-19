@@ -15,8 +15,8 @@
                         </el-input>
                     </el-col>
                 </el-row>
-                <!-- 
-                    Created by rafael.
+                <!--
+                    bug: ***
                     如何解决el-table分页使勾选消失的问题？
                     https://blog.csdn.net/LingSnow1019/article/details/119569621
                     加上

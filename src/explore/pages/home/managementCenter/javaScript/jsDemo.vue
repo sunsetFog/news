@@ -22,7 +22,7 @@ export default {
         // console.log("---画好后---", this.fibonacci(100))
     },
     mounted(){
-        this.demo4();
+        this.demo1();
     },
     methods: {
         demo1(){
@@ -95,51 +95,28 @@ export default {
             console.log('3数组去重',bottle);
         },
         demo3(){
-            // 冒泡排序：前后两两比较，每次将剩下最大值放在后面
-		    // 优点：效率高，执行次数少
-			var arr=[32,3,4,45,6,66,77]
-			var temp=0;
-			for(var i=0;i<arr.length-1;i++){
-				for(var j=0;j<arr.length-1-i;j++){
-					if(arr[j]>arr[j+1]){
-						temp=arr[j];
-						arr[j]=arr[j+1];
-						arr[j+1]=temp;
+            /*
+                好方法：两两比较
+                当同一个数组，用两个for循环时，就必须选两两比较
+
+                冒泡排序：前后两两比较，每次将剩下最大值放在后面
+                优点：效率高，执行次数少
+            */
+			var arr=[32, 3, 4, 45, 6, 16, 27];
+			var temp = 0;
+			for(let i = 0; i < arr.length-1; i++){// arr.length-1是最后一次不用移动   当i=6 arr.length-i 就是 7-6=1
+                console.log("--i--", i);
+				for(let j = 0; j < arr.length-1-i; j++){// arr.length-1-i为了不再改后面的最大值
+					if(arr[j] > arr[j+1]){
+						temp = arr[j];
+						arr[j] = arr[j+1];
+						arr[j+1] = temp;
 					}
 				}
+                console.log("--arr变化--把最大移到最后--", JSON.parse(JSON.stringify(arr)));
             }
-            console.log('冒泡排序',arr);
-        },
-        demo4(){
-            // 遍历树(理解不了，死记就行)      js 遍历树的层级关系的实现  https://www.cnblogs.com/xuqp/p/10954849.html
-            const list = [
-                { id: "01", parentId: "0", name: "第一层", children: [] },
-                { id: "01-22", parentId: "01", name: "第二层", children: [] },
-                { id: "03", parentId: "0", name: "第一层", children: [] },
-                { id: "01-22-12", parentId: "01-22", name: "第三层", children: [] }
-            ];
-            let mapList = [];
-            let tree = [];
-            list.forEach(item => {// 下标为id的数组
-                mapList[item.id] = item;
-            });
-            // console.log("88y", mapList);
-            list.forEach(item => {
-                const parentNode = mapList[item.parentId];
-                if (!parentNode) {//是undefined就执行if
-            　　　　if (!item.children) {
-            　　　　　　item.children = []
-            　　　　}
-                    // console.log('yrrrr=',item);
-                    tree.push(item);
-                } else {
-            　　　　　if (!parentNode.children) {
-            　　　　　　　parentNode.children = []
-            　　      }
-                    parentNode.children.push(item);
-                }
-            });
-            console.log("遍历树", tree);
+            console.log('冒泡排序1', arr);
+
         },
         // 方法一：遍历
         demo5() {
@@ -182,6 +159,62 @@ export default {
             this.count++;
 
             return this.bean(num);
+        },
+        demo6() {
+            /*
+                要求id相同的拼接name + id去重?
+
+                数组对象去重的四种方式
+                https://blog.csdn.net/weixin_55992854/article/details/120386515
+            */
+            let nameList = [
+                { name: "小红", id: 1 },
+                { name: "小橙", id: 1 },
+                { name: "小黄", id: 4 },
+                { name: "小绿", id: 3 },
+                { name: "小青", id: 1 },
+                { name: "小蓝", id: 4 }
+            ]
+            let saveList = JSON.parse(JSON.stringify(nameList));
+            // 方式1：先去重并分类
+            let idArr = []
+            let ortherArr = []
+            for (let i = 0; i < nameList.length; i++) {
+                let item = nameList[i];
+                if (idArr.indexOf(item.id) == -1) {
+                    idArr.push(item.id);
+                } else {
+                    ortherArr.push(item);
+                    nameList.splice(i, 1);// for用splice,要i--
+                    i--;
+                }
+            }
+            console.log("-ortherArr-", JSON.parse(JSON.stringify(ortherArr)));
+            for (let i = 0; i < nameList.length; i++) {
+                let item = nameList[i];
+                for (let j = 0; j < ortherArr.length; j++) {
+                    let row = ortherArr[j];
+                    if(item.id == row.id) {
+                        item.name += ' + ' + row.name;
+                    }
+                }
+            }
+            console.log("-nameList-", JSON.parse(JSON.stringify(nameList)));
+            // 方式2：遇到后面重复项，就删除
+            for (let i = 0; i < saveList.length; i++) {
+                    let item = saveList[i];
+                for (let j = i + 1; j < saveList.length; j++) {
+                    let row = saveList[j];
+                    if(item.id == row.id) {
+                        item.name += ' + ' + row.name;
+                        saveList.splice(j, 1);
+                        j--;
+                    }
+                }
+            }
+            console.log("-saveList-", JSON.parse(JSON.stringify(saveList)));
+
+
         }
     }
 }
