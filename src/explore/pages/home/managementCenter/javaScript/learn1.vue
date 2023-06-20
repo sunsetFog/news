@@ -27,14 +27,14 @@ export default {
             prompt("prompt内容");//对话框
             // document.write("内容");//页面中打印内容，不推荐,覆盖掉原网页内容
             console.log('控制台','变量');
-            
+
             // 注意:1.js不区分单双引号,但是双引号不能包双引号，单引号不能包单引号
             let imgName = "flower";
             let src = "../img/" + imgName + ".png";
             let src2 = `../img/${imgName}.png`
             console.log('两种变量与字符串拼接写法', src, src2);
 
-            /* 
+            /*
             html中的节点类型：
 			1.元素节点：html、div、p、span等这些元素
 			2.属性节点：src、href、type、id等
@@ -79,21 +79,21 @@ export default {
             console.log('attributes',attr[1].nodeValue);
             console.log('getAttribute',yuansu.getAttribute('name'));//元素名.getAttribute(属性名)    获取指定属性
 
-            yuansu.setAttribute('name','juice');//元素名.setAttribute('属性名','属性值')   
-            // 添加一个类名  
+            yuansu.setAttribute('name','juice');//元素名.setAttribute('属性名','属性值')
+            // 添加一个类名
             yuansu.setAttribute('class','category sky');// 这个是赋值，原来的类名不写上会没有
             yuansu.classList.add('henghadajiang01');// 向后多加类名
             yuansu.className = 'henghadajiang02';// 赋值
             // 移出类名
             // yuansu.classList.remove('henghadajiang');
-            
+
             /*
                 或
                 let atr = document.createAttribute('name');//创建属性 name=""
                 atr.nodeValue = 'juice';// name="juice"
                 yuansu.setAttributeNode(atr);
             */
-            
+
 
             let is_p = document.createElement("p");
             is_p.innerHTML = '嘿嘿嘿';
@@ -104,7 +104,7 @@ export default {
             p600.innerHTML = '替换子节点';
             let poetry = document.getElementsByClassName("poetry")[0];
             yuansu.replaceChild(p600,poetry);//父元素名.replaceChild('新元素','指定元素')    用新的子节点替换旧的子节点
-            
+
             //包空格    不推荐记
             // console.log('获取直属父节点',yuansu.parentNode);//子元素名.parentNode
             // console.log('获取节点的所有子节点(包空格)',yuansu.childNodes);//父元素名.childNodes
@@ -152,7 +152,7 @@ export default {
             //window.open("http://www.jd.com","_self");替换当前页面
             // moveTo(x,y)将新的浏览器窗口初始化到指定坐标
             // window.close()    关闭窗口
-            
+
             // window.location:获取浏览器URL信息(window可省略)
             console.log('URL的完整路径',location.href);// http://localhost:9090/root/home/managementCenter/javaScript/learn1learn1?id=128  用于跳转 location.href = "http://www.jd.com";
             console.log('URL的文件路径',location.pathname);// /root/home/managementCenter/javaScript/learn1learn1
@@ -182,7 +182,7 @@ export default {
             // history.back():返回上一页
 			// history.forward():返回下一页
             // history.go(num): 跳转到第几页，num=-1等价于back(),num=1等价于forward()
-            
+
             // window.screen：获取屏幕信息
             // screen.availWidth   获取屏幕可用的宽度
 			// screen.availHeight   获取屏幕可用的高度
@@ -194,7 +194,7 @@ export default {
         demo4(){
             //js的常量:值在程序执行过程中不会改变
             var PI = 3.1415926;//值不变
-            
+
             /* js中的变量：用来储存数据的容器，值可以改变
             变量或者常量的命名规范:
             1.不能取关键字，var,function,ducument,alert....
@@ -302,7 +302,7 @@ export default {
             console.log('2函数转换parseInt',parseInt("哈哈"));//结果，首字符为非数字型，停止返回NaN
             console.log('3函数转换parseInt',parseInt("11哈哈"));//结果11，如果第一个字符是数字型，一直往后解析，直到碰到非数字型的字符停止，返回前面的数值
             console.log('4函数转换parseInt',parseInt("10101",2));//2进制，结果21，可以将不同进制数解析为十进制显示
-            
+
             console.log('1函数转换parseFloat',parseFloat("11.22"));//结果11.22，
             console.log('2函数转换parseFloat',parseFloat("6.6.6"));//结果6.6，只能解析第一个小数点
             console.log('3函数转换parseFloat',parseFloat("0x10101",2));//结果0，只能解释十进制的形式
@@ -326,7 +326,7 @@ export default {
             a%=b:等价于a=a%b
 
             3.比较运算符：>,<,>=,<=,!=,==,===
-                
+
             4.逻辑运算符:与&&,或||,非!
             与&&:只有&&符两边的等式同时成立,结果才为true否为flase
             &&与&区别:
@@ -336,7 +336,7 @@ export default {
             非! 结果取反  false变true   true变false
 
             按位异或^     一个是true,一个是false，结果为true，否则为false
-            
+
             ==与===区别
             ===等同符    类型和值相等才true
             ==等值符    值相等就true，不同会先转化类型再比较，比如true代表1，false代表0
@@ -344,10 +344,10 @@ export default {
 
             5.三目运算符:(条件)?(语句1):(语句2)
             如果条件成立,结果为语句1,否为语句2
-            
+
             优先级:()--乘除加减--赋值
 
-            科学计数法    800000 = 8e5       0.00008 = 8e-5 
+            科学计数法    800000 = 8e5       0.00008 = 8e-5
             */
            console.log("==", "2" == 2)
            console.log("===", "2" === 2)
@@ -390,7 +390,6 @@ export default {
             }else{//以上都不成立才执行
                 console.log("啥也不是");
             }
-            return
 
             var k = 7
 			switch(k){

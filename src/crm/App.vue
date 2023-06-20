@@ -85,5 +85,5 @@ export default {
     }
 }
 /*公共样式--开始*/
-@import '~@static/capital/whole.less';
+@import '~@static/capital/globalBaseStyle.less';
 </style>

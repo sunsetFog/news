@@ -24,7 +24,7 @@
         loaders: ["style", "css", "sass"]
     }
 
-    在vue项目全局中引入scss
+    在vue项目全局中引入scss----因为main.js文件加载不了less/scss文件，只能加载css文件
     npm install sass-resources-loader --save-dev
     build\utils.js 配置
     将

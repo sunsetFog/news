@@ -22,7 +22,7 @@
     }
 
 
-    在vue项目全局中引入less
+    在vue项目全局中引入less----因为main.js文件加载不了less/scss文件，只能加载css文件
     npm install sass-resources-loader --save-dev
     build\utils.js 配置
     将
