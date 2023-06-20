@@ -18,7 +18,7 @@
         </div>
         <LineTextLine>.prevent 阻止默认行为 a标签的跳转就是默认事件</LineTextLine>
         <a @click.prevent="preventWay">a标签不跳转</a>
-        <LineTextLine>.self 事件冒泡和捕获事件不能引起触发，跳过了</LineTextLine>
+        <LineTextLine>.self 事件冒泡和捕获事件无效，点到自己才触发</LineTextLine>
         <div @click.self="stopParent">
             <Button @click="stopSon">子事件触发，父跳过事件冒泡不触发</Button>
         </div>

@@ -11,7 +11,7 @@
 
 <script>
 	export default{
-		// props:['article'],//父传子
+		// props:['article'],//父传子  props值只能父组件修改，子组件不能修改，子组件可以用$emit修改
 		props: {
 			article: {
 				type: String, // 类型：Array，Object

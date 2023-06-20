@@ -12,10 +12,10 @@
 
 <script>
 
-/* 
+/*
 用require不正确写法报错：
 ./src/assets ^\.\/.*$
-Module not found: Error: Can't resolve 'style-loader' in 
+Module not found: Error: Can't resolve 'style-loader' in
 
 相对路径：从当前目录开始定位，形成的路径
 绝对定位: 从顶级目录src开始定位，形成的路径
@@ -26,7 +26,7 @@ background: url('~@/explore/assets/theme/logo_blue.png') no-repeat center center
 1.相对路径: "./assets/logo_blue.png" 用的多，就是路径打包易报错，找不到
 2.相对路径，没前缀 "assets/logo_blue.png" 被webpack解析为 相对路径
 推荐3.绝对路径，带~  "~@/explore/assets/theme/logo_blue.png" 被webpack解析为 require(src/assets/theme/logo_blue.png) 动态引入   @等于/src
-4.绝对路径，相对根目录的路径 "/assets/logo_blue.png" webpack不解析
+4.绝对路径，相对根目录的路径 "/assets/logo_blue.png" webpack不解析----没效果
 
 */
 import lizhi from '@/explore/assets/lizhi.jpg'
