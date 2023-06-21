@@ -15,6 +15,20 @@
         <div class="domineering">
             <img src="@static/video/play-open.png"/>
         </div>
+
+        <div class="activity-list">
+            <ul>
+                <li>
+                    <img src="@static/picture/banner/6.jpg"/>
+                </li>
+                <li>
+                    <img src="@static/picture/banner/8.jpg"/>
+                </li>
+            </ul>
+        </div>
+        <div class="limited-time">
+            限时火热
+        </div>
     </section>
 </template>
 
@@ -54,7 +68,7 @@ export default {
             border-radius: 50%;
             img {
                 width: 100%;
-                height: 100%; 
+                height: 100%;
             }
         }
         div:nth-of-type(2) {
@@ -89,12 +103,47 @@ export default {
             width: 25px;
             height: 25px;
             opacity: 0;
+            transition: all 0.25s ease-out;// 过渡特效
+        }
+        &:hover img {
+            opacity: 1;
+            transform: scale(2.5);// 放大
         }
     }
-    .domineering:hover img {
-        opacity: 1;
-        transform: scale(2.5);// 放大
-        transition: all 0.25s ease-out;// 过渡特效
+    .activity-list {
+        width: 100%;
+        ul {
+            width: 100%;
+            li {
+                width: 100%;
+                height: 252px;
+                padding: 12px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 16px;
+                    transition: all .8s ease;
+                    &:hover {
+                        transform: scale(1.02);
+                    }
+                }
+            }
+        }
+    }
+    .limited-time {
+        width: 100%;
+        height: 70px;
+        text-align: center;
+        line-height: 70px;
+        background: #fff;
+        font-size: 14px;
+        color: #3f5075;
+        transition: .3s;
+        padding: 47px 0 0;
+        &:hover {
+            font-size: 16px;
+            color: #249cfc;
+        }
     }
 }
 </style>
