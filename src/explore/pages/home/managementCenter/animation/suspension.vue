@@ -1,19 +1,22 @@
 <template>
     <section id="suspension">
-        <!-- 方法1：  -->
-        <div class="portrait-center" @mouseover="mouseover" @mouseleave="mouseleave">
-            <div>
+        <div class="portrait-center">
+            <div class="tangerine1">
                 <img src="@static/reportForms/image/invoice.png"/>
             </div>
-            <div v-show="show_plus">
+            <div class="tangerine2">
                 <i class="el-icon-plus"></i>
             </div>
         </div>
 
         <br><br>
-        <!-- 方法2： -->
         <div class="domineering">
-            <img src="@static/video/play-open.png"/>
+            <div class="rabbit1">
+                <img class="yujie" src="@static/video/yujie.jpg"/>
+            </div>
+            <div class="rabbit2">
+                <img class="play-open" src="@static/video/play-open.png"/>
+            </div>
         </div>
 
         <div class="activity-list">
@@ -41,7 +44,7 @@ export default {
         }
     },
     methods: {
-        // 鼠标移入
+        // 鼠标移入  @mouseover="mouseover" @mouseleave="mouseleave"  没有动画过渡
         mouseover () {
             console.log('mouseover')
             this.show_plus = true
@@ -62,7 +65,7 @@ export default {
         width: 100px;
         height: 100px;
         position: relative;
-        div:nth-of-type(1) {
+        .tangerine1 {
             width: 100%;
             height: 100%;
             border-radius: 50%;
@@ -71,7 +74,7 @@ export default {
                 height: 100%;
             }
         }
-        div:nth-of-type(2) {
+        .tangerine2 {
             width: 100%;
             height: 100%;
             background: rgba(0, 0, 0, 0.7);
@@ -83,31 +86,61 @@ export default {
             left: 0px;
             top: 0px;
             z-index: 2;
+            opacity: 0;
+            transition: all 0.45s ease-out;
             i {
                 font-size: 26px;
                 color: #8c939d;
             }
         }
+        &:hover .tangerine2 {
+            opacity: 1;
+        }
     }
 
     .domineering {
-        width: 288px;
-        height: 160px;
-        background-image: url("~@static/video/yujie.jpg");
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        img {
-            width: 25px;
-            height: 25px;
-            opacity: 0;
-            transition: all 0.25s ease-out;// 过渡特效
+        width: 320px;
+        height: 180px;
+        padding: 18px;// 为了从中心向外放大，不然会从左向右放大
+        box-sizing: border-box;
+        position: relative;
+        border: 1px solid #3f5075;
+        .rabbit1 {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            .yujie {
+                width: 100%;
+                height: 100%;
+                transition: all 0.45s ease-out;// 过渡特效 鼠标移走动画变回原来大小也要过渡，所以放hover不合适
+            }
         }
-        &:hover img {
+        .rabbit2 {
+            width: calc(100% - 36px);
+            height: calc(100% - 36px);
+            background-color: rgba(0,0,0,.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.45s ease-out;
+            position: absolute;
+            left: 18px;
+            top: 18px;
+            .play-open {
+                width: 25px;
+                height: 25px;
+                transition: all 0.45s ease-out;
+            }
+        }
+        &:hover .yujie {
+            transform: scale(1.1);// 放大
+        }
+        &:hover .rabbit2 {
             opacity: 1;
-            transform: scale(2.5);// 放大
+        }
+        &:hover .play-open {
+            transform: scale(1.8);
         }
     }
     .activity-list {
@@ -117,7 +150,8 @@ export default {
             li {
                 width: 100%;
                 height: 252px;
-                padding: 12px;
+                padding: 15px;
+                border: 1px solid #3f5075;
                 img {
                     width: 100%;
                     height: 100%;
@@ -138,8 +172,7 @@ export default {
         background: #fff;
         font-size: 14px;
         color: #3f5075;
-        transition: .3s;
-        padding: 47px 0 0;
+        transition: .36s;
         &:hover {
             font-size: 16px;
             color: #249cfc;

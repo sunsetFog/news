@@ -29,9 +29,17 @@ export default {
 
                     只替换一个：
                         字符串.replace(旧字符串或正则表达式,新字符串)    新子串替换指定的旧子串，返回替换值
-                        str.replace(/田/g,"天") 可以替换所有，但是替换标签报错 如：contentStr.replace(/'<p>'/g, '');
                     替换所有：
-                        str.replaceAll("World","Bro");  相当于  contentStr.replace(new RegExp('<p>', 'gm'), '');
+                        bug: string.replaceAll is not a function    https://blog.csdn.net/qq_34626094/article/details/128672647
+                        str.replaceAll("World","Bro");--------App不兼容，有些手机页面显示不了
+                        contentStr.replace(new RegExp('<p>', 'gm'), '');------建议用这个
+                        str.replace(/田/g,"天") 可以替换所有
+                        contentStr.replace(/'<p>'/g, '');但是替换标签报错
+
+                    // p3 = p3.replaceAll('<p>', '');
+                    p3 = p3.replace(new RegExp('<p>', 'gm'), '');
+                    // p3 = p3.replaceAll('</p>', '<br/>');
+                    p3 = p3.replace(new RegExp('</p>', 'gm'), '<br/>');
 
                     截取：区分这三个
                         字符串.slice(开始下标,结束下标)     返回开始下标和结束下标间的字符,留头不留尾   如果只有一个参数，截取到最后

@@ -161,8 +161,9 @@ export default {
         // right: 100px;
         // z-index: -2;//层次关系
 
-        // background: aqua;//背景颜色
+        // background: aqua;//背景颜色   能分解为background-*
         // background: url(../img/icon_home.png) no-repeat;
+        // background: #00FF00 url(bgimage.gif) no-repeat fixed top;
         // background-size: 200px 200px;//背景大小
 
 		// line-height: 200px;//文本垂直居中

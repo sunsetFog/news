@@ -12,6 +12,7 @@ html, body, #app {
     width: 100%;// 满宽是100vw  -相当于- window.innerWidth (包括滚动条,所以宽不用)
     height: 100vh;// 满高是100vh  -相当于- window.innerHeight (包括滚动条)
     -touch-action: none;// pc或移动端不能触屏
+    text-size-adjust: 100%;// 根据设备尺寸(或旋转屏幕时)而自动调整文字大小
 }
 
 
@@ -40,6 +41,7 @@ img {
 a {
     text-decoration: none;// 去掉下划线  加下划线text-decoration: underline;
     color: #232323;
+    cursor: pointer;
 }
 
 
@@ -47,6 +49,7 @@ input,textarea,button {
     outline: none;// 轮廓-边框边缘的外围
     border: none;// 边框
     cursor: pointer;// 鼠标手掌
+    line-height: normal;
 }
 
 button {
