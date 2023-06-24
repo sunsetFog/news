@@ -81,12 +81,6 @@
         能少写类名：标签选择器  div{} 、 div:nth-of-type(2){}
 
 
-        <!--
-            img 元素的 srcset 属性用于浏览器根据宽、高和像素密度来加载相应的图片资源。
-            属性格式：图片地址 宽度描述w 像素密度描述x，多个资源之间用逗号分隔
-            background-image: image-set(url("@static/picture/breezy/logo.png") 1x, url("@static/picture/breezy/logo_2x.png") 2x, url("@static/picture/breezy/logo_3x.png") 3x);
-        -->
-        <img style="width: 100px;height: 100px;" src="@static/picture/breezy/logo.png" srcset="@static/picture/breezy/logo_2x.png 2x,@static/picture/breezy/logo_3x.png 3x" alt="">
     </section>
 </template>
 
@@ -151,20 +145,6 @@ export default {
         // text-align: right;//
         // vertical-align: middle;// 垂直对齐（图片与文字对齐）两个子标签都加上这个
 
-        // position: static;//静态定位/常规定位/自然定位  作用：使元素定位于常规流/自然流中   忽视top、bottom、left、right、z-index，是这些关键字作用失效
-        // position: relative;//相对定位  以自身为参考，不脱脱离文档（能撑开父盒子高度）
-        // position: absolute;//绝对定位  以父元素为参考，脱离文档（不能撑开父盒子高度）  默认以左上角为起点
-        // position: fixed;//固定定位  以浏览器窗口大小为参考，脱离文档
-        // top: 100px;
-        // bottom: 100px;
-        // left: 100px;
-        // right: 100px;
-        // z-index: -2;//层次关系
-
-        // background: aqua;//背景颜色   能分解为background-*
-        // background: url(../img/icon_home.png) no-repeat;
-        // background: #00FF00 url(bgimage.gif) no-repeat fixed top;
-        // background-size: 200px 200px;//背景大小
 
 		// line-height: 200px;//文本垂直居中
 		// letter-spacing: 10px;//字符间距
@@ -195,8 +175,6 @@ export default {
         // text-shadow: 5px 5px 10px aqua;	//文本阴影   右、下、模糊度、颜色
 
         // zoom: 100%;  等于100%是原图、大于100%是放大、小于100%是缩小
-        // background: radial-gradient(circle, red,blue);//径向渐变  circle:使默认的椭圆形变为圆形(可以不写)
-        // background: linear-gradient(to top, red,blue 10%,green 10%);//线性渐变  默认从上往下依次渐变  to top/right/left:从--往--依次渐变  指定的百分比后开始出现当前颜色
 
         // @media only screen and (min-width: 300px) {// 媒体查询
         //     //样式
@@ -205,24 +183,7 @@ export default {
         //     //样式
 		// }
 
-        // transition: 1s;//过渡周期
-        // transform-origin: -10px 0px;//起点  默认以中心为圆点
-        // animation: eason 0.3s linear infinite;//infinite无限循环 linear匀速
-        // animation-delay: 5s;//动画延迟
-        // transform: scale(0) rotate(360deg);//缩放比例、旋转角度
-        // transform: translate(100px);//平移
-        // transform: translateY(100px);//y轴平移
-        // transform: translate(100px,100px);//45度角
-        // transform: skew(30deg);//倾斜角度
-        // @keyframes  eason{
-        //     from{}
-        //     to{}
-        // }
-        // @keyframes myFrame{
-		// 	0%{}
-		// 	30%{}
-		// 	100%{}
-		// }
+
 
 
     }

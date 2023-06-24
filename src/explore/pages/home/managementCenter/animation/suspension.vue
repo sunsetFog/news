@@ -1,5 +1,133 @@
 <template>
     <section id="suspension">
+        <!--
+
+            关键帧的书写1
+            @keyframes  eason{
+                from{}
+                to{}
+            }
+            关键帧的书写2
+            @keyframes myFrame{
+                0%{}
+            	30%{}
+            	100%{}
+            }
+
+            动画名
+            animation-name: mymove;
+
+            动画等待5后开始
+            animation-delay: 5s;
+
+            动画持续时间为5s
+            animation-duration：5s;
+
+            速度曲线
+                linear匀速
+                默认ease低速开始—>加速—>结束前减速
+                ease-in以低速开始
+                ease-out以低速结束
+                ease-in-out以低速开始和结束
+                函数cubic-bezier(n,n,n,n)  取值0 到 1
+            animation-timing-function：linear;
+
+            动画播放次数为1次
+            animatiom-iteration-count：1;
+                xx数字
+                infinite 无限次执行
+
+            设置动画为反向播放
+            animation-direction：alternate;
+                默认nomal  执行完一次之后回到起点继续执行下一次
+                alternate往返动画，执行完一次之后往回执行下一次
+                reverse反向执行
+
+            设置动画是否暂停
+            animation-play-state: running;
+                running 执行动画
+                paused 暂停动画
+
+            动画结束的最后一帧
+            animation-fill-mode: none;
+                none 不做任何改变
+                forwards 让元素结束状态保持动画最后一帧的样式
+                backwards 让元素等待状态的时候显示动画第一帧的样式
+                both 等待状态显示第一帧，结束状态保持最后一帧
+
+            animation 简写
+            animation：动画名称 动画时长 动画运动速度 延迟时间 执行次数 往返动画
+            animation: eason 0.3s linear infinite;
+
+----------------------------------------------------------------------
+
+            过渡的属性
+            transition-property: none | all | property;
+                none 没过渡效果
+                all 所有属性都参与过渡效果
+                property CSS属性名称列表   transition-property: width, background;
+            过渡的持续时间
+            transition-duration: .25s, 1s;  两个过渡属性的时间
+
+            div:hover {
+                width: 200px;
+                background: blue;
+            }
+
+            过渡的动画类型
+            transition-timing-function: linear;
+                linear匀速
+                默认ease低速开始—>加速—>结束前减速
+                ease-in以低速开始
+                ease-out以低速结束
+                ease-in-out以低速开始和结束
+                函数cubic-bezier(n,n,n,n)  取值0 到 1
+
+            过渡效果延迟的时间
+            transition-delay: time;
+
+            transition过渡周期 简写
+            transition: transition-property transition-duration transition-timing-function transition-delay;
+            transition: width .25s linear 1.9s, background 1s 2s, transform 2s;
+
+----------------------------------------------------------------------
+
+            2D变形(CSS3) transform
+
+            移动 translate(x, y)
+                平移
+                transform: translate(100px);
+                水平方向移动（X轴移动）
+                transform: translateX(100px);
+                垂直方向移动（Y轴移动）
+                transform: translateY(100px);
+                水平方向和垂直方向同时移动（45度移动）
+                transform: translate(100px,100px);
+
+            缩放 scale(x, y)
+                transform: scale(0.8);
+                scale(X,Y)使元素水平方向和垂直方向同时缩放（也就是X轴和Y轴同时缩放）
+                scaleX(x)元素仅水平方向缩放（X轴缩放）
+                scaleY(y)元素仅垂直方向缩放（Y轴缩放）
+                缩小：值0.01到0.99
+                放大：值大于1
+                默认值： 1
+                只有一个参数，识别为scale(X,Y)
+
+            旋转 rotate(deg)
+                transform: rotate(45deg);
+                transform: scale(0) rotate(360deg); 缩放比例、旋转角度
+                正值为顺时针，负值为逆时针
+                单位是 deg 度数
+
+            transform-origin: x y; 可以调整元素转换变形的原点
+                默认以中心为原点
+                transform-origin: -10px 0px;
+
+            倾斜 skew(x, y)
+                transform: skew(30deg, 0deg); 水平倾斜30度
+
+         -->
         <div class="portrait-center">
             <div class="tangerine1">
                 <img src="@static/reportForms/image/invoice.png"/>
@@ -32,6 +160,8 @@
         <div class="limited-time">
             限时火热
         </div>
+        <LineTextLine>向上滚动动画</LineTextLine>
+        位置：news\src\reportForms\pages\luckDraw\upAndDown.vue
     </section>
 </template>
 
