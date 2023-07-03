@@ -123,7 +123,15 @@ export default {
 
             let key = null;
             let sky = key || [];
+            // ?? 效果等于 ||
+            // let sky = key ?? [];
             console.log('前面false才执行后面代码---定义默认值', sky);
+
+            // ?? 和 ? 是typescript语法
+            // let obj={a:{b:1}}
+            // console.log(obj?.a?.b)
+            // console.log(obj?.a?.c)
+
 
 
             let flag = true, bean = '土豆';// 定义多个变量
@@ -171,7 +179,7 @@ export default {
             const [ aaa, bbb, ccc = '噢' ] = listArr
             console.log("--数组的解构赋值--", aaa, "---", bbb, "---", ccc)
 
-
+            
         },
         demo11 () {
             let ly = 867;

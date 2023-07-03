@@ -128,6 +128,7 @@
                 transform: skew(30deg, 0deg); 水平倾斜30度
 
          -->
+         <LineTextLine>悬浮出现</LineTextLine>
         <div class="portrait-center">
             <div class="tangerine1">
                 <img src="@static/reportForms/image/invoice.png"/>
@@ -137,7 +138,7 @@
             </div>
         </div>
 
-        <br><br>
+        <LineTextLine>悬浮出现&中心放大</LineTextLine>
         <div class="domineering">
             <div class="rabbit1">
                 <img class="yujie" src="@static/video/yujie.jpg"/>
@@ -146,7 +147,7 @@
                 <img class="play-open" src="@static/video/play-open.png"/>
             </div>
         </div>
-
+        <LineTextLine>悬浮中心放大</LineTextLine>
         <div class="activity-list">
             <ul>
                 <li>
@@ -157,11 +158,21 @@
                 </li>
             </ul>
         </div>
+        <LineTextLine>悬浮字体变大&字体变色</LineTextLine>
         <div class="limited-time">
             限时火热
         </div>
-        <LineTextLine>向上滚动动画</LineTextLine>
+        <LineTextLine>无缝连接向上滚动</LineTextLine>
         位置：news\src\reportForms\pages\luckDraw\upAndDown.vue
+        <LineTextLine>上下移动</LineTextLine>
+        <img class="sendOut" src="@static/picture/breezy/sendOut.png"/>
+        <LineTextLine>悬浮上移</LineTextLine>
+        <img class="imperial-sister" src="@static/video/yujie.jpg"/>
+        <LineTextLine>水波</LineTextLine>
+        <div class="ripple">
+            <img src="@static/picture/breezy/1.png"/>
+            <img src="@static/picture/breezy/2.png"/>
+        </div>
     </section>
 </template>
 
@@ -191,6 +202,8 @@ export default {
 <style lang="less" scoped>
 #suspension {
     width: 100%;
+    padding-bottom: 80px;
+    box-sizing: border-box;
     .portrait-center {
         width: 100px;
         height: 100px;
@@ -306,6 +319,76 @@ export default {
         &:hover {
             font-size: 16px;
             color: #249cfc;
+        }
+    }
+    .sendOut {
+        width: 70px;
+        height: 70px;
+        animation: joyous 2s linear infinite alternate;
+    }
+    @keyframes joyous {
+        from {
+            transform: translate3d(0, 0, 0);
+        }
+
+        to {
+            transform: translate3d(0,20px,0);
+        }
+    }
+    .imperial-sister {
+        width: 320px;
+        height: 180px;
+        transition: transform 0.3s ease-in-out;
+        transform: translate3d(0, 0, 0);
+        &:hover {
+            transform: translate3d(0, -6px, 0);
+        }
+    }
+    .ripple {
+        width: 90px;
+        height: 90px;
+        margin: 0 auto;
+        position: relative;
+        img:nth-of-type(1) {
+            width: 100%;
+            height: 100%;
+            opacity: 0.5;
+            animation: heart-animate 2s linear infinite;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: 1;
+        }
+        img:nth-of-type(2) {
+            width: 100%;
+            height: 100%;
+            opacity: 0.5;
+            animation: heart-animate 2s linear 0.3s infinite;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: 2;
+        }
+        @keyframes heart-animate {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            15% {
+                opacity: 0.5;
+                transform: scale(1.25);
+            }
+
+            30% {
+                opacity: 0;
+                transform: scale(1.5);
+            }
+
+            100% {
+                opacity: 0;
+                transform: scale(1);
+            }
         }
     }
 }
