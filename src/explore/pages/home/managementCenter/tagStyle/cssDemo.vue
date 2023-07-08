@@ -1,11 +1,11 @@
 <template>
     <section id="css-demo">
-        <h3>三角框框</h3>
+        <LineTextLine>三角框框</LineTextLine>
         <div class="container">
             <div class="triangle"></div>
             <div class="luminescence"></div>
         </div>
-        <h3>好看的滚动条</h3>
+        <LineTextLine>好看的滚动条</LineTextLine>
         <div class="scroll-box">
             <el-scrollbar style="width:100%;height:100%;">
                 <ul>
@@ -13,7 +13,7 @@
                 </ul>
             </el-scrollbar>
         </div>
-        <h3>清除浮动</h3>
+        <LineTextLine>清除浮动</LineTextLine>
         <!--
             为啥要清除浮动？
             因为float的浮动无法撑起父级元素宽高
@@ -27,7 +27,7 @@
             <!-- 第一种 -->
             <!-- <div style="clear: both;"></div> -->
         </div>
-        <h3>px,rem,em</h3>
+        <LineTextLine>px,rem,em</LineTextLine>
         <!--
             px相对屏幕分辨率  固定单位
             em相对父元素font-size： 1em=(父元素font-size)px   默认值16px  4em*(父元素font-size)=？px
@@ -35,6 +35,10 @@
          -->
         <div class="pen-cat">
             <div></div>
+        </div>
+        <LineTextLine>按钮背景</LineTextLine>
+        <div class="swan">
+            <button></button>
         </div>
     </section>
 </template>
@@ -125,6 +129,14 @@ export default {
             width: 4em;// 1em = 12px   4*12=48
             height: 100px;
             background: snow;
+        }
+    }
+    .swan {
+        width: 100%;
+        padding: 35px 0;
+        background: #fff;
+        button {
+            .mixin_back_btn();
         }
     }
 }
