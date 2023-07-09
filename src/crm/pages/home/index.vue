@@ -3,7 +3,7 @@
     <div class="home-left" :style="{width: left_width}">
       <div class="logo-name">
         <img :class="{'logo-img': true,'logo-active': isCollapse}" src="@static/crm/image/logo.png">
-        <span v-show="!isCollapse">娱乐管理后台</span>
+        <span v-show="!isCollapse">爱沃里管理后台</span>
       </div>
       <menuDesign :isCollapse="isCollapse"></menuDesign>
     </div>

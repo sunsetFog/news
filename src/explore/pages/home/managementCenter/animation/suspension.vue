@@ -84,7 +84,7 @@
                 函数cubic-bezier(n,n,n,n)  取值0 到 1
 
             过渡效果延迟的时间
-            transition-delay: time;
+            transition-delay: 0.3s;
 
             transition过渡周期 简写
             transition: transition-property transition-duration transition-timing-function transition-delay;
@@ -162,17 +162,22 @@
         <div class="limited-time">
             限时火热
         </div>
-        <LineTextLine>无缝连接向上滚动</LineTextLine>
-        位置：news\src\reportForms\pages\luckDraw\upAndDown.vue
-        <LineTextLine>上下移动</LineTextLine>
-        <img class="sendOut" src="@static/picture/breezy/sendOut.png"/>
+        
         <LineTextLine>悬浮上移</LineTextLine>
         <img class="imperial-sister" src="@static/video/yujie.jpg"/>
-        <LineTextLine>水波</LineTextLine>
-        <div class="ripple">
-            <img src="@static/picture/breezy/1.png"/>
-            <img src="@static/picture/breezy/2.png"/>
+        <LineTextLine>悬浮宽高过渡</LineTextLine>
+        <div class="pumpkin">
+            <div class="gourd">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
         </div>
+        <LineTextLine>悬浮旋转180度</LineTextLine>
+        <img class="spinning" src="@static/picture/breezy/180.png"/>
     </section>
 </template>
 
@@ -321,20 +326,6 @@ export default {
             color: #249cfc;
         }
     }
-    .sendOut {
-        width: 70px;
-        height: 70px;
-        animation: joyous 2s linear infinite alternate;
-    }
-    @keyframes joyous {
-        from {
-            transform: translate3d(0, 0, 0);
-        }
-
-        to {
-            transform: translate3d(0,20px,0);
-        }
-    }
     .imperial-sister {
         width: 320px;
         height: 180px;
@@ -344,51 +335,63 @@ export default {
             transform: translate3d(0, -6px, 0);
         }
     }
-    .ripple {
-        width: 90px;
-        height: 90px;
-        margin: 0 auto;
+    .pumpkin {
+        width: 100%;
+        height: 50px;
+        background: linear-gradient(180deg, #eff8ff 5.52%, #fff 37.95%, #edf7ff 82.04%, #fdfeff 96.05%, #b5d2eb 98.75%);
+        box-shadow: 0 5px 12px 2px #d4e2f0;
         position: relative;
-        img:nth-of-type(1) {
-            width: 100%;
-            height: 100%;
-            opacity: 0.5;
-            animation: heart-animate 2s linear infinite;
-            position: absolute;
-            left: 0px;
-            top: 0px;
-            z-index: 1;
+        margin-bottom: 200px;
+        &:hover .gourd {
+            height: 200px;
         }
-        img:nth-of-type(2) {
+        &:hover .gourd ul {
             width: 100%;
-            height: 100%;
-            opacity: 0.5;
-            animation: heart-animate 2s linear 0.3s infinite;
-            position: absolute;
-            left: 0px;
-            top: 0px;
-            z-index: 2;
         }
-        @keyframes heart-animate {
-            0% {
-                opacity: 1;
-                transform: scale(1);
+        .gourd {
+            width: 100%;
+            height: 0;
+            background: #fcfdff;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            box-shadow: 0 6px 16px 0 rgb(170 179 186 / 55%);
+            opacity: 0.97;
+            transition: height 0.4s ease-out;
+            overflow: hidden;
+            ul {
+                width: 0;
+                height: 200px;
+                overflow: hidden;
+                transition: width 0.6s ease-out;
+                transition-delay: 0.4s;
+                li {
+                    width: 206px;
+                    height: 100%;
+                    float: left;
+                }
+                li:nth-of-type(1) {
+                    background: #b6e4c9;
+                }
+                li:nth-of-type(2) {
+                    background: #fbe7d7;
+                }
+                li:nth-of-type(3) {
+                    background: #fbc1c1;
+                }
+                li:nth-of-type(4) {
+                    background: #79849e;
+                }
             }
-
-            15% {
-                opacity: 0.5;
-                transform: scale(1.25);
-            }
-
-            30% {
-                opacity: 0;
-                transform: scale(1.5);
-            }
-
-            100% {
-                opacity: 0;
-                transform: scale(1);
-            }
+        }
+    }
+    .spinning {
+        width: 50px;
+        height: 50px;
+        transform: rotate(0deg);
+        transition: transform 0.3s ease-in-out;
+        &:hover {
+            transform: rotate(180deg);
         }
     }
 }
