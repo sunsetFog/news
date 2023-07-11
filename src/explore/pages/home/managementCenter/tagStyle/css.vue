@@ -27,6 +27,7 @@
             不常见的选择器：
                 属性选择器：input[type="password"]{}      p[class="ra"] {}
                 伪类选择器：---谷歌浏览器》Elements》Styles》点:hov》打勾:hover
+                    & 嵌套样式回上一层
                     div:hover{}  --- 鼠标悬停
                     写法等于
                     div{

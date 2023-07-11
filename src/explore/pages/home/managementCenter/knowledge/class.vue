@@ -1,44 +1,47 @@
 <template>
-<section id="class">
-	<!-- v-bind等于: -->
-    <LineTextLine>属性绑定class</LineTextLine>
-	<div :class="{ 'class-name-01': isActive, 'class-name-02': true }">vue class</div>
-	<div v-bind:class="[ arrClass1, arrClass2 ]">vue arrClass</div>
-	<!--数组与对象写法-->
-	<div v-bind:class="[{ 'class-name-01': isActive }, arrClass1]">lljj</div>
+	<section id="class">
+		<LineTextLine>class绑定字符串</LineTextLine>
+		<div :class="'tg1, tg2'">哈喽</div>
 
-    <LineTextLine>属性绑定style</LineTextLine>
-	<div v-bind:style="{ color: styleColor01, fontSize: styleSize01}">vue style</div>
-	<div v-bind:style="[ styleColor02, styleSize02 ]">vue arrStyle</div>
-	<!-- a链接 -->
-	<a :href="link">百度链接</a>
+		<LineTextLine>类名是否显示</LineTextLine>
+		<div :class="{ 'class-name-01': showClass, 'class-name-02': true }">哈喽</div>
 
-    <LineTextLine>根据状态，返回不同的类名</LineTextLine>
-	<div>
-		<ul v-for="item in payData">
-			<li :class="[ btnClass(item.value) ]">{{item.name}}</li>
-		</ul>
-	</div>
+		<LineTextLine>class绑定数组与对象</LineTextLine>
+		<div v-bind:class="[ classArrName01, classArrName02 ]">哈喽</div>
+		<div v-bind:class="[{ 'class-name-01': showClass }, classArrName01]">哈喽</div>
 
-    <LineTextLine>三目运算</LineTextLine>
-	<div :style="{ color: (styleNum == 20) ? 'blue' : 'red' }">Success</div>
-</section>
+		<LineTextLine>style绑定字符串，注意有单位才生效</LineTextLine>
+		<div :style="'color: red;font-size: 14px;'">哈喽</div>
+
+		<LineTextLine>style绑定数组与对象</LineTextLine>
+		<div v-bind:style="{ color: styleObjColor, fontSize: styleObjSize}">哈喽</div>
+		<div v-bind:style="[ styleArrObj01, styleArrObj02 ]">哈喽</div>
+
+		<LineTextLine>根据状态，返回不同的类名</LineTextLine>
+		<div>
+			<ul v-for="item in payData">
+				<li :class="[ btnClass(item.value) ]">{{item.name}}</li>
+			</ul>
+		</div>
+
+		<LineTextLine>三目运算</LineTextLine>
+		<div :style="{ color: (styleNum == 20) ? 'blue' : 'red' }">Success</div>
+	</section>
 </template>
 
 <script>
 	export default{
 		data(){
 			return{
-				isActive: true,
-				arrClass1: 'class-name-03',
-				arrClass2: 'class-name-04',
+				showClass: true,
+				classArrName01: 'class-name-03',
+				classArrName02: 'class-name-04',
 
-				styleColor01: 'red',
-				styleSize01: '20px',
-				styleColor02: { color: 'orange' },
-				styleSize02: { fontSize: '26px' },
+				styleObjColor: 'red',
+				styleObjSize: '20px',
+				styleArrObj01: { color: 'orange' },
+				styleArrObj02: { fontSize: '26px' },
 
-				link: 'http://www.baidu.com',
 				payData: [{id: 1,name: '类一按钮',value: 10},{id: 2,name: '类二按钮',value: 20},{id: 3,name: '类三按钮',value: 30}],
 				styleNum: 20,
 

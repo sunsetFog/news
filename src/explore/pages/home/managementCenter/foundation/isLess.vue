@@ -66,7 +66,7 @@ export default {
     font-size: @size;
 }
 
-// 运算
+// 运算 --- 围绕一个值计算的使用
 @div-width: 100px;
 
 // 函数
