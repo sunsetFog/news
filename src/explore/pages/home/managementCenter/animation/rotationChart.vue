@@ -10,10 +10,13 @@
                 <div :style="{width: 135*pointNum + 'px'}"></div>
             </ul>
         </header>
-        <button class="prev" @click="prevWay"></button>
-        <button class="next" @click="nextWay"></button>
+        <button :class="{'prev': true, 'btn-active': pointNum == 0 }" @click="prevWay"></button>
+        <button :class="{'next': true, 'btn-active': pointNum == 10 }" @click="nextWay"></button>
         <main>
-            <ul :style="moveWay">
+            <ul :style="moveApt" @mousedown="downWay" @mousemove="moveWay" id="to-go">
+                <!-- 
+                    前后多了空li，因为中间那个才是选中页
+                 -->
                 <li></li>
                 <li v-for="(item, index) in vip_list" :key="index">
                     <div :class="{'parallax': pointNum == index}">
@@ -25,10 +28,23 @@
                 <li></li>
             </ul>
         </main>
-        <p class="shadow">{{moveWay}}</p>
+        <p class="shadow">{{moveApt}}</p>
     </section>
 </template>
+<!-- 
+    需要精密计算
 
+    问题：拖拽卡顿？
+    查看性能消耗：
+        Chrome Performance 工具尝试查找性能瓶颈
+    卡顿原因：
+        鼠标移动事件触发非常多，动画用computed执行了，computed是vue的属性绑定，渲染过多会导致性能消耗大，从而卡顿
+    解决卡顿：
+        拖动中执行的动画要用js操作Dom
+    如何丝滑？
+        在Vue中，渲染过多的数据可能会导致滑动卡顿。因此，我们需要注意减少渲染的数据量，只渲染当前可视区域的数据
+        可以使用Vue的虚拟滚动组件来实现
+ -->
 <script>
 export default {
     name: 'rotationChart',
@@ -47,38 +63,115 @@ export default {
                 { name: 'vip9' },
                 { name: 'vip10' }
             ],
-            pointNum: 0,
+            pointNum: 0,// 第几页
+            li_width: 450,// 一页的宽度，只是用来计算
+            startX: 0, // 鼠标开始拖动的x坐标
+            saveNum: 0, // 开始拖动时，当前位置值
+            takeNum: -1, // 拖动中，第几页
         }
     },
     computed: {
-        moveWay: function(){
-            console.log("--moveWay--", this.pointNum);
-            return 'transform: translate3d(-' + this.pointNum*450 + 'px, 0px, 0px);';
+        moveApt: {
+            get() {
+                console.log("--get--")
+                return 'transform: translate3d(-' + Math.abs(this.pointNum*this.li_width) + 'px, 0px, 0px);transition: all 0.45s linear;';
+            },
+            set(value) {// set没用过
+                console.log("--set--", value)
+                this.pointNum = value;
+            }
         }
     },
+    created () {
+        window.addEventListener("mouseup", this.upWay);
+    },
     methods: {
+        // 上一页
         prevWay() {
             if(this.pointNum != 0) {
                 this.pointNum--;
             }
             console.log("--prevWay--", this.pointNum);
         },
+        // 下一页
         nextWay() {
             if (this.pointNum != 10) {
                 this.pointNum++;
             }
             console.log("--nextWay--", this.pointNum);
         },
+        // 鼠标按下事件
+        downWay(event) {
+            event.preventDefault();// 解决拖动mouseup不触发
+            // console.log("--downWay--", event);
+            this.startX = event.clientX;
+            // 当前位置值
+            let toGo = document.getElementById("to-go");
+            this.saveNum = toGo.style.transform.split('translate3d(')[1].split('px, 0px, 0px)')[0];
+            this.saveNum = Number(this.saveNum);
+        },
+        // 鼠标移动事件，触发很多
+        moveWay(event) {
+            if(this.startX != 0) {
+                // 已知拖动距离，正数是左拖动，负数是右拖动
+                let movingDistance = event.clientX - this.startX;
+                // 已知拖至位置值
+                let toNum = this.saveNum + movingDistance;
+                console.log("--moveWay--", event.clientX, ' - ', this.startX, ' = ', movingDistance, ' + ', this.saveNum, ' = ', toNum);
+                // 限制拖动范围
+                if (toNum > 0) {
+                    toNum = 0;
+                } else if (toNum < -this.li_width*10) {
+                    toNum = -this.li_width*10;
+                }
+                // 已知第几页，需要整数
+                this.takeNum = Math.abs(toNum)/this.li_width;
+                console.log("--小数--", this.takeNum);
+                this.takeNum = Math.round(this.takeNum);
+                console.log("--四舍五入--", this.takeNum, -this.li_width*10);
+                //  拖动中动画，去掉过渡
+                let toGo = document.getElementById("to-go");
+                toGo.style = 'transform: translate3d(-' + Math.abs(toNum) + 'px, 0px, 0px);transition: none;';
+            }
+        },
+        // 鼠标抬起事件，别绑定在小范围标签上，因为移出范围就不触发了
+        upWay(event) {
+            if(this.takeNum != -1) {
+                console.log("--upWay--", this.takeNum == this.pointNum);
+                
+                let toGo = document.getElementById("to-go");
+                /*
+                    鼠标抬起动画
+                        1.pointNum值没变化，触发不了computed的
+                        解决：用js操作Dom，执行动画
+                        2.用computed动画，因为pointNum值需要改变
+                */
+                if (this.takeNum == this.pointNum) {
+                    toGo.style = 'transform: translate3d(-' + Math.abs(this.takeNum*this.li_width) + 'px, 0px, 0px);transition: all 0.45s linear;';
+                } else {
+                    // 拖动完，加回过渡
+                    toGo.style.transition = 'all 0.45s linear';
+                    this.pointNum = this.takeNum;
+                }
+                // 拖动完，鼠标开始坐标变0，判断用
+                this.startX = 0;
+                this.saveNum = 0;
+                this.takeNum = -1;
+            }
+        },
+    },
+    destroyed() {
+        window.removeEventListener("mouseup", this.upWay);
     }
 }
 </script>
 
 <style lang="less" scoped>
-@li-width: 450px;
+@li-width: 450px;// 一页的宽度
 @main-height: 320px;
 @header-height: 200px;
 #rotationChart {
-    width: @li-width * 3 + 120;// 1420
+    width: @li-width * 3 + 120;
     padding: @header-height 60px 44px 60px;
     background-color: #f1f6fc;
     margin: 0 auto;
@@ -173,7 +266,7 @@ export default {
             }
             div:nth-of-type(2) {
                 background: url('~@static/picture/rotationChart/vipIcon/line_ac.png');
-                background-size: @li-width * 3 100%;
+                background-size: @li-width * 3 100%;// 重点在图片的宽、div的宽
                 background-repeat: no-repeat;
                 transition: all 0.3s linear;
                 z-index: 2;
@@ -187,7 +280,7 @@ export default {
         ul {
             width: @li-width * 13;
             height: 100%;
-            transition: all 0.45s linear;
+            cursor: pointer;
             li {
                 width: @li-width;
                 height: 100%;
@@ -243,6 +336,9 @@ export default {
             background-size: 100% 100%;
             background-repeat: no-repeat;
         }
+    }
+    .btn-active {
+        opacity: 0.4;
     }
     .shadow {
         width: @li-width;

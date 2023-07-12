@@ -24,9 +24,10 @@
         margin: 0;
         float: left;
         flex: 1;
-        height: 1px;
+        height: 0.5px;
         border-right: 0;
         border-left: 0;
+        background: yellowgreen;
     }
 
     hr:nth-of-type(1) {

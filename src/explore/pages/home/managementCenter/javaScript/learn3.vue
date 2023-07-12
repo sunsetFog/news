@@ -93,8 +93,8 @@ export default {
 			var a=-4.5;
 			console.log('绝对值',Math.abs(a));
 			var b=4.2;
-			console.log('上取整',Math.ceil(b));
-			console.log('下取整',Math.floor(b));
+			console.log('上取整，去掉小数，然后加1',Math.ceil(b));
+			console.log('下取整，去掉小数',Math.floor(b));
 			var c=4.7
             console.log('四舍五入',Math.round(c));
 
