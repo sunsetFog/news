@@ -44,12 +44,15 @@ export default {
 <style lang="less" scoped>
 /*
 向上滚动动画
-数组：两份一样的内容
-let ul_height = li_height * arr.length
-起点：top: -(ul_height / 2 - div_height); 两格的中间
-终点：top: 起点 + -ul_height / 2
-移动距离：ul_height / 2
+数组：两份一样的内容，实现无缝循环
 */
+@li_height: 1.37rem;
+@div_height: 4.2rem;
+// ul高度的一半就是y轴移动距离   有14个li，就是数组长度
+@ul_height_half: @li_height * 14 / 2;// 9.59
+// 定位起点，ul高度中点对准div的bottom线
+@start_top: -(@ul_height_half - @div_height);// -5.39
+
 #upAndDown {
     width: 100%;
     .winning-list {
@@ -75,7 +78,7 @@ let ul_height = li_height * arr.length
         }
         div {
           width: 100%;
-          height: 4.2rem;
+          height: @div_height;
           overflow: hidden;
           position: relative;
           @keyframes slideInUp {
@@ -85,7 +88,7 @@ let ul_height = li_height * arr.length
               }
 
               to {
-                  transform: translate3d(0, -9.59rem, 0);
+                  transform: translate3d(0, @ul_height_half * -1, 0);// 负数是移动方向
               }
           }
           ul {
@@ -93,12 +96,12 @@ let ul_height = li_height * arr.length
             padding: 0;
             position: absolute;
             left: 0rem;
-            top: -5.39rem;
+            top: @start_top;// 起点
             animation: slideInUp 6s linear 0.1s infinite;
             li {
               width: 100%;
-              height: 1.37rem;
-              line-height: 1.37rem;
+              height: @li_height;
+              line-height: @li_height;
               list-style: none;
               text-align: left;
               color: #B1622A;
