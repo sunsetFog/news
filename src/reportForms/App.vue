@@ -32,7 +32,6 @@ export default {
 
 
 <style lang="less">
-@import "~@static/capital/app2.less";
 @import "~@static/capital/globalBaseStyle.less";
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;

@@ -113,7 +113,6 @@ export default {
 //为了全局样式有效，App.vue文件别用scoped
 @import "~@static/capital/app.less";
 @import "~@static/capital/globalBaseStyle.less";
-@import "~@static/capital/baidumap.less";
 #app {
   min-width: 1200px;
   font-family: "Avenir", Helvetica, Arial, sans-serif;

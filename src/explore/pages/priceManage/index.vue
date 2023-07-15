@@ -280,6 +280,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
+@import "./baidumap.less";
 #price-baidumap {
     width: 100%;
     height: 100%;

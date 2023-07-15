@@ -460,6 +460,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
+@import "./gaodeMap.less";
 .amap-page-container {
   width: 100%;
   height: 750px;

@@ -7,7 +7,7 @@
 
 <script>
 import headerBar from '@/reportForms/components/headerBar.vue'
-import GaodeAmap from '@/reportForms/components/GaoDeAmap'
+import GaodeAmap from './GaoDeAmap'
 export default {
   name: 'PriceManage',
   data () {
