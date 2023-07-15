@@ -38,6 +38,10 @@ function luyou(arr) {
         delete item.sort;
         delete item.subject;
         delete item.title;
+        // 按钮权限children，跳过一次循环
+        if(item.children.length != 0 && item.children[0].perms) {
+            continue;
+        }
         // 推路由重定向
         if(item.children && item.children.length != 0) {
             item.children.push({

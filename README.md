@@ -114,4 +114,16 @@ const env = require('../config/' + process.env.env_config + '.env')
 https://huawei-testbqzb.obs.myhuaweicloud.com/live%2F76099113904244.png 404 (Not Found)
 
 
+https://blog.csdn.net/Mrlujiao_code/article/details/120903204
+Vue项目启动报错 error:cannot find module xxx
+1、删掉存放模块的文件夹node_module、package-lock.json
+
+2、执行清除缓存命令 npm cache clean；
+如果报错，使用强制清除npm cache clean --force；
+
+3、重新安装模块，npm install；（会重新自动生成package-lock.json文件）
+然后npm run dev重启就可以了。
+
+
+
 
