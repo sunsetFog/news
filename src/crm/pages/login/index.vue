@@ -68,7 +68,8 @@ export default {
         };
     },
     created() {
-        this.$cookies.remove('token');
+        this.$cookies.remove('tokenAdminClient');
+        sessionStorage.removeItem('tabList');
     },
     methods: {
         formSubmit: function() {
@@ -89,7 +90,7 @@ export default {
                             console.log('--login--', res);
                             if (res.code == '200') {
                                 that.btnList();// study: 自定义指令
-                                that.$cookies.set('token', res.data.token, '1d');
+                                that.$cookies.set('tokenAdminClient', res.data.token, '1d');
                                 that.$store.dispatch('routerApple').then(function(value) {
                                     console.log('--then结束--');
                                     that.$router.addRoutes(value);

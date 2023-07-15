@@ -21,7 +21,7 @@ service.interceptors.request.use(config => {
     config.cancelToken = axios.CancelToken.source().token;// 取消重复请求
     // header里存token参数,每一次服务器收到请求，都要验证有效期，有效期为一天(token可以判断登陆的状态,不能存中文)
     // token的获取：1.访问链接上的参数 2.浏览器缓存里 3.直接在登录接口获取
-    config.headers['token'] = VueCookies.get("token");
+    config.headers['token'] = VueCookies.get("tokenPcClient");
     return config
 }, error => {
     return Promise.reject(error)

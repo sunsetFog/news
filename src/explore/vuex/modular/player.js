@@ -22,7 +22,6 @@ const player = {
         getPlayerInfo({state,commit,dispatch},response){
             //console.log('player',response);
             state.userInfo = response;
-            sessionStorage.setItem('token',response.token);
         },
         fragrant({state,commit,dispatch}, params){
             console.log('action异步', params);

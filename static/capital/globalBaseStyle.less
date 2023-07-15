@@ -92,3 +92,8 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     /* ie   Internet Explorer 10+ */
     color: #9FA7BA;
 }
+
+// 输入框去除浏览器自动填充的背景颜色
+input:-webkit-autofill {
+    transition: background-color 5000s ease-in-out 0s;
+}

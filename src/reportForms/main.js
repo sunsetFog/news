@@ -100,7 +100,7 @@ router.beforeEach((to, from, next) => {
     document.title = to.meta.title;
     // 刷新执行，且不是登录页，且要有token
     if (from.path == '/' && to.path != '/login') {
-        if (VueCookies.get('token')) {
+        if (VueCookies.get('tokenAppClient')) {
             store.dispatch('routerApple').then(function(value) {
                 console.log('--路由拦截--then结束--');
                 router.addRoutes(value);

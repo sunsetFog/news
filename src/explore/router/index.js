@@ -46,7 +46,8 @@ export default new Router({
           路由加属性permission: "caidan:shezhi", 与后端一个数组的permission字段做判断，得出有权限数组
           最后动态添加路由
     */
-   { path: '/login', name: 'Login', meta: { title: '登陆' }, component: resolve => require(['@/explore/pages/login/index'], resolve) }
+   { path: '/login', name: 'Login', meta: { title: '登陆' }, component: resolve => require(['@/explore/pages/login/index'], resolve) },
+   { path: '/register/index', name: 'register', meta: { title: '注册' }, component: resolve => require(['@/explore/pages/register/index'], resolve) }
 
   ]
 })

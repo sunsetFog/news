@@ -6,10 +6,17 @@
         <el-button type="text" @click="updateData">修改数据</el-button>
         <br>
         <el-button type="text" @click="deleteData">删除数据</el-button>
+        <LineTextLine>原生cookie</LineTextLine>
+        <el-button type="text" @click="$means.setCookie('password', '12345678', 1, true)">添加cookie</el-button>
+        <br/>
+        <el-button type="text" @click="getCookie">获取cookie</el-button>
+        <br/>
+        <el-button type="text" @click="$means.deleteCookie('password')">删除cookie</el-button>
     </section>
 </template>
 
 <script>
+
 export default {
     data(){
         return{
@@ -18,7 +25,6 @@ export default {
     },
     created(){
         this.cookies();
-        this.cookies2();
     },
     methods: {
         //浏览器开启都存在，关闭就删除   运行在服务器端
@@ -50,13 +56,8 @@ export default {
             // this.$cookies.get("test_cookies");
             // this.$cookies.remove("test_cookies");
         },
-        cookies2(){
-            let json = {
-                name: 'jsi-s',
-                value: 'nin_876',
-                date: '2h'
-            }
-            window.document.cookie = json.name + "=" + json.value + ";path=/;expires=" + json.date;
+        getCookie() {
+            console.log('--password--', this.$means.getCookie('password', true));
         },
         // study: indexDb缓存(本地数据库)
         // 添加数据

@@ -87,18 +87,13 @@ router.beforeEach((to, from, next) => {
     console.log('beforeEach--3983', to, from);
     document.title = to.meta.title;
 
-    if (to.path == '/login') {
-        VueCookies.remove('token');
-        sessionStorage.removeItem('tabList');
-    }
-
     /*
         study: 动态添加路由
         刷新执行，且不是登录页，且要有token
         刷新会重新执行main.js,放上面可以，就是这里需要判断跳回登录页
     */
     if (from.path == '/' && to.path != '/login') {
-        if (VueCookies.get('token')) {
+        if (VueCookies.get('tokenAdminClient')) {
             store.dispatch('routerApple').then(function(value) {
                 console.log('--then结束--');
                 router.addRoutes(value);

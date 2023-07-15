@@ -47,7 +47,7 @@ export default {
         }
     },
     created() {
-        this.$cookies.remove('token');
+        this.$cookies.remove('tokenAppClient');
     },
     methods: {
         registerWay() {
@@ -62,7 +62,7 @@ export default {
         },
         submitWay() {
             let that = this
-            that.$cookies.set('token', "XH-000887", '1d');
+            that.$cookies.set('tokenAppClient', "XH-000887", '1d');
             that.$store.dispatch('routerApple').then(function(value) {
                 console.log('--then结束--');
                 that.$router.addRoutes(value);

@@ -30,7 +30,7 @@ export default {
                 password: "123456"
             }
             that.$apihttp.post('http://localhost:2021/mock/geoJson',json).then((res) => {
-                console.log('H-token',res);
+                console.log('H-http',res);
             }).catch((err)=>{
                 console.log('error',err);
             })
@@ -49,7 +49,7 @@ export default {
                 // data: json, // 不管get还是post，参数都是body里
                 // headers: {} // headers设置
             }).then((res) => {
-                console.log('H-token',res);
+                console.log('H-http',res);
             }).catch((err)=>{
                 console.log('error',err);
             })
@@ -81,7 +81,7 @@ export default {
                 // data: json, // 不管get还是post，参数都是body里
                 // headers: {} // headers设置
             }).then((res) => {
-                console.log('H-token',res);
+                console.log('H-http',res);
             }).catch((err)=>{
                 console.log('error',err);
             })

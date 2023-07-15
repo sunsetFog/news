@@ -7,7 +7,7 @@
                 :action="yuming"
                 :show-file-list="false"
                 :data="{'id': 1,'biz': 'ok'}"
-                :headers="{'token': $cookies.get('token')}"
+                :headers="{'token': $cookies.get('tokenPcClient')}"
                 :on-success="handleAvatarSuccess"
                 :before-upload="beforeAvatarUpload"
                 accept="image/jpeg,image/jpg,image/png"

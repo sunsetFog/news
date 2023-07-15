@@ -221,7 +221,7 @@ export default {
             this.cover_height = cover + 'px';
         },
         judgeToken() {
-            if(!this.$cookies.get("token")){
+            if(!this.$cookies.get("tokenPcClient")){
                 this.$message.error('请先登录');
                 return false;
             }
@@ -396,7 +396,7 @@ export default {
                 that.account_number = '';
                 that.password_number = '';
                 that.safeActive = true;
-                that.$cookies.remove("token");
+                that.$cookies.remove("tokenPcClient");
                 that.cover_active = true;
                 that.coverMeans();
             });

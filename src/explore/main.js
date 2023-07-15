@@ -175,7 +175,7 @@ router.beforeEach((to, from, next) => {
 
     // 刷新执行，且不是登录页，且要有token
     if (from.path == '/' && to.path != '/login') {
-        if (VueCookies.get('token')) {
+        if (VueCookies.get('tokenPcClient')) {
             penCache.dispatch('routerApple').then(function(value) {
                 console.log('--then结束--');
                 router.addRoutes(value);

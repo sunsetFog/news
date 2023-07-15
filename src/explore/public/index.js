@@ -5,6 +5,7 @@ import regs from './modular/regular'
 import callback from './modular/callback'
 import indexDb from './modular/indexDb'
 import themeSkin from './modular/themeSkin'
+import cookies from './modular/cookies'
 /*
     全局方法
  */
@@ -15,6 +16,7 @@ const comic = { // es6合并对象
     ...regs,
     ...callback,
     ...indexDb,
-    ...themeSkin
+    ...themeSkin,
+    ...cookies
 }
 export default comic

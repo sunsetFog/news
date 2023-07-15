@@ -53,7 +53,7 @@ export default {
                 method: 'get',
                 data: json
             }).then((res) => {
-                console.log('H-token',res);
+                console.log('H-http',res);
             }).catch((err)=>{
                 console.log('error',err);
             })
