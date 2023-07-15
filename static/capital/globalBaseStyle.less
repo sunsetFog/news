@@ -72,28 +72,26 @@ textarea {
 input::placeholder, textarea::placeholder {
     color: #9FA7BA;
 }
-
+// 谷歌   WebKit browsers，webkit内核浏览器
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder  {
-    /* 谷歌   WebKit browsers，webkit内核浏览器 */
     color: #9FA7BA;
 }
-
+// 火狐   Mozilla Firefox 4 to 18
 input:-moz-placeholder, textarea:-moz-placeholder {
-    /* 火狐   Mozilla Firefox 4 to 18 */
     color: #9FA7BA;
 }
-
+// 火狐   Mozilla Firefox 19+
 input::-moz-placeholder, textarea::-moz-placeholder {
-    /* 火狐   Mozilla Firefox 19+ */
     color: #9FA7BA;
 }
-
+// ie   Internet Explorer 10+
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-    /* ie   Internet Explorer 10+ */
     color: #9FA7BA;
 }
-
-// 输入框去除浏览器自动填充的背景颜色
-input:-webkit-autofill {
+// 输入框去除浏览器自动填充的背景颜色、字体颜色
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: #fff !important;
 }
+
+

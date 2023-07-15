@@ -10,8 +10,13 @@ export default {
 
         }
     },
+    // 默认路由就是中转站
     beforeCreate() {
-        this.$router.push({ path: "/home/homeIndex/index"})
+        if (this.$cookies.get("tokenPcClient")) {
+            this.$router.push({ path: "/home/homeIndex/index"});
+        } else {
+            this.$router.push({ path: "/login"});
+        }
     }
 }
 </script>
