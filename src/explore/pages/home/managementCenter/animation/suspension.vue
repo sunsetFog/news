@@ -178,6 +178,17 @@
         </div>
         <LineTextLine>悬浮旋转180度</LineTextLine>
         <img class="spinning" src="@static/picture/breezy/180.png"/>
+        <LineTextLine>悬浮翻转180度就隐藏</LineTextLine>
+        <div class="papaya">
+            <img class="img01" src="@static/picture/breezy/starstruck-default.png"/>
+            <img class="img02" src="@static/picture/breezy/starstruck-bronze.png"/>
+        </div>
+        <LineTextLine>悬浮用animation，失去焦点就不会动画</LineTextLine>
+        <div class="peach">
+            <img class="img01" src="@static/picture/breezy/starstruck-default.png"/>
+            <img class="img02" src="@static/picture/breezy/starstruck-bronze.png"/>
+        </div>
+
     </section>
 </template>
 
@@ -394,6 +405,82 @@ export default {
             transform: rotate(180deg);
         }
     }
+    .papaya {
+        width: 140px;
+        height: 140px;
+        transform-style: preserve-3d;// 所有子元素位于3D空间中
+        position: relative;
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            backface-visibility: hidden;// 翻转之后消失
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: all 0.7s;
+        }
+        .img01 {
+
+        }
+        .img02 {
+            transform: rotateY(180deg);// 设置翻转，隐藏了           
+        }
+        &:hover .img01 {
+            transform: rotateY(180deg);// 从0deg到180deg，然后180deg到0deg
+        }
+        &:hover .img02 {
+            transform: rotateY(0deg);// 从180deg到0deg，然后0deg到180deg
+        }
+    }
+    .peach {
+        width: 140px;
+        height: 140px;
+        transform-style: preserve-3d;// 所有子元素位于3D空间中
+        position: relative;
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            backface-visibility: hidden;// 翻转之后消失
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .img01 {
+
+        }
+        .img02 {
+            transform: rotateY(180deg);// 设置翻转，隐藏了           
+        }
+        @keyframes overturn01 {
+            0% {
+                transform: rotateY(360deg);
+            }
+
+            100% {
+                transform: rotateY(0deg);
+            }
+        }
+        @keyframes overturn02 {
+            0% {
+                transform: rotateY(-180deg);
+            }
+
+            100% {
+                transform: rotateY(180deg);
+            }
+        }
+
+        &:hover .img01 {
+            animation: overturn01 0.8s linear;
+        }
+        &:hover .img02 {
+            animation: overturn02 0.8s linear;
+        }
+    }
+
+
 }
 </style>
 

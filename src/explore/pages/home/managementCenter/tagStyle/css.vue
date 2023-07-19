@@ -28,17 +28,17 @@
                 属性选择器：input[type="password"]{}      p[class="ra"] {}
                 伪类选择器：---谷歌浏览器》Elements》Styles》点:hov》打勾:hover
                     & 嵌套样式回上一层
-                    div:hover{}  --- 鼠标悬停
+                    div:hover{}  --- 鼠标悬停时
                     写法等于
                     div{
                         &:hover{
                         }
                     }
-                    div:focus{}
-                    div:active{}
-                    div:visitied{}
-                    div:link{}
-                    div:after{}
+                    div:focus{}  获得焦点时
+                    div:active{} 点击按住时
+                    div:visitied{} a标签已访问链接样式
+                    div:link{}  未访问链接样式
+                    div:after{}  元素之后插入内容
                     div:first-child{}  --- div里第一个子元素
                     div:last-child{}  --- div里最后子元素
                     div:nth-of-type(2){}  --- div里第几个子元素--- 实用
