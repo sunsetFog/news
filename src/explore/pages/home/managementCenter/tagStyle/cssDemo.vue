@@ -40,6 +40,13 @@
         <div class="swan">
             <button></button>
         </div>
+        <LineTextLine>float测试</LineTextLine>
+        <div class="klxlls">
+            <div class="yi"></div>
+            <div class="er"></div>
+            <div class="san"></div>
+            <div class="si"></div>
+        </div>
     </section>
 </template>
 
@@ -137,6 +144,31 @@ export default {
         background: #fff;
         button {
             .mixin_back_btn();
+        }
+    }
+    .klxlls {
+        width: 100%;
+        height: 200px;
+        .yi {
+            width: 120px;
+            height: 120px;
+            float: left;
+            background: red;
+        }
+        .er, .san {
+            width: calc(100% - 120px);
+            height: 60px;
+            float: left;
+            background: yellowgreen;
+        }
+        .san {
+            background: yellow;
+        }
+        .si {
+            width: calc(100% - 120px);
+            height: 60px;
+            float: left;
+            background: brown;
         }
     }
 }

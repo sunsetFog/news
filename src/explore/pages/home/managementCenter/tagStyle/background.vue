@@ -1,24 +1,7 @@
 <template>
     <section id="backgroundUnit">
         <LineTextLine>background能分解为background-*</LineTextLine>
-        <!--
-            css函数
-            hsla(0,0%,0%,0.*);
-            参数1：色调  取值为：0 - 360
-                0(或360)表示红色，120表示绿色，240表示蓝色
-            参数2：饱和度  取值为：0.0% - 100.0%
-            参数3: 亮度  取值为：0.0% - 100.0%
-            参数4: 透明度  取值0~1之间。
 
-            rgba(255,0,0,0.3);
-            参数1：红色  取值0 到 255的整数
-            参数2：绿色  取值0 到 255的整数
-            参数3：蓝色  取值0 到 255的整数
-            参数4: 透明度  取值 0~1 之间
-
-            css颜色
-            https://www.runoob.com/cssref/css-colors.html
-         -->
         <div class="peach">
 
         </div>

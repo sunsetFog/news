@@ -11,6 +11,10 @@
             <img src="@static/picture/breezy/1.png"/>
             <img src="@static/picture/breezy/2.png"/>
         </div>
+        <LineTextLine>旋转</LineTextLine>
+        <div class="runaround">
+            <img src="@static/picture/breezy/logo192.png"/>
+        </div>
     </section>
 </template>
 
@@ -77,6 +81,23 @@ section {
             100% {
                 opacity: 0;
                 transform: scale(1);
+            }
+        }
+    }
+    .runaround {
+        width: 90px;
+        height: 90px;
+        img {
+            width: 100%;
+            height: 100%;
+            animation: App-logo-spin infinite 20s linear;
+        }
+        @keyframes App-logo-spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
             }
         }
     }

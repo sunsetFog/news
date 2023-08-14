@@ -199,7 +199,7 @@ export default {
         min-height: 150px;
         display: flex;
         // flex-flow: row wrap; // flex-direction: row;和flex-wrap: wrap;的简写
-        flex-wrap: wrap; // 水平换行
+        flex-wrap: wrap; // 水平换行，自带清除浮动
         background: yellowgreen;
         .flowing-cell06 {
             flex: 0 0 42%;

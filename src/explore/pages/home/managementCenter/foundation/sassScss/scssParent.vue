@@ -117,7 +117,9 @@ $num: 6;
         @if $condition =='condition' {
             background: #00BCD4;
         }
+        @else if $condition =='condition6' {
 
+        }
         @else {
             background: rebeccapurple;
         }

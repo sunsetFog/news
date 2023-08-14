@@ -172,6 +172,8 @@
 
     inset: 0px; 等价于 top: 0; right: 0; bottom: 0; left: 0;
     inset: 1px 2px 3px; 等价于 top: 1px; right: 2px; bottom: 3px; left: 2px;
+
+    span靠字体撑开高度时，用定位会向上偏移一些，要加高度的定位才精准，不是rem偏差导致的
 */
     table {
         width: 100%;

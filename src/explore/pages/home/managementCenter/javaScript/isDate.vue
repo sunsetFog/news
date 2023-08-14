@@ -1,7 +1,11 @@
 <template>
     <section>
-        --日期时间--
+        <LineTextLine>日期时间</LineTextLine>
         <datePicker></datePicker>
+        <LineTextLine>倒计时</LineTextLine>
+        <div>
+            <p v-for="(item, index) in arrList" :key="index">{{ item.timeTxt }}</p>
+        </div>
     </section>
 </template>
 
@@ -13,7 +17,15 @@ export default {
     components: { datePicker },
     data() {
         return {
-
+            arrList: [
+                {
+                    countTime: 60
+                },
+                {
+                    countTime: 18000
+                }
+            ],
+            timeValue: null
         }
     },
     created() {
@@ -26,6 +38,12 @@ export default {
 
         this.demo2()
         this.countDown()
+    },
+    mounted () {
+        this.toTime(this.arrList);
+    },
+    destroyed () {
+        this.stopTime();
     },
     methods: {
         demo1(){
@@ -51,7 +69,7 @@ export default {
             let field = new Date().getTime();
             console.log('当前时间转时间戳', field);// 1646243956840
             console.log('时间戳转中国标准时间', new Date(field));// Thu Mar 03 2022 01:59:16 GMT+0800 (中国标准时间)
-            
+
             let biaozhun = "2021-11-03T18:00:00.000Z";
             console.log('国际标准时间转中国标准时间', new Date(biaozhun));
         },
@@ -59,7 +77,7 @@ export default {
         countDown() {
             var nowTime = new Date();
             var futureTime = new Date(2023,0,1);
-            var millisecond= futureTime.getTime() - nowTime.getTime();// getTime() 1970 年 1 月 1 日至今的毫秒数       
+            var millisecond= futureTime.getTime() - nowTime.getTime();// getTime() 1970 年 1 月 1 日至今的毫秒数
             console.log('剩余所有毫秒数',millisecond);
 
             var surplusSecond = parseInt(millisecond/1000);
@@ -125,6 +143,37 @@ export default {
             console.log('七天后：操作--加上--', dayjs().add(7, 'day').format('YYYY-MM-DD HH:mm:ss'));// 2022-04-16 13:57:22
             console.log('三天前：操作--减去--', dayjs().subtract(3, 'day').format('YYYY-MM-DD HH:mm:ss'));// 2022-04-06 14:02:06
 
+        },
+        stopTime () {
+            if (this.timeValue) {
+                clearInterval(this.timeValue);
+            }
+        },
+        toTime (arrList) {
+            let that = this;
+            let arrBox = JSON.parse(JSON.stringify(arrList));
+            this.stopTime();
+            this.timeValue = setInterval(() => {
+                for (let i = 0; i < arrBox.length; i++) {
+                    let item = arrBox[i];
+                    if (item.countTime != 0) {
+                        item.countTime = item.countTime - 1;
+                    }
+                    item.timeTxt = this.secondsFormatTime(item.countTime);
+                }
+                that.arrList = JSON.parse(JSON.stringify(arrBox));
+                console.log("----time---", arrBox);
+            }, 1000);
+        },
+        // 秒转时间
+        secondsFormatTime(mss) {
+            let hour = Math.floor(mss / 3600);
+            hour = `${hour <= 9 ? '0' : ''}${hour}`;
+            let minutes = Math.floor(mss / 60 % 60);
+            minutes = `${minutes <= 9 ? '0' : ''}${minutes}`;
+            let seconds = Math.ceil(mss % 60);
+            seconds = `${seconds <= 9 ? '0' : ''}${seconds}`
+            return `${hour}:${minutes}:${seconds}`;
         }
     }
 }

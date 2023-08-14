@@ -1,6 +1,6 @@
 <template>
     <section id="rem">
-        <!-- 
+        <!--
             移动端适配
             注意:谷歌浏览器最小字体为12像素,项目要用大于12的字体，选16就好
 
@@ -10,8 +10,8 @@
             三种px转换rem方式
             1.计算转换
                 ps测量值是40px时：40px / 16= 2.5rem
-                px都要转rem，包括margin，border, font-size              
-                
+                px都要转rem，包括margin，border, font-size
+
 
             2.自动转换
                 https://www.cnblogs.com/wangqiao170/p/8652505.html
@@ -25,16 +25,18 @@
 
             3.安装vscode的插件px to rem转换
                 选好样式，然后用Alt + Z转换，两次Alt + z会转换回来
-        
+                code》首选项 》设置 》扩展 》px to rem 》修改成1rem=16px
+                不改四位小数，px 转 rem会四舍五入，rem 转 px 就不会四舍五入
+
         -->
-        
+
         <div class="adapt">移动端px转rem</div>
     </section>
 </template>
 
 <script>
 export default {
-    
+
 }
 </script>
 

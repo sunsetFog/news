@@ -19,36 +19,7 @@
             实际height高 = border边框 + padding内边距 + 设定的height高
 
 
-            3.样式选择器
-            三种常见选择器类型：
-                1.标签选择器  div{}
-				2.class选择器   .ming{}
-				3.id选择器    #ming{}
-            不常见的选择器：
-                属性选择器：input[type="password"]{}      p[class="ra"] {}
-                伪类选择器：---谷歌浏览器》Elements》Styles》点:hov》打勾:hover
-                    & 嵌套样式回上一层
-                    div:hover{}  --- 鼠标悬停时
-                    写法等于
-                    div{
-                        &:hover{
-                        }
-                    }
-                    div:focus{}  获得焦点时
-                    div:active{} 点击按住时
-                    div:visitied{} a标签已访问链接样式
-                    div:link{}  未访问链接样式
-                    div:after{}  元素之后插入内容
-                    div:first-child{}  --- div里第一个子元素
-                    div:last-child{}  --- div里最后子元素
-                    div:nth-of-type(2){}  --- div里第几个子元素--- 实用
-                    div:not([class]){} 没有class属性的元素设置为...
-                伪元素选择器:
-                    p::first-line{} ---- 内容首行添加样式
-                    div::before {content: url(smiley.gif);} ---- div内容之前插入一幅图像
-                子代选择器： div > p{}
-                后代选择器： div p{}
-                相邻兄弟选择器：  p + span{}
+
             4.引入css的三种方式
                 行内式(行间式)：<div style=""></div>
 			    内部式(内联式)：在head标签内使用<style></style>;
@@ -69,18 +40,27 @@
             伪元素                                  1
             伪类                                    10
             width: 45px !important;                 9999最大
+            7.作用域
+            嵌套时，外层是能找到的，用了外层才能用内层
         -->
-        样式命名规范:
+
+        <LineTextLine>样式命名规范</LineTextLine>
         <br>
         1.用-：class="list-cell"
         <br>
         2.一个页面用一个id类，尽量有class类
 
-
+        <br>
         小技巧：
+        <br>
         用padding可以不写高
-        能少写类名：标签选择器  div{} 、 div:nth-of-type(2){}
-
+        <br>
+        标签选择器能少写类名，要注意影响孙后代
+        <LineTextLine>全局样式</LineTextLine>
+        <LineTextLine>模块公用样式</LineTextLine>
+        <div class="swan-unit">
+            <button>二哈</button>
+        </div>
 
     </section>
 </template>
@@ -95,7 +75,7 @@ export default {
 <style lang="less" scoped>
     #css{
         color: #fff;
-        //width: calc(100% - 20px);//占父元素100%的宽度再减20px
+        text-align: left;
         // .box{
         //     &.add-ys{}// 嵌套样式
         //     &:nth-child(2){}
@@ -183,6 +163,13 @@ export default {
         // @media only screen and (max-width: 700px){
         //     //样式
 		// }
+
+        .swan-unit {
+            @import './swan.less';
+            button {
+                width: @erha-width;
+            }
+        }
 
 
 
