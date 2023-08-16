@@ -48,7 +48,7 @@ export default {
 <style lang="scss" scoped>
 // 嵌套
 
-// 变量
+// 变量    变量与字符串拼接时：用#{}  line-height: calc(#{$lineOfHeight} + 0.04rem);
 $mechanism: 'mechanism';
 $text-color: red;
 

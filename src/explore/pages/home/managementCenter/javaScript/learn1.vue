@@ -27,13 +27,6 @@ export default {
             prompt("prompt内容");//对话框
             // document.write("内容");//页面中打印内容，不推荐,覆盖掉原网页内容
             console.log('控制台','变量');
-
-            // 注意:1.js不区分单双引号,但是双引号不能包双引号，单引号不能包单引号
-            let imgName = "flower";
-            let src = "../img/" + imgName + ".png";
-            let src2 = `../img/${imgName}.png`
-            console.log('两种变量与字符串拼接写法', src, src2);
-
             /*
             html中的节点类型：
 			1.元素节点：html、div、p、span等这些元素
@@ -344,7 +337,7 @@ export default {
 
             5.三目运算符:(条件)?(语句1):(语句2)
             如果条件成立,结果为语句1,否为语句2
-            
+
             连续写法
             条件 ？‘ok01’ : 条件 ? 'ok02' : 'ok03'
 

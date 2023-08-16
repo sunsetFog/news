@@ -10,7 +10,7 @@
 }
 
 html, body, #app {
-    width: 100%;// 满宽是100vw  -相当于- window.innerWidth (包括滚动条,所以宽不用)
+    width: 100%;// 满宽是100vw  -相当于- window.innerWidth (包括滚动条)；出现滚动条，解决width: calc(100vw - (100vw - 100%));
     height: 100vh;// 满高是100vh  -相当于- window.innerHeight (包括滚动条)
     -touch-action: none;// pc或移动端不能触屏
     text-size-adjust: 100%;// 根据设备尺寸(或旋转屏幕时)而自动调整文字大小

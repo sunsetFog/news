@@ -1,52 +1,64 @@
 <template>
     <section id="flex-index">
         <!-- 问题：高为百分比时，文字垂直居中？     line-height: 100%;和字体大小一样大，不能用 -->
-        <LineTextLine>1.flex---盒子和文字垂直居中---好用</LineTextLine>
+        <LineTextLine>方式1: flex，盒子垂直居中，文字垂直居中</LineTextLine>
         <div class="vertical-center">
             文字垂直居中
-            <p></p>
+            <!-- <p></p> -->
         </div>
 
-        <LineTextLine>1.定位---盒子垂直居中</LineTextLine>
+        <LineTextLine>方式2: 定位，盒子垂直居中</LineTextLine>
         <div class="pen-scenery">
             <p></p>
         </div>
 
-        <LineTextLine>1.高为百分比时，display:table-cell文字垂直居中</LineTextLine>
+        <LineTextLine>方式2: 文字垂直居中</LineTextLine>
         <div class="height-percentage">
             <span>文字垂直居中</span>
         </div>
 
-        <LineTextLine>2.行和列</LineTextLine>
-        <div class="list">
+        <LineTextLine>行和列，前提是固定宽或高</LineTextLine>
+        <div class="atmosphere1">
+            <div class="list-cell02"></div>
+            <div class="list-cell02"></div>
+            <div class="list-cell02"></div>
+        </div>
+        <br>
+        <div class="atmosphere2">
             <div class="list-cell02"></div>
             <div class="list-cell02"></div>
             <div class="list-cell02"></div>
         </div>
 
-        <LineTextLine>3.等比伸缩</LineTextLine>
-        <div class="grid">
+        <LineTextLine>等比伸缩</LineTextLine>
+        <div class="cartoon">
             <div class="grid-cell03">1/3</div>
             <div class="grid-cell03">1/3</div>
             <div class="grid-cell03">1/3</div>
         </div>
 
-        <LineTextLine>4.百分比布局</LineTextLine>
-        <div class="percentage">
+        <LineTextLine>百分比</LineTextLine>
+        <div class="jupiter">
             <div class="percentage-cell04">5/10</div>
             <div class="percentage-cell04">4/10</div>
             <div class="percentage-cell04">1/10</div>
         </div>
 
-        <LineTextLine>5.水平间隔:用margin分配剩余空间---大盒子固定宽，好用</LineTextLine>
-        <div class="format">
-            <div class="format-cell05">5/10</div>
-            <div class="format-cell05">4/10</div>
-            <div class="format-cell05">1/10</div>
+        <LineTextLine>margin分配剩余空间，前提是父盒子固定宽</LineTextLine>
+        <div class="saturn1">
+            <div class="format-cell05"></div>
+            <div class="format-cell05"></div>
+            <div class="format-cell05"></div>
+        </div>
+        <br>
+        <div class="saturn2">
+            <div class="format-cell05"></div>
+            <div class="format-cell05"></div>
+            <div class="format-cell05"></div>
         </div>
 
-        <LineTextLine>6.流式布局---水平换行</LineTextLine>
-        <div class="flowing">
+        <LineTextLine>水平换行，流式布局</LineTextLine>
+        <div class="mercury">
             <div class="flowing-cell06"></div>
             <div class="flowing-cell06"></div>
             <div class="flowing-cell06"></div>
@@ -54,24 +66,23 @@
             <div class="flowing-cell06"></div>
         </div>
         <!--
-            ---好用
-            flex: 1;某盒子划分剩余空间--（兄弟盒子中，只有一个盒子加flex: 1;）
+            flex: 1;某盒子划分剩余空间--只能给一个盒子
             flex: 1;  flex: 2; flex: 3;按照倍数划分
 
             剩余空间分配相关属性
             flex 属性包括了 flex-basis、 flex-grow、flex-shrink
-            flex-basis 用来定义子元素的默认宽或高（高需要设置flex-direction）----flex-basis: 80px;
-            flex-grow 用来指定父容器多余空间的分配比率，默认值为0
-            flex-shrink 用来指定父容器空间不够时子元素的缩小比例，默认为1，0不压缩
+            flex-basis 默认宽或高（高需要设置flex-direction）----flex-basis: 80px;
+            flex-grow 多余空间时，分配比率，默认值为0
+            flex-shrink 空间不够时，子元素的缩小比例，默认为1，0不压缩
          -->
-         <LineTextLine>7.高---划分剩余空间---大盒子固定高</LineTextLine>
+         <LineTextLine>高划分剩余空间，前提是父盒子固定高</LineTextLine>
         <div class="surplus01">
             <div class="surplus-cell17"></div>
             <div class="surplus-cell27"></div>
             <div class="surplus-cell37"></div>
         </div>
 
-        <LineTextLine>7.宽---划分剩余空间---大盒子固定宽</LineTextLine>
+        <LineTextLine>宽划分剩余空间，前提是父盒子固定宽</LineTextLine>
         <div class="surplus02">
             <div class="surplus-cell17">恍恍惚惚</div>
             <div class="surplus-cell27"></div>
@@ -91,7 +102,7 @@ export default {
 #flex-index {
     width: 100%;
     color: #fff;
-
+    // ------------------------------方式1: flex，盒子和文字垂直居中------------------------------
     .vertical-center {
         width: 100%;
         height: 80px;
@@ -105,6 +116,7 @@ export default {
             background: blue;
         }
     }
+    // ------------------------------方式2: 定位，盒子垂直居中------------------------------
     .pen-scenery {
         width: 100%;
         height: 80px;
@@ -120,6 +132,7 @@ export default {
             margin: -25PX 0 0 -50px;//上，右，下，左   负值，宽的一半，高的一半
         }
     }
+    // ------------------------------方式2: 文字垂直居中------------------------------
     .height-percentage {
         width: 200px;
         height: 50px;
@@ -130,13 +143,31 @@ export default {
             vertical-align: middle; // 垂直
         }
     }
-
-    .list {
+    // ------------------------------行和列，前提是固定宽或高------------------------------
+    .atmosphere1 {
         display: flex;
-        -flex-direction: row;// 行---默认，可以不写
-        flex-direction: column;// 列
+        -flex-direction: row;// 行---默认，可以不写；自带浮动并清除浮动
         .list-cell02 {
-            // flex: 0 0 30%; //这个与flex-direction: column;冲突
+            height: 50px;// 固定高，宽变
+        }
+        .list-cell02:nth-of-type(1) {
+            flex: 0 0 25%;
+            background: yellowgreen;
+        }
+        .list-cell02:nth-of-type(2) {
+            flex: 0 0 35%;
+            background: violet;
+        }
+        .list-cell02:nth-of-type(3) {
+            flex: 0 0 40%;
+            background: brown;
+        }
+    }
+    .atmosphere2 {
+        display: flex;
+        flex-direction: column;// 列  与flex: 0 0 30%;冲突
+        .list-cell02 {
+            width: 80%;// 固定宽，高变
             height: 30px;
         }
         .list-cell02:nth-of-type(1) {
@@ -149,8 +180,8 @@ export default {
             background: brown;
         }
     }
-
-    .grid {
+    // ------------------------------等比伸缩------------------------------
+    .cartoon {
         display: flex;
         .grid-cell03 {
             flex: 1; // 等比伸缩   相对与flex: 0 0 33.33%;
@@ -165,8 +196,8 @@ export default {
             background: brown;
         }
     }
-
-    .percentage {
+    // ------------------------------百分比------------------------------
+    .jupiter {
         display: flex;
         .percentage-cell04:nth-of-type(1) {
             flex: 0 0 50%;//宽50%
@@ -181,11 +212,10 @@ export default {
             background: brown;
         }
     }
-
-    .format {
+    // ------------------------------margin分配剩余空间，前提是父盒子固定宽------------------------------
+    .saturn1 {
         display: flex;
-        justify-content: space-around; //margin左右间隔
-        -justify-content: space-between;//中间隔
+        justify-content: space-around; // 左右margin
         background: white;
         .format-cell05 {
             flex: 0 0 26%;
@@ -193,12 +223,22 @@ export default {
             background: #333B4B;
         }
     }
-
-    .flowing {
+    .saturn2 {
+        display: flex;
+        justify-content: space-between;// 间隔margin
+        background: white;
+        .format-cell05 {
+            flex: 0 0 26%;
+            height: 30px;
+            background: #333B4B;
+        }
+    }
+    // ------------------------------水平换行，流式布局------------------------------
+    .mercury {
         width: 100%;
         min-height: 150px;
         display: flex;
-        // flex-flow: row wrap; // flex-direction: row;和flex-wrap: wrap;的简写
+        // flex-flow: row wrap; // 等价于flex-direction: row;和flex-wrap: wrap;
         flex-wrap: wrap; // 水平换行，自带清除浮动
         background: yellowgreen;
         .flowing-cell06 {
@@ -208,7 +248,7 @@ export default {
             margin: 7.5px;
         }
     }
-
+    // ------------------------------高划分剩余空间，前提是父盒子固定高------------------------------
     .surplus01 {
         width: 100%;
         height: 200px;
@@ -230,13 +270,13 @@ export default {
             background: #909399;
         }
     }
-
+    // ------------------------------宽划分剩余空间，前提是父盒子固定宽------------------------------
     .surplus02 {
         width: 100%;
         height: 50px;
         display: flex;
         flex-direction: row;//行，默认
-        .surplus-cell17 {
+        .surplus-cell17 {// 宽度未知，靠字体撑开；这点比calc函数好
             height: 50px;
             background: #F56C6C;
         }

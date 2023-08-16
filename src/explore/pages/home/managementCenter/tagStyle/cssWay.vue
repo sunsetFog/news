@@ -1,6 +1,6 @@
 <template>
     <section class="cssWay">
-        <LineTextLine>calc()函数，剩余空间计算</LineTextLine>
+        <LineTextLine>calc()函数，剩余空间计算，能使用100%才有效</LineTextLine>
         <div class="calc-unit">
             <p></p>
             <p></p>

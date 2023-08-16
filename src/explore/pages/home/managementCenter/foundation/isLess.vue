@@ -49,7 +49,7 @@ export default {
 <style lang="less" scoped>
 // 嵌套
 
-// 变量
+// 变量   变量与字符串拼接时： 用@{}  .fee@{text-color} {}
 @text-color: red;
 
 

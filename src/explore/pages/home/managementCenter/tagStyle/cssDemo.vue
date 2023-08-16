@@ -13,12 +13,9 @@
                 </ul>
             </el-scrollbar>
         </div>
-        <LineTextLine>清除浮动</LineTextLine>
+        <LineTextLine>清除浮动，父盒子才能撑开高度，margin-top就不会失效</LineTextLine>
         <!--
-            为啥要清除浮动？
-            因为float的浮动无法撑起父级元素宽高
-
-            解决办法1：在最后一个li元素后面加上一个div，加上clear: both;样式
+            解决办法1：在最后一个li元素后面加上<div style="clear: both;"></div>
             解决办法2：父级元素加样式overflow: hidden;
             解决办法3：li元素加样式display:inline-block;
          -->

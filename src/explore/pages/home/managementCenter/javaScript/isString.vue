@@ -13,10 +13,19 @@ export default {
         }
     },
     created() {
-
+        this.demo1();
     },
     methods: {
-        demo6(){
+        demo1() {
+            // 注意:1.js不区分单双引号,但是双引号不能包双引号，单引号不能包单引号
+            let imgName = "flower";
+            let src = "../img/" + imgName + ".png";
+            console.log('方式1: 变量与字符串拼接', src);
+            let src2 = `../img/${imgName}.png`;
+            console.log('方式2: 变量与字符串拼接', src2);
+            console.log('换行\n哇卡卡卡')
+        },
+        demo6() {
             /*
                 字符串常见方法：
                    字符串.charAt(下标)    返回指定下标的字符
