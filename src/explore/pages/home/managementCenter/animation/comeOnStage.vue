@@ -1,5 +1,6 @@
 <template>
     <section id="comeOnStage">
+        <LineTextLine>平移和放大</LineTextLine>
         <header>
             <button :class="{ 'is-active': isActive == 0 }" @click="isActive = 0">花香电竞</button>
             <button :class="{ 'is-active': isActive == 1 }" @click="isActive = 1">开心电竞</button>
@@ -22,6 +23,9 @@
                 <img src="@static/picture/breezy/electronic02.png" />
             </div>
         </main>
+        <LineTextLine>三秒后消失</LineTextLine>
+        <el-button @click="play = !play">开始动画{{play}}</el-button>
+        <span class="cartoon" v-if="play">+1</span>
     </section>
 </template>
 
@@ -29,7 +33,8 @@
 export default {
     data() {
         return {
-            isActive: 0
+            isActive: 0,
+            play: false
         }
     }
 }
@@ -120,5 +125,23 @@ export default {
                 }
             }
         }
+    }
+
+    @keyframes overturn {
+        0% {
+            opacity: 1;
+        }
+
+        60% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+    .cartoon {
+        opacity: 0;
+        animation: overturn 3s linear;
     }
 }</style>

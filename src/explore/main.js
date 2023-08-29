@@ -1,5 +1,6 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+/*
+    主入口
+*/
 import Vue from 'vue';
 import App from './App'; //引入App.vue
 
@@ -40,7 +41,6 @@ import store from '@/explore/vuex/index.js';
 //md5加密-type是字符串
 import md5 from 'js-md5';
 Vue.prototype.$md5 = md5;
-
 
 
 // 使用vue-cookies

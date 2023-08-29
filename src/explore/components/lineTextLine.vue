@@ -25,8 +25,7 @@
         float: left;
         flex: 1;
         height: 0.5px;
-        border-right: 0;
-        border-left: 0;
+        border: 0;
         background: yellowgreen;
     }
 

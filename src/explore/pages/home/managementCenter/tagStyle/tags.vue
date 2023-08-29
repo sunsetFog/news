@@ -261,6 +261,10 @@
                 footer底栏容器
             </footer>
         </section>
+        <LineTextLine>article标签</LineTextLine>
+        <article>
+            article标签
+        </article>
     </section>
 </template>
 
@@ -362,7 +366,7 @@ export default {
 
     .cartoon-unit {
         width: 100%;
-        height: 500px;
+        height: 320px;
         color: black;
         header {
             width: 100%;
@@ -398,6 +402,12 @@ export default {
             text-align: center;
             line-height: 50px;
         }
+    }
+    article {
+        width: 100%;
+        height: 120px;
+        line-height: 120px;
+        background: #d3dce6;
     }
 
 }</style>
