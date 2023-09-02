@@ -126,6 +126,12 @@ Vue项目启动报错 error:cannot find module xxx
 3、重新安装模块，npm install；（会重新自动生成package-lock.json文件）
 然后npm run dev重启就可以了。
 
+分支名：
+skyCloud
+pcWebsite
+mobileApp
+adminSystem
+
 
 
 
