@@ -2,7 +2,7 @@
 # Manual changes might be lost - proceed with caution!
 
 __metadata:
-  version: 7
+  version: 6
   cacheKey: 10
 
 "@babel/helper-string-parser@npm:^7.22.5":
@@ -4660,9 +4660,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fsevents@patch:fsevents@npm%3A^1.2.7#optional!builtin<compat/fsevents>":
+"fsevents@patch:fsevents@npm%3A^1.2.7#~builtin<compat/fsevents>":
   version: 1.2.13
-  resolution: "fsevents@patch:fsevents@npm%3A1.2.13#optional!builtin<compat/fsevents>::version=1.2.13&hash=d11327"
+  resolution: "fsevents@patch:fsevents@npm%3A1.2.13#~builtin<compat/fsevents>::version=1.2.13&hash=d11327"
   dependencies:
     bindings: "npm:^1.5.0"
     nan: "npm:^2.12.1"
@@ -4670,9 +4670,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fsevents@patch:fsevents@npm%3A~2.3.2#optional!builtin<compat/fsevents>":
+"fsevents@patch:fsevents@npm%3A~2.3.2#~builtin<compat/fsevents>":
   version: 2.3.2
-  resolution: "fsevents@patch:fsevents@npm%3A2.3.2#optional!builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"
+  resolution: "fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"
   dependencies:
     node-gyp: "npm:latest"
   conditions: os=darwin
@@ -9720,16 +9720,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resolve@patch:resolve@npm%3A^1.1.6#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.1.7#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.10.0#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.4.0#optional!builtin<compat/resolve>":
+"resolve@patch:resolve@npm%3A^1.1.6#~builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.1.7#~builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.10.0#~builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.4.0#~builtin<compat/resolve>":
   version: 1.22.2
-  resolution: "resolve@patch:resolve@npm%3A1.22.2#optional!builtin<compat/resolve>::version=1.22.2&hash=c3c19d"
+  resolution: "resolve@patch:resolve@npm%3A1.22.2#~builtin<compat/resolve>::version=1.22.2&hash=c3c19d"
   dependencies:
     is-core-module: "npm:^2.11.0"
     path-parse: "npm:^1.0.7"
     supports-preserve-symlinks-flag: "npm:^1.0.0"
   bin:
     resolve: bin/resolve
-  checksum: 14594f99dbff19c1f51f6daac0caf0b75ed345256ada3722c23f63935eace79532dcfa349b3d8889d2771c143822c38dd5d7d8eb85fb8cff257b7abccbad7872
+  checksum: 8/66cc788f13b8398de18eb4abb3aed90435c84bb8935953feafcf7231ba4cd191b2c10b4a87b1e9681afc34fb138c705f91f7330ff90bfa36f457e5584076a2b8
   languageName: node
   linkType: hard
 
@@ -10006,6 +10006,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"semver@npm:^5.7.2":
+  version: 5.7.2
+  resolution: "semver@npm:5.7.2"
+  bin:
+    semver: bin/semver
+  checksum: 8/fb4ab5e0dd1c22ce0c937ea390b4a822147a9c53dbd2a9a0132f12fe382902beef4fbf12cf51bb955248d8d15874ce8cd89532569756384f994309825f10b686
+  languageName: node
+  linkType: hard
+
 "semver@npm:^6.3.0":
   version: 6.3.0
   resolution: "semver@npm:6.3.0"
@@ -10241,87 +10250,87 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "sky@workspace:."
   dependencies:
-    "@goodgeek/vue-json-schema-form": "npm:^1.9.5"
-    "@lljj/vue-json-schema-form": "npm:^1.9.3"
-    autoprefixer: "npm:^7.1.2"
-    axios: "npm:^0.18.1"
-    babel-core: "npm:^6.22.1"
-    babel-helper-vue-jsx-merge-props: "npm:^2.0.3"
-    babel-loader: "npm:^7.1.1"
-    babel-plugin-syntax-jsx: "npm:^6.18.0"
-    babel-plugin-transform-runtime: "npm:^6.22.0"
-    babel-plugin-transform-vue-jsx: "npm:^3.5.0"
-    babel-polyfill: "npm:^6.26.0"
-    babel-preset-env: "npm:^1.3.2"
-    babel-preset-stage-2: "npm:^6.22.0"
-    chalk: "npm:^2.0.1"
-    clipboard: "npm:^2.0.4"
-    copy-webpack-plugin: "npm:^4.0.1"
-    cross-env: "npm:^7.0.3"
-    css-loader: "npm:^0.28.0"
-    dayjs: "npm:^1.11.0"
-    driver.js: "npm:^0.9.8"
-    easemob-websdk: "npm:^3.5.1"
-    echarts: "npm:^4.9.0"
-    element-ui: "npm:^2.14.1"
-    extract-text-webpack-plugin: "npm:^3.0.0"
-    fastclick: "npm:^1.0.6"
-    file-loader: "npm:^1.1.4"
-    font-awesome: "npm:^4.7.0"
-    friendly-errors-webpack-plugin: "npm:^1.6.1"
-    html-webpack-plugin: "npm:^2.30.1"
-    iview: "npm:^2.13.1"
-    js-md5: "npm:^0.7.3"
-    less: "npm:^3.0.4"
-    less-loader: "npm:^4.1.0"
-    lodash: "npm:^4.17.21"
-    mint-ui: "npm:^2.2.13"
-    mockjs: "npm:^1.1.0"
-    monaco-editor: "npm:^0.29.1"
-    node-notifier: "npm:^5.1.2"
-    node-sass: "npm:^4.14.1"
-    nprogress: "npm:^0.2.0"
-    optimize-css-assets-webpack-plugin: "npm:^3.2.0"
-    ora: "npm:^1.2.0"
-    portfinder: "npm:^1.0.13"
-    postcss-import: "npm:^11.0.0"
-    postcss-loader: "npm:^2.0.8"
-    postcss-pxtorem: "npm:^5.1.1"
-    postcss-url: "npm:^7.2.1"
-    rimraf: "npm:^2.6.0"
-    sass-loader: "npm:^7.0.1"
-    sass-resources-loader: "npm:^2.1.1"
-    screenfull: "npm:^4.2.0"
-    scss: "npm:^0.2.4"
-    scss-loader: "npm:0.0.1"
-    semver: "npm:^5.3.0"
-    shelljs: "npm:^0.7.6"
-    svg-sprite-loader: "npm:^6.0.9"
-    uglifyjs-webpack-plugin: "npm:^1.1.1"
-    url-loader: "npm:^0.5.8"
-    v-distpicker: "npm:^1.2.13"
-    v-viewer: "npm:^1.6.4"
-    vant: "npm:^2.12.24"
-    vue: "npm:^2.5.2"
-    vue-amap: "npm:^0.5.10"
-    vue-baidu-map: "npm:^0.21.22"
-    vue-cookies: "npm:^1.5.13"
-    vue-cropper: "npm:^0.5.8"
-    vue-i18n: "npm:^8.25.0"
-    vue-loader: "npm:^13.3.0"
-    vue-luck-draw: "npm:^3.4.11"
-    vue-property-decorator: "npm:^9.1.2"
-    vue-qr: "npm:^2.2.1"
-    vue-router: "npm:^3.0.1"
-    vue-style-loader: "npm:^3.0.1"
-    vue-template-compiler: "npm:^2.5.2"
-    vuedraggable: "npm:^2.24.3"
-    vuex: "npm:^3.5.1"
-    wangeditor: "npm:^4.7.11"
-    webpack: "npm:^3.6.0"
-    webpack-bundle-analyzer: "npm:^2.9.0"
-    webpack-dev-server: "npm:^2.9.1"
-    webpack-merge: "npm:^4.1.0"
+    "@goodgeek/vue-json-schema-form": ^1.9.5
+    "@lljj/vue-json-schema-form": ^1.9.3
+    autoprefixer: ^7.1.2
+    axios: ^0.18.1
+    babel-core: ^6.22.1
+    babel-helper-vue-jsx-merge-props: ^2.0.3
+    babel-loader: ^7.1.1
+    babel-plugin-syntax-jsx: ^6.18.0
+    babel-plugin-transform-runtime: ^6.22.0
+    babel-plugin-transform-vue-jsx: ^3.5.0
+    babel-polyfill: ^6.26.0
+    babel-preset-env: ^1.3.2
+    babel-preset-stage-2: ^6.22.0
+    chalk: ^2.0.1
+    clipboard: ^2.0.4
+    copy-webpack-plugin: ^4.0.1
+    cross-env: ^7.0.3
+    css-loader: ^0.28.0
+    dayjs: ^1.11.0
+    driver.js: ^0.9.8
+    easemob-websdk: ^3.5.1
+    echarts: ^4.9.0
+    element-ui: ^2.14.1
+    extract-text-webpack-plugin: ^3.0.0
+    fastclick: ^1.0.6
+    file-loader: ^1.1.4
+    font-awesome: ^4.7.0
+    friendly-errors-webpack-plugin: ^1.6.1
+    html-webpack-plugin: ^2.30.1
+    iview: ^2.13.1
+    js-md5: ^0.7.3
+    less: ^3.0.4
+    less-loader: ^4.1.0
+    lodash: ^4.17.21
+    mint-ui: ^2.2.13
+    mockjs: ^1.1.0
+    monaco-editor: ^0.29.1
+    node-notifier: ^5.1.2
+    node-sass: ^4.14.1
+    nprogress: ^0.2.0
+    optimize-css-assets-webpack-plugin: ^3.2.0
+    ora: ^1.2.0
+    portfinder: ^1.0.13
+    postcss-import: ^11.0.0
+    postcss-loader: ^2.0.8
+    postcss-pxtorem: ^5.1.1
+    postcss-url: ^7.2.1
+    rimraf: ^2.6.0
+    sass-loader: ^7.0.1
+    sass-resources-loader: ^2.1.1
+    screenfull: ^4.2.0
+    scss: ^0.2.4
+    scss-loader: 0.0.1
+    semver: ^5.7.2
+    shelljs: ^0.7.6
+    svg-sprite-loader: ^6.0.9
+    uglifyjs-webpack-plugin: ^1.1.1
+    url-loader: ^0.5.8
+    v-distpicker: ^1.2.13
+    v-viewer: ^1.6.4
+    vant: ^2.12.24
+    vue: ^2.5.2
+    vue-amap: ^0.5.10
+    vue-baidu-map: ^0.21.22
+    vue-cookies: ^1.5.13
+    vue-cropper: ^0.5.8
+    vue-i18n: ^8.25.0
+    vue-loader: ^13.3.0
+    vue-luck-draw: ^3.4.11
+    vue-property-decorator: ^9.1.2
+    vue-qr: ^2.2.1
+    vue-router: ^3.0.1
+    vue-style-loader: ^3.0.1
+    vue-template-compiler: ^2.5.2
+    vuedraggable: ^2.24.3
+    vuex: ^3.5.1
+    wangeditor: ^4.7.11
+    webpack: ^3.6.0
+    webpack-bundle-analyzer: ^2.9.0
+    webpack-dev-server: ^2.9.1
+    webpack-merge: ^4.1.0
   languageName: unknown
   linkType: soft
 
